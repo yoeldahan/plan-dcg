@@ -214,7 +214,7 @@ a.hchip::after{content:"";position:absolute;inset:-7px -2px}
 .behind b{font-weight:700}
 
 /* semaine en bandeau, demain */
-.wk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-top:12px}
+.wk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-top:15px}
 @media (max-width:374px){.wk{gap:2px}}
 .d{display:block;border:1px solid var(--rule2);border-radius:10px;padding:7px 0 6px;text-align:center;min-height:60px;min-width:0;color:var(--ink);background:transparent;text-decoration:none}
 button.d{border-color:var(--ctl);cursor:pointer}
@@ -412,6 +412,72 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .pt-plant{transform-box:fill-box;transform-origin:0 100%;animation:plant .5s cubic-bezier(.3,1.6,.5,1) 1.75s backwards}
 .pt-conf{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .pt-conf i{position:absolute;left:50%;top:38%;width:var(--w);height:var(--h);margin:-4px 0 0 -4px;border-radius:1.5px;background:var(--c);transform:translate(var(--bx),var(--by)) rotate(var(--r));animation:conf var(--d) cubic-bezier(.15,.6,.4,1) var(--dl) both}
+.pt-st{display:flex;align-items:center;justify-content:center;gap:7px;font:600 15px/1.3 var(--f-text);margin-top:8px}
+.pt-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:10px}
+.pt-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:99px;background:var(--gold);color:#141a3f;font:700 14px/1.2 var(--f-text);animation:bump .45s cubic-bezier(.3,1.6,.5,1) 1.1s backwards}
+.pt-badge .ic{width:16px;height:16px;stroke-width:2.2}
+
+/* ---------- le drapeau qui monte : les camps sur le sentier ---------- */
+.mtr{position:relative;display:flex;align-items:center;gap:12px;padding:14px 20px 0}
+.mtr-t{position:relative;flex:1;min-width:0;height:26px;margin:0 8px 0 4px}
+.mtr-t::before{content:"";position:absolute;left:0;right:0;bottom:4px;height:2px;background:repeating-linear-gradient(90deg,rgba(255,226,176,.8) 0 2px,transparent 2px 6px)}
+.mtr-f{position:absolute;left:0;bottom:3px;height:4px;border-radius:2px;background:#ffc247}
+.mc{position:absolute;bottom:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#1b2152;border:1.5px solid rgba(255,226,176,.7)}
+.mc.on{background:#ffc247;border-color:#141a3f}
+.mc.nx{border:2px solid #ffc247}
+.mtr-top{position:absolute;right:-8px;bottom:0;width:16px;height:13px}
+.mtr-fl{position:absolute;bottom:5px;width:16px;height:21px;margin-left:-1.5px;overflow:visible}
+.mtr-l{font:600 13px/1.2 var(--f-text);color:#e6e8ff;white-space:nowrap}
+.mtr-l b{color:#ffd27a}
+.camp{transform-box:fill-box;transform-origin:50% 100%}
+.nstep{margin-top:12px;font:500 14.5px/1.45 var(--f-text);color:var(--ink2)}
+.nstep b{color:var(--ink);font-weight:700}
+.camps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-top:10px}
+.camps li{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font:600 11.5px/1.2 var(--f-text);color:var(--ink2)}
+.camps li span{font-weight:500;color:var(--ink3);font-variant-numeric:tabular-nums}
+.camps li .cn{font-weight:inherit;color:inherit}
+.camps li .nw{white-space:nowrap}
+.camps svg{width:20px;height:16px;overflow:visible}
+.camps .cm{fill:var(--paper);stroke:var(--ctl);stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:2.5 2}
+.camps .on .cm{fill:var(--gold);stroke:var(--pen);stroke-dasharray:none}
+.camps .nx .cm{stroke:var(--pen);stroke-width:2;stroke-dasharray:none}
+.camps .on,.camps .nx{color:var(--ink)}
+
+/* ---------- la série de jours réussis ---------- */
+.ic.fl{color:var(--coral-ink);stroke-width:1.8}
+.ic.fl.lit{fill:var(--gold)}
+.hchip .ic.fl{color:#ffd27a;stroke-width:2}
+.hchip .ic.fl.lit{fill:rgba(255,194,71,.45)}
+.streak{display:flex;align-items:center;gap:11px;margin-top:12px;padding:10px 13px;border:1px solid var(--rule2);border-radius:12px;background:var(--paper);box-shadow:var(--sh)}
+.streak .ic.fl{width:26px;height:26px}
+.streak p{min-width:0;font:500 13.5px/1.35 var(--f-text);color:var(--ink2)}
+.streak b{font:700 16px/1.2 var(--f-display);color:var(--ink);letter-spacing:-.01em}
+.streak .sh{display:block;margin-top:2px}
+.d{position:relative}
+.d .won{position:absolute;top:-13px;right:5px;width:12px;height:14px;overflow:visible}
+.won .po{stroke:var(--ink);stroke-width:1.6;stroke-linecap:round}
+.won .pn{fill:var(--gold);stroke:var(--ink);stroke-width:.9;stroke-linejoin:round}
+.d.neu:not(.cur){border-style:dashed}
+.d.neu:not(.cur) .dn{color:var(--ink3)}
+.st-top{display:flex;align-items:center;gap:12px}
+.st-top .ic.fl{width:34px;height:34px}
+.st-n{font:800 34px/1 var(--f-display);letter-spacing:-.03em}
+.st-n small{font:600 15px var(--f-text);color:var(--ink2);letter-spacing:0;margin-left:6px}
+.st-sub{font:500 13.5px/1.4 var(--f-text);color:var(--ink2);margin-top:4px}
+.st-days{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:4px;margin-top:14px}
+.st-days li{display:flex;flex-direction:column;align-items:center;gap:5px;font:600 11px/1 var(--f-text);color:var(--ink3)}
+.st-days i{display:block;width:100%;max-width:28px;aspect-ratio:1;border-radius:5px;border:1.5px solid var(--ctl);background:transparent}
+.st-days .ok i{background:var(--gold);border-color:var(--pen)}
+.st-days .neu i{border-style:dashed}
+.st-days .pre{visibility:hidden}
+.st-days .pend i{border:2.5px solid var(--pen)}
+.st-days .td{color:var(--ink)}
+.st-leg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font:500 12.5px/1.3 var(--f-text);color:var(--ink2)}
+.st-leg span{display:inline-flex;align-items:center;gap:6px}
+.st-leg i{width:12px;height:12px;border-radius:3px;border:1.5px solid var(--ctl)}
+.st-leg .ok{background:var(--gold);border-color:var(--pen)}
+.st-leg .neu{border-style:dashed}
+.st-leg .pend{border:2.5px solid var(--pen)}
 
 /* ---------- ordinateur ---------- */
 @media (min-width:1024px){
@@ -432,6 +498,11 @@ button.d{border-color:var(--ctl);cursor:pointer}
   .side-j{position:relative;margin-top:22px;padding:0 6px;font-size:13px;color:#cfd2f3}
   .side-j b{font:800 22px/1 var(--f-display);color:#ffd27a;margin-right:6px;letter-spacing:-.02em}
   .side-sync{position:relative;margin-top:10px;padding:0 6px;font-size:12.5px;line-height:1.4;color:#cfd2f3}
+  .side .mtr{flex-direction:column-reverse;align-items:stretch;gap:6px;padding:0 6px;margin-top:16px}
+  .side .mtr-t{flex:none}
+  .side .mtr-l{font-size:12.5px;color:#cfd2f3}
+  .st-days{max-width:600px}
+  .camps{max-width:640px}
   .app{max-width:none;margin:0 0 0 248px;padding-bottom:40px}
   .hd,.tabs,.fab,.m-foot{display:none !important}
   .dhead,.only-desk{display:block}
@@ -543,6 +614,7 @@ button.d{border-color:var(--ctl);cursor:pointer}
   </nav>
   <button type="button" class="btn sun" id="add-side"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Ajouter une séance</button>
   <p class="side-j" id="side-jp"><b class="num" id="side-j">–</b>avant les écrits</p>
+  <div id="side-trail"></div>
   <p class="side-sync" id="sync-side" aria-hidden="true"></p>
 </aside>
 <div class="app">
@@ -787,7 +859,7 @@ function setSessionDone(v, on){
     v.items.forEach(n => { if (on) d[n] = d[n] || today(); else delete d[n]; });
     done[v.ue] = d; persist("done/"+v.ue, {items:d, at:new Date().toISOString()});
   } else {
-    progress[v.id] = {done:on}; persist("progress/"+v.id, {done:on, at:new Date().toISOString()});
+    const rec = {done:on, at:new Date().toISOString()}; progress[v.id] = rec; persist("progress/"+v.id, rec);
   }
   refresh();
 }
@@ -856,7 +928,8 @@ const ICON = {
   clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
   candle:'<path d="M8 21v-9h3v9M13 21v-9h3v9M5 21h14"/><path d="M9.5 9.2c-1.2-1 0-2.6 0-3.7 1.3 1 1.6 2.6 0 3.7zM14.5 9.2c-1.2-1 0-2.6 0-3.7 1.3 1 1.6 2.6 0 3.7z"/>',
   bag:'<rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><path d="M9 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5.5v2M3 13h18"/>',
-  leaf:'<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/>'
+  leaf:'<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/>',
+  flame:'<path d="M12 21.5c-3.9 0-6.8-2.7-6.8-6.5 0-3.5 2.5-5.5 3.8-8.4.5 1.9 1.5 3.1 2.7 3.7-.3-2.9.9-5.6 3.3-7.4-.2 3.3 3.8 5.7 3.8 10.6 0 4.7-2.8 8-6.8 8z"/><path d="M12 21.5c-1.7 0-2.9-1.2-2.9-2.9 0-1.8 1.4-2.7 2.3-4.2.9 1.1 3.5 2.2 3.5 4.3 0 1.7-1.2 2.8-2.9 2.8z"/>'
 };
 const ic = (name, cls) => svgEl(ICON[name], {class:"ic"+(cls?" "+cls:""), viewBox:"0 0 24 24", "aria-hidden":"true"});
 let uid = 0;
@@ -893,8 +966,21 @@ function rhythmChip(d){
   const ok = d > -45;
   return {ok, text: d >= 60 ? hmd(d)+" d'avance" : ok ? "Dans les temps" : hmd(-d)+" de retard"};
 }
-function programmePct(rh){ const tot = UE_LIST.reduce((a,u)=>a+rh[u].total,0); return {tot, pct: tot ? Math.round(rh.all.done/tot*100) : 0}; }
-function stageOf(p){ return p >= 100 ? "Au sommet" : p >= 90 ? "Près du sommet" : p >= 60 ? "Dernière pente" : p >= 30 ? "En montée" : p >= 3 ? "Premiers lacets" : "Camp de base"; }
+/* l'ascension : minutes faites / minutes du programme (les mêmes que rhythm()), et les camps passés */
+const CAMPS = [{p:0, n:"Camp de base"}, {p:25, n:"Camp 1"}, {p:50, n:"Mi-parcours"}, {p:75, n:"Camp 3"}, {p:100, n:"Sommet"}];
+const campName = c => c.p === 100 ? "le sommet" : c.n;
+function ascent(rh){
+  rh = rh || rhythm();
+  const tot = UE_LIST.reduce((a,u)=>a+rh[u].total,0), dn = Math.min(rh.all.done, tot), T = today();
+  let dayMin = 0;   // ce que tu as coché aujourd'hui : d'où tu es parti ce matin
+  for (const u of UE_LIST) for (const n in (done[u]||{})) if (done[u][n] === T && Q[u][n]) dayMin += Q[u][n].m;
+  const reach = m => CAMPS.reduce((k,c,i) => tot && m*100 >= tot*c.p ? i : k, 0);
+  const d0 = Math.max(0, dn-dayMin), idx = reach(dn), next = CAMPS[idx+1] || null;
+  return {tot, done:dn, f: tot ? dn/tot : 0, f0: tot ? d0/tot : 0, idx0: reach(d0), pct: tot ? Math.floor(dn*100/tot) : 0,
+    idx, stage: CAMPS[idx].n, next, toNext: next ? Math.max(1, Math.ceil(tot*next.p/100) - dn) : 0};
+}
+const ascentLabel = a => "Ton ascension : "+a.stage.toLowerCase()+", "+a.pct+" % du programme"+(a.next ? ". Prochaine étape : "+campName(a.next)+" ("+a.next.p+" %)" : "")+". Le sommet, ce sont les écrits.";
+const hLeft = m => m >= 120 ? Math.round(m/60)+" h" : hmd(m);
 
 /* ---- la crête, le sentier et « Toi » ---- */
 const TRAIL = (() => {
@@ -911,32 +997,118 @@ function trailAt(f){
   const a = TRAIL.pts[i-1], b = TRAIL.pts[i], t = (tot-L[i-1])/((L[i]-L[i-1])||1);
   return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t];
 }
-function scene(pct, ground, fs){
-  fs = fs || 12.5;
-  const k = "sc"+(++uid), [x,y] = trailAt(pct/100);
-  const label = "Toi · "+stageOf(pct)+" · "+pct+" %";
+/* une seule scène pour le ciel du téléphone, la carte du sommet (Progrès, ordinateur) et la fête de fin de journée.
+   o : {ground, fs, party:true} ; en fête, « Toi » monte de a.f0 (ce matin) à a.f (maintenant). */
+const TRAIL_D = "M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36";
+const FLAG_SM = '<path class="po" d="M1.5 21 V1.5" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M2.4 2 Q8.6 3.3 14 6.3 Q8.6 9.3 2.4 10.6Z" fill="#ffc247" stroke="#141a3f" stroke-width=".8" stroke-linejoin="round"/>';
+/* où poser l'étiquette « Toi · … » : la première place libre (sans cacher le sentier, les camps, les drapeaux ni « Les écrits ») */
+function pillSpot(x, y, w, ph, ex, ew){
+  const cands = [];
+  for (const dy of [0, 12, 26, 40]) cands.push([x+20, y-ph-10-dy, dy], [x-w*.35, y-27-ph-dy, dy], [x-w+12, y-27-ph-dy, dy], [x-8-w, y-ph-6-dy, dy]);
+  for (const dy of [0, 12, 26, 40]) cands.push([x-8-w, y+9+dy, dy+6], [x+14, y+9+dy, dy+6], [x-w*.5, y+9+dy, dy+6]);
+  const block = [[ex-4, -2, ex+ew+4, ph+5], [x-4, y-24, x+17, y+5], [302, 6, 326, 38]];
+  for (const c of CAMPS.slice(0,4)){ const [cx,cy] = trailAt(c.p/100); block.push([cx-7, cy-7, cx+7, cy+5]); }
+  let best = null;
+  for (const [lx, ly, dy] of cands){
+    if (lx < 4 || lx+w > 386 || ly < 2 || ly+ph > 128) continue;
+    if (block.some(b => lx < b[2] && lx+w > b[0] && ly < b[3] && ly+ph > b[1])) continue;
+    const sc = TRAIL.pts.filter(([px,py]) => px > lx-3 && px < lx+w+3 && py > ly-3 && py < ly+ph+3).length*2 + dy*.5;
+    if (!best || sc < best[2]) best = [lx, ly, sc];
+  }
+  if (best) return best;
+  const lx = x+20+w > 384 ? Math.max(6, x-8-w) : x+20;
+  return [lx, Math.max(2, y-ph-10)];
+}
+function scene(a, o){
+  o = o || {}; const fs = o.fs || 12.5, party = !!o.party, r = n => (+n).toFixed(1);
+  const f1 = a.f, f0 = party ? Math.max(0, Math.min(a.f0, f1-.03)) : f1;   // en fête : au moins un pas visible, jamais au-delà de ta vraie position
+  const [x,y] = trailAt(f1), [x0,y0] = trailAt(f0), k = "sc"+(++uid);
+  const label = "Toi · "+a.stage+" · "+a.pct+" %";
   const w = Math.round(label.length*fs*.552+24), ph = +(fs*1.92).toFixed(1), pr = +(fs*.96).toFixed(1), ty = +(fs*1.31).toFixed(1);
   const ew = Math.round(fs*6.24), ex = 298-ew;
-  let lx = x+16, ly = y-ph-13;
-  if (lx+w > 384) lx = Math.max(6, x-16-w);
-  if (ly < ph+6 && lx+w > ex-6) ly = y+14;
+  const [lx, ly] = pillSpot(x, y, w, ph, ex, ew);
   const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
-  return svgEl(
-    '<defs><radialGradient id="'+k+'" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs>'+
-    '<circle cx="304" cy="74" r="130" fill="url(#'+k+')"/>'+
-    '<path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/>'+
-    '<path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/>'+
-    '<path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".55" stroke-width="1.3"/>'+
+  // les camps : passés en or, le prochain cerclé d'or, les autres en pointillés
+  let camps = "";
+  for (let i = 0; i < 4; i++){
+    const [cx,cy] = trailAt(CAMPS[i].p/100);
+    const st = i <= a.idx ? 'fill="#ffc247" stroke="#141a3f" stroke-width="1.2"' : i === a.idx+1 ? 'fill="#1b2152" stroke="#ffc247" stroke-width="1.8"' : 'fill="#1b2152" stroke="#ffe2b0" stroke-opacity=".7" stroke-width="1.2"';
+    camps += '<path class="camp'+(party && i <= a.idx && i > a.idx0 ? ' pt-plant' : '')+'" d="M'+r(cx-6)+' '+r(cy+4)+' L'+r(cx)+' '+r(cy-6)+' L'+r(cx+6)+' '+r(cy+4)+'Z" '+st+' stroke-linejoin="round"/>';
+  }
+  const ridges = party
+    ? '<path d="M-700 64 L-600 46 L-500 70 L-400 52 L-290 78 L-200 56 L-110 82 L-40 70 L0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 L440 70 L520 48 L600 74 L700 54 L800 78 L900 50 L1000 72 L1090 60 V150 H-700Z" fill="#4b3a80" opacity=".75"/>'+
+      '<path d="M-700 110 L-620 96 L-520 116 L-420 92 L-320 112 L-220 98 L-120 118 L-50 106 L0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 L450 100 L530 86 L620 108 L720 90 L820 110 L920 94 L1020 112 L1090 100 V150 H-700Z" fill="#1b2152"/>'
+    : '<defs><radialGradient id="'+k+'" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs>'+
+      '<circle cx="304" cy="74" r="130" fill="url(#'+k+')"/>'+
+      '<path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/>'+
+      '<path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/>';
+  const walked = party
+    ? '<path class="pt-trail" style="--d0:'+r(f0*100)+'" d="'+TRAIL_D+'" pathLength="100" fill="none" stroke="#ffc247" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="'+r(f1*100)+' 200"/>'
+    : (f1 > 0 ? '<path d="'+TRAIL_D+'" pathLength="100" fill="none" stroke="#ffc247" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="'+r(Math.min(100,f1*100))+' 200"/>' : '');
+  // « Toi » : ton petit drapeau d'or planté sur le sentier
+  const toi = '<g class="'+(party ? 'pt-toi' : 'toi')+'"'+(party ? ' style="--dx:'+r(x0-x)+'px;--dy:'+r(y0-y)+'px"' : '')+'>'+
+    '<circle class="halo" cx="'+r(x)+'" cy="'+r(y)+'" r="9" fill="#ffc247"/>'+
+    '<g transform="translate('+r(x-1.5)+' '+r(y-21)+')">'+FLAG_SM+'</g>'+
+    '<circle cx="'+r(x)+'" cy="'+r(y)+'" r="3.2" fill="#ffc247" stroke="#fff" stroke-width="1.6"/>'+
+    '<g transform="translate('+r(lx)+' '+r(ly)+')"><rect width="'+w+'" height="'+ph+'" rx="'+pr+'" fill="#141a3f" fill-opacity=".92"/><text x="12" y="'+ty+'" class="svt" style="font-size:'+fs+'px" fill="#ffffff"><tspan fill="#ffd27a">Toi</tspan>'+esc(label.slice(3))+'</text></g></g>';
+  return svgEl(ridges+
+    '<path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity="'+(party ? .75 : .55)+'" stroke-width="1.3"/>'+
     '<path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/>'+
-    '<path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>'+
-    (pct > 0 ? '<path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" pathLength="100" fill="none" stroke="#ffc247" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="'+Math.min(100,pct)+' 200"/>' : '')+
+    '<path d="'+TRAIL_D+'" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>'+
+    walked+
     '<path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/>'+
-    '<path d="M0 150 V134 C58 126 112 140 176 133 S290 124 390 137 V150Z" style="fill:'+ground+'"/>'+
+    (party ? '' : '<path d="M0 150 V134 C58 126 112 140 176 133 S290 124 390 137 V150Z" style="fill:'+o.ground+'"/>')+
     '<g transform="translate('+ex+' 1)"><rect width="'+ew+'" height="'+ph+'" rx="'+pr+'" fill="#ffc247"/><text x="'+(ew/2)+'" y="'+ty+'" text-anchor="middle" class="svt" style="font-size:'+fs+'px" fill="#141a3f">Les écrits</text></g>'+
-    '<circle class="halo" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="11" fill="#ffc247"/><circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/>'+
-    '<g transform="translate('+lx.toFixed(1)+' '+ly.toFixed(1)+')"><rect width="'+w+'" height="'+ph+'" rx="'+pr+'" fill="#141a3f" fill-opacity=".92"/><text x="12" y="'+ty+'" class="svt" style="font-size:'+fs+'px" fill="#ffffff"><tspan fill="#ffd27a">Toi</tspan>'+esc(label.slice(3))+'</text></g>',
-    {class:"scene", viewBox:"0 0 390 150", role:"img", "aria-label":"Ton ascension : "+stageOf(pct).toLowerCase()+", "+pct+" % du programme. Le sommet, ce sont les écrits."});
+    toi+camps,
+    party ? {class:"pt-scene", viewBox:"0 0 390 150", "aria-hidden":"true"} : {class:"scene", viewBox:"0 0 390 150", role:"img", "aria-label":ascentLabel(a)});
 }
+/* la même ascension, en un fil : sur les ciels compacts (Semaine, Progrès, Méthode) et dans le menu de l'ordinateur */
+function miniTrail(a){
+  return h("div",{class:"mtr", role:"img", "aria-label":ascentLabel(a)},
+    h("span",{class:"mtr-t", "aria-hidden":"true"},
+      h("i",{class:"mtr-f", style:"width:"+(a.f*100).toFixed(1)+"%"}),
+      svgEl(FLAG_SM, {class:"mtr-fl", viewBox:"0 0 16 21", style:"left:"+(a.f*100).toFixed(1)+"%"}),
+      [0,1,2,3].map(i => h("i",{class:"mc"+(i <= a.idx ? " on" : i === a.idx+1 ? " nx" : ""), style:"left:"+CAMPS[i].p+"%"})),
+      svgEl('<path d="M1 12 L8 1.5 L15 12Z" fill="'+(a.idx >= 4 ? "#ffc247" : "#1b2152")+'" stroke="#ffc247" stroke-width="1.6" stroke-linejoin="round"/>', {class:"mtr-top", viewBox:"0 0 16 13"})),
+    h("span",{class:"mtr-l", "aria-hidden":"true"}, h("b",null,"Toi"), " · "+a.stage+" · "+a.pct+" %"));
+}
+/* ---- la série de jours réussis : calculée seulement à partir des données existantes (rien n'est sauvegardé) ----
+   neutre : samedi, Yom Tov, rien de suivi au programme ; pause : journée reportée (« Je n'ai pas pu travailler ») ;
+   réussie : tout ce qui était prévu ce jour-là a été coché ce jour-là (ou avant) ; aujourd'hui pas fini : en cours. */
+const localDay = t => { const x = new Date(t); return isNaN(x) ? "" : iso(x); };
+function dayResult(d, T, slots){
+  if (parse(d).getDay() === 6 || OFF_DATES[d]) return "neutral";
+  if (skips[d]) return "pause";
+  const goal = slots.map(view_).filter(v => !v.skipped && TRACKED.has(v.kind) && !(v.content && !v.items.length));
+  if (!goal.length) return "neutral";
+  const ok = goal.every(v => {
+    if (v.content) return v.items.every(n => { const dd = doneDate(v.ue, n); return !!dd && dd <= d; });
+    const p = progress[v.id]; return !!(p && p.done) && (!p.at || localDay(p.at) <= d);
+  });
+  return ok ? "ok" : d === T ? "pending" : "miss";
+}
+/* pure : la liste des jours dans l'ordre (le dernier = aujourd'hui) → série actuelle et record */
+function streakCount(states){
+  let run = 0, best = 0;
+  for (const x of states){ if (x === "ok"){ run++; if (run > best) best = run; } else if (x === "miss") run = 0; }
+  return {cur:run, best};
+}
+let stMemo = null;
+function streakInfo(){
+  if (stMemo && stMemo.sched === SCHED) return stMemo.v;
+  const T = today(), start = PLAN.start || PLAN.weeks[0].id, by = new Map();
+  for (const s of SCHED.slots){ if (s.date < start || s.date > T) continue; if (!by.has(s.date)) by.set(s.date, []); by.get(s.date).push(s); }
+  const days = [];
+  for (const x = parse(start); iso(x) <= T; x.setDate(x.getDate()+1)){ const d = iso(x); days.push([d, dayResult(d, T, by.get(d) || [])]); }
+  const v = streakCount(days.map(e => e[1]));
+  v.res = new Map(days); v.today = days.length ? days[days.length-1][1] : "neutral"; v.start = start;
+  stMemo = {sched:SCHED, v};
+  return v;
+}
+const flameIc = on => { const e = ic("flame", "fl"+(on ? " lit" : "")); return e; };
+const STATE_FR = {ok:"journée réussie", neutral:"jour sans séance", pause:"pause", miss:"pas cochée", pending:"en cours", pre:"avant le début"};
+const WON = '<path class="po" d="M1.5 14 V1"/><path class="pn" d="M2.3 1.4 Q7 2.4 11 4.6 Q7 6.8 2.3 7.8Z"/>';
+
 const STARS = '<circle class="tw" cx="196" cy="56" r="1.2"/><circle cx="74" cy="26" r=".9"/><circle class="tw" cx="132" cy="58" r="1.4"/><circle cx="188" cy="20" r="1"/><circle class="tw" cx="226" cy="88" r=".9"/><circle cx="262" cy="40" r="1.3"/><circle class="tw" cx="318" cy="16" r="1"/><circle cx="352" cy="74" r="1.2"/><circle class="tw" cx="372" cy="126" r=".8"/><circle cx="300" cy="118" r=".9"/><circle class="tw" cx="90" cy="190" r=".8"/><circle cx="14" cy="178" r="1"/>';
 const starsSVG = () => svgEl(STARS, {class:"stars", viewBox:"0 0 390 230", preserveAspectRatio:"xMidYMin slice", "aria-hidden":"true"});
 
@@ -1041,12 +1213,14 @@ function dayTile(d, o){
   const vs = sessionsOn(d), tr = vs.filter(v => TRACKED.has(v.kind) && status(v) !== "free");
   const has = vs.some(v => v.kind !== "off");
   const nd = tr.filter(v => status(v) === "done").length;
-  const cls = "d"+(has?" plan":" off")+(d===today()?" today":"")+(o.cur?" cur":"")+(skips[d]?" skipd":"");
+  const sr = d <= today() ? streakInfo().res.get(d) : null, won = sr === "ok", neu = sr === "neutral" || sr === "pause";
+  const cls = "d"+(has?" plan":" off")+(d===today()?" today":"")+(o.cur?" cur":"")+(skips[d]?" skipd":"")+(neu?" neu":"");
   const kids = [h("span",{class:"l"}, fWd(d)), h("span",{class:"dn num"}, String(parse(d).getDate())),
     h("span",{class:"dots","aria-hidden":"true"}, tr.slice(0,9).map(v => h("i",{class:status(v)==="done"?"f":"", style:"--ue:"+col(v.ue)})))];
+  if (won) kids.push(svgEl(WON, {class:"won", viewBox:"0 0 12 14", "aria-hidden":"true"}), h("span",{class:"sr"}, ", journée réussie"));
   if (!has || !o.onclick) return h("div",{class:cls, "aria-current": d===today() ? "date" : null}, kids);
   return h("button",{type:"button", class:cls, id:(o.pre||"day")+"-"+d, "aria-pressed": o.pressable ? String(!!o.cur) : null, "aria-current": d===today() ? "date" : null,
-    "aria-label": fDay(d)+(tr.length ? ", "+(nd>1?nd+" séances faites":nd+" séance faite")+" sur "+tr.length : "")+(skips[d] ? ", reportée" : ""), onclick:o.onclick}, kids);
+    "aria-label": fDay(d)+(tr.length ? ", "+(nd>1?nd+" séances faites":nd+" séance faite")+" sur "+tr.length : "")+(skips[d] ? ", reportée" : "")+(won ? ", journée réussie" : ""), onclick:o.onclick}, kids);
 }
 
 /* ---- Aujourd'hui ---- */
@@ -1108,7 +1282,7 @@ function coachNote(){
       long ? h("button",{type:"button", class:"more", id:"coach-more", "aria-expanded":String(msgOpen), "aria-controls":"coach-msg", onclick:()=>{ msgOpen = !msgOpen; render(); }}, msgOpen ? "Réduire" : "Lire la suite") : null));
 }
 function summitCard(mode){
-  const rh = rhythm(), {tot, pct} = programmePct(rh), r = rhythmChip(rh.all.delta);
+  const rh = rhythm(), a = ascent(rh), tot = a.tot, pct = a.pct, r = rhythmChip(rh.all.delta);
   const wm = PLAN.weeks.find(w => w.id === weekIdFor(today())) || PLAN.weeks[0];
   const chip = h("a",{class:"hchip"+(r.ok?"":" warn"), href:"#progres"}, ic(r.ok ? "check" : "warn"), r.text);
   const txt = mode === "today"
@@ -1116,7 +1290,18 @@ function summitCard(mode){
         h("div",{class:"sum-ch"}, h("span",{class:"hchip"}, "Phase "+wm.phase+" · "+phaseName(wm.phase)), chip))
     : h("div",{class:"sum-txt"}, h("div",{class:"sum-h"}, h("p",{class:"sky-eb"},"Le programme"), h("b",{class:"num"}, pct+" %"), h("span",null, hmd(rh.all.done)+" faites sur "+hmd(tot)+" de cours et d'exercices.")),
         h("div",{class:"sum-ch"}, h("span",{class:"hchip"}, r.ok ? ic("check") : ic("warn"), r.text)));
-  return h("section",{class:"summit"+(mode==="today"?" only-desk":""), "aria-label":"Ton ascension"}, starsSVG(), txt, scene(pct, "#10143a", mode==="today" ? 16 : 12.5));
+  return h("section",{class:"summit"+(mode==="today"?" only-desk":""), "aria-label":"Ton ascension"}, starsSVG(), txt, scene(a, {ground:"#10143a", fs: mode==="today" ? 13.5 : 12.5}));
+}
+/* « Série : 3 jours » sous la semaine (téléphone et colonne de droite de l'ordinateur) */
+const streakText = n => "Série : "+plural(n,"jour");
+function streakRow(){
+  const s = streakInfo();
+  let hint = null;
+  if (!s.cur) hint = s.today === "neutral" || s.today === "pause" ? "Ta série démarre à ta prochaine journée de travail." : "Coche ta journée pour lancer ta série.";
+  else if (s.today === "pending") hint = "Finis ta journée : ta série passe à "+(s.cur+1)+".";
+  else if (s.today === "ok") hint = "Journée réussie. Bravo !";
+  return h("div",{class:"streak", id:"streak"}, flameIc(s.cur > 0),
+    h("p",null, h("b",null, streakText(s.cur)), s.best ? " · Record : "+s.best : null, hint ? h("span",{class:"sh"}, hint) : null));
 }
 function nextDayBlock(T){
   const nx = SCHED.slots.find(s => s.date > T && s.kind !== "off"); if (!nx) return [];
@@ -1156,6 +1341,7 @@ function screenToday(){
   const wid = weekIdFor(T), wm = PLAN.weeks.find(w => w.id === wid);
   side.append(sec("Ta semaine", wm ? wLabel(wm) : ""));
   side.append(h("div",{class:"wk"}, weekDays(wid).map(d => dayTile(d, {cur: d===T, pre:"wkt", onclick:()=>{ selWeek = weekIdFor(d); selDay = d; location.hash = "#semaine"; }}))));
+  side.append(streakRow());
   side.append(...nextDayBlock(T));
   return [h("div",{class:"cols"}, main, side)];
 }
@@ -1195,8 +1381,36 @@ function screenWeek(){
 }
 
 /* ---- Progrès ---- */
+function nextStep(a){
+  const line = a.next
+    ? ["Prochaine étape : ", h("b",null, campName(a.next)+" ("+a.next.p+" %)"), " · encore "+hLeft(a.toNext)+" de cours."]
+    : [h("b",null,"Tout le programme est vu."), " Place aux révisions !"];
+  const tent = '<path class="cm" d="M2 14 L10 2 L18 14Z"/>';
+  return [h("p",{class:"nstep", id:"next-step"}, line),
+    h("ol",{class:"camps", "aria-label":"Les étapes"}, CAMPS.map((c,i) => h("li",{class: i <= a.idx ? "on" : i === a.idx+1 ? "nx" : ""},
+      svgEl(tent, {viewBox:"0 0 20 16", "aria-hidden":"true"}), h("b",{class:"cn"+(/ /.test(c.n) ? "" : " nw")}, i === 4 ? "Les écrits" : c.n), h("span",null, c.p+" %"),
+      h("span",{class:"sr"}, i <= a.idx ? ", atteint" : i === a.idx+1 ? ", prochaine étape" : ""))))];
+}
+function streakBlock(){
+  const s = streakInfo(), T = today(), days = [];
+  for (let i = 13; i >= 0; i--){ const x = parse(T); x.setDate(x.getDate()-i); days.push(iso(x)); }
+  const cls = {ok:"ok", neutral:"neu", pause:"neu", miss:"", pending:"pend"};
+  const sub = !s.cur ? (s.today === "neutral" || s.today === "pause" ? "Ta série démarre à ta prochaine journée de travail." : "Coche ta journée pour lancer ta série.")
+    : s.today === "pending" ? "Finis ta journée : ta série passe à "+(s.cur+1)+"." : "Les samedis, les jours de Yom Tov et les pauses ne cassent pas ta série.";
+  return [sec("Ta série", s.best ? "Record : "+s.best : null),
+    h("section",{class:"card-p st-card", style:"margin-top:12px", "aria-label":"Ta série"},
+      h("div",{class:"st-top"}, flameIc(s.cur > 0), h("div",null,
+        h("p",{class:"st-n num"}, String(s.cur), h("small",null, s.cur > 1 ? "jours de suite" : s.cur ? "jour" : "jour pour l'instant")),
+        h("p",{class:"st-sub"}, sub))),
+      h("ol",{class:"st-days", "aria-label":"Tes 14 derniers jours"}, days.map(d => {
+        const st = d < s.start ? "pre" : (s.res.get(d) || "neutral");
+        return h("li",{class:(d < s.start ? "pre" : cls[st])+(d === T ? " td" : "")}, h("i"), h("span",{"aria-hidden":"true"}, fWd(d).charAt(0).toUpperCase()),
+          h("span",{class:"sr"}, fDay(d)+" : "+STATE_FR[st]));
+      })),
+      h("p",{class:"st-leg", "aria-hidden":"true"}, h("span",null, h("i",{class:"ok"}), "Réussie"), h("span",null, h("i",{class:"neu"}), "Repos ou pause"), h("span",null, h("i"), "Pas cochée"), h("span",null, h("i",{class:"pend"}), "Aujourd'hui")))];
+}
 function screenProgress(){
-  const rh = rhythm(); const out = [dhead(fDay(today()), "Progrès"), summitCard("progress")];
+  const rh = rhythm(); const out = [dhead(fDay(today()), "Progrès"), summitCard("progress"), ...nextStep(ascent(rh)), ...streakBlock()];
   out.push(sec("Par matière", "fin prévue"));
   const ul = h("ul",{class:"subjects"});
   for (const u of UE_LIST){
@@ -1454,17 +1668,37 @@ function partyMark(T){
 function reward(o, fn){
   const T = today(), ae = document.activeElement, focusId = ae && ae.id || null;
   const vb = o.sid ? slotView(o.sid) : null, was = vb ? status(vb) : null, dayWas = dayDone(T);
+  const campWas = o.on ? ascent().idx : 0, bestWas = o.on ? streakInfo().best : 0;
   fx = {on:!!o.on, pop:o.pop || null}; justKeys = new Set(o.just || []);
   try{ fn(); } finally { fx = null; justKeys = new Set(); }
   // le bouton a disparu (« C'est fait ») : le focus revient sur la carte
   let back = focusId && document.getElementById(focusId) ? focusId : null;
   if (focusId && !back && o.sid && !sheetState){ const c = cardOf(o.sid); const b = c && c.querySelector(".c-open"); if (b){ b.focus({preventScroll:true}); back = b.id; } }
   if (!o.on){ if (cel && cel.sid === o.sid) endCel(); return false; }
-  if (!dayWas && dayDone(T) && !partySeen(T)){ endCel(); openParty(T, back); return true; }
-  if (!vb) return false;
-  const now = slotView(o.sid);
-  if (!(o.force || (was !== "done" && now && status(now) === "done"))) return false;
-  return celebrate(o.sid, o.where, vb);
+  const camp = campPassed(campWas);
+  if (!dayWas && dayDone(T) && !partySeen(T)){ endCel(); openParty(T, back, {camp, bestWas}); return true; }
+  let shown = false;
+  if (vb){ const now = slotView(o.sid); if (o.force || (was !== "done" && now && status(now) === "done")) shown = celebrate(o.sid, o.where, vb); }
+  if (camp){ campToast(camp); return true; }
+  return shown;
+}
+/* un camp passé grâce à un geste : une seule fois par camp (mémoire de l'interface, jamais envoyée sur GitHub) */
+const campMem = {};
+function campPassed(was){
+  const now = ascent().idx;
+  for (let i = now; i > was; i--){
+    let seen = !!campMem[i];
+    try{ seen = seen || localStorage.getItem("dcg-ui-camp-"+i) === "1"; }catch(e){}
+    campMem[i] = true;
+    try{ localStorage.setItem("dcg-ui-camp-"+i, "1"); }catch(e){}
+    if (!seen) return i;
+  }
+  return 0;
+}
+const campLine = i => CAMPS[i].n+" atteint !";
+function campToast(i){
+  const nx = CAMPS[i+1];
+  toast((campLine(i)+(nx ? " Prochaine étape : "+campName(nx)+"." : " Tout le programme est vu.")).replace(/-/g,"\u2011"));
 }
 function rewardDone(v, where){
   const just = v.content ? v.items.filter(n => !isDoneItem(v.ue,n)).map(n => v.id+":"+v.ue+":"+n) : null;
@@ -1499,33 +1733,23 @@ function endCel(){
   cel = null; document.querySelectorAll(".cel").forEach(n => n.remove());
   document.getElementById("cheer").textContent = "";
 }
-/* « Journée réussie ! » : le ciel passe de la nuit au lever du soleil, Toi monte d'un pas, un drapeau est planté */
-function partyScene(f0, f1){
-  const [x0,y0] = trailAt(f0), [x1,y1] = trailAt(f1), r = n => n.toFixed(1);
-  const TR = "M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36";
-  return svgEl(
-    '<path d="M-700 64 L-600 46 L-500 70 L-400 52 L-290 78 L-200 56 L-110 82 L-40 70 L0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 L440 70 L520 48 L600 74 L700 54 L800 78 L900 50 L1000 72 L1090 60 V150 H-700Z" fill="#4b3a80" opacity=".75"/>'+
-    '<path d="M-700 110 L-620 96 L-520 116 L-420 92 L-320 112 L-220 98 L-120 118 L-50 106 L0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 L450 100 L530 86 L620 108 L720 90 L820 110 L920 94 L1020 112 L1090 100 V150 H-700Z" fill="#1b2152"/>'+
-    '<path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".75" stroke-width="1.3"/>'+
-    '<path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/>'+
-    '<path d="'+TR+'" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>'+
-    '<path class="pt-trail" style="--d0:'+r(f0*100)+'" d="'+TR+'" pathLength="100" fill="none" stroke="#ffc247" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="'+r(f1*100)+' 200"/>'+
-    '<path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/>'+
-    '<g class="pt-plant"><path d="M'+r(x1)+' '+r(y1-7)+' V'+r(y1-31)+'" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path d="M'+r(x1+1)+' '+r(y1-31)+' Q'+r(x1+10)+' '+r(y1-29)+' '+r(x1+17)+' '+r(y1-25.5)+' Q'+r(x1+10)+' '+r(y1-22)+' '+r(x1+1)+' '+r(y1-20)+'Z" fill="#ffc247"/></g>'+
-    '<g class="pt-toi" style="--dx:'+r(x0-x1)+'px;--dy:'+r(y0-y1)+'px"><circle class="halo" cx="'+r(x1)+'" cy="'+r(y1)+'" r="11" fill="#ffc247"/><circle cx="'+r(x1)+'" cy="'+r(y1)+'" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/>'+
-      '<g transform="translate('+r(Math.max(34, x1-19))+' '+r(y1+10)+')"><rect width="38" height="22" rx="11" fill="#141a3f" fill-opacity=".92"/><text x="19" y="15.5" text-anchor="middle" class="svt" fill="#ffd27a">Toi</text></g></g>',
-    {class:"pt-scene", viewBox:"0 0 390 150", "aria-hidden":"true"});
-}
-function openParty(T, backId){
+/* « Journée réussie ! » : le ciel passe de la nuit au lever du soleil, ton drapeau monte jusqu'à ta vraie position (scene(), en mode fête) */
+function openParty(T, backId, o){
+  o = o || {};
   partyMark(T);
   const goal = dayGoal(T), tot = goal.reduce((a,v) => a+workMin(v), 0);
-  const f0 = programmePct(rhythm()).pct/100, f1 = Math.min(1, f0+.08);
+  const asc = ascent(), sk = streakInfo(), record = sk.cur > (o.bestWas||0) && (o.bestWas||0) >= 1;
+  const badges = [];
+  if (record) badges.push(h("span",{class:"pt-badge"}, ic("flame"), "Nouveau record !"));
+  if (o.camp) badges.push(h("span",{class:"pt-badge"}, ic("flag"), campLine(o.camp)));
   const btn = h("button",{type:"button", class:"btn primary", id:"party-go", onclick:closeParty}, "Continuer");
   const card = h("div",{class:"pt-card"},
     svgEl(PK, {class:"pk", viewBox:"0 0 64 44", "aria-hidden":"true"}),
     h("p",{class:"eb"}, fDay(T)),
     h("h2",{id:"party-t"}, h("span",null,"Journée réussie !")),
     h("p",{class:"pt-rec num", id:"party-d"}, plural(goal.length,"séance")+" · "+hmd(tot)+" de travail"),
+    h("p",{class:"pt-st num", id:"party-s"}, flameIc(sk.cur > 0), streakText(sk.cur)),
+    badges.length ? h("p",{class:"pt-badges", id:"party-b"}, badges) : null,
     h("p",{class:"pt-calm", id:"party-c"}, "Repose-toi, la suite est prête."),
     btn);
   const conf = h("div",{class:"pt-conf", "aria-hidden":"true"});
@@ -1535,10 +1759,10 @@ function openParty(T, backId){
     conf.append(h("i",{style:"--bx:"+Math.round(Math.cos(a)*d*1.15)+"px;--by:"+Math.round(Math.sin(a)*d*.75-50)+"px;--r:"+Math.round(300+Math.random()*500)*(i%2?1:-1)+"deg;--c:"+C[i%C.length]+
       ";--w:"+(i%3 ? 7 : 5)+"px;--h:"+(i%3 ? 11 : 5)+"px;--d:"+(2+Math.random()*1.2).toFixed(2)+"s;--dl:"+(.25+Math.random()*.35).toFixed(2)+"s"}));
   }
-  party = h("div",{class:"party", id:"party", role:"dialog", "aria-modal":"true", "aria-labelledby":"party-t", "aria-describedby":"party-d party-c"},
+  party = h("div",{class:"party", id:"party", role:"dialog", "aria-modal":"true", "aria-labelledby":"party-t", "aria-describedby":"party-d party-s"+(badges.length ? " party-b" : "")+" party-c"},
     h("div",{class:"pt-dawn"}), h("div",{class:"pt-sun"}), starsSVG(),
     svgEl('<path d="M0 58 L120 24 L230 46 L360 12 L520 42 L640 20 L800 48 L1000 16 V100 H0Z" fill="#4b3a80" opacity=".6"/><path d="M0 80 L160 52 L300 70 L460 44 L620 66 L780 48 L1000 62 V100 H0Z" fill="#1b2152"/>', {class:"pt-hills", viewBox:"0 0 1000 100", preserveAspectRatio:"none", "aria-hidden":"true"}),
-    h("div",{class:"pt-mid"}, card), partyScene(f0, f1), conf);
+    h("div",{class:"pt-mid"}, card), scene(asc, {party:true}), conf);
   party.addEventListener("click", e => { if (!card.contains(e.target)) closeParty(); });
   partyInert = [...document.body.children].filter(n => n.tagName !== "SCRIPT" && !n.inert);
   partyInert.forEach(n => { n.inert = true; });
@@ -1566,13 +1790,14 @@ function closeParty(){
 /* ---- ciel du haut ---- */
 let hdKey = "";
 function header(v){
-  const T = today(), rh = rhythm(), {pct} = programmePct(rh), r = rhythmChip(rh.all.delta);
+  const T = today(), rh = rhythm(), a = ascent(rh), pct = a.pct, r = rhythmChip(rh.all.delta), sk = streakInfo();
   const wm = PLAN.weeks.find(w=>w.id===weekIdFor(T)) || PLAN.weeks[0];
   const greet = (new Date().getHours() >= 18 ? "Bonsoir" : "Bonjour")+" Yoel";
   document.getElementById("side-j").textContent = jLabel();
   document.getElementById("side-jp").hidden = v === "aujourdhui";
-  const key = [v, T, pct, r.text, wm.phase, greet].join("|");
+  const key = [v, T, pct, a.idx, r.text, wm.phase, greet, sk.cur, sk.best].join("|");
   if (key === hdKey) return; hdKey = key;
+  document.getElementById("side-trail").replaceChildren(...(v === "aujourdhui" ? [] : [miniTrail(a)]));
   const hd = document.getElementById("hd");
   const top = h("div",{class:"hd-top"}, logoSVG("logo"), h("span",{class:"brand"},"Plan DCG"), h("span",{class:"jp"}, h("b",{class:"num"}, jLabel()), "avant les écrits"));
   if (v === "aujourdhui"){
@@ -1580,12 +1805,14 @@ function header(v){
     hd.replaceChildren(starsSVG(), top,
       h("div",{class:"hd-date"}, h("p",{class:"sky-eb"}, greet), h("h1",null, fDay(T))),
       h("div",{class:"hchips"}, h("span",{class:"hchip"}, "Phase "+wm.phase+" · "+phaseName(wm.phase)),
-        h("a",{class:"hchip"+(r.ok?"":" warn"), href:"#progres"}, ic(r.ok ? "check" : "warn"), r.text)),
-      scene(pct, "var(--bg)"));
+        h("a",{class:"hchip"+(r.ok?"":" warn"), href:"#progres"}, ic(r.ok ? "check" : "warn"), r.text),
+        h("a",{class:"hchip", href:"#progres", id:"hd-streak"}, flameIc(sk.cur > 0), sk.cur ? streakText(sk.cur) : "Lance ta série")),
+      scene(a, {ground:"var(--bg)"}));
   } else {
     hd.className = "hd compact";
     hd.replaceChildren(starsSVG(), top,
       h("div",{class:"hd-date"}, h("p",{class:"sky-eb"}, fDay(T)), h("h1",null, {semaine:"Semaine", progres:"Progrès", methode:"Méthode"}[v])),
+      miniTrail(a),
       svgEl('<path d="M0 22 L40 12 L80 18 L128 5 L168 14 L210 2 L246 11 L280 4 L330 15 L366 3 L390 9 V34 H0Z" fill="#4b3a80" opacity=".6"/><path d="M0 28 L50 19 L95 23 L150 11 L190 17 L240 8 L270 13 L304 2 L336 13 L362 10 L390 15 V34 H0Z" fill="#1b2152"/><path d="M0 34 V29 C58 25 112 32 176 28 S290 24 390 30 V34Z" style="fill:var(--bg)"/>',
         {class:"ridge-thin", viewBox:"0 0 390 34", preserveAspectRatio:"none", "aria-hidden":"true"}));
   }
@@ -1610,7 +1837,8 @@ function render(){
 }
 function refresh(){ render(); if (sheetState) renderSheet(); }
 window.addEventListener("hashchange", () => { if (sheetState) closeSheet(); render(); });
-window.__dcg = {projectedEnd:u=>projectedEnd(u), unplaced:()=>SCHED.unplaced, rhythm:()=>rhythm()};
+window.__dcg = {projectedEnd:u=>projectedEnd(u), unplaced:()=>SCHED.unplaced, rhythm:()=>rhythm(),
+  streak:()=>{ const x = streakInfo(); return {cur:x.cur, best:x.best, today:x.today, days:Object.fromEntries(x.res)}; }, streakCount, ascent:()=>ascent()};
 
 /*@@PWA_STORE@@*/
 
