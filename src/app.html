@@ -27,6 +27,7 @@
   --pri:#141a3f; --on-pri:#ffffff; --pri-sh:0 8px 18px -8px rgba(20,26,63,.5); --hero-line:#141a3f; --tick:#141a3f; --box-on:#ffe29a;
   --today:#141a3f; --on-today:#ffffff; --today-dot:#ffc247; --tab:#ffffff; --focus:#3b5bdb; --acc-ic:#141a3f;
   --sh:0 1px 2px rgba(20,26,63,.05); --scrim:rgba(11,14,34,.5);
+  --stamp:#141a3f; --veil:rgba(246,248,252,.9); --sw-y:88%; --sw-h:34%;
   --ue1:#2f4fd1; --ue5:#0d7357; --ue7:#7a3fc4; --ue8:#0b6a80; --ue9:#b3263f; --ue12:#8f5200; --ue13:#a82a85; --on-ue:#ffffff;
   color-scheme:light;
 }
@@ -37,7 +38,7 @@
     --coral:#ff8a6a; --coral-ink:#ff9e82; --coral-soft:rgba(255,122,89,.17); --ok:#62e0b0; --ok-soft:rgba(98,224,176,.14);
     --pri:#ffcd5c; --on-pri:#141a3f; --pri-sh:0 8px 20px -8px rgba(255,190,80,.45); --hero-line:#ffcd5c; --tick:#ffcd5c; --box-on:rgba(255,205,92,.16);
     --today:#ffcd5c; --on-today:#141a3f; --today-dot:#141a3f; --tab:#10132c; --focus:#a9bcff; --acc-ic:#ffcd5c;
-    --sh:0 1px 0 rgba(255,255,255,.03) inset; --scrim:rgba(3,4,14,.66);
+    --sh:0 1px 0 rgba(255,255,255,.03) inset; --scrim:rgba(3,4,14,.66); --stamp:#ffcd5c; --veil:rgba(11,14,34,.88); --sw-y:100%; --sw-h:12%;
     --ue1:#93a8ff; --ue5:#55d6a7; --ue7:#c6a0ff; --ue8:#5fd0e8; --ue9:#ff8ea1; --ue12:#ffc45c; --ue13:#ff92d8; --on-ue:#141a3f;
     color-scheme:dark;
   }
@@ -48,7 +49,7 @@
   --coral:#ff8a6a; --coral-ink:#ff9e82; --coral-soft:rgba(255,122,89,.17); --ok:#62e0b0; --ok-soft:rgba(98,224,176,.14);
   --pri:#ffcd5c; --on-pri:#141a3f; --pri-sh:0 8px 20px -8px rgba(255,190,80,.45); --hero-line:#ffcd5c; --tick:#ffcd5c; --box-on:rgba(255,205,92,.16);
   --today:#ffcd5c; --on-today:#141a3f; --today-dot:#141a3f; --tab:#10132c; --focus:#a9bcff; --acc-ic:#ffcd5c;
-  --sh:0 1px 0 rgba(255,255,255,.03) inset; --scrim:rgba(3,4,14,.66);
+  --sh:0 1px 0 rgba(255,255,255,.03) inset; --scrim:rgba(3,4,14,.66); --stamp:#ffcd5c; --veil:rgba(11,14,34,.88); --sw-y:100%; --sw-h:12%;
   --ue1:#93a8ff; --ue5:#55d6a7; --ue7:#c6a0ff; --ue8:#5fd0e8; --ue9:#ff8ea1; --ue12:#ffc45c; --ue13:#ff92d8; --on-ue:#141a3f;
   color-scheme:dark;
 }
@@ -370,6 +371,48 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .toast{position:fixed;left:50%;bottom:calc(152px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(16px);opacity:0;z-index:60;background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font:600 14.5px/1.3 var(--f-text);width:max-content;max-width:min(90vw,440px);text-align:center;pointer-events:none;transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* ---------- récompenses : chaque coche, chaque séance, chaque journée ---------- */
+.day-n.bump{transform-origin:100% 100%;animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
+.segs i.nf::after{animation:segfill .5s cubic-bezier(.3,1.2,.5,1) .05s backwards}
+.tag.pop{transform-origin:0 50%;animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
+/* le tampon « Séance terminée ! » (sur la carte, ou en haut de la fiche) */
+.cel{position:absolute;inset:0;z-index:5;cursor:pointer}
+.cel-v{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10px;border-radius:11px;background:var(--veil);overflow-x:clip;
+  animation:celin .2s ease-out calc(0s - var(--el,0ms)) backwards,celout .35s ease-in calc(2.2s - var(--el,0ms)) forwards}
+.cel.in-sheet{position:sticky;inset:auto;top:50px;height:0;z-index:4}
+.cel.in-sheet .cel-v{inset:0 12px auto;height:158px;border-radius:14px;box-shadow:0 10px 30px -16px rgba(11,14,34,.5)}
+.stamp{max-width:100%;border:3px double var(--stamp);border-radius:14px;padding:10px 18px 11px;background:var(--paper);text-align:center;transform:rotate(-4deg);box-shadow:0 16px 34px -14px rgba(20,26,63,.45);
+  animation:stampin .5s cubic-bezier(.2,1.5,.4,1) calc(.05s - var(--el,0ms)) backwards}
+.pk{display:block;width:64px;height:44px;margin:0 auto;overflow:visible}
+.pk .rg{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:80;animation:rgdraw .5s ease-out calc(.12s - var(--el,0ms)) backwards}
+.pk .po{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.pk .fg{fill:var(--gold);stroke:var(--gold2);stroke-width:1}
+.pk .fl{transform-box:fill-box;transform-origin:50% 100%;animation:rise .55s cubic-bezier(.3,1.5,.5,1) calc(.5s - var(--el,0ms)) backwards}
+.stamp b{display:block;font:700 23px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink);margin:6px 0 5px}
+.stamp b span,.pt-card h2 span{background:linear-gradient(var(--hl),var(--hl)) 0 var(--sw-y)/100% var(--sw-h) no-repeat;padding:0 3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.stamp b span{animation:swipe .45s ease-out calc(.3s - var(--el,0ms)) backwards}
+.stamp small{display:block;font:500 13.5px/1.35 var(--f-text);color:var(--ink2)}
+/* la journée réussie : le ciel se lève */
+.party{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;color:#fff;background:linear-gradient(180deg,#0b0e22 0%,#141a3f 50%,#2c2766 100%)}
+.pt-dawn{position:fixed;inset:0;background:linear-gradient(180deg,#141a3f 0%,#1a2056 24%,#2c2766 42%,#83406e 60%,#ff7a59 78%,#ffc247 94%);animation:fadein 1.8s ease-in-out .1s backwards}
+.pt-sun{position:fixed;left:50%;bottom:6vh;width:70vmin;height:70vmin;margin-left:-35vmin;border-radius:50%;background:radial-gradient(circle,#fff3c4 0%,#ffd27a 20%,rgba(255,178,62,.45) 42%,rgba(255,122,89,0) 68%);animation:sunup 2s cubic-bezier(.2,.8,.3,1) .2s backwards}
+.party .stars{position:fixed;height:62%;opacity:.4;animation:starsout 1.8s ease-in .1s backwards}
+.pt-hills{position:fixed;left:0;bottom:0;width:100%;height:22vh;display:block}
+.pt-mid{position:relative;z-index:2;flex:1 0 auto;display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 24px) 16px 12px}
+.pt-card{width:100%;max-width:380px;background:var(--paper);color:var(--ink);border-radius:20px;padding:20px 22px 20px;text-align:center;box-shadow:0 24px 60px -20px rgba(11,14,34,.7);animation:cardin .5s cubic-bezier(.2,1.4,.4,1) .35s backwards}
+.pt-card .pk{width:84px;height:58px}
+.pt-card .eb{margin-top:10px}
+.pt-card h2{font:800 30px/1.12 var(--f-display);letter-spacing:-.025em;margin-top:6px;text-wrap:balance}
+.pt-rec{font:600 16px/1.4 var(--f-text);margin-top:12px}
+.pt-calm{font:500 15px/1.45 var(--f-text);color:var(--ink2);margin-top:4px}
+.pt-card .btn{width:100%;margin-top:18px}
+.pt-scene{position:relative;z-index:1;flex:none;display:block;overflow:visible;width:min(100%,720px);height:auto;margin:0 auto;padding-bottom:env(safe-area-inset-bottom);background:linear-gradient(transparent calc(100% - env(safe-area-inset-bottom) - 1px),#1b2152 0)}
+.pt-toi{animation:climb 1.1s cubic-bezier(.45,0,.3,1) .7s backwards}
+.pt-trail{animation:trail 1.1s cubic-bezier(.45,0,.3,1) .7s backwards}
+.pt-plant{transform-box:fill-box;transform-origin:0 100%;animation:plant .5s cubic-bezier(.3,1.6,.5,1) 1.75s backwards}
+.pt-conf{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.pt-conf i{position:absolute;left:50%;top:38%;width:var(--w);height:var(--h);margin:-4px 0 0 -4px;border-radius:1.5px;background:var(--c);transform:translate(var(--bx),var(--by)) rotate(var(--r));animation:conf var(--d) cubic-bezier(.15,.6,.4,1) var(--dl) both}
+
 /* ---------- ordinateur ---------- */
 @media (min-width:1024px){
   .side{display:flex;position:fixed;left:0;top:0;bottom:0;width:248px;z-index:10;overflow-x:hidden;overflow-y:auto;flex-direction:column;padding:28px 18px 20px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#181e50 55%,#2a2462 80%,#4e3170 100%)}
@@ -436,6 +479,12 @@ button.d{border-color:var(--ctl);cursor:pointer}
   .backdrop.open .sheet{animation:side .24s ease-out}
   .grab{display:none}
   .toast{left:calc(50% + 124px);bottom:28px}
+  .party{left:0;padding-left:248px;background-clip:content-box}
+  .party::before{content:"";position:fixed;left:0;top:0;bottom:0;width:248px;z-index:3;background:var(--scrim)}
+  .pt-dawn,.pt-hills,.party .stars{left:248px;width:auto;right:0}
+  .pt-sun{left:calc(50% + 124px)}
+  .pt-conf{left:248px}
+  .pt-scene{clip-path:inset(-300px -100vw -100px calc((min(100vw - 248px, 720px) - 100vw + 248px) / 2))}
 }
 @media (min-width:1200px){
   .no-wide{display:none}
@@ -462,6 +511,22 @@ button.d{border-color:var(--ctl);cursor:pointer}
 @keyframes strike{from{background-size:0 1.5px}to{background-size:100% 1.5px}}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
 @keyframes side{from{transform:translateX(40px);opacity:.4}to{transform:none;opacity:1}}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
+@keyframes segfill{from{transform:scaleX(0)}}
+@keyframes celin{from{opacity:0}}
+@keyframes celout{to{opacity:0;visibility:hidden}}
+@keyframes stampin{0%{opacity:0;transform:rotate(-14deg) scale(1.7)}60%{opacity:1;transform:rotate(-3deg) scale(.96)}100%{transform:rotate(-4deg) scale(1)}}
+@keyframes rgdraw{from{stroke-dashoffset:80}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@keyframes swipe{from{background-size:0 var(--sw-h)}}
+@keyframes fadein{from{opacity:0}}
+@keyframes starsout{from{opacity:1}}
+@keyframes sunup{from{opacity:0;transform:translateY(22vmin)}}
+@keyframes cardin{from{opacity:0;transform:translateY(24px) scale(.94)}}
+@keyframes climb{from{transform:translate(var(--dx),var(--dy))}}
+@keyframes trail{from{stroke-dasharray:var(--d0) 200}}
+@keyframes plant{from{opacity:0;transform:scaleY(0)}}
+@keyframes conf{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.3)}4%{opacity:1;transform:translate(0,0) rotate(0) scale(.4)}22%{opacity:1;transform:translate(var(--bx),var(--by)) rotate(calc(var(--r)*.3)) scale(1)}100%{opacity:0;transform:translate(calc(var(--bx)*1.3),calc(var(--by) + 80vh)) rotate(var(--r))}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.halo{opacity:.3}}
 </style>
 </head>
@@ -497,6 +562,7 @@ button.d{border-color:var(--ctl);cursor:pointer}
 </div></nav>
 <div class="backdrop" id="backdrop" aria-hidden="true"><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Fiche"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<p class="sr" id="cheer" role="status" aria-live="polite"></p>
 
 <script type="application/json" id="plan">__PLAN__</script>
 <script>
@@ -877,7 +943,7 @@ const starsSVG = () => svgEl(STARS, {class:"stars", viewBox:"0 0 390 230", prese
 /* ---- briques communes ---- */
 const sec = (title, eb, extra) => h("div",{class:"sec"}, h("h2",null,title), eb ? h("span",{class:"eb"}, eb) : null, extra || null);
 const dhead = (eb, title, sub) => h("header",{class:"dhead"}, h("p",{class:"eb"}, eb), h("h1",null, title), sub ? h("p",{class:"s"}, sub) : null);
-let justKey = null, msgOpen = false;
+let msgOpen = false;
 function itemRow(u, n, o){
   o = o || {};
   const it = Q[u][n], on = isDoneItem(u,n);
@@ -885,9 +951,11 @@ function itemRow(u, n, o){
   const id = (o.pre||"it")+"-"+(o.sid ? o.sid+"-" : "")+u+"-"+n;
   const cb = h("input",{type:"checkbox", id, class:"cb"});
   cb.checked = on;
-  cb.addEventListener("change", e => { justKey = e.target.checked ? key : null; toggleItem(u, n, e.target.checked); justKey = null; });
+  cb.addEventListener("change", e => { const on = e.target.checked;
+    const own = o.sid || (o.pre === "nx" ? (sessionsOn(today()).find(x => x.content && x.ue === u && x.items.includes(n)) || {}).id : undefined);
+    reward({sid:own, where: o.pre==="it" || o.pre==="nx" ? "sheet" : "card", on, just: on ? [key] : null}, () => toggleItem(u, n, on)); });
   const kl = {L:"Leçon",A:"Application",C:"Cas",T:"À faire",V:"Vidéo",B:"Bonus"}[it.k]||"";
-  return h("label",{class:"item"+(on?" on":"")+(justKey===key?" just":""), for:id}, cb, boxSVG(),
+  return h("label",{class:"item"+(on?" on":"")+(justKeys.has(key)?" just":""), for:id}, cb, boxSVG(),
     h("span",null, h("span",{class:"kind"}, h("span",null, kl+(o.mod && it.mod ? " · "+it.mod.split(" · ")[0] : "")), it.m ? h("span",{class:"dur num"}, hmd(it.m)) : null),
       h("span",{class:"txt"}, it.t)));
 }
@@ -922,8 +990,8 @@ function card(v, o){
   o = o || {};
   const st = status(v), hero = !!o.hero, tg = tagOf(v, st, hero);
   const showItems = v.content && v.items.length && !v.skipped && !(o.compactPast && !hero && isPastV(v));
-  const el = h("article",{class:"card"+(hero?" hero":"")+(st==="done"?" done":"")+(st==="skip"?" skipped":"")+(v.kind==="bilan"?" bil":"")+(showItems?"":" flat"), style:"--ue:"+col(v.ue)},
-    h("div",{class:"c-top"}, tg ? h("span",{class:"tag tg-"+tg[1]}, h("i"), tg[0]) : h("span"), h("span",{class:"time num"}, v.kind === "off" ? "Journée" : fT(v.start)+" – "+fT(v.end))),
+  const el = h("article",{class:"card"+(hero?" hero":"")+(st==="done"?" done":"")+(st==="skip"?" skipped":"")+(v.kind==="bilan"?" bil":"")+(showItems?"":" flat"), style:"--ue:"+col(v.ue), "data-sid":v.id},
+    h("div",{class:"c-top"}, tg ? h("span",{class:"tag tg-"+tg[1]+(fx && fx.pop===v.id && st==="done" ? " pop" : "")}, h("i"), tg[0]) : h("span"), h("span",{class:"time num"}, v.kind === "off" ? "Journée" : fT(v.start)+" – "+fT(v.end))),
     h("button",{type:"button", class:"c-open", id:(o.pre||"c")+"-"+v.id, onclick:()=>openSession(v.id)},
       v.ue ? h("span",{class:"ue"}, h("i"), ueName(v.ue)) : null,
       h("span",{class:"ttl"}, cardTitle(v)),
@@ -932,8 +1000,9 @@ function card(v, o){
   const acts = [];
   if (hero) acts.push(h("button",{type:"button", class:"btn primary", id:"hero-open", onclick:()=>openSession(v.id)}, v.date === today() && isNow(v) ? "Ouvrir ma séance" : "Voir le détail", ic("arrow")));
   if (canMarkDone(v) && st !== "done" && (hero || (!v.content && v.date <= today())))
-    acts.push(h("button",{type:"button", class:"btn", id:"done-"+v.id, onclick:()=>{ setSessionDone(v, true); toast("Bravo, séance cochée."); }}, "C'est fait"));
+    acts.push(h("button",{type:"button", class:"btn", id:"done-"+v.id, onclick:()=>{ if (!rewardDone(v, "card")) toast("Bravo, séance cochée."); }}, "C'est fait"));
   if (acts.length) el.append(h("div",{class:"acts"}, acts));
+  const c = celNode(v.id, "card"); if (c) el.append(c);
   return el;
 }
 function agenda(list, o){
@@ -1003,11 +1072,16 @@ function dayCard(work){
   else line = [h("b",null,"Tout est fait. Bravo ! "), "Repose-toi, la suite est prête."];
   const segEls = units.length ? units : segs.map(v => status(v)==="done" ? "f" : status(v)==="part" ? "h" : "");
   const n = Math.max(1, segEls.length);
+  // ce qu'un geste vient de remplir (jamais au chargement ni au rafraîchissement)
+  const prev = daySegMemo && daySegMemo.T === T && daySegMemo.segs.length === segEls.length ? daySegMemo : null;
+  const fresh = fx && fx.on && prev ? segEls.map((c,i) => c === "f" && prev.segs[i] !== "f") : [];
+  const bump = !!(fx && fx.on && prev && big > prev.big);
+  daySegMemo = {T, segs:segEls.slice(), big};
   return h("section",{class:"card-p day", "aria-label":"Ta journée"},
     h("div",{class:"day-top"},
       h("div",null, h("p",{class:"eb"}, hero ? "Ta journée" : "Journée terminée"), h("p",{class:"day-sub"}, h("b",null, units.length ? big+" "+(big>1?"éléments faits":"élément fait") : big+" "+(big>1?"séances faites":"séance faite")), " sur "+of)),
-      h("p",{class:"day-n num", "aria-label": (units.length ? big+" "+(big>1?"éléments faits":"élément fait") : big+" "+(big>1?"séances faites":"séance faite"))+" sur "+of}, String(big), h("small",{"aria-hidden":"true"},"/"+of))),
-    of ? h("div",{class:"segs"+(n>12?" dense":""), style:"grid-template-columns:repeat("+n+",minmax(0,1fr))", "aria-hidden":"true"}, segEls.map(c => h("i",{class:c}))) : null,
+      h("p",{class:"day-n num"+(bump?" bump":""), "aria-label": (units.length ? big+" "+(big>1?"éléments faits":"élément fait") : big+" "+(big>1?"séances faites":"séance faite"))+" sur "+of}, String(big), h("small",{"aria-hidden":"true"},"/"+of))),
+    of ? h("div",{class:"segs"+(n>12?" dense":""), style:"grid-template-columns:repeat("+n+",minmax(0,1fr))", "aria-hidden":"true"}, segEls.map((c,i) => h("i",{class:c+(fresh[i]?" nf":"")}))) : null,
     h("p",{class:"phr"}, ic(hero ? "clock" : "sunrise"), h("span",null, line)));
 }
 function restCard(T, list){
@@ -1206,6 +1280,7 @@ function renderSession(sh){
   const v = view_(s); const st = status(v);
   sh.style.setProperty("--ue", v.ue ? col(v.ue) : "var(--gold)");
   sh.append(sheetBar());
+  const cn = celNode(v.id, "sheet"); if (cn) sh.append(cn);
   sh.append(h("div",{class:"sh-head"},
     h("p",{class:"eb num"}, fDay(v.date)+" · "+(v.kind==="off" ? "toute la journée" : fT(v.start)+" – "+fT(v.end))),
     h("h2",null, titleOf(v)),
@@ -1246,7 +1321,7 @@ function renderSession(sh){
   sh.append(body);
   const foot = h("div",{class:"foot"});
   if (v.kind !== "off" && !v.skipped && (TRACKED.has(v.kind) || v.kind==="revision" || v.kind==="bilan") && !(v.content && !v.items.length)){
-    foot.append(h("button",{type:"button", class:"btn "+(st==="done"?"soft":"primary"), id:"sh-done", onclick:()=>{ setSessionDone(v, st!=="done"); if (st!=="done") toast("Bravo, séance terminée."); }}, st==="done" ? "Annuler « fait »" : [ic("check"), "Séance terminée"]));
+    foot.append(h("button",{type:"button", class:"btn "+(st==="done"?"soft":"primary"), id:"sh-done", onclick:()=>{ if (st==="done") reward({sid:v.id, where:"sheet", on:false}, () => setSessionDone(v, false)); else if (!rewardDone(v, "sheet")) toast("Bravo, séance terminée."); }}, st==="done" ? "Annuler « fait »" : [ic("check"), "Séance terminée"]));
   }
   if (v.kind !== "off" && (CK.has(v.raw.kind) || v.extra) && v.date >= today()){
     foot.append(h("button",{type:"button", class:"btn soft", id:"sh-skip", onclick:()=>skipSession(v, !v.skipped)}, v.skipped ? "Remettre au planning" : "Reporter"));
@@ -1338,6 +1413,7 @@ function closeSheet(){
 }
 document.getElementById("backdrop").addEventListener("click", e => { if (e.target.id === "backdrop") closeSheet(); });
 document.addEventListener("keydown", e => {
+  if (party){ if (e.key === "Escape"){ e.preventDefault(); closeParty(); } else if (e.key === "Tab"){ e.preventDefault(); party.querySelector("button").focus(); } return; }
   if (!sheetState) return;
   if (e.key === "Escape"){ closeSheet(); return; }
   if (e.key === "Tab"){ // la fiche garde le focus
@@ -1352,6 +1428,134 @@ document.getElementById("add-side").addEventListener("click", openAdd);
 
 let toastT = null;
 function toast(t){ const el = document.getElementById("toast"); el.textContent = fr(t); el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(()=>el.classList.remove("show"), 2600); }
+
+/* ================= récompenses (interface seulement : rien n'est sauvegardé sur GitHub) =================
+   On compare l'état des séances juste avant et juste après un geste (coche, « C'est fait », « Séance terminée »).
+   Le moteur et les données ne changent pas. Jamais au chargement, au rafraîchissement ni à la synchro. */
+let fx = null, justKeys = new Set(), daySegMemo = null;          // effets du rendu déclenché par un geste
+let cel = null, celTimer = null, party = null, partyBack = null, partyInert = [];
+const celAt = {}, partyMem = {};
+const PK = '<path class="rg" d="M4 40 L21 22 L29 30 L40 16 L60 40"/><g class="fl"><path class="po" d="M40 16 V3"/><path class="fg" d="M40.8 3.4 Q47 4.6 52 7.4 Q47 10.2 40.8 11.4Z"/></g>';
+const slotView = id => { const s = SCHED && SCHED.slots.find(x => x.id === id); return s ? view_(s) : null; };
+/* les séances que compte « Ta journée » */
+const dayGoal = T => skips[T] ? [] : sessionsOn(T).filter(v => TRACKED.has(v.kind) && status(v) !== "free" && status(v) !== "skip");
+const dayDone = T => { const g = dayGoal(T); return g.length > 0 && g.every(v => status(v) === "done"); };
+const workMin = v => v.content && v.items.length ? minutesOf(v) : mins(v.start, v.end);
+const cardOf = sid => document.querySelector('#screen .card[data-sid="'+CSS.escape(sid)+'"]');
+function partySeen(T){ if (partyMem[T]) return true; try{ return localStorage.getItem("dcg-ui-dayparty-"+T) === "1"; }catch(e){ return false; } }
+function partyMark(T){
+  partyMem[T] = true;
+  try{
+    for (let i = localStorage.length-1; i >= 0; i--){ const k = localStorage.key(i); if (k && k.startsWith("dcg-ui-dayparty-") && k !== "dcg-ui-dayparty-"+T) localStorage.removeItem(k); }
+    localStorage.setItem("dcg-ui-dayparty-"+T, "1");
+  }catch(e){}
+}
+/* o : {sid, where:"card"|"sheet", on, just:[clés d'éléments], force, pop} ; fn : le geste lui-même */
+function reward(o, fn){
+  const T = today(), ae = document.activeElement, focusId = ae && ae.id || null;
+  const vb = o.sid ? slotView(o.sid) : null, was = vb ? status(vb) : null, dayWas = dayDone(T);
+  fx = {on:!!o.on, pop:o.pop || null}; justKeys = new Set(o.just || []);
+  try{ fn(); } finally { fx = null; justKeys = new Set(); }
+  // le bouton a disparu (« C'est fait ») : le focus revient sur la carte
+  let back = focusId && document.getElementById(focusId) ? focusId : null;
+  if (focusId && !back && o.sid && !sheetState){ const c = cardOf(o.sid); const b = c && c.querySelector(".c-open"); if (b){ b.focus({preventScroll:true}); back = b.id; } }
+  if (!o.on){ if (cel && cel.sid === o.sid) endCel(); return false; }
+  if (!dayWas && dayDone(T) && !partySeen(T)){ endCel(); openParty(T, back); return true; }
+  if (!vb) return false;
+  const now = slotView(o.sid);
+  if (!(o.force || (was !== "done" && now && status(now) === "done"))) return false;
+  return celebrate(o.sid, o.where, vb);
+}
+function rewardDone(v, where){
+  const just = v.content ? v.items.filter(n => !isDoneItem(v.ue,n)).map(n => v.id+":"+v.ue+":"+n) : null;
+  return reward({sid:v.id, where, on:true, force:true, just, pop:v.id}, () => setSessionDone(v, true));
+}
+/* « Séance terminée ! » : le tampon tombe, la crête se dessine, le drapeau monte */
+function celebrate(sid, where, vb){
+  const t = Date.now();
+  if (t - (celAt[sid]||0) < 10000) return false;
+  const inSheet = where === "sheet" && sheetState && sheetState.type === "session";
+  const host = where === "sheet" ? (inSheet ? document.getElementById("sheet") : null) : cardOf(sid);
+  if (!host) return false;
+  celAt[sid] = t;
+  const who = vb.ue ? UEN[vb.ue] : (KIND[vb.kind] || "Séance");
+  endCel();
+  cel = {sid, where, host: inSheet ? sheetState.id : sid, t0:t, sub: who+" : "+(vb.content && vb.items.length ? plural(vb.items.length,"élément")+", " : "")+hmd(workMin(vb))+"."};
+  const node = celNode(cel.host, where), bar = host.querySelector(".sh-bar");
+  if (where === "sheet" && bar) bar.after(node); else host.append(node);
+  document.getElementById("cheer").textContent = fr("Séance terminée ! "+cel.sub);
+  celTimer = setTimeout(endCel, 2600);
+  return true;
+}
+function celNode(sid, where){
+  if (!cel || cel.where !== where || (where === "sheet" ? cel.host : cel.sid) !== sid) return null;
+  const el = Date.now() - cel.t0; if (el >= 2600) return null;
+  return h("div",{class:"cel"+(where === "sheet" ? " in-sheet" : ""), "aria-hidden":"true", style:"--el:"+el+"ms", onmousedown:e => e.preventDefault(), onclick:e => { e.preventDefault(); e.stopPropagation(); endCel(); }},
+    h("div",{class:"cel-v"}, h("div",{class:"stamp"}, svgEl(PK, {class:"pk", viewBox:"0 0 64 44"}), h("b",null, h("span",null,"Séance terminée !")), h("small",null, cel.sub))));
+}
+function endCel(){
+  clearTimeout(celTimer); celTimer = null;
+  if (!cel) return;
+  cel = null; document.querySelectorAll(".cel").forEach(n => n.remove());
+  document.getElementById("cheer").textContent = "";
+}
+/* « Journée réussie ! » : le ciel passe de la nuit au lever du soleil, Toi monte d'un pas, un drapeau est planté */
+function partyScene(f0, f1){
+  const [x0,y0] = trailAt(f0), [x1,y1] = trailAt(f1), r = n => n.toFixed(1);
+  const TR = "M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36";
+  return svgEl(
+    '<path d="M-700 64 L-600 46 L-500 70 L-400 52 L-290 78 L-200 56 L-110 82 L-40 70 L0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 L440 70 L520 48 L600 74 L700 54 L800 78 L900 50 L1000 72 L1090 60 V150 H-700Z" fill="#4b3a80" opacity=".75"/>'+
+    '<path d="M-700 110 L-620 96 L-520 116 L-420 92 L-320 112 L-220 98 L-120 118 L-50 106 L0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 L450 100 L530 86 L620 108 L720 90 L820 110 L920 94 L1020 112 L1090 100 V150 H-700Z" fill="#1b2152"/>'+
+    '<path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".75" stroke-width="1.3"/>'+
+    '<path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/>'+
+    '<path d="'+TR+'" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>'+
+    '<path class="pt-trail" style="--d0:'+r(f0*100)+'" d="'+TR+'" pathLength="100" fill="none" stroke="#ffc247" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="'+r(f1*100)+' 200"/>'+
+    '<path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/>'+
+    '<g class="pt-plant"><path d="M'+r(x1)+' '+r(y1-7)+' V'+r(y1-31)+'" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path d="M'+r(x1+1)+' '+r(y1-31)+' Q'+r(x1+10)+' '+r(y1-29)+' '+r(x1+17)+' '+r(y1-25.5)+' Q'+r(x1+10)+' '+r(y1-22)+' '+r(x1+1)+' '+r(y1-20)+'Z" fill="#ffc247"/></g>'+
+    '<g class="pt-toi" style="--dx:'+r(x0-x1)+'px;--dy:'+r(y0-y1)+'px"><circle class="halo" cx="'+r(x1)+'" cy="'+r(y1)+'" r="11" fill="#ffc247"/><circle cx="'+r(x1)+'" cy="'+r(y1)+'" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/>'+
+      '<g transform="translate('+r(Math.max(34, x1-19))+' '+r(y1+10)+')"><rect width="38" height="22" rx="11" fill="#141a3f" fill-opacity=".92"/><text x="19" y="15.5" text-anchor="middle" class="svt" fill="#ffd27a">Toi</text></g></g>',
+    {class:"pt-scene", viewBox:"0 0 390 150", "aria-hidden":"true"});
+}
+function openParty(T, backId){
+  partyMark(T);
+  const goal = dayGoal(T), tot = goal.reduce((a,v) => a+workMin(v), 0);
+  const f0 = programmePct(rhythm()).pct/100, f1 = Math.min(1, f0+.08);
+  const btn = h("button",{type:"button", class:"btn primary", id:"party-go", onclick:closeParty}, "Continuer");
+  const card = h("div",{class:"pt-card"},
+    svgEl(PK, {class:"pk", viewBox:"0 0 64 44", "aria-hidden":"true"}),
+    h("p",{class:"eb"}, fDay(T)),
+    h("h2",{id:"party-t"}, h("span",null,"Journée réussie !")),
+    h("p",{class:"pt-rec num", id:"party-d"}, plural(goal.length,"séance")+" · "+hmd(tot)+" de travail"),
+    h("p",{class:"pt-calm", id:"party-c"}, "Repose-toi, la suite est prête."),
+    btn);
+  const conf = h("div",{class:"pt-conf", "aria-hidden":"true"});
+  const C = ["#ffc247","#ff7a59","#ffd27a","#ffe6a8","#ff9e82","#ffb23e"];
+  for (let i = 0; i < 46; i++){
+    const a = Math.random()*Math.PI*2, d = 120+Math.random()*200;
+    conf.append(h("i",{style:"--bx:"+Math.round(Math.cos(a)*d*1.15)+"px;--by:"+Math.round(Math.sin(a)*d*.75-50)+"px;--r:"+Math.round(300+Math.random()*500)*(i%2?1:-1)+"deg;--c:"+C[i%C.length]+
+      ";--w:"+(i%3 ? 7 : 5)+"px;--h:"+(i%3 ? 11 : 5)+"px;--d:"+(2+Math.random()*1.2).toFixed(2)+"s;--dl:"+(.25+Math.random()*.35).toFixed(2)+"s"}));
+  }
+  party = h("div",{class:"party", id:"party", role:"dialog", "aria-modal":"true", "aria-labelledby":"party-t", "aria-describedby":"party-d party-c"},
+    h("div",{class:"pt-dawn"}), h("div",{class:"pt-sun"}), starsSVG(),
+    svgEl('<path d="M0 58 L120 24 L230 46 L360 12 L520 42 L640 20 L800 48 L1000 16 V100 H0Z" fill="#4b3a80" opacity=".6"/><path d="M0 80 L160 52 L300 70 L460 44 L620 66 L780 48 L1000 62 V100 H0Z" fill="#1b2152"/>', {class:"pt-hills", viewBox:"0 0 1000 100", preserveAspectRatio:"none", "aria-hidden":"true"}),
+    h("div",{class:"pt-mid"}, card), partyScene(f0, f1), conf);
+  party.addEventListener("click", e => { if (!card.contains(e.target)) closeParty(); });
+  partyInert = [...document.body.children].filter(n => n.tagName !== "SCRIPT" && !n.inert);
+  partyInert.forEach(n => { n.inert = true; });
+  partyBack = backId;
+  document.body.append(party);
+  document.documentElement.classList.add("locked");
+  btn.focus({preventScroll:true});
+}
+function closeParty(){
+  if (!party) return;
+  party.remove(); party = null;
+  partyInert.forEach(n => { n.inert = false; }); partyInert = [];
+  if (!sheetState) document.documentElement.classList.remove("locked");
+  const t = (partyBack && document.getElementById(partyBack)) || (sheetState ? document.querySelector("#sheet .x") : null);
+  if (t) t.focus({preventScroll:true});
+  partyBack = null;
+}
 
 /* ligne de sauvegarde : la même dans le menu de l'ordinateur */
 (function(){
