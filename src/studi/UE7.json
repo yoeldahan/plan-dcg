@@ -1,0 +1,66 @@
+{
+ "ue": "UE7",
+ "nom": "Management des organisations",
+ "parcours": "Studi · DCG 2026",
+ "releve_le": "2026-11-16",
+ "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
+ "epreuve": {"duree_h": 4, "format": "Analyse managériale et question problématisée"},
+ "modules": [
+  {"titre": "Introduction", "elements": [
+   {"type": "tache", "titre": "Survole l'e-book UE7 et la méthode : analyse managériale + question problématisée (4 h)", "minutes": 30}
+  ]},
+  {"titre": "M2 · Le contexte et les enjeux du management des organisations", "elements": [
+   {"type": "lecon", "titre": "Les organisations : buts, objectifs et action collective", "minutes": 50},
+   {"type": "lecon", "titre": "La place du management dans la performance", "minutes": 50},
+   {"type": "lecon", "titre": "Les différents profils des décideurs", "minutes": 50},
+   {"type": "lecon", "titre": "Les spécificités des différentes organisations", "minutes": 50},
+   {"type": "lecon", "titre": "Les problématiques managériales actuelles", "minutes": 50},
+   {"type": "lecon", "titre": "L'environnement actuel des organisations", "minutes": 50},
+   {"type": "lecon", "titre": "Continuité et changements organisationnels", "minutes": 50},
+   {"type": "lecon", "titre": "La diversité des gouvernances", "minutes": 50},
+   {"type": "lecon", "titre": "Parties prenantes et RSE", "minutes": 50},
+   {"type": "application", "titre": "Application : Les enjeux du management des organisations", "minutes": 45}
+  ]},
+  {"titre": "M3 · Le management stratégique", "elements": [
+   {"type": "lecon", "titre": "La démarche stratégique", "minutes": 50},
+   {"type": "lecon", "titre": "Les outils d'analyse de l'environnement", "minutes": 50},
+   {"type": "lecon", "titre": "Les outils d'analyse interne", "minutes": 50},
+   {"type": "lecon", "titre": "Les stratégies de domaine", "minutes": 50},
+   {"type": "lecon", "titre": "Spécialisation et diversification", "minutes": 50},
+   {"type": "lecon", "titre": "Le développement de l'entreprise", "minutes": 50},
+   {"type": "application", "titre": "Application : Le management stratégique", "minutes": 45}
+  ]},
+  {"titre": "M4 · Le management organisationnel", "elements": [
+   {"type": "lecon", "titre": "La place de l'humain dans les pratiques managériales", "minutes": 50},
+   {"type": "lecon", "titre": "Le comportement organisationnel", "minutes": 50},
+   {"type": "lecon", "titre": "Conflits, crise et résilience organisationnelle", "minutes": 50},
+   {"type": "lecon", "titre": "La nécessité d'animer une organisation", "minutes": 50},
+   {"type": "lecon", "titre": "Les moyens pour animer une organisation", "minutes": 50},
+   {"type": "lecon", "titre": "Les structures classiques", "minutes": 50},
+   {"type": "lecon", "titre": "Les théories de la contingence structurelle", "minutes": 50},
+   {"type": "lecon", "titre": "Les configurations de Mintzberg", "minutes": 50},
+   {"type": "lecon", "titre": "Les organisations contemporaines", "minutes": 50},
+   {"type": "application", "titre": "Application : Le management organisationnel", "minutes": 45}
+  ]},
+  {"titre": "M5 · Le management opérationnel", "elements": [
+   {"type": "lecon", "titre": "La fonction marketing", "minutes": 50},
+   {"type": "lecon", "titre": "Les fonctions production et logistique", "minutes": 50},
+   {"type": "lecon", "titre": "La recherche et développement", "minutes": 50},
+   {"type": "lecon", "titre": "La fonction ressources humaines", "minutes": 50},
+   {"type": "lecon", "titre": "La fonction financière et le contrôle de gestion", "minutes": 50},
+   {"type": "lecon", "titre": "L'analyse de la chaîne de valeur", "minutes": 50},
+   {"type": "lecon", "titre": "Le modèle économique Canvas", "minutes": 50},
+   {"type": "lecon", "titre": "Les processus décisionnels", "minutes": 50},
+   {"type": "lecon", "titre": "Pouvoir, autorité et leadership", "minutes": 50},
+   {"type": "application", "titre": "Application : Le management opérationnel", "minutes": 45}
+  ]}
+ ],
+ "ressources": [],
+ "evenements": [],
+ "a_verifier": [
+  "Lives : dates, heures et replays",
+  "Devoirs à rendre et leurs dates limites",
+  "Examens blancs Studi (« Objectif examen ») : dates",
+  "E-books, quiz et exercices de chaque module"
+ ]
+}

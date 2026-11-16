@@ -1,0 +1,93 @@
+{
+ "ue": "UE5",
+ "nom": "Économie contemporaine",
+ "parcours": "Studi · DCG 2026",
+ "releve_le": "2026-11-16",
+ "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
+ "epreuve": {"duree_h": 4, "format": "Dossier documentaire et question problématisée"},
+ "modules": [
+  {"titre": "Introduction", "elements": [
+   {"type": "tache", "titre": "Survole l'e-book UE5 et la méthode de l'épreuve : dossier documentaire + question problématisée (4 h)", "minutes": 30}
+  ]},
+  {"titre": "M2 · Appréhender les fondements de la science économique", "elements": [
+   {"type": "lecon", "titre": "Ressources rares et besoins illimités", "minutes": 50},
+   {"type": "lecon", "titre": "Les relations entre les agents économiques", "minutes": 50},
+   {"type": "lecon", "titre": "La répartition primaire des revenus et la valeur ajoutée", "minutes": 50},
+   {"type": "lecon", "titre": "L'histoire des principaux faits économiques", "minutes": 50},
+   {"type": "lecon", "titre": "Tertiarisation de l'économie et désindustrialisation", "minutes": 50},
+   {"type": "application", "titre": "Application : Les fondements de la science économique", "minutes": 45}
+  ]},
+  {"titre": "M3 · Comprendre le fonctionnement des marchés", "elements": [
+   {"type": "lecon", "titre": "Économie de marché et libéralisme économique", "minutes": 50},
+   {"type": "lecon", "titre": "Les dynamiques des marchés concurrentiels", "minutes": 50},
+   {"type": "lecon", "titre": "Le marché : rôle et fonctionnement", "minutes": 50},
+   {"type": "lecon", "titre": "Les défaillances du marché", "minutes": 50},
+   {"type": "lecon", "titre": "Les monopoles", "minutes": 50},
+   {"type": "lecon", "titre": "Les oligopoles et la concurrence monopolistique", "minutes": 50},
+   {"type": "lecon", "titre": "La régulation des marchés et de la concurrence", "minutes": 50},
+   {"type": "application", "titre": "Application : Le fonctionnement des marchés", "minutes": 45}
+  ]},
+  {"titre": "M4 · Financer l'activité économique", "elements": [
+   {"type": "lecon", "titre": "Besoins et capacités de financement par agent", "minutes": 50},
+   {"type": "lecon", "titre": "L'épargne des ménages", "minutes": 50},
+   {"type": "lecon", "titre": "Les déterminants de l'investissement des entreprises", "minutes": 50},
+   {"type": "lecon", "titre": "Les modalités de financement de l'investissement", "minutes": 50},
+   {"type": "lecon", "titre": "La monnaie et le rôle des banques", "minutes": 50},
+   {"type": "lecon", "titre": "Les différents marchés de capitaux", "minutes": 50},
+   {"type": "application", "titre": "Application : Financer l'activité économique", "minutes": 45}
+  ]},
+  {"titre": "M5 · Identifier les enjeux de la croissance économique", "elements": [
+   {"type": "lecon", "titre": "La croissance économique et ses limites", "minutes": 50},
+   {"type": "lecon", "titre": "Croissance : le rôle des facteurs de production", "minutes": 50},
+   {"type": "lecon", "titre": "Croissance : le rôle du progrès technique", "minutes": 50},
+   {"type": "lecon", "titre": "Les théories de la croissance endogène", "minutes": 50},
+   {"type": "lecon", "titre": "Les moteurs de la croissance", "minutes": 50},
+   {"type": "lecon", "titre": "Le développement durable", "minutes": 50},
+   {"type": "lecon", "titre": "Soutenabilité de la croissance et nouvelles logiques économiques", "minutes": 50},
+   {"type": "application", "titre": "Application : Les enjeux de la croissance", "minutes": 45}
+  ]},
+  {"titre": "M6 · Analyser la régulation publique", "elements": [
+   {"type": "lecon", "titre": "Les organes de l'action publique", "minutes": 50},
+   {"type": "lecon", "titre": "Les fonctions économiques et sociales de l'État", "minutes": 50},
+   {"type": "lecon", "titre": "Le budget de l'État", "minutes": 50},
+   {"type": "lecon", "titre": "Le déficit public et la dette publique", "minutes": 50},
+   {"type": "lecon", "titre": "Objectifs et typologie des politiques économiques", "minutes": 50},
+   {"type": "lecon", "titre": "Politique de la demande et politique de l'offre", "minutes": 50},
+   {"type": "lecon", "titre": "La politique monétaire européenne", "minutes": 50},
+   {"type": "lecon", "titre": "La coordination des politiques conjoncturelles dans la zone euro", "minutes": 50},
+   {"type": "lecon", "titre": "Les politiques structurelles nationales et européennes", "minutes": 50},
+   {"type": "application", "titre": "Application : Analyser la régulation publique", "minutes": 45}
+  ]},
+  {"titre": "M7 · Les politiques sociales face aux déséquilibres du marché du travail", "elements": [
+   {"type": "lecon", "titre": "Le marché du travail", "minutes": 50},
+   {"type": "lecon", "titre": "Les indicateurs de l'emploi et du chômage", "minutes": 50},
+   {"type": "lecon", "titre": "Chômage classique, keynésien, conjoncturel et structurel", "minutes": 50},
+   {"type": "lecon", "titre": "Les effets de la révolution numérique sur l'emploi", "minutes": 50},
+   {"type": "lecon", "titre": "Les politiques de l'emploi", "minutes": 50},
+   {"type": "lecon", "titre": "Caractériser et mesurer la pauvreté", "minutes": 50},
+   {"type": "lecon", "titre": "Les différentes formes d'inégalités", "minutes": 50},
+   {"type": "lecon", "titre": "Pourquoi et comment lutter contre les inégalités", "minutes": 50},
+   {"type": "lecon", "titre": "Les modèles de protection sociale", "minutes": 50},
+   {"type": "application", "titre": "Application : Les politiques sociales et le marché du travail", "minutes": 45}
+  ]},
+  {"titre": "M8 · Les effets et les enjeux de la mondialisation", "elements": [
+   {"type": "lecon", "titre": "Les transformations du commerce mondial", "minutes": 50},
+   {"type": "lecon", "titre": "La balance des paiements", "minutes": 50},
+   {"type": "lecon", "titre": "Les FTN et les IDE", "minutes": 50},
+   {"type": "lecon", "titre": "Le libre-échange", "minutes": 50},
+   {"type": "lecon", "titre": "Les théories et pratiques protectionnistes", "minutes": 50},
+   {"type": "lecon", "titre": "Politiques commerciales stratégiques, compétitivité et attractivité", "minutes": 50},
+   {"type": "lecon", "titre": "Le débat libre-échange / protectionnisme", "minutes": 50},
+   {"type": "lecon", "titre": "La gouvernance mondiale", "minutes": 50},
+   {"type": "application", "titre": "Application : Les enjeux de la mondialisation", "minutes": 45}
+  ]}
+ ],
+ "ressources": [],
+ "evenements": [],
+ "a_verifier": [
+  "Lives : dates, heures et replays",
+  "Devoirs à rendre et leurs dates limites",
+  "Examens blancs Studi (« Objectif examen ») : dates",
+  "E-books, quiz et exercices de chaque module"
+ ]
+}

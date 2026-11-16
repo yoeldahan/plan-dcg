@@ -1,0 +1,57 @@
+{
+ "ue": "UE13",
+ "nom": "Communication professionnelle",
+ "parcours": "Studi · DCG 2026",
+ "releve_le": "2026-11-16",
+ "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
+ "epreuve": {"duree_h": null, "format": "Rapport écrit (déposé sur Studi) puis oral en juin"},
+ "modules": [
+  {"titre": "Introduction", "elements": [
+   {"type": "tache", "titre": "Lis l'introduction UE13 et les consignes des dépôts (onglet Évaluations)", "minutes": 30}
+  ]},
+  {"titre": "M2 · Rechercher et analyser l'information", "elements": [
+   {"type": "lecon", "titre": "Rechercher des informations : la recherche documentaire", "minutes": 40},
+   {"type": "lecon", "titre": "Rechercher des informations : la démarche d'enquête", "minutes": 40}
+  ]},
+  {"titre": "M4 · Le rapport et la soutenance", "elements": [
+   {"type": "lecon", "titre": "Le rapport de stage", "minutes": 45},
+   {"type": "lecon", "titre": "La soutenance", "minutes": 45}
+  ]},
+  {"titre": "Rapport · Préparer", "elements": [
+   {"type": "tache", "titre": "Choisis ta situation de communication chez Fidexia et note les faits (qui, quoi, quand, quel support)", "minutes": 60},
+   {"type": "tache", "titre": "Fais le plan du rapport : parties 1, 2 et 3", "minutes": 60}
+  ]},
+  {"titre": "Rapport · Parties 1 et 2", "elements": [
+   {"type": "tache", "titre": "Rédige la partie 1 : présentation de Fidexia (activité, organisation, ton poste)", "minutes": 120},
+   {"type": "tache", "titre": "Rédige la partie 2 : la situation de communication (contexte, acteurs, outils, analyse)", "minutes": 120},
+   {"type": "tache", "titre": "Termine les parties 1 et 2, relis et dépose-les sur Studi (Évaluations > UE13)", "minutes": 120}
+  ]},
+  {"titre": "M2 · Rechercher et analyser l'information (suite)", "elements": [
+   {"type": "lecon", "titre": "L'analyse des informations : le travail collaboratif", "minutes": 40},
+   {"type": "lecon", "titre": "Assurer une veille informationnelle", "minutes": 40}
+  ]},
+  {"titre": "Rapport · Partie 3", "elements": [
+   {"type": "tache", "titre": "Partie 3 : choisis ton thème structuré et fais ton plan détaillé", "minutes": 120},
+   {"type": "tache", "titre": "Rédige la partie 3 : première moitié", "minutes": 120},
+   {"type": "tache", "titre": "Rédige la partie 3 : seconde moitié, relis et dépose-la sur Studi", "minutes": 120}
+  ]},
+  {"titre": "M3 · Les principes de la communication professionnelle", "elements": [
+   {"type": "lecon", "titre": "Les enjeux de la communication", "minutes": 40},
+   {"type": "lecon", "titre": "Les outils de la communication écrite", "minutes": 40},
+   {"type": "lecon", "titre": "Les outils de la communication orale", "minutes": 40}
+  ]},
+  {"titre": "Rapport · Version intégrale", "elements": [
+   {"type": "tache", "titre": "Assemble le rapport intégral : introduction, conclusion, sommaire, annexes", "minutes": 120},
+   {"type": "tache", "titre": "Relis tout, mets en page et dépose le rapport intégral sur Studi (limite : fin février)", "minutes": 120},
+   {"type": "tache", "titre": "Passe le certificat Studi UE13 (QCM, onglet Évaluations)", "minutes": 45}
+  ]}
+ ],
+ "ressources": [],
+ "evenements": [],
+ "a_verifier": [
+  "Lives : dates, heures et replays",
+  "Devoirs à rendre et leurs dates limites",
+  "Examens blancs Studi (« Objectif examen ») : dates",
+  "E-books, quiz et exercices de chaque module"
+ ]
+}

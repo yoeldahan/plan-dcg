@@ -1,0 +1,96 @@
+{
+ "ue": "UE12",
+ "nom": "Anglais des affaires",
+ "parcours": "Studi · DCG 2026",
+ "releve_le": "2026-11-16",
+ "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
+ "epreuve": {"duree_h": 3, "format": "Traduction, synthèse et rédaction en anglais"},
+ "modules": [
+  {"titre": "Introduction", "elements": [
+   {"type": "tache", "titre": "Survole l'e-book UE12 et la méthode : traduction, synthèse, rédaction (3 h)", "minutes": 20}
+  ]},
+  {"titre": "M2 · Méthodologie et bases grammaticales", "elements": [
+   {"type": "video", "titre": "Méthodologie : la note de synthèse (vidéo 21 min)", "minutes": 42},
+   {"type": "video", "titre": "Méthodologie : la rédaction en anglais (vidéo 17 min)", "minutes": 34},
+   {"type": "video", "titre": "Grammaire : syntaxe et expressions (14 min)", "minutes": 28},
+   {"type": "video", "titre": "Grammaire : prétérit et present perfect (20 min)", "minutes": 40},
+   {"type": "video", "titre": "Grammaire : présent simple et BE + V-ING (16 min)", "minutes": 32},
+   {"type": "video", "titre": "Grammaire : l'expression du futur (11 min)", "minutes": 22},
+   {"type": "video", "titre": "Grammaire : les modaux (13 min)", "minutes": 26},
+   {"type": "video", "titre": "Grammaire : le conditionnel, IF, WHETHER (7 min)", "minutes": 14},
+   {"type": "video", "titre": "Grammaire : l'obligation et le devoir (7 min)", "minutes": 14},
+   {"type": "video", "titre": "Grammaire : la capacité (9 min)", "minutes": 18}
+  ]},
+  {"titre": "M3 · Companies and their stakeholders", "elements": [
+   {"type": "lecon", "titre": "The main actors of a company", "minutes": 30},
+   {"type": "lecon", "titre": "Company organization", "minutes": 30},
+   {"type": "lecon", "titre": "Business forms and leadership styles", "minutes": 30},
+   {"type": "lecon", "titre": "How to fund a business", "minutes": 30},
+   {"type": "application", "titre": "Application : Organizing a company", "minutes": 45}
+  ]},
+  {"titre": "M4 · Corporate Social Responsibility", "elements": [
+   {"type": "lecon", "titre": "Corporate Social Responsibility", "minutes": 30},
+   {"type": "lecon", "titre": "Environmental, social and governance factors", "minutes": 30},
+   {"type": "lecon", "titre": "Corporate ESG strategies", "minutes": 30},
+   {"type": "lecon", "titre": "Challenges and benefits of implementing CSR", "minutes": 30},
+   {"type": "application", "titre": "Application : the corporate citizen and the social and solidarity economy", "minutes": 45}
+  ]},
+  {"titre": "M5 · Corporate culture and working conditions", "elements": [
+   {"type": "lecon", "titre": "Corporate culture", "minutes": 30},
+   {"type": "lecon", "titre": "Human resources and quality of working life", "minutes": 30},
+   {"type": "lecon", "titre": "The specificities of digital firms", "minutes": 30},
+   {"type": "application", "titre": "Application : Implementing corporate culture", "minutes": 45},
+   {"type": "cas", "titre": "Cas Work-life balance", "minutes": 60},
+   {"type": "cas", "titre": "Cas Ageism", "minutes": 90}
+  ]},
+  {"titre": "M6 · Communication and strategies to be competitive", "elements": [
+   {"type": "lecon", "titre": "Strategies for growth", "minutes": 30},
+   {"type": "lecon", "titre": "Current challenges", "minutes": 30},
+   {"type": "lecon", "titre": "Assessment tools", "minutes": 30},
+   {"type": "lecon", "titre": "Communication with stakeholders", "minutes": 30},
+   {"type": "lecon", "titre": "Effective communication", "minutes": 30},
+   {"type": "lecon", "titre": "Fair competition policies", "minutes": 30},
+   {"type": "lecon", "titre": "Innovation and intellectual property", "minutes": 30},
+   {"type": "application", "titre": "Application : corporate strategy and competitiveness", "minutes": 45}
+  ]},
+  {"titre": "M7 · The digital revolution", "elements": [
+   {"type": "lecon", "titre": "The age of digital society", "minutes": 30},
+   {"type": "video", "titre": "New technologies (vidéo 30 min)", "minutes": 60},
+   {"type": "video", "titre": "What the future holds in store (vidéo 18 min)", "minutes": 36},
+   {"type": "video", "titre": "Customer-centric (vidéo 13 min)", "minutes": 26},
+   {"type": "lecon", "titre": "Digital tools and assets in the business world", "minutes": 30},
+   {"type": "lecon", "titre": "Big tech controversies", "minutes": 30},
+   {"type": "cas", "titre": "Cas Robots are taking our jobs", "minutes": 90}
+  ]},
+  {"titre": "M8 · Understanding what is at stake with energy", "elements": [
+   {"type": "lecon", "titre": "A double constraint", "minutes": 30},
+   {"type": "lecon", "titre": "Towards the end of fossil fuels", "minutes": 30},
+   {"type": "lecon", "titre": "Shifting to renewable energies", "minutes": 30},
+   {"type": "lecon", "titre": "Energy, geopolitics and social justice", "minutes": 30},
+   {"type": "application", "titre": "Application : what is at stake with energy", "minutes": 45}
+  ]},
+  {"titre": "M9 · Globalisation and development", "elements": [
+   {"type": "lecon", "titre": "Globalization (+ 4 vidéos)", "minutes": 60},
+   {"type": "cas", "titre": "Cas « Is free trade being threatened? »", "minutes": 90},
+   {"type": "lecon", "titre": "At an international level", "minutes": 30},
+   {"type": "video", "titre": "Free Trade Areas (vidéo 25 min)", "minutes": 50},
+   {"type": "application", "titre": "Application : Challenging unfair competition", "minutes": 45},
+   {"type": "cas", "titre": "Cas CETA", "minutes": 60},
+   {"type": "lecon", "titre": "Slowbalization and deglobalization", "minutes": 30}
+  ]},
+  {"titre": "M10 · Social policies", "elements": [
+   {"type": "lecon", "titre": "The basic forms of social protection", "minutes": 30},
+   {"type": "lecon", "titre": "Current societal issues", "minutes": 30},
+   {"type": "lecon", "titre": "Political reforms and social models", "minutes": 30},
+   {"type": "application", "titre": "Application : social protection and demographic dynamics", "minutes": 45}
+  ]}
+ ],
+ "ressources": [],
+ "evenements": [],
+ "a_verifier": [
+  "Lives : dates, heures et replays",
+  "Devoirs à rendre et leurs dates limites",
+  "Examens blancs Studi (« Objectif examen ») : dates",
+  "E-books, quiz et exercices de chaque module"
+ ]
+}

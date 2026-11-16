@@ -1,0 +1,77 @@
+{
+ "ue": "UE1",
+ "nom": "Fondamentaux du droit",
+ "parcours": "Studi · DCG 2026",
+ "releve_le": "2026-11-16",
+ "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
+ "epreuve": {"duree_h": 3, "format": "Cas pratiques"},
+ "modules": [
+  {"titre": "Introduction", "elements": [
+   {"type": "tache", "titre": "Survole l'e-book UE1 (sommaire) et le guide de l'épreuve : 3 h, cas pratiques", "minutes": 20}
+  ]},
+  {"titre": "M2 · Rechercher les règles applicables à la situation du client", "elements": [
+   {"type": "lecon", "titre": "La règle de droit", "minutes": 45},
+   {"type": "lecon", "titre": "Les différentes sources du droit", "minutes": 45},
+   {"type": "lecon", "titre": "La résolution d'un conflit de normes", "minutes": 45},
+   {"type": "application", "titre": "Application : Rechercher les règles applicables à la situation du client", "minutes": 45}
+  ]},
+  {"titre": "M3 · Déterminer le mode de résolution adapté à un litige", "elements": [
+   {"type": "lecon", "titre": "La juridiction compétente dans un litige de droit privé", "minutes": 45},
+   {"type": "lecon", "titre": "Les conditions de recevabilité de l'action en justice", "minutes": 45},
+   {"type": "lecon", "titre": "L'organisation judiciaire nationale", "minutes": 45},
+   {"type": "lecon", "titre": "Les modes de résolution judiciaires et alternatifs des litiges", "minutes": 45},
+   {"type": "application", "titre": "Application : Déterminer la juridiction et le mode de résolution d'un litige", "minutes": 45}
+  ]},
+  {"titre": "M4 · Qualifier la personne juridique et ses biens", "elements": [
+   {"type": "lecon", "titre": "La personne juridique : existence, attributs et capacité", "minutes": 45},
+   {"type": "lecon", "titre": "Le patrimoine et la classification des biens", "minutes": 45},
+   {"type": "application", "titre": "Application : Qualifier la personne juridique et ses biens", "minutes": 45}
+  ]},
+  {"titre": "M5 · Accompagner un entrepreneur individuel dans son activité", "elements": [
+   {"type": "lecon", "titre": "L'entrepreneur individuel et le statut du commerçant", "minutes": 45},
+   {"type": "lecon", "titre": "Les types d'entrepreneurs et les conditions d'exercice d'une activité indépendante", "minutes": 45},
+   {"type": "lecon", "titre": "Le statut du conjoint de l'entrepreneur et le régime juridique du couple", "minutes": 45},
+   {"type": "lecon", "titre": "Les formalités de création d'une entreprise individuelle", "minutes": 45},
+   {"type": "application", "titre": "Application : Accompagner un entrepreneur individuel", "minutes": 45}
+  ]},
+  {"titre": "M6 · Déterminer l'étendue du droit d'une personne sur ses biens", "elements": [
+   {"type": "lecon", "titre": "Le droit de propriété : prérogatives et limites", "minutes": 45},
+   {"type": "lecon", "titre": "La protection par le brevet et la marque", "minutes": 45},
+   {"type": "lecon", "titre": "La protection par le droit d'auteur", "minutes": 45},
+   {"type": "application", "titre": "Application : Déterminer l'étendue du droit d'une personne sur ses biens", "minutes": 45}
+  ]},
+  {"titre": "M7 · Accompagner le client dans ses relations contractuelles", "elements": [
+   {"type": "lecon", "titre": "La phase précontractuelle du contrat", "minutes": 45},
+   {"type": "lecon", "titre": "La validité du contrat", "minutes": 45},
+   {"type": "lecon", "titre": "La portée d'un engagement contractuel", "minutes": 45},
+   {"type": "lecon", "titre": "Les clauses contractuelles", "minutes": 45},
+   {"type": "lecon", "titre": "Les sanctions de l'inexécution du contrat", "minutes": 45},
+   {"type": "application", "titre": "Application : Accompagner le client dans ses relations contractuelles", "minutes": 45}
+  ]},
+  {"titre": "M8 · Accompagner le client dans ses contrats courants", "elements": [
+   {"type": "lecon", "titre": "Les contrats de vente, d'entreprise et de consommation", "minutes": 45},
+   {"type": "cas", "titre": "Cas Mme D contre Mme K", "minutes": 90},
+   {"type": "lecon", "titre": "La protection des parties pour chacun des contrats", "minutes": 45},
+   {"type": "lecon", "titre": "Le choix d'une sûreté et ses principaux effets", "minutes": 45},
+   {"type": "application", "titre": "Application : Accompagner le client dans ses contrats courants", "minutes": 45}
+  ]},
+  {"titre": "M9 · Mesurer les conséquences des responsabilités civiles", "elements": [
+   {"type": "lecon", "titre": "Responsabilité civile et responsabilité pénale", "minutes": 45},
+   {"type": "lecon", "titre": "Mise en œuvre de la responsabilité civile et causes d'exonération", "minutes": 45},
+   {"type": "lecon", "titre": "Produits défectueux et responsabilité environnementale", "minutes": 45},
+   {"type": "application", "titre": "Application : Apprécier les conséquences des responsabilités civiles", "minutes": 45}
+  ]},
+  {"titre": "M10 · Établir la preuve des droits", "elements": [
+   {"type": "lecon", "titre": "La preuve des droits", "minutes": 45},
+   {"type": "application", "titre": "Application : Établir la preuve des droits", "minutes": 45}
+  ]}
+ ],
+ "ressources": [],
+ "evenements": [],
+ "a_verifier": [
+  "Lives : dates, heures et replays",
+  "Devoirs à rendre et leurs dates limites",
+  "Examens blancs Studi (« Objectif examen ») : dates",
+  "E-books, quiz et exercices de chaque module"
+ ]
+}
