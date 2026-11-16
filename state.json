@@ -1,0 +1,28 @@
+{
+ "updatedAt": "2026-11-16T13:30:00Z",
+ "userAt": "",
+ "docs": {
+  "history/2026-11-16": {
+   "2026-11-16-1400": {
+    "bonus": [],
+    "items": [
+     0,
+     1
+    ],
+    "kind": "cours",
+    "title": "Introduction → M2 · Appréhender les fondements de la science économique",
+    "ue": "UE5"
+   },
+   "2026-11-16-1545": {
+    "bonus": [],
+    "items": [
+     0,
+     1
+    ],
+    "kind": "cours",
+    "title": "Introduction → M2 · Rechercher les règles applicables à la situation du client",
+    "ue": "UE1"
+   }
+  }
+ }
+}
