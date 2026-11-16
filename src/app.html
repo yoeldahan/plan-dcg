@@ -479,6 +479,98 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .st-leg .neu{border-style:dashed}
 .st-leg .pend{border:2.5px solid var(--pen)}
 
+/* ---------- mode concentration : 25 min de travail, 5 min de pause ---------- */
+.fc-open{flex:none;justify-content:flex-start;gap:12px;min-height:56px;padding:0 14px 0 8px;text-align:left;white-space:normal}
+.fc-open .fc-ti{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;flex:none;background:linear-gradient(160deg,#141a3f,#2c2766);color:#ffc247}
+.fc-open .fc-ti .ic{width:20px;height:20px}
+.fc-open small{margin-left:auto;font:500 13px/1.2 var(--f-text);color:var(--ink2);white-space:nowrap}
+@media (max-width:1023px){
+  .card .acts.w3 .btn.primary{flex-basis:100%}
+  .card .acts.w3 .btn:not(.primary){padding:0 10px}
+}
+/* la vue : toujours la nuit (mêmes couleurs que le mode sombre), en clair comme en sombre */
+.focus{position:fixed;inset:0;z-index:50;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;color:#fff;background:linear-gradient(180deg,#0b0e22 0%,#141a3f 40%,#1d2258 72%,#2c2766 100%);animation:fadein .25s ease-out;
+  --bg:#0b0e22; --paper:#151935; --ink:#eef0ff; --ink2:#b9bde2; --ink3:#9da3ce; --rule:#262b52; --rule2:#3b4273; --ctl:#8f95c4; --pen:#cfd3f4;
+  --gold:#ffcd5c; --gold2:#ffb84a; --gold-soft:rgba(255,205,92,.16); --hl:#ffcd5c; --hl-ink:#141a3f; --coral-ink:#ff9e82; --ok:#62e0b0;
+  --pri:#ffcd5c; --on-pri:#141a3f; --tick:#ffcd5c; --box-on:rgba(255,205,92,.16); --focus:#a9bcff; --stamp:#ffcd5c; --sw-y:100%; --sw-h:12%;
+  --ue1:#93a8ff; --ue5:#55d6a7; --ue7:#c6a0ff; --ue8:#5fd0e8; --ue9:#ff8ea1; --ue12:#ffc45c; --ue13:#ff92d8; color-scheme:dark}
+.focus>.stars{position:fixed;height:70%;opacity:.75}
+#fc-live{top:0;left:0}
+.fc-ridge{position:fixed;left:0;bottom:0;width:100%;height:clamp(84px,16vh,170px);display:block;pointer-events:none}
+.fc-in{position:relative;z-index:1;display:flex;flex-direction:column;max-width:1040px;min-height:100%;margin:0 auto;padding:calc(env(safe-area-inset-top) + 6px) 16px calc(env(safe-area-inset-bottom) + 28px)}
+.fc-top{display:flex;align-items:center;gap:6px;min-height:50px}
+.fc-top .sky-eb{flex:1;min-width:0}
+.fc-mute{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#e6e8ff}
+.fc-mute .ic{width:22px;height:22px}
+.fc-x{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px 0 11px;border-radius:12px;border:1.5px solid rgba(255,255,255,.6);color:#fff;font:600 15px/1 var(--f-text)}
+.fc-x .ic{width:18px;height:18px;stroke-width:2.2}
+.fc-ses{margin-top:6px;text-align:center}
+.fc-ue{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.1);font:600 13px/1.2 var(--f-text);color:#fff}
+.fc-ue i{width:9px;height:9px;border-radius:2px;background:var(--ue,#ffd27a);flex:none}
+.fc-ses h2{font:700 21px/1.2 var(--f-display);letter-spacing:-.02em;margin:9px auto 0;max-width:30ch;text-wrap:balance}
+.fc-grid{display:flex;flex-direction:column;gap:22px;margin-top:16px}
+.fc-main{display:flex;flex-direction:column;align-items:center;text-align:center}
+.fc-ph{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:#ffd27a}
+.fc-ph i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.fc-ph.brk{color:#7ff0c2}
+.fc-ph.run i{animation:breathe 2.4s ease-in-out infinite}
+.fc-ring{--rs:min(64vw,260px,34vh);position:relative;width:var(--rs);height:var(--rs);margin-top:12px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.fc-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.fc-ring .tr{fill:none;stroke:rgba(255,255,255,.14);stroke-width:5}
+.fc-ring .pg{fill:none;stroke:#ffc247;stroke-width:5;stroke-linecap:round}
+.fc-ring.brk .pg{stroke:#7ff0c2}
+.fc-time{position:relative;font:700 calc(var(--rs)*.24)/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums lining-nums}
+.fc-ring small{position:relative;margin-top:8px;font:600 13px/1 var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:#cfd2f3}
+.fc-round{font:600 14.5px/1.3 var(--f-text);color:#e6e8ff;margin-top:14px}
+.fc-say{font:500 15px/1.4 var(--f-text);color:#cfd2f3;margin-top:4px}
+.fc-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;width:100%;max-width:380px}
+.fc-acts .btn{flex:1 1 40%;min-height:52px;font-size:16px}
+.focus .btn{border-color:rgba(255,255,255,.7);color:#fff}
+.focus .btn.primary{background:#ffc247;border-color:#ffc247;color:#141a3f;box-shadow:0 10px 24px -12px rgba(255,190,80,.7)}
+.fc-todo,.fc-end{width:100%;max-width:520px;margin:0 auto;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:#151935;color:var(--ink)}
+.fc-todo{padding:6px 14px 4px}
+.fc-todo-h{display:flex;align-items:center;gap:10px;min-height:44px}
+.fc-todo-h h3{font:700 16px/1.2 var(--f-display);letter-spacing:-.01em}
+.fc-todo-h .eb{margin-right:auto}
+.fc-more{min-height:44px;padding:0 2px;font:600 14px/1 var(--f-text);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold2);text-decoration-thickness:2px}
+.fc-todo .items{margin-top:0}
+.fc-todo .item.fc-last{border-bottom:0}
+.fc-note{font:500 14.5px/1.45 var(--f-text);color:var(--ink2);padding:4px 0 12px}
+.fc-todo .steps{padding:4px 0 12px 22px}
+.fc-end{margin-top:20px;padding:18px 16px 16px}
+.fc-end .eb{color:#ffd27a}
+.fc-end h3{font:700 24px/1.15 var(--f-display);letter-spacing:-.02em;margin-top:6px;text-wrap:balance}
+.fc-end h3 span{background:linear-gradient(var(--hl),var(--hl)) 0 var(--sw-y)/100% var(--sw-h) no-repeat;padding:0 2px}
+.fc-end .pk{width:64px;height:44px;margin:0 0 4px}
+.fc-end p.s{font:500 15px/1.4 var(--f-text);color:var(--ink2);margin-top:6px}
+.fc-end .items{margin-top:12px}
+.fc-end .item{grid-template-columns:36px minmax(0,1fr);min-height:62px}
+.fc-end .box{width:36px;height:36px}
+.fc-end .txt{font-size:16px}
+.fc-end .fc-acts{max-width:none;margin-top:16px}
+.fc-end .fc-done{width:100%;margin-top:14px}
+.fc-conf{position:fixed;inset:0;z-index:6;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(3,4,14,.62)}
+.fc-conf>div{width:100%;max-width:380px;padding:20px 18px 16px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:#151935;color:var(--ink);text-align:center;box-shadow:0 24px 60px -20px rgba(0,0,0,.8)}
+.fc-conf h3{font:700 22px/1.2 var(--f-display);letter-spacing:-.02em}
+.fc-conf p{font:500 15px/1.4 var(--f-text);color:var(--ink2);margin-top:6px}
+.fc-conf .fc-acts{max-width:none}
+.cel.in-focus{position:fixed;inset:0;z-index:7}
+.cel.in-focus .cel-v{border-radius:0;background:rgba(11,14,34,.72)}
+html.focusing .toast{background:#eef0ff;color:#141a3f;box-shadow:0 12px 30px -12px rgba(0,0,0,.7)}
+@media (min-width:1024px){
+  .fc-in{padding:18px 40px 40px}
+  .fc-ses{text-align:left}
+  .fc-ses h2{margin-left:0;font-size:26px}
+  .fc-grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;align-items:start;margin-top:22px}
+  .fc-ring{--rs:min(300px,42vh)}
+  .fc-todo{max-height:calc(100vh - 200px);overflow:auto}
+  .fc-more{display:none}
+  .fc-end{margin-top:28px;padding:22px 22px 20px}
+  .fc-body.end .fc-ses{text-align:center}
+  .fc-body.end .fc-ses h2{margin:9px auto 0}
+}
+@media (max-width:1023px){ .fc-todo.shut .fc-rest{display:none} }
+
 /* ---------- ordinateur ---------- */
 @media (min-width:1024px){
   .side{display:flex;position:fixed;left:0;top:0;bottom:0;width:248px;z-index:10;overflow-x:hidden;overflow-y:auto;flex-direction:column;padding:28px 18px 20px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#181e50 55%,#2a2462 80%,#4e3170 100%)}
@@ -597,6 +689,7 @@ button.d{border-color:var(--ctl);cursor:pointer}
 @keyframes climb{from{transform:translate(var(--dx),var(--dy))}}
 @keyframes trail{from{stroke-dasharray:var(--d0) 200}}
 @keyframes plant{from{opacity:0;transform:scaleY(0)}}
+@keyframes breathe{50%{opacity:.3}}
 @keyframes conf{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.3)}4%{opacity:1;transform:translate(0,0) rotate(0) scale(.4)}22%{opacity:1;transform:translate(var(--bx),var(--by)) rotate(calc(var(--r)*.3)) scale(1)}100%{opacity:0;transform:translate(calc(var(--bx)*1.3),calc(var(--by) + 80vh)) rotate(var(--r))}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.halo{opacity:.3}}
 </style>
@@ -929,7 +1022,11 @@ const ICON = {
   candle:'<path d="M8 21v-9h3v9M13 21v-9h3v9M5 21h14"/><path d="M9.5 9.2c-1.2-1 0-2.6 0-3.7 1.3 1 1.6 2.6 0 3.7zM14.5 9.2c-1.2-1 0-2.6 0-3.7 1.3 1 1.6 2.6 0 3.7z"/>',
   bag:'<rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><path d="M9 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5.5v2M3 13h18"/>',
   leaf:'<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/>',
-  flame:'<path d="M12 21.5c-3.9 0-6.8-2.7-6.8-6.5 0-3.5 2.5-5.5 3.8-8.4.5 1.9 1.5 3.1 2.7 3.7-.3-2.9.9-5.6 3.3-7.4-.2 3.3 3.8 5.7 3.8 10.6 0 4.7-2.8 8-6.8 8z"/><path d="M12 21.5c-1.7 0-2.9-1.2-2.9-2.9 0-1.8 1.4-2.7 2.3-4.2.9 1.1 3.5 2.2 3.5 4.3 0 1.7-1.2 2.8-2.9 2.8z"/>'
+  flame:'<path d="M12 21.5c-3.9 0-6.8-2.7-6.8-6.5 0-3.5 2.5-5.5 3.8-8.4.5 1.9 1.5 3.1 2.7 3.7-.3-2.9.9-5.6 3.3-7.4-.2 3.3 3.8 5.7 3.8 10.6 0 4.7-2.8 8-6.8 8z"/><path d="M12 21.5c-1.7 0-2.9-1.2-2.9-2.9 0-1.8 1.4-2.7 2.3-4.2.9 1.1 3.5 2.2 3.5 4.3 0 1.7-1.2 2.8-2.9 2.8z"/>',
+  timer:'<circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.8M9.5 2.8h5M12 2.8V6M18.2 6.8l1.6-1.6"/>',
+  play:'<path d="M8 5.5v13l10.5-6.5z"/>', pause:'<path d="M8.5 5.5v13M15.5 5.5v13"/>', skip:'<path d="M5.5 5.5v13l9.5-6.5zM18.5 5.5v13"/>',
+  sound:'<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/>',
+  mute:'<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9.5l5 5M20.5 9.5l-5 5"/>'
 };
 const ic = (name, cls) => svgEl(ICON[name], {class:"ic"+(cls?" "+cls:""), viewBox:"0 0 24 24", "aria-hidden":"true"});
 let uid = 0;
@@ -1125,7 +1222,7 @@ function itemRow(u, n, o){
   cb.checked = on;
   cb.addEventListener("change", e => { const on = e.target.checked;
     const own = o.sid || (o.pre === "nx" ? (sessionsOn(today()).find(x => x.content && x.ue === u && x.items.includes(n)) || {}).id : undefined);
-    reward({sid:own, where: o.pre==="it" || o.pre==="nx" ? "sheet" : "card", on, just: on ? [key] : null}, () => toggleItem(u, n, on)); });
+    reward({sid:own, where: o.where || (o.pre==="it" || o.pre==="nx" ? "sheet" : "card"), on, just: on ? [key] : null}, () => toggleItem(u, n, on)); });
   const kl = {L:"Leçon",A:"Application",C:"Cas",T:"À faire",V:"Vidéo",B:"Bonus"}[it.k]||"";
   return h("label",{class:"item"+(on?" on":"")+(justKeys.has(key)?" just":""), for:id}, cb, boxSVG(),
     h("span",null, h("span",{class:"kind"}, h("span",null, kl+(o.mod && it.mod ? " · "+it.mod.split(" · ")[0] : "")), it.m ? h("span",{class:"dur num"}, hmd(it.m)) : null),
@@ -1171,9 +1268,11 @@ function card(v, o){
   if (showItems) el.append(h("div",{class:"items"}, v.items.map(n => itemRow(v.ue, n, {sid:v.id, pre:o.pre||"ci"}))));
   const acts = [];
   if (hero) acts.push(h("button",{type:"button", class:"btn primary", id:"hero-open", onclick:()=>openSession(v.id)}, v.date === today() && isNow(v) ? "Ouvrir ma séance" : "Voir le détail", ic("arrow")));
+  const fcGo = hero && canFocus(v) && st !== "done";
+  if (fcGo) acts.push(h("button",{type:"button", class:"btn", id:"fc-go-"+v.id, onclick:()=>openFocus(v.id)}, ic("timer"), "Concentration"));
   if (canMarkDone(v) && st !== "done" && (hero || (!v.content && v.date <= today())))
     acts.push(h("button",{type:"button", class:"btn", id:"done-"+v.id, onclick:()=>{ if (!rewardDone(v, "card")) toast("Bravo, séance cochée."); }}, "C'est fait"));
-  if (acts.length) el.append(h("div",{class:"acts"}, acts));
+  if (acts.length) el.append(h("div",{class:"acts"+(fcGo && acts.length > 2 ? " w3" : "")}, acts));
   const c = celNode(v.id, "card"); if (c) el.append(c);
   return el;
 }
@@ -1503,6 +1602,8 @@ function renderSession(sh){
   const hint = v.note || (v.kind === "libre" && v.content && !v.items.length ? null : HINT[v.kind]);
   if (hint) body.append(h("p",{class:"hint"}, ic("bulb"), h("span",null, hint)));
   if (v.skipped) body.append(h("p",{class:"sk-note"}, "Séance reportée : son contenu est passé sur les séances suivantes."));
+  if (canFocus(v)) body.append(h("button",{type:"button", class:"btn fc-open", id:"sh-focus", onclick:()=>openFocus(v.id)},
+    h("span",{class:"fc-ti"}, ic("timer")), h("span",null,"Mode concentration"), h("small",{class:"num"},"25 min + 5 min")));
   if (v.content){
     if (v.anki) body.append(h("div",{class:"items"}, h("div",{class:"item static"}, h("span",{class:"box"}), h("span",null, h("span",{class:"kind"}, h("span",null,"À faire")), h("span",{class:"txt"},"15 min de cartes Anki avant le rattrapage")))));
     if (v.items.length) body.append(h("div",{class:"items"}, v.items.map(n=>itemRow(v.ue,n,{mod:true, sid:v.id, pre:"it"}))));
@@ -1628,6 +1729,7 @@ function closeSheet(){
 document.getElementById("backdrop").addEventListener("click", e => { if (e.target.id === "backdrop") closeSheet(); });
 document.addEventListener("keydown", e => {
   if (party){ if (e.key === "Escape"){ e.preventDefault(); closeParty(); } else if (e.key === "Tab"){ e.preventDefault(); party.querySelector("button").focus(); } return; }
+  if (fcEl){ focusKey(e); return; }
   if (!sheetState) return;
   if (e.key === "Escape"){ closeSheet(); return; }
   if (e.key === "Tab"){ // la fiche garde le focus
@@ -1673,7 +1775,7 @@ function reward(o, fn){
   try{ fn(); } finally { fx = null; justKeys = new Set(); }
   // le bouton a disparu (« C'est fait ») : le focus revient sur la carte
   let back = focusId && document.getElementById(focusId) ? focusId : null;
-  if (focusId && !back && o.sid && !sheetState){ const c = cardOf(o.sid); const b = c && c.querySelector(".c-open"); if (b){ b.focus({preventScroll:true}); back = b.id; } }
+  if (focusId && !back && o.sid && !sheetState && !fcEl){ const c = cardOf(o.sid); const b = c && c.querySelector(".c-open"); if (b){ b.focus({preventScroll:true}); back = b.id; } }
   if (!o.on){ if (cel && cel.sid === o.sid) endCel(); return false; }
   const camp = campPassed(campWas);
   if (!dayWas && dayDone(T) && !partySeen(T)){ endCel(); openParty(T, back, {camp, bestWas}); return true; }
@@ -1709,7 +1811,7 @@ function celebrate(sid, where, vb){
   const t = Date.now();
   if (t - (celAt[sid]||0) < 10000) return false;
   const inSheet = where === "sheet" && sheetState && sheetState.type === "session";
-  const host = where === "sheet" ? (inSheet ? document.getElementById("sheet") : null) : cardOf(sid);
+  const host = where === "sheet" ? (inSheet ? document.getElementById("sheet") : null) : where === "focus" ? fcEl : cardOf(sid);
   if (!host) return false;
   celAt[sid] = t;
   const who = vb.ue ? UEN[vb.ue] : (KIND[vb.kind] || "Séance");
@@ -1724,7 +1826,7 @@ function celebrate(sid, where, vb){
 function celNode(sid, where){
   if (!cel || cel.where !== where || (where === "sheet" ? cel.host : cel.sid) !== sid) return null;
   const el = Date.now() - cel.t0; if (el >= 2600) return null;
-  return h("div",{class:"cel"+(where === "sheet" ? " in-sheet" : ""), "aria-hidden":"true", style:"--el:"+el+"ms", onmousedown:e => e.preventDefault(), onclick:e => { e.preventDefault(); e.stopPropagation(); endCel(); }},
+  return h("div",{class:"cel"+(where === "sheet" ? " in-sheet" : where === "focus" ? " in-focus" : ""), "aria-hidden":"true", style:"--el:"+el+"ms", onmousedown:e => e.preventDefault(), onclick:e => { e.preventDefault(); e.stopPropagation(); endCel(); }},
     h("div",{class:"cel-v"}, h("div",{class:"stamp"}, svgEl(PK, {class:"pk", viewBox:"0 0 64 44"}), h("b",null, h("span",null,"Séance terminée !")), h("small",null, cel.sub))));
 }
 function endCel(){
@@ -1775,11 +1877,314 @@ function closeParty(){
   if (!party) return;
   party.remove(); party = null;
   partyInert.forEach(n => { n.inert = false; }); partyInert = [];
-  if (!sheetState) document.documentElement.classList.remove("locked");
-  const t = (partyBack && document.getElementById(partyBack)) || (sheetState ? document.querySelector("#sheet .x") : null);
+  if (!sheetState && !fcEl) document.documentElement.classList.remove("locked");
+  let t = partyBack && document.getElementById(partyBack);
+  if (t && (t.closest("[inert]") || t.offsetParent === null)) t = null;
+  t = t || (fcEl ? fcEl.querySelector(".fc-body .btn.primary, .fc-x") : sheetState ? document.querySelector("#sheet .x") : null);
   if (t) t.focus({preventScroll:true});
   partyBack = null;
 }
+
+/* ================= mode concentration (interface seulement : rien n'est envoyé sur GitHub) =================
+   25 min de travail, puis 5 min de pause. On garde l'heure de fin (Date.now() + le reste) et l'affichage se recalcule
+   à partir d'elle : le minuteur reste juste quand le téléphone se verrouille. L'état vit sous « dcg-ui-focus »
+   (jamais « dcg2- », donc jamais envoyé). Les coches passent par toggleItem / setSessionDone via reward(). */
+const FC_KEY = "dcg-ui-focus", FC_MUTE = "dcg-ui-focus-mute", FC_LEN = {work:25*60000, break:5*60000}, FC_MAX_AGE = 12*3600000;
+const DOC_TITLE = document.title;
+const FC_STARS = '<circle cx="108" cy="82" r="1.5"/><circle cx="202" cy="382" r="1.5"/><circle class="tw" cx="128" cy="527" r="1"/><circle cx="866" cy="79" r="1"/><circle cx="1168" cy="134" r="1"/><circle class="tw" cx="462" cy="55" r="1.5"/><circle cx="1179" cy="200" r="1.1"/><circle class="tw" cx="132" cy="218" r="1.3"/><circle cx="1098" cy="445" r="1.1"/><circle cx="963" cy="472" r="1.1"/><circle cx="509" cy="91" r="1.5"/><circle cx="1183" cy="329" r="1.1"/><circle cx="944" cy="78" r=".8"/>';
+let fc = null, fcEl = null, fcTimer = null, fcR = null, fcBack = null, fcSnap = null, fcAll = false, fcConf = false;
+let fcInert = [], fcWake = null, fcAudio = null, fcLabel = "";
+const canFocus = v => !!v && canMarkDone(v) && v.kind !== "bilan";
+const fcRunning = () => !!fc && !fc.paused && !fc.over;
+const fcLeft = () => !fc || fc.over ? 0 : fc.paused ? fc.remaining : Math.max(0, fc.endAt - Date.now());
+const mmss = ms => { const s = Math.ceil(ms/1000); return pad(Math.floor(s/60))+":"+pad(s%60); };
+const fcAllDone = v => v.content ? v.items.length > 0 && v.items.every(n => isDoneItem(v.ue, n)) : status(v) === "done";
+function fcMuted(){ try{ return localStorage.getItem(FC_MUTE) === "1"; }catch(e){ return false; } }
+function fcSave(){
+  try{
+    if (!fc){ localStorage.removeItem(FC_KEY); return; }
+    localStorage.setItem(FC_KEY, JSON.stringify({sid:fc.sid, phase:fc.phase, endAt:fc.endAt, remaining:fc.remaining, paused:fc.paused, rounds:fc.rounds, startedAt:fc.startedAt, fresh:fc.fresh, over:fc.over}));
+  }catch(e){}
+}
+function fcSay(t){ const el = document.getElementById("fc-live"); if (!el) return; el.textContent = ""; setTimeout(() => { el.textContent = fr(t); }, 60); }
+/* deux notes douces (Web Audio, pas de fichier), seulement si la page est visible et le son pas coupé */
+function fcSound(){
+  try{
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+    const ua = navigator.userActivation;
+    if (!fcAudio){ if (ua && !ua.isActive) return null; fcAudio = new AC(); }   // créé seulement pendant un geste (sinon le navigateur refuse)
+    if (fcAudio.state !== "running") fcAudio.resume().catch(()=>{});
+    return fcAudio;
+  }catch(e){ return null; }
+}
+function fcChime(up){
+  if (fcMuted() || document.visibilityState !== "visible") return;
+  const ctx = fcSound(); if (!ctx) return;
+  try{
+    const t0 = ctx.currentTime + .05, notes = up ? [784, 1046.5] : [1046.5, 784];
+    notes.forEach((f, i) => {
+      const o = ctx.createOscillator(), g = ctx.createGain(), t = t0 + i*.24;
+      o.type = "sine"; o.frequency.value = f;
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.18, t+.02); g.gain.exponentialRampToValueAtTime(.0001, t+1.1);
+      o.connect(g); g.connect(ctx.destination); o.start(t); o.stop(t+1.2);
+    });
+  }catch(e){}
+}
+/* l'écran reste allumé pendant un bloc de travail (si le navigateur sait le faire) */
+const fcWantWake = () => fcRunning() && fc.phase === "work" && document.visibilityState === "visible";
+async function fcSyncWake(){
+  if (fcWantWake()){
+    if (fcWake || !("wakeLock" in navigator)) return;
+    try{
+      const w = await navigator.wakeLock.request("screen");
+      if (!fcWantWake() || fcWake){ w.release().catch(()=>{}); return; }
+      fcWake = w; w.addEventListener("release", () => { if (fcWake === w) fcWake = null; });
+    }catch(e){}
+  } else if (fcWake){ const w = fcWake; fcWake = null; try{ w.release().catch(()=>{}); }catch(e){} }
+}
+function openFocus(sid, saved){
+  const v = slotView(sid);
+  if (fcEl || !canFocus(v)) return;
+  if (sheetState) closeSheet();
+  fcBack = document.activeElement && document.activeElement.id || null;
+  fc = saved || {sid, phase:"work", endAt:null, remaining:FC_LEN.work, paused:true, rounds:0, startedAt:Date.now(), fresh:true, over:false};
+  fc.v = v; fcSnap = null; fcAll = false; fcConf = false;
+  const mute = h("button",{type:"button", class:"fc-mute", id:"fc-mute", "aria-label":"Couper le son", "aria-pressed":String(fcMuted()), onclick:fcToggleMute}, ic(fcMuted() ? "mute" : "sound"));
+  fcEl = h("div",{class:"focus", id:"focus", role:"dialog", "aria-modal":"true", "aria-label":"Mode concentration"},
+    svgEl(FC_STARS, {class:"stars", viewBox:"0 0 1200 600", preserveAspectRatio:"xMidYMin slice", "aria-hidden":"true"}),
+    svgEl('<path d="M0 70 L90 52 L190 74 L300 46 L410 66 L520 38 L600 56 L640 24 L700 50 L790 34 L900 60 L1010 40 L1110 62 L1200 48 V120 H0Z" fill="#4b3a80" opacity=".55"/>'+
+      '<path d="M0 96 L110 80 L230 94 L350 70 L470 86 L560 62 L640 40 L720 66 L820 58 L940 82 L1060 68 L1200 84 V120 H0Z" fill="#1b2152"/>'+
+      '<path d="M380 112 C450 106 500 98 540 82 S600 58 640 42" fill="none" stroke="#ffe2b0" stroke-width="2.4" stroke-linecap="round" stroke-dasharray=".1 7"/>'+
+      '<path d="M640 42 V16" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M641 16 Q650 18 657 21.5 Q650 25 641 26.5Z" fill="#ffc247"/>',
+      {class:"fc-ridge", viewBox:"0 0 1200 120", preserveAspectRatio:"xMidYMax slice", "aria-hidden":"true"}),
+    h("div",{class:"fc-in"},
+      h("div",{class:"fc-top"}, h("p",{class:"sky-eb"},"Mode concentration"), mute,
+        h("button",{type:"button", class:"fc-x", id:"fc-quit", onclick:fcQuitAsk}, ic("close"), "Quitter")),
+      h("div",{class:"fc-body", id:"fc-body"})),
+    h("p",{class:"sr", id:"fc-live", "aria-live":"polite"}));
+  fcInert = [...document.body.children].filter(n => n.tagName !== "SCRIPT" && !n.inert && n.id !== "toast" && n.id !== "cheer");
+  fcInert.forEach(n => { n.inert = true; });
+  document.body.append(fcEl);
+  document.documentElement.classList.add("locked", "focusing");
+  fcSave();
+  renderFocus();
+  clearInterval(fcTimer); fcTimer = setInterval(focusTick, 250);
+  focusTick();
+  fcSyncWake();
+  const f = fcEl.querySelector(".fc-body .btn.primary") || document.getElementById("fc-quit");
+  if (f) f.focus({preventScroll:true});
+}
+/* au retour dans l'appli : on reprend où tu en étais (sauf si la séance n'existe plus ou si c'est trop vieux) */
+function focusResume(){
+  let s = null;
+  try{ s = JSON.parse(localStorage.getItem(FC_KEY) || "null"); }catch(e){ s = null; try{ localStorage.removeItem(FC_KEY); }catch(_){} }
+  if (!s) return;
+  const age = Date.now() - Number(s.startedAt);
+  const ok = typeof s.sid === "string" && (s.phase === "work" || s.phase === "break") && age < FC_MAX_AGE && age > -60000 &&
+    (s.paused || s.over ? true : Number.isFinite(s.endAt)) && canFocus(slotView(s.sid));
+  if (!ok){ try{ localStorage.removeItem(FC_KEY); }catch(e){} return; }
+  const st = {sid:s.sid, phase:s.phase, endAt:Number(s.endAt) || 0, remaining:Math.max(0, Math.min(FC_LEN[s.phase], Number(s.remaining) || 0)),
+    paused:!!s.paused, rounds:Math.max(0, Math.floor(Number(s.rounds) || 0)), startedAt:Number(s.startedAt), fresh:!!s.fresh, over:!!s.over};
+  if (st.fresh){ st.paused = true; st.remaining = FC_LEN.work; st.phase = "work"; }
+  openFocus(s.sid, st);
+}
+function fcHead(v){
+  return h("header",{class:"fc-ses", style:"--ue:"+col(v.ue)},
+    h("p",{class:"fc-ue"}, h("i"), v.ue ? ueName(v.ue) : (KIND[v.kind] || "Séance")), h("h2",{id:"fc-t"}, titleOf(v)));
+}
+function fcRoundText(){
+  const r = fc.rounds, tour = fc.phase === "work" && !fc.over ? r+1 : Math.max(1, r);
+  return "Tour "+tour+(r ? " · "+r+" "+(r > 1 ? "blocs faits" : "bloc fait") : "");
+}
+function fcTodo(v){
+  const box = h("section",{class:"fc-todo", "aria-labelledby":"fc-todo-t"});
+  if (v.content){
+    const left = v.items.filter(n => !isDoneItem(v.ue, n)), nx = left[0], shut = !fcAll && v.items.length > 1;
+    box.classList.toggle("shut", shut);
+    box.append(h("div",{class:"fc-todo-h"}, h("h3",{id:"fc-todo-t"},"Ce que tu fais"), h("span",{class:"eb num"}, (v.items.length-left.length)+" sur "+v.items.length),
+      v.items.length > 1 ? h("button",{type:"button", class:"fc-more", id:"fc-more", "aria-expanded":String(!shut), "aria-controls":"fc-list", onclick:()=>{ fcAll = !fcAll; renderFocus(); }}, shut ? "Tout voir" : "Réduire") : null));
+    if (!left.length) box.append(h("p",{class:"fc-note"},"Tout est coché. Bravo !"));
+    const list = h("div",{class:"items", id:"fc-list"}, v.items.map(n => {
+      const row = itemRow(v.ue, n, {sid:v.id, pre:"fc", where:"focus", mod:true});
+      if (n !== nx) row.classList.add("fc-rest"); else if (shut) row.classList.add("fc-last");
+      return row;
+    }));
+    box.append(list);
+  } else {
+    box.append(h("div",{class:"fc-todo-h"}, h("h3",{id:"fc-todo-t"},"Ce que tu fais")));
+    if (v.static && v.static.length) box.append(h("ol",{class:"steps"}, v.static.map(it => h("li",null, it.t))));
+    else if (HINT[v.kind]) box.append(h("p",{class:"fc-note"}, HINT[v.kind]));
+    box.append(h("p",{class:"fc-note"}, status(v) === "done" ? "Séance cochée. Bravo !" : "À la fin, coche « C'est fait »."));
+  }
+  return box;
+}
+function fcRunView(v){
+  const work = fc.phase === "work", run = fcRunning();
+  const ring = svgEl('<circle class="tr" cx="50" cy="50" r="46"/><circle class="pg" cx="50" cy="50" r="46" pathLength="100" stroke-dasharray="100 100"/>', {viewBox:"0 0 100 100", "aria-hidden":"true"});
+  const time = h("span",{class:"fc-time num", "aria-hidden":"true"}, mmss(fcLeft()));
+  const timer = h("div",{class:"fc-ring"+(work ? "" : " brk"), role:"timer", id:"fc-timer"}, ring, time, fc.paused && !fc.fresh ? h("small",{"aria-hidden":"true"},"En pause") : null);
+  fcR = {time, timer, pg: ring.querySelector(".pg")};
+  const go = fc.fresh ? [ic("play"), "Démarrer"] : fc.paused ? [ic("play"), "Reprendre"] : [ic("pause"), work ? "Pause" : "Suspendre"];
+  const say = fc.fresh ? "25 min de travail, puis 5 min de pause." : work ? "Une chose à la fois." : "Lève-toi, bois un verre d'eau.";
+  return [fcHead(v), h("div",{class:"fc-grid"},
+    h("div",{class:"fc-main"},
+      h("p",{class:"fc-ph"+(work ? "" : " brk")+(run ? " run" : "")}, h("i",{"aria-hidden":"true"}), work ? "Travail" : "Pause"),
+      timer,
+      h("p",{class:"fc-round num"}, fcRoundText()),
+      h("p",{class:"fc-say"}, say),
+      h("div",{class:"fc-acts"},
+        h("button",{type:"button", class:"btn primary", id:"fc-go", onclick:fcToggle}, go),
+        fc.fresh ? null : h("button",{type:"button", class:"btn", id:"fc-skip", "aria-label": work ? "Passer à la pause" : "Passer au travail", onclick:fcSkip}, ic("skip"), "Passer"))),
+    fcTodo(v))];
+}
+function fcEndView(v){
+  fcR = null;
+  const btn = (id, label, fn, pri) => h("button",{type:"button", class:"btn"+(pri ? " primary" : ""), id, onclick:fn}, label);
+  if (fc.phase === "break")
+    return [fcHead(v), h("section",{class:"fc-end", "aria-labelledby":"fc-end-t"},
+      h("p",{class:"eb num"}, fcRoundText()),
+      h("h3",{id:"fc-end-t"},"Pause finie. On reprend ?"),
+      h("p",{class:"s"},"Une chose à la fois."),
+      h("div",{class:"fc-acts"}, btn("fe-work","Reprendre 25 min", fcStartWork, true), btn("fe-quit","Quitter", fcQuit)))];
+  // ce qui restait à cocher quand le bloc s'est terminé (la liste ne bouge pas pendant que tu coches)
+  if (!fcSnap || fcSnap.sid !== v.id || fcSnap.ue !== v.ue) fcSnap = {sid:v.id, ue:v.ue, ns: v.content ? v.items.filter(n => !isDoneItem(v.ue, n)) : []};
+  const all = fcAllDone(v);
+  const ns = v.content ? (fcSnap.ns.length ? fcSnap.ns : v.items.filter(n => !isDoneItem(v.ue, n))) : [];
+  const kids = [h("p",{class:"eb num"}, fcRoundText())];
+  if (all) kids.push(svgEl(PK, {class:"pk", viewBox:"0 0 64 44", "aria-hidden":"true"}), h("h3",{id:"fc-end-t"}, h("span",null,"Séance terminée !")), h("p",{class:"s"},"Bravo. Tu peux souffler."));
+  else kids.push(h("h3",{id:"fc-end-t"},"Bloc terminé. Qu'as-tu fini ?"), h("p",{class:"s"}, v.content ? "Coche ce qui est fait. Le reste attendra." : "Ta séance est finie ? Coche-la."));
+  if (ns.length) kids.push(h("div",{class:"items"}, ns.map(n => itemRow(v.ue, n, {sid:v.id, pre:"fe", where:"focus", mod:true}))));
+  if (!v.content && !all) kids.push(h("button",{type:"button", class:"btn fc-done", id:"fe-done", onclick:()=>{ if (!rewardDone(v, "focus")) toast("Bravo, séance cochée."); }}, ic("check"), "C'est fait"));
+  kids.push(h("div",{class:"fc-acts"}, all
+    ? [btn("fe-quit","Quitter", fcQuit, true), btn("fe-break","Pause 5 min", fcStartBreak)]
+    : [btn("fe-break","Pause 5 min", fcStartBreak, true), btn("fe-more","Encore 25 min", fcStartWork)]));
+  return [fcHead(v), h("section",{class:"fc-end", "aria-labelledby":"fc-end-t"}, kids)];
+}
+function renderFocus(){
+  if (!fcEl || !fc) return;
+  const v = slotView(fc.sid); if (v) fc.v = v;
+  const body = document.getElementById("fc-body");
+  const ae = document.activeElement, fid = ae && fcEl.contains(ae) && ae.id ? ae.id : null, top = fcEl.scrollTop;
+  body.replaceChildren(...(fc.over ? fcEndView(fc.v) : fcRunView(fc.v))); body.classList.toggle("end", fc.over);
+  fcLabel = ""; focusPaint();
+  fcEl.scrollTop = top;
+  if (fid){
+    const el = document.getElementById(fid);   // une coche cachée (liste réduite) ne peut pas garder le focus
+    const tgt = el && el.offsetParent !== null ? el : (body.querySelector("#fc-list .item:not(.fc-rest) .cb") || body.querySelector(".btn.primary") || document.getElementById("fc-quit"));
+    if (tgt) tgt.focus({preventScroll:true});
+  }
+}
+/* chaque quart de seconde : le temps se recalcule à partir de l'heure de fin */
+function focusTick(){
+  if (!fc) return;
+  if (fcRunning() && Date.now() >= fc.endAt){ fcEnd(Date.now() - fc.endAt < 4000); return; }
+  focusPaint();
+}
+function focusPaint(){
+  if (!fc) return;
+  const left = fcLeft(), run = fcRunning();
+  if (fcR && fcR.time.isConnected){
+    const t = mmss(left); if (fcR.time.textContent !== t) fcR.time.textContent = t;
+    const f = Math.max(0, Math.min(1, left / FC_LEN[fc.phase]));
+    fcR.pg.setAttribute("stroke-dasharray", (f*100).toFixed(2)+" 100");
+    fcR.pg.style.opacity = f > .002 ? "" : "0";
+    const m = Math.max(1, Math.ceil(left/60000));
+    const lab = (fc.phase === "work" ? "Travail" : "Pause")+(fc.paused && !fc.fresh ? ", en pause" : "")+" : il reste "+plural(m,"minute");
+    if (lab !== fcLabel){ fcLabel = lab; fcR.timer.setAttribute("aria-label", lab); }
+  }
+  const title = run ? mmss(left)+" · Plan DCG" : fc.over ? (fc.phase === "work" ? "Bloc terminé · Plan DCG" : "Pause finie · Plan DCG") : DOC_TITLE;
+  if (document.title !== title) document.title = title;
+}
+function fcAfter(){ fcSave(); renderFocus(); fcSyncWake(); }
+function fcStart(phase){
+  fcSound();   // le son se débloque pendant un geste (iPhone)
+  if (fcConf) fcConfirmClose(true);
+  fc.phase = phase; fc.remaining = FC_LEN[phase]; fc.endAt = Date.now() + FC_LEN[phase];
+  fc.paused = false; fc.fresh = false; fc.over = false; fcSnap = null;
+  fcSay(phase === "work" ? "Travail : 25 minutes. Une chose à la fois." : "Pause : 5 minutes. Lève-toi, bois un verre d'eau.");
+  fcAfter();
+}
+const fcStartWork = () => fcStart("work"), fcStartBreak = () => fcStart("break");
+function fcToggle(){
+  if (!fc || fc.over) return;
+  if (fc.fresh){ fcStartWork(); return; }
+  fcSound();
+  if (fc.paused){ fc.endAt = Date.now() + fc.remaining; fc.paused = false; fcSay("C'est reparti."); }
+  else { fc.remaining = Math.max(0, fc.endAt - Date.now()); fc.paused = true; fcSay("En pause."); }
+  fcAfter();
+}
+function fcSkip(){
+  if (!fc || fc.fresh || fc.over) return;
+  if (fc.phase === "work") fcEnd(false, true); else fcStartWork();
+}
+/* fin d'un bloc : l'écran de fin, et deux notes si la page est visible */
+function fcEnd(chime, skipped){
+  const work = fc.phase === "work";
+  fc.over = true; fc.paused = false; fc.remaining = 0;
+  if (work && !skipped) fc.rounds++;   // « Passer » ne compte pas comme un bloc fait
+  if (fcConf) fcConfirmClose(true);
+  fcSay(work ? "Bloc terminé. Qu'as-tu fini ?" : "Pause finie. On reprend ?");
+  if (chime) fcChime(!work);
+  fcAfter();
+}
+function fcToggleMute(){
+  const m = !fcMuted();
+  try{ if (m) localStorage.setItem(FC_MUTE, "1"); else localStorage.removeItem(FC_MUTE); }catch(e){}
+  const b = document.getElementById("fc-mute");
+  if (b){ b.setAttribute("aria-pressed", String(m)); b.replaceChildren(ic(m ? "mute" : "sound")); }
+  toast(m ? "Son coupé." : "Son remis.");
+}
+function fcQuitAsk(){ if (!fc) return; if (!fc.fresh && !fc.over) fcConfirm(); else fcQuit(); }
+function fcConfirm(){
+  if (fcConf || !fcEl) return;
+  fcConf = true;
+  fcEl.querySelector(".fc-in").inert = true;
+  const no = h("button",{type:"button", class:"btn primary", id:"fc-no", onclick:()=>fcConfirmClose()}, "Non, je continue");
+  fcEl.append(h("div",{class:"fc-conf", id:"fc-conf"},
+    h("div",{role:"alertdialog", "aria-modal":"true", "aria-labelledby":"fc-ct", "aria-describedby":"fc-cd"},
+      h("h3",{id:"fc-ct"},"Arrêter le minuteur ?"), h("p",{id:"fc-cd"},"Tes coches restent enregistrées."),
+      h("div",{class:"fc-acts"}, h("button",{type:"button", class:"btn", id:"fc-yes", onclick:fcQuit}, "Oui, arrêter"), no))));
+  no.focus({preventScroll:true});
+}
+function fcConfirmClose(silent){
+  fcConf = false;
+  const b = document.getElementById("fc-conf"); if (b) b.remove();
+  if (!fcEl) return;
+  fcEl.querySelector(".fc-in").inert = false;
+  if (!silent){ const q = document.getElementById("fc-quit"); if (q) q.focus({preventScroll:true}); }
+  else { const p = fcEl.querySelector(".fc-body .btn.primary"); if (p) p.focus({preventScroll:true}); }
+}
+function fcQuit(){
+  if (!fcEl) return;
+  const rounds = fc ? fc.rounds : 0, sid = fc && fc.sid;
+  clearInterval(fcTimer); fcTimer = null;
+  fc = null; fcSave(); fcSyncWake();
+  if (cel && cel.where === "focus") endCel();
+  fcEl.remove(); fcEl = null; fcR = null; fcSnap = null; fcConf = false; fcAll = false;
+  fcInert.forEach(n => { n.inert = false; }); fcInert = [];
+  document.documentElement.classList.remove("focusing");
+  if (!sheetState && !party) document.documentElement.classList.remove("locked");
+  document.title = DOC_TITLE;
+  let t = fcBack && document.getElementById(fcBack);
+  if (t && (t.closest("#backdrop:not(.open)") || t.closest("[inert]") || !t.offsetParent)) t = null;
+  if (!t && sid){ const c = cardOf(sid); t = c && c.querySelector(".c-open"); }
+  if (t) t.focus({preventScroll:true});
+  fcBack = null;
+  if (rounds) toast(plural(rounds,"bloc")+" de concentration. Bien joué !");
+}
+function focusKey(e){
+  if (e.key === "Escape"){ e.preventDefault(); if (fcConf) fcConfirmClose(); else fcQuitAsk(); return; }
+  if (e.key !== "Tab") return;
+  const root = fcConf ? document.getElementById("fc-conf") : fcEl;
+  const f = [...root.querySelectorAll("button:not([disabled]), input, a[href]")].filter(x => x.offsetParent !== null || x.classList.contains("cb"));
+  const vis = f.filter(x => !x.closest("[inert]") && (x.classList.contains("cb") ? x.closest(".item").offsetParent !== null : true));
+  if (!vis.length){ e.preventDefault(); return; }
+  const i = vis.indexOf(document.activeElement);
+  if (e.shiftKey && i <= 0){ e.preventDefault(); vis[vis.length-1].focus(); }
+  else if (!e.shiftKey && (i === -1 || i === vis.length-1)){ e.preventDefault(); vis[0].focus(); }
+}
+document.addEventListener("visibilitychange", () => { if (fcEl){ focusTick(); fcSyncWake(); } });
+window.addEventListener("pageshow", () => { if (fcEl){ focusTick(); fcSyncWake(); } });
 
 /* ligne de sauvegarde : la même dans le menu de l'ordinateur */
 (function(){
@@ -1835,7 +2240,7 @@ function render(){
   document.getElementById("fab").style.display = (v==="aujourdhui"||v==="semaine") ? "" : "none";
   scheduleSync();
 }
-function refresh(){ render(); if (sheetState) renderSheet(); }
+function refresh(){ render(); if (sheetState) renderSheet(); if (fcEl) renderFocus(); }
 window.addEventListener("hashchange", () => { if (sheetState) closeSheet(); render(); });
 window.__dcg = {projectedEnd:u=>projectedEnd(u), unplaced:()=>SCHED.unplaced, rhythm:()=>rhythm(),
   streak:()=>{ const x = streakInfo(); return {cur:x.cur, best:x.best, today:x.today, days:Object.fromEntries(x.res)}; }, streakCount, ascent:()=>ascent()};
@@ -1844,6 +2249,7 @@ window.__dcg = {projectedEnd:u=>projectedEnd(u), unplaced:()=>SCHED.unplaced, rh
 
 render();
 setInterval(()=>{ if (!sheetState) render(); }, 60000);
+focusResume();
 
 /* anciennes coches (version précédente) : on les reprend */
 function migrateLegacy(o){
