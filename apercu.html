@@ -35,7 +35,7 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
 .pg-bar .in{max-width:1360px;margin:0 auto;padding:calc(8px + env(safe-area-inset-top)) 16px 8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .pg-jump{display:flex;gap:6px;flex-wrap:wrap}
 .pg-jump a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:99px;background:var(--pg-surface);border:1px solid var(--pg-line);color:var(--pg-ink);text-decoration:none;font-weight:700;font-size:.92rem}
-.pg-jump a b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--pg-sel);color:var(--pg-on);font-size:.8rem}
+.pg-jump a b{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:99px;background:var(--pg-sel);color:var(--pg-on);font-size:.8rem}
 .seg{display:inline-flex;padding:3px;border-radius:99px;background:var(--pg-surface);border:1px solid var(--pg-line)}
 .seg button{font:inherit;font-weight:700;font-size:.88rem;min-height:38px;padding:0 12px;border-radius:99px;border:0;background:none;color:var(--pg-muted);cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--pg-sel);color:var(--pg-on)}
@@ -43,7 +43,7 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
 .pg-mode{margin-left:auto}
 .pg-dir{max-width:1360px;margin:0 auto;padding:30px 16px 10px;scroll-margin-top:70px}
 .pg-head{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px}
-.pg-letter{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--pg-sel);color:var(--pg-on);font-weight:800;font-size:1.2rem}
+.pg-letter{flex:none;display:grid;place-items:center;min-width:44px;padding:0 8px;height:44px;border-radius:14px;background:var(--pg-sel);color:var(--pg-on);font-weight:800;font-size:1.2rem}
 .pg-name{flex:1;min-width:200px}
 .pg-name h2{margin:0;font-size:1.45rem;letter-spacing:-.02em;line-height:1.15}
 .pg-name p{margin:4px 0 0;color:var(--pg-muted)}
@@ -64,27 +64,497 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
   .pg-stage .dir:not(.show-desk) .mock-phone{border-radius:44px;box-shadow:0 0 0 10px #101014,0 30px 60px rgba(0,0,0,.25)}
 }
 @media (max-width:700px){.pg-bar{position:static}}
+.pg-sep{max-width:1360px;margin:40px auto 0;padding:0 16px;color:var(--pg-muted);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.pg-ctl{display:flex;gap:8px;flex-wrap:wrap;flex:none}
 .pg-foot{max-width:1360px;margin:0 auto;padding:30px 16px calc(40px + env(safe-area-inset-bottom));color:var(--pg-muted);text-align:center}
 .pg-foot b{color:var(--pg-ink)}
 </style>
 </head>
 <body>
 <header class="pg-top">
-  <h1>Choisis le nouveau style de ton appli</h1>
-  <p>Trois directions pour l'écran Aujourd'hui, sur téléphone et sur ordinateur. Touche les cases pour essayer. Puis dis-moi A, B ou C.</p>
+  <h1>Ton style : Sommet + Carnet</h1>
+  <p>Le ciel et la montagne de Sommet en haut, l'agenda de Carnet en dessous. Compare les deux polices des titres, puis dis-moi : Sora ou Fraunces.</p>
 </header>
 <nav class="pg-bar" aria-label="Directions"><div class="in">
-  <div class="pg-jump"><a href="#pg-sommet"><b>A</b>Sommet</a><a href="#pg-carnet"><b>B</b>Carnet</a><a href="#pg-elan"><b>C</b>Élan</a></div>
+  <div class="pg-jump"><a href="#pg-mix"><b>A+B</b>Cordée</a><a href="#pg-sommet"><b>A</b>Sommet</a><a href="#pg-carnet"><b>B</b>Carnet</a><a href="#pg-elan"><b>C</b>Élan</a></div>
   <div class="seg pg-mode" role="group" aria-label="Thème">
     <button type="button" data-mode="auto" aria-pressed="true">Auto</button>
     <button type="button" data-mode="light" aria-pressed="false">Clair</button>
     <button type="button" data-mode="dark" aria-pressed="false">Sombre</button>
   </div>
 </div></nav>
+<section class="pg-dir" id="pg-mix" aria-labelledby="pg-mix-h">
+  <div class="pg-head"><span class="pg-letter">A+B</span>
+    <div class="pg-name"><h2 id="pg-mix-h">Cordée</h2><p>Le ciel de l’aube en haut, ton carnet net en dessous.</p><div class="pg-sw" aria-hidden="true"><i style="background:#141a3f"></i><i style="background:#ff7a59"></i><i style="background:#ffc247"></i><i style="background:#f6f8fc"></i><i style="background:#0d7357"></i></div></div>
+    <div class="pg-ctl"><div class="seg pg-font" role="group" aria-label="Police des titres"><button type="button" data-font="sora" aria-pressed="true">Sora</button><button type="button" data-font="fraunces" aria-pressed="false">Fraunces</button></div><div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div></div>
+  </div>
+  <div class="pg-stage">
+<style>
+/* Direction « Cordée » : le ciel et la crête de Sommet en haut, le carnet net de Carnet en dessous. Une seule palette : nuit, corail, or. */
+#dir-mix{--f-display:"Sora",system-ui,sans-serif;--f-text:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--dw:700;--dwt:600;--dwx:800;--dwn:600;--dls:-.02em;--dlsx:-.035em;--dz:1;--dzn:1;--bg:#f6f8fc;--paper:#ffffff;--ink:#141a3f;--ink2:#3d4472;--ink3:#585e8c;--rule:#e2e6f1;--rule2:#c9cfe5;--pen:#141a3f;--gold:#ffc247;--gold2:#ffb23e;--gold-soft:#fff1cf;--hl:#ffc247;--hl-ink:#141a3f;--coral:#ff7a59;--coral-ink:#ad3a16;--coral-soft:#ffebe3;--ok:#0d7357;--ok-soft:#dcf3ea;--pri:#141a3f;--on-pri:#ffffff;--pri-sh:0 8px 18px -8px rgba(20,26,63,.5);--hero-line:#141a3f;--tick:#141a3f;--box-on:#ffe29a;--today:#141a3f;--on-today:#ffffff;--today-dot:#ffc247;--stamp:#141a3f;--sw-y:88%;--sw-h:34%;--veil:rgba(246,248,252,.88);--tab:#ffffff;--focus:#3b5bdb;--acc-ic:#141a3f;--sh:0 1px 2px rgba(20,26,63,.05);--ue1:#2f4fd1;--ue5:#0d7357;--ue7:#7a3fc4;--ue8:#0b6a80;--ue9:#b3263f;--ue12:#8f5200;--ue13:#a82a85}
+#dir-mix[data-font="fraunces"]{--f-display:"Fraunces",Georgia,serif;--dw:700;--dwt:700;--dwx:700;--dwn:700;--dls:-.012em;--dlsx:-.03em;--dz:1.09;--dzn:1.1}
+#dir-mix[data-mode="dark"]{--bg:#0b0e22;--paper:#151935;--ink:#eef0ff;--ink2:#b9bde2;--ink3:#9da3ce;--rule:#262b52;--rule2:#3b4273;--pen:#cfd3f4;--gold:#ffcd5c;--gold2:#ffb84a;--gold-soft:rgba(255,205,92,.16);--hl:#ffcd5c;--hl-ink:#141a3f;--coral:#ff8a6a;--coral-ink:#ff9e82;--coral-soft:rgba(255,122,89,.17);--ok:#62e0b0;--ok-soft:rgba(98,224,176,.14);--pri:#ffcd5c;--on-pri:#141a3f;--pri-sh:0 8px 20px -8px rgba(255,190,80,.45);--hero-line:#ffcd5c;--tick:#ffcd5c;--box-on:rgba(255,205,92,.16);--today:#ffcd5c;--on-today:#141a3f;--today-dot:#141a3f;--stamp:#ffcd5c;--sw-y:100%;--sw-h:12%;--veil:rgba(11,14,34,.88);--tab:#10132c;--focus:#a9bcff;--acc-ic:#ffcd5c;--sh:0 1px 0 rgba(255,255,255,.03) inset;--ue1:#93a8ff;--ue5:#55d6a7;--ue7:#c6a0ff;--ue8:#5fd0e8;--ue9:#ff8ea1;--ue12:#ffc45c;--ue13:#ff92d8}
+@media (prefers-color-scheme:dark){#dir-mix[data-mode="auto"]{--bg:#0b0e22;--paper:#151935;--ink:#eef0ff;--ink2:#b9bde2;--ink3:#9da3ce;--rule:#262b52;--rule2:#3b4273;--pen:#cfd3f4;--gold:#ffcd5c;--gold2:#ffb84a;--gold-soft:rgba(255,205,92,.16);--hl:#ffcd5c;--hl-ink:#141a3f;--coral:#ff8a6a;--coral-ink:#ff9e82;--coral-soft:rgba(255,122,89,.17);--ok:#62e0b0;--ok-soft:rgba(98,224,176,.14);--pri:#ffcd5c;--on-pri:#141a3f;--pri-sh:0 8px 20px -8px rgba(255,190,80,.45);--hero-line:#ffcd5c;--tick:#ffcd5c;--box-on:rgba(255,205,92,.16);--today:#ffcd5c;--on-today:#141a3f;--today-dot:#141a3f;--stamp:#ffcd5c;--sw-y:100%;--sw-h:12%;--veil:rgba(11,14,34,.88);--tab:#10132c;--focus:#a9bcff;--acc-ic:#ffcd5c;--sh:0 1px 0 rgba(255,255,255,.03) inset;--ue1:#93a8ff;--ue5:#55d6a7;--ue7:#c6a0ff;--ue8:#5fd0e8;--ue9:#ff8ea1;--ue12:#ffc45c;--ue13:#ff92d8}}
+#dir-mix .mock-phone,#dir-mix .mock-desk{background:var(--bg);color:var(--ink);font-family:var(--f-text);-webkit-font-smoothing:antialiased;text-align:left;line-height:1.35}
+#dir-mix .mock-phone{width:100%;max-width:430px;margin:0 auto;position:relative;overflow:hidden;font-size:16px}
+#dir-mix .mock-desk{width:1280px;height:800px;overflow:hidden;position:relative;font-size:15px}
+#dir-mix *,#dir-mix *::before,#dir-mix *::after{box-sizing:border-box}
+#dir-mix h2,#dir-mix h3,#dir-mix h4,#dir-mix p,#dir-mix ol,#dir-mix ul{margin:0;padding:0}
+#dir-mix ol,#dir-mix ul{list-style:none}
+#dir-mix button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#dir-mix .num{font-variant-numeric:tabular-nums lining-nums}
+#dir-mix .ic{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#dir-mix .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#dir-mix .eb{font:600 11.5px/1.2 var(--f-text);letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+#dir-mix .ue1{--ue:var(--ue1)} #dir-mix .ue5{--ue:var(--ue5)} #dir-mix .ue7{--ue:var(--ue7)} #dir-mix .ue8{--ue:var(--ue8)}
+#dir-mix .ue9{--ue:var(--ue9)} #dir-mix .ue12{--ue:var(--ue12)} #dir-mix .ue13{--ue:var(--ue13)}
+#dir-mix .logo{width:36px;height:36px;display:block;flex:none;filter:drop-shadow(0 4px 10px rgba(255,140,80,.35))}
+
+/* Ciel (toujours la nuit qui se lève, en clair comme en sombre) */
+#dir-mix .hd{position:relative;padding-top:47px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#1a2056 40%,#2c2766 58%,#83406e 73%,#ff7a59 87%,#ffc247 100%)}
+#dir-mix .stars{position:absolute;left:0;top:0;width:100%;height:230px;pointer-events:none}
+#dir-mix .stars circle{fill:#fff}
+#dir-mix .tw{animation:mix-tw 3.2s ease-in-out infinite}
+#dir-mix .tw:nth-child(3n){animation-delay:1.1s} #dir-mix .tw:nth-child(3n+1){animation-delay:2s}
+#dir-mix .hd-top{position:relative;display:flex;align-items:center;gap:10px;padding:4px 20px 0;min-height:44px}
+#dir-mix .brand{font:var(--dwx) calc(18px*var(--dz))/1 var(--f-display);letter-spacing:-.01em;white-space:nowrap}
+#dir-mix .jp{margin-left:auto;display:flex;align-items:baseline;gap:6px;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:12.5px;color:#e6e8ff;white-space:nowrap}
+#dir-mix .jp b{font:var(--dwx) calc(16px*var(--dzn))/1 var(--f-display);color:#ffd27a;letter-spacing:-.01em}
+#dir-mix .hd-date{position:relative;padding:12px 20px 0}
+#dir-mix .sky-eb{font:700 12px/1.2 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:#ffd27a}
+#dir-mix .hd-date h2{font:var(--dw) calc(31px*var(--dz))/1.08 var(--f-display);letter-spacing:var(--dls);margin-top:5px}
+#dir-mix .hchips{position:relative;display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px 0}
+#dir-mix .hchip{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.12);font:600 13.5px/1.2 var(--f-text)}
+#dir-mix .hchip .ic{width:15px;height:15px;color:#7ff0c2;stroke-width:2.6}
+#dir-mix .scene{display:block;width:100%;height:auto;margin-top:0}
+#dir-mix .svt{font:700 12.5px var(--f-text);letter-spacing:.01em}
+#dir-mix .mock-desk .svt{font-size:13.5px}
+#dir-mix .halo{transform-box:fill-box;transform-origin:center;animation:mix-halo 2.4s ease-out infinite}
+#dir-mix .flag{transform-box:fill-box;transform-origin:0 50%;animation:mix-wave 2.8s ease-in-out infinite}
+
+/* Carnet */
+#dir-mix .ph-main{position:relative;padding:0 16px 84px}
+#dir-mix .day{position:relative;padding:15px 16px 14px;border:1px solid var(--rule2);border-radius:14px;background:var(--paper);box-shadow:var(--sh)}
+#dir-mix .mock-phone .day{margin-top:-16px}
+#dir-mix .day-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+#dir-mix .day-sub{font:500 13.5px/1.4 var(--f-text);color:var(--ink2);margin-top:6px}
+#dir-mix .day-n{font:var(--dwx) calc(42px*var(--dzn))/.9 var(--f-display);letter-spacing:var(--dlsx);white-space:nowrap}
+#dir-mix .day-n small{font:var(--dw) calc(18px*var(--dzn)) var(--f-display);color:var(--ink3);margin-left:2px;letter-spacing:0}
+#dir-mix .segs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:13px 0 0}
+#dir-mix .segs i{position:relative;overflow:hidden;height:9px;border:1px solid var(--pen);border-radius:2px;transition:border-color .3s}
+#dir-mix .segs i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--coral),var(--gold));transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.3,1.2,.5,1)}
+#dir-mix .segs i.f::after{transform:none}
+#dir-mix .phr{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font:500 14.5px/1.38 var(--f-text);color:var(--ink2)}
+#dir-mix .phr .ic{width:18px;height:18px;color:var(--coral-ink);margin-top:1px}
+#dir-mix .note{display:flex;gap:12px;align-items:flex-start;margin-top:14px;padding:10px 0 12px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+#dir-mix .note-q{font:700 40px/.7 var(--f-display);color:var(--coral-ink);flex:none;margin-top:8px}
+#dir-mix .note .nt{font:500 15px/1.42 var(--f-text);margin-top:5px}
+#dir-mix .sec{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:18px 0 2px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+#dir-mix .sec h3{font:var(--dw) calc(20px*var(--dz))/1 var(--f-display);letter-spacing:var(--dls)}
+#dir-mix .sec .eb{white-space:nowrap}
+
+/* Agenda */
+#dir-mix .slot{display:grid;grid-template-columns:47px minmax(0,1fr);position:relative}
+#dir-mix .gut{position:relative;border-right:1px solid var(--rule2);padding:15px 7px 14px 0;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;font:var(--dwn) calc(14px*var(--dzn))/1 var(--f-display);font-variant-numeric:tabular-nums lining-nums}
+#dir-mix .gut .e{color:var(--ink3);font-weight:600;font-size:calc(12.5px*var(--dzn))}
+#dir-mix .nowm{position:absolute;right:3px;top:34%;font:700 calc(11.5px*var(--dzn))/1 var(--f-display);font-variant-numeric:tabular-nums lining-nums;background:var(--hl);color:var(--hl-ink);padding:4px 4px;border-radius:3px 6px 3px 6px;box-shadow:0 0 0 3px var(--bg)}
+#dir-mix .nowm::after{content:"";position:absolute;right:-14px;top:50%;width:14px;height:2px;margin-top:-1px;background:var(--hl)}
+#dir-mix .card{position:relative;background:var(--paper);border:1px solid var(--rule2);border-radius:12px;padding:14px 13px 4px 15px;margin:12px 0 12px 9px;box-shadow:inset 3px 0 0 var(--ue),var(--sh)}
+#dir-mix .card.hero{border:1.5px solid var(--hero-line);padding-bottom:14px}
+#dir-mix .c-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#dir-mix .tag{display:inline-flex;align-items:center;gap:7px;font:700 11px/1 var(--f-text);letter-spacing:.11em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+#dir-mix .tag i{width:7px;height:7px;border-radius:50%;border:1.5px solid var(--ink3)}
+#dir-mix .hero .tag{color:var(--coral-ink)}
+#dir-mix .hero .tag i{border:0;background:var(--coral);animation:mix-pulse 1.8s ease-out infinite}
+#dir-mix .card.done .tag{color:var(--ok)}
+#dir-mix .card.done .tag i{background:var(--ok);animation:none}
+#dir-mix .time{font:var(--dwn) calc(14px*var(--dzn))/1 var(--f-display);white-space:nowrap}
+#dir-mix .ue{display:inline-flex;align-items:center;gap:7px;margin-top:11px;font:600 13px/1 var(--f-text);color:var(--ue)}
+#dir-mix .ue i,#dir-mix .sq{width:10px;height:10px;border-radius:2px;background:var(--ue);flex:none;display:inline-block}
+#dir-mix .ttl{font:var(--dwt) calc(19px*var(--dz))/1.22 var(--f-display);letter-spacing:var(--dls);margin:7px 0 4px}
+#dir-mix .meta{font:500 13px/1.3 var(--f-text);color:var(--ink3)}
+#dir-mix .items{margin-top:10px;border-top:1px solid var(--rule)}
+#dir-mix .item{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:12px;align-items:start;padding:11px 2px;min-height:56px;border-bottom:1px solid var(--rule);cursor:pointer;outline:none;border-radius:4px;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+#dir-mix .item:last-child{border-bottom:0}
+#dir-mix .card:not(.hero) .item{min-height:50px;padding:9px 2px}
+#dir-mix .item:focus-visible{box-shadow:0 0 0 2px var(--focus)}
+#dir-mix .box{width:28px;height:28px;display:block;overflow:visible}
+#dir-mix .bx{fill:var(--paper);stroke:var(--pen);stroke-width:1.6;transform-box:fill-box;transform-origin:center;transition:fill .25s}
+#dir-mix .item.on .bx{fill:var(--box-on)}
+#dir-mix .tk{fill:none;stroke:var(--tick);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:26;stroke-dashoffset:26;transition:stroke-dashoffset .28s cubic-bezier(.6,0,.3,1)}
+#dir-mix .item.on .tk{stroke-dashoffset:0}
+#dir-mix .bu line{stroke:var(--coral);stroke-width:1.8;stroke-linecap:round;opacity:0;transform-box:view-box;transform-origin:14px 14px}
+#dir-mix .bu line:nth-child(even){stroke:var(--gold2)}
+#dir-mix .item.pop .bu line{animation:mix-burst .55s ease-out}
+#dir-mix .item.pop .bx{animation:mix-press .32s ease-out}
+#dir-mix .kind{display:flex;justify-content:space-between;gap:8px;font:600 11px/1 var(--f-text);letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);margin:2px 0 5px}
+#dir-mix .dur{font-variant-numeric:tabular-nums;color:var(--ink2);letter-spacing:.02em;text-transform:none;font-size:12.5px;white-space:nowrap}
+#dir-mix .txt{font:500 15px/1.35 var(--f-text);color:var(--ink);background:linear-gradient(var(--ink2),var(--ink2)) 0 62%/0 1.5px no-repeat;transition:background-size .38s ease .08s,color .2s}
+#dir-mix .item.on .txt{background-size:100% 1.5px;color:var(--ink3)}
+#dir-mix .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+#dir-mix .btn{flex:1 1 auto;white-space:nowrap;min-height:48px;border-radius:11px;font:600 15px/1 var(--f-text);display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--ink);color:var(--ink);padding:0 16px;transition:transform .15s}
+#dir-mix .btn:active{transform:scale(.97)}
+#dir-mix .btn .ic{width:18px;height:18px;stroke-width:2.2}
+#dir-mix .btn.pri{background:var(--pri);border-color:var(--pri);color:var(--on-pri);box-shadow:var(--pri-sh)}
+#dir-mix .acts .btn.pri{flex:1.6 1 auto}
+#dir-mix .mock-phone .acts{gap:8px}
+#dir-mix .mock-phone .acts .btn{padding:0 12px;font-size:14.5px;gap:6px}
+#dir-mix .btn:disabled{border-color:var(--rule2);color:var(--ok);cursor:default}
+#dir-mix .btn.sun{background:linear-gradient(135deg,#ffd36b,#ffb23e);border:0;color:#141a3f;box-shadow:0 10px 22px -10px rgba(255,140,40,.8)}
+#dir-mix .btn:focus-visible,#dir-mix .skip:focus-visible,#dir-mix .tab:focus-visible,#dir-mix .fab:focus-visible,#dir-mix .nv:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+#dir-mix .side .btn:focus-visible,#dir-mix .side .nv:focus-visible{outline-color:#a9bcff}
+#dir-mix .skip{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin-top:2px;font:500 14px/1 var(--f-text);color:var(--ink2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule2)}
+#dir-mix .skip .ic{width:17px;height:17px}
+
+/* Célébration : le tampon tombe, le drapeau monte */
+#dir-mix .cel{position:absolute;inset:0;border-radius:11px;background:var(--veil);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:5;pointer-events:none}
+#dir-mix .cel.show{opacity:1;visibility:visible}
+#dir-mix .stamp{border:3px double var(--stamp);border-radius:14px;padding:12px 22px 12px;background:var(--paper);text-align:center;transform:rotate(-4deg);box-shadow:0 16px 34px -14px rgba(20,26,63,.45)}
+#dir-mix .cel.show .stamp{animation:mix-stamp .5s cubic-bezier(.2,1.5,.4,1)}
+#dir-mix .pk{display:block;width:64px;height:44px;margin:0 auto;overflow:visible}
+#dir-mix .pk .rg{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:80}
+#dir-mix .pk .po{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+#dir-mix .pk .fg{fill:var(--gold);stroke:var(--gold2);stroke-width:1}
+#dir-mix .cel.show .pk .rg{animation:mix-draw .5s ease-out .12s both}
+#dir-mix .cel.show .pk .fl{animation:mix-rise .55s cubic-bezier(.3,1.5,.5,1) .5s both}
+#dir-mix .stamp b{display:block;font:var(--dw) calc(23px*var(--dz))/1.1 var(--f-display);letter-spacing:var(--dls);color:var(--ink);margin:6px 0 6px}
+#dir-mix .stamp b span{background:linear-gradient(var(--hl),var(--hl)) 0 var(--sw-y)/100% var(--sw-h) no-repeat;padding:0 3px}
+#dir-mix .cel.show .stamp b span{animation:mix-swipe .45s ease-out .3s both}
+#dir-mix .stamp small{font:700 11px/1 var(--f-text);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+
+/* Semaine, série, demain */
+#dir-mix .wk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-top:12px}
+#dir-mix .d{border:1px solid var(--rule2);border-radius:10px;padding:7px 0 6px;text-align:center;min-height:60px}
+#dir-mix .d .l{font:600 11px/1 var(--f-text);letter-spacing:.04em;color:var(--ink3);text-transform:uppercase}
+#dir-mix .d .dn{display:block;font:var(--dw) calc(19px*var(--dzn))/1 var(--f-display);margin-top:6px}
+#dir-mix .d .dots{display:flex;justify-content:center;gap:2px;margin-top:7px;height:5px}
+#dir-mix .d .dots i{width:5px;height:5px;border-radius:1px;background:var(--ue,var(--ink))}
+#dir-mix .d.off{border-style:dashed}
+#dir-mix .d.off .dn{color:var(--ink3);font-weight:600}
+#dir-mix .d.plan{border-color:var(--ink)}
+#dir-mix .d.today{background:var(--today);border-color:var(--today);color:var(--on-today);box-shadow:0 8px 16px -10px rgba(20,26,63,.7)}
+#dir-mix .d.today .l{color:var(--on-today)}
+#dir-mix .d.today .dots i{background:var(--today-dot)}
+#dir-mix .streak{display:flex;align-items:center;gap:14px;margin-top:12px;padding:10px 0 0;border-top:1px dashed var(--rule2)}
+#dir-mix .st-n{font:var(--dwx) calc(32px*var(--dzn))/1 var(--f-display);min-width:30px;text-align:center;letter-spacing:var(--dlsx)}
+#dir-mix .st-t b{display:block;font:600 14.5px/1.25 var(--f-text)}
+#dir-mix .st-t span{font:500 13px/1.3 var(--f-text);color:var(--ink3)}
+#dir-mix .st-boxes{display:flex;gap:4px;margin-left:auto;flex:none}
+#dir-mix .st-boxes i{width:12px;height:12px;border:1.3px solid var(--pen);border-radius:2px}
+#dir-mix .st-boxes i.f{background:var(--gold)}
+#dir-mix .streak.lit .st-n{color:var(--ok)}
+#dir-mix .tmr{margin-top:12px;padding-top:12px;border-top:1px solid var(--rule)}
+#dir-mix .tmr-h{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+#dir-mix .tmr-h b{font:var(--dw) calc(15px*var(--dz))/1.2 var(--f-display);letter-spacing:var(--dls)}
+#dir-mix .rib{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-top:10px}
+#dir-mix .rib li{border-top:3px solid var(--ue);padding-top:7px;min-width:0}
+#dir-mix .rib .t{display:block;font:var(--dwn) calc(13.5px*var(--dzn))/1 var(--f-display)}
+#dir-mix .rib .u{display:block;font:600 11px/1.2 var(--f-text);color:var(--ink2);margin-top:5px;white-space:nowrap;overflow:hidden}
+#dir-mix .rib .bil{border-top:3px double var(--ink)}
+#dir-mix .tm li{display:grid;grid-template-columns:44px 10px minmax(0,1fr);align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--rule);font:500 14px/1.2 var(--f-text)}
+#dir-mix .tm li:last-child{border-bottom:0}
+#dir-mix .tm .t{font:var(--dwn) calc(14px*var(--dzn))/1 var(--f-display);text-align:right}
+#dir-mix .tm .bil{font-weight:600}
+#dir-mix .tm .bil .sq{background:var(--gold);border:1.5px solid var(--gold2)}
+
+/* Onglets + bouton flottant */
+#dir-mix .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--tab);border-top:1px solid var(--rule2);padding:6px 6px 28px}
+#dir-mix .tab{min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:600 11px/1.1 var(--f-text);color:var(--ink3);border-radius:12px}
+#dir-mix .ti{width:54px;height:30px;border-radius:99px;display:grid;place-items:center;transition:background-color .2s}
+#dir-mix .ti .ic{width:22px;height:22px}
+#dir-mix .tab.on{color:var(--ink)}
+#dir-mix .tab.on .ti{background:var(--gold-soft);color:var(--acc-ic)}
+#dir-mix .fab{position:absolute;right:16px;bottom:100px;z-index:6;width:60px;height:60px;border-radius:18px;display:grid;place-items:center;background:var(--pri);color:var(--on-pri);box-shadow:0 0 0 4px rgba(255,194,71,.3),0 14px 26px -10px rgba(20,26,63,.6);transition:transform .15s}
+#dir-mix .fab:active{transform:scale(.94)}
+#dir-mix .fab .ic{width:28px;height:28px;stroke-width:2.5}
+
+/* Ordinateur */
+#dir-mix .dk{display:grid;grid-template-columns:248px minmax(0,1fr) 360px;height:100%}
+#dir-mix .side{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:28px 18px 20px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#181e50 55%,#2a2462 80%,#4e3170 100%)}
+#dir-mix .side .stars{height:100%}
+#dir-mix .sb{position:relative;display:flex;align-items:center;gap:12px;padding:0 6px}
+#dir-mix .sb .logo{width:46px;height:46px}
+#dir-mix .sb b{display:block;font:var(--dwx) calc(20px*var(--dz))/1.1 var(--f-display);letter-spacing:-.01em}
+#dir-mix .sb span{font-size:12.5px;color:#cfd2f3}
+#dir-mix .nav{position:relative;display:flex;flex-direction:column;gap:4px;margin-top:34px}
+#dir-mix .nv{display:flex;align-items:center;gap:12px;height:46px;padding:0 14px;border-radius:12px;color:#cfd2f3;font:600 15px var(--f-text);text-align:left;width:100%}
+#dir-mix .nv:hover{background:rgba(255,255,255,.06)}
+#dir-mix .nv .ic{width:21px;height:21px}
+#dir-mix .nv.on{background:rgba(255,194,71,.15);color:#ffd27a;box-shadow:inset 3px 0 0 #ffc247}
+#dir-mix .side .btn{position:relative;flex:none;margin-top:22px;width:100%}
+#dir-mix .sridge{position:absolute;left:0;bottom:0;width:100%;height:auto}
+#dir-mix .dmain{display:flex;flex-direction:column;min-width:0;padding:30px 32px 16px}
+#dir-mix .dhead h2{font:var(--dw) calc(34px*var(--dz))/1.05 var(--f-display);letter-spacing:var(--dls);margin-top:6px;white-space:nowrap}
+#dir-mix .dhead .phr{margin-top:6px}
+#dir-mix .drow{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.2fr);gap:16px;margin-top:16px;align-items:stretch}
+#dir-mix .drow .note{margin:0;border:1px solid var(--rule2);border-top:2px solid var(--ink);border-radius:0 0 12px 12px;padding:11px 16px;background:var(--paper)}
+#dir-mix .drow .day{padding:13px 16px}
+#dir-mix .drow .day-sub{font-size:13px}
+#dir-mix .drow .segs{margin-top:14px}
+#dir-mix .sum-ch{position:absolute;top:14px;right:14px;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+#dir-mix .sum-ch .hchip{font-size:12.5px;padding:5px 10px}
+#dir-mix .sum-ch .hchip .ic{width:14px;height:14px}
+#dir-mix .dmain .sec{margin-top:22px}
+#dir-mix .dmain .skip{width:auto;min-height:32px;font-size:13.5px;margin:0}
+#dir-mix .dag .slot{grid-template-columns:56px minmax(0,1fr)}
+#dir-mix .dag .gut{padding-right:10px}
+#dir-mix .dag .nowm{right:6px}
+#dir-mix .dag .card{margin:12px 0 0 12px}
+#dir-mix .dag .card.hero{padding-bottom:4px}
+#dir-mix .dag .ttl{font-size:calc(19px*var(--dz))}
+#dir-mix .c-grid{display:grid;grid-template-columns:minmax(0,1fr) 172px;gap:18px;align-items:end}
+#dir-mix .dag .acts{flex-direction:column;flex-wrap:nowrap;gap:8px;margin:0}
+#dir-mix .dag .acts .btn{flex:none;width:100%;min-height:44px;font-size:14px}
+#dir-mix .dag .items{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:22px}
+#dir-mix .dag .item{border-bottom:0;min-height:52px;padding:9px 2px}
+#dir-mix .dright{border-left:1px solid var(--rule);padding:26px 24px 16px;min-width:0;overflow:hidden}
+#dir-mix .sum{position:relative;overflow:hidden;height:238px;border-radius:14px;padding:16px 18px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#1a2056 34%,#30296a 54%,#83406e 70%,#ff7a59 86%,#ffc247 100%)}
+#dir-mix .sum .stars{height:120px}
+#dir-mix .sum-h{position:relative}
+#dir-mix .sum-h b{display:block;font:var(--dwx) calc(34px*var(--dzn))/1 var(--f-display);color:#ffd27a;letter-spacing:var(--dlsx);margin-top:6px}
+#dir-mix .sum-h span{display:block;font-size:13.5px;color:#e6e8ff;margin-top:5px}
+#dir-mix .sum .scene{position:absolute;left:0;bottom:0}
+#dir-mix .dright .sec{margin-top:18px}
+#dir-mix .dright .wk{margin-top:10px}
+#dir-mix .dright .d{min-height:60px;padding-top:7px}
+#dir-mix .dright .d .dn{font-size:calc(17px*var(--dzn))}
+#dir-mix .dright .streak{margin-top:12px;padding-top:10px}
+#dir-mix .dright .st-n{font-size:calc(30px*var(--dzn))}
+#dir-mix .dright .tm{margin-top:4px}
+
+/* Ajustements quand les titres sont en Fraunces */
+#dir-mix[data-font="fraunces"] .ttl{line-height:1.18}
+#dir-mix[data-font="fraunces"] .hd-date h2,#dir-mix[data-font="fraunces"] .dhead h2{line-height:1.02}
+#dir-mix[data-font="fraunces"] .day-n small{font-weight:500}
+#dir-mix[data-font="fraunces"] .gut .e,#dir-mix[data-font="fraunces"] .d.off .dn{font-weight:500}
+
+@keyframes mix-tw{0%,100%{opacity:.9}50%{opacity:.25}}
+@keyframes mix-halo{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+@keyframes mix-wave{0%,100%{transform:skewY(0)}50%{transform:skewY(-7deg) scaleX(.92)}}
+@keyframes mix-pulse{0%{box-shadow:0 0 0 0 rgba(255,122,89,.6)}80%,100%{box-shadow:0 0 0 7px rgba(255,122,89,0)}}
+@keyframes mix-burst{0%{opacity:1;transform:scale(.55)}70%{opacity:.9}100%{opacity:0;transform:scale(1.4)}}
+@keyframes mix-press{0%{transform:scale(1)}35%{transform:scale(.82)}75%{transform:scale(1.1)}100%{transform:scale(1)}}
+@keyframes mix-stamp{0%{opacity:0;transform:rotate(-14deg) scale(1.7)}60%{opacity:1;transform:rotate(-3deg) scale(.96)}100%{transform:rotate(-4deg) scale(1)}}
+@keyframes mix-draw{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+@keyframes mix-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes mix-swipe{from{background-size:0 var(--sw-h)}to{background-size:100% var(--sw-h)}}
+@media (prefers-reduced-motion:reduce){#dir-mix *,#dir-mix *::before,#dir-mix *::after{animation:none !important;transition:none !important}}
+</style>
+<section class="dir" id="dir-mix" data-mode="auto">
+<div class="mock-phone">
+  <header class="hd">
+    <svg class="stars" viewBox="0 0 390 230" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="28" cy="70" r="1.2"/><circle cx="74" cy="26" r=".9"/><circle class="tw" cx="132" cy="58" r="1.4"/><circle cx="188" cy="20" r="1"/><circle class="tw" cx="226" cy="88" r=".9"/><circle cx="262" cy="40" r="1.3"/><circle class="tw" cx="318" cy="16" r="1"/><circle cx="352" cy="74" r="1.2"/><circle class="tw" cx="372" cy="126" r=".8"/><circle cx="300" cy="118" r=".9"/><circle class="tw" cx="160" cy="132" r=".8"/><circle cx="48" cy="150" r="1"/></svg>
+    <div class="hd-top"><svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Logo Plan DCG : une coche qui devient une crête et monte jusqu’au drapeau"><defs><linearGradient id="mix-lg-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141a3f"/><stop offset=".5" stop-color="#33296a"/><stop offset=".8" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc247"/></linearGradient><linearGradient id="mix-lgs-p" x1="24" y1="80" x2="88" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffd27a"/></linearGradient><clipPath id="mix-lgc-p"><rect width="120" height="120" rx="28"/></clipPath></defs><g clip-path="url(#mix-lgc-p)"><rect width="120" height="120" fill="url(#mix-lg-p)"/><circle cx="22" cy="24" r="2" fill="#fff" opacity=".8"/><circle cx="46" cy="14" r="1.4" fill="#fff" opacity=".6"/><circle cx="16" cy="48" r="1.2" fill="#fff" opacity=".5"/><path d="M0 104 L22 92 L40 101 L62 86 L84 97 L120 84 V120 H0Z" fill="#141a3f" opacity=".6"/></g><path d="M25 61 L45 79 L59 62 L66 69 L86 38" fill="none" stroke="url(#mix-lgs-p)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M86 38 V14" stroke="#fff4dc" stroke-width="4" stroke-linecap="round"/><path d="M88 13.5 Q97 15.5 105 19.5 Q97 23.5 88 25.5 Z" fill="#ffc247"/></svg><span class="brand">Plan DCG</span><span class="jp"><b class="num">J-190</b>avant les écrits</span></div>
+    <div class="hd-date"><p class="sky-eb">Aujourd’hui</p><h2>Lundi 16 novembre</h2></div>
+    <div class="hchips"><span class="hchip">Phase 1 · Apprendre</span><span class="hchip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dans les temps</span></div>
+    <svg class="scene" viewBox="0 0 390 150" role="img" aria-label="Ton ascension : tu es au camp de base, 0 % du programme. Le sommet, ce sont les écrits."><defs><radialGradient id="mix-sun-p" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs><circle cx="304" cy="74" r="130" fill="url(#mix-sun-p)"/><path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/><path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/><path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".55" stroke-width="1.3"/><path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/><path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/><path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/><path d="M0 150 V134 C58 126 112 140 176 133 S290 124 390 137 V150Z" style="fill:var(--bg)"/><g transform="translate(220 1)"><rect width="78" height="24" rx="12" fill="#ffc247"/><text x="39" y="16.4" text-anchor="middle" class="svt" fill="#141a3f">Les écrits</text></g><circle class="halo" cx="40" cy="113" r="11" fill="#ffc247"/><circle cx="40" cy="113" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/><g transform="translate(56 76)"><rect width="178" height="24" rx="12" fill="#141a3f" fill-opacity=".92"/><text x="12" y="16.4" class="svt" fill="#ffffff"><tspan fill="#ffd27a">Toi</tspan> · Camp de base · 0&#160;%</text></g></svg>
+  </header>
+
+  <div class="ph-main">
+    <div class="day"><div class="day-top"><div><p class="eb">Ta journée</p><p class="day-sub" aria-live="polite"><span class="sr" data-cntt>1 élément sur 4</span><span data-sess>0 séance terminée sur 2</span></p></div><p class="day-n num" aria-hidden="true"><span data-cnt>1</span><small>/4</small></p></div><div class="segs" aria-hidden="true"><i class="f"></i><i></i><i></i><i></i></div><p class="phr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 5v3M5 9.5l1.8 1.5M19 9.5l-1.8 1.5"/></svg><span>Premier jour. Le plus dur, c’est de commencer, et tu y es.</span></p></div>
+    <aside class="note"><span class="note-q" aria-hidden="true">“</span><div><p class="eb">Le mot de la semaine</p><p class="nt">Bienvenue&nbsp;! Économie à <span class="num">14&nbsp;h</span>, puis droit à <span class="num">15&nbsp;h&nbsp;45</span>. Survole le sommaire, coche au fur et à mesure.</p></div></aside>
+
+    <div class="sec"><h3>Agenda</h3><span class="eb">2 séances · 2&nbsp;h&nbsp;25</span></div>
+    <ol>
+      <li class="slot">
+        <div class="gut"><span>14:00</span><span class="e">15:30</span><span class="nowm num" role="img" aria-label="Il est 14 h 25">14:25</span></div>
+        <article class="card hero ue5" data-card="s1">
+          <div class="c-top"><span class="tag" data-tag="s1"><i></i><span>En cours</span></span><span class="time num">14:00 – 15:30</span></div>
+          <p class="ue"><i></i>UE5 Économie</p><h4 class="ttl">Les fondements de la science économique</h4><p class="meta">Cours · 2 éléments · <span class="num">1&nbsp;h&nbsp;20</span></p>
+          <div class="items">
+<div class="item on" role="checkbox" tabindex="0" aria-checked="true" data-k="s1a"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>À faire</span><span class="dur">30&nbsp;min</span></span><span class="txt">Survole l’e-book UE5 et la méthode de l’épreuve</span></span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s1b"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>Leçon</span><span class="dur">50&nbsp;min</span></span><span class="txt">Ressources rares et besoins illimités</span></span></div>
+          </div>
+          <div class="acts"><button type="button" class="btn pri">Ouvrir ma séance<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button><button type="button" class="btn" data-done="s1">C’est fait</button></div>
+          <div class="cel" aria-hidden="true"><div class="stamp"><svg class="pk" viewBox="0 0 64 44"><path class="rg" d="M4 40 L21 22 L29 30 L40 16 L60 40"/><g class="fl"><path class="po" d="M40 16 V3"/><path class="fg" d="M40.8 3.4 Q47 4.6 52 7.4 Q47 10.2 40.8 11.4Z"/></g></svg><b><span>Séance terminée&nbsp;!</span></b><small>UE5 Économie · 2 sur 2</small></div></div>
+        </article>
+      </li>
+      <li class="slot">
+        <div class="gut"><span>15:45</span><span class="e">17:00</span></div>
+        <article class="card ue1" data-card="s2">
+          <div class="c-top"><span class="tag" data-tag="s2"><i></i><span>À venir</span></span><span class="time num">15:45 – 17:00</span></div><p class="ue"><i></i>UE1 Droit</p><h4 class="ttl">Les règles applicables à la situation du client</h4><p class="meta">Cours · 2 éléments · <span class="num">1&nbsp;h&nbsp;05</span></p>
+          <div class="items">
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2a"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>À faire</span><span class="dur">20&nbsp;min</span></span><span class="txt">Survole l’e-book UE1 et le guide de l’épreuve</span></span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2b"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>Leçon</span><span class="dur">45&nbsp;min</span></span><span class="txt">La règle de droit</span></span></div>
+          </div>
+        </article>
+      </li>
+    </ol>
+    <button type="button" class="skip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Je n’ai pas pu travailler aujourd’hui</button>
+
+    <div class="sec"><h3>Ta semaine</h3><span class="eb">Suivante&nbsp;: dim. 22</span></div>
+    <div class="wk"><div class="d off"><span class="l">Dim</span><span class="dn num">15</span></div><div class="d today" aria-current="date"><span class="l">Lun</span><span class="dn num">16</span><span class="dots"><i></i><i></i></span></div><div class="d plan"><span class="l">Mar</span><span class="dn num">17</span><span class="dots"><i class="ue9"></i><i class="ue8"></i><i class="ue12"></i><i class="ue7"></i><i class="ue5"></i><i class="ue12"></i></span></div><div class="d off"><span class="l">Mer</span><span class="dn num">18</span></div><div class="d off"><span class="l">Jeu</span><span class="dn num">19</span></div><div class="d off"><span class="l">Ven</span><span class="dn num">20</span></div><div class="d off"><span class="l">Sam</span><span class="dn num">21</span></div></div>
+    <div class="streak" data-streak><p class="st-n num" data-st-n>0</p><p class="st-t"><b data-st-b>Série&nbsp;: 0 jour</b><span data-st-s>Coche ta journée pour lancer ta série.</span></p><span class="st-boxes" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="tmr">
+      <div class="tmr-h"><b>Demain · mardi 17</b><span class="eb">6 séances + bilan</span></div>
+      <ol class="rib"><li class="ue9" aria-label="9:00, UE9 Compta"><span class="t num">9:00</span><span class="u">Compta</span></li><li class="ue8" aria-label="11:00, UE8 SI"><span class="t num">11:00</span><span class="u">SI</span></li><li class="ue12" aria-label="12:15, UE12 Anglais"><span class="t num">12:15</span><span class="u">Anglais</span></li><li class="ue7" aria-label="14:00, UE7 Management"><span class="t num">14:00</span><span class="u">Mgmt</span></li><li class="ue5" aria-label="16:00, UE5 Économie"><span class="t num">16:00</span><span class="u">Éco</span></li><li class="ue12" aria-label="17:15, UE12 Anglais"><span class="t num">17:15</span><span class="u">Anglais</span></li><li class="bil" aria-label="18:00, bilan"><span class="t num">18:00</span><span class="u">Bilan</span></li></ol>
+    </div>
+  </div>
+
+  <button type="button" class="fab" aria-label="Ajouter une séance"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="tab on" aria-current="page"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v3M4.9 8.9l1.6 1.6M19.1 8.9l-1.6 1.6M8 21h8"/></svg></span>Aujourd’hui</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>Semaine</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20l6.5-10 4 6 2.5-3.5 6 7.5z"/><path d="M15 12.5V3.5l4.5 1.8-4.5 1.8"/></svg></span>Progrès</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>Méthode</button>
+  </nav>
+  <p class="sr" aria-live="polite" data-live></p>
+</div>
+
+<div class="desk-scaler"><div class="mock-desk"><div class="dk">
+  <aside class="side">
+    <svg class="stars" viewBox="0 0 248 800" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="30" cy="160" r="1.2"/><circle cx="210" cy="40" r="1"/><circle class="tw" cx="226" cy="300" r="1.3"/><circle cx="40" cy="420" r=".9"/><circle class="tw" cx="190" cy="470" r="1"/><circle cx="120" cy="560" r="1.2"/><circle class="tw" cx="230" cy="610" r=".9"/><circle cx="18" cy="600" r="1"/></svg>
+    <svg class="sridge" viewBox="0 0 256 150" aria-hidden="true"><path d="M0 100 L40 78 L84 92 L128 52 L162 74 L200 44 L256 70 V150 H0Z" fill="#ff7a59" opacity=".35"/><path d="M0 120 L54 98 L100 112 L150 80 L196 102 L256 88 V150 H0Z" fill="#141a3f"/><path d="M200 44 V24" stroke="#fff3da" stroke-width="1.6" stroke-linecap="round"/><path class="flag" d="M201 24 Q208 25.5 214 28.5 Q208 31.5 201 33Z" fill="#ffc247"/></svg>
+    <div class="sb"><svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Logo Plan DCG"><defs><linearGradient id="mix-lg-d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141a3f"/><stop offset=".5" stop-color="#33296a"/><stop offset=".8" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc247"/></linearGradient><linearGradient id="mix-lgs-d" x1="24" y1="80" x2="88" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffd27a"/></linearGradient><clipPath id="mix-lgc-d"><rect width="120" height="120" rx="28"/></clipPath></defs><g clip-path="url(#mix-lgc-d)"><rect width="120" height="120" fill="url(#mix-lg-d)"/><circle cx="22" cy="24" r="2" fill="#fff" opacity=".8"/><circle cx="46" cy="14" r="1.4" fill="#fff" opacity=".6"/><circle cx="16" cy="48" r="1.2" fill="#fff" opacity=".5"/><path d="M0 104 L22 92 L40 101 L62 86 L84 97 L120 84 V120 H0Z" fill="#141a3f" opacity=".6"/></g><path d="M25 61 L45 79 L59 62 L66 69 L86 38" fill="none" stroke="url(#mix-lgs-d)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M86 38 V14" stroke="#fff4dc" stroke-width="4" stroke-linecap="round"/><path d="M88 13.5 Q97 15.5 105 19.5 Q97 23.5 88 25.5 Z" fill="#ffc247"/></svg><div><b>Plan DCG</b><span>Pas à pas, jusqu’au sommet.</span></div></div>
+    <nav class="nav" aria-label="Sections">
+      <button type="button" class="nv on" aria-current="page"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v3M4.9 8.9l1.6 1.6M19.1 8.9l-1.6 1.6M8 21h8"/></svg>Aujourd’hui</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Semaine</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20l6.5-10 4 6 2.5-3.5 6 7.5z"/><path d="M15 12.5V3.5l4.5 1.8-4.5 1.8"/></svg>Progrès</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Méthode</button>
+    </nav>
+    <button type="button" class="btn sun"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Ajouter une séance</button>
+  </aside>
+
+  <main class="dmain">
+    <div class="dhead">
+      <p class="eb">Aujourd’hui</p><h2>Lundi 16 novembre</h2><p class="phr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 5v3M5 9.5l1.8 1.5M19 9.5l-1.8 1.5"/></svg><span>Premier jour. Le plus dur, c’est de commencer, et tu y es.</span></p>
+    </div>
+    <div class="drow">
+      <div class="day"><div class="day-top"><div><p class="eb">Ta journée</p><p class="day-sub" aria-live="polite"><span class="sr" data-cntt>1 élément sur 4</span><span data-sess>0 séance terminée sur 2</span></p></div><p class="day-n num" aria-hidden="true"><span data-cnt>1</span><small>/4</small></p></div><div class="segs" aria-hidden="true"><i class="f"></i><i></i><i></i><i></i></div></div>
+      <aside class="note"><span class="note-q" aria-hidden="true">“</span><div><p class="eb">Le mot de la semaine</p><p class="nt">Bienvenue&nbsp;! Économie à <span class="num">14&nbsp;h</span>, puis droit à <span class="num">15&nbsp;h&nbsp;45</span>. Survole le sommaire, coche au fur et à mesure.</p></div></aside>
+    </div>
+    <div class="sec"><h3>Agenda <span class="eb">&nbsp;2 séances · 2&nbsp;h&nbsp;25</span></h3><button type="button" class="skip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Je n’ai pas pu travailler aujourd’hui</button></div>
+    <ol class="dag">
+      <li class="slot">
+        <div class="gut"><span>14:00</span><span class="e">15:30</span><span class="nowm num" role="img" aria-label="Il est 14 h 25">14:25</span></div>
+        <article class="card hero ue5" data-card="s1">
+          <div class="c-top"><span class="tag" data-tag="s1"><i></i><span>En cours</span></span><span class="time num">14:00 – 15:30</span></div>
+          <div class="c-grid"><div><p class="ue"><i></i>UE5 Économie</p><h4 class="ttl">Les fondements de la science économique</h4><p class="meta">Cours · 2 éléments · <span class="num">1&nbsp;h&nbsp;20</span></p></div><div class="acts"><button type="button" class="btn pri">Ouvrir ma séance<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button><button type="button" class="btn" data-done="s1">C’est fait</button></div></div>
+          <div class="items">
+<div class="item on" role="checkbox" tabindex="0" aria-checked="true" data-k="s1a"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>À faire</span><span class="dur">30&nbsp;min</span></span><span class="txt">Survole l’e-book UE5 et la méthode de l’épreuve</span></span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s1b"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>Leçon</span><span class="dur">50&nbsp;min</span></span><span class="txt">Ressources rares et besoins illimités</span></span></div>
+          </div>
+          <div class="cel" aria-hidden="true"><div class="stamp"><svg class="pk" viewBox="0 0 64 44"><path class="rg" d="M4 40 L21 22 L29 30 L40 16 L60 40"/><g class="fl"><path class="po" d="M40 16 V3"/><path class="fg" d="M40.8 3.4 Q47 4.6 52 7.4 Q47 10.2 40.8 11.4Z"/></g></svg><b><span>Séance terminée&nbsp;!</span></b><small>UE5 Économie · 2 sur 2</small></div></div>
+        </article>
+      </li>
+      <li class="slot">
+        <div class="gut"><span>15:45</span><span class="e">17:00</span></div>
+        <article class="card ue1" data-card="s2">
+          <div class="c-top"><span class="tag" data-tag="s2"><i></i><span>À venir</span></span><span class="time num">15:45 – 17:00</span></div><p class="ue"><i></i>UE1 Droit</p><h4 class="ttl">Les règles applicables à la situation du client</h4><p class="meta">Cours · 2 éléments · <span class="num">1&nbsp;h&nbsp;05</span></p>
+          <div class="items">
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2a"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>À faire</span><span class="dur">20&nbsp;min</span></span><span class="txt">Survole l’e-book UE1 et le guide de l’épreuve</span></span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2b"><svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg><span><span class="kind"><span>Leçon</span><span class="dur">45&nbsp;min</span></span><span class="txt">La règle de droit</span></span></div>
+          </div>
+        </article>
+      </li>
+    </ol>
+  </main>
+
+  <aside class="dright">
+    <div class="sum">
+      <svg class="stars" viewBox="0 0 312 120" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="176" cy="7" r="1.2"/><circle cx="232" cy="84" r=".9"/><circle class="tw" cx="146" cy="62" r="1"/><circle cx="300" cy="8" r=".8"/><circle class="tw" cx="282" cy="92" r="1"/></svg>
+      <div class="sum-h"><p class="sky-eb">Ton ascension</p><b class="num">J-190</b><span>avant les écrits · fin mai 2027</span></div>
+      <div class="sum-ch"><span class="hchip">Phase 1 · Apprendre</span><span class="hchip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dans les temps</span></div>
+      <svg class="scene" viewBox="0 0 312 140" role="img" aria-label="Tu es au camp de base, 0 % du programme. Le sommet, ce sont les écrits."><defs><radialGradient id="mix-sun-d" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs><g transform="scale(.8 .9333)"><circle cx="304" cy="74" r="130" fill="url(#mix-sun-d)"/><path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/><path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/><path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".55" stroke-width="1.3"/><path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/><path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/><path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/><path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/><path d="M0 150 V136 C58 128 112 142 176 135 S290 126 390 139 V150Z" fill="#10143a"/></g><g transform="translate(150 0)"><rect width="86" height="25" rx="12.5" fill="#ffc247"/><text x="43" y="17.2" text-anchor="middle" class="svt" fill="#141a3f">Les écrits</text></g><circle class="halo" cx="32" cy="105.5" r="10" fill="#ffc247"/><circle cx="32" cy="105.5" r="5" fill="#ffc247" stroke="#fff" stroke-width="2"/><g transform="translate(46 69)"><rect width="188" height="25" rx="12.5" fill="#141a3f" fill-opacity=".92"/><text x="11.5" y="17.2" class="svt" fill="#ffffff"><tspan fill="#ffd27a">Toi</tspan> · Camp de base · 0&#160;%</text></g></svg>
+    </div>
+    <div class="sec"><h3>Ta semaine</h3><span class="eb">Suivante&nbsp;: dim. 22</span></div>
+    <div class="wk"><div class="d off"><span class="l">Dim</span><span class="dn num">15</span></div><div class="d today" aria-current="date"><span class="l">Lun</span><span class="dn num">16</span><span class="dots"><i></i><i></i></span></div><div class="d plan"><span class="l">Mar</span><span class="dn num">17</span><span class="dots"><i class="ue9"></i><i class="ue8"></i><i class="ue12"></i><i class="ue7"></i><i class="ue5"></i><i class="ue12"></i></span></div><div class="d off"><span class="l">Mer</span><span class="dn num">18</span></div><div class="d off"><span class="l">Jeu</span><span class="dn num">19</span></div><div class="d off"><span class="l">Ven</span><span class="dn num">20</span></div><div class="d off"><span class="l">Sam</span><span class="dn num">21</span></div></div>
+    <div class="streak" data-streak><p class="st-n num" data-st-n>0</p><p class="st-t"><b data-st-b>Série&nbsp;: 0 jour</b><span data-st-s>Coche ta journée pour lancer ta série.</span></p><span class="st-boxes" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="sec"><h3>Demain · mardi 17</h3><span class="eb">6 + bilan</span></div>
+    <ul class="tm"><li class="ue9"><span class="t num">9:00</span><span class="sq"></span><span>UE9 Compta</span></li><li class="ue8"><span class="t num">11:00</span><span class="sq"></span><span>UE8 SI</span></li><li class="ue12"><span class="t num">12:15</span><span class="sq"></span><span>UE12 Anglais</span></li><li class="ue7"><span class="t num">14:00</span><span class="sq"></span><span>UE7 Management</span></li><li class="ue5"><span class="t num">16:00</span><span class="sq"></span><span>UE5 Économie</span></li><li class="ue12"><span class="t num">17:15</span><span class="sq"></span><span>UE12 Anglais</span></li><li class="bil"><span class="t num">18:00</span><span class="sq"></span><span>Bilan de la journée</span></li></ul>
+  </aside>
+</div>
+<p class="sr" aria-live="polite" data-live></p>
+</div></div>
+</section>
+<script>
+(function(){
+  "use strict";
+  var root = document.getElementById("dir-mix");
+  if (!root) return;
+  var state = { s1a: true, s1b: false, s2a: false, s2b: false };
+  var sessions = { s1: ["s1a", "s1b"], s2: ["s2a", "s2b"] };
+  var tags = { s1: "En cours", s2: "À venir" };
+  var timer = null;
+  var CHECK = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  function reduced(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+  function done(s){ return sessions[s].every(function(k){ return state[k]; }); }
+  function all(sel){ return Array.prototype.slice.call(root.querySelectorAll(sel)); }
+  function render(){
+    var n = Object.keys(state).filter(function(k){ return state[k]; }).length;
+    var sd = ["s1", "s2"].filter(done).length;
+    all(".item[data-k]").forEach(function(el){
+      var on = !!state[el.getAttribute("data-k")];
+      el.setAttribute("aria-checked", on ? "true" : "false");
+      el.classList.toggle("on", on);
+    });
+    all("[data-cnt]").forEach(function(el){ el.textContent = n; });
+    all("[data-cntt]").forEach(function(el){ el.textContent = n + (n > 1 ? " éléments" : " élément") + " sur 4"; });
+    all("[data-sess]").forEach(function(el){ el.textContent = sd + (sd > 1 ? " séances terminées" : " séance terminée") + " sur 2"; });
+    all(".segs").forEach(function(g){ Array.prototype.forEach.call(g.children, function(c, i){ c.classList.toggle("f", i < n); }); });
+    ["s1", "s2"].forEach(function(s){
+      var d = done(s);
+      all('[data-card="' + s + '"]').forEach(function(c){ c.classList.toggle("done", d); });
+      all('[data-tag="' + s + '"] span').forEach(function(t){ t.textContent = d ? "Terminée" : tags[s]; });
+    });
+    all('[data-done="s1"]').forEach(function(b){
+      var d = done("s1");
+      if (b.disabled !== d || !b.innerHTML){ b.disabled = d; b.innerHTML = d ? CHECK + "Fait" : "C’est fait"; }
+    });
+    var lit = n === 4;
+    all("[data-streak]").forEach(function(st){
+      st.classList.toggle("lit", lit);
+      st.querySelector("[data-st-n]").textContent = lit ? "1" : "0";
+      st.querySelector("[data-st-b]").textContent = "Série : " + (lit ? "1" : "0") + " jour";
+      st.querySelector("[data-st-s]").textContent = lit ? "Bravo, ta série est lancée." : "Coche ta journée pour lancer ta série.";
+      st.querySelector(".st-boxes i").classList.toggle("f", lit);
+    });
+  }
+  function celebrate(){
+    clearTimeout(timer);
+    all('[data-card="s1"] .cel').forEach(function(c){ c.classList.remove("show"); void c.offsetWidth; c.classList.add("show"); });
+    all("[data-live]").forEach(function(e){ e.textContent = "Séance terminée ! Économie validée."; });
+    timer = setTimeout(function(){
+      all(".cel.show").forEach(function(c){ c.classList.remove("show"); });
+      all("[data-live]").forEach(function(e){ e.textContent = ""; });
+    }, 2500);
+  }
+  function pop(k){
+    if (reduced()) return;
+    all('.item[data-k="' + k + '"]').forEach(function(el){ el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); });
+  }
+  function set(keys, val){
+    var before = done("s1");
+    keys.forEach(function(k){ if (state[k] !== val){ state[k] = val; if (val) pop(k); } });
+    render();
+    if (!before && done("s1")) celebrate();
+  }
+  root.addEventListener("click", function(e){
+    var it = e.target.closest(".item[data-k]");
+    if (it && root.contains(it)){ var k = it.getAttribute("data-k"); set([k], !state[k]); return; }
+    var b = e.target.closest("[data-done]");
+    if (b && root.contains(b) && !b.disabled) set(sessions[b.getAttribute("data-done")], true);
+  });
+  root.addEventListener("keydown", function(e){
+    var it = e.target.closest && e.target.closest(".item[data-k]");
+    if (!it || !root.contains(it)) return;
+    if (e.key === " " || e.key === "Enter" || e.key === "Spacebar"){ e.preventDefault(); var k = it.getAttribute("data-k"); set([k], !state[k]); }
+  });
+  root.addEventListener("animationend", function(e){
+    var it = e.target.closest && e.target.closest(".item.pop");
+    if (it && e.animationName === "mix-burst") it.classList.remove("pop");
+  });
+  render();
+})();
+</script>
+
+  </div>
+</section>
+<p class="pg-sep">Pour mémoire : les trois directions de départ</p>
 <section class="pg-dir" id="pg-sommet" aria-labelledby="pg-sommet-h">
   <div class="pg-head"><span class="pg-letter">A</span>
     <div class="pg-name"><h2 id="pg-sommet-h">Sommet</h2><p>Chaque case cochée te fait monter vers le sommet, à l’aube.</p><div class="pg-sw" aria-hidden="true"><i style="background:#141a3f"></i><i style="background:#ff7a59"></i><i style="background:#ffc247"></i><i style="background:#f4f5fb"></i><i style="background:#2f4fd1"></i></div></div>
-    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+    <div class="pg-ctl"><div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div></div>
   </div>
   <div class="pg-stage">
 <style>
@@ -684,7 +1154,7 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
 <section class="pg-dir" id="pg-carnet" aria-labelledby="pg-carnet-h">
   <div class="pg-head"><span class="pg-letter">B</span>
     <div class="pg-name"><h2 id="pg-carnet-h">Carnet</h2><p>Ton agenda haut de gamme : tout est à sa place, tu coches.</p><div class="pg-sw" aria-hidden="true"><i style="background:#fbfbf8"></i><i style="background:#14151a"></i><i style="background:#2340ff"></i><i style="background:#ffe45c"></i><i style="background:#0f9d58"></i></div></div>
-    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+    <div class="pg-ctl"><div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div></div>
   </div>
   <div class="pg-stage">
 <style>
@@ -1240,7 +1710,7 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
 <section class="pg-dir" id="pg-elan" aria-labelledby="pg-elan-h">
   <div class="pg-head"><span class="pg-letter">C</span>
     <div class="pg-name"><h2 id="pg-elan-h">Élan</h2><p>Chaque séance compte comme un entraînement : ferme tes anneaux.</p><div class="pg-sw" aria-hidden="true"><i style="background:#6c3cff"></i><i style="background:#c8f031"></i><i style="background:#ff5c7a"></i><i style="background:#f3f1ff"></i><i style="background:#0e0b1d"></i></div></div>
-    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+    <div class="pg-ctl"><div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div></div>
   </div>
   <div class="pg-stage">
 <style>
@@ -1798,7 +2268,7 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
 
   </div>
 </section>
-<p class="pg-foot">Ton choix : <b>A</b>, <b>B</b> ou <b>C</b>. Tu peux aussi mélanger, par exemple « les couleurs de A avec les cartes de C ».</p>
+<p class="pg-foot">Ton choix de police : <b>Sora</b> ou <b>Fraunces</b>. Tu peux aussi me dire ce que tu veux changer.</p>
 <script>
 (function(){
   "use strict";
@@ -1829,6 +2299,14 @@ body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-
   document.querySelectorAll(".pg-dir").forEach(function(sec){
     sec.querySelectorAll(".pg-dev button").forEach(function(b){ b.addEventListener("click", function(){ setDev(sec, b.dataset.dev === "desk"); }); });
     setDev(sec, wide);
+  });
+  document.querySelectorAll(".pg-font").forEach(function(g){
+    var sec = g.closest(".pg-dir");
+    g.querySelectorAll("button").forEach(function(b){ b.addEventListener("click", function(){
+      g.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      var dir = sec.querySelector(".dir"); if (dir) dir.setAttribute("data-font", b.dataset.font);
+      fit();
+    }); });
   });
   var saved = null; try{ saved = localStorage.getItem("apercu-mode"); }catch(e){}
   setMode(saved === "light" || saved === "dark" ? saved : "auto");
