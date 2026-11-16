@@ -1,358 +1,358 @@
 {
-"week": "2026-11-29",
-"n": 2,
-"phase": 1,
-"sessions": [
-{
-"id": "2026-11-29-1030",
-"date": "2026-11-29",
-"start": "10:30",
-"end": "12:30",
-"ue": "UE13",
-"kind": "cours",
-"title": "M4 → Rapport · Préparer",
-"items": [
-{
-"k": "L",
-"t": "Le rapport de stage",
-"m": 45
-},
-{
-"k": "L",
-"t": "La soutenance",
-"m": 45
-},
-{
-"k": "T",
-"t": "Choisis ta situation de communication chez Fidexia et note les faits (qui, quoi, quand, quel support)",
-"m": 60
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-29-1315",
-"date": "2026-11-29",
-"start": "13:15",
-"end": "14:15",
-"ue": null,
-"kind": "revision",
-"title": "Révision de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Révise tes cartes Anki de la semaine (15 min)"
-},
-{
-"k": "T",
-"t": "Refais de tête un exercice que tu as raté cette semaine"
-},
-{
-"k": "T",
-"t": "Complète tes fiches : une page par chapitre terminé"
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-29-1415",
-"date": "2026-11-29",
-"start": "14:15",
-"end": "15:30",
-"ue": "UE9",
-"kind": "cours",
-"title": "M3 · Le compte de résultat et le bilan",
-"items": [
-{
-"k": "L",
-"t": "Les produits du compte de résultat",
-"m": 40
-},
-{
-"k": "C",
-"t": "Cas Vincent",
-"m": 60
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-30-0900",
-"date": "2026-11-30",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "exercices",
-"title": "M3 · Le compte de résultat et le bilan",
-"items": [
-{
-"k": "C",
-"t": "Cas Pelat",
-"m": 30
-},
-{
-"k": "C",
-"t": "Cas Tachet",
-"m": 60
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-30-1100",
-"date": "2026-11-30",
-"start": "11:00",
-"end": "13:00",
-"ue": "UE8",
-"kind": "cours",
-"title": "M3 · Le SI dans son environnement : les acteurs",
-"items": [
-{
-"k": "L",
-"t": "Les acteurs internes : rôles et responsabilités",
-"m": 45
-},
-{
-"k": "L",
-"t": "Les acteurs externes",
-"m": 45
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-30-1400",
-"date": "2026-11-30",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "M3 · Comprendre le fonctionnement des marchés",
-"items": [
-{
-"k": "L",
-"t": "Économie de marché et libéralisme économique",
-"m": 50
-},
-{
-"k": "L",
-"t": "Les dynamiques des marchés concurrentiels",
-"m": 50
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-11-30-1545",
-"date": "2026-11-30",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "M2 → M3 · Déterminer le mode de résolution adapté à un litige",
-"items": [
-{
-"k": "A",
-"t": "Application : Rechercher les règles applicables à la situation du client",
-"m": 45
-},
-{
-"k": "L",
-"t": "La juridiction compétente dans un litige de droit privé",
-"m": 45
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-0900",
-"date": "2026-12-01",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M3 · Le compte de résultat et le bilan",
-"items": [
-{
-"k": "L",
-"t": "La présentation d'un bilan",
-"m": 40
-},
-{
-"k": "L",
-"t": "L'actif (partie 1)",
-"m": 40
-},
-{
-"k": "L",
-"t": "L'actif (partie 2)",
-"m": 40
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1100",
-"date": "2026-12-01",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "M3 · Le SI dans son environnement : les acteurs",
-"items": [
-{
-"k": "L",
-"t": "Les interactions des gestionnaires du SI avec les utilisateurs",
-"m": 45
-},
-{
-"k": "L",
-"t": "La Direction des systèmes d'information (DSI)",
-"m": 45
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1215",
-"date": "2026-12-01",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M2 · Méthodologie et bases grammaticales",
-"items": [
-{
-"k": "V",
-"t": "Grammaire : l'expression du futur (11 min)",
-"m": 22
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1400",
-"date": "2026-12-01",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "M2 · Le contexte et les enjeux du management des organisations",
-"items": [
-{
-"k": "L",
-"t": "Les problématiques managériales actuelles",
-"m": 50
-},
-{
-"k": "L",
-"t": "L'environnement actuel des organisations",
-"m": 50
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1600",
-"date": "2026-12-01",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M3 · Comprendre le fonctionnement des marchés",
-"items": [
-{
-"k": "L",
-"t": "Le marché : rôle et fonctionnement",
-"m": 50
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1715",
-"date": "2026-12-01",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M2 · Méthodologie et bases grammaticales",
-"items": [
-{
-"k": "V",
-"t": "Grammaire : les modaux (13 min)",
-"m": 26
-},
-{
-"k": "V",
-"t": "Grammaire : le conditionnel, IF, WHETHER (7 min)",
-"m": 14
-},
-{
-"k": "V",
-"t": "Grammaire : l'obligation et le devoir (7 min)",
-"m": 14
-}
-],
-"week": "2026-11-29"
-},
-{
-"id": "2026-12-01-1800",
-"date": "2026-12-01",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2026-11-29"
-}
-],
-"milestones": [
-{
-"date": "2027-01-10",
-"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
-},
-{
-"date": "2027-01-17",
-"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
-},
-{
-"date": "2027-01-26",
-"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
-},
-{
-"date": "2027-02-07",
-"t": "Dépôt de la partie 3 du rapport UE13"
-},
-{
-"date": "2027-02-21",
-"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
-},
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2026-11-29",
+ "n": 2,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2026-11-29-1030",
+   "date": "2026-11-29",
+   "start": "10:30",
+   "end": "12:30",
+   "ue": "UE13",
+   "kind": "cours",
+   "title": "M4 → Rapport · Préparer",
+   "items": [
+    {
+     "k": "L",
+     "t": "Le rapport de stage",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "La soutenance",
+     "m": 45
+    },
+    {
+     "k": "T",
+     "t": "Choisis ta situation de communication chez Fidexia et note les faits (qui, quoi, quand, quel support)",
+     "m": 60
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-29-1315",
+   "date": "2026-11-29",
+   "start": "13:15",
+   "end": "14:15",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
+    },
+    {
+     "k": "T",
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-29-1415",
+   "date": "2026-11-29",
+   "start": "14:15",
+   "end": "15:30",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M3 · Le compte de résultat et le bilan",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les produits du compte de résultat",
+     "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas Vincent",
+     "m": 60
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-30-0900",
+   "date": "2026-11-30",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "exercices",
+   "title": "M3 · Le compte de résultat et le bilan",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Pelat",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Tachet",
+     "m": 60
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-30-1100",
+   "date": "2026-11-30",
+   "start": "11:00",
+   "end": "13:00",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M3 · Le SI dans son environnement : les acteurs",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les acteurs internes : rôles et responsabilités",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Les acteurs externes",
+     "m": 45
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-30-1400",
+   "date": "2026-11-30",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M3 · Comprendre le fonctionnement des marchés",
+   "items": [
+    {
+     "k": "L",
+     "t": "Économie de marché et libéralisme économique",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Les dynamiques des marchés concurrentiels",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-11-30-1545",
+   "date": "2026-11-30",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M2 → M3 · Déterminer le mode de résolution adapté à un litige",
+   "items": [
+    {
+     "k": "A",
+     "t": "Application : Rechercher les règles applicables à la situation du client",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "La juridiction compétente dans un litige de droit privé",
+     "m": 45
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-0900",
+   "date": "2026-12-01",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M3 · Le compte de résultat et le bilan",
+   "items": [
+    {
+     "k": "L",
+     "t": "La présentation d'un bilan",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "L'actif (partie 1)",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "L'actif (partie 2)",
+     "m": 40
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1100",
+   "date": "2026-12-01",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M3 · Le SI dans son environnement : les acteurs",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les interactions des gestionnaires du SI avec les utilisateurs",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "La Direction des systèmes d'information (DSI)",
+     "m": 45
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1215",
+   "date": "2026-12-01",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M2 · Méthodologie et bases grammaticales",
+   "items": [
+    {
+     "k": "V",
+     "t": "Grammaire : l'expression du futur (11 min)",
+     "m": 22
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1400",
+   "date": "2026-12-01",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "M2 · Le contexte et les enjeux du management des organisations",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les problématiques managériales actuelles",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "L'environnement actuel des organisations",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1600",
+   "date": "2026-12-01",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M3 · Comprendre le fonctionnement des marchés",
+   "items": [
+    {
+     "k": "L",
+     "t": "Le marché : rôle et fonctionnement",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1715",
+   "date": "2026-12-01",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M2 · Méthodologie et bases grammaticales",
+   "items": [
+    {
+     "k": "V",
+     "t": "Grammaire : les modaux (13 min)",
+     "m": 26
+    },
+    {
+     "k": "V",
+     "t": "Grammaire : le conditionnel, IF, WHETHER (7 min)",
+     "m": 14
+    },
+    {
+     "k": "V",
+     "t": "Grammaire : l'obligation et le devoir (7 min)",
+     "m": 14
+    }
+   ],
+   "week": "2026-11-29"
+  },
+  {
+   "id": "2026-12-01-1800",
+   "date": "2026-12-01",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2026-11-29"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }

@@ -1,362 +1,378 @@
 {
-"week": "2027-02-14",
-"n": 13,
-"phase": 1,
-"sessions": [
-{
-"id": "2027-02-14-1030",
-"date": "2027-02-14",
-"start": "10:30",
-"end": "12:30",
-"ue": "UE13",
-"kind": "rapport",
-"title": "Rapport · Version intégrale",
-"items": [
-{
-"k": "T",
-"t": "Passe le certificat Studi UE13 (QCM, onglet Évaluations)",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-14-1315",
-"date": "2027-02-14",
-"start": "13:15",
-"end": "14:15",
-"ue": null,
-"kind": "revision",
-"title": "Révision de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Révise tes cartes Anki de la semaine (15 min)"
-},
-{
-"k": "T",
-"t": "Refais de tête un exercice que tu as raté cette semaine"
-},
-{
-"k": "T",
-"t": "Complète tes fiches : une page par chapitre terminé"
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-14-1415",
-"date": "2027-02-14",
-"start": "14:15",
-"end": "15:30",
-"ue": "UE9",
-"kind": "cours",
-"title": "M9 · Les dépréciations et les provisions",
-"items": [
-{
-"k": "C",
-"t": "Cas Missou",
-"m": 30
-},
-{
-"k": "L",
-"t": "Les provisions pour risques et charges et réglementées",
-"m": 40
-},
-{
-"k": "B",
-"t": "Cas Tertio (bonus, si tu as le temps)",
-"m": 45
-},
-{
-"k": "B",
-"t": "Cas Sardi (bonus, si tu as le temps)",
-"m": 45
-},
-{
-"k": "B",
-"t": "Cas Carmot (bonus, si tu as le temps)",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-15-0900",
-"date": "2027-02-15",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M9 · Les dépréciations et les provisions",
-"items": [
-{
-"k": "C",
-"t": "Cas Rousseau",
-"m": 5
-},
-{
-"k": "C",
-"t": "Cas Rendon",
-"m": 5
-},
-{
-"k": "L",
-"t": "Les titres et leurs revenus",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les dépréciations des titres",
-"m": 40
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-15-1100",
-"date": "2027-02-15",
-"start": "11:00",
-"end": "13:00",
-"ue": "UE8",
-"kind": "cours",
-"title": "M8 → M9 · Le SI et la performance des processus",
-"items": [
-{
-"k": "A",
-"t": "Méthodologie DCG UE8 : maîtriser le tableur",
-"m": 50
-},
-{
-"k": "L",
-"t": "Les processus et leur typologie",
-"m": 45
-},
-{
-"k": "L",
-"t": "Le diagramme BPMN",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-15-1400",
-"date": "2027-02-15",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "M7 · Les politiques sociales face aux déséquilibres du marché du travail",
-"items": [
-{
-"k": "L",
-"t": "Les politiques de l'emploi",
-"m": 50
-},
-{
-"k": "L",
-"t": "Caractériser et mesurer la pauvreté",
-"m": 50
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-15-1545",
-"date": "2027-02-15",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "M7 · Accompagner le client dans ses relations contractuelles",
-"items": [
-{
-"k": "L",
-"t": "La phase précontractuelle du contrat",
-"m": 45
-},
-{
-"k": "L",
-"t": "La validité du contrat",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-0900",
-"date": "2027-02-16",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M9 → M10 · Les cessions d'immobilisations et de VMP",
-"items": [
-{
-"k": "C",
-"t": "Cas Bissont",
-"m": 20
-},
-{
-"k": "L",
-"t": "Les écritures de cession d'immobilisations",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les cessions d'immobilisations en pratique",
-"m": 40
-},
-{
-"k": "B",
-"t": "Cas Morteau (bonus, si tu as le temps)",
-"m": 20
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1100",
-"date": "2027-02-16",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "M9 · Le SI et la performance des processus",
-"items": [
-{
-"k": "L",
-"t": "Les catégories d'IA et leurs enjeux sur le SI",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1215",
-"date": "2027-02-16",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M7 · The digital revolution",
-"items": [
-{
-"k": "L",
-"t": "Digital tools and assets in the business world",
-"m": 30
-},
-{
-"k": "L",
-"t": "Big tech controversies",
-"m": 30
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1400",
-"date": "2027-02-16",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "M5 · Le management opérationnel",
-"items": [
-{
-"k": "L",
-"t": "La fonction marketing",
-"m": 50
-},
-{
-"k": "L",
-"t": "Les fonctions production et logistique",
-"m": 50
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1600",
-"date": "2027-02-16",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M7 · Les politiques sociales face aux déséquilibres du marché du travail",
-"items": [
-{
-"k": "L",
-"t": "Les différentes formes d'inégalités",
-"m": 50
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1715",
-"date": "2027-02-16",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "exercices",
-"title": "M7 · The digital revolution",
-"items": [
-{
-"k": "C",
-"t": "Cas Robots are taking our jobs (1re partie)",
-"m": 45
-},
-{
-"k": "B",
-"t": "Cas Robots are taking our jobs (2e partie) (bonus, si tu as le temps)",
-"m": 45
-}
-],
-"week": "2027-02-14"
-},
-{
-"id": "2027-02-16-1800",
-"date": "2027-02-16",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2027-02-14"
-}
-],
-"milestones": [
-{
-"date": "2027-02-21",
-"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
-},
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2027-02-14",
+ "n": 13,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2027-02-14-1030",
+   "date": "2027-02-14",
+   "start": "10:30",
+   "end": "12:30",
+   "ue": "UE13",
+   "kind": "rapport",
+   "title": "Rapport · Version intégrale",
+   "items": [
+    {
+     "k": "T",
+     "t": "Passe le certificat Studi UE13 (QCM, onglet Évaluations)",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-14-1315",
+   "date": "2027-02-14",
+   "start": "13:15",
+   "end": "14:15",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
+    },
+    {
+     "k": "T",
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-14-1415",
+   "date": "2027-02-14",
+   "start": "14:15",
+   "end": "15:30",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M9 · Les dépréciations et les provisions",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Missou",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Les provisions pour risques et charges et réglementées",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Tertio",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Sardi",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Carmot",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-15-0900",
+   "date": "2027-02-15",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M9 · Les dépréciations et les provisions",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Rousseau",
+     "m": 5
+    },
+    {
+     "k": "C",
+     "t": "Cas Rendon",
+     "m": 5
+    },
+    {
+     "k": "L",
+     "t": "Les titres et leurs revenus",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les dépréciations des titres",
+     "m": 40
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-15-1100",
+   "date": "2027-02-15",
+   "start": "11:00",
+   "end": "13:00",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M8 → M9 · Le SI et la performance des processus",
+   "items": [
+    {
+     "k": "A",
+     "t": "Méthodologie DCG UE8 : maîtriser le tableur",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Les processus et leur typologie",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Le diagramme BPMN",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-15-1400",
+   "date": "2027-02-15",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M7 · Les politiques sociales face aux déséquilibres du marché du travail",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les politiques de l'emploi",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Caractériser et mesurer la pauvreté",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-15-1545",
+   "date": "2027-02-15",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M7 · Accompagner le client dans ses relations contractuelles",
+   "items": [
+    {
+     "k": "L",
+     "t": "La phase précontractuelle du contrat",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "La validité du contrat",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-0900",
+   "date": "2027-02-16",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M9 → M10 · Les cessions d'immobilisations et de VMP",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Bissont",
+     "m": 20
+    },
+    {
+     "k": "L",
+     "t": "Les écritures de cession d'immobilisations",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les cessions d'immobilisations en pratique",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Morteau",
+     "m": 20
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1100",
+   "date": "2027-02-16",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M9 · Le SI et la performance des processus",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les catégories d'IA et leurs enjeux sur le SI",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1215",
+   "date": "2027-02-16",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M7 · The digital revolution",
+   "items": [
+    {
+     "k": "L",
+     "t": "Digital tools and assets in the business world",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Big tech controversies",
+     "m": 30
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1400",
+   "date": "2027-02-16",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "M5 · Le management opérationnel",
+   "items": [
+    {
+     "k": "L",
+     "t": "La fonction marketing",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Les fonctions production et logistique",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1600",
+   "date": "2027-02-16",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M7 · Les politiques sociales face aux déséquilibres du marché du travail",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les différentes formes d'inégalités",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1715",
+   "date": "2027-02-16",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "exercices",
+   "title": "M7 · The digital revolution",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Robots are taking our jobs (1re partie)",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Robots are taking our jobs (2e partie)",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-14"
+  },
+  {
+   "id": "2027-02-16-1800",
+   "date": "2027-02-16",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2027-02-14"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }

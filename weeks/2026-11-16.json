@@ -1,246 +1,246 @@
 {
-"week": "2026-11-16",
-"n": 0,
-"phase": 1,
-"sessions": [
-{
-"id": "2026-11-16-1400",
-"date": "2026-11-16",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "Introduction → M2 · Appréhender les fondements de la science économique",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE5 et la méthode de l'épreuve : dossier documentaire + question problématisée (4 h)",
-"m": 30
-},
-{
-"k": "L",
-"t": "Ressources rares et besoins illimités",
-"m": 50
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-16-1545",
-"date": "2026-11-16",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "Introduction → M2 · Rechercher les règles applicables à la situation du client",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE1 (sommaire) et le guide de l'épreuve : 3 h, cas pratiques",
-"m": 20
-},
-{
-"k": "L",
-"t": "La règle de droit",
-"m": 45
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-0900",
-"date": "2026-11-17",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "Introduction → M2 · Les dimensions de la comptabilité",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE9 et le guide de l'épreuve : situations pratiques et exercices (3 h)",
-"m": 20
-},
-{
-"k": "L",
-"t": "La comptabilité et ses domaines dans une perspective historique",
-"m": 40
-},
-{
-"k": "L",
-"t": "L'objet de la comptabilité et le système d'information comptable",
-"m": 40
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1100",
-"date": "2026-11-17",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "Introduction → M2 · Le SI dans son environnement : son rôle",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE8 et le guide de l'épreuve : situations pratiques (4 h)",
-"m": 20
-},
-{
-"k": "L",
-"t": "La qualité de l'information",
-"m": 45
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1215",
-"date": "2026-11-17",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "Introduction → M2 · Méthodologie et bases grammaticales",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE12 et la méthode : traduction, synthèse, rédaction (3 h)",
-"m": 20
-},
-{
-"k": "V",
-"t": "Méthodologie : la note de synthèse (vidéo 21 min)",
-"m": 42
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1400",
-"date": "2026-11-17",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "Introduction → M2 · Le contexte et les enjeux du management des organisations",
-"items": [
-{
-"k": "T",
-"t": "Survole l'e-book UE7 et la méthode : analyse managériale + question problématisée (4 h)",
-"m": 30
-},
-{
-"k": "L",
-"t": "Les organisations : buts, objectifs et action collective",
-"m": 50
-},
-{
-"k": "L",
-"t": "La place du management dans la performance",
-"m": 50
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1600",
-"date": "2026-11-17",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M2 · Appréhender les fondements de la science économique",
-"items": [
-{
-"k": "L",
-"t": "Les relations entre les agents économiques",
-"m": 50
-},
-{
-"k": "L",
-"t": "La répartition primaire des revenus et la valeur ajoutée",
-"m": 50
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1715",
-"date": "2026-11-17",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M2 · Méthodologie et bases grammaticales",
-"items": [
-{
-"k": "V",
-"t": "Méthodologie : la rédaction en anglais (vidéo 17 min)",
-"m": 34
-}
-],
-"week": "2026-11-16"
-},
-{
-"id": "2026-11-17-1800",
-"date": "2026-11-17",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2026-11-16"
-}
-],
-"milestones": [
-{
-"date": "2027-01-10",
-"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
-},
-{
-"date": "2027-01-17",
-"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
-},
-{
-"date": "2027-01-26",
-"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
-},
-{
-"date": "2027-02-07",
-"t": "Dépôt de la partie 3 du rapport UE13"
-},
-{
-"date": "2027-02-21",
-"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
-},
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2026-11-16",
+ "n": 0,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2026-11-16-1400",
+   "date": "2026-11-16",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "Introduction → M2 · Appréhender les fondements de la science économique",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE5 et la méthode de l'épreuve : dossier documentaire + question problématisée (4 h)",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Ressources rares et besoins illimités",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-16-1545",
+   "date": "2026-11-16",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "Introduction → M2 · Rechercher les règles applicables à la situation du client",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE1 (sommaire) et le guide de l'épreuve : 3 h, cas pratiques",
+     "m": 20
+    },
+    {
+     "k": "L",
+     "t": "La règle de droit",
+     "m": 45
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-0900",
+   "date": "2026-11-17",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "Introduction → M2 · Les dimensions de la comptabilité",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE9 et le guide de l'épreuve : situations pratiques et exercices (3 h)",
+     "m": 20
+    },
+    {
+     "k": "L",
+     "t": "La comptabilité et ses domaines dans une perspective historique",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "L'objet de la comptabilité et le système d'information comptable",
+     "m": 40
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1100",
+   "date": "2026-11-17",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "Introduction → M2 · Le SI dans son environnement : son rôle",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE8 et le guide de l'épreuve : situations pratiques (4 h)",
+     "m": 20
+    },
+    {
+     "k": "L",
+     "t": "La qualité de l'information",
+     "m": 45
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1215",
+   "date": "2026-11-17",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "Introduction → M2 · Méthodologie et bases grammaticales",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE12 et la méthode : traduction, synthèse, rédaction (3 h)",
+     "m": 20
+    },
+    {
+     "k": "V",
+     "t": "Méthodologie : la note de synthèse (vidéo 21 min)",
+     "m": 42
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1400",
+   "date": "2026-11-17",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "Introduction → M2 · Le contexte et les enjeux du management des organisations",
+   "items": [
+    {
+     "k": "T",
+     "t": "Survole l'e-book UE7 et la méthode : analyse managériale + question problématisée (4 h)",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Les organisations : buts, objectifs et action collective",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "La place du management dans la performance",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1600",
+   "date": "2026-11-17",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M2 · Appréhender les fondements de la science économique",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les relations entre les agents économiques",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "La répartition primaire des revenus et la valeur ajoutée",
+     "m": 50
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1715",
+   "date": "2026-11-17",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M2 · Méthodologie et bases grammaticales",
+   "items": [
+    {
+     "k": "V",
+     "t": "Méthodologie : la rédaction en anglais (vidéo 17 min)",
+     "m": 34
+    }
+   ],
+   "week": "2026-11-16"
+  },
+  {
+   "id": "2026-11-17-1800",
+   "date": "2026-11-17",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2026-11-16"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }

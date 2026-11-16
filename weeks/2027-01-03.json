@@ -1,363 +1,363 @@
 {
-"week": "2027-01-03",
-"n": 7,
-"phase": 1,
-"sessions": [
-{
-"id": "2027-01-03-1030",
-"date": "2027-01-03",
-"start": "10:30",
-"end": "12:30",
-"ue": "UE13",
-"kind": "cours",
-"title": "M2 → Rapport · Partie 3",
-"items": [
-{
-"k": "L",
-"t": "Assurer une veille informationnelle",
-"m": 40
-},
-{
-"k": "T",
-"t": "Partie 3 : choisis ton thème structuré et fais ton plan détaillé",
-"m": 120
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-03-1315",
-"date": "2027-01-03",
-"start": "13:15",
-"end": "14:15",
-"ue": null,
-"kind": "revision",
-"title": "Révision de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Révise tes cartes Anki de la semaine (15 min)"
-},
-{
-"k": "T",
-"t": "Refais de tête un exercice que tu as raté cette semaine"
-},
-{
-"k": "T",
-"t": "Complète tes fiches : une page par chapitre terminé"
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-03-1415",
-"date": "2027-01-03",
-"start": "14:15",
-"end": "15:30",
-"ue": "UE9",
-"kind": "cours",
-"title": "M5 · La TVA : mécanisme et enregistrements",
-"items": [
-{
-"k": "L",
-"t": "Avances et acomptes sur biens",
-"m": 40
-},
-{
-"k": "L",
-"t": "Avances et acomptes sur prestations et travaux",
-"m": 40
-},
-{
-"k": "B",
-"t": "Cas Novino (bonus, si tu as le temps)",
-"m": 30
-},
-{
-"k": "B",
-"t": "Cas Lador (bonus, si tu as le temps)",
-"m": 20
-},
-{
-"k": "B",
-"t": "Cas Govin (bonus, si tu as le temps)",
-"m": 30
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-04-0900",
-"date": "2027-01-04",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M6 · Établir et enregistrer les factures",
-"items": [
-{
-"k": "L",
-"t": "Les factures « de doit »",
-"m": 40
-},
-{
-"k": "L",
-"t": "L'enregistrement d'une facture de doit",
-"m": 40
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-04-1100",
-"date": "2027-01-04",
-"start": "11:00",
-"end": "13:00",
-"ue": "UE8",
-"kind": "cours",
-"title": "M6 · Les choix organisationnels liés au SI",
-"items": [
-{
-"k": "L",
-"t": "Externaliser ou internaliser le SI",
-"m": 45
-},
-{
-"k": "L",
-"t": "Les impacts de la transition numérique",
-"m": 45
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-04-1400",
-"date": "2027-01-04",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "M5 · Identifier les enjeux de la croissance économique",
-"items": [
-{
-"k": "L",
-"t": "Croissance : le rôle du progrès technique",
-"m": 50
-},
-{
-"k": "L",
-"t": "Les théories de la croissance endogène",
-"m": 50
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-04-1545",
-"date": "2027-01-04",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "M4 → M5 · Accompagner un entrepreneur individuel dans son activité",
-"items": [
-{
-"k": "A",
-"t": "Application : Qualifier la personne juridique et ses biens",
-"m": 45
-},
-{
-"k": "L",
-"t": "L'entrepreneur individuel et le statut du commerçant",
-"m": 45
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-0900",
-"date": "2027-01-05",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M6 · Établir et enregistrer les factures",
-"items": [
-{
-"k": "L",
-"t": "Frais de port et sous-traitance",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les factures d'avoir chez les fournisseurs",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les factures d'avoir chez les clients",
-"m": 40
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1100",
-"date": "2027-01-05",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "M6 · Les choix organisationnels liés au SI",
-"items": [
-{
-"k": "L",
-"t": "Le rôle des ESN",
-"m": 45
-},
-{
-"k": "L",
-"t": "Les contrats de prestations de services",
-"m": 45
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1215",
-"date": "2027-01-05",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M5 · Corporate culture and working conditions",
-"items": [
-{
-"k": "L",
-"t": "Corporate culture",
-"m": 30
-},
-{
-"k": "L",
-"t": "Human resources and quality of working life",
-"m": 30
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1400",
-"date": "2027-01-05",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "M3 · Le management stratégique",
-"items": [
-{
-"k": "L",
-"t": "Spécialisation et diversification",
-"m": 50
-},
-{
-"k": "L",
-"t": "Le développement de l'entreprise",
-"m": 50
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1600",
-"date": "2027-01-05",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M5 · Identifier les enjeux de la croissance économique",
-"items": [
-{
-"k": "L",
-"t": "Les moteurs de la croissance",
-"m": 50
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1715",
-"date": "2027-01-05",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M5 · Corporate culture and working conditions",
-"items": [
-{
-"k": "L",
-"t": "The specificities of digital firms",
-"m": 30
-}
-],
-"week": "2027-01-03"
-},
-{
-"id": "2027-01-05-1800",
-"date": "2027-01-05",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2027-01-03"
-}
-],
-"milestones": [
-{
-"date": "2027-01-10",
-"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
-},
-{
-"date": "2027-01-17",
-"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
-},
-{
-"date": "2027-01-26",
-"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
-},
-{
-"date": "2027-02-07",
-"t": "Dépôt de la partie 3 du rapport UE13"
-},
-{
-"date": "2027-02-21",
-"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
-},
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2027-01-03",
+ "n": 7,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2027-01-03-1030",
+   "date": "2027-01-03",
+   "start": "10:30",
+   "end": "12:30",
+   "ue": "UE13",
+   "kind": "cours",
+   "title": "M2 → Rapport · Partie 3",
+   "items": [
+    {
+     "k": "L",
+     "t": "Assurer une veille informationnelle",
+     "m": 40
+    },
+    {
+     "k": "T",
+     "t": "Partie 3 : choisis ton thème structuré et fais ton plan détaillé",
+     "m": 120
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-03-1315",
+   "date": "2027-01-03",
+   "start": "13:15",
+   "end": "14:15",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
+    },
+    {
+     "k": "T",
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-03-1415",
+   "date": "2027-01-03",
+   "start": "14:15",
+   "end": "15:30",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M5 · La TVA : mécanisme et enregistrements",
+   "items": [
+    {
+     "k": "L",
+     "t": "Avances et acomptes sur biens",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Avances et acomptes sur prestations et travaux",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Novino",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Lador",
+     "m": 20
+    },
+    {
+     "k": "B",
+     "t": "Cas Govin",
+     "m": 30
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-04-0900",
+   "date": "2027-01-04",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M6 · Établir et enregistrer les factures",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les factures « de doit »",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "L'enregistrement d'une facture de doit",
+     "m": 40
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-04-1100",
+   "date": "2027-01-04",
+   "start": "11:00",
+   "end": "13:00",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M6 · Les choix organisationnels liés au SI",
+   "items": [
+    {
+     "k": "L",
+     "t": "Externaliser ou internaliser le SI",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Les impacts de la transition numérique",
+     "m": 45
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-04-1400",
+   "date": "2027-01-04",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M5 · Identifier les enjeux de la croissance économique",
+   "items": [
+    {
+     "k": "L",
+     "t": "Croissance : le rôle du progrès technique",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Les théories de la croissance endogène",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-04-1545",
+   "date": "2027-01-04",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M4 → M5 · Accompagner un entrepreneur individuel dans son activité",
+   "items": [
+    {
+     "k": "A",
+     "t": "Application : Qualifier la personne juridique et ses biens",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "L'entrepreneur individuel et le statut du commerçant",
+     "m": 45
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-0900",
+   "date": "2027-01-05",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M6 · Établir et enregistrer les factures",
+   "items": [
+    {
+     "k": "L",
+     "t": "Frais de port et sous-traitance",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les factures d'avoir chez les fournisseurs",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les factures d'avoir chez les clients",
+     "m": 40
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1100",
+   "date": "2027-01-05",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M6 · Les choix organisationnels liés au SI",
+   "items": [
+    {
+     "k": "L",
+     "t": "Le rôle des ESN",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Les contrats de prestations de services",
+     "m": 45
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1215",
+   "date": "2027-01-05",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M5 · Corporate culture and working conditions",
+   "items": [
+    {
+     "k": "L",
+     "t": "Corporate culture",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Human resources and quality of working life",
+     "m": 30
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1400",
+   "date": "2027-01-05",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "M3 · Le management stratégique",
+   "items": [
+    {
+     "k": "L",
+     "t": "Spécialisation et diversification",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Le développement de l'entreprise",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1600",
+   "date": "2027-01-05",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M5 · Identifier les enjeux de la croissance économique",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les moteurs de la croissance",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1715",
+   "date": "2027-01-05",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M5 · Corporate culture and working conditions",
+   "items": [
+    {
+     "k": "L",
+     "t": "The specificities of digital firms",
+     "m": 30
+    }
+   ],
+   "week": "2027-01-03"
+  },
+  {
+   "id": "2027-01-05-1800",
+   "date": "2027-01-05",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2027-01-03"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }

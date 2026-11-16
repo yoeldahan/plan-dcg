@@ -1,365 +1,373 @@
 {
-"week": "2027-01-24",
-"n": 10,
-"phase": 1,
-"sessions": [
-{
-"id": "2027-01-24-1030",
-"date": "2027-01-24",
-"start": "10:30",
-"end": "12:30",
-"ue": "UE13",
-"kind": "cours",
-"title": "M3 · Les principes de la communication professionnelle",
-"items": [
-{
-"k": "L",
-"t": "Les enjeux de la communication",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les outils de la communication écrite",
-"m": 40
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-24-1315",
-"date": "2027-01-24",
-"start": "13:15",
-"end": "14:15",
-"ue": null,
-"kind": "revision",
-"title": "Révision de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Révise tes cartes Anki de la semaine (15 min)"
-},
-{
-"k": "T",
-"t": "Refais de tête un exercice que tu as raté cette semaine"
-},
-{
-"k": "T",
-"t": "Complète tes fiches : une page par chapitre terminé"
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-24-1415",
-"date": "2027-01-24",
-"start": "14:15",
-"end": "15:30",
-"ue": "UE9",
-"kind": "cours",
-"title": "M7 · Les transactions courantes",
-"items": [
-{
-"k": "L",
-"t": "La lettre de change relevée (LCR)",
-"m": 40
-},
-{
-"k": "C",
-"t": "Cas Dupuis",
-"m": 30
-},
-{
-"k": "B",
-"t": "Cas Golf (bonus, si tu as le temps)",
-"m": 30
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-25-0900",
-"date": "2027-01-25",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M7 · Les transactions courantes",
-"items": [
-{
-"k": "L",
-"t": "L'affacturage",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les états de rapprochement bancaire",
-"m": 40
-},
-{
-"k": "L",
-"t": "Les rapprochements bancaires : cas complexes",
-"m": 40
-},
-{
-"k": "B",
-"t": "Cas Despar (bonus, si tu as le temps)",
-"m": 30
-},
-{
-"k": "B",
-"t": "Cas Malicorne (bonus, si tu as le temps)",
-"m": 30
-},
-{
-"k": "B",
-"t": "Cas Champest (bonus, si tu as le temps)",
-"m": 45
-},
-{
-"k": "B",
-"t": "Cas Platic (bonus, si tu as le temps)",
-"m": 60
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-25-1100",
-"date": "2027-01-25",
-"start": "11:00",
-"end": "13:00",
-"ue": "UE8",
-"kind": "cours",
-"title": "M7 → M8 · Traiter des données avec le tableur",
-"items": [
-{
-"k": "A",
-"t": "Méthodologie DCG UE8 : manipuler les données d'une base",
-"m": 50
-},
-{
-"k": "L",
-"t": "Introduction à l'usage du tableur",
-"m": 55
-},
-{
-"k": "L",
-"t": "Fonctions arithmétiques",
-"m": 55
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-25-1400",
-"date": "2027-01-25",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "M6 · Analyser la régulation publique",
-"items": [
-{
-"k": "L",
-"t": "Objectifs et typologie des politiques économiques",
-"m": 50
-},
-{
-"k": "L",
-"t": "Politique de la demande et politique de l'offre",
-"m": 50
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-25-1545",
-"date": "2027-01-25",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "M5 → M6 · Déterminer l'étendue du droit d'une personne sur ses biens",
-"items": [
-{
-"k": "A",
-"t": "Application : Accompagner un entrepreneur individuel",
-"m": 45
-},
-{
-"k": "L",
-"t": "Le droit de propriété : prérogatives et limites",
-"m": 45
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-0900",
-"date": "2027-01-26",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M7 · Les transactions courantes",
-"items": [
-{
-"k": "L",
-"t": "Le suivi des comptes clients",
-"m": 40
-},
-{
-"k": "L",
-"t": "Le suivi des comptes fournisseurs",
-"m": 40
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1100",
-"date": "2027-01-26",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "M8 · Traiter des données avec le tableur",
-"items": [
-{
-"k": "L",
-"t": "Fonctions statistiques et logiques",
-"m": 55
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1215",
-"date": "2027-01-26",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M6 · Communication and strategies to be competitive",
-"items": [
-{
-"k": "L",
-"t": "Fair competition policies",
-"m": 30
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1400",
-"date": "2027-01-26",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "M4 · Le management organisationnel",
-"items": [
-{
-"k": "L",
-"t": "Les moyens pour animer une organisation",
-"m": 50
-},
-{
-"k": "L",
-"t": "Les structures classiques",
-"m": 50
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1600",
-"date": "2027-01-26",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M6 · Analyser la régulation publique",
-"items": [
-{
-"k": "L",
-"t": "La politique monétaire européenne",
-"m": 50
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1715",
-"date": "2027-01-26",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M6 · Communication and strategies to be competitive",
-"items": [
-{
-"k": "L",
-"t": "Innovation and intellectual property",
-"m": 30
-},
-{
-"k": "A",
-"t": "Application : corporate strategy and competitiveness",
-"m": 45
-}
-],
-"week": "2027-01-24"
-},
-{
-"id": "2027-01-26-1800",
-"date": "2027-01-26",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2027-01-24"
-}
-],
-"milestones": [
-{
-"date": "2027-01-26",
-"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
-},
-{
-"date": "2027-02-07",
-"t": "Dépôt de la partie 3 du rapport UE13"
-},
-{
-"date": "2027-02-21",
-"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
-},
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2027-01-24",
+ "n": 10,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2027-01-24-1030",
+   "date": "2027-01-24",
+   "start": "10:30",
+   "end": "12:30",
+   "ue": "UE13",
+   "kind": "cours",
+   "title": "M3 · Les principes de la communication professionnelle",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les enjeux de la communication",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les outils de la communication écrite",
+     "m": 40
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-24-1315",
+   "date": "2027-01-24",
+   "start": "13:15",
+   "end": "14:15",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
+    },
+    {
+     "k": "T",
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-24-1415",
+   "date": "2027-01-24",
+   "start": "14:15",
+   "end": "15:30",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M7 · Les transactions courantes",
+   "items": [
+    {
+     "k": "L",
+     "t": "La lettre de change relevée (LCR)",
+     "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas Dupuis",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Golf",
+     "m": 30
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-25-0900",
+   "date": "2027-01-25",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M7 · Les transactions courantes",
+   "items": [
+    {
+     "k": "L",
+     "t": "L'affacturage",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les états de rapprochement bancaire",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les rapprochements bancaires : cas complexes",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Despar",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Malicorne",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Champest",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Platic",
+     "m": 60
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-25-1100",
+   "date": "2027-01-25",
+   "start": "11:00",
+   "end": "13:00",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M7 → M8 · Traiter des données avec le tableur",
+   "items": [
+    {
+     "k": "A",
+     "t": "Méthodologie DCG UE8 : manipuler les données d'une base",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Introduction à l'usage du tableur",
+     "m": 55
+    },
+    {
+     "k": "L",
+     "t": "Fonctions arithmétiques",
+     "m": 55
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-25-1400",
+   "date": "2027-01-25",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M6 · Analyser la régulation publique",
+   "items": [
+    {
+     "k": "L",
+     "t": "Objectifs et typologie des politiques économiques",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Politique de la demande et politique de l'offre",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-25-1545",
+   "date": "2027-01-25",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M5 → M6 · Déterminer l'étendue du droit d'une personne sur ses biens",
+   "items": [
+    {
+     "k": "A",
+     "t": "Application : Accompagner un entrepreneur individuel",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Le droit de propriété : prérogatives et limites",
+     "m": 45
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-0900",
+   "date": "2027-01-26",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M7 · Les transactions courantes",
+   "items": [
+    {
+     "k": "L",
+     "t": "Le suivi des comptes clients",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Le suivi des comptes fournisseurs",
+     "m": 40
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1100",
+   "date": "2027-01-26",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M8 · Traiter des données avec le tableur",
+   "items": [
+    {
+     "k": "L",
+     "t": "Fonctions statistiques et logiques",
+     "m": 55
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1215",
+   "date": "2027-01-26",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M6 · Communication and strategies to be competitive",
+   "items": [
+    {
+     "k": "L",
+     "t": "Fair competition policies",
+     "m": 30
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1400",
+   "date": "2027-01-26",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "M4 · Le management organisationnel",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les moyens pour animer une organisation",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Les structures classiques",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1600",
+   "date": "2027-01-26",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M6 · Analyser la régulation publique",
+   "items": [
+    {
+     "k": "L",
+     "t": "La politique monétaire européenne",
+     "m": 50
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1715",
+   "date": "2027-01-26",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M6 · Communication and strategies to be competitive",
+   "items": [
+    {
+     "k": "L",
+     "t": "Innovation and intellectual property",
+     "m": 30
+    },
+    {
+     "k": "A",
+     "t": "Application : corporate strategy and competitiveness",
+     "m": 45
+    }
+   ],
+   "week": "2027-01-24"
+  },
+  {
+   "id": "2027-01-26-1800",
+   "date": "2027-01-26",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2027-01-24"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }

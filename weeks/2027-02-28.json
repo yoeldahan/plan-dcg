@@ -1,348 +1,368 @@
 {
-"week": "2027-02-28",
-"n": 15,
-"phase": 1,
-"sessions": [
-{
-"id": "2027-02-28-1030",
-"date": "2027-02-28",
-"start": "10:30",
-"end": "12:30",
-"ue": "UE1",
-"kind": "cours",
-"title": "M8 · Accompagner le client dans ses contrats courants",
-"items": [
-{
-"k": "L",
-"t": "Les contrats de vente, d'entreprise et de consommation",
-"m": 45
-},
-{
-"k": "C",
-"t": "Cas Mme D contre Mme K",
-"m": 90
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-02-28-1315",
-"date": "2027-02-28",
-"start": "13:15",
-"end": "14:15",
-"ue": null,
-"kind": "revision",
-"title": "Révision de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Révise tes cartes Anki de la semaine (15 min)"
-},
-{
-"k": "T",
-"t": "Refais de tête un exercice que tu as raté cette semaine"
-},
-{
-"k": "T",
-"t": "Complète tes fiches : une page par chapitre terminé"
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-02-28-1415",
-"date": "2027-02-28",
-"start": "14:15",
-"end": "15:30",
-"ue": "UE9",
-"kind": "exercices",
-"title": "M11 · Les autres opérations d'inventaire",
-"items": [
-{
-"k": "C",
-"t": "Cas Marcel",
-"m": 20
-},
-{
-"k": "C",
-"t": "Cas Romain",
-"m": 20
-},
-{
-"k": "C",
-"t": "Cas Norbert",
-"m": 25
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-01-0900",
-"date": "2027-03-01",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M11 · Les autres opérations d'inventaire",
-"items": [
-{
-"k": "L",
-"t": "Charges à payer et produits à recevoir",
-"m": 40
-},
-{
-"k": "L",
-"t": "Charges et produits constatés d'avance",
-"m": 40
-},
-{
-"k": "C",
-"t": "Cas Memoranda",
-"m": 20
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-01-1100",
-"date": "2027-03-01",
-"start": "11:00",
-"end": "13:00",
-"ue": "UE8",
-"kind": "cours",
-"title": "M10 · Les défis du SI : réglementation et durabilité",
-"items": [
-{
-"k": "L",
-"t": "CNIL et obligations du responsable des traitements",
-"m": 45
-},
-{
-"k": "L",
-"t": "Les droits des personnes",
-"m": 45
-},
-{
-"k": "L",
-"t": "La mise en conformité de l'organisme (RGPD)",
-"m": 45
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-01-1400",
-"date": "2027-03-01",
-"start": "14:00",
-"end": "15:30",
-"ue": "UE5",
-"kind": "cours",
-"title": "M8 · Les effets et les enjeux de la mondialisation",
-"items": [
-{
-"k": "L",
-"t": "La balance des paiements",
-"m": 50
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-01-1545",
-"date": "2027-03-01",
-"start": "15:45",
-"end": "17:00",
-"ue": "UE1",
-"kind": "cours",
-"title": "M8 · Accompagner le client dans ses contrats courants",
-"items": [
-{
-"k": "L",
-"t": "La protection des parties pour chacun des contrats",
-"m": 45
-},
-{
-"k": "L",
-"t": "Le choix d'une sûreté et ses principaux effets",
-"m": 45
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-0900",
-"date": "2027-03-02",
-"start": "09:00",
-"end": "10:45",
-"ue": "UE9",
-"kind": "cours",
-"title": "M11 · Les autres opérations d'inventaire",
-"items": [
-{
-"k": "C",
-"t": "Cas Trésorus",
-"m": 20
-},
-{
-"k": "C",
-"t": "Cas Limont",
-"m": 30
-},
-{
-"k": "C",
-"t": "Cas Grivas",
-"m": 20
-},
-{
-"k": "C",
-"t": "Cas Belin",
-"m": 20
-},
-{
-"k": "L",
-"t": "Emprunts in fine et par amortissements constants",
-"m": 40
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1100",
-"date": "2027-03-02",
-"start": "11:00",
-"end": "12:15",
-"ue": "UE8",
-"kind": "cours",
-"title": "M10 · Les défis du SI : réglementation et durabilité",
-"items": [
-{
-"k": "L",
-"t": "Les aspects réglementaires des logiciels",
-"m": 45
-},
-{
-"k": "A",
-"t": "Méthodologie DCG UE8 : réglementation et durabilité du SI",
-"m": 50
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1215",
-"date": "2027-03-02",
-"start": "12:15",
-"end": "13:00",
-"ue": "UE12",
-"kind": "cours",
-"title": "M8 · Understanding what is at stake with energy",
-"items": [
-{
-"k": "L",
-"t": "Energy, geopolitics and social justice",
-"m": 30
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1400",
-"date": "2027-03-02",
-"start": "14:00",
-"end": "15:45",
-"ue": "UE7",
-"kind": "cours",
-"title": "M5 · Le management opérationnel",
-"items": [
-{
-"k": "L",
-"t": "La fonction financière et le contrôle de gestion",
-"m": 50
-},
-{
-"k": "L",
-"t": "L'analyse de la chaîne de valeur",
-"m": 50
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1600",
-"date": "2027-03-02",
-"start": "16:00",
-"end": "17:15",
-"ue": "UE5",
-"kind": "cours",
-"title": "M8 · Les effets et les enjeux de la mondialisation",
-"items": [
-{
-"k": "L",
-"t": "Les FTN et les IDE",
-"m": 50
-},
-{
-"k": "L",
-"t": "Le libre-échange",
-"m": 50
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1715",
-"date": "2027-03-02",
-"start": "17:15",
-"end": "18:00",
-"ue": "UE12",
-"kind": "exercices",
-"title": "M8 · Understanding what is at stake with energy",
-"items": [
-{
-"k": "A",
-"t": "Application : what is at stake with energy",
-"m": 45
-}
-],
-"week": "2027-02-28"
-},
-{
-"id": "2027-03-02-1800",
-"date": "2027-03-02",
-"start": "18:00",
-"end": "18:10",
-"ue": null,
-"kind": "bilan",
-"title": "Bilan de la semaine",
-"items": [
-{
-"k": "T",
-"t": "Coche ce que tu as fini cette semaine dans ton planning"
-},
-{
-"k": "T",
-"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
-}
-],
-"week": "2027-02-28"
-}
-],
-"milestones": [
-{
-"date": "2027-03-16",
-"t": "Fin du premier passage : tout le programme est vu une fois"
-},
-{
-"date": "2027-04-01",
-"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
-},
-{
-"date": "2027-05-24",
-"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
-},
-{
-"date": "2027-06-11",
-"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
-}
-]
+ "week": "2027-02-28",
+ "n": 15,
+ "phase": 1,
+ "sessions": [
+  {
+   "id": "2027-02-28-1030",
+   "date": "2027-02-28",
+   "start": "10:30",
+   "end": "12:30",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M8 · Accompagner le client dans ses contrats courants",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les contrats de vente, d'entreprise et de consommation",
+     "m": 45
+    },
+    {
+     "k": "C",
+     "t": "Cas Mme D contre Mme K",
+     "m": 90
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-02-28-1315",
+   "date": "2027-02-28",
+   "start": "13:15",
+   "end": "14:15",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
+    },
+    {
+     "k": "T",
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-02-28-1415",
+   "date": "2027-02-28",
+   "start": "14:15",
+   "end": "15:30",
+   "ue": "UE9",
+   "kind": "exercices",
+   "title": "M11 · Les autres opérations d'inventaire",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Marcel",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Romain",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Norbert",
+     "m": 25
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-01-0900",
+   "date": "2027-03-01",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M11 · Les autres opérations d'inventaire",
+   "items": [
+    {
+     "k": "L",
+     "t": "Charges à payer et produits à recevoir",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Charges et produits constatés d'avance",
+     "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas Memoranda",
+     "m": 20
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-01-1100",
+   "date": "2027-03-01",
+   "start": "11:00",
+   "end": "13:00",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M10 · Les défis du SI : réglementation et durabilité",
+   "items": [
+    {
+     "k": "L",
+     "t": "CNIL et obligations du responsable des traitements",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Les droits des personnes",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "La mise en conformité de l'organisme (RGPD)",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-01-1400",
+   "date": "2027-03-01",
+   "start": "14:00",
+   "end": "15:30",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M8 · Les effets et les enjeux de la mondialisation",
+   "items": [
+    {
+     "k": "L",
+     "t": "La balance des paiements",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-01-1545",
+   "date": "2027-03-01",
+   "start": "15:45",
+   "end": "17:00",
+   "ue": "UE1",
+   "kind": "cours",
+   "title": "M8 · Accompagner le client dans ses contrats courants",
+   "items": [
+    {
+     "k": "L",
+     "t": "La protection des parties pour chacun des contrats",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Le choix d'une sûreté et ses principaux effets",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-0900",
+   "date": "2027-03-02",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M11 · Les autres opérations d'inventaire",
+   "items": [
+    {
+     "k": "C",
+     "t": "Cas Trésorus",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Limont",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Grivas",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Belin",
+     "m": 20
+    },
+    {
+     "k": "L",
+     "t": "Emprunts in fine et par amortissements constants",
+     "m": 40
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1100",
+   "date": "2027-03-02",
+   "start": "11:00",
+   "end": "12:15",
+   "ue": "UE8",
+   "kind": "cours",
+   "title": "M10 · Les défis du SI : réglementation et durabilité",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les aspects réglementaires des logiciels",
+     "m": 45
+    },
+    {
+     "k": "A",
+     "t": "Méthodologie DCG UE8 : réglementation et durabilité du SI",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1215",
+   "date": "2027-03-02",
+   "start": "12:15",
+   "end": "13:00",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M8 · Understanding what is at stake with energy",
+   "items": [
+    {
+     "k": "L",
+     "t": "Energy, geopolitics and social justice",
+     "m": 30
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1400",
+   "date": "2027-03-02",
+   "start": "14:00",
+   "end": "15:45",
+   "ue": "UE7",
+   "kind": "cours",
+   "title": "M5 · Le management opérationnel",
+   "items": [
+    {
+     "k": "L",
+     "t": "La fonction financière et le contrôle de gestion",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "L'analyse de la chaîne de valeur",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1600",
+   "date": "2027-03-02",
+   "start": "16:00",
+   "end": "17:15",
+   "ue": "UE5",
+   "kind": "cours",
+   "title": "M8 · Les effets et les enjeux de la mondialisation",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les FTN et les IDE",
+     "m": 50
+    },
+    {
+     "k": "L",
+     "t": "Le libre-échange",
+     "m": 50
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1715",
+   "date": "2027-03-02",
+   "start": "17:15",
+   "end": "18:00",
+   "ue": "UE12",
+   "kind": "exercices",
+   "title": "M8 · Understanding what is at stake with energy",
+   "items": [
+    {
+     "k": "A",
+     "t": "Application : what is at stake with energy",
+     "m": 45
+    }
+   ],
+   "week": "2027-02-28"
+  },
+  {
+   "id": "2027-03-02-1800",
+   "date": "2027-03-02",
+   "start": "18:00",
+   "end": "18:10",
+   "ue": null,
+   "kind": "bilan",
+   "title": "Bilan de la semaine",
+   "items": [
+    {
+     "k": "T",
+     "t": "Coche ce que tu as fini cette semaine dans ton planning"
+    },
+    {
+     "k": "T",
+     "t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+    }
+   ],
+   "week": "2027-02-28"
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2027-01-10",
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+  },
+  {
+   "date": "2027-01-17",
+   "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+  },
+  {
+   "date": "2027-01-26",
+   "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+  },
+  {
+   "date": "2027-02-07",
+   "t": "Dépôt de la partie 3 du rapport UE13"
+  },
+  {
+   "date": "2027-02-21",
+   "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+  },
+  {
+   "date": "2027-03-16",
+   "t": "Fin du premier passage : tout le programme est vu une fois"
+  },
+  {
+   "date": "2027-04-01",
+   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+  },
+  {
+   "date": "2027-05-24",
+   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+  },
+  {
+   "date": "2027-06-11",
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  }
+ ]
 }
