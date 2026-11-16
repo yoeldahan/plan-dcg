@@ -224,8 +224,8 @@
    "items": [
     {
      "k": "V",
-     "t": "Grammaire : l'expression du futur (11 min)",
-     "m": 22
+     "t": "Grammaire : présent simple et BE + V-ING (16 min)",
+     "m": 32
     }
    ],
    "week": "2026-11-29"
@@ -273,34 +273,29 @@
    "id": "2026-12-01-1715",
    "date": "2026-12-01",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M2 · Méthodologie et bases grammaticales",
    "items": [
     {
      "k": "V",
+     "t": "Grammaire : l'expression du futur (11 min)",
+     "m": 22
+    },
+    {
+     "k": "V",
      "t": "Grammaire : les modaux (13 min)",
      "m": 26
-    },
-    {
-     "k": "V",
-     "t": "Grammaire : le conditionnel, IF, WHETHER (7 min)",
-     "m": 14
-    },
-    {
-     "k": "V",
-     "t": "Grammaire : l'obligation et le devoir (7 min)",
-     "m": 14
     }
    ],
    "week": "2026-11-29"
   },
   {
-   "id": "2026-12-01-1800",
+   "id": "2026-12-01-1750",
    "date": "2026-12-01",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -353,6 +348,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

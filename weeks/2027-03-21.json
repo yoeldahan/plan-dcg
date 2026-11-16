@@ -14,12 +14,12 @@
    "items": [
     {
      "k": "L",
-     "t": "Documents de synthèse : leçons 4 à 6 du module (1re partie)",
+     "t": "Documents de synthèse : leçons 1 à 3 du module (voir plateforme) (1re partie)",
      "m": 60
     },
     {
      "k": "L",
-     "t": "Documents de synthèse : leçons 4 à 6 du module (2e partie)",
+     "t": "Documents de synthèse : leçons 1 à 3 du module (voir plateforme) (2e partie)",
      "m": 60
     }
    ],
@@ -186,6 +186,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

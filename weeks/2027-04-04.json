@@ -10,21 +10,16 @@
    "end": "12:30",
    "ue": "UE9",
    "kind": "cours",
-   "title": "Fin du programme · M13 · L'environnement numérique de la comptabilité",
+   "title": "Fin du programme · M12 → M13 · L'environnement numérique de la comptabilité",
    "items": [
     {
-     "k": "L",
-     "t": "Logiciel comptable et PGI",
-     "m": 40
+     "k": "C",
+     "t": "Documents de synthèse : applications du module",
+     "m": 90
     },
     {
      "k": "L",
-     "t": "L'impact de la dématérialisation",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "Sauvegarde et confidentialité des données comptables",
+     "t": "Dématérialisation et conservation des pièces comptables",
      "m": 40
     }
    ],
@@ -215,10 +210,10 @@
    "week": "2027-04-04"
   },
   {
-   "id": "2027-04-06-1800",
+   "id": "2027-04-06-1750",
    "date": "2027-04-06",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -271,6 +266,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

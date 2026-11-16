@@ -8,17 +8,14 @@
    "date": "2027-04-25",
    "start": "10:30",
    "end": "12:30",
-   "ue": null,
-   "kind": "revision",
-   "title": "Révision des fiches",
+   "ue": "UE12",
+   "kind": "exercices",
+   "title": "Fin du programme · M10 · Social policies",
    "items": [
     {
-     "k": "T",
-     "t": "Relis les fiches des 2 UE que tu maîtrises le moins (ta note la plus basse aux examens blancs)"
-    },
-    {
-     "k": "T",
-     "t": "Refais 2 applications de ces UE sans regarder la correction"
+     "k": "A",
+     "t": "Application : social protection and demographic dynamics",
+     "m": 45
     }
    ],
    "week": "2027-04-25"
@@ -208,10 +205,10 @@
    "week": "2027-04-25"
   },
   {
-   "id": "2027-04-27-1800",
+   "id": "2027-04-27-1750",
    "date": "2027-04-27",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -264,6 +261,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

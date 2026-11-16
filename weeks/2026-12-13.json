@@ -229,12 +229,12 @@
    "items": [
     {
      "k": "L",
-     "t": "Business forms and leadership styles",
+     "t": "Company organization",
      "m": 30
     },
     {
      "k": "L",
-     "t": "How to fund a business",
+     "t": "Business forms and leadership styles",
      "m": 30
     }
    ],
@@ -283,24 +283,24 @@
    "id": "2026-12-15-1715",
    "date": "2026-12-15",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M3 · Companies and their stakeholders",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Organizing a company",
-     "m": 45
+     "k": "L",
+     "t": "How to fund a business",
+     "m": 30
     }
    ],
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-15-1800",
+   "id": "2026-12-15-1750",
    "date": "2026-12-15",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -353,6 +353,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

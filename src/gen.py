@@ -2,11 +2,12 @@ import json, datetime as dt, sys
 import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from curriculum import CURRICULUM, UE_NAMES
+from curriculum import CURRICULUM, UE_NAMES, EVENTS
 
 D = dt.date
 START = D(2026, 11, 16)
 END = D(2027, 5, 23)
+EXAM = D(2027, 5, 24)     # début visé des écrits (dates officielles 2027 pas encore publiées)
 P1_END = D(2027, 3, 16)   # fin du premier passage (mardi)
 P2_END = D(2027, 4, 20)
 OFF = {
@@ -14,6 +15,11 @@ OFF = {
     D(2027, 3, 29): "Lundi de Pâques (férié) : repos, ou rattrapage si tu es en retard.",
     D(2027, 5, 17): "Lundi de Pentecôte (férié) : repos, ou rattrapage si tu es en retard.",
 }
+# Yom Tov : jamais de séance (les mêmes dates que OFF_DATES dans src/app.html)
+YOM_TOV = {D(2027, 4, 22): "Pessah", D(2027, 4, 23): "Pessah", D(2027, 4, 28): "Pessah", D(2027, 4, 29): "Pessah",
+           D(2027, 6, 11): "Chavouot", D(2027, 6, 12): "Chavouot"}
+# tes créneaux : lundi 9 h – 13 h et 14 h – 17 h, mardi 9 h – 13 h et 14 h – 18 h, dimanche 10 h 30 – 15 h 30
+WINDOWS = {0: [("09:00", "13:00"), ("14:00", "17:00")], 1: [("09:00", "13:00"), ("14:00", "18:00")], 6: [("10:30", "15:30")]}
 
 def mins(a, b):
     h1, m1 = map(int, a.split(":")); h2, m2 = map(int, b.split(":"))
@@ -22,7 +28,7 @@ def mins(a, b):
 P1_TEMPLATE = {
     0: [("09:00", "10:45", "UE9"), ("11:00", "13:00", "UE8"), ("14:00", "15:30", "UE5"), ("15:45", "17:00", "UE1")],
     1: [("09:00", "10:45", "UE9"), ("11:00", "12:15", "UE8"), ("12:15", "13:00", "UE12"), ("14:00", "15:45", "UE7"),
-        ("16:00", "17:15", "UE5"), ("17:15", "18:00", "UE12"), ("18:00", "18:10", "BILAN")],
+        ("16:00", "17:15", "UE5"), ("17:15", "17:50", "UE12"), ("17:50", "18:00", "BILAN")],
     6: [("10:30", "12:30", "UE13"), ("13:15", "14:15", "REV"), ("14:15", "15:30", "UE9")],
 }
 
@@ -30,7 +36,7 @@ P1_TEMPLATE = {
 days = []
 d = START
 while d <= END:
-    if d.weekday() in (0, 1, 6):
+    if d.weekday() in (0, 1, 6) and d not in YOM_TOV:
         days.append(d)
     d += dt.timedelta(days=1)
 
@@ -240,7 +246,7 @@ for day in days:
         add(day, "14:00", "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue))
         add(day, "15:45", "17:00" if wd == 0 else "17:45", ue, "reprise", "Reprise des points faibles", reprise_items(ue))
         if wd == 1:
-            add(day, "18:00", "18:10", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
+            add(day, "17:50", "18:00", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
         continue
     if wd == 6:
         # dimanche sans examen blanc
@@ -291,11 +297,42 @@ MILESTONES = [
     {"date": "2027-04-01", "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"},
     {"date": "2027-05-24", "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"},
     {"date": "2027-06-11", "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"},
+    {"date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
 ]
+
+# --- lives, devoirs, examens blancs Studi (src/studi/UE*.json) : dans l'agenda, sans toucher aux séances
+EV_WORD = {"live": "Live", "replay": "Replay", "devoir": "Devoir à rendre", "quiz": "Quiz", "examen_blanc": "Examen blanc Studi",
+           "examen": "Épreuve", "info": "À noter"}
+warnings = []
+for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
+    word = EV_WORD.get(e.get("type"), "À noter")
+    t = e["titre"] if e["titre"].lower().startswith(word.lower()) else word + " · " + e["titre"]
+    m = {"date": e["date"], "t": t, "ue": e["ue"], "kind": e.get("type", "info")}
+    if e.get("debut"): m["start"] = e["debut"]
+    if e.get("fin"): m["end"] = e["fin"]
+    if e.get("note"): m["note"] = e["note"]
+    MILESTONES.append(m)
+    d = D.fromisoformat(e["date"])
+    if d.weekday() == 5 or d in YOM_TOV:
+        warnings.append(f"{e['date']} {t} : tombe un samedi ou un Yom Tov")
+    if e.get("fin", "") > "20:00":
+        warnings.append(f"{e['date']} {t} : finit après 20 h")
+    for s in sessions:
+        if s["date"] == e["date"] and e.get("debut") and s["start"] < e.get("fin", e["debut"]) and e["debut"] < s["end"]:
+            warnings.append(f"{e['date']} {t} : en même temps que la séance {s['start']} {s['ue'] or s['kind']}")
+MILESTONES.sort(key=lambda m: (m["date"], m.get("start", "")))
+
+# --- tes contraintes : on vérifie chaque séance
+for s in sessions:
+    d = D.fromisoformat(s["date"])
+    assert d.weekday() != 5 and d not in YOM_TOV, ("Shabbat ou Yom Tov", s["id"])
+    assert s["end"] <= "20:00", ("après 20 h", s["id"])
+    if s["kind"] != "off":
+        assert any(a <= s["start"] and s["end"] <= b for a, b in WINDOWS[d.weekday()]), ("hors de tes créneaux", s["id"], s["start"], s["end"])
 
 ue_meta = {u: {"name": UE_NAMES[u]} for u in UE_NAMES}
 
-plan = {"generated": "2026-11-16", "start": START.isoformat(), "end": END.isoformat(),
+plan = {"generated": "2026-11-16", "start": START.isoformat(), "end": END.isoformat(), "exam": EXAM.isoformat(),
         "ues": ue_meta, "milestones": MILESTONES,
         "weeks": [{"id": wk, "phase": phase_of(wk), "n": i} for i, wk in enumerate(sorted(weeks))],
         "sessions": sessions}
@@ -310,6 +347,8 @@ for ue in CURRICULUM:
     print(ue, "fin du programme:", ss[-1]["date"] if ss else None, "séances:", len(ss),
           "reste:", remaining(ue))
 print("leftovers:", leftover_flag)
+print("événements Studi:", len(EVENTS))
+for w in warnings: print("ATTENTION", w)
 for key in ["Termine les parties 1 et 2", "seconde moitié", "rapport intégral sur Studi"]:
     for s in sessions:
         if any(key in i["t"] for i in s["items"]):

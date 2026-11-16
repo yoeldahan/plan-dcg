@@ -9,13 +9,28 @@
    "start": "10:30",
    "end": "12:30",
    "ue": "UE12",
-   "kind": "exercices",
-   "title": "Fin du programme · M10 · Social policies",
+   "kind": "cours",
+   "title": "Fin du programme · M9 → M10 · Social policies",
    "items": [
     {
-     "k": "A",
-     "t": "Application : social protection and demographic dynamics",
-     "m": 45
+     "k": "L",
+     "t": "Slowbalization and deglobalization",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "The basic forms of social protection",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Current societal issues",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Political reforms and social models",
+     "m": 30
     }
    ],
    "week": "2027-04-11"
@@ -205,10 +220,10 @@
    "week": "2027-04-11"
   },
   {
-   "id": "2027-04-13-1800",
+   "id": "2027-04-13-1750",
    "date": "2027-04-13",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -261,6 +276,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

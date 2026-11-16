@@ -243,13 +243,13 @@
    "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "L",
-     "t": "Digital tools and assets in the business world",
+     "k": "V",
+     "t": "New technologies (vidéo 30 min) (1re partie)",
      "m": 30
     },
     {
-     "k": "L",
-     "t": "Big tech controversies",
+     "k": "V",
+     "t": "New technologies (vidéo 30 min) (2e partie)",
      "m": 30
     }
    ],
@@ -298,29 +298,24 @@
    "id": "2027-02-16-1715",
    "date": "2027-02-16",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Robots are taking our jobs (1re partie)",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Robots are taking our jobs (2e partie)",
-     "m": 45
+     "k": "V",
+     "t": "What the future holds in store (vidéo 18 min)",
+     "m": 36
     }
    ],
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-16-1800",
+   "id": "2027-02-16-1750",
    "date": "2027-02-16",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -373,6 +368,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

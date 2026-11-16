@@ -209,13 +209,33 @@
    "start": "12:15",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M6 · Communication and strategies to be competitive",
+   "kind": "exercices",
+   "title": "M5 · Corporate culture and working conditions",
    "items": [
     {
-     "k": "L",
-     "t": "Assessment tools",
+     "k": "A",
+     "t": "Application : Implementing corporate culture",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Work-life balance (1re partie)",
      "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Work-life balance (2e partie)",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Ageism (1re partie)",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Ageism (2e partie)",
+     "m": 45
     }
    ],
    "week": "2027-01-17"
@@ -268,29 +288,29 @@
    "id": "2027-01-19-1715",
    "date": "2027-01-19",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M6 · Communication and strategies to be competitive",
    "items": [
     {
      "k": "L",
-     "t": "Communication with stakeholders",
+     "t": "Strategies for growth",
      "m": 30
     },
     {
      "k": "L",
-     "t": "Effective communication",
+     "t": "Current challenges",
      "m": 30
     }
    ],
    "week": "2027-01-17"
   },
   {
-   "id": "2027-01-19-1800",
+   "id": "2027-01-19-1750",
    "date": "2027-01-19",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -343,6 +363,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

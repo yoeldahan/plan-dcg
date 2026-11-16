@@ -239,33 +239,13 @@
    "start": "12:15",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M5 · Corporate culture and working conditions",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Implementing corporate culture",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Work-life balance (1re partie)",
+     "k": "L",
+     "t": "Human resources and quality of working life",
      "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Work-life balance (2e partie)",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Ageism (1re partie)",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Ageism (2e partie)",
-     "m": 45
     }
    ],
    "week": "2027-01-10"
@@ -323,29 +303,24 @@
    "id": "2027-01-12-1715",
    "date": "2027-01-12",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M6 · Communication and strategies to be competitive",
+   "title": "M5 · Corporate culture and working conditions",
    "items": [
     {
      "k": "L",
-     "t": "Strategies for growth",
-     "m": 30
-    },
-    {
-     "k": "L",
-     "t": "Current challenges",
+     "t": "The specificities of digital firms",
      "m": 30
     }
    ],
    "week": "2027-01-10"
   },
   {
-   "id": "2027-01-12-1800",
+   "id": "2027-01-12-1750",
    "date": "2027-01-12",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -398,6 +373,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

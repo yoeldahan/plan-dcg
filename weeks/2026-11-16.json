@@ -171,7 +171,7 @@
    "id": "2026-11-17-1715",
    "date": "2026-11-17",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M2 · Méthodologie et bases grammaticales",
@@ -185,10 +185,10 @@
    "week": "2026-11-16"
   },
   {
-   "id": "2026-11-17-1800",
+   "id": "2026-11-17-1750",
    "date": "2026-11-17",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -241,6 +241,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

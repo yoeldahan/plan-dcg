@@ -229,13 +229,13 @@
    "start": "12:15",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M4 · Corporate Social Responsibility",
+   "kind": "exercices",
+   "title": "M3 · Companies and their stakeholders",
    "items": [
     {
-     "k": "L",
-     "t": "Corporate Social Responsibility",
-     "m": 30
+     "k": "A",
+     "t": "Application : Organizing a company",
+     "m": 45
     }
    ],
    "week": "2026-12-20"
@@ -283,29 +283,24 @@
    "id": "2026-12-22-1715",
    "date": "2026-12-22",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M4 · Corporate Social Responsibility",
    "items": [
     {
      "k": "L",
-     "t": "Environmental, social and governance factors",
-     "m": 30
-    },
-    {
-     "k": "L",
-     "t": "Corporate ESG strategies",
+     "t": "Corporate Social Responsibility",
      "m": 30
     }
    ],
    "week": "2026-12-20"
   },
   {
-   "id": "2026-12-22-1800",
+   "id": "2026-12-22-1750",
    "date": "2026-12-22",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -358,6 +353,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

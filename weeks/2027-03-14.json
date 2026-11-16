@@ -164,17 +164,17 @@
    "end": "17:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M9 · Globalisation and development",
+   "title": "M8 · Understanding what is at stake with energy",
    "items": [
     {
      "k": "L",
-     "t": "At an international level",
+     "t": "Energy, geopolitics and social justice",
      "m": 30
     },
     {
-     "k": "V",
-     "t": "Free Trade Areas (vidéo 25 min)",
-     "m": 50
+     "k": "A",
+     "t": "Application : what is at stake with energy",
+     "m": 45
     }
    ],
    "week": "2027-03-14"
@@ -241,23 +241,13 @@
    "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Challenging unfair competition",
-     "m": 45
+     "k": "L",
+     "t": "Globalization (+ 4 vidéos) (1re partie)",
+     "m": 30
     },
     {
      "k": "L",
-     "t": "Slowbalization and deglobalization",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas CETA (1re partie)",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas CETA (2e partie)",
+     "t": "Globalization (+ 4 vidéos) (2e partie)",
      "m": 30
     }
    ],
@@ -270,12 +260,22 @@
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M10 · Social policies",
+   "title": "M9 · Globalisation and development",
    "items": [
     {
+     "k": "C",
+     "t": "Cas « Is free trade being threatened? » (1re partie)",
+     "m": 45
+    },
+    {
      "k": "L",
-     "t": "The basic forms of social protection",
+     "t": "At an international level",
      "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas « Is free trade being threatened? » (2e partie)",
+     "m": 45
     }
    ],
    "week": "2027-03-14"
@@ -307,19 +307,14 @@
    "date": "2027-03-16",
    "start": "16:00",
    "end": "17:15",
-   "ue": "UE9",
+   "ue": "UE12",
    "kind": "cours",
-   "title": "M12 · Les documents de synthèse",
+   "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "L",
-     "t": "Documents de synthèse : leçons 1 à 3 du module (voir plateforme) (1re partie)",
-     "m": 60
-    },
-    {
-     "k": "L",
-     "t": "Documents de synthèse : leçons 1 à 3 du module (voir plateforme) (2e partie)",
-     "m": 60
+     "k": "V",
+     "t": "Free Trade Areas (vidéo 25 min)",
+     "m": 50
     }
    ],
    "week": "2027-03-14"
@@ -328,29 +323,34 @@
    "id": "2027-03-16-1715",
    "date": "2027-03-16",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M10 · Social policies",
+   "kind": "exercices",
+   "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "L",
-     "t": "Current societal issues",
+     "k": "A",
+     "t": "Application : Challenging unfair competition",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas CETA (1re partie)",
      "m": 30
     },
     {
-     "k": "L",
-     "t": "Political reforms and social models",
+     "k": "B",
+     "t": "Cas CETA (2e partie)",
      "m": 30
     }
    ],
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-16-1800",
+   "id": "2027-03-16-1750",
    "date": "2027-03-16",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -403,6 +403,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

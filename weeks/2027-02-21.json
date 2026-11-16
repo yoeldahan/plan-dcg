@@ -235,12 +235,12 @@
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
+   "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "L",
-     "t": "A double constraint",
-     "m": 30
+     "k": "V",
+     "t": "Customer-centric (vidéo 13 min)",
+     "m": 26
     }
    ],
    "week": "2027-02-21"
@@ -293,29 +293,24 @@
    "id": "2027-02-23-1715",
    "date": "2027-02-23",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
+   "title": "M7 · The digital revolution",
    "items": [
     {
      "k": "L",
-     "t": "Towards the end of fossil fuels",
-     "m": 30
-    },
-    {
-     "k": "L",
-     "t": "Shifting to renewable energies",
+     "t": "Digital tools and assets in the business world",
      "m": 30
     }
    ],
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-23-1800",
+   "id": "2027-02-23-1750",
    "date": "2027-02-23",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -368,6 +363,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

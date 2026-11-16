@@ -244,7 +244,7 @@
    "items": [
     {
      "k": "L",
-     "t": "Fair competition policies",
+     "t": "Assessment tools",
      "m": 30
     }
    ],
@@ -293,29 +293,24 @@
    "id": "2027-01-26-1715",
    "date": "2027-01-26",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M6 · Communication and strategies to be competitive",
    "items": [
     {
      "k": "L",
-     "t": "Innovation and intellectual property",
+     "t": "Communication with stakeholders",
      "m": 30
-    },
-    {
-     "k": "A",
-     "t": "Application : corporate strategy and competitiveness",
-     "m": 45
     }
    ],
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-26-1800",
+   "id": "2027-01-26-1750",
    "date": "2027-01-26",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -368,6 +363,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

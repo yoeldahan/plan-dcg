@@ -219,18 +219,13 @@
    "start": "12:15",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M7 · The digital revolution",
+   "kind": "exercices",
+   "title": "M6 · Communication and strategies to be competitive",
    "items": [
     {
-     "k": "V",
-     "t": "New technologies (vidéo 30 min) (2e partie)",
-     "m": 30
-    },
-    {
-     "k": "V",
-     "t": "What the future holds in store (vidéo 18 min)",
-     "m": 36
+     "k": "A",
+     "t": "Application : corporate strategy and competitiveness",
+     "m": 45
     }
    ],
    "week": "2027-02-07"
@@ -283,24 +278,24 @@
    "id": "2027-02-09-1715",
    "date": "2027-02-09",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "V",
-     "t": "Customer-centric (vidéo 13 min)",
-     "m": 26
+     "k": "L",
+     "t": "The age of digital society",
+     "m": 30
     }
    ],
    "week": "2027-02-07"
   },
   {
-   "id": "2027-02-09-1800",
+   "id": "2027-02-09-1750",
    "date": "2027-02-09",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -353,6 +348,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

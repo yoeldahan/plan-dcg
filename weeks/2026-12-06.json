@@ -230,17 +230,22 @@
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M2 → M3 · Companies and their stakeholders",
+   "title": "M2 · Méthodologie et bases grammaticales",
    "items": [
+    {
+     "k": "V",
+     "t": "Grammaire : le conditionnel, IF, WHETHER (7 min)",
+     "m": 14
+    },
+    {
+     "k": "V",
+     "t": "Grammaire : l'obligation et le devoir (7 min)",
+     "m": 14
+    },
     {
      "k": "V",
      "t": "Grammaire : la capacité (9 min)",
      "m": 18
-    },
-    {
-     "k": "L",
-     "t": "The main actors of a company",
-     "m": 30
     }
    ],
    "week": "2026-12-06"
@@ -293,24 +298,24 @@
    "id": "2026-12-08-1715",
    "date": "2026-12-08",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
    "title": "M3 · Companies and their stakeholders",
    "items": [
     {
      "k": "L",
-     "t": "Company organization",
+     "t": "The main actors of a company",
      "m": 30
     }
    ],
    "week": "2026-12-06"
   },
   {
-   "id": "2026-12-08-1800",
+   "id": "2026-12-08-1750",
    "date": "2026-12-08",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -363,6 +368,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }

@@ -220,11 +220,16 @@
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M7 · The digital revolution",
+   "title": "M6 · Communication and strategies to be competitive",
    "items": [
     {
      "k": "L",
-     "t": "The age of digital society",
+     "t": "Effective communication",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Fair competition policies",
      "m": 30
     }
    ],
@@ -278,24 +283,24 @@
    "id": "2027-02-02-1715",
    "date": "2027-02-02",
    "start": "17:15",
-   "end": "18:00",
+   "end": "17:50",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M7 · The digital revolution",
+   "title": "M6 · Communication and strategies to be competitive",
    "items": [
     {
-     "k": "V",
-     "t": "New technologies (vidéo 30 min) (1re partie)",
+     "k": "L",
+     "t": "Innovation and intellectual property",
      "m": 30
     }
    ],
    "week": "2027-01-31"
   },
   {
-   "id": "2027-02-02-1800",
+   "id": "2027-02-02-1750",
    "date": "2027-02-02",
-   "start": "18:00",
-   "end": "18:10",
+   "start": "17:50",
+   "end": "18:00",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -348,6 +353,10 @@
   {
    "date": "2027-06-11",
    "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+  },
+  {
+   "date": "2027-07-01",
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   }
  ]
 }
