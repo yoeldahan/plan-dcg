@@ -1,0 +1,238 @@
+{
+  "UE1": {
+    "evenements": [
+      {"type": "live", "titre": "Identifier les autres entrepreneurs individuels (agriculteur, artisan, professionnel libéral). Vérifier qu'une personne remplit les conditions pour exercer une activité indépendante", "date": "2026-11-18", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore"},
+      {"type": "live", "titre": "Proposer un statut pour le conjoint de l'entrepreneur + Évaluer les conséquences du régime juridique applicable au couple sur le patrimoine", "date": "2026-11-25", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore"},
+      {"type": "live", "titre": "Décrire le processus de réalisation des formalités de la création d'une entreprise individuelle", "date": "2026-12-03", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay : pas encore"},
+      {"type": "live", "titre": "Analyser les prérogatives du propriétaire, du nu-propriétaire, de l'usufruitier et des indivisaires", "date": "2026-12-10", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay : pas encore"},
+      {"type": "live", "titre": "Analyser les limites du droit de propriété", "date": "2026-12-16", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore"},
+      {"type": "replay", "titre": "Évaluer les risques patrimoniaux de l'exercice d'une activité professionnelle par un entrepreneur individuel + le commerçant", "date": "2026-11-12", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay disponible"},
+      {"type": "replay", "titre": "Évaluer les risques patrimoniaux de l'exercice d'une activité professionnelle par un entrepreneur individuel", "date": "2026-11-05", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay disponible"},
+      {"type": "replay", "titre": "Identifier les attributs de la personnalité juridique", "date": "2026-10-28", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Fondamentaux du droit", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Evaluation d'entraînement - UE1 - Fondamentaux du droit", "date": "", "debut": "", "fin": "", "note": "Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE1 - Fondamentaux du droit", "date": "", "debut": "", "fin": "", "note": "Écrit 3 h, coeff. 1 (situations pratiques et/ou commentaire de documents et/ou questions) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 1 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 1 > Introduction à l'UE 1 Fondamentaux du droit"},
+      {"type": "exercices", "titre": "Epreuve nationale du DCG - UE1 - Sujet 0", "ou": "Médiathèque > UE 1 > Annales de l'UE 1"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio, 21 ressources)", "ou": "Médiathèque > UE 1 > Corrigés Comptalia - Épreuve nationale du DCG UE01 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 1 Fondamentaux du droit", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Rechercher les règles applicables à la situation du client", "lecons": 3, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2027-03-14"},
+      {"titre": "Déterminer le mode de résolution adapté à un litige", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-03-14/2027-07-06"},
+      {"titre": "Qualifier la personne juridique et ses biens", "lecons": 2, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-07-06/2027-10-02"},
+      {"titre": "Accompagner un entrepreneur individuel dans son activité", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-10-02/2028-01-16"},
+      {"titre": "Déterminer l’étendue du droit d’une personne juridique sur ses biens", "lecons": 3, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-01-16/2028-04-13"},
+      {"titre": "Accompagner le client dans ses relations contractuelles", "lecons": 5, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-04-13/2028-08-23"},
+      {"titre": "Accompagner le client dans ses contrats courants", "lecons": 3, "exercices": 1, "cas": 1, "duree": "90 mn indiquées (1/5 ressources)", "periode_studi": "2028-08-23/2028-11-19"},
+      {"titre": "Mesurer les conséquences des responsabilités civiles de l'entrepreneur individuel", "lecons": 3, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-11-19/2029-02-15"},
+      {"titre": "Établir la preuve des droits", "lecons": 1, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2029-02-15/2029-03-31"},
+      {"titre": "Annales de l'UE 1", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE01 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE5": {
+    "evenements": [
+      {"type": "live", "titre": "Les monopoles", "date": "2026-11-19", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "Les oligopoles et la concurrence monopolistique", "date": "2026-11-26", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "Les modalités de la régulation des marchés et de la concurrence", "date": "2026-12-03", "debut": "17:00", "fin": "18:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "L'épargne des ménages (définition, formes, motifs et déterminants)", "date": "2026-12-10", "debut": "18:00", "fin": "19:00", "note": "TD – Jean-Jacques THOLONIAT ; replay : pas encore"},
+      {"type": "live", "titre": "Les déterminants de l'investissement des entreprises", "date": "2026-12-17", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "replay", "titre": "Les défaillances du marché", "date": "2026-11-12", "debut": "17:00", "fin": "18:00", "note": "TD – Jean-Jacques THOLONIAT ; replay disponible"},
+      {"type": "replay", "titre": "Le marché : rôle et fonctionnement", "date": "2026-11-03", "debut": "18:00", "fin": "19:00", "note": "TD – Christophe RAISON ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Economie contemporaine", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE5 - Économie contemporaine", "date": "", "debut": "", "fin": "", "note": "Écrit 4 h, coeff. 1 (analyse d'un dossier documentaire + question problématisée) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 5 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 5 > Introduction à l'UE 5 - Economie contemporaine"},
+      {"type": "exercices", "titre": "Epreuve nationale du DCG - UE5 - Sujet 0", "ou": "Médiathèque > UE 5 > Annales de l'UE 5"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (21 ressources)", "ou": "Médiathèque > UE 5 > Corrigés Comptalia - Épreuve nationale du DCG UE05 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 5 - Economie contemporaine", "lecons": 2, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Appréhender les fondements de la science économique", "lecons": 5, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2026-12-16/2027-03-05"},
+      {"titre": "Comprendre le fonctionnement des marchés", "lecons": 7, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-03-05/2027-06-19"},
+      {"titre": "Financer l'activité économique", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-06-19/2027-10-11"},
+      {"titre": "Identifier les enjeux de la croissance économique", "lecons": 7, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-10-11/2028-02-29"},
+      {"titre": "Analyser la régulation publique", "lecons": 9, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-02-29/2028-07-28"},
+      {"titre": "Analyser les politiques sociales face aux déséquilibres sur le marché du travail", "lecons": 9, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-07-28/2028-12-16"},
+      {"titre": "Identifier les effets et les enjeux de la mondialisation des économies", "lecons": 8, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-12-16/2029-03-31"},
+      {"titre": "Annales de l'UE 5", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE05 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE7": {
+    "evenements": [
+      {"type": "live", "titre": "La démarche stratégique", "date": "2026-11-17", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; live d'aujourd'hui ; replay : pas encore"},
+      {"type": "live", "titre": "Les outils d'analyse de l'environnement de l'entreprise", "date": "2026-11-24", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "Les outils d'analyse interne de l'entreprise", "date": "2026-12-01", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "Les stratégies de domaine", "date": "2026-12-08", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore"},
+      {"type": "live", "titre": "La stratégie de spécialisation et de diversification", "date": "2026-12-15", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay : pas encore"},
+      {"type": "replay", "titre": "Prise en compte des parties prenantes par les organisations et RSE", "date": "2026-11-10", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible"},
+      {"type": "replay", "titre": "La diversité des gouvernances", "date": "2026-11-03", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible"},
+      {"type": "replay", "titre": "Les problématiques managériales actuelles", "date": "2026-10-29", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay disponible"},
+      {"type": "replay", "titre": "Continuité et changements organisationnels", "date": "2026-10-27", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Management des organisations", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE7 - Management", "date": "", "debut": "", "fin": "", "note": "Écrit 4 h, coeff. 1 (analyse managériale de situations + question problématisée) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 7 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 7 > Introduction à l'UE 7 - Management des organisations"},
+      {"type": "exercices", "titre": "Epreuve nationale du DCG - UE7 - Sujet 0", "ou": "Médiathèque > UE 7 > Annales de l'UE 7"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 7 > Corrigés Comptalia - Épreuve nationale du DCG UE07 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 7 - Management des organisations", "lecons": 2, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Expliquer le contexte et les enjeux du management des organisations", "lecons": 9, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2026-12-16/2027-07-15"},
+      {"titre": "Expliquer le management stratégique", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-07-15/2027-12-12"},
+      {"titre": "Expliquer le management organisationnel", "lecons": 9, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-12-12/2028-07-19"},
+      {"titre": "Expliquer le management opérationnel", "lecons": 9, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-07-19/2029-03-31"},
+      {"titre": "Annales de l'UE 7", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE07 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE8": {
+    "evenements": [
+      {"type": "live", "titre": "Essentiels du module « Appréhender les défis du SI en termes de règlementation et durabilité » + cas pratique", "date": "2026-11-18", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore"},
+      {"type": "live", "titre": "La représentation d'un processus : le diagramme BPMN ; Les progiciels au service des processus", "date": "2026-11-26", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay : pas encore"},
+      {"type": "live", "titre": "Essentiels de la modélisation des données (SRD) et de la manipulation des données (SQL) + cas pratique", "date": "2026-12-03", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore"},
+      {"type": "live", "titre": "L'usage des fonctions de dénombrement et de gestion du temps dans les formules de calcul ; L'usage des fonctions de recherche dans les formules de calcul", "date": "2026-12-10", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay : pas encore"},
+      {"type": "live", "titre": "Essentiels du module « Appréhender les défis du SI en termes de sécurité » + cas pratique", "date": "2026-12-16", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore"},
+      {"type": "replay", "titre": "La représentation d'un processus : le diagramme BPMN ; Le lien entre processus et bases de données", "date": "2026-11-12", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay disponible"},
+      {"type": "replay", "titre": "Essentiels de la manipulation des données (SQL) + cas pratique (cours « Structurer et manipuler des données via les bases de données »)", "date": "2026-11-04", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Système d'information de gestion", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE8 - Système d'information de gestion", "date": "", "debut": "", "fin": "", "note": "Écrit 4 h, coeff. 1 (situations pratiques et/ou questions) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 8 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 8 > Introduction à l'UE 8 - Système d'information de gestion"},
+      {"type": "exercices", "titre": "Epreuve nationale du DCG - UE8 - Sujet 0", "ou": "Médiathèque > UE 8 > Annales de l'UE 8"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 8 > Corrigés Comptalia - Épreuve nationale du DCG UE08 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 8 - Système d'information de gestion", "lecons": 1, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Comprendre le SI dans son environnement : appréhender son rôle dans les organisations", "lecons": 5, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2027-02-24"},
+      {"titre": "Comprendre le SI dans son environnement : identifier les acteurs", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-02-24/2027-05-23"},
+      {"titre": "Comprendre l’infrastructure technique du système d’information au service de l’organisation", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-05-23/2027-08-19"},
+      {"titre": "Appréhender les solutions informatiques du système d’information", "lecons": 5, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-08-19/2027-11-07"},
+      {"titre": "Comprendre les choix organisationnels liés au système d’information, nécessaires pour s’adapter à son environnement", "lecons": 5, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-11-07/2028-01-16"},
+      {"titre": "Structurer et manipuler des données via les bases de données", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-01-16/2028-04-13"},
+      {"titre": "Traiter des données via le tableur pour résoudre des problèmes de gestion et aider à la décision", "lecons": 10, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-04-13/2028-08-23"},
+      {"titre": "Analyser le système d’information au regard de la performance des processus", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-08-23/2028-11-19"},
+      {"titre": "Appréhender les défis du système d’information en termes de règlementation et durabilité", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-11-19/2028-12-07"},
+      {"titre": "Appréhender les défis du système d’information en termes de sécurité", "lecons": 6, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2029-01-20/2029-03-31"},
+      {"titre": "Annales de l'UE 8", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE08 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE9": {
+    "evenements": [
+      {"type": "live", "titre": "Les rapprochements bancaires : objectifs, méthode, soldes initiaux identiques ou différents, bouclage du tableau de rapprochement, écritures de régularisation", "date": "2026-11-23", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore"},
+      {"type": "live", "titre": "Suite sur les rapprochements bancaires. Les stocks : réglementation, coûts d'acquisition et de production, impacts sur le compte de résultat et le bilan, écritures à la clôture", "date": "2026-12-07", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore"},
+      {"type": "live", "titre": "Suite sur les stocks : valeur actuelle, dépréciations et écritures", "date": "2026-12-14", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore"},
+      {"type": "live", "titre": "Cas de synthèse : opérations courantes, TVA, Stocks", "date": "2026-12-21", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore"},
+      {"type": "replay", "titre": "La sauvegarde et la confidentialité des données comptables", "date": "2026-11-16", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay disponible"},
+      {"type": "replay", "titre": "Cas de synthèse : opérations courantes sur le journal + calcul TVA fin de mois", "date": "2026-11-09", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible"},
+      {"type": "replay", "titre": "Les acquisitions d'immobilisations : règles spécifiques, coûts d'acquisition et de production (production immobilisée), tableau annexe des flux d'entrée des immobilisations", "date": "2026-11-02", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible"},
+      {"type": "replay", "titre": "Comptabilisation des emballages (consignation & déconsignation), des effets de commerce (LCR classique et magnétique), de la paie", "date": "2026-10-26", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Comptabilité", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Evaluation d'entraînement 1 - UE9 Comptabilité", "date": "", "debut": "", "fin": "", "note": "Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Evaluation d'entraînement 2 - UE9 Comptabilité", "date": "", "debut": "", "fin": "", "note": "Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Evaluation d'entraînement 3 - UE9 Comptabilité", "date": "", "debut": "", "fin": "", "note": "Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE9 - Comptabilité", "date": "", "debut": "", "fin": "", "note": "Écrit 3 h, coeff. 1 (situations pratiques et/ou exercices et/ou questions) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 9 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 9 > Introduction à l'UE 9 - Comptabilité"},
+      {"type": "exercices", "titre": "Epreuve nationale du DCG - UE9 - Sujet 0", "ou": "Médiathèque > UE 9 > Annales de l'UE 9"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 9 > Corrigés Comptalia - Épreuve nationale du DCG UE09 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 9 - Comptabilité", "lecons": 1, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Distinguer les dimensions de la comptabilité dans une perspective historique", "lecons": 6, "exercices": 0, "cas": 0, "duree": "240 mn indiquées (4/6 ressources)", "periode_studi": "2026-11-02/2027-01-02"},
+      {"titre": "Connaître le contenu d'un compte de résultat et d'un bilan", "lecons": 9, "exercices": 0, "cas": 9, "duree": "805 mn indiquées (15/18 ressources)", "periode_studi": "2027-01-02/2027-03-22"},
+      {"titre": "Exposer et justifier les mécanismes de la partie double", "lecons": 6, "exercices": 0, "cas": 12, "duree": "745 mn indiquées (14/18 ressources)", "periode_studi": "2027-03-22/2027-06-01"},
+      {"titre": "Comprendre le mécanisme et les enregistrements comptables liés à la TVA", "lecons": 11, "exercices": 5, "cas": 9, "duree": "550 mn indiquées (12/25 ressources)", "periode_studi": "2027-06-01/2027-09-23"},
+      {"titre": "Etablir et enregistrer les factures", "lecons": 6, "exercices": 0, "cas": 9, "duree": "285 mn indiquées (9/15 ressources)", "periode_studi": "2027-09-23/2027-12-03"},
+      {"titre": "Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement", "lecons": 12, "exercices": 3, "cas": 10, "duree": "255 mn indiquées (7/25 ressources)", "periode_studi": "2027-12-03/2028-03-09"},
+      {"titre": "Calculer et enregistrer les amortissements comptables", "lecons": 6, "exercices": 0, "cas": 8, "duree": "235 mn indiquées (8/14 ressources)", "periode_studi": "2028-03-09/2028-05-10"},
+      {"titre": "Calculer et enregistrer les dépréciations et les provisions", "lecons": 7, "exercices": 1, "cas": 9, "duree": "245 mn indiquées (9/17 ressources)", "periode_studi": "2028-05-10/2028-07-28"},
+      {"titre": "Enregistrer les cessions d'immobilisations et de VMP", "lecons": 5, "exercices": 0, "cas": 5, "duree": "160 mn indiquées (3/10 ressources)", "periode_studi": "2028-07-28/2028-09-10"},
+      {"titre": "Enregistrer les autres opérations d'inventaire", "lecons": 13, "exercices": 0, "cas": 23, "duree": "750 mn indiquées (19/36 ressources)", "periode_studi": "2028-09-10/2029-02-15"},
+      {"titre": "Connaitre et comprendre les documents de synthèse", "lecons": 4, "exercices": 0, "cas": 4, "duree": "", "periode_studi": "2029-02-15/2029-03-14"},
+      {"titre": "Connaître l'environnement numérique de la comptabilité", "lecons": 4, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2029-03-14/2029-03-31"},
+      {"titre": "Annales de l'UE 9", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE09 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE12": {
+    "evenements": [
+      {"type": "live", "titre": "Communication & strategies to be competitive : competitive advantage, innovation, intellectual property", "date": "2026-11-23", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay : pas encore"},
+      {"type": "live", "titre": "CSR: Corporate social responsibility: definition and concepts and concrete examples", "date": "2026-12-07", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay : pas encore"},
+      {"type": "live", "titre": "CSR: Evolution of CSR, wokeism or a necessity, Evolution of CSR in the United States", "date": "2026-12-14", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay : pas encore"},
+      {"type": "live", "titre": "Digital revolution : the age of the digital society & the transformation of work", "date": "2026-12-21", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay : pas encore"},
+      {"type": "replay", "titre": "Communication & strategies to be competitive : what are the stakes of digital communication?", "date": "2026-11-16", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay disponible"},
+      {"type": "replay", "titre": "Globalization: towards deglobalization? Are free trade areas an instrument of deglobalization", "date": "2026-11-09", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay disponible"},
+      {"type": "replay", "titre": "Globalization: impact of globalization on economies and on the planet", "date": "2026-11-02", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay disponible"},
+      {"type": "replay", "titre": "Communication & strategies to be competitive : internal, external and cross-cultural communication", "date": "2026-10-26", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Anglais des affaires", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE12 - Anglais des affaires", "date": "", "debut": "", "fin": "", "note": "Écrit 3 h, coeff. 1 (traduction, résumé/note/commentaires, rédaction en anglais) ; date non affichée sur Studi"}
+    ],
+    "ressources": [
+      {"type": "ebook", "titre": "E-book - UE 12 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 12 > Introduction à l'UE 12 - Anglais des affaires"},
+      {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG (7 thèmes, à partir de 2020)", "ou": "Médiathèque > UE 12 > Corrigés Comptalia - Épreuve nationale du DCG UE12 - Ancien référentiel"}
+    ],
+    "modules": [
+      {"titre": "Introduction à l'UE 12 - Anglais des affaires", "lecons": 1, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Maîtriser la méthodologie et les bases grammaticales de l'anglais des affaires", "lecons": 10, "exercices": 0, "cas": 0, "duree": "135 mn (10 vidéos)", "periode_studi": "2026-12-16/2027-05-14"},
+      {"titre": "Companies and their stakeholders", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-05-14/2027-08-02"},
+      {"titre": "Corporate Social Responsibility", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2027-08-02/2027-10-11"},
+      {"titre": "Corporate culture and working conditions", "lecons": 3, "exercices": 1, "cas": 2, "duree": "150 mn indiquées (2 cas)", "periode_studi": "2027-10-11/2028-01-16"},
+      {"titre": "Communication and strategies to be competitive", "lecons": 7, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-01-16/2028-05-27"},
+      {"titre": "The digital revolution", "lecons": 6, "exercices": 0, "cas": 1, "duree": "151 mn indiquées (3 vidéos + 1 cas)", "periode_studi": "2028-05-27/2028-07-28"},
+      {"titre": "Understanding what is at stake with energy", "lecons": 4, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2028-07-28/2028-10-15"},
+      {"titre": "Globalisation and development", "lecons": 8, "exercices": 1, "cas": 2, "duree": "236 mn indiquées (5 vidéos + 2 cas)", "periode_studi": "2028-10-15/2029-02-15"},
+      {"titre": "Social policies", "lecons": 3, "exercices": 1, "cas": 0, "duree": "", "periode_studi": "2029-02-15/2029-03-31"},
+      {"titre": "Corrigés Comptalia - Épreuve nationale du DCG UE12 - Ancien référentiel", "lecons": 0, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2029-03-31"}
+    ]
+  },
+  "UE13": {
+    "evenements": [
+      {"type": "live", "titre": "Essentiels du cours « Maîtriser les outils de la communication orale professionnelle » + rappels fiche de suivi + réponses à vos questions", "date": "2026-12-02", "debut": "20:00", "fin": "21:00", "note": "TD – Alexandra BRAULT ; replay : pas encore"},
+      {"type": "live", "titre": "Présentation de rapports au design impactant : page de garde, illustrations, mise en évidence des idées. Liens avec la soutenance orale. Échanges autour des difficultés rencontrées", "date": "2026-12-14", "debut": "20:00", "fin": "21:00", "note": "Méthodologie – Grégory LAKHLEF ; replay : pas encore"},
+      {"type": "replay", "titre": "Communication professionnelle", "date": "2026-11-10", "debut": "17:00", "fin": "18:00", "note": "TD – Alexandra BRAULT ; replay disponible"},
+      {"type": "replay", "titre": "Essentiels des cours « Assurer une veille informationnelle » et « Comprendre les enjeux de la communication professionnelle » + rappels fiche de suivi + réponses à vos questions", "date": "2026-11-05", "debut": "21:00", "fin": "22:00", "note": "Méthodologie – Camille CUBIZOLLE ; replay disponible"},
+      {"type": "quiz", "titre": "Certificat Studi - Communication professionnelle", "date": "", "debut": "", "fin": "", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Entraînement à l'oral - UE 13", "date": "", "debut": "", "fin": "", "note": "Oral ; Accessible, À faire ; aucune date limite affichée"},
+      {"type": "devoir", "titre": "Parties 1 et 2 du rapport de stage ou d'activité (présentation de la structure et d'une situation de communication)", "date": "", "debut": "", "fin": "", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+      {"type": "devoir", "titre": "Partie 3 du rapport de stage ou d'activité (thème structuré)", "date": "", "debut": "", "fin": "", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+      {"type": "devoir", "titre": "Rapport de stage ou d'activité intégral", "date": "", "debut": "", "fin": "", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+      {"type": "devoir", "titre": "Fiche de suivi - Dépôt 1", "date": "", "debut": "", "fin": "", "note": "Évaluations transverses ; Accessible, À faire ; dépôt UE13 avant fin février de l'année de l'examen"},
+      {"type": "devoir", "titre": "Fiche de suivi - Dépôt 2", "date": "", "debut": "", "fin": "", "note": "Évaluations transverses ; Accessible, À faire ; dépôt UE13 avant fin février de l'année de l'examen"},
+      {"type": "examen", "titre": "Épreuve nationale DCG UE13 - Communication professionnelle", "date": "", "debut": "", "fin": "", "note": "Oral 1 h max, coeff. 1 : soutenance d'un rapport de stage (8 semaines minimum) ou d'expérience professionnelle équivalente ; date non affichée sur Studi"}
+    ],
+    "ressources": [],
+    "modules": [
+      {"titre": "Introduction à l'UE 13 - Communication professionnelle", "lecons": 1, "exercices": 0, "cas": 0, "duree": "", "periode_studi": "2026-11-02/2026-12-16"},
+      {"titre": "Maitriser les opérations de recherche et d’analyse d’information", "lecons": 4, "exercices": 0, "cas": 0, "duree": "180 mn indiquées (3/4 ressources)", "periode_studi": "2026-11-02/2027-10-29"},
+      {"titre": "Maîtriser les principes et outils de la communication professionnelle", "lecons": 3, "exercices": 0, "cas": 0, "duree": "120 mn indiquées (2/3 ressources)", "periode_studi": "2027-10-29/2028-07-01"},
+      {"titre": "Le rapport de stage et la soutenance", "lecons": 3, "exercices": 0, "cas": 0, "duree": "120 mn indiquées (2/3 ressources)", "periode_studi": "2028-07-01/2029-03-31"}
+    ]
+  },
+  "consignes": [
+    "Aucune date limite affichée sur les évaluations (toutes « Accessible – À faire ») : les devoirs ne sont pas obligatoires, ils se font à son rythme selon l'avancement des modules.",
+    "Le Certificat Studi (QCM) est obligatoire à la fin de chaque UE. Chaînage : certaines évaluations ne s'ouvrent qu'après avoir marqué un module comme terminé ou réussi un certificat de bloc (voir « Modalités d'accès »).",
+    "Examens blancs « Objectif Examen » en avril : sujets exclusifs + lives Objectif Examen.",
+    "To-do Studi : avant fin mars, vérifier les évaluations à terminer et passer les certificats ; en avril, examens blancs, lives Objectif Examen et replays ; 48 h avant, convocation + pièce d'identité, pas de téléphone pendant l'épreuve.",
+    "UE13 : dépôts (fiche de suivi et rapport) avant fin février de l'année de passage de l'examen présentiel.",
+    "Réforme DCG 2026 : s'applique aux épreuves à partir de la session de mai 2027 ; les nouveaux devoirs sont mis en ligne progressivement.",
+    "Aucune date d'examen 2027 affichée sur Studi. La page « Je passe mes examens » (promotion 2026) indique : examens présentiels en mai et juin 2026, convocation envoyée par courrier par l'Académie, résultats DCG 2026 le jeudi 9 juillet 2026 à 12 h sur Cyclades.",
+    "Inscription et réinscription aux examens via l'espace Cyclades ; problème de convocation : s'adresser au rectorat de son Académie.",
+    "Report de session uniquement via le bouton « Reporter ma session » (onglet Planning) ; réponse sous 7 jours ouvrés.",
+    "Corrections : délai de 7 jours après affectation du formateur (un e-mail prévient de la prise en charge).",
+    "Lives Accompagnement DCG Toutes UE : 17/11 17:00–17:30, 23/11 12:00–12:30, 03/12 12:00–12:30, 08/12 12:00–12:30, 15/12 17:00–17:30, 22/12 12:00–12:30.",
+    "Les e-books se trouvent dans chaque UE, module « Introduction à l'UE » (Médiathèque) ; aucun e-book trouvé pour l'UE13.",
+    "Parcours DCG 2026, promo MAI 2029 : le champ periode_studi correspond au rythme prévu par Studi sur 3 ans (jusqu'au 31/03/2029), pas aux dates d'examen.",
+    "Périmètre : lives à venir relevés jusqu'au 22/12/2026 (fin de la liste affichée) ; replays relevés à partir du 26/10/2026 (première page).",
+    "Méthode de comptage : cas = ressources dont le titre contient « Cas » ; exercices = autres « Application »/Exercice ; leçons = leçons + vidéos, e-books non compris ; durée = somme des durées affichées."
+  ]
+}
