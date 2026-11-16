@@ -123,11 +123,20 @@ a.hchip::after{content:"";position:absolute;inset:-7px -2px}
 .segs i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--coral),var(--gold));transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.3,1.2,.5,1)}
 .segs i.f::after{transform:none}
 .segs i.h::after{transform:scaleX(.5)}
+/* la phrase d'encouragement du jour (voir CHEER), puis l'info utile en petit */
+.cheer{margin-top:12px;font:600 16px/1.38 var(--f-text);color:var(--ink);text-wrap:pretty;overflow-wrap:break-word}
+.cheer.pg{margin-top:14px;padding-left:12px;border-left:3px solid var(--gold2)}
 .phr{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font:500 14.5px/1.38 var(--f-text);color:var(--ink2)}
+.cheer+.phr{margin-top:6px;font-size:13.5px}
+.phr>span{min-width:0;overflow-wrap:break-word}
 .phr .ic{width:18px;height:18px;color:var(--coral-ink);margin-top:1px}
+.cheer+.phr .ic{width:16px;height:16px}
 .phr b{color:var(--ink);font-weight:600}
 .rest h2{font:700 22px/1.15 var(--f-display);letter-spacing:-.02em;margin-top:8px}
 .rest p.t{font:500 15px/1.45 var(--f-text);color:var(--ink2);margin-top:6px}
+.rest p.t.cheer{font-weight:600;color:var(--ink);margin-top:8px}
+.rest h2,.rest p.t{overflow-wrap:break-word}
+.rest .day-top>div{min-width:0}
 .rest .ri{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--gold-soft);color:var(--acc-ic);flex:none}
 .rest .ri .ic{width:24px;height:24px}
 .rest .acts{margin-top:14px}
@@ -991,6 +1000,198 @@ function scheduleSync(){
 }
 
 /* ================= interface ================= */
+/* ---- phrases d'encouragement : modifie-les ici ----
+   Une phrase courte (9 mots au plus), au tutoiement, chaleureuse, concrète. Jamais de reproche, jamais « tu dois »,
+   jamais de comparaison, pas d'emoji. Pas de chiffres de retard : l'info factuelle est affichée à part.
+   Les apostrophes droites et les espaces avant « ! ? : » sont corrigées à l'affichage.
+   Le choix est fixe pour un jour et un contexte donnés, et change d'un jour à l'autre (rien n'est sauvegardé). */
+const CHEER = {
+  // l'état général (le même calcul que « d'avance » / « Dans les temps » / « de retard »)
+  avance: [
+    "Tu as de l'avance. Garde ce rythme.",
+    "Belle avance. Tu peux réviser tes fiches.",
+    "Tu es devant ton planning. Bravo.",
+    "Tu avances plus vite que prévu. Bien joué.",
+    "Ton avance te donne de la marge.",
+    "De l'avance : parfait pour tes cartes Anki.",
+    "Tu prends de l'avance, séance après séance.",
+    "Bien parti. Tes efforts se voient.",
+    "Profite de ton avance pour souffler un peu."
+  ],
+  temps: [
+    "Pile dans les temps. Continue comme ça.",
+    "Un jour après l'autre, ça avance.",
+    "Tu suis ton planning. C'est parfait.",
+    "Le bon rythme, tout simplement.",
+    "Tout roule. Garde ce cap.",
+    "Tu es exactement là où il faut.",
+    "Régulier, c'est comme ça qu'on monte.",
+    "Petit à petit, tu avances dans le programme.",
+    "Tu avances au bon rythme. Bravo."
+  ],
+  // quand il reste des choses à rattraper : du soutien et une action simple
+  retard: [
+    "Une séance à la fois, ça suffit.",
+    "Le planning s'est déjà adapté pour toi.",
+    "Reprends là où tu t'es arrêté.",
+    "Commence par la prochaine séance. C'est tout.",
+    "Chaque case cochée compte.",
+    "Un petit pas aujourd'hui, c'est déjà bien.",
+    "Suis simplement l'agenda du jour.",
+    "Dix minutes suffisent pour te relancer.",
+    "On reprend doucement, à ton rythme.",
+    "Concentre-toi sur aujourd'hui, pas sur hier."
+  ],
+  // une matière à rattraper, mais un bon rythme global : rien qui contredise « d'avance » ni la note
+  rattrape: [
+    "Le planning s'est déjà adapté pour toi.",
+    "Une séance à la fois, ça suffit.",
+    "Chaque case cochée compte.",
+    "Suis simplement l'agenda du jour.",
+    "Tout est déjà replacé dans tes prochaines séances.",
+    "Bon rythme global. On rééquilibre doucement."
+  ],
+  // la première semaine du plan
+  debut: [
+    "Le plus dur, c'est de commencer. Tu y es.",
+    "Une nouvelle aventure commence. Pas à pas.",
+    "Tu poses les bases. Prends ton temps.",
+    "Les premiers jours, on trouve son rythme.",
+    "Bienvenue au camp de base."
+  ],
+  // une séance est en cours
+  seance: [
+    "Tu es dedans. Reste concentré.",
+    "Une partie après l'autre, tranquillement.",
+    "Stylo en main, tu avances bien.",
+    "Concentre-toi sur la page devant toi.",
+    "Garde ton rythme, sans te presser.",
+    "Tu es en pleine séance. Courage !"
+  ],
+  // tout est coché (aussi dans la fête « Journée réussie ! »)
+  fini: [
+    "Journée bouclée. Repose-toi bien.",
+    "Tout est coché. Savoure ce moment.",
+    "Beau travail aujourd'hui. Profite de la suite.",
+    "Tu as fait ta part. Souffle un peu.",
+    "Mission du jour accomplie. Bravo.",
+    "La suite est prête. Toi, détends-toi.",
+    "Ta journée est faite. Tu peux être fier."
+  ],
+  // « Je n'ai pas pu travailler aujourd'hui » (le titre de la carte), ou toutes les séances du jour reportées
+  reporte: [
+    "Pas de souci.",
+    "Ça arrive. Repose-toi.",
+    "Pas grave. On reprend bientôt.",
+    "Prends soin de toi aujourd'hui.",
+    "C'est noté. Tout est replacé.",
+    "Une pause, et on repart."
+  ],
+  // les jours sans révision
+  shabbat: [
+    "Shabbat Shalom. Repose-toi bien.",
+    "Shabbat Shalom. Profite de ce temps.",
+    "Shabbat Shalom. Le repos aide à retenir.",
+    "Shabbat Shalom. Recharge tes batteries."
+  ],
+  yomtov: [
+    "Bon Yom Tov ! Profite de la fête.",
+    "Bon Yom Tov ! Repose-toi bien.",
+    "Bonne fête ! Ton planning t'attend tranquillement.",
+    "Bon Yom Tov ! Profite de tes proches."
+  ],
+  alternance: [
+    "Journée en alternance. Profite, ça avance quand même.",
+    "Le terrain, c'est aussi du DCG.",
+    "Ce que tu vois au travail t'aidera aux écrits.",
+    "Une journée de pratique, ça compte aussi.",
+    "Bonne journée ! Ton planning t'attend, sans pression."
+  ],
+  repos: [
+    "Journée libre. Repose-toi bien.",
+    "Profite de cette journée.",
+    "Le repos fait partie du plan.",
+    "Recharge-toi, la suite est prête."
+  ],
+  // ta série (3 jours ou plus), un nouveau record, un camp atteint aujourd'hui
+  serie: [
+    "Ta série continue. Belle constance.",
+    "Jour après jour, ta flamme tient bon.",
+    "Ta régularité paie. Continue.",
+    "Belle série en cours. Garde le fil.",
+    "Ta flamme brille. Belle régularité."
+  ],
+  record: [
+    "Nouveau record de série. Chapeau !",
+    "Record battu. Quelle régularité !",
+    "Ta série n'a jamais été aussi longue.",
+    "Nouveau record. Savoure-le."
+  ],
+  camp: [
+    "Nouveau camp atteint. Admire la vue.",
+    "Un camp de plus. Le sommet se rapproche.",
+    "Camp atteint. Pose ton sac un instant.",
+    "Belle étape franchie aujourd'hui."
+  ],
+  // les écrits approchent
+  j30: [
+    "Dernier mois. Tu as fait le plus long.",
+    "Les dernières semaines. Tu es sur la bonne voie.",
+    "Fiches et annales : tu connais la route.",
+    "Encore quelques semaines. Garde ton calme.",
+    "Les révisions, c'est ton terrain maintenant."
+  ],
+  j7: [
+    "Dernière ligne droite. Reste serein.",
+    "Derniers jours. Révise léger, dors bien.",
+    "Tu as travaillé. Fais-toi confiance.",
+    "Relis tes fiches, sans te presser.",
+    "Le sommet est tout proche. Respire."
+  ],
+  // le jour des écrits
+  jourJ: [
+    "C'est le jour J. Tu es prêt.",
+    "Respire. Tu as fait tout le chemin.",
+    "Bonne chance pour les écrits !",
+    "Tu connais la route. Vas-y sereinement."
+  ],
+  // mode concentration : une phrase par bloc (travail) et par pause
+  focusTravail: [
+    "Une chose à la fois.",
+    "Juste ce bloc. Le reste attendra.",
+    "Lis, écris, avance.",
+    "Les notifications peuvent attendre.",
+    "Reste avec ce sujet, rien d'autre.",
+    "Un petit pas, c'est déjà un pas.",
+    "Concentre-toi sur la ligne suivante."
+  ],
+  focusPause: [
+    "Lève-toi, bois un verre d'eau.",
+    "Étire-toi un peu. Tu l'as mérité.",
+    "Regarde au loin quelques instants.",
+    "Respire. Le prochain bloc attendra.",
+    "Bouge un peu, ça aide à retenir.",
+    "Ouvre la fenêtre, prends l'air."
+  ]
+};
+/* le choix : un nombre tiré de la date et du contexte (le même toute la journée, à chaque rendu),
+   et jamais la même phrase que la veille dans le même contexte */
+const cheerRaw = (k, salt) => { let x = 2166136261; const s = k+"|"+salt; for (let i = 0; i < s.length; i++){ x ^= s.charCodeAt(i); x = Math.imul(x, 16777619); } return (x >>> 0) % CHEER[k].length; };
+const cheerMemo = new Map();
+function cheerIdx(k, d){
+  const id = k+"|"+d; if (cheerMemo.has(id)) return cheerMemo.get(id);
+  const n = CHEER[k].length, start = PLAN.start || PLAN.weeks[0].id;
+  let prev = -1;
+  for (const x = parse(d < start ? d : start); iso(x) <= d; x.setDate(x.getDate()+1)){
+    const dd = iso(x), m = k+"|"+dd;
+    if (cheerMemo.has(m)){ prev = cheerMemo.get(m); continue; }
+    let i = cheerRaw(k, dd); if (n > 1 && i === prev) i = (i+1) % n;
+    cheerMemo.set(m, i); prev = i;
+  }
+  return cheerMemo.get(id);
+}
+const cheer = (k, d) => CHEER[k][cheerIdx(k, d || today())];
+const paceKey = delta => delta >= 60 ? "avance" : delta > -45 ? "temps" : "retard";   // mêmes seuils que rhythmChip()
 /* typographie française à l'affichage seulement (jamais dans les données) */
 const fr = s => String(s)
   .replace(/'/g,"’")
@@ -1323,8 +1524,42 @@ function dayTile(d, o){
 }
 
 /* ---- Aujourd'hui ---- */
-function dayCard(work){
-  const T = today();
+/* le contexte de la phrase d'encouragement (calculé à partir des données existantes, rien n'est sauvegardé) */
+const behindUEs = rh => UE_LIST.filter(u => rh[u].delta < -45).sort((a,b)=>rh[a].delta-rh[b].delta);
+function isRecordDay(s){   // série prolongée aujourd'hui au-delà de l'ancien record (même règle que la fête)
+  if (s.today !== "ok" || !s.cur) return false;
+  const before = streakCount([...s.res.values()].slice(0, -1)).best;
+  return before >= 1 && s.cur > before;
+}
+function examKey(){ const d = daysLeft(); return d === 0 ? "jourJ" : d > 0 && d <= 7 ? "j7" : d > 0 && d <= 30 ? "j30" : null; }
+const isFirstWeek = T => { const wm = PLAN.weeks.find(w => w.id === weekIdFor(T)); return !!wm && !wm.n; };
+/* moment : "avant" la première séance, "seance" en cours (pas encore cochée), "suite" (prochaine séance ou séances à cocher),
+   "fini" (tout est coché), "vide" (tout est reporté, rien de fait) ;
+   behind : la note « À rattraper » est affichée, donc seulement une phrase qui va avec (retard, ou rattrape si le rythme global est bon) */
+function dayCheerKey(moment, rh, behind){
+  const T = today(), s = streakInfo(), a = ascent(rh), camp = a.idx > a.idx0, pace = paceKey(rh.all.delta);
+  if (moment === "seance") return "seance";
+  if (moment === "fini") return isRecordDay(s) ? "record" : camp ? "camp" : s.today === "ok" && s.cur >= 3 ? "serie" : "fini";
+  if (moment === "vide") return "reporte";
+  if (examKey() === "jourJ") return "jourJ";
+  if (camp) return "camp";
+  if (behind) return pace === "retard" ? "retard" : "rattrape";
+  if (isFirstWeek(T)) return "debut";
+  if (moment === "avant"){ const ek = examKey(); if (ek) return ek; if (s.cur >= 3) return "serie"; }
+  return pace;
+}
+function restCheerKey(T, list){
+  const wd = parse(T).getDay(), ek = examKey();
+  if (ek === "jourJ") return ek;
+  if (OFF_DATES[T]) return "yomtov";
+  if (wd === 6) return "shabbat";
+  if (ek === "j7") return ek;
+  if (list.some(v => v.kind === "off")) return "repos";
+  return wd >= 3 && wd <= 5 ? "alternance" : "repos";
+}
+function dayCard(work, o){
+  o = o || {};
+  const T = today(), rh = o.rh || rhythm();
   const current = work.find(isNow);
   const next = work.find(v => v.start > nowHM() && status(v) !== "done" && status(v) !== "skip");
   const pending = work.filter(v => TRACKED.has(v.kind) && status(v)!=="done" && status(v)!=="skip" && status(v)!=="free");
@@ -1338,11 +1573,16 @@ function dayCard(work){
   }
   const big = units.length ? units.filter(x=>x).length : nDone, of = units.length || segs.length;
   const hero = current || next;
-  let line;
+  // l'info utile, en petit sous la phrase d'encouragement
+  let line = null;
   if (current) line = [h("b",null,"En ce moment : "), (current.ue ? UEN[current.ue] : titleOf(current))+", jusqu'à "+fH(current.end)+"."];
   else if (next) line = [h("b",null,"Prochaine séance à "+fH(next.start)+" : "), (next.ue ? UEN[next.ue] : titleOf(next))+"."];
-  else if (pending.length) line = [h("b",null, "Il reste "+plural(pending.length,"séance")+" à cocher. "), "Coche ce que tu as fait. Le reste glisse tout seul."];
-  else line = [h("b",null,"Tout est fait. Bravo ! "), "Repose-toi, la suite est prête."];
+  else if (pending.length) line = [h("b",null, "Il reste "+plural(pending.length,"séance")+" à cocher. "), "Coche ce que tu as fait."];
+  // le moment se lit d'après ce qui reste vraiment, pas seulement l'heure : une séance cochée ou reportée n'est plus « en cours »
+  const live = current && status(current) !== "done" && status(current) !== "skip";
+  const moment = !next && !pending.length ? (segs.length && !big ? "vide" : "fini")
+    : live ? "seance" : next && work.length && nowHM() < work[0].start ? "avant" : "suite";
+  const phrase = cheer(dayCheerKey(moment, rh, !!o.behind), T);
   const segEls = units.length ? units : segs.map(v => status(v)==="done" ? "f" : status(v)==="part" ? "h" : "");
   const n = Math.max(1, segEls.length);
   // ce qu'un geste vient de remplir (jamais au chargement ni au rafraîchissement)
@@ -1355,7 +1595,8 @@ function dayCard(work){
       h("div",null, h("p",{class:"eb"}, hero ? "Ta journée" : "Journée terminée"), h("p",{class:"day-sub"}, h("b",null, units.length ? big+" "+(big>1?"éléments faits":"élément fait") : big+" "+(big>1?"séances faites":"séance faite")), " sur "+of)),
       h("p",{class:"day-n num"+(bump?" bump":""), "aria-label": (units.length ? big+" "+(big>1?"éléments faits":"élément fait") : big+" "+(big>1?"séances faites":"séance faite"))+" sur "+of}, String(big), h("small",{"aria-hidden":"true"},"/"+of))),
     of ? h("div",{class:"segs"+(n>12?" dense":""), style:"grid-template-columns:repeat("+n+",minmax(0,1fr))", "aria-hidden":"true"}, segEls.map((c,i) => h("i",{class:c+(fresh[i]?" nf":"")}))) : null,
-    h("p",{class:"phr"}, ic(hero ? "clock" : "sunrise"), h("span",null, line)));
+    h("p",{class:"cheer", id:"cheer-day"}, phrase),
+    line ? h("p",{class:"phr"}, ic("clock"), h("span",null, line)) : null);
 }
 function restCard(T, list){
   const off = list.find(v => v.kind === "off"), wd = parse(T).getDay();
@@ -1365,11 +1606,12 @@ function restCard(T, list){
   else if (wd === 6){ eb = "Shabbat"; icon = "candle"; }
   else if (wd >= 3 && wd <= 5){ eb = "Alternance"; icon = "bag"; }
   return h("section",{class:"card-p rest"},
-    h("div",{class:"day-top"}, h("div",null, h("p",{class:"eb"}, eb), h("h2",null, off ? (off.note || "Journée off.") : dayKind(T))), h("span",{class:"ri"}, ic(icon))));
+    h("div",{class:"day-top"}, h("div",null, h("p",{class:"eb"}, eb), h("h2",null, off ? (off.note || "Journée off.") : dayKind(T))), h("span",{class:"ri"}, ic(icon))),
+    h("p",{class:"t cheer", id:"cheer-day"}, cheer(restCheerKey(T, list), T)));
 }
 function skippedCard(T){
   return h("section",{class:"card-p rest"},
-    h("div",{class:"day-top"}, h("div",null, h("p",{class:"eb"},"Journée reportée"), h("h2",null,"Pas de souci."),
+    h("div",{class:"day-top"}, h("div",null, h("p",{class:"eb"},"Journée reportée"), h("h2",{id:"cheer-day"}, cheer("reporte", T)),
       h("p",{class:"t"},"Tout ce qui était prévu aujourd'hui a glissé sur les prochaines séances.")), h("span",{class:"ri"}, ic("moon"))),
     h("div",{class:"acts"}, h("button",{type:"button", class:"btn", id:"unskip-day", onclick:()=>skipDay(T,false)}, "En fait, j'ai pu travailler")));
 }
@@ -1416,10 +1658,11 @@ function nextDayBlock(T){
 function screenToday(){
   const T = today(), list = sessionsOn(T), work = list.filter(v => v.kind !== "off");
   const daySkipped = !!skips[T];
+  const rh = rhythm(), behind = behindUEs(rh), showBehind = behind.length > 0 && work.length > 0 && !daySkipped;
   const main = h("div",{class:"col-main"}), side = h("div",{class:"col-side"});
   main.append(dhead((new Date().getHours() >= 18 ? "Bonsoir" : "Bonjour")+" Yoel", fDay(T)));
   const row = h("div",{class:"drow"});
-  row.append(work.length && !daySkipped ? dayCard(work) : daySkipped ? skippedCard(T) : restCard(T, list));
+  row.append(work.length && !daySkipped ? dayCard(work, {rh, behind:showBehind}) : daySkipped ? skippedCard(T) : restCard(T, list));
   if (meta && meta.message) row.append(coachNote());
   main.append(row);
   if (work.length && !daySkipped){
@@ -1432,9 +1675,7 @@ function screenToday(){
     main.append(agenda(list, {today:true, heroId: hero && hero.id}));
     main.append(h("button",{type:"button", class:"skip no-wide", id:"skip-day", onclick:()=>confirmSkipDay(T)}, ic("moon"), "Je n'ai pas pu travailler aujourd'hui"));
   }
-  const rh = rhythm();
-  const behind = UE_LIST.filter(u => rh[u].delta < -45).sort((a,b)=>rh[a].delta-rh[b].delta);
-  if (behind.length && work.length && !daySkipped) main.append(h("aside",{class:"behind"}, ic("warn"), h("p",null, h("b",null,"À rattraper : "), behind.slice(0,3).map(u => UEN[u]).join(", ")+".",
+  if (showBehind) main.append(h("aside",{class:"behind"}, ic("warn"), h("p",null, h("b",null,"À rattraper : "), behind.slice(0,3).map(u => UEN[u]).join(", ")+".",
     " La suite est déjà décalée.")));
   side.append(summitCard("today"));
   const wid = weekIdFor(T), wm = PLAN.weeks.find(w => w.id === wid);
@@ -1509,7 +1750,9 @@ function streakBlock(){
       h("p",{class:"st-leg", "aria-hidden":"true"}, h("span",null, h("i",{class:"ok"}), "Réussie"), h("span",null, h("i",{class:"neu"}), "Repos ou pause"), h("span",null, h("i"), "Pas cochée"), h("span",null, h("i",{class:"pend"}), "Aujourd'hui")))];
 }
 function screenProgress(){
-  const rh = rhythm(); const out = [dhead(fDay(today()), "Progrès"), summitCard("progress"), ...nextStep(ascent(rh)), ...streakBlock()];
+  const rh = rhythm(), T0 = today();
+  const pk = isFirstWeek(T0) ? "debut" : examKey() || paceKey(rh.all.delta);   // une phrase pour l'état général
+  const out = [dhead(fDay(T0), "Progrès"), summitCard("progress"), h("p",{class:"cheer pg", id:"cheer-pg"}, cheer(pk, T0)), ...nextStep(ascent(rh)), ...streakBlock()];
   out.push(sec("Par matière", "fin prévue"));
   const ul = h("ul",{class:"subjects"});
   for (const u of UE_LIST){
@@ -1852,7 +2095,7 @@ function openParty(T, backId, o){
     h("p",{class:"pt-rec num", id:"party-d"}, plural(goal.length,"séance")+" · "+hmd(tot)+" de travail"),
     h("p",{class:"pt-st num", id:"party-s"}, flameIc(sk.cur > 0), streakText(sk.cur)),
     badges.length ? h("p",{class:"pt-badges", id:"party-b"}, badges) : null,
-    h("p",{class:"pt-calm", id:"party-c"}, "Repose-toi, la suite est prête."),
+    h("p",{class:"pt-calm", id:"party-c"}, cheer("fini", T)),
     btn);
   const conf = h("div",{class:"pt-conf", "aria-hidden":"true"});
   const C = ["#ffc247","#ff7a59","#ffd27a","#ffe6a8","#ff9e82","#ffb23e"];
@@ -1903,7 +2146,7 @@ function fcMuted(){ try{ return localStorage.getItem(FC_MUTE) === "1"; }catch(e)
 function fcSave(){
   try{
     if (!fc){ localStorage.removeItem(FC_KEY); return; }
-    localStorage.setItem(FC_KEY, JSON.stringify({sid:fc.sid, phase:fc.phase, endAt:fc.endAt, remaining:fc.remaining, paused:fc.paused, rounds:fc.rounds, startedAt:fc.startedAt, fresh:fc.fresh, over:fc.over}));
+    localStorage.setItem(FC_KEY, JSON.stringify({sid:fc.sid, phase:fc.phase, endAt:fc.endAt, remaining:fc.remaining, paused:fc.paused, rounds:fc.rounds, bw:fc.bw || 0, bp:fc.bp || 0, startedAt:fc.startedAt, fresh:fc.fresh, over:fc.over}));
   }catch(e){}
 }
 function fcSay(t){ const el = document.getElementById("fc-live"); if (!el) return; el.textContent = ""; setTimeout(() => { el.textContent = fr(t); }, 60); }
@@ -1947,7 +2190,7 @@ function openFocus(sid, saved){
   if (fcEl || !canFocus(v)) return;
   if (sheetState) closeSheet();
   fcBack = document.activeElement && document.activeElement.id || null;
-  fc = saved || {sid, phase:"work", endAt:null, remaining:FC_LEN.work, paused:true, rounds:0, startedAt:Date.now(), fresh:true, over:false};
+  fc = saved || {sid, phase:"work", endAt:null, remaining:FC_LEN.work, paused:true, rounds:0, bw:0, bp:0, startedAt:Date.now(), fresh:true, over:false};
   fc.v = v; fcSnap = null; fcAll = false; fcConf = false;
   const mute = h("button",{type:"button", class:"fc-mute", id:"fc-mute", "aria-label":"Couper le son", "aria-pressed":String(fcMuted()), onclick:fcToggleMute}, ic(fcMuted() ? "mute" : "sound"));
   fcEl = h("div",{class:"focus", id:"focus", role:"dialog", "aria-modal":"true", "aria-label":"Mode concentration"},
@@ -1984,13 +2227,18 @@ function focusResume(){
     (s.paused || s.over ? true : Number.isFinite(s.endAt)) && canFocus(slotView(s.sid));
   if (!ok){ try{ localStorage.removeItem(FC_KEY); }catch(e){} return; }
   const st = {sid:s.sid, phase:s.phase, endAt:Number(s.endAt) || 0, remaining:Math.max(0, Math.min(FC_LEN[s.phase], Number(s.remaining) || 0)),
-    paused:!!s.paused, rounds:Math.max(0, Math.floor(Number(s.rounds) || 0)), startedAt:Number(s.startedAt), fresh:!!s.fresh, over:!!s.over};
+    paused:!!s.paused, rounds:Math.max(0, Math.floor(Number(s.rounds) || 0)), bw:Math.max(0, Math.floor(Number(s.bw) || 0)), bp:Math.max(0, Math.floor(Number(s.bp) || 0)), startedAt:Number(s.startedAt), fresh:!!s.fresh, over:!!s.over};
   if (st.fresh){ st.paused = true; st.remaining = FC_LEN.work; st.phase = "work"; }
   openFocus(s.sid, st);
 }
 function fcHead(v){
   return h("header",{class:"fc-ses", style:"--ue:"+col(v.ue)},
     h("p",{class:"fc-ue"}, h("i"), v.ue ? ueName(v.ue) : (KIND[v.kind] || "Séance")), h("h2",{id:"fc-t"}, titleOf(v)));
+}
+/* la petite phrase du bloc (CHEER.focusTravail / focusPause) : fixe pendant un bloc, différente au bloc suivant */
+function fcLine(phase, ahead){   // ahead : la phrase du prochain bloc (écran « Pause finie »)
+  const w = phase === "work", k = w ? "focusTravail" : "focusPause", b = CHEER[k], n = (fc && (w ? fc.bw : fc.bp) || 0) + (ahead ? 1 : 0);   // un compteur par phase
+  return b[(cheerRaw(k, today()+"|"+(fc ? fc.sid : "")) + n) % b.length];
 }
 function fcRoundText(){
   const r = fc.rounds, tour = fc.phase === "work" && !fc.over ? r+1 : Math.max(1, r);
@@ -2025,7 +2273,7 @@ function fcRunView(v){
   const timer = h("div",{class:"fc-ring"+(work ? "" : " brk"), role:"timer", id:"fc-timer"}, ring, time, fc.paused && !fc.fresh ? h("small",{"aria-hidden":"true"},"En pause") : null);
   fcR = {time, timer, pg: ring.querySelector(".pg")};
   const go = fc.fresh ? [ic("play"), "Démarrer"] : fc.paused ? [ic("play"), "Reprendre"] : [ic("pause"), work ? "Pause" : "Suspendre"];
-  const say = fc.fresh ? "25 min de travail, puis 5 min de pause." : work ? "Une chose à la fois." : "Lève-toi, bois un verre d'eau.";
+  const say = fc.fresh ? "25 min de travail, puis 5 min de pause." : fcLine(fc.phase);
   return [fcHead(v), h("div",{class:"fc-grid"},
     h("div",{class:"fc-main"},
       h("p",{class:"fc-ph"+(work ? "" : " brk")+(run ? " run" : "")}, h("i",{"aria-hidden":"true"}), work ? "Travail" : "Pause"),
@@ -2044,7 +2292,7 @@ function fcEndView(v){
     return [fcHead(v), h("section",{class:"fc-end", "aria-labelledby":"fc-end-t"},
       h("p",{class:"eb num"}, fcRoundText()),
       h("h3",{id:"fc-end-t"},"Pause finie. On reprend ?"),
-      h("p",{class:"s"},"Une chose à la fois."),
+      h("p",{class:"s"}, fcLine("work", true)),
       h("div",{class:"fc-acts"}, btn("fe-work","Reprendre 25 min", fcStartWork, true), btn("fe-quit","Quitter", fcQuit)))];
   // ce qui restait à cocher quand le bloc s'est terminé (la liste ne bouge pas pendant que tu coches)
   if (!fcSnap || fcSnap.sid !== v.id || fcSnap.ue !== v.ue) fcSnap = {sid:v.id, ue:v.ue, ns: v.content ? v.items.filter(n => !isDoneItem(v.ue, n)) : []};
@@ -2100,8 +2348,8 @@ function fcStart(phase){
   fcSound();   // le son se débloque pendant un geste (iPhone)
   if (fcConf) fcConfirmClose(true);
   fc.phase = phase; fc.remaining = FC_LEN[phase]; fc.endAt = Date.now() + FC_LEN[phase];
-  fc.paused = false; fc.fresh = false; fc.over = false; fcSnap = null;
-  fcSay(phase === "work" ? "Travail : 25 minutes. Une chose à la fois." : "Pause : 5 minutes. Lève-toi, bois un verre d'eau.");
+  fc.paused = false; fc.fresh = false; fc.over = false; fcSnap = null; if (phase === "work") fc.bw = (fc.bw || 0) + 1; else fc.bp = (fc.bp || 0) + 1;
+  fcSay((phase === "work" ? "Travail : 25 minutes. " : "Pause : 5 minutes. ")+fcLine(phase));
   fcAfter();
 }
 const fcStartWork = () => fcStart("work"), fcStartBreak = () => fcStart("break");
@@ -2243,7 +2491,7 @@ function render(){
 function refresh(){ render(); if (sheetState) renderSheet(); if (fcEl) renderFocus(); }
 window.addEventListener("hashchange", () => { if (sheetState) closeSheet(); render(); });
 window.__dcg = {projectedEnd:u=>projectedEnd(u), unplaced:()=>SCHED.unplaced, rhythm:()=>rhythm(),
-  streak:()=>{ const x = streakInfo(); return {cur:x.cur, best:x.best, today:x.today, days:Object.fromEntries(x.res)}; }, streakCount, ascent:()=>ascent()};
+  streak:()=>{ const x = streakInfo(); return {cur:x.cur, best:x.best, today:x.today, days:Object.fromEntries(x.res)}; }, streakCount, ascent:()=>ascent(), cheer:(k,d)=>cheer(k,d)};
 
 /* ================= sauvegarde : ce téléphone + GitHub ================= */
 const GH = {owner:"yoeldahan", repo:"plan-dcg", branch:"data"};
