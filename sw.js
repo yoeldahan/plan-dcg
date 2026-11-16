@@ -1,6 +1,6 @@
 /* Plan DCG : fonctionne aussi hors ligne */
-const V = "plan-dcg-v1";
-const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./logo.svg"];
+const V = "plan-dcg-v2";
+const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./logo.svg"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
@@ -20,8 +20,10 @@ self.addEventListener("fetch", e => {
     return;
   }
   if (u.hostname === "fonts.googleapis.com" || u.hostname === "fonts.gstatic.com"){
+    // polices Sora et Inter : gardées pour le hors-ligne
     e.respondWith(caches.match(e.request).then(r => r || fetch(e.request).then(res => {
-      const cl = res.clone(); caches.open(V).then(c => c.put(e.request, cl)); return res;
+      if (res.ok || res.type === "opaque"){ const cl = res.clone(); caches.open(V).then(c => c.put(e.request, cl)); }
+      return res;
     })));
   }
 });

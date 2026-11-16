@@ -6,8 +6,8 @@
  "scope": "./",
  "display": "standalone",
  "orientation": "portrait",
- "background_color": "#14382f",
- "theme_color": "#14382f",
+ "background_color": "#141a3f",
+ "theme_color": "#141a3f",
  "lang": "fr",
  "description": "Ton planning DCG qui s'adapte. Pas à pas, jusqu'au sommet.",
  "icons": [
