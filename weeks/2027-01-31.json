@@ -1,0 +1,341 @@
+{
+"week": "2027-01-31",
+"n": 11,
+"phase": 1,
+"sessions": [
+{
+"id": "2027-01-31-1030",
+"date": "2027-01-31",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE13",
+"kind": "cours",
+"title": "M3 → Rapport · Version intégrale",
+"items": [
+{
+"k": "L",
+"t": "Les outils de la communication orale",
+"m": 40
+},
+{
+"k": "T",
+"t": "Assemble le rapport intégral : introduction, conclusion, sommaire, annexes",
+"m": 120
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-01-31-1315",
+"date": "2027-01-31",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-01-31-1415",
+"date": "2027-01-31",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "cours",
+"title": "M8 · Les amortissements",
+"items": [
+{
+"k": "L",
+"t": "Généralités sur les travaux d'inventaire",
+"m": 40
+},
+{
+"k": "L",
+"t": "La notion d'amortissement",
+"m": 40
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-01-0900",
+"date": "2027-02-01",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M8 · Les amortissements",
+"items": [
+{
+"k": "L",
+"t": "La terminologie des amortissements",
+"m": 40
+},
+{
+"k": "L",
+"t": "Le plan d'amortissement linéaire",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Jacson",
+"m": 30
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-01-1100",
+"date": "2027-02-01",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M8 · Traiter des données avec le tableur",
+"items": [
+{
+"k": "L",
+"t": "Fonctions de dénombrement et de dates",
+"m": 55
+},
+{
+"k": "L",
+"t": "Fonctions de recherche",
+"m": 55
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-01-1400",
+"date": "2027-02-01",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M6 · Analyser la régulation publique",
+"items": [
+{
+"k": "L",
+"t": "La coordination des politiques conjoncturelles dans la zone euro",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les politiques structurelles nationales et européennes",
+"m": 50
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-01-1545",
+"date": "2027-02-01",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "cours",
+"title": "M6 · Déterminer l'étendue du droit d'une personne sur ses biens",
+"items": [
+{
+"k": "L",
+"t": "La protection par le brevet et la marque",
+"m": 45
+},
+{
+"k": "L",
+"t": "La protection par le droit d'auteur",
+"m": 45
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-0900",
+"date": "2027-02-02",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M8 · Les amortissements",
+"items": [
+{
+"k": "C",
+"t": "Cas Robert",
+"m": 15
+},
+{
+"k": "C",
+"t": "Cas David",
+"m": 20
+},
+{
+"k": "C",
+"t": "Cas Marchand",
+"m": 20
+},
+{
+"k": "L",
+"t": "Le plan d'amortissement par unités d'œuvre",
+"m": 40
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1100",
+"date": "2027-02-02",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "cours",
+"title": "M8 · Traiter des données avec le tableur",
+"items": [
+{
+"k": "L",
+"t": "L'ergonomie de la feuille de calcul",
+"m": 55
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1215",
+"date": "2027-02-02",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M7 · The digital revolution",
+"items": [
+{
+"k": "L",
+"t": "The age of digital society",
+"m": 30
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1400",
+"date": "2027-02-02",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M4 · Le management organisationnel",
+"items": [
+{
+"k": "L",
+"t": "Les théories de la contingence structurelle",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les configurations de Mintzberg",
+"m": 50
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1600",
+"date": "2027-02-02",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M6 → M7 · Les politiques sociales face aux déséquilibres du marché du travail",
+"items": [
+{
+"k": "A",
+"t": "Application : Analyser la régulation publique",
+"m": 45
+},
+{
+"k": "L",
+"t": "Le marché du travail",
+"m": 50
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1715",
+"date": "2027-02-02",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M7 · The digital revolution",
+"items": [
+{
+"k": "V",
+"t": "New technologies (vidéo 30 min) (1re partie)",
+"m": 30
+}
+],
+"week": "2027-01-31"
+},
+{
+"id": "2027-02-02-1800",
+"date": "2027-02-02",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2027-01-31"
+}
+],
+"milestones": [
+{
+"date": "2027-02-07",
+"t": "Dépôt de la partie 3 du rapport UE13"
+},
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

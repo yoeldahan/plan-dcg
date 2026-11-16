@@ -1,0 +1,357 @@
+{
+"week": "2027-02-21",
+"n": 14,
+"phase": 1,
+"sessions": [
+{
+"id": "2027-02-21-1030",
+"date": "2027-02-21",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE1",
+"kind": "cours",
+"title": "M7 · Accompagner le client dans ses relations contractuelles",
+"items": [
+{
+"k": "L",
+"t": "La portée d'un engagement contractuel",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les clauses contractuelles",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les sanctions de l'inexécution du contrat",
+"m": 45
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-21-1315",
+"date": "2027-02-21",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-21-1415",
+"date": "2027-02-21",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "cours",
+"title": "M10 · Les cessions d'immobilisations et de VMP",
+"items": [
+{
+"k": "L",
+"t": "Les cessions de titres immobilisés",
+"m": 40
+},
+{
+"k": "L",
+"t": "Les cessions de VMP",
+"m": 40
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-22-0900",
+"date": "2027-02-22",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M10 · Les cessions d'immobilisations et de VMP",
+"items": [
+{
+"k": "L",
+"t": "Synthèse des cessions de titres",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Lazare",
+"m": 30
+},
+{
+"k": "C",
+"t": "Cas Revel",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Houffard (bonus, si tu as le temps)",
+"m": 60
+},
+{
+"k": "B",
+"t": "Cas Terron (bonus, si tu as le temps)",
+"m": 75
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-22-1100",
+"date": "2027-02-22",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M9 · Le SI et la performance des processus",
+"items": [
+{
+"k": "L",
+"t": "Processus et bases de données",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les progiciels au service des processus",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les technologies émergentes et la performance du SI",
+"m": 45
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-22-1400",
+"date": "2027-02-22",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M7 · Les politiques sociales face aux déséquilibres du marché du travail",
+"items": [
+{
+"k": "L",
+"t": "Pourquoi et comment lutter contre les inégalités",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les modèles de protection sociale",
+"m": 50
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-22-1545",
+"date": "2027-02-22",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "exercices",
+"title": "M7 · Accompagner le client dans ses relations contractuelles",
+"items": [
+{
+"k": "A",
+"t": "Application : Accompagner le client dans ses relations contractuelles",
+"m": 45
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-0900",
+"date": "2027-02-23",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M10 → M11 · Les autres opérations d'inventaire",
+"items": [
+{
+"k": "C",
+"t": "Cas Manuel",
+"m": 25
+},
+{
+"k": "L",
+"t": "Les variations de stocks : généralités",
+"m": 40
+},
+{
+"k": "L",
+"t": "Les écritures de variation de stocks",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Lacroix",
+"m": 20
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1100",
+"date": "2027-02-23",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "exercices",
+"title": "M9 · Le SI et la performance des processus",
+"items": [
+{
+"k": "A",
+"t": "Méthodologie DCG UE8 : étudier les processus",
+"m": 50
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1215",
+"date": "2027-02-23",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M8 · Understanding what is at stake with energy",
+"items": [
+{
+"k": "L",
+"t": "A double constraint",
+"m": 30
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1400",
+"date": "2027-02-23",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M5 · Le management opérationnel",
+"items": [
+{
+"k": "L",
+"t": "La recherche et développement",
+"m": 50
+},
+{
+"k": "L",
+"t": "La fonction ressources humaines",
+"m": 50
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1600",
+"date": "2027-02-23",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M7 → M8 · Les effets et les enjeux de la mondialisation",
+"items": [
+{
+"k": "A",
+"t": "Application : Les politiques sociales et le marché du travail",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les transformations du commerce mondial",
+"m": 50
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1715",
+"date": "2027-02-23",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M8 · Understanding what is at stake with energy",
+"items": [
+{
+"k": "L",
+"t": "Towards the end of fossil fuels",
+"m": 30
+},
+{
+"k": "L",
+"t": "Shifting to renewable energies",
+"m": 30
+}
+],
+"week": "2027-02-21"
+},
+{
+"id": "2027-02-23-1800",
+"date": "2027-02-23",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2027-02-21"
+}
+],
+"milestones": [
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

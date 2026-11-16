@@ -1,0 +1,41 @@
+{
+"week": "2027-05-23",
+"n": 27,
+"phase": 3,
+"sessions": [
+{
+"id": "2027-05-23-1030",
+"date": "2027-05-23",
+"start": "10:30",
+"end": "12:30",
+"ue": null,
+"kind": "revision",
+"title": "Dernière révision, en douceur",
+"items": [
+{
+"k": "T",
+"t": "Relis tes fiches des 2 premières épreuves de la semaine"
+},
+{
+"k": "T",
+"t": "Prépare ta convocation, ta pièce d'identité, ta calculatrice et tes stylos"
+},
+{
+"k": "T",
+"t": "Couche-toi tôt : le sommeil fait partie de la révision"
+}
+],
+"week": "2027-05-23"
+}
+],
+"milestones": [
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

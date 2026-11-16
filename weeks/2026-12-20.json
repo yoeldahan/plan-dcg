@@ -1,0 +1,363 @@
+{
+"week": "2026-12-20",
+"n": 5,
+"phase": 1,
+"sessions": [
+{
+"id": "2026-12-20-1030",
+"date": "2026-12-20",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE13",
+"kind": "rapport",
+"title": "Rapport · Parties 1 et 2",
+"items": [
+{
+"k": "T",
+"t": "Rédige la partie 2 : la situation de communication (contexte, acteurs, outils, analyse)",
+"m": 120
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-20-1315",
+"date": "2026-12-20",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-20-1415",
+"date": "2026-12-20",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "cours",
+"title": "M4 → M5 · La TVA : mécanisme et enregistrements",
+"items": [
+{
+"k": "C",
+"t": "Cas Fargue",
+"m": 60
+},
+{
+"k": "L",
+"t": "Le principe de la TVA",
+"m": 40
+},
+{
+"k": "B",
+"t": "Cas Luchot (bonus, si tu as le temps)",
+"m": 90
+},
+{
+"k": "B",
+"t": "Cas DB (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Tio Pepe (bonus, si tu as le temps)",
+"m": 30
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-21-0900",
+"date": "2026-12-21",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M5 · La TVA : mécanisme et enregistrements",
+"items": [
+{
+"k": "L",
+"t": "Déductibilité, fait générateur et exigibilité",
+"m": 40
+},
+{
+"k": "L",
+"t": "Comptabiliser la TVA : biens, et prestations avec option sur les débits",
+"m": 40
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-21-1100",
+"date": "2026-12-21",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M4 → M5 · Les solutions informatiques du SI",
+"items": [
+{
+"k": "L",
+"t": "Le rôle des protocoles",
+"m": 45
+},
+{
+"k": "A",
+"t": "Méthodologie DCG UE8 : comprendre l'infrastructure technique",
+"m": 50
+},
+{
+"k": "L",
+"t": "Solutions standardisées ou développées",
+"m": 45
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-21-1400",
+"date": "2026-12-21",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M4 · Financer l'activité économique",
+"items": [
+{
+"k": "L",
+"t": "Les déterminants de l'investissement des entreprises",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les modalités de financement de l'investissement",
+"m": 50
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-21-1545",
+"date": "2026-12-21",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "cours",
+"title": "M3 → M4 · Qualifier la personne juridique et ses biens",
+"items": [
+{
+"k": "A",
+"t": "Application : Déterminer la juridiction et le mode de résolution d'un litige",
+"m": 45
+},
+{
+"k": "L",
+"t": "La personne juridique : existence, attributs et capacité",
+"m": 45
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-0900",
+"date": "2026-12-22",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M5 · La TVA : mécanisme et enregistrements",
+"items": [
+{
+"k": "L",
+"t": "Comptabiliser la TVA : prestations selon le droit commun",
+"m": 40
+},
+{
+"k": "L",
+"t": "Le calcul et la comptabilisation de la TVA à décaisser",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Spot",
+"m": 30
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1100",
+"date": "2026-12-22",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "cours",
+"title": "M5 · Les solutions informatiques du SI",
+"items": [
+{
+"k": "L",
+"t": "La gestion de projets numériques",
+"m": 45
+},
+{
+"k": "L",
+"t": "L'interopérabilité et les formats d'échange",
+"m": 45
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1215",
+"date": "2026-12-22",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M4 · Corporate Social Responsibility",
+"items": [
+{
+"k": "L",
+"t": "Corporate Social Responsibility",
+"m": 30
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1400",
+"date": "2026-12-22",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M3 · Le management stratégique",
+"items": [
+{
+"k": "L",
+"t": "La démarche stratégique",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les outils d'analyse de l'environnement",
+"m": 50
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1600",
+"date": "2026-12-22",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M4 · Financer l'activité économique",
+"items": [
+{
+"k": "L",
+"t": "La monnaie et le rôle des banques",
+"m": 50
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1715",
+"date": "2026-12-22",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M4 · Corporate Social Responsibility",
+"items": [
+{
+"k": "L",
+"t": "Environmental, social and governance factors",
+"m": 30
+},
+{
+"k": "L",
+"t": "Corporate ESG strategies",
+"m": 30
+}
+],
+"week": "2026-12-20"
+},
+{
+"id": "2026-12-22-1800",
+"date": "2026-12-22",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2026-12-20"
+}
+],
+"milestones": [
+{
+"date": "2027-01-10",
+"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+},
+{
+"date": "2027-01-17",
+"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+},
+{
+"date": "2027-01-26",
+"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+},
+{
+"date": "2027-02-07",
+"t": "Dépôt de la partie 3 du rapport UE13"
+},
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

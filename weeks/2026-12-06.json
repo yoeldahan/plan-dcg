@@ -1,0 +1,368 @@
+{
+"week": "2026-12-06",
+"n": 3,
+"phase": 1,
+"sessions": [
+{
+"id": "2026-12-06-1030",
+"date": "2026-12-06",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE13",
+"kind": "rapport",
+"title": "Rapport · Préparer",
+"items": [
+{
+"k": "T",
+"t": "Fais le plan du rapport : parties 1, 2 et 3",
+"m": 60
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-06-1315",
+"date": "2026-12-06",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-06-1415",
+"date": "2026-12-06",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "cours",
+"title": "M3 · Le compte de résultat et le bilan",
+"items": [
+{
+"k": "L",
+"t": "Le passif : capitaux propres et autres fonds propres",
+"m": 40
+},
+{
+"k": "L",
+"t": "Le passif : provisions et dettes",
+"m": 40
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-07-0900",
+"date": "2026-12-07",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M3 → M4 · Les mécanismes de la partie double",
+"items": [
+{
+"k": "C",
+"t": "Cas Louis",
+"m": 20
+},
+{
+"k": "L",
+"t": "Les écritures comptables",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Z",
+"m": 45
+},
+{
+"k": "B",
+"t": "Cas Alpha (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Gama (bonus, si tu as le temps)",
+"m": 90
+},
+{
+"k": "B",
+"t": "Cas Dulac (bonus, si tu as le temps)",
+"m": 45
+},
+{
+"k": "B",
+"t": "Cas Lachepaille (bonus, si tu as le temps)",
+"m": 20
+},
+{
+"k": "B",
+"t": "Cas Léon (bonus, si tu as le temps)",
+"m": 30
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-07-1100",
+"date": "2026-12-07",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M3 · Le SI dans son environnement : les acteurs",
+"items": [
+{
+"k": "L",
+"t": "Les interactions de la DSI avec les autres directions",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les compétences numériques attendues des utilisateurs",
+"m": 45
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-07-1400",
+"date": "2026-12-07",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M3 · Comprendre le fonctionnement des marchés",
+"items": [
+{
+"k": "L",
+"t": "Les défaillances du marché",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les monopoles",
+"m": 50
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-07-1545",
+"date": "2026-12-07",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "cours",
+"title": "M3 · Déterminer le mode de résolution adapté à un litige",
+"items": [
+{
+"k": "L",
+"t": "Les conditions de recevabilité de l'action en justice",
+"m": 45
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-0900",
+"date": "2026-12-08",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M4 · Les mécanismes de la partie double",
+"items": [
+{
+"k": "L",
+"t": "Les enregistrements comptables simples",
+"m": 40
+},
+{
+"k": "L",
+"t": "La présentation de la comptabilisation des opérations",
+"m": 40
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1100",
+"date": "2026-12-08",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "cours",
+"title": "M3 → M4 · L'infrastructure technique du SI",
+"items": [
+{
+"k": "A",
+"t": "Méthodologie DCG UE8 : identifier les acteurs du SI",
+"m": 50
+},
+{
+"k": "L",
+"t": "Les moyens d'accès au SI",
+"m": 45
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1215",
+"date": "2026-12-08",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M2 → M3 · Companies and their stakeholders",
+"items": [
+{
+"k": "V",
+"t": "Grammaire : la capacité (9 min)",
+"m": 18
+},
+{
+"k": "L",
+"t": "The main actors of a company",
+"m": 30
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1400",
+"date": "2026-12-08",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M2 · Le contexte et les enjeux du management des organisations",
+"items": [
+{
+"k": "L",
+"t": "Continuité et changements organisationnels",
+"m": 50
+},
+{
+"k": "L",
+"t": "La diversité des gouvernances",
+"m": 50
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1600",
+"date": "2026-12-08",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M3 · Comprendre le fonctionnement des marchés",
+"items": [
+{
+"k": "L",
+"t": "Les oligopoles et la concurrence monopolistique",
+"m": 50
+},
+{
+"k": "L",
+"t": "La régulation des marchés et de la concurrence",
+"m": 50
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1715",
+"date": "2026-12-08",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M3 · Companies and their stakeholders",
+"items": [
+{
+"k": "L",
+"t": "Company organization",
+"m": 30
+}
+],
+"week": "2026-12-06"
+},
+{
+"id": "2026-12-08-1800",
+"date": "2026-12-08",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2026-12-06"
+}
+],
+"milestones": [
+{
+"date": "2027-01-10",
+"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+},
+{
+"date": "2027-01-17",
+"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+},
+{
+"date": "2027-01-26",
+"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+},
+{
+"date": "2027-02-07",
+"t": "Dépôt de la partie 3 du rapport UE13"
+},
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

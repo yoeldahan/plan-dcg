@@ -1,0 +1,241 @@
+{
+"week": "2027-04-18",
+"n": 22,
+"phase": 2,
+"sessions": [
+{
+"id": "2027-04-18-1030",
+"date": "2027-04-18",
+"start": "10:30",
+"end": "12:30",
+"ue": null,
+"kind": "revision",
+"title": "Révision des fiches",
+"items": [
+{
+"k": "T",
+"t": "Relis les fiches des 2 UE que tu maîtrises le moins (ta note la plus basse aux examens blancs)"
+},
+{
+"k": "T",
+"t": "Refais 2 applications de ces UE sans regarder la correction"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-18-1315",
+"date": "2027-04-18",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-18-1415",
+"date": "2027-04-18",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE12",
+"kind": "certificat",
+"title": "Certificat Studi (QCM)",
+"items": [
+{
+"k": "T",
+"t": "Passe le certificat Studi de l'UE12 (Évaluations > DCG 2026) : il est obligatoire pour ton diplôme Studi"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-19-0900",
+"date": "2027-04-19",
+"start": "09:00",
+"end": "13:00",
+"ue": "UE5",
+"kind": "examen",
+"title": "Examen blanc · Annale 2026",
+"items": [
+{
+"k": "T",
+"t": "Ouvre l'énoncé « Annale 2026 » dans la Médiathèque : UE > « Corrigés Comptalia – Épreuve nationale du DCG »"
+},
+{
+"k": "T",
+"t": "Conditions réelles : 4 h chrono, sans cours, téléphone dans une autre pièce"
+},
+{
+"k": "T",
+"t": "Rédige comme le jour J, même si tu bloques sur une question"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-19-1400",
+"date": "2027-04-19",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "correction",
+"title": "Correction de l'examen blanc",
+"items": [
+{
+"k": "T",
+"t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"
+},
+{
+"k": "T",
+"t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"
+},
+{
+"k": "T",
+"t": "Option : envoie-moi les photos de ta copie et je te corrige"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-19-1545",
+"date": "2027-04-19",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE5",
+"kind": "reprise",
+"title": "Reprise des points faibles",
+"items": [
+{
+"k": "T",
+"t": "Relis les chapitres où tu as perdu des points et refais leurs applications"
+},
+{
+"k": "T",
+"t": "Refais au propre les questions ratées de l'examen blanc"
+},
+{
+"k": "T",
+"t": "Mets à jour tes fiches et tes cartes Anki"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-20-0900",
+"date": "2027-04-20",
+"start": "09:00",
+"end": "12:00",
+"ue": "UE9",
+"kind": "examen",
+"title": "Examen blanc · Annale 2026",
+"items": [
+{
+"k": "T",
+"t": "Ouvre l'énoncé « Annale 2026 » dans la Médiathèque : UE > « Corrigés Comptalia – Épreuve nationale du DCG »"
+},
+{
+"k": "T",
+"t": "Conditions réelles : 3 h chrono, sans cours, téléphone dans une autre pièce"
+},
+{
+"k": "T",
+"t": "Rédige comme le jour J, même si tu bloques sur une question"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-20-1400",
+"date": "2027-04-20",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE9",
+"kind": "correction",
+"title": "Correction de l'examen blanc",
+"items": [
+{
+"k": "T",
+"t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"
+},
+{
+"k": "T",
+"t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"
+},
+{
+"k": "T",
+"t": "Option : envoie-moi les photos de ta copie et je te corrige"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-20-1545",
+"date": "2027-04-20",
+"start": "15:45",
+"end": "17:45",
+"ue": "UE9",
+"kind": "reprise",
+"title": "Reprise des points faibles",
+"items": [
+{
+"k": "T",
+"t": "Relis les chapitres où tu as perdu des points et refais leurs applications"
+},
+{
+"k": "T",
+"t": "Refais au propre les questions ratées de l'examen blanc"
+},
+{
+"k": "T",
+"t": "Mets à jour tes fiches et tes cartes Anki"
+}
+],
+"week": "2027-04-18"
+},
+{
+"id": "2027-04-20-1800",
+"date": "2027-04-20",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2027-04-18"
+}
+],
+"milestones": [
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

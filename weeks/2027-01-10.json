@@ -1,0 +1,403 @@
+{
+"week": "2027-01-10",
+"n": 8,
+"phase": 1,
+"sessions": [
+{
+"id": "2027-01-10-1030",
+"date": "2027-01-10",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE13",
+"kind": "rapport",
+"title": "Rapport · Partie 3",
+"items": [
+{
+"k": "T",
+"t": "Rédige la partie 3 : première moitié",
+"m": 120
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-10-1315",
+"date": "2027-01-10",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-10-1415",
+"date": "2027-01-10",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "exercices",
+"title": "M6 · Établir et enregistrer les factures",
+"items": [
+{
+"k": "C",
+"t": "Cas AB",
+"m": 15
+},
+{
+"k": "C",
+"t": "Cas Camille",
+"m": 30
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-11-0900",
+"date": "2027-01-11",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M6 · Établir et enregistrer les factures",
+"items": [
+{
+"k": "C",
+"t": "Cas Gustave",
+"m": 60
+},
+{
+"k": "L",
+"t": "L'enregistrement des acquisitions d'immobilisations",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Clatin",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas VM (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Web (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Larive (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Perrouse (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Vedant (bonus, si tu as le temps)",
+"m": 30
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-11-1100",
+"date": "2027-01-11",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M6 → M7 · Structurer et manipuler des données : les bases de données",
+"items": [
+{
+"k": "A",
+"t": "Méthodologie DCG UE8 : analyser la dimension organisationnelle du SI",
+"m": 50
+},
+{
+"k": "L",
+"t": "La collecte des données et les dépendances fonctionnelles",
+"m": 55
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-11-1400",
+"date": "2027-01-11",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M5 · Identifier les enjeux de la croissance économique",
+"items": [
+{
+"k": "L",
+"t": "Le développement durable",
+"m": 50
+},
+{
+"k": "L",
+"t": "Soutenabilité de la croissance et nouvelles logiques économiques",
+"m": 50
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-11-1545",
+"date": "2027-01-11",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "cours",
+"title": "M5 · Accompagner un entrepreneur individuel dans son activité",
+"items": [
+{
+"k": "L",
+"t": "Les types d'entrepreneurs et les conditions d'exercice d'une activité indépendante",
+"m": 45
+},
+{
+"k": "L",
+"t": "Le statut du conjoint de l'entrepreneur et le régime juridique du couple",
+"m": 45
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-0900",
+"date": "2027-01-12",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M7 · Les transactions courantes",
+"items": [
+{
+"k": "L",
+"t": "La consignation et la reprise des emballages",
+"m": 40
+},
+{
+"k": "C",
+"t": "Cas Vallor",
+"m": 30
+},
+{
+"k": "L",
+"t": "Si le client ne rend pas les emballages consignés",
+"m": 40
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1100",
+"date": "2027-01-12",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "cours",
+"title": "M7 · Structurer et manipuler des données : les bases de données",
+"items": [
+{
+"k": "L",
+"t": "Le modèle relationnel et les formes normales",
+"m": 55
+},
+{
+"k": "L",
+"t": "L'implémentation d'une base de données",
+"m": 55
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1215",
+"date": "2027-01-12",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "exercices",
+"title": "M5 · Corporate culture and working conditions",
+"items": [
+{
+"k": "A",
+"t": "Application : Implementing corporate culture",
+"m": 45
+},
+{
+"k": "B",
+"t": "Cas Work-life balance (1re partie) (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Work-life balance (2e partie) (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Ageism (1re partie) (bonus, si tu as le temps)",
+"m": 45
+},
+{
+"k": "B",
+"t": "Cas Ageism (2e partie) (bonus, si tu as le temps)",
+"m": 45
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1400",
+"date": "2027-01-12",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M3 → M4 · Le management organisationnel",
+"items": [
+{
+"k": "A",
+"t": "Application : Le management stratégique",
+"m": 45
+},
+{
+"k": "L",
+"t": "La place de l'humain dans les pratiques managériales",
+"m": 50
+},
+{
+"k": "L",
+"t": "Le comportement organisationnel",
+"m": 50
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1600",
+"date": "2027-01-12",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M5 → M6 · Analyser la régulation publique",
+"items": [
+{
+"k": "A",
+"t": "Application : Les enjeux de la croissance",
+"m": 45
+},
+{
+"k": "L",
+"t": "Les organes de l'action publique",
+"m": 50
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1715",
+"date": "2027-01-12",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M6 · Communication and strategies to be competitive",
+"items": [
+{
+"k": "L",
+"t": "Strategies for growth",
+"m": 30
+},
+{
+"k": "L",
+"t": "Current challenges",
+"m": 30
+}
+],
+"week": "2027-01-10"
+},
+{
+"id": "2027-01-12-1800",
+"date": "2027-01-12",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2027-01-10"
+}
+],
+"milestones": [
+{
+"date": "2027-01-10",
+"t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+},
+{
+"date": "2027-01-17",
+"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+},
+{
+"date": "2027-01-26",
+"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+},
+{
+"date": "2027-02-07",
+"t": "Dépôt de la partie 3 du rapport UE13"
+},
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}

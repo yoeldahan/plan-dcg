@@ -1,0 +1,31 @@
+{
+ "name": "Plan DCG 2027",
+ "short_name": "Plan DCG",
+ "id": "./",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#14382f",
+ "theme_color": "#14382f",
+ "lang": "fr",
+ "description": "Ton planning DCG qui s'adapte. Pas à pas, jusqu'au sommet.",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

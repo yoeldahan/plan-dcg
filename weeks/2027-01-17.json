@@ -1,0 +1,344 @@
+{
+"week": "2027-01-17",
+"n": 9,
+"phase": 1,
+"sessions": [
+{
+"id": "2027-01-17-1030",
+"date": "2027-01-17",
+"start": "10:30",
+"end": "12:30",
+"ue": "UE13",
+"kind": "rapport",
+"title": "Rapport · Partie 3",
+"items": [
+{
+"k": "T",
+"t": "Rédige la partie 3 : seconde moitié, relis et dépose-la sur Studi",
+"m": 120
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-17-1315",
+"date": "2027-01-17",
+"start": "13:15",
+"end": "14:15",
+"ue": null,
+"kind": "revision",
+"title": "Révision de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Révise tes cartes Anki de la semaine (15 min)"
+},
+{
+"k": "T",
+"t": "Refais de tête un exercice que tu as raté cette semaine"
+},
+{
+"k": "T",
+"t": "Complète tes fiches : une page par chapitre terminé"
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-17-1415",
+"date": "2027-01-17",
+"start": "14:15",
+"end": "15:30",
+"ue": "UE9",
+"kind": "exercices",
+"title": "M7 · Les transactions courantes",
+"items": [
+{
+"k": "C",
+"t": "Cas Laplace",
+"m": 30
+},
+{
+"k": "C",
+"t": "Cas Dargent",
+"m": 30
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-18-0900",
+"date": "2027-01-18",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M7 · Les transactions courantes",
+"items": [
+{
+"k": "L",
+"t": "Généralités sur les fiches de paie",
+"m": 40
+},
+{
+"k": "L",
+"t": "Les éléments d'une fiche de paie",
+"m": 40
+},
+{
+"k": "L",
+"t": "La comptabilisation des charges de personnel",
+"m": 40
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-18-1100",
+"date": "2027-01-18",
+"start": "11:00",
+"end": "13:00",
+"ue": "UE8",
+"kind": "cours",
+"title": "M7 · Structurer et manipuler des données : les bases de données",
+"items": [
+{
+"k": "L",
+"t": "Requêtes simples (SQL)",
+"m": 55
+},
+{
+"k": "L",
+"t": "Requêtes complexes (SQL)",
+"m": 55
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-18-1400",
+"date": "2027-01-18",
+"start": "14:00",
+"end": "15:30",
+"ue": "UE5",
+"kind": "cours",
+"title": "M6 · Analyser la régulation publique",
+"items": [
+{
+"k": "L",
+"t": "Les fonctions économiques et sociales de l'État",
+"m": 50
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-18-1545",
+"date": "2027-01-18",
+"start": "15:45",
+"end": "17:00",
+"ue": "UE1",
+"kind": "cours",
+"title": "M5 · Accompagner un entrepreneur individuel dans son activité",
+"items": [
+{
+"k": "L",
+"t": "Les formalités de création d'une entreprise individuelle",
+"m": 45
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-0900",
+"date": "2027-01-19",
+"start": "09:00",
+"end": "10:45",
+"ue": "UE9",
+"kind": "cours",
+"title": "M7 · Les transactions courantes",
+"items": [
+{
+"k": "C",
+"t": "Cas Calman",
+"m": 30
+},
+{
+"k": "C",
+"t": "Cas ESCA",
+"m": 30
+},
+{
+"k": "L",
+"t": "Les modes de règlement des créances et des dettes",
+"m": 40
+},
+{
+"k": "B",
+"t": "Cas Plassard (bonus, si tu as le temps)",
+"m": 30
+},
+{
+"k": "B",
+"t": "Cas Trepalet (bonus, si tu as le temps)",
+"m": 30
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1100",
+"date": "2027-01-19",
+"start": "11:00",
+"end": "12:15",
+"ue": "UE8",
+"kind": "cours",
+"title": "M7 · Structurer et manipuler des données : les bases de données",
+"items": [
+{
+"k": "L",
+"t": "La mise à jour des données",
+"m": 55
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1215",
+"date": "2027-01-19",
+"start": "12:15",
+"end": "13:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M6 · Communication and strategies to be competitive",
+"items": [
+{
+"k": "L",
+"t": "Assessment tools",
+"m": 30
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1400",
+"date": "2027-01-19",
+"start": "14:00",
+"end": "15:45",
+"ue": "UE7",
+"kind": "cours",
+"title": "M4 · Le management organisationnel",
+"items": [
+{
+"k": "L",
+"t": "Conflits, crise et résilience organisationnelle",
+"m": 50
+},
+{
+"k": "L",
+"t": "La nécessité d'animer une organisation",
+"m": 50
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1600",
+"date": "2027-01-19",
+"start": "16:00",
+"end": "17:15",
+"ue": "UE5",
+"kind": "cours",
+"title": "M6 · Analyser la régulation publique",
+"items": [
+{
+"k": "L",
+"t": "Le budget de l'État",
+"m": 50
+},
+{
+"k": "L",
+"t": "Le déficit public et la dette publique",
+"m": 50
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1715",
+"date": "2027-01-19",
+"start": "17:15",
+"end": "18:00",
+"ue": "UE12",
+"kind": "cours",
+"title": "M6 · Communication and strategies to be competitive",
+"items": [
+{
+"k": "L",
+"t": "Communication with stakeholders",
+"m": 30
+},
+{
+"k": "L",
+"t": "Effective communication",
+"m": 30
+}
+],
+"week": "2027-01-17"
+},
+{
+"id": "2027-01-19-1800",
+"date": "2027-01-19",
+"start": "18:00",
+"end": "18:10",
+"ue": null,
+"kind": "bilan",
+"title": "Bilan de la semaine",
+"items": [
+{
+"k": "T",
+"t": "Coche ce que tu as fini cette semaine dans ton planning"
+},
+{
+"k": "T",
+"t": "Note ce qui t'a posé problème : je t'envoie une notification à 18 h 20 pour en parler"
+}
+],
+"week": "2027-01-17"
+}
+],
+"milestones": [
+{
+"date": "2027-01-17",
+"t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"
+},
+{
+"date": "2027-01-26",
+"t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"
+},
+{
+"date": "2027-02-07",
+"t": "Dépôt de la partie 3 du rapport UE13"
+},
+{
+"date": "2027-02-21",
+"t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"
+},
+{
+"date": "2027-03-16",
+"t": "Fin du premier passage : tout le programme est vu une fois"
+},
+{
+"date": "2027-04-01",
+"t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+},
+{
+"date": "2027-05-24",
+"t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+},
+{
+"date": "2027-06-11",
+"t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
+}
+]
+}
