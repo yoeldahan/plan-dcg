@@ -294,7 +294,17 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .wcount{font:500 13.5px/1.3 var(--f-text);color:var(--ink2);margin-top:7px}
 .ms-w{margin-top:12px}
 .ms-w li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-left:3px solid var(--gold2);background:var(--gold-soft);border-radius:0 10px 10px 0;font:500 14.5px/1.4 var(--f-text);margin-top:8px}
-.ms-w .ic{width:18px;height:18px;margin-top:1px}
+.ms-w .ic{width:18px;height:18px;margin-top:1px;flex:none}
+.ms-w li[style]{border-left-color:var(--ue)}
+.ms-w small{display:block;margin-top:2px;color:var(--ink2);font-size:13.5px}
+.ms-w .ms-ue{font-weight:600;white-space:nowrap}
+.ms-w .ms-ue i{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--ue);margin-right:5px;vertical-align:1px}
+.ms-w.top{margin:4px 0 10px}
+.wk .d{position:relative}
+.wk .msd{position:absolute;top:5px;right:5px;width:6px;height:6px;border-radius:50%;background:var(--gold2)}
+.modh{margin:16px 0 4px;padding:2px 0 2px 10px;border-left:3px solid var(--ue,var(--gold2));font:600 14.5px/1.35 var(--f-display);color:var(--ink)}
+.where{margin-top:12px;font:500 13.5px/1.4 var(--f-text);color:var(--ink3)}
+.muted.small{font-size:13.5px;margin-top:6px}
 .back{margin-top:14px}
 .empty{color:var(--ink2);padding:18px 4px;font:500 15px/1.4 var(--f-text)}
 
@@ -761,7 +771,7 @@ const HINT = {
   libre:"Tu es en avance sur cette matière. Révise tes fiches, ou ajoute une séance."
 };
 const OFF_DATES = {"2027-04-22":"Pessah","2027-04-23":"Pessah","2027-04-28":"Pessah","2027-04-29":"Pessah","2027-06-11":"Chavouot","2027-06-12":"Chavouot"};
-const EXAM_DAY = new Date(2027,4,25);
+const EXAM_DAY = (s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); })(PLAN.exam || "2027-05-25");
 const CK = new Set(["cours","exercices","rapport"]);           // créneaux de contenu
 const TRACKED = new Set(["cours","exercices","rapport","rattrapage","examen","correction","reprise","certificat"]);
 const LINK = "https://claude.ai/artifact/7etd7P317B1ZNDJUCViUNb";
@@ -1511,16 +1521,33 @@ function dayKind(d){
 function weekDays(wid){ const s = parse(wid); s.setDate(s.getDate()-s.getDay()); return [0,1,2,3,4,5,6].map(i => { const x = new Date(s); x.setDate(s.getDate()+i); return iso(x); }); }
 function dayTile(d, o){
   const vs = sessionsOn(d), tr = vs.filter(v => TRACKED.has(v.kind) && status(v) !== "free");
-  const has = vs.some(v => v.kind !== "off");
+  const has = vs.some(v => v.kind !== "off"), hasMs = msOn(d).length > 0;
   const nd = tr.filter(v => status(v) === "done").length;
   const sr = d <= today() ? streakInfo().res.get(d) : null, won = sr === "ok", neu = sr === "neutral" || sr === "pause";
   const cls = "d"+(has?" plan":" off")+(d===today()?" today":"")+(o.cur?" cur":"")+(skips[d]?" skipd":"")+(neu?" neu":"");
   const kids = [h("span",{class:"l"}, fWd(d)), h("span",{class:"dn num"}, String(parse(d).getDate())),
     h("span",{class:"dots","aria-hidden":"true"}, tr.slice(0,9).map(v => h("i",{class:status(v)==="done"?"f":"", style:"--ue:"+col(v.ue)})))];
+  if (hasMs) kids.push(h("span",{class:"msd", "aria-hidden":"true"}));
   if (won) kids.push(svgEl(WON, {class:"won", viewBox:"0 0 12 14", "aria-hidden":"true"}), h("span",{class:"sr"}, ", journée réussie"));
-  if (!has || !o.onclick) return h("div",{class:cls, "aria-current": d===today() ? "date" : null}, kids);
+  if (!(has || (hasMs && o.pressable)) || !o.onclick) return h("div",{class:cls, "aria-current": d===today() ? "date" : null}, kids);
   return h("button",{type:"button", class:cls, id:(o.pre||"day")+"-"+d, "aria-pressed": o.pressable ? String(!!o.cur) : null, "aria-current": d===today() ? "date" : null,
-    "aria-label": fDay(d)+(tr.length ? ", "+(nd>1?nd+" séances faites":nd+" séance faite")+" sur "+tr.length : "")+(skips[d] ? ", reportée" : "")+(won ? ", journée réussie" : ""), onclick:o.onclick}, kids);
+    "aria-label": fDay(d)+(tr.length ? ", "+(nd>1?nd+" séances faites":nd+" séance faite")+" sur "+tr.length : "")+(skips[d] ? ", reportée" : "")+(won ? ", journée réussie" : "")+(hasMs ? ", une date à noter" : ""), onclick:o.onclick}, kids);
+}
+
+/* ---- dates clés, lives, devoirs (PLAN.milestones) : affichés à part, ils ne changent pas les séances ---- */
+const MS_KIND = {live:"Live", replay:"Replay", devoir:"À rendre", quiz:"Quiz", examen_blanc:"Examen blanc", examen:"Épreuve", info:"À noter"};
+const msOn = d => PLAN.milestones.filter(m => m.date === d);
+const msTime = m => m.start ? fH(m.start)+(m.end ? " – "+fH(m.end) : "") : "";
+function msList(ms, o){
+  o = o || {};
+  return h("ul",{class:"ms-w"+(o.cls ? " "+o.cls : "")}, ms.map(m => h("li",{style:m.ue ? "--ue:"+col(m.ue) : null},
+    ic(m.start ? "clock" : "flag"),
+    h("span",null,
+      o.date ? h("b",null, fShort(m.date)+" · ") : null,
+      m.start ? h("b",{class:"num"}, msTime(m)+" · ") : null,
+      m.ue ? h("span",{class:"ms-ue"}, h("i"), ueName(m.ue)+" · ") : null,
+      m.t,
+      m.note ? h("small",null, m.note) : null))));
 }
 
 /* ---- Aujourd'hui ---- */
@@ -1665,6 +1692,8 @@ function screenToday(){
   row.append(work.length && !daySkipped ? dayCard(work, {rh, behind:showBehind}) : daySkipped ? skippedCard(T) : restCard(T, list));
   if (meta && meta.message) row.append(coachNote());
   main.append(row);
+  const msT = msOn(T);
+  if (msT.length) main.append(sec("À noter aujourd'hui"), msList(msT));
   if (work.length && !daySkipped){
     const current = work.find(isNow);
     const next = work.find(v => v.start > nowHM() && status(v) !== "done" && status(v) !== "skip");
@@ -1683,6 +1712,9 @@ function screenToday(){
   side.append(h("div",{class:"wk"}, weekDays(wid).map(d => dayTile(d, {cur: d===T, pre:"wkt", onclick:()=>{ selWeek = weekIdFor(d); selDay = d; location.hash = "#semaine"; }}))));
   side.append(streakRow());
   side.append(...nextDayBlock(T));
+  const lim = iso(new Date(parse(T).getTime()+21*86400000));
+  const soon = PLAN.milestones.filter(m => m.date > T && m.date <= lim).slice(0, 3);
+  if (soon.length) side.append(sec("Bientôt", "dates clés"), msList(soon, {date:true}));
   return [h("div",{class:"cols"}, main, side)];
 }
 
@@ -1693,7 +1725,7 @@ function screenWeek(){
   if (!ids.includes(selWeek)) selWeek = selWeek < ids[0] ? ids[0] : ids[ids.length-1];
   const idx = ids.indexOf(selWeek), wm = PLAN.weeks[idx];
   const wk = SCHED.slots.filter(s => (s.week || weekIdFor(s.date)) === selWeek || weekIdFor(s.date) === selWeek).map(view_);
-  const days = [...new Set(wk.map(v=>v.date))].sort();
+  const days = [...new Set(wk.map(v=>v.date).concat(PLAN.milestones.filter(m => weekIdFor(m.date)===selWeek).map(m => m.date)))].sort();
   if (!selDay || !days.includes(selDay)) selDay = days.includes(today()) ? today() : (days.find(d=>d>=today()) || days[0]);
   const tracked = wk.filter(v=>TRACKED.has(v.kind) && status(v)!=="free");
   const nd = tracked.filter(v=>status(v)==="done").length;
@@ -1709,12 +1741,13 @@ function screenWeek(){
       h("p",{class:"wcount num"}, nd+" / "+tracked.length+" séances faites"+(selWeek!==weekIdFor(today())?"":" cette semaine"))),
     h("div",{class:"wk", style:"grid-template-columns:repeat("+strip.length+",minmax(0,1fr))"}, strip.map(d => dayTile(d, {cur:d===selDay, pressable:true, onclick:()=>{selDay=d;render();}}))));
   const ms = PLAN.milestones.filter(m => weekIdFor(m.date)===selWeek);
-  if (ms.length) left.append(h("ul",{class:"ms-w"}, ms.map(m => h("li",null, ic("flag"), h("span",null, h("b",null, fShort(m.date)+" · "), m.t)))));
+  if (ms.length) left.append(msList(ms, {date:true}));
   if (selWeek !== weekIdFor(today())) left.append(h("button",{type:"button", class:"skip back", id:"wk-back", onclick:()=>{selWeek=weekIdFor(today());selDay=null;render();}}, ic("left"), "Revenir à cette semaine"));
   const right = h("div",{class:"wright"});
   if (selDay){
     right.append(sec(fDay(selDay), skips[selDay] ? "Journée reportée" : (selDay===today() ? "Aujourd'hui" : "")));
-    const dl = wk.filter(v=>v.date===selDay);
+    const dl = wk.filter(v=>v.date===selDay), md = msOn(selDay);
+    if (md.length) right.append(msList(md, {cls:"top"}));
     right.append(dl.length ? agenda(dl, {today: selDay===today(), pre:"wc"}) : h("p",{class:"empty"}, dayKind(selDay)));
   }
   return [dhead(fDay(today()), "Semaine"), h("div",{class:"wgrid"}, left, right)];
@@ -1774,7 +1807,7 @@ function screenProgress(){
   out.push(ul);
   out.push(sec("Dates clés"));
   const T = today(); const nextMs = PLAN.milestones.find(m => m.date >= T);
-  out.push(h("ol",{class:"tl"}, PLAN.milestones.map(m => h("li",{class:m.date<T?"past":(m===nextMs?"next":"")}, h("b",{class:"num"}, fShort(m.date)), h("span",null, m.t)))));
+  out.push(h("ol",{class:"tl"}, PLAN.milestones.map(m => h("li",{class:m.date<T?"past":(m===nextMs?"next":"")}, h("b",{class:"num"}, fShort(m.date)), h("span",null, m.start ? msTime(m)+" · " : "", m.ue ? ueName(m.ue)+" · " : "", m.t)))));
   out.push(h("p",{class:"rule-n"}, h("b",null,"La règle du jeu · "), "10/20 de moyenne sur les 13 UE, aucune note sous 6. Une note de 10 ou plus est acquise ; entre 6 et 10, tu peux la garder pour compenser."));
   return out;
 }
@@ -1797,7 +1830,8 @@ function screenMethod(){
           h("li",null,"Une séance impossible : ouvre-la et touche « Reporter »."),
           h("li",null,"Une journée impossible : sur l'écran Aujourd'hui, « Je n'ai pas pu travailler aujourd'hui »."),
           h("li",null,"Du temps en plus : « Ajouter une séance » (le bouton +) te donne la suite du programme."),
-          h("li",null,"Si tu prends du retard, les créneaux de révision du dimanche servent à rattraper."))),
+          h("li",null,"Si tu prends du retard, les créneaux de révision du dimanche servent à rattraper."),
+          h("li",null,"Les lives, les devoirs et les dates limites de Studi sont dans l'agenda, avec un drapeau."))),
       d("Une séance de cours", false, h("ol",null,
         h("li",null,"Rappel, 10 min : sans rien regarder, écris ce que tu as retenu de la dernière séance de cette matière."),
         h("li",null,"Cours : lis la leçon sur Studi ou dans l'e-book, stylo en main. Après chaque partie, ferme et résume en 3 lignes."),
@@ -1808,7 +1842,7 @@ function screenMethod(){
         h("li",null,"Conditions réelles : 3 h ou 4 h chrono, sans cours, téléphone dans une autre pièce."),
         h("li",null,"L'après-midi : corrigé et commentaire audio, puis note-toi sur 20 dans la séance « Correction »."),
         h("li",null,"Tu peux m'envoyer les photos de ta copie : je te corrige."))),
-      d("Ta semaine", false, h("p",null,"Lundi 9 h – 17 h, mardi 9 h – 18 h, dimanche 10 h 30 – 15 h 30. Rien pendant Shabbat ni les jours de Yom Tov. Dimanche vers 9 h 35 : notification, puis le mail du planning à 10 h. Mardi 18 h 20 : le bilan avec moi.")),
+      d("Ta semaine", false, h("p",null,"Lundi : 9 h – 13 h et 14 h – 17 h. Mardi : 9 h – 13 h et 14 h – 18 h. Dimanche : 10 h 30 – 15 h 30. Mercredi à vendredi : alternance. Jamais après 20 h. Rien pendant Shabbat ni les jours de Yom Tov. Dimanche vers 9 h 35 : le mot de la semaine. Mardi 17 h 50 : ton bilan, puis je t'écris vers 18 h 20.")),
       d("Les cartes Anki", false, h("p",null,"Recto une question, verso la réponse. 15 minutes le dimanche et, si tu peux, 10 minutes le soir. C'est ce qui remplace le bachotage de dernière minute.")))
   ];
 }
@@ -1849,7 +1883,15 @@ function renderSession(sh){
     h("span",{class:"fc-ti"}, ic("timer")), h("span",null,"Mode concentration"), h("small",{class:"num"},"25 min + 5 min")));
   if (v.content){
     if (v.anki) body.append(h("div",{class:"items"}, h("div",{class:"item static"}, h("span",{class:"box"}), h("span",null, h("span",{class:"kind"}, h("span",null,"À faire")), h("span",{class:"txt"},"15 min de cartes Anki avant le rattrapage")))));
-    if (v.items.length) body.append(h("div",{class:"items"}, v.items.map(n=>itemRow(v.ue,n,{mod:true, sid:v.id, pre:"it"}))));
+    if (v.items.length){
+      const groups = [];
+      for (const n of v.items){ const m = Q[v.ue][n].mod || ""; if (!groups.length || groups[groups.length-1].m !== m) groups.push({m, ns:[]}); groups[groups.length-1].ns.push(n); }
+      for (const g of groups){
+        if (g.m) body.append(h("p",{class:"modh"}, h("span",null, g.m === "Introduction" ? "Pour commencer" : /^M\d+ · /.test(g.m) ? "Module "+g.m.replace(/^M(\d+) · /,"$1 · ") : g.m)));
+        body.append(h("div",{class:"items"}, g.ns.map(n=>itemRow(v.ue,n,{sid:v.id, pre:"it"}))));
+      }
+      body.append(h("p",{class:"where"}, "Où : Studi > "+ueName(v.ue)+" > le module ci-dessus. Les cas sont dans les exercices du module."));
+    }
     else if (!v.skipped) body.append(h("p",{class:"empty"}, "Tu es en avance sur "+UEN[v.ue]+". Révise tes fiches, ou ajoute une séance."));
     if (v.bonus.length){ body.append(h("p",{class:"subhead"},"Pour aller plus loin")); body.append(h("div",{class:"items"}, v.bonus.map(n=>itemRow(v.ue,n,{sid:v.id, pre:"it"})))); }
     // la suite, si tu as fini en avance
@@ -1928,9 +1970,10 @@ function renderAdd(sh){
   if (blocked) body.append(h("p",{class:"sk-note"},"Aujourd'hui, c'est "+(OFF_DATES[today()] ? "Yom Tov ("+OFF_DATES[today()]+")" : "Shabbat")+". Choisis un autre jour."));
   if (st.when === "later"){
     const di = h("input",{type:"date",id:"add-date",value:st.date||today(),min:today()});
-    const ti = h("input",{type:"time",id:"add-time",value:st.time||"19:00",step:"900"});
+    const ti = h("input",{type:"time",id:"add-time",value:st.time||"18:00",step:"900",max:"19:30"});
     di.addEventListener("change",()=>{st.date=di.value;}); ti.addEventListener("change",()=>{st.time=ti.value;});
     body.append(h("div",{class:"grid2"}, h("div",{class:"field"},h("label",{for:"add-date"},"Jour"),di), h("div",{class:"field"},h("label",{for:"add-time"},"Heure"),ti)));
+    body.append(h("p",{class:"muted small"},"Jamais après 20 h : ta séance doit finir avant."));
   }
   sh.append(body);
   sh.append(h("div",{class:"foot"},
@@ -1941,12 +1984,12 @@ function renderAdd(sh){
 function addExtra(){
   const st = sheetState; if (!st.ue) return;
   let date = today(), start = nowHM();
-  if (st.when === "later"){ date = st.date || today(); start = st.time || "19:00"; }
+  if (st.when === "later"){ date = st.date || today(); start = st.time || "18:00"; }
   const d = parse(date).getDay();
   if (d===6 || OFF_DATES[date]){ toast("Ce jour-là, c'est Shabbat ou Yom Tov. Choisis un autre jour."); return; }
   const m = Number(start.slice(3,5)); start = start.slice(0,3)+pad(Math.floor(m/5)*5);
   const end = addMin(start, st.dur);
-  if (end > "23:59" || end < start){ toast("Choisis une heure plus tôt."); return; }
+  if (end > "20:00" || end < start){ toast("Après 20 h, on se repose. Choisis une heure plus tôt ou moins long."); return; }
   const id = "x-"+date+"-"+start.replace(":","")+"-"+st.ue;
   extras[id] = {date, start, end, ue:st.ue, kind:"cours", week:weekIdFor(date), at:new Date().toISOString()};
   persist("extras/"+id, extras[id]);
