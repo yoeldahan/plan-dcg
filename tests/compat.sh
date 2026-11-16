@@ -1,6 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 # Vérifie que l'appli écrit exactement les mêmes données pour le coach qu'une version de référence.
 # Usage : tests/compat.sh [réf git, par défaut ddcb026 = avant la refonte]
+# Les deux versions tournent avec le plan actuel (plan.json) : on compare le code, pas le programme.
+# Navigateur : Google Chrome sur Mac, sinon Chromium via Playwright (node).
 # Compare computed/schedule, history du jour et les coches, avec les mêmes coches de test.
 # Affiche aussi les erreurs de la console.
 set -e
@@ -10,11 +12,23 @@ PORT=8781
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 python3 src/build.py >/dev/null
 git show "$REF:index.html" > tests/.old-index.html
+python3 -I - tests/.old-index.html plan.json <<'PY'
+import sys
+p, plan = sys.argv[1], open(sys.argv[2]).read()
+s = open(p).read()
+a = s.index('<script type="application/json" id="plan">') + len('<script type="application/json" id="plan">')
+b = s.index('</script>', a)
+open(p, 'w').write(s[:a] + plan + s[b:])
+PY
 python3 -m http.server $PORT >/dev/null 2>&1 &
 SRV=$!
 trap 'kill $SRV 2>/dev/null; rm -f tests/.old-index.html' EXIT
 sleep 1
 run(){ # $1 = chemin de l'appli, $2 = fichier de sortie
+  if [ ! -x "$CHROME" ]; then
+    node tests/compat_run.js "http://localhost:$PORT/tests/compat.html?app=$1" "$2"
+    return
+  fi
   local prof; prof=$(mktemp -d)
   "$CHROME" --headless=new --disable-gpu --user-data-dir="$prof" --enable-logging=stderr --v=0 \
     --virtual-time-budget=20000 --dump-dom "http://localhost:$PORT/tests/compat.html?app=$1" \
