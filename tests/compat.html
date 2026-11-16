@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Test de compatibilité</title>
+</head>
+<body>
+<!-- Test local : charge l'appli avec des coches de test et recopie ce qu'elle écrit pour le coach
+     (computed/schedule et history du jour). Ne tourne que sur localhost : sur le vrai site,
+     il effacerait les coches de ce navigateur. Lancé par tests/compat.sh. -->
+<pre id="out">en cours</pre>
+<script>
+(function(){
+  "use strict";
+  var out = document.getElementById("out");
+  if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)){ out.textContent = "REFUS : test réservé à localhost"; return; }
+  var q = new URLSearchParams(location.search);
+  var app = q.get("app") || "../index.html";
+  var pad = function(n){ return String(n).padStart(2,"0"); };
+  var d = new Date(), T = d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+  var dd = function(k){ var x = new Date(d); x.setDate(x.getDate()+k); return x.getFullYear()+"-"+pad(x.getMonth()+1)+"-"+pad(x.getDate()); };
+  var seed = {
+    "done/UE5": {items:{"0":T, "1":T}, at:"2026-11-16T14:40:00.000Z"},
+    "done/UE1": {items:{"0":T}, at:"2026-11-16T15:50:00.000Z"},
+    "done/UE9": {items:{"0":T}, at:"2026-11-16T16:00:00.000Z"},
+    "skips/2026-11-17-1100": {at:"2026-11-16T16:00:00.000Z"},
+    "progress/2026-11-17-1800": {done:true, at:"2026-11-16T16:00:00.000Z"},
+    "scores/2027-03-22-1400": {note:11.5, ue:"UE1", date:"2027-03-22"},
+    "bilans/2026-11-16": {text:"Test", at:"2026-11-16T16:00:00.000Z"}
+  };
+  seed["extras/x-"+dd(2)+"-1900-UE9"] = {date:dd(2), start:"19:00", end:"20:00", ue:"UE9", kind:"cours", week:"2026-11-16", at:"2026-11-16T16:00:00.000Z"};
+  try{
+    for (var i = localStorage.length-1; i >= 0; i--){ var k = localStorage.key(i); if (k && (k.indexOf("dcg2-") === 0 || k.indexOf("dcg-") === 0)) localStorage.removeItem(k); }
+    for (var p in seed) localStorage.setItem("dcg2-"+p, JSON.stringify(seed[p]));
+    localStorage.setItem("dcg-user-at", "2999-01-01T00:00:00.000Z");   // le téléphone gagne : rien n'est repris de GitHub
+  }catch(e){ out.textContent = "ERREUR localStorage " + e; return; }
+  var f = document.createElement("iframe");
+  f.style.cssText = "width:390px;height:844px;border:0";
+  f.src = app;
+  document.body.appendChild(f);
+  setTimeout(function(){
+    var get = function(k){ try{ return JSON.parse(localStorage.getItem("dcg2-"+k)); }catch(e){ return null; } };
+    var comp = get("computed/schedule"); if (comp) delete comp.generatedAt;
+    var keys = []; for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+    keys.sort();
+    var res = {today:T, keys:keys, computed:comp, history:get("history/"+T),
+      done:{UE5:get("done/UE5"), UE1:get("done/UE1"), UE9:get("done/UE9")}};
+    out.textContent = "RESULT " + JSON.stringify(res);
+  }, 6000);
+})();
+</script>
+</body>
+</html>
