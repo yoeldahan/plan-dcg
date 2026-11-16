@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16161b">
+<meta name="robots" content="noindex">
+<title>Plan DCG · aperçu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Sora:wght@600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Page d'aperçu : trois directions visuelles de l'écran Aujourd'hui. Le cadre reste neutre pour ne pas influencer le choix. */
+:root{
+  --pg-bg:#ececef; --pg-surface:#ffffff; --pg-ink:#16161b; --pg-muted:#55555f; --pg-line:#d6d6dc; --pg-on:#ffffff; --pg-sel:#16161b;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --pg-bg:#0c0c0f; --pg-surface:#1a1a20; --pg-ink:#f0f0f3; --pg-muted:#a6a6b0; --pg-line:#2e2e36; --pg-on:#16161b; --pg-sel:#f0f0f3;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --pg-bg:#0c0c0f; --pg-surface:#1a1a20; --pg-ink:#f0f0f3; --pg-muted:#a6a6b0; --pg-line:#2e2e36; --pg-on:#16161b; --pg-sel:#f0f0f3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--pg-bg);color:var(--pg-ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.pg-top{max-width:1360px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 16px 8px}
+.pg-top h1{font-size:1.6rem;line-height:1.15;margin:0;letter-spacing:-.02em}
+.pg-top p{margin:6px 0 0;color:var(--pg-muted);max-width:52ch}
+.pg-bar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--pg-bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--pg-line)}
+.pg-bar .in{max-width:1360px;margin:0 auto;padding:calc(8px + env(safe-area-inset-top)) 16px 8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pg-jump{display:flex;gap:6px;flex-wrap:wrap}
+.pg-jump a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:99px;background:var(--pg-surface);border:1px solid var(--pg-line);color:var(--pg-ink);text-decoration:none;font-weight:700;font-size:.92rem}
+.pg-jump a b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--pg-sel);color:var(--pg-on);font-size:.8rem}
+.seg{display:inline-flex;padding:3px;border-radius:99px;background:var(--pg-surface);border:1px solid var(--pg-line)}
+.seg button{font:inherit;font-weight:700;font-size:.88rem;min-height:38px;padding:0 12px;border-radius:99px;border:0;background:none;color:var(--pg-muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--pg-sel);color:var(--pg-on)}
+.seg button:focus-visible,.pg-jump a:focus-visible{outline:2px solid var(--pg-ink);outline-offset:2px}
+.pg-mode{margin-left:auto}
+.pg-dir{max-width:1360px;margin:0 auto;padding:30px 16px 10px;scroll-margin-top:70px}
+.pg-head{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px}
+.pg-letter{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--pg-sel);color:var(--pg-on);font-weight:800;font-size:1.2rem}
+.pg-name{flex:1;min-width:200px}
+.pg-name h2{margin:0;font-size:1.45rem;letter-spacing:-.02em;line-height:1.15}
+.pg-name p{margin:4px 0 0;color:var(--pg-muted)}
+.pg-sw{display:flex;gap:4px;margin-top:8px}
+.pg-sw i{width:22px;height:22px;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.35)}
+.pg-dev{flex:none}
+.pg-stage{border-radius:28px;overflow:hidden;background:var(--pg-surface);border:1px solid var(--pg-line)}
+.pg-stage .dir{display:block}
+.pg-stage .dir:not(.show-desk) .desk-scaler{display:none !important}
+.pg-stage .dir.show-desk .mock-phone{display:none !important}
+.pg-stage .desk-scaler{width:100%;overflow:hidden;position:relative}
+.pg-stage .mock-desk{transform-origin:0 0}
+@media (max-width:520px){
+  .pg-stage{border-radius:0;border-left:0;border-right:0;margin:0 -16px}
+}
+@media (min-width:521px){
+  .pg-stage .dir:not(.show-desk){padding:24px 0}
+  .pg-stage .dir:not(.show-desk) .mock-phone{border-radius:44px;box-shadow:0 0 0 10px #101014,0 30px 60px rgba(0,0,0,.25)}
+}
+@media (max-width:700px){.pg-bar{position:static}}
+.pg-foot{max-width:1360px;margin:0 auto;padding:30px 16px calc(40px + env(safe-area-inset-bottom));color:var(--pg-muted);text-align:center}
+.pg-foot b{color:var(--pg-ink)}
+</style>
+</head>
+<body>
+<header class="pg-top">
+  <h1>Choisis le nouveau style de ton appli</h1>
+  <p>Trois directions pour l'écran Aujourd'hui, sur téléphone et sur ordinateur. Touche les cases pour essayer. Puis dis-moi A, B ou C.</p>
+</header>
+<nav class="pg-bar" aria-label="Directions"><div class="in">
+  <div class="pg-jump"><a href="#pg-sommet"><b>A</b>Sommet</a><a href="#pg-carnet"><b>B</b>Carnet</a><a href="#pg-elan"><b>C</b>Élan</a></div>
+  <div class="seg pg-mode" role="group" aria-label="Thème">
+    <button type="button" data-mode="auto" aria-pressed="true">Auto</button>
+    <button type="button" data-mode="light" aria-pressed="false">Clair</button>
+    <button type="button" data-mode="dark" aria-pressed="false">Sombre</button>
+  </div>
+</div></nav>
+<section class="pg-dir" id="pg-sommet" aria-labelledby="pg-sommet-h">
+  <div class="pg-head"><span class="pg-letter">A</span>
+    <div class="pg-name"><h2 id="pg-sommet-h">Sommet</h2><p>Chaque case cochée te fait monter vers le sommet, à l’aube.</p><div class="pg-sw" aria-hidden="true"><i style="background:#141a3f"></i><i style="background:#ff7a59"></i><i style="background:#ffc247"></i><i style="background:#f4f5fb"></i><i style="background:#2f4fd1"></i></div></div>
+    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+  </div>
+  <div class="pg-stage">
+<style>
+/* Direction « Sommet » : l'aube en montagne, une expédition. */
+#dir-sommet{
+  --fd:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ft:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",-apple-system,system-ui,"Segoe UI",sans-serif;
+  --bg:#f4f5fb; --bg2:#eceefa; --card:#ffffff; --cardline:#eceef7;
+  --ink:#141a3f; --ink2:#4b5178; --ink3:#61678f; --line:#e3e6f3; --ctrl:#7d83ad;
+  --night:#141a3f; --gold:#ffc247; --gold2:#ffb23e; --coral:#ff7a59;
+  --gold-soft:#fff1cf; --accent-ink:#8a4b00; --coral-ink:#ad3a16; --coral-soft:#ffebe3;
+  --ok:#0d7357; --ok-soft:#dff4ec; --focus:#3b5bdb; --tab:#ffffff; --td:#141a3f;
+  --shadow:0 1px 2px rgba(20,26,63,.05),0 10px 28px -12px rgba(36,44,110,.22);
+  --shadow-hero:0 18px 40px -16px rgba(255,122,89,.45),0 2px 6px rgba(20,26,63,.06);
+  /* Couleurs des UE : pierres précieuses (texte, fond doux) */
+  --ue1:#2f4fd1; --ue1-s:#e7ebff;   /* Droit : saphir */
+  --ue5:#0d7357; --ue5-s:#dcf3ea;   /* Économie : émeraude */
+  --ue7:#7a3fc4; --ue7-s:#efe6fb;   /* Management : améthyste */
+  --ue8:#0b6a80; --ue8-s:#dbf0f5;   /* SI : aigue-marine */
+  --ue9:#b3263f; --ue9-s:#fbe3e8;   /* Compta : rubis */
+  --ue12:#8f5200; --ue12-s:#fbedd6; /* Anglais : topaze */
+  --ue13:#a82a85; --ue13-s:#f9e1f1; /* Communication : rhodolite */
+  font-family:var(--ft);
+}
+#dir-sommet[data-mode="dark"]{
+  --bg:#0b0e22; --bg2:#1c2045; --card:#161a36; --cardline:#242a52;
+  --ink:#eef0ff; --ink2:#b3b8de; --ink3:#9aa0cb; --line:#272c55; --ctrl:#8188bf;
+  --gold:#ffcd5c; --gold2:#ffb84a; --gold-soft:rgba(255,205,92,.15); --accent-ink:#ffcd5c;
+  --coral-ink:#ff9e82; --coral-soft:rgba(255,122,89,.17); --ok:#62e0b0; --ok-soft:rgba(98,224,176,.14);
+  --focus:#a9bcff; --tab:#11152e; --td:#353d8c;
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset,0 14px 30px -14px rgba(0,0,0,.7);
+  --shadow-hero:0 18px 44px -16px rgba(255,140,80,.35),0 1px 0 rgba(255,255,255,.04) inset;
+  --ue1:#93a8ff; --ue1-s:rgba(147,168,255,.16); --ue5:#55d6a7; --ue5-s:rgba(85,214,167,.15);
+  --ue7:#c6a0ff; --ue7-s:rgba(198,160,255,.16); --ue8:#5fd0e8; --ue8-s:rgba(95,208,232,.15);
+  --ue9:#ff8ea1; --ue9-s:rgba(255,142,161,.16); --ue12:#ffc45c; --ue12-s:rgba(255,196,92,.15);
+  --ue13:#ff92d8; --ue13-s:rgba(255,146,216,.15);
+}
+@media (prefers-color-scheme:dark){
+  #dir-sommet[data-mode="auto"]{
+    --bg:#0b0e22; --bg2:#1c2045; --card:#161a36; --cardline:#242a52;
+    --ink:#eef0ff; --ink2:#b3b8de; --ink3:#9aa0cb; --line:#272c55; --ctrl:#8188bf;
+    --gold:#ffcd5c; --gold2:#ffb84a; --gold-soft:rgba(255,205,92,.15); --accent-ink:#ffcd5c;
+    --coral-ink:#ff9e82; --coral-soft:rgba(255,122,89,.17); --ok:#62e0b0; --ok-soft:rgba(98,224,176,.14);
+    --focus:#a9bcff; --tab:#11152e; --td:#353d8c;
+    --shadow:0 1px 0 rgba(255,255,255,.03) inset,0 14px 30px -14px rgba(0,0,0,.7);
+    --shadow-hero:0 18px 44px -16px rgba(255,140,80,.35),0 1px 0 rgba(255,255,255,.04) inset;
+    --ue1:#93a8ff; --ue1-s:rgba(147,168,255,.16); --ue5:#55d6a7; --ue5-s:rgba(85,214,167,.15);
+    --ue7:#c6a0ff; --ue7-s:rgba(198,160,255,.16); --ue8:#5fd0e8; --ue8-s:rgba(95,208,232,.15);
+    --ue9:#ff8ea1; --ue9-s:rgba(255,142,161,.16); --ue12:#ffc45c; --ue12-s:rgba(255,196,92,.15);
+    --ue13:#ff92d8; --ue13-s:rgba(255,146,216,.15);
+  }
+}
+#dir-sommet *,#dir-sommet *::before,#dir-sommet *::after{box-sizing:border-box}
+#dir-sommet h2,#dir-sommet h3,#dir-sommet h4,#dir-sommet p,#dir-sommet ul{margin:0;padding:0}
+#dir-sommet ul{list-style:none}
+#dir-sommet button{font:inherit;color:inherit;cursor:pointer}
+#dir-sommet .n{font-family:var(--fd);font-variant-numeric:tabular-nums}
+#dir-sommet .ic{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#dir-sommet .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#dir-sommet .ue1{--c:var(--ue1);--cs:var(--ue1-s)} #dir-sommet .ue5{--c:var(--ue5);--cs:var(--ue5-s)}
+#dir-sommet .ue7{--c:var(--ue7);--cs:var(--ue7-s)} #dir-sommet .ue8{--c:var(--ue8);--cs:var(--ue8-s)}
+#dir-sommet .ue9{--c:var(--ue9);--cs:var(--ue9-s)} #dir-sommet .ue12{--c:var(--ue12);--cs:var(--ue12-s)}
+#dir-sommet .ue13{--c:var(--ue13);--cs:var(--ue13-s)}
+
+/* ---------- Téléphone ---------- */
+#dir-sommet .mock-phone{width:100%;max-width:430px;margin:0 auto;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--ft);font-size:16px;line-height:1.4;-webkit-font-smoothing:antialiased}
+#dir-sommet .hd{position:relative;padding-top:47px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#1a2056 36%,#30296a 57%,#83406e 71%,#ff7a59 85%,#ffc247 100%)}
+#dir-sommet .stars{position:absolute;left:0;top:0;width:100%;height:230px;pointer-events:none}
+#dir-sommet .stars circle{fill:#fff}
+#dir-sommet .tw{animation:sommet-tw 3.2s ease-in-out infinite}
+#dir-sommet .tw:nth-child(3n){animation-delay:1.1s} #dir-sommet .tw:nth-child(3n+1){animation-delay:2s}
+#dir-sommet .hd-top{position:relative;display:flex;align-items:center;gap:10px;padding:6px 20px 0}
+#dir-sommet .logo{width:36px;height:36px;display:block;flex:none;filter:drop-shadow(0 4px 10px rgba(255,140,80,.35))}
+#dir-sommet .brand{font:800 18px/1 var(--fd);letter-spacing:-.01em}
+#dir-sommet .jp{margin-left:auto;display:flex;align-items:baseline;gap:6px;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);font-size:12.5px;color:#e6e8ff}
+#dir-sommet .jp b{font:800 15px var(--fd);color:#ffd27a;font-variant-numeric:tabular-nums}
+#dir-sommet .hd-date{position:relative;padding:20px 20px 0}
+#dir-sommet .eyebrow{font:700 12px var(--ft);letter-spacing:.14em;text-transform:uppercase;color:#ffd27a}
+#dir-sommet .hd-date h2{font:700 31px/1.1 var(--fd);letter-spacing:-.025em;margin-top:4px}
+#dir-sommet .hchips{position:relative;display:flex;gap:8px;padding:12px 20px 0;flex-wrap:wrap}
+#dir-sommet .hchip{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.12);font-size:13.5px;font-weight:700}
+#dir-sommet .hchip .ic{width:15px;height:15px;color:#7ff0c2;stroke-width:2.6}
+#dir-sommet .scene{display:block;width:100%;height:auto;margin-top:2px}
+#dir-sommet .svt{font:700 10px var(--fd)}
+#dir-sommet .halo{transform-box:fill-box;transform-origin:center;animation:sommet-halo 2.4s ease-out infinite}
+#dir-sommet .flag{transform-box:fill-box;transform-origin:0 50%;animation:sommet-wave 2.8s ease-in-out infinite}
+#dir-sommet .bodyp{position:relative;display:flex;flex-direction:column;gap:14px;padding:0 16px 92px}
+#dir-sommet .dayc{margin-top:-22px}
+
+/* Cartes */
+#dir-sommet .card{background:var(--card);border:1px solid var(--cardline);border-radius:22px;box-shadow:var(--shadow);padding:16px}
+#dir-sommet .coach{display:flex;gap:12px;align-items:flex-start;padding:13px 14px}
+#dir-sommet .cic{flex:none;width:38px;height:38px;border-radius:13px;display:grid;place-items:center;color:#ffd27a;background:linear-gradient(160deg,#141a3f,#3a2d6e 70%,#8a456e)}
+#dir-sommet .cic .ic{width:20px;height:20px}
+#dir-sommet .lbl{font:700 11.5px var(--ft);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:2px}
+#dir-sommet .coach p{font-size:15.5px;font-weight:500}
+#dir-sommet .coach .sub{font-size:14.5px;font-weight:400;color:var(--ink2);margin-top:2px}
+#dir-sommet .day-h{display:flex;align-items:center;gap:14px}
+#dir-sommet .big{font:800 40px/1 var(--fd);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+#dir-sommet .big small{font-size:20px;font-weight:700;color:var(--ink3);letter-spacing:0}
+#dir-sommet .day-t b{display:block;font-size:16px}
+#dir-sommet .day-t span{font-size:14.5px;color:var(--ink2)}
+#dir-sommet .segs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}
+#dir-sommet .seg{height:8px;border-radius:99px;background:var(--bg2);position:relative;overflow:hidden}
+#dir-sommet .seg::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,var(--coral),var(--gold));transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.3,1.2,.5,1)}
+#dir-sommet .seg.on::after{transform:none}
+#dir-sommet .enc{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:14.5px;color:var(--ink2)}
+#dir-sommet .enc .ic{width:18px;height:18px;color:var(--accent-ink);margin-top:1px}
+
+/* Séance en cours */
+#dir-sommet .hero{position:relative;overflow:hidden;padding:18px;border:1.5px solid transparent;background:radial-gradient(120% 70% at 100% 0,rgba(255,194,71,.16),transparent 55%) padding-box,linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(140deg,var(--coral),var(--gold) 34%,var(--cardline) 68%) border-box;box-shadow:var(--shadow-hero)}
+#dir-sommet .htop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#dir-sommet .live,#dir-sommet .soon{white-space:nowrap;display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:99px;font:700 12px var(--ft);letter-spacing:.08em;text-transform:uppercase;background:var(--coral-soft);color:var(--coral-ink)}
+#dir-sommet .live i{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 0 rgba(255,122,89,.6);animation:sommet-ping 1.8s ease-out infinite}
+#dir-sommet .live .l2,#dir-sommet .done .live .l1{display:none}
+#dir-sommet .done .live .l2{display:inline}
+#dir-sommet .done .live{background:var(--ok-soft);color:var(--ok)} #dir-sommet .done .live i{background:var(--ok);animation:none}
+#dir-sommet .soon{background:var(--bg2);color:var(--ink2)}
+#dir-sommet .tm{white-space:nowrap;font:700 15px var(--fd);font-variant-numeric:tabular-nums}
+#dir-sommet .chips{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+#dir-sommet .ue{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:99px;background:var(--cs);color:var(--c);font:700 12.5px var(--fd)}
+#dir-sommet .ue::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+#dir-sommet .dur{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:99px;background:var(--bg2);color:var(--ink2);font:600 12.5px var(--fd);font-variant-numeric:tabular-nums}
+#dir-sommet .dur .ic{width:14px;height:14px}
+#dir-sommet .ttl{font:700 20px/1.25 var(--fd);letter-spacing:-.015em;margin-top:10px}
+#dir-sommet .meta{font-size:14px;color:var(--ink2);margin-top:3px}
+#dir-sommet .now{margin-top:14px}
+#dir-sommet .nbar{height:6px;border-radius:99px;background:var(--bg2);position:relative}
+#dir-sommet .nbar span{position:absolute;left:0;top:0;bottom:0;width:28%;border-radius:inherit;background:linear-gradient(90deg,var(--coral),var(--gold))}
+#dir-sommet .nbar span::after{content:"";position:absolute;right:-6px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--card),0 0 12px 2px rgba(255,194,71,.7)}
+#dir-sommet .nlab{display:flex;justify-content:space-between;margin-top:7px;font-size:13.5px;color:var(--ink2)}
+#dir-sommet .nlab b{color:var(--ink);font-family:var(--fd)}
+#dir-sommet .items{margin-top:10px}
+#dir-sommet .items li+li{border-top:1px solid var(--line)}
+#dir-sommet .item{display:flex;align-items:center;gap:12px;min-height:62px;padding:10px 6px;margin:0 -6px;border-radius:14px;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent;transition:background-color .2s}
+#dir-sommet .item:hover{background:var(--bg2)}
+#dir-sommet .item input{position:absolute;left:12px;top:50%;width:1px;height:1px;opacity:0;margin:0}
+#dir-sommet .box{flex:none;width:28px;height:28px;border-radius:9px;border:2px solid var(--ctrl);display:grid;place-items:center;position:relative;transition:background-color .2s,border-color .2s}
+#dir-sommet .box svg{width:18px;height:18px;fill:none;stroke:#141a3f;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:22;stroke-dashoffset:22;transition:stroke-dashoffset .3s .06s ease-out}
+#dir-sommet .item input:checked~.box{background:linear-gradient(135deg,#ffd36b,var(--gold2));border-color:var(--gold2)}
+#dir-sommet .item input:checked~.box svg{stroke-dashoffset:0}
+#dir-sommet .item input:focus-visible~.box{outline:3px solid var(--focus);outline-offset:3px}
+#dir-sommet .burst{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none}
+#dir-sommet .burst i{position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0}
+#dir-sommet .burst i:nth-child(even){background:var(--coral);width:5px;height:5px}
+#dir-sommet .pop .box{animation:sommet-pop .45s cubic-bezier(.3,1.7,.5,1)}
+#dir-sommet .pop .burst i{animation:sommet-burst .62s ease-out forwards}
+#dir-sommet .txt{flex:1;min-width:0}
+#dir-sommet .kind{display:block;font:700 11.5px var(--ft);letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+#dir-sommet .t{display:block;font-size:15.5px;font-weight:500;line-height:1.3;text-decoration:line-through;text-decoration-color:transparent;text-decoration-thickness:2px;transition:color .2s,text-decoration-color .25s}
+#dir-sommet .item input:checked~.txt .t{color:var(--ink2);text-decoration-color:var(--gold2)}
+#dir-sommet .mins{flex:none;font:600 13.5px var(--fd);color:var(--ink2);font-variant-numeric:tabular-nums}
+#dir-sommet .acts{display:flex;gap:10px;margin-top:14px}
+#dir-sommet .btn{min-height:50px;border-radius:15px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15.5px var(--fd);border:0;transition:transform .15s}
+#dir-sommet .btn:active{transform:scale(.97)}
+#dir-sommet .btn .ic{width:18px;height:18px;stroke-width:2.3}
+#dir-sommet .gold{flex:1;background:linear-gradient(135deg,#ffd36b,#ffb23e);color:#141a3f;box-shadow:0 10px 22px -10px rgba(255,140,40,.8)}
+#dir-sommet .ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ctrl)}
+#dir-sommet .btn:focus-visible,#dir-sommet .tab:focus-visible,#dir-sommet .fab:focus-visible,#dir-sommet .skip:focus-visible,#dir-sommet .nv:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+/* Célébration */
+#dir-sommet .cel{position:absolute;inset:0;z-index:5;border-radius:20px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 20px 0;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#1d2359 52%,#6a3a72 70%,#ff7a59 86%,#ffc247 100%);opacity:0;visibility:hidden;transform:scale(.96);transition:opacity .25s,transform .4s cubic-bezier(.3,1.5,.5,1),visibility 0s .4s}
+#dir-sommet .cel.on{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .4s cubic-bezier(.3,1.5,.5,1)}
+#dir-sommet .cel h4{font:800 25px/1.15 var(--fd);letter-spacing:-.02em;margin-top:8px}
+#dir-sommet .cel p{font-size:15px;color:#e6e8ff;margin-top:4px}
+#dir-sommet .cel .badge{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ffd36b,#ffb23e);color:#141a3f;box-shadow:0 0 0 6px rgba(255,194,71,.18),0 0 30px rgba(255,194,71,.6)}
+#dir-sommet .cel .badge .ic{width:24px;height:24px;stroke-width:3}
+#dir-sommet .cel svg.cm{position:absolute;left:0;bottom:0;width:100%;height:58%}
+#dir-sommet .cel.on .rise{animation:sommet-rise .9s .15s cubic-bezier(.3,1.4,.5,1) both}
+#dir-sommet .cel.on .rays{transform-box:fill-box;transform-origin:center;animation:sommet-spin 6s linear infinite}
+#dir-sommet .cel.on .badge{animation:sommet-pop .5s cubic-bezier(.3,1.7,.5,1)}
+
+/* À venir, semaine, demain */
+#dir-sommet .next{position:relative;padding-left:20px}
+#dir-sommet .next .item{min-height:54px}
+#dir-sommet .next::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:0 4px 4px 0;background:var(--c)}
+#dir-sommet .wk-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+#dir-sommet .h3{font:700 16px var(--fd)}
+#dir-sommet .wk-h span{font-size:13.5px;color:var(--ink3)}
+#dir-sommet .strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:12px}
+#dir-sommet .d{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 7px;border-radius:14px;color:var(--ink3);font-size:11.5px;font-weight:700}
+#dir-sommet .d b{font:700 17px var(--fd);font-variant-numeric:tabular-nums}
+#dir-sommet .d i{width:5px;height:5px;border-radius:50%;background:transparent}
+#dir-sommet .d.pl{color:var(--ink)} #dir-sommet .d.pl i{background:var(--coral)}
+#dir-sommet .d.td{background:var(--td);color:#fff;box-shadow:0 8px 16px -8px rgba(20,26,63,.6)}
+#dir-sommet .d.td i{background:#ffc247}
+#dir-sommet .streak{display:flex;gap:12px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+#dir-sommet .sic{flex:none;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--gold-soft);color:var(--accent-ink)}
+#dir-sommet .sic .ic{width:22px;height:22px}
+#dir-sommet .streak b{display:block;font:700 16px var(--fd)}
+#dir-sommet .streak span{font-size:14px;color:var(--ink2)}
+#dir-sommet .tmr{margin-top:8px}
+#dir-sommet .tmh{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+#dir-sommet .tch{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+#dir-sommet .tch li{display:inline-flex;align-items:baseline;gap:6px;padding:6px 10px;border-radius:12px;background:var(--cs);color:var(--c);font-size:13.5px;font-weight:700}
+#dir-sommet .tch b{font:700 13px var(--fd);font-variant-numeric:tabular-nums}
+#dir-sommet .tch .bil{background:var(--gold-soft);color:var(--accent-ink)}
+#dir-sommet .tr{display:grid;grid-template-columns:44px 10px 1fr;align-items:center;gap:10px;min-height:34px;font-size:15px}
+#dir-sommet .tr .n{font-weight:600;font-size:14px;text-align:right;color:var(--ink2)}
+#dir-sommet .tr i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+#dir-sommet .tr em{font-style:normal;color:var(--ink2)}
+#dir-sommet .tr.bil i{background:none;width:auto;height:auto;color:var(--accent-ink)}
+#dir-sommet .tr.bil i .ic{width:14px;height:14px;display:block;margin-left:-2px}
+#dir-sommet .pill{font:700 12.5px var(--fd);padding:4px 10px;border-radius:99px;background:var(--gold-soft);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+#dir-sommet .skip{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;width:100%;background:none;border:0;border-radius:14px;color:var(--ink2);font-size:15px;font-weight:500;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--ctrl)}
+#dir-sommet .skip .ic{width:17px;height:17px}
+
+/* Barre d'onglets + bouton flottant */
+#dir-sommet .tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--tab);border-top:1px solid var(--line);padding:6px 8px 28px;box-shadow:0 -10px 24px -18px rgba(20,26,63,.35)}
+#dir-sommet .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;background:none;border:0;border-radius:14px;color:var(--ink2);font:700 11.5px var(--ft)}
+#dir-sommet .ti{width:54px;height:30px;border-radius:99px;display:grid;place-items:center;transition:background-color .2s}
+#dir-sommet .ti .ic{width:22px;height:22px}
+#dir-sommet .tab.on{color:var(--ink)}
+#dir-sommet .tab.on .ti{background:var(--gold-soft);color:var(--accent-ink)}
+#dir-sommet .fab{position:absolute;right:18px;bottom:104px;z-index:6;width:62px;height:62px;border-radius:21px;border:0;display:grid;place-items:center;color:#141a3f;background:linear-gradient(140deg,#ffd36b,#ffb23e 60%,#ff9a52);box-shadow:0 0 0 4px rgba(255,194,71,.22),0 16px 28px -10px rgba(255,122,89,.75);transition:transform .15s}
+#dir-sommet .fab:active{transform:scale(.94)}
+#dir-sommet .fab .ic{width:28px;height:28px;stroke-width:2.6}
+
+/* ---------- Ordinateur ---------- */
+#dir-sommet .mock-desk{width:1280px;height:800px;overflow:hidden;position:relative;background:var(--bg);color:var(--ink);font-family:var(--ft);font-size:15px;line-height:1.4;-webkit-font-smoothing:antialiased}
+#dir-sommet .dk{display:flex;height:100%}
+#dir-sommet .side{position:relative;overflow:hidden;width:256px;flex:none;display:flex;flex-direction:column;padding:28px 18px 20px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#181e50 55%,#2a2462 80%,#4e3170 100%)}
+#dir-sommet .side .stars{height:100%}
+#dir-sommet .sb{position:relative;display:flex;align-items:center;gap:12px;padding:0 6px}
+#dir-sommet .sb .logo{width:46px;height:46px}
+#dir-sommet .sb b{display:block;font:800 20px/1.1 var(--fd)}
+#dir-sommet .sb span{font-size:12.5px;color:#cfd2f3}
+#dir-sommet .nav{position:relative;display:flex;flex-direction:column;gap:4px;margin-top:34px}
+#dir-sommet .nv{display:flex;align-items:center;gap:12px;height:46px;padding:0 14px;border-radius:14px;color:#cfd2f3;font:700 15px var(--ft);background:none;border:0;text-align:left;width:100%}
+#dir-sommet .nv:hover{background:rgba(255,255,255,.06)}
+#dir-sommet .nv .ic{width:21px;height:21px}
+#dir-sommet .nv.on{background:rgba(255,194,71,.15);color:#ffd27a;box-shadow:inset 3px 0 0 #ffc247}
+#dir-sommet .side .gold{position:relative;flex:none;margin-top:22px;width:100%}
+#dir-sommet .jc{position:relative;margin-top:auto;padding:14px 16px;border-radius:18px;background:rgba(20,26,63,.55);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#dir-sommet .jc b{display:block;font:800 30px/1 var(--fd);color:#ffd27a;letter-spacing:-.02em}
+#dir-sommet .jc span{font-size:13.5px;color:#e6e8ff}
+#dir-sommet .sridge{position:absolute;left:0;bottom:0;width:100%;height:auto}
+#dir-sommet .dmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:14px;padding:26px 26px 24px 30px}
+#dir-sommet .dhead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+#dir-sommet .dhead .eyebrow{color:var(--accent-ink)}
+#dir-sommet .dhead h2{font:800 32px/1.1 var(--fd);letter-spacing:-.03em;margin-top:4px;white-space:nowrap}
+#dir-sommet .dsub{font-size:14.5px;color:var(--ink2);margin-top:4px}
+#dir-sommet .dch{display:flex;gap:8px;align-items:center;flex:none;margin-bottom:24px}
+#dir-sommet .pc{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:99px;background:var(--card);border:1px solid var(--cardline);font-size:13.5px;font-weight:700;box-shadow:var(--shadow)}
+#dir-sommet .pc.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+#dir-sommet .pc .ic{width:15px;height:15px;stroke-width:2.6}
+#dir-sommet .drow{display:grid;grid-template-columns:1.15fr 1fr;gap:14px}
+#dir-sommet .drow .card{padding:15px 16px}
+#dir-sommet .mock-desk .big{font-size:36px}
+#dir-sommet .mock-desk .segs{margin-top:12px}
+#dir-sommet .mock-desk .enc{margin-top:10px;font-size:14px}
+#dir-sommet .wide{display:grid;grid-template-columns:1fr 1.12fr;gap:22px;align-items:start}
+#dir-sommet .mock-desk .acts .btn{white-space:nowrap;padding:0 14px;font-size:14.5px;min-height:46px}
+#dir-sommet .mock-desk .hero{padding:18px 20px}
+#dir-sommet .mock-desk .ttl{font-size:19px}
+#dir-sommet .mock-desk .items{margin-top:0}
+#dir-sommet .mock-desk .item{min-height:58px}
+#dir-sommet .mock-desk .next{padding:15px 20px 12px 24px}
+#dir-sommet .mock-desk .cel{padding-top:14px;background:linear-gradient(180deg,#141a3f 0%,#1d2359 46%,#6a3a72 62%,#ff7a59 80%,#ffc247 100%)}
+#dir-sommet .mock-desk .cel svg.cm{height:56%}
+#dir-sommet .mock-desk .next::before{top:16px;bottom:16px}
+#dir-sommet .dfoot{display:flex;justify-content:flex-end;margin-top:-6px}
+#dir-sommet .dfoot .skip{width:auto;min-height:36px;padding:0 6px;font-size:14px}
+#dir-sommet .dright{width:352px;flex:none;display:flex;flex-direction:column;gap:14px;padding:26px 26px 24px 0}
+#dir-sommet .sum{position:relative;overflow:hidden;height:226px;border-radius:22px;padding:16px 18px;color:#fff;background:linear-gradient(180deg,#141a3f 0%,#1a2056 34%,#30296a 54%,#83406e 70%,#ff7a59 86%,#ffc247 100%);box-shadow:var(--shadow-hero)}
+#dir-sommet .sum .stars{height:120px}
+#dir-sommet .sum-h{position:relative;display:flex;justify-content:space-between;align-items:flex-start}
+#dir-sommet .sum-h b{display:block;font:800 22px/1.15 var(--fd);margin-top:3px}
+#dir-sommet .sum-h span{font-size:13.5px;color:#e6e8ff}
+#dir-sommet .sum .jp{margin:0;padding:5px 10px}
+#dir-sommet .sum .scene{position:absolute;left:0;bottom:0;margin:0}
+#dir-sommet .mock-desk .card{padding:15px 16px}
+#dir-sommet .mock-desk .strip{margin-top:10px}
+#dir-sommet .mock-desk .d{padding:7px 0 6px}
+#dir-sommet .mock-desk .streak{margin-top:10px;padding-top:10px}
+#dir-sommet .mock-desk .tr{min-height:27px;font-size:14px}
+#dir-sommet .mock-desk .tmr{margin-top:6px}
+
+@keyframes sommet-pop{0%{transform:scale(1)}40%{transform:scale(1.28)}100%{transform:scale(1)}}
+@keyframes sommet-burst{0%{opacity:1;transform:rotate(var(--a)) translateX(8px) scale(1)}100%{opacity:0;transform:rotate(var(--a)) translateX(30px) scale(.2)}}
+@keyframes sommet-ping{0%{box-shadow:0 0 0 0 rgba(255,122,89,.55)}100%{box-shadow:0 0 0 9px rgba(255,122,89,0)}}
+@keyframes sommet-halo{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+@keyframes sommet-wave{0%,100%{transform:skewY(0)}50%{transform:skewY(-7deg) scaleX(.92)}}
+@keyframes sommet-tw{0%,100%{opacity:.9}50%{opacity:.25}}
+@keyframes sommet-rise{0%{transform:translateY(40px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes sommet-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  #dir-sommet *,#dir-sommet *::before,#dir-sommet *::after{animation:none !important;transition:none !important}
+}
+</style>
+<section class="dir" id="dir-sommet" data-mode="auto">
+<div class="mock-phone">
+  <header class="hd">
+    <svg class="stars" viewBox="0 0 390 230" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="28" cy="70" r="1.2"/><circle cx="74" cy="26" r=".9"/><circle class="tw" cx="132" cy="58" r="1.4"/><circle cx="188" cy="20" r="1"/><circle class="tw" cx="226" cy="88" r=".9"/><circle cx="262" cy="40" r="1.3"/><circle class="tw" cx="318" cy="16" r="1"/><circle cx="352" cy="74" r="1.2"/><circle class="tw" cx="372" cy="126" r=".8"/><circle cx="300" cy="118" r=".9"/><circle class="tw" cx="160" cy="132" r=".8"/><circle cx="48" cy="150" r="1"/></svg>
+    <div class="hd-top">
+      <svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Logo Plan DCG : une crête en forme de coche qui monte jusqu’au drapeau">
+        <defs>
+          <linearGradient id="sommet-lg-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141a3f"/><stop offset=".5" stop-color="#33296a"/><stop offset=".8" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc247"/></linearGradient>
+          <linearGradient id="sommet-lgs-p" x1="24" y1="80" x2="88" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+          <clipPath id="sommet-lgc-p"><rect width="120" height="120" rx="28"/></clipPath>
+        </defs>
+        <g clip-path="url(#sommet-lgc-p)"><rect width="120" height="120" fill="url(#sommet-lg-p)"/><circle cx="22" cy="24" r="2" fill="#fff" opacity=".8"/><circle cx="46" cy="14" r="1.4" fill="#fff" opacity=".6"/><circle cx="16" cy="48" r="1.2" fill="#fff" opacity=".5"/><path d="M0 104 L22 92 L40 101 L62 86 L84 97 L120 84 V120 H0Z" fill="#141a3f" opacity=".6"/></g>
+        <path d="M25 61 L45 79 L59 62 L66 69 L86 38" fill="none" stroke="url(#sommet-lgs-p)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M86 38 V14" stroke="#fff4dc" stroke-width="4" stroke-linecap="round"/>
+        <path d="M88 13.5 Q97 15.5 105 19.5 Q97 23.5 88 25.5 Z" fill="#ffc247"/>
+      </svg>
+      <span class="brand">Plan DCG</span>
+      <span class="jp"><b>J-190</b>avant les écrits</span>
+    </div>
+    <div class="hd-date"><p class="eyebrow">Aujourd’hui</p><h2>Lundi 16 novembre</h2></div>
+    <div class="hchips"><span class="hchip">Phase <span class="n">1</span> · Apprendre</span><span class="hchip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dans les temps</span></div>
+    <svg class="scene" viewBox="0 0 390 150" role="img" aria-label="Ton ascension : tu es au camp de base, 0 % du programme. Le sommet, ce sont les écrits.">
+      <defs><radialGradient id="sommet-sun-p" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="304" cy="74" r="130" fill="url(#sommet-sun-p)"/>
+      <path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/>
+      <path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/>
+      <path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".55" stroke-width="1.3"/>
+      <path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/>
+      <path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>
+      <path d="M0 150 V134 C58 126 112 140 176 133 S290 124 390 137 V150Z" style="fill:var(--bg)"/>
+      <path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/>
+      <path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/>
+      <g transform="translate(230 3)"><rect width="66" height="20" rx="10" fill="#ffc247"/><text x="33" y="13.8" text-anchor="middle" class="svt" fill="#141a3f">Les écrits</text></g>
+      <circle class="halo" cx="40" cy="113" r="11" fill="#ffc247"/>
+      <circle cx="40" cy="113" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/>
+      <g transform="translate(54 84)"><rect width="134" height="20" rx="10" fill="#141a3f" fill-opacity=".9"/><text x="10" y="13.8" class="svt" fill="#fff"><tspan fill="#ffd27a">Toi</tspan> · Camp de base · 0 %</text></g>
+    </svg>
+  </header>
+
+  <div class="bodyp">
+    <div class="card dayc">
+      <div class="day-h"><span class="big"><span data-s="cnt">1</span><small>/4</small></span><div class="day-t"><b data-s="items"><span class="n">1</span> élément sur <span class="n">4</span></b><span data-s="sess"><span class="n">0</span> séance terminée sur <span class="n">2</span></span></div></div>
+      <div class="segs" aria-hidden="true"><i class="seg on" data-s="seg"></i><i class="seg" data-s="seg"></i><i class="seg" data-s="seg"></i><i class="seg" data-s="seg"></i></div>
+      <p class="enc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 5v3M5 9.5l1.8 1.5M19 9.5l-1.8 1.5"/></svg><span>Premier jour. Le plus dur, c’est de commencer, et tu y es.</span></p>
+    </div>
+
+    <div class="card coach">
+      <span class="cic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg></span>
+      <div><p class="lbl">Le mot de la semaine</p><p>Bienvenue&nbsp;! Économie à <span class="n">14&nbsp;h</span>, puis droit à <span class="n">15&nbsp;h&nbsp;45</span>.</p><p class="sub">Survole le sommaire, coche au fur et à mesure.</p></div>
+    </div>
+
+    <article class="card hero" data-s="s1">
+      <div class="htop"><span class="live"><i></i><span class="l1">En cours</span><span class="l2">Terminée</span></span><span class="tm">14:00 – 15:30</span></div>
+      <div class="chips"><span class="ue ue5">UE5 Économie</span><span class="dur"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>1&nbsp;h&nbsp;20</span></div>
+      <h3 class="ttl">Les fondements de la science économique</h3>
+      <p class="meta">Cours · <span class="n">2</span> éléments</p>
+      <div class="now"><div class="nbar"><span></span></div><div class="nlab"><span>Il est <b>14&nbsp;h&nbsp;25</b></span><span>encore <b>1&nbsp;h&nbsp;05</b></span></div></div>
+      <ul class="items">
+        <li><label class="item"><input type="checkbox" data-k="s1a" checked><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">À faire</span><span class="t">Survole l’e-book UE5 et la méthode de l’épreuve</span></span><span class="mins">30&nbsp;min</span></label></li>
+        <li><label class="item"><input type="checkbox" data-k="s1b"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">Leçon</span><span class="t">Ressources rares et besoins illimités</span></span><span class="mins">50&nbsp;min</span></label></li>
+      </ul>
+      <div class="acts"><button type="button" class="btn gold">Ouvrir ma séance<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button><button type="button" class="btn ghost" data-done="s1">C’est fait</button></div>
+      <div class="cel" aria-hidden="true">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h4>Séance terminée&nbsp;!</h4>
+        <p>Économie validée. Tu montes d’un cran.</p>
+        <svg class="cm" viewBox="0 0 390 160" preserveAspectRatio="xMidYMax slice"><g class="rays" opacity=".6" stroke="#ffe6a8" stroke-width="3" stroke-linecap="round"><path d="M229.8 69.3L251.0 75.0M220.5 85.5L228.9 93.9M204.3 94.8L210.0 116.0M185.7 94.8L182.6 106.4M169.5 85.5L154.0 101.0M160.2 69.3L148.6 72.4M160.2 50.7L139.0 45.0M169.5 34.5L161.1 26.1M185.7 25.2L180.0 4.0M204.3 25.2L207.4 13.6M220.5 34.5L236.0 19.0M229.8 50.7L241.4 47.6"/></g><circle cx="195" cy="60" r="26" fill="#ffd36b" opacity=".85"/><g class="rise"><path d="M0 160 V120 L70 96 L120 106 L195 52 L262 102 L310 92 L390 116 V160Z" fill="#141a3f"/><path d="M195 52 V20" stroke="#fff3da" stroke-width="2.5" stroke-linecap="round"/><path d="M196.5 20 Q209 22 219 27 Q209 32 196.5 34Z" fill="#ffc247"/></g><circle cx="60" cy="40" r="2.5" fill="#fff"/><circle cx="330" cy="30" r="2" fill="#fff"/><circle cx="300" cy="70" r="1.6" fill="#ffd27a"/><circle cx="96" cy="72" r="1.8" fill="#ffd27a"/></svg>
+      </div>
+    </article>
+
+    <article class="card next ue1" data-s="s2">
+      <div class="htop"><span class="soon">À venir · dans <span class="n">1&nbsp;h&nbsp;20</span></span><span class="tm">15:45 – 17:00</span></div>
+      <div class="chips"><span class="ue ue1">UE1 Droit</span><span class="dur"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>1&nbsp;h&nbsp;05</span></div>
+      <h3 class="ttl">Les règles applicables à la situation du client</h3>
+      <p class="meta">Cours · <span class="n">2</span> éléments</p>
+      <ul class="items">
+        <li><label class="item"><input type="checkbox" data-k="s2a"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">À faire</span><span class="t">Survole l’e-book UE1 et le guide de l’épreuve</span></span><span class="mins">20&nbsp;min</span></label></li>
+        <li><label class="item"><input type="checkbox" data-k="s2b"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">Leçon</span><span class="t">La règle de droit</span></span><span class="mins">45&nbsp;min</span></label></li>
+      </ul>
+    </article>
+
+    <div class="card">
+      <div class="wk-h"><h3 class="h3">Cette semaine</h3><span>Suivante&nbsp;: dim. <span class="n">22</span></span></div>
+      <div class="strip"><span class="d">D<b>15</b><i></i></span><span class="d td" aria-current="date">L<b>16</b><i></i></span><span class="d pl">M<b>17</b><i></i></span><span class="d">M<b>18</b><i></i></span><span class="d">J<b>19</b><i></i></span><span class="d">V<b>20</b><i></i></span><span class="d">S<b>21</b><i></i></span></div>
+      <div class="streak"><span class="sic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 5v3M5 9.5l1.8 1.5M19 9.5l-1.8 1.5"/></svg></span><div><b data-s="stk">Série&nbsp;: 0 jour</b><span data-s="stk2">Coche ta journée pour lancer ta série.</span></div></div>
+      <div class="wk-h tmh"><h3 class="h3">Demain · mardi <span class="n">17</span></h3><span class="pill">6 séances + bilan</span></div>
+      <ul class="tch">
+        <li class="ue9"><b>9:00</b>UE9 Compta</li><li class="ue8"><b>11:00</b>UE8 SI</li><li class="ue12"><b>12:15</b>UE12 Anglais</li><li class="ue7"><b>14:00</b>UE7 Management</li><li class="ue5"><b>16:00</b>UE5 Économie</li><li class="ue12"><b>17:15</b>UE12 Anglais</li><li class="bil"><b>18:00</b>Bilan</li>
+      </ul>
+    </div>
+
+    <button type="button" class="skip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Je n’ai pas pu travailler aujourd’hui</button>
+  </div>
+
+  <button type="button" class="fab" aria-label="Ajouter une séance"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="tab on" aria-current="page"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v3M4.9 8.9l1.6 1.6M19.1 8.9l-1.6 1.6M8 21h8"/></svg></span>Aujourd’hui</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>Semaine</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20l6.5-10 4 6 2.5-3.5 6 7.5z"/><path d="M15 12.5V3.5l4.5 1.8-4.5 1.8"/></svg></span>Progrès</button>
+    <button type="button" class="tab"><span class="ti"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>Méthode</button>
+  </nav>
+  <p class="sr" aria-live="polite" data-s="live"></p>
+</div>
+
+<div class="desk-scaler"><div class="mock-desk"><div class="dk">
+  <aside class="side">
+    <svg class="stars" viewBox="0 0 256 800" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="30" cy="160" r="1.2"/><circle cx="210" cy="40" r="1"/><circle class="tw" cx="226" cy="300" r="1.3"/><circle cx="40" cy="420" r=".9"/><circle class="tw" cx="190" cy="470" r="1"/><circle cx="120" cy="560" r="1.2"/><circle class="tw" cx="236" cy="610" r=".9"/><circle cx="18" cy="600" r="1"/></svg>
+    <svg class="sridge" viewBox="0 0 256 150" aria-hidden="true"><path d="M0 100 L40 78 L84 92 L128 52 L162 74 L200 44 L256 70 V150 H0Z" fill="#ff7a59" opacity=".35"/><path d="M0 120 L54 98 L100 112 L150 80 L196 102 L256 88 V150 H0Z" fill="#141a3f"/></svg>
+    <div class="sb">
+      <svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Logo Plan DCG">
+        <defs>
+          <linearGradient id="sommet-lg-d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141a3f"/><stop offset=".5" stop-color="#33296a"/><stop offset=".8" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc247"/></linearGradient>
+          <linearGradient id="sommet-lgs-d" x1="24" y1="80" x2="88" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+          <clipPath id="sommet-lgc-d"><rect width="120" height="120" rx="28"/></clipPath>
+        </defs>
+        <g clip-path="url(#sommet-lgc-d)"><rect width="120" height="120" fill="url(#sommet-lg-d)"/><circle cx="22" cy="24" r="2" fill="#fff" opacity=".8"/><circle cx="46" cy="14" r="1.4" fill="#fff" opacity=".6"/><circle cx="16" cy="48" r="1.2" fill="#fff" opacity=".5"/><path d="M0 104 L22 92 L40 101 L62 86 L84 97 L120 84 V120 H0Z" fill="#141a3f" opacity=".6"/></g>
+        <path d="M25 61 L45 79 L59 62 L66 69 L86 38" fill="none" stroke="url(#sommet-lgs-d)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M86 38 V14" stroke="#fff4dc" stroke-width="4" stroke-linecap="round"/>
+        <path d="M88 13.5 Q97 15.5 105 19.5 Q97 23.5 88 25.5 Z" fill="#ffc247"/>
+      </svg>
+      <div><b>Plan DCG</b><span>Pas à pas, jusqu’au sommet.</span></div>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <button type="button" class="nv on" aria-current="page"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v3M4.9 8.9l1.6 1.6M19.1 8.9l-1.6 1.6M8 21h8"/></svg>Aujourd’hui</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Semaine</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20l6.5-10 4 6 2.5-3.5 6 7.5z"/><path d="M15 12.5V3.5l4.5 1.8-4.5 1.8"/></svg>Progrès</button>
+      <button type="button" class="nv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Méthode</button>
+    </nav>
+    <button type="button" class="btn gold"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Ajouter une séance</button>
+    <div class="jc"><b>J-190</b><span>avant les écrits · fin mai <span class="n">2027</span></span></div>
+  </aside>
+
+  <main class="dmain">
+    <div class="dhead">
+      <div><p class="eyebrow">Aujourd’hui</p><h2>Lundi 16 novembre</h2><p class="dsub">Premier jour. Le plus dur, c’est de commencer, et tu y es.</p></div>
+      <div class="dch"><span class="pc">Phase <span class="n">1</span> · Apprendre</span><span class="pc ok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dans les temps</span></div>
+    </div>
+    <div class="drow">
+      <div class="card coach">
+        <span class="cic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg></span>
+        <div><p class="lbl">Le mot de la semaine</p><p>Bienvenue&nbsp;! Économie à <span class="n">14&nbsp;h</span>, puis droit à <span class="n">15&nbsp;h&nbsp;45</span>.</p><p class="sub">Survole le sommaire, coche au fur et à mesure.</p></div>
+      </div>
+      <div class="card">
+        <div class="day-h"><span class="big"><span data-s="cnt">1</span><small>/4</small></span><div class="day-t"><b data-s="items"><span class="n">1</span> élément sur <span class="n">4</span></b><span data-s="sess"><span class="n">0</span> séance terminée sur <span class="n">2</span></span></div></div>
+        <div class="segs" aria-hidden="true"><i class="seg on" data-s="seg"></i><i class="seg" data-s="seg"></i><i class="seg" data-s="seg"></i><i class="seg" data-s="seg"></i></div>
+      </div>
+    </div>
+
+    <article class="card hero" data-s="s1">
+      <div class="wide">
+        <div>
+          <div class="htop"><span class="live"><i></i><span class="l1">En cours</span><span class="l2">Terminée</span></span><span class="tm">14:00 – 15:30</span></div>
+          <div class="chips"><span class="ue ue5">UE5 Économie</span><span class="dur"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>1&nbsp;h&nbsp;20</span></div>
+          <h3 class="ttl">Les fondements de la science économique</h3>
+          <p class="meta">Cours · <span class="n">2</span> éléments</p>
+          <div class="now"><div class="nbar"><span></span></div><div class="nlab"><span>Il est <b>14&nbsp;h&nbsp;25</b></span><span>encore <b>1&nbsp;h&nbsp;05</b></span></div></div>
+        </div>
+        <div>
+          <ul class="items">
+            <li><label class="item"><input type="checkbox" data-k="s1a" checked><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">À faire</span><span class="t">Survole l’e-book UE5 et la méthode de l’épreuve</span></span><span class="mins">30&nbsp;min</span></label></li>
+            <li><label class="item"><input type="checkbox" data-k="s1b"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">Leçon</span><span class="t">Ressources rares et besoins illimités</span></span><span class="mins">50&nbsp;min</span></label></li>
+          </ul>
+          <div class="acts"><button type="button" class="btn gold">Ouvrir ma séance<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button><button type="button" class="btn ghost" data-done="s1">C’est fait</button></div>
+        </div>
+      </div>
+      <div class="cel" aria-hidden="true">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h4>Séance terminée&nbsp;!</h4>
+        <p>Économie validée. Tu montes d’un cran.</p>
+        <svg class="cm" viewBox="0 0 780 160" preserveAspectRatio="xMidYMax slice"><g transform="translate(0 14)"><g class="rays" opacity=".6" stroke="#ffe6a8" stroke-width="3" stroke-linecap="round"><path d="M424.8 69.3L446.0 75.0M415.5 85.5L423.9 93.9M399.3 94.8L405.0 116.0M380.7 94.8L377.6 106.4M364.5 85.5L349.0 101.0M355.2 69.3L343.6 72.4M355.2 50.7L334.0 45.0M364.5 34.5L356.1 26.1M380.7 25.2L375.0 4.0M399.3 25.2L402.4 13.6M415.5 34.5L431.0 19.0M424.8 50.7L436.4 47.6"/></g><circle cx="390" cy="60" r="26" fill="#ffd36b" opacity=".85"/><g class="rise"><path d="M0 160 V128 L120 112 L220 120 L300 94 L340 104 L390 52 L452 100 L500 92 L580 114 L680 104 L780 122 V160Z" fill="#141a3f"/><path d="M390 52 V20" stroke="#fff3da" stroke-width="2.5" stroke-linecap="round"/><path d="M391.5 20 Q404 22 414 27 Q404 32 391.5 34Z" fill="#ffc247"/></g></g><circle cx="200" cy="40" r="2.5" fill="#fff"/><circle cx="580" cy="30" r="2" fill="#fff"/><circle cx="520" cy="66" r="1.6" fill="#ffd27a"/></svg>
+      </div>
+    </article>
+
+    <article class="card next ue1" data-s="s2">
+      <div class="wide">
+        <div>
+          <div class="htop"><span class="soon">À venir</span><span class="tm">15:45 – 17:00</span></div>
+          <div class="chips"><span class="ue ue1">UE1 Droit</span><span class="dur"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>1&nbsp;h&nbsp;05</span></div>
+          <h3 class="ttl">Les règles applicables à la situation du client</h3>
+          <p class="meta">Cours · <span class="n">2</span> éléments · dans <span class="n">1&nbsp;h&nbsp;20</span></p>
+        </div>
+        <ul class="items">
+          <li><label class="item"><input type="checkbox" data-k="s2a"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">À faire</span><span class="t">Survole l’e-book UE1 et le guide de l’épreuve</span></span><span class="mins">20&nbsp;min</span></label></li>
+          <li><label class="item"><input type="checkbox" data-k="s2b"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="burst"></span></span><span class="txt"><span class="kind">Leçon</span><span class="t">La règle de droit</span></span><span class="mins">45&nbsp;min</span></label></li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="dfoot">
+      <button type="button" class="skip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Je n’ai pas pu travailler aujourd’hui</button>
+    </div>
+  </main>
+
+  <aside class="dright">
+    <div class="sum">
+      <svg class="stars" viewBox="0 0 352 120" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle class="tw" cx="190" cy="20" r="1.2"/><circle cx="230" cy="58" r=".9"/><circle class="tw" cx="150" cy="70" r="1"/><circle cx="210" cy="96" r=".8"/><circle class="tw" cx="30" cy="96" r="1"/></svg>
+      <div class="sum-h"><div><p class="eyebrow">Ton ascension</p><b>Camp de base</b><span><span class="n">0&nbsp;%</span> du programme</span></div><span class="jp"><b>J-190</b></span></div>
+      <svg class="scene" viewBox="0 0 390 150" role="img" aria-label="Tu es au camp de base. Le sommet, ce sont les écrits.">
+        <defs><radialGradient id="sommet-sun-d" cx="304" cy="74" r="130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe6a8" stop-opacity=".95"/><stop offset=".28" stop-color="#ffb35c" stop-opacity=".45"/><stop offset=".55" stop-color="#ff7a59" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="304" cy="74" r="130" fill="url(#sommet-sun-d)"/>
+        <path d="M0 100 L38 84 L80 94 L128 62 L168 78 L210 50 L246 64 L280 46 L330 70 L366 40 L390 52 V150 H0Z" fill="#4b3a80" opacity=".6"/>
+        <path d="M0 128 L50 112 L95 118 L150 90 L190 98 L240 64 L270 74 L304 34 L336 66 L362 58 L390 74 V150 H0Z" fill="#1b2152"/>
+        <path d="M150 90 L190 98 L240 64 L270 74 L304 34 L336 66" fill="none" stroke="#ffc58c" stroke-opacity=".55" stroke-width="1.3"/>
+        <path d="M294 46 L304 34 L315 49 L309 46 L304 51 L299 46Z" fill="#ffd9a0"/>
+        <path d="M40 113 C64 112 88 118 112 110 S164 104 192 102 S226 84 248 78 S284 60 304 36" fill="none" stroke="#ffe2b0" stroke-width="2.6" stroke-linecap="round" stroke-dasharray=".1 7"/>
+        <path d="M0 150 V136 C58 128 112 142 176 135 S290 126 390 139 V150Z" fill="#10143a"/>
+        <path d="M304 36 V9" stroke="#fff3da" stroke-width="2" stroke-linecap="round"/>
+        <path class="flag" d="M305 9 Q315 11 323 15 Q315 19 305 21Z" fill="#ffc247"/>
+        <g transform="translate(230 3)"><rect width="66" height="20" rx="10" fill="#ffc247"/><text x="33" y="13.8" text-anchor="middle" class="svt" fill="#141a3f">Les écrits</text></g>
+        <circle class="halo" cx="40" cy="113" r="11" fill="#ffc247"/>
+        <circle cx="40" cy="113" r="5.5" fill="#ffc247" stroke="#fff" stroke-width="2"/>
+        <g transform="translate(54 84)"><rect width="56" height="20" rx="10" fill="#141a3f" fill-opacity=".9"/><text x="28" y="13.8" text-anchor="middle" class="svt" fill="#ffd27a">Toi</text></g>
+      </svg>
+    </div>
+
+    <div class="card">
+      <div class="wk-h"><h3 class="h3">Cette semaine</h3><span>Suivante&nbsp;: dim. <span class="n">22</span></span></div>
+      <div class="strip"><span class="d">D<b>15</b><i></i></span><span class="d td" aria-current="date">L<b>16</b><i></i></span><span class="d pl">M<b>17</b><i></i></span><span class="d">M<b>18</b><i></i></span><span class="d">J<b>19</b><i></i></span><span class="d">V<b>20</b><i></i></span><span class="d">S<b>21</b><i></i></span></div>
+      <div class="streak"><span class="sic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 5v3M5 9.5l1.8 1.5M19 9.5l-1.8 1.5"/></svg></span><div><b data-s="stk">Série&nbsp;: 0 jour</b><span data-s="stk2">Coche ta journée pour lancer ta série.</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="wk-h"><h3 class="h3">Demain · mardi <span class="n">17</span></h3><span class="pill">6 séances + bilan</span></div>
+      <ul class="tmr">
+        <li class="tr ue9"><span class="n">9:00</span><i></i><span>UE9 <em>Compta</em></span></li>
+        <li class="tr ue8"><span class="n">11:00</span><i></i><span>UE8 <em>SI</em></span></li>
+        <li class="tr ue12"><span class="n">12:15</span><i></i><span>UE12 <em>Anglais</em></span></li>
+        <li class="tr ue7"><span class="n">14:00</span><i></i><span>UE7 <em>Management</em></span></li>
+        <li class="tr ue5"><span class="n">16:00</span><i></i><span>UE5 <em>Économie</em></span></li>
+        <li class="tr ue12"><span class="n">17:15</span><i></i><span>UE12 <em>Anglais</em></span></li>
+        <li class="tr bil"><span class="n">18:00</span><i><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4M6 4.5h11l-2.5 3.5L17 11.5H6"/></svg></i><span><b>Bilan</b> <em>du jour</em></span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<p class="sr" aria-live="polite" data-s="live"></p>
+</div></div>
+</section>
+<script>
+(function(){
+  "use strict";
+  var root = document.getElementById("dir-sommet");
+  if (!root) return;
+  var boxes = Array.prototype.slice.call(root.querySelectorAll("input[data-k]"));
+  var keys = ["s1a","s1b","s2a","s2b"];
+  var timer = null;
+  root.querySelectorAll(".burst").forEach(function(b){
+    for (var i = 0; i < 8; i++){ var s = document.createElement("i"); s.style.setProperty("--a", (i * 45 + 10) + "deg"); b.appendChild(s); }
+  });
+  function isOn(k){ for (var i = 0; i < boxes.length; i++){ if (boxes[i].dataset.k === k) return boxes[i].checked; } return false; }
+  function setKey(k, v){ boxes.forEach(function(b){ if (b.dataset.k === k) b.checked = v; }); }
+  function each(sel, fn){ root.querySelectorAll(sel).forEach(fn); }
+  function update(){
+    var n = keys.filter(isOn).length;
+    var s1 = isOn("s1a") && isOn("s1b"), s2 = isOn("s2a") && isOn("s2b");
+    var ns = (s1 ? 1 : 0) + (s2 ? 1 : 0);
+    each('[data-s="cnt"]', function(e){ e.textContent = n; });
+    each('[data-s="items"]', function(e){ e.innerHTML = '<span class="n">' + n + '</span>' + (n > 1 ? " éléments" : " élément") + ' sur <span class="n">4</span>'; });
+    each('[data-s="sess"]', function(e){ e.innerHTML = '<span class="n">' + ns + '</span>' + (ns > 1 ? " séances terminées" : " séance terminée") + ' sur <span class="n">2</span>'; });
+    root.querySelectorAll(".segs").forEach(function(g){ g.querySelectorAll(".seg").forEach(function(s, i){ s.classList.toggle("on", i < n); }); });
+    each('[data-s="s1"]', function(e){ e.classList.toggle("done", s1); });
+    each('[data-s="stk"]', function(e){ e.textContent = n === 4 ? "Série : 1 jour" : "Série : 0 jour"; });
+    each('[data-s="stk2"]', function(e){ e.textContent = n === 4 ? "Bravo, ta série démarre." : "Coche ta journée pour lancer ta série."; });
+    return s1;
+  }
+  function pop(k){
+    boxes.forEach(function(b){
+      if (b.dataset.k !== k) return;
+      var lab = b.closest(".item"); if (!lab) return;
+      lab.classList.remove("pop"); void lab.offsetWidth; lab.classList.add("pop");
+      setTimeout(function(){ lab.classList.remove("pop"); }, 700);
+    });
+  }
+  function celebrate(){
+    each(".cel", function(c){ c.classList.add("on"); c.setAttribute("aria-hidden", "false"); });
+    each('[data-s="live"]', function(e){ e.textContent = "Séance terminée ! Économie validée."; });
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      each(".cel", function(c){ c.classList.remove("on"); c.setAttribute("aria-hidden", "true"); });
+      each('[data-s="live"]', function(e){ e.textContent = ""; });
+    }, 2500);
+  }
+  var wasDone = update();
+  boxes.forEach(function(b){
+    b.addEventListener("change", function(){
+      setKey(b.dataset.k, b.checked);
+      if (b.checked) pop(b.dataset.k);
+      var done = update();
+      if (done && !wasDone) celebrate();
+      wasDone = done;
+    });
+    b.addEventListener("keydown", function(e){ if (e.key === "Enter"){ e.preventDefault(); b.click(); } });
+  });
+  each('[data-done="s1"]', function(btn){
+    btn.addEventListener("click", function(){
+      ["s1a","s1b"].forEach(function(k){ if (!isOn(k)){ setKey(k, true); pop(k); } });
+      var done = update();
+      if (done && !wasDone) celebrate();
+      wasDone = done;
+    });
+  });
+})();
+</script>
+
+  </div>
+</section>
+<section class="pg-dir" id="pg-carnet" aria-labelledby="pg-carnet-h">
+  <div class="pg-head"><span class="pg-letter">B</span>
+    <div class="pg-name"><h2 id="pg-carnet-h">Carnet</h2><p>Ton agenda haut de gamme : tout est à sa place, tu coches.</p><div class="pg-sw" aria-hidden="true"><i style="background:#fbfbf8"></i><i style="background:#14151a"></i><i style="background:#2340ff"></i><i style="background:#ffe45c"></i><i style="background:#0f9d58"></i></div></div>
+    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+  </div>
+  <div class="pg-stage">
+<style>
+#dir-carnet{--bg:#fbfbf8;--paper:#ffffff;--ink:#14151a;--ink2:#3f424c;--ink3:#686b75;--rule:#e6e6e0;--rule2:#d2d3cb;--accent:#2340ff;--on-accent:#ffffff;--accent-soft:#eef0ff;--hl:#ffe45c;--hl-ink:#14151a;--tdot:#ffe45c;--ok:#0f9d58;--ok-ink:#0a7a43;--veil:rgba(251,251,248,.78);--fab-sh:0 6px 16px rgba(35,64,255,.28);--sw-y:88%;--sw-h:38%;--ue1:#b4232c;--ue5:#b35200;--ue7:#7b3fc4;--ue8:#00788a;--ue9:#2f6f3e;--ue12:#b0287a;--ue13:#8a6d00;--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+#dir-carnet[data-mode="dark"]{--bg:#111217;--paper:#17181f;--ink:#f3efe6;--ink2:#d2cec4;--ink3:#a19f97;--rule:#262832;--rule2:#383b48;--accent:#8f9cff;--on-accent:#0c0e1f;--accent-soft:#1d2142;--hl:#d8c045;--hl-ink:#14151a;--tdot:#111217;--ok:#4cc68a;--ok-ink:#62d39b;--veil:rgba(17,18,23,.8);--fab-sh:0 6px 16px rgba(0,0,0,.5);--sw-y:100%;--sw-h:14%;--ue1:#ff8a8f;--ue5:#ffaa5c;--ue7:#c3a2ff;--ue8:#5fd0de;--ue9:#86d69c;--ue12:#ff8cc8;--ue13:#e8c75a}
+@media (prefers-color-scheme: dark){#dir-carnet[data-mode="auto"]{--bg:#111217;--paper:#17181f;--ink:#f3efe6;--ink2:#d2cec4;--ink3:#a19f97;--rule:#262832;--rule2:#383b48;--accent:#8f9cff;--on-accent:#0c0e1f;--accent-soft:#1d2142;--hl:#d8c045;--hl-ink:#14151a;--tdot:#111217;--ok:#4cc68a;--ok-ink:#62d39b;--veil:rgba(17,18,23,.8);--fab-sh:0 6px 16px rgba(0,0,0,.5);--sw-y:100%;--sw-h:14%;--ue1:#ff8a8f;--ue5:#ffaa5c;--ue7:#c3a2ff;--ue8:#5fd0de;--ue9:#86d69c;--ue12:#ff8cc8;--ue13:#e8c75a}}
+#dir-carnet .mock-phone,#dir-carnet .mock-desk{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-align:left;line-height:1.35}
+#dir-carnet .mock-phone{width:100%;max-width:430px;margin:0 auto;position:relative;overflow:hidden}
+#dir-carnet .mock-desk{width:1280px;height:800px;overflow:hidden;position:relative}
+#dir-carnet .mock-phone *,#dir-carnet .mock-desk *{box-sizing:border-box}
+#dir-carnet h2,#dir-carnet h3,#dir-carnet h4,#dir-carnet p,#dir-carnet ol,#dir-carnet ul{margin:0;padding:0}
+#dir-carnet ol,#dir-carnet ul{list-style:none}
+#dir-carnet button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#dir-carnet .num{font-variant-numeric:tabular-nums lining-nums}
+#dir-carnet .eb{font:600 11.5px/1.2 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+#dir-carnet .serif{font-family:var(--serif);font-optical-sizing:auto}
+/* logo */
+#dir-carnet .logo{width:36px;height:36px;flex:none;display:block}
+#dir-carnet .lg-tile{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}
+#dir-carnet .lg-rule{stroke:var(--rule2);stroke-width:1}
+#dir-carnet .lg-ink{fill:none;stroke:var(--ink);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+#dir-carnet .lg-pole{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+#dir-carnet .lg-flag{fill:var(--accent)}
+#dir-carnet .wm{font:700 19px/1 var(--serif);letter-spacing:-.01em}
+/* highlighter */
+#dir-carnet .hl{background:var(--hl);color:var(--hl-ink);border-radius:3px 7px 4px 8px;padding:2px 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone;font-weight:600}
+/* phone header */
+#dir-carnet .ph-head{background:var(--paper);border-bottom:1px solid var(--rule);padding:47px 20px 20px}
+#dir-carnet .ph-bar{display:flex;align-items:center;gap:10px;min-height:44px}
+#dir-carnet .phase{margin-left:auto;font:600 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--rule2);border-radius:999px;padding:7px 10px}
+#dir-carnet .ph-date{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:16px}
+#dir-carnet .date{font:500 36px/1.02 var(--serif);letter-spacing:-.02em;margin-top:6px}
+#dir-carnet .status{display:inline-flex;align-items:center;gap:7px;margin-top:10px;font:600 13px/1 var(--sans);color:var(--ok-ink)}
+#dir-carnet .status i{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+#dir-carnet .jc{text-align:right;flex:none}
+#dir-carnet .jc .n{font:500 66px/.82 var(--serif);letter-spacing:-.045em;font-variant-numeric:lining-nums}
+#dir-carnet .jc .j{font:700 20px/1 var(--serif);color:var(--accent);vertical-align:top;margin-right:3px;position:relative;top:4px}
+#dir-carnet .jc .c{display:block;font:500 12px/1.2 var(--sans);color:var(--ink3);margin-top:8px}
+/* main */
+#dir-carnet .ph-main{padding:18px 20px 96px}
+#dir-carnet .note{display:flex;gap:12px;align-items:flex-start;padding:14px 0 16px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+#dir-carnet .note-q{font:700 34px/.7 var(--serif);color:var(--accent);flex:none;margin-top:6px}
+#dir-carnet .note .nt{font:500 15.5px/1.38 var(--serif);margin-top:5px}
+#dir-carnet .day{margin-top:18px;padding:16px;border:1px solid var(--rule2);border-radius:12px;background:var(--paper)}
+#dir-carnet .day-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+#dir-carnet .day-top .day-sub{margin-top:6px}
+#dir-carnet .day-n{font:500 34px/.9 var(--serif);white-space:nowrap}
+#dir-carnet .day-n small{font:500 15px var(--serif);color:var(--ink3);margin-left:2px}
+#dir-carnet .segs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0}
+#dir-carnet .segs i{height:9px;border:1px solid var(--ink);border-radius:2px;background:transparent;transition:background-color .3s ease}
+#dir-carnet .segs i.f{background:var(--accent);border-color:var(--accent)}
+#dir-carnet .day-sub{font:500 13px/1.3 var(--sans);color:var(--ink3)}
+#dir-carnet .phr{font:500 16px/1.32 var(--serif);margin-top:2px}
+/* section titles */
+#dir-carnet .sec{display:flex;align-items:baseline;justify-content:space-between;margin:24px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+#dir-carnet .sec h3{font:500 23px/1 var(--serif);letter-spacing:-.01em}
+/* agenda */
+#dir-carnet .slot{display:grid;grid-template-columns:46px minmax(0,1fr);position:relative}
+#dir-carnet .gut{border-right:1px solid var(--rule2);padding:16px 8px 14px 0;display:flex;flex-direction:column;justify-content:space-between;font:500 15px/1 var(--serif);font-variant-numeric:tabular-nums lining-nums;position:relative}
+#dir-carnet .gut .e{color:var(--ink3);font-size:13px}
+#dir-carnet .nowm{position:absolute;left:-2px;top:30%;font:700 11.5px/1 var(--sans);font-variant-numeric:tabular-nums;background:var(--hl);color:var(--hl-ink);padding:4px 5px;border-radius:3px 6px 3px 6px}
+#dir-carnet .nowm::after{content:"";position:absolute;right:-9px;top:50%;width:9px;height:2px;margin-top:-1px;background:var(--ink)}
+#dir-carnet .card{position:relative;background:var(--paper);border:1px solid var(--rule2);border-radius:12px;padding:16px 16px 6px 18px;margin:12px 0 12px 12px;box-shadow:inset 3px 0 0 var(--ue)}
+#dir-carnet .card.hero{border:1.5px solid var(--ink);padding-bottom:16px}
+#dir-carnet .c-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#dir-carnet .tag{display:inline-flex;align-items:center;gap:7px;font:700 11px/1 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+#dir-carnet .hero .tag{color:var(--accent)}
+#dir-carnet .hero .tag i{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:carnet-pulse 1.8s ease-out infinite}
+#dir-carnet .card.done .tag{color:var(--ok-ink)}
+#dir-carnet .card.done .tag i{background:var(--ok);animation:none}
+#dir-carnet .time{font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums}
+#dir-carnet .ue{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font:600 13px/1 var(--sans);color:var(--ue)}
+#dir-carnet .ue i,#dir-carnet .sq{width:10px;height:10px;border-radius:2px;background:var(--ue);flex:none;display:inline-block}
+#dir-carnet .ttl{font:500 22px/1.2 var(--serif);letter-spacing:-.012em;margin:7px 0 5px}
+#dir-carnet .meta{font:500 13px/1.3 var(--sans);color:var(--ink3)}
+#dir-carnet .items{margin-top:10px;border-top:1px solid var(--rule)}
+#dir-carnet .item{display:grid;grid-template-columns:28px 1fr;column-gap:12px;align-items:start;padding:12px 2px;min-height:56px;border-bottom:1px solid var(--rule);cursor:pointer;outline:none;border-radius:4px;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+#dir-carnet .item:last-child{border-bottom:0}
+#dir-carnet .item:focus-visible{box-shadow:0 0 0 2px var(--accent)}
+#dir-carnet .box{width:28px;height:28px;display:block;overflow:visible}
+#dir-carnet .bx{fill:var(--paper);stroke:var(--ink);stroke-width:1.6;transform-box:fill-box;transform-origin:center}
+#dir-carnet .tk{fill:none;stroke:var(--accent);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:26;stroke-dashoffset:26;transition:stroke-dashoffset .28s cubic-bezier(.6,0,.3,1)}
+#dir-carnet .item.on .tk{stroke-dashoffset:0}
+#dir-carnet .bu line{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;opacity:0;transform-box:view-box;transform-origin:14px 14px}
+#dir-carnet .item.pop .bu line{animation:carnet-burst .55s ease-out}
+#dir-carnet .item.pop .bx{animation:carnet-press .32s ease-out}
+#dir-carnet .kind{display:flex;justify-content:space-between;gap:8px;font:600 11px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);margin:2px 0 5px}
+#dir-carnet .txt{font:500 15px/1.35 var(--sans);color:var(--ink);background:linear-gradient(var(--ink2),var(--ink2)) 0 60%/0 1.5px no-repeat;transition:background-size .38s ease .08s,color .2s}
+#dir-carnet .item.on .txt{background-size:100% 1.5px;color:var(--ink3)}
+#dir-carnet .dur{font-variant-numeric:tabular-nums;color:var(--ink2);letter-spacing:.02em;text-transform:none;font-size:12.5px}
+#dir-carnet .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+#dir-carnet .btn{flex:1;white-space:nowrap;min-height:48px;border-radius:10px;font:600 15px/1 var(--sans);display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--ink);color:var(--ink);padding:0 14px}
+#dir-carnet .acts .btn.pri{flex:1.5}
+#dir-carnet .btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+#dir-carnet .btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#dir-carnet .btn:disabled{border-color:var(--rule2);color:var(--ok-ink);cursor:default}
+#dir-carnet .btn:focus-visible,#dir-carnet .skip:focus-visible,#dir-carnet .tab:focus-visible,#dir-carnet .fab:focus-visible,#dir-carnet .nv:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#dir-carnet .skip{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:4px;font:500 14px/1 var(--sans);color:var(--ink2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule2)}
+/* stamp celebration */
+#dir-carnet .cel{position:absolute;inset:0;border-radius:11px;background:var(--veil);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:5;pointer-events:none}
+#dir-carnet .cel.show{opacity:1;visibility:visible}
+#dir-carnet .stamp{border:3px double var(--accent);border-radius:12px;padding:14px 22px 12px;background:var(--paper);color:var(--accent);text-align:center;transform:rotate(-5deg)}
+#dir-carnet .cel.show .stamp{animation:carnet-stamp .5s cubic-bezier(.2,1.5,.4,1)}
+#dir-carnet .stamp svg{width:34px;height:34px;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:0}
+#dir-carnet .cel.show .stamp svg path{animation:carnet-draw .5s ease-out .18s both}
+#dir-carnet .stamp b{display:block;font:700 25px/1.1 var(--serif);color:var(--ink);margin:4px 0 6px;letter-spacing:-.01em}
+#dir-carnet .stamp b span{background:linear-gradient(var(--hl),var(--hl)) 0 var(--sw-y)/100% var(--sw-h) no-repeat;padding:0 3px}
+#dir-carnet .cel.show .stamp b span{animation:carnet-swipe .45s ease-out .3s both}
+#dir-carnet .stamp small{font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+/* tomorrow / week / progress */
+#dir-carnet .nx .ttl{font-size:19px}
+#dir-carnet .tmr{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule)}
+#dir-carnet .rib{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+#dir-carnet .rib li{border-top:3px solid var(--ue);padding-top:7px;min-width:0}
+#dir-carnet .rib .t{display:block;font:500 14px/1 var(--serif);font-variant-numeric:tabular-nums lining-nums}
+#dir-carnet .rib .u{display:block;font:600 11px/1.2 var(--sans);color:var(--ink2);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:clip}
+#dir-carnet .rib .bil{border-top:3px double var(--ink)}
+#dir-carnet .pc .mt text{display:none}
+#dir-carnet .pc{display:grid;grid-template-columns:1.15fr 1fr;column-gap:14px;align-items:end}
+#dir-carnet .pc .pr-row{margin:0;flex-direction:column;gap:6px}
+#dir-carnet .pc .streak.in{grid-column:1/-1}
+#dir-carnet .streak.in{border:0;border-top:1px dashed var(--rule2);border-radius:0;background:none;padding:12px 0 0;margin-top:14px}
+#dir-carnet .tm li{display:grid;grid-template-columns:46px 10px 1fr;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--rule);font:500 14.5px/1.2 var(--sans)}
+#dir-carnet .tm li:last-child{border-bottom:0}
+#dir-carnet .tm .t{font:500 15px/1 var(--serif);font-variant-numeric:tabular-nums lining-nums}
+#dir-carnet .tm .bil{font-weight:600}
+#dir-carnet .tm .bil .sq{background:transparent;border:1.5px solid var(--ink)}
+#dir-carnet .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
+#dir-carnet .d{border:1px solid var(--rule2);border-radius:10px;padding:8px 0 7px;text-align:center;min-height:68px}
+#dir-carnet .d .l{font:600 11px/1 var(--sans);letter-spacing:.06em;color:var(--ink3);text-transform:uppercase}
+#dir-carnet .d .dn{display:block;font:500 21px/1 var(--serif);margin-top:6px;font-variant-numeric:tabular-nums lining-nums}
+#dir-carnet .d .dots{display:flex;justify-content:center;gap:2px;margin-top:7px;height:5px}
+#dir-carnet .d .dots i{width:5px;height:5px;border-radius:1px;background:var(--ink)}
+#dir-carnet .d.off{border-style:dashed;color:var(--ink3)}
+#dir-carnet .d.off .dn{color:var(--ink3)}
+#dir-carnet .d.plan{border-color:var(--ink)}
+#dir-carnet .d.today{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+#dir-carnet .d.today .l{color:var(--bg)}
+#dir-carnet .d.today .dots i{background:var(--tdot)}
+#dir-carnet .cap{font:500 13px/1.35 var(--sans);color:var(--ink3);margin-top:10px}
+#dir-carnet .prog{margin-top:14px;border:1px solid var(--rule2);border-radius:12px;background:var(--paper);padding:14px 16px 16px}
+#dir-carnet .mt{width:100%;height:auto;display:block;max-height:110px}
+#dir-carnet .mt .r{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+#dir-carnet .mt .g{stroke:var(--rule2);stroke-width:1}
+#dir-carnet .mt .tr{fill:none;stroke:var(--ink3);stroke-width:1.4;stroke-dasharray:1.5 5;stroke-linecap:round}
+#dir-carnet .mt .p{stroke:var(--ink);stroke-width:1.5;stroke-linecap:round}
+#dir-carnet .mt .fa{fill:var(--accent)}
+#dir-carnet .mt .fo{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linejoin:round}
+#dir-carnet .mt .hlc{fill:var(--hl)}
+#dir-carnet .mt text{font:600 9.5px var(--sans);fill:var(--ink3);letter-spacing:.06em}
+#dir-carnet .pr-row{display:flex;align-items:baseline;gap:12px;margin-top:10px}
+#dir-carnet .pr-n{font:500 40px/1 var(--serif);letter-spacing:-.02em}
+#dir-carnet .pr-n small{font-size:20px}
+#dir-carnet .pr-t b{display:block;font:600 14.5px/1.2 var(--sans)}
+#dir-carnet .pr-t span{font:500 13px/1.3 var(--sans);color:var(--ink3)}
+#dir-carnet .streak{display:flex;align-items:center;gap:14px;margin-top:12px;padding:14px 16px;border:1px solid var(--rule2);border-radius:12px;background:var(--paper)}
+#dir-carnet .st-n{font:500 40px/1 var(--serif);min-width:30px;text-align:center}
+#dir-carnet .st-t b{display:block;font:600 14.5px/1.2 var(--sans)}
+#dir-carnet .st-t span{font:500 13px/1.3 var(--sans);color:var(--ink3)}
+#dir-carnet .st-boxes{display:flex;gap:4px;margin-left:auto}
+#dir-carnet .st-boxes i{width:12px;height:12px;border:1.3px solid var(--ink);border-radius:2px}
+#dir-carnet .st-boxes i.f{background:var(--ok);border-color:var(--ok)}
+#dir-carnet .streak.lit .st-n{color:var(--ok-ink)}
+/* tab bar + fab */
+#dir-carnet .tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);border-top:1px solid var(--rule2);padding:6px 4px 30px}
+#dir-carnet .tab{min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font:600 10.5px/1 var(--sans);color:var(--ink3);position:relative}
+#dir-carnet .tab svg,#dir-carnet .nv svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#dir-carnet .tab.act{color:var(--accent)}
+#dir-carnet .tab.act::before{content:"";position:absolute;top:-7px;left:32%;right:32%;height:2px;border-radius:2px;background:var(--accent)}
+#dir-carnet .fab{position:absolute;right:18px;bottom:104px;width:58px;height:58px;border-radius:16px;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;box-shadow:var(--fab-sh);z-index:6}
+#dir-carnet .fab svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+/* desktop */
+#dir-carnet .dk{display:grid;grid-template-columns:236px 1fr 352px;height:100%}
+#dir-carnet .dk-nav{background:var(--paper);border-right:1px solid var(--rule);padding:28px 18px 22px;display:flex;flex-direction:column}
+#dir-carnet .dk-brand{display:flex;align-items:center;gap:11px;padding:0 6px}
+#dir-carnet .dk-brand .logo{width:40px;height:40px}
+#dir-carnet .dk-brand .wm{font-size:21px}
+#dir-carnet .motto{font:500 13px/1.35 var(--serif);color:var(--ink3);padding:10px 6px 0}
+#dir-carnet .nvl{margin-top:30px;display:flex;flex-direction:column;gap:4px}
+#dir-carnet .nv{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:10px;font:600 14.5px/1 var(--sans);color:var(--ink2);width:100%}
+#dir-carnet .nv svg{width:22px;height:22px}
+#dir-carnet .nv.act{background:var(--accent-soft);color:var(--accent)}
+#dir-carnet .dk-add{margin-top:22px;flex:none;width:100%}
+#dir-carnet .dk-q{margin-top:auto;font:500 19px/1.3 var(--serif);padding:18px 6px 20px;border-top:2px solid var(--ink)}
+#dir-carnet .dk-q::before{content:"“";display:block;font:700 34px/.6 var(--serif);color:var(--accent);margin:8px 0 4px}
+#dir-carnet .dk-foot{border-top:1px solid var(--rule);padding:16px 6px 0}
+#dir-carnet .dk-foot p{font:500 13px/1.4 var(--sans);color:var(--ink2);margin-top:6px}
+#dir-carnet .dk-main{padding:30px 38px 20px;overflow:hidden;display:flex;flex-direction:column}
+#dir-carnet .dk-hd{display:flex;align-items:flex-end;justify-content:space-between}
+#dir-carnet .dk-hd .date{font-size:42px}
+#dir-carnet .dk-hd .jc .n{font-size:76px}
+#dir-carnet .dk-row{display:grid;grid-template-columns:.9fr 1.2fr;gap:16px;margin-top:16px}
+#dir-carnet .dk-row .phr{font-size:15px}
+#dir-carnet .dk-row .day{margin:0;padding:14px 16px}
+#dir-carnet .dk-row .segs{margin:10px 0 8px}
+#dir-carnet .dk-row .note{border:1px solid var(--rule2);border-top:2px solid var(--ink);border-radius:0 0 12px 12px;padding:12px 16px;background:var(--paper)}
+#dir-carnet .dk-row .note .nt{font-size:15px}
+#dir-carnet .dk-ag{margin-top:2px}
+#dir-carnet .dk-ag .items{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+#dir-carnet .dk-ag .item{border-bottom:0}
+#dir-carnet .c-grid{display:grid;grid-template-columns:1fr 184px;gap:20px;align-items:end}
+#dir-carnet .dk-ag .c-grid .acts{flex-direction:column;gap:8px;margin:0}
+#dir-carnet .dk-ag .acts .btn{flex:none;width:100%}
+#dir-carnet .dk-ag .slot{grid-template-columns:52px 1fr}
+#dir-carnet .dk-ag .card{margin:10px 0 0 12px;padding-bottom:4px}
+#dir-carnet .dk-ag .card.hero{padding-bottom:4px}
+#dir-carnet .dk-ag .ttl{font-size:20px}
+#dir-carnet .dk-ag .item{min-height:54px;padding:10px 2px}
+#dir-carnet .dk-ag .acts .btn{min-height:44px;font-size:14px}
+#dir-carnet .dk-skip{width:auto;min-height:32px;font-size:13px;margin:0}
+#dir-carnet .dk-side{border-left:1px solid var(--rule);padding:30px 28px 20px;overflow:hidden}
+#dir-carnet .dk-side .sec{margin:0 0 2px}
+#dir-carnet .dk-side .sec h3{font-size:20px}
+#dir-carnet .dk-side .sec+.wk{margin-top:12px}
+#dir-carnet .dk-side .d{min-height:62px;padding-top:7px}
+#dir-carnet .dk-side .d .dn{font-size:19px}
+#dir-carnet .dk-side .tm li{padding:5px 0;font-size:13.5px}
+#dir-carnet .dk-side .tm .t{font-size:14px}
+#dir-carnet .dk-side .blk{margin-top:16px}
+#dir-carnet .dk-side .mt{max-height:84px}
+#dir-carnet .dk-side .prog{margin-top:0;padding:12px 14px}
+#dir-carnet .dk-side .pr-n,#dir-carnet .dk-side .st-n{font-size:34px}
+#dir-carnet .dk-side .streak{padding:12px 14px;margin-top:10px}
+@keyframes carnet-burst{0%{opacity:1;transform:scale(.55)}70%{opacity:.9}100%{opacity:0;transform:scale(1.4)}}
+@keyframes carnet-press{0%{transform:scale(1)}35%{transform:scale(.82)}75%{transform:scale(1.1)}100%{transform:scale(1)}}
+@keyframes carnet-pulse{0%{box-shadow:0 0 0 0 var(--accent)}80%,100%{box-shadow:0 0 0 7px transparent}}
+@keyframes carnet-stamp{0%{opacity:0;transform:rotate(-14deg) scale(1.7)}60%{opacity:1;transform:rotate(-4deg) scale(.96)}100%{transform:rotate(-5deg) scale(1)}}
+@keyframes carnet-draw{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+@keyframes carnet-swipe{from{background-size:0 var(--sw-h)}to{background-size:100% var(--sw-h)}}
+@media (prefers-reduced-motion: reduce){#dir-carnet *,#dir-carnet *::before,#dir-carnet *::after{animation:none !important;transition:none !important}}
+</style>
+<section class="dir" id="dir-carnet" data-mode="auto">
+<div class="mock-phone">
+  <header class="ph-head">
+    <div class="ph-bar">
+      <svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Plan DCG"><rect class="lg-tile" x="1" y="1" width="46" height="46" rx="11"/><path class="lg-rule" d="M9 39.5h30"/><path class="lg-ink" d="M11.5 25.2c2.4 1.8 4.6 4.3 6.6 7.6 3.6-6.6 7.4-11.9 12.2-17.4"/><path class="lg-pole" d="M30.3 15.4V7.6"/><path class="lg-flag" d="M30.3 7.8c2.9-.9 5.6 1 8.6.1v6.2c-3 .9-5.7-1-8.6-.1z"/></svg>
+      <span class="wm">Plan DCG</span>
+      <span class="phase">Phase 1 · Apprendre</span>
+    </div>
+    <div class="ph-date">
+      <div>
+        <p class="eb">Lundi</p>
+        <h2 class="date">16 novembre</h2>
+        <p class="status"><i></i>Dans les temps</p>
+      </div>
+      <div class="jc" role="img" aria-label="J moins 190 avant les écrits"><span class="j">J−</span><span class="n">190</span><span class="c">avant les écrits</span></div>
+    </div>
+  </header>
+
+  <div class="ph-main">
+    <aside class="note">
+      <span class="note-q" aria-hidden="true">“</span>
+      <div><p class="eb">Le mot de la semaine</p><p class="nt">Bienvenue&nbsp;! Économie à 14&nbsp;h, puis droit à 15&nbsp;h&nbsp;45. Survole le sommaire, coche au fur et à mesure.</p></div>
+    </aside>
+
+    <div class="day">
+      <div class="day-top"><div><p class="eb">Ta journée</p><p class="day-sub" aria-live="polite"><span data-cntt>1 élément sur 4</span> · <span data-sess>0 séance terminée sur 2</span></p></div><p class="day-n num"><span data-cnt>1</span><small>/4</small></p></div>
+      <div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p class="phr">Premier jour. Le plus dur, c’est de commencer, et tu y es.</p>
+    </div>
+
+    <div class="sec"><h3>Agenda</h3><span class="eb">2 séances · 2&nbsp;h&nbsp;25</span></div>
+    <ol>
+      <li class="slot">
+        <div class="gut"><span>14:00</span><span class="e">15:30</span><span class="nowm" role="img" aria-label="Il est 14 h 25">14:25</span></div>
+        <article class="card hero" data-card="s1" style="--ue:var(--ue5)">
+          <div class="c-top"><span class="tag" data-tag="s1"><i></i><span>En cours</span></span><span class="time"><span class="hl">14:00 – 15:30</span></span></div>
+          <p class="ue"><i></i>UE5 Économie</p>
+          <h4 class="ttl">Les fondements de la science économique</h4>
+          <p class="meta">Cours · 2 éléments · 1&nbsp;h&nbsp;20</p>
+          <div class="items">
+            <div class="item" role="checkbox" tabindex="0" aria-checked="true" data-k="s1a">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>À faire</span><span class="dur">30&nbsp;min</span></span><span class="txt">Survole l’e-book UE5 et la méthode de l’épreuve</span></span>
+            </div>
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s1b">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>Leçon</span><span class="dur">50&nbsp;min</span></span><span class="txt">Ressources rares et besoins illimités</span></span>
+            </div>
+          </div>
+          <div class="acts">
+            <button type="button" class="btn pri">Ouvrir ma séance<svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="btn" data-done="s1">C’est fait</button>
+          </div>
+          <div class="cel" aria-hidden="true"><div class="stamp"><svg viewBox="0 0 34 34"><path d="M7 18l6.5 6.5L27.5 9"/></svg><b><span>Séance terminée&nbsp;!</span></b><small>UE5 Économie · 2 sur 2</small></div></div>
+        </article>
+      </li>
+      <li class="slot">
+        <div class="gut"><span>15:45</span><span class="e">17:00</span></div>
+        <article class="card nx" data-card="s2" style="--ue:var(--ue1)">
+          <div class="c-top"><span class="tag" data-tag="s2"><i></i><span>À venir</span></span><span class="time num">15:45 – 17:00</span></div>
+          <p class="ue"><i></i>UE1 Droit</p>
+          <h4 class="ttl">Les règles applicables à la situation du client</h4>
+          <p class="meta">Cours · 2 éléments · 1&nbsp;h&nbsp;05</p>
+          <div class="items">
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2a">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>À faire</span><span class="dur">20&nbsp;min</span></span><span class="txt">Survole l’e-book UE1 et le guide de l’épreuve</span></span>
+            </div>
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2b">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>Leçon</span><span class="dur">45&nbsp;min</span></span><span class="txt">La règle de droit</span></span>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ol>
+    <button type="button" class="skip">Je n’ai pas pu travailler aujourd’hui</button>
+
+    <div class="sec"><h3>Ta semaine</h3><span class="eb">Semaine 1</span></div>
+    <div class="wk">
+      <div class="d off"><span class="l">Dim</span><span class="dn">15</span></div>
+      <div class="d today"><span class="l">Lun</span><span class="dn">16</span><span class="dots"><i></i><i></i></span></div>
+      <div class="d plan"><span class="l">Mar</span><span class="dn">17</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="d off"><span class="l">Mer</span><span class="dn">18</span></div>
+      <div class="d off"><span class="l">Jeu</span><span class="dn">19</span></div>
+      <div class="d off"><span class="l">Ven</span><span class="dn">20</span></div>
+      <div class="d off"><span class="l">Sam</span><span class="dn">21</span></div>
+    </div>
+    <p class="cap">Cette semaine&nbsp;: 2 jours de plan. Ensuite, dimanche 22.</p>
+
+    <div class="tmr">
+      <p class="eb">Demain · mardi 17 · 6 séances + bilan</p>
+      <ol class="rib">
+        <li style="--ue:var(--ue9)" aria-label="9:00, UE9 Compta"><span class="t">9:00</span><span class="u">Compta</span></li>
+        <li style="--ue:var(--ue8)" aria-label="11:00, UE8 SI"><span class="t">11:00</span><span class="u">SI</span></li>
+        <li style="--ue:var(--ue12)" aria-label="12:15, UE12 Anglais"><span class="t">12:15</span><span class="u">Anglais</span></li>
+        <li style="--ue:var(--ue7)" aria-label="14:00, UE7 Management"><span class="t">14:00</span><span class="u">Mgmt</span></li>
+        <li style="--ue:var(--ue5)" aria-label="16:00, UE5 Économie"><span class="t">16:00</span><span class="u">Éco</span></li>
+        <li style="--ue:var(--ue12)" aria-label="17:15, UE12 Anglais"><span class="t">17:15</span><span class="u">Anglais</span></li>
+        <li class="bil" aria-label="18:00, bilan"><span class="t">18:00</span><span class="u">Bilan</span></li>
+      </ol>
+    </div>
+
+    <div class="sec"><h3>Progression</h3><span class="eb">Programme</span></div>
+    <div class="prog pc">
+      <svg class="mt" viewBox="0 0 300 112" aria-hidden="true"><path class="g" d="M0 104.5h300"/><path class="r" d="M8 104 74 56l24 16 52-52 46 44 24-14 72 58"/><path class="tr" d="M34 101c34-6 58-14 80-26s28-30 36-49"/><circle class="hlc" cx="30" cy="102" r="7"/><path class="p" d="M30 104V78"/><path class="fa" d="M30 78.5c3.6-1 7.2 1 11 0v7.6c-3.8 1-7.4-1-11 0z"/><path class="p" d="M150 20V5"/><path class="fo" d="M150 5.5c3-.8 6 .8 9 0v6c-3 .8-6-.8-9 0z"/><text x="166" y="18">SOMMET</text></svg>
+      <div class="pr-row"><p class="pr-n num">0<small>&nbsp;%</small></p><p class="pr-t"><b>Camp de base</b><span>Ton drapeau monte à chaque séance.</span></p></div>
+      <div class="streak in" data-streak>
+        <p class="st-n num" data-st-n>0</p>
+        <p class="st-t"><b data-st-b>Série&nbsp;: 0 jour</b><span data-st-s>Coche ta journée pour la lancer.</span></p>
+        <span class="st-boxes" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="fab" aria-label="Ajouter une séance"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  <nav class="tabs" aria-label="Navigation">
+    <button type="button" class="tab act" aria-current="page"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4M9 14.6l2 2 4-4"/></svg>Aujourd’hui</button>
+    <button type="button" class="tab"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14.5" rx="2.5"/><path d="M9.2 5v14.5M14.8 5v14.5"/></svg>Semaine</button>
+    <button type="button" class="tab"><svg viewBox="0 0 24 24"><path d="M2.5 20 9 10l3.5 5 2.3-3L21.5 20z"/><path d="M14.8 12V4.2h4.5l-1.3 1.9 1.3 1.9h-4.5"/></svg>Progrès</button>
+    <button type="button" class="tab"><svg viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3.5 5v13.5c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5V20"/></svg>Méthode</button>
+  </nav>
+</div>
+
+<div class="desk-scaler"><div class="mock-desk"><div class="dk">
+  <aside class="dk-nav">
+    <div class="dk-brand"><svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Plan DCG"><rect class="lg-tile" x="1" y="1" width="46" height="46" rx="11"/><path class="lg-rule" d="M9 39.5h30"/><path class="lg-ink" d="M11.5 25.2c2.4 1.8 4.6 4.3 6.6 7.6 3.6-6.6 7.4-11.9 12.2-17.4"/><path class="lg-pole" d="M30.3 15.4V7.6"/><path class="lg-flag" d="M30.3 7.8c2.9-.9 5.6 1 8.6.1v6.2c-3 .9-5.7-1-8.6-.1z"/></svg><span class="wm">Plan DCG</span></div>
+    <p class="motto">Pas à pas, jusqu’au sommet.</p>
+    <nav class="nvl" aria-label="Sections">
+      <button type="button" class="nv act" aria-current="page"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4M9 14.6l2 2 4-4"/></svg>Aujourd’hui</button>
+      <button type="button" class="nv"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14.5" rx="2.5"/><path d="M9.2 5v14.5M14.8 5v14.5"/></svg>Semaine</button>
+      <button type="button" class="nv"><svg viewBox="0 0 24 24"><path d="M2.5 20 9 10l3.5 5 2.3-3L21.5 20z"/><path d="M14.8 12V4.2h4.5l-1.3 1.9 1.3 1.9h-4.5"/></svg>Progrès</button>
+      <button type="button" class="nv"><svg viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3.5 5v13.5c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5V20"/></svg>Méthode</button>
+    </nav>
+    <button type="button" class="btn pri dk-add"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Ajouter une séance</button>
+    <p class="dk-q">Premier jour. Le plus dur, c’est de commencer, et tu y es.</p>
+    <div class="dk-foot"><p class="eb">Phase 1 · Apprendre</p><p>Écrits fin mai 2027.</p></div>
+  </aside>
+
+  <div class="dk-main">
+    <div class="dk-hd">
+      <div><p class="eb">Lundi</p><h2 class="date">16 novembre</h2><p class="status"><i></i>Dans les temps</p></div>
+      <div class="jc" role="img" aria-label="J moins 190 avant les écrits"><span class="j">J−</span><span class="n">190</span><span class="c">avant les écrits</span></div>
+    </div>
+    <div class="dk-row">
+      <div class="day">
+        <div class="day-top"><div><p class="eb">Ta journée</p><p class="day-sub"><span data-cntt>1 élément sur 4</span> · <span data-sess>0 séance terminée sur 2</span></p></div><p class="day-n num"><span data-cnt>1</span><small>/4</small></p></div>
+        <div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <aside class="note"><span class="note-q" aria-hidden="true">“</span><div><p class="eb">Le mot de la semaine</p><p class="nt">Bienvenue&nbsp;! Économie à 14&nbsp;h, puis droit à 15&nbsp;h&nbsp;45. Survole le sommaire, coche au fur et à mesure.</p></div></aside>
+    </div>
+    <div class="sec" style="margin-top:20px"><h3>Agenda <span class="eb">&nbsp;2 séances · 2&nbsp;h&nbsp;25</span></h3><button type="button" class="skip dk-skip">Je n’ai pas pu travailler aujourd’hui</button></div>
+    <ol class="dk-ag">
+      <li class="slot">
+        <div class="gut"><span>14:00</span><span class="e">15:30</span><span class="nowm" role="img" aria-label="Il est 14 h 25">14:25</span></div>
+        <article class="card hero" data-card="s1" style="--ue:var(--ue5)">
+          <div class="c-top"><span class="tag" data-tag="s1"><i></i><span>En cours</span></span><span class="time"><span class="hl">14:00 – 15:30</span></span></div>
+          <div class="c-grid"><div>
+          <p class="ue"><i></i>UE5 Économie</p>
+          <h4 class="ttl">Les fondements de la science économique</h4>
+          <p class="meta">Cours · 2 éléments · 1&nbsp;h&nbsp;20</p>
+          </div>
+          <div class="acts">
+            <button type="button" class="btn pri">Ouvrir ma séance<svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="btn" data-done="s1">C’est fait</button>
+          </div>
+          </div>
+          <div class="items">
+            <div class="item" role="checkbox" tabindex="0" aria-checked="true" data-k="s1a">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>À faire</span><span class="dur">30&nbsp;min</span></span><span class="txt">Survole l’e-book UE5 et la méthode de l’épreuve</span></span>
+            </div>
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s1b">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>Leçon</span><span class="dur">50&nbsp;min</span></span><span class="txt">Ressources rares et besoins illimités</span></span>
+            </div>
+          </div>
+          <div class="cel" aria-hidden="true"><div class="stamp"><svg viewBox="0 0 34 34"><path d="M7 18l6.5 6.5L27.5 9"/></svg><b><span>Séance terminée&nbsp;!</span></b><small>UE5 Économie · 2 sur 2</small></div></div>
+        </article>
+      </li>
+      <li class="slot">
+        <div class="gut"><span>15:45</span><span class="e">17:00</span></div>
+        <article class="card" data-card="s2" style="--ue:var(--ue1)">
+          <div class="c-top"><span class="tag" data-tag="s2"><i></i><span>À venir</span></span><span class="time num">15:45 – 17:00</span></div>
+          <p class="ue"><i></i>UE1 Droit</p>
+          <h4 class="ttl">Les règles applicables à la situation du client</h4>
+          <p class="meta">Cours · 2 éléments · 1&nbsp;h&nbsp;05</p>
+          <div class="items">
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2a">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>À faire</span><span class="dur">20&nbsp;min</span></span><span class="txt">Survole l’e-book UE1 et le guide de l’épreuve</span></span>
+            </div>
+            <div class="item" role="checkbox" tabindex="0" aria-checked="false" data-k="s2b">
+              <svg class="box" viewBox="0 0 28 28" aria-hidden="true"><g class="bu"><line x1="14" y1="1" x2="14" y2="-3"/><line x1="25" y1="5" x2="28" y2="2"/><line x1="27" y1="15" x2="31" y2="15"/><line x1="3" y1="5" x2="0" y2="2"/><line x1="1" y1="15" x2="-3" y2="15"/><line x1="24" y1="25" x2="27" y2="28"/></g><path class="bx" d="M4.6 3.4c6.4-.5 12.6-.4 19.4.2.7 6.8.6 13.6.1 20.6-6.6.5-13.1.5-19.7 0-.6-7-.5-13.9.2-20.8z"/><path class="tk" d="M8 14.6l4.4 4.6L21.6 8.2"/></svg>
+              <span><span class="kind"><span>Leçon</span><span class="dur">45&nbsp;min</span></span><span class="txt">La règle de droit</span></span>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ol>
+  </div>
+
+  <aside class="dk-side">
+    <div class="sec"><h3>Ta semaine</h3><span class="eb">Semaine 1</span></div>
+    <div class="wk">
+      <div class="d off"><span class="l">Dim</span><span class="dn">15</span></div>
+      <div class="d today"><span class="l">Lun</span><span class="dn">16</span><span class="dots"><i></i><i></i></span></div>
+      <div class="d plan"><span class="l">Mar</span><span class="dn">17</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="d off"><span class="l">Mer</span><span class="dn">18</span></div>
+      <div class="d off"><span class="l">Jeu</span><span class="dn">19</span></div>
+      <div class="d off"><span class="l">Ven</span><span class="dn">20</span></div>
+      <div class="d off"><span class="l">Sam</span><span class="dn">21</span></div>
+    </div>
+    <p class="cap">2 jours de plan. Ensuite, dimanche 22.</p>
+    <div class="blk">
+      <div class="sec"><h3>Demain · mardi 17</h3><span class="eb">6 + bilan</span></div>
+      <ul class="tm">
+        <li><span class="t">9:00</span><span class="sq" style="--ue:var(--ue9)"></span><span>UE9 Compta</span></li>
+        <li><span class="t">11:00</span><span class="sq" style="--ue:var(--ue8)"></span><span>UE8 SI</span></li>
+        <li><span class="t">12:15</span><span class="sq" style="--ue:var(--ue12)"></span><span>UE12 Anglais</span></li>
+        <li><span class="t">14:00</span><span class="sq" style="--ue:var(--ue7)"></span><span>UE7 Management</span></li>
+        <li><span class="t">16:00</span><span class="sq" style="--ue:var(--ue5)"></span><span>UE5 Économie</span></li>
+        <li><span class="t">17:15</span><span class="sq" style="--ue:var(--ue12)"></span><span>UE12 Anglais</span></li>
+        <li class="bil"><span class="t">18:00</span><span class="sq"></span><span>Bilan de la journée</span></li>
+      </ul>
+    </div>
+    <div class="blk">
+      <div class="sec" style="margin-bottom:10px"><h3>Progression</h3><span class="eb">Programme</span></div>
+      <div class="prog">
+        <svg class="mt" viewBox="0 0 300 112" aria-hidden="true"><path class="g" d="M0 104.5h300"/><path class="r" d="M8 104 74 56l24 16 52-52 46 44 24-14 72 58"/><path class="tr" d="M34 101c34-6 58-14 80-26s28-30 36-49"/><circle class="hlc" cx="30" cy="102" r="7"/><path class="p" d="M30 104V78"/><path class="fa" d="M30 78.5c3.6-1 7.2 1 11 0v7.6c-3.8 1-7.4-1-11 0z"/><path class="p" d="M150 20V5"/><path class="fo" d="M150 5.5c3-.8 6 .8 9 0v6c-3 .8-6-.8-9 0z"/><text x="190" y="18">SOMMET</text></svg>
+        <div class="pr-row"><p class="pr-n num">0<small>&nbsp;%</small></p><p class="pr-t"><b>Camp de base</b><span>Ton drapeau monte à chaque séance.</span></p></div>
+      </div>
+      <div class="streak" data-streak>
+        <p class="st-n num" data-st-n>0</p>
+        <p class="st-t"><b data-st-b>Série&nbsp;: 0 jour</b><span data-st-s>Coche ta journée pour la lancer.</span></p>
+        <span class="st-boxes" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </aside>
+</div></div></div>
+</section>
+<script>
+(function(){
+  var root = document.getElementById('dir-carnet');
+  if (!root) return;
+  var state = { s1a: true, s1b: false, s2a: false, s2b: false };
+  var sessions = { s1: ['s1a', 's1b'], s2: ['s2a', 's2b'] };
+  var tags = { s1: 'En cours', s2: 'À venir' };
+  var timers = [];
+  function reduced(){ return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  function done(s){ return sessions[s].every(function(k){ return state[k]; }); }
+  function all(sel){ return Array.prototype.slice.call(root.querySelectorAll(sel)); }
+  function render(){
+    var n = Object.keys(state).filter(function(k){ return state[k]; }).length;
+    var sd = ['s1', 's2'].filter(done).length;
+    all('.item[data-k]').forEach(function(el){
+      var on = !!state[el.getAttribute('data-k')];
+      el.setAttribute('aria-checked', on ? 'true' : 'false');
+      el.classList.toggle('on', on);
+    });
+    all('[data-cnt]').forEach(function(el){ el.textContent = n; });
+    all('[data-cntt]').forEach(function(el){ el.textContent = n + (n > 1 ? ' éléments' : ' élément') + ' sur 4'; });
+    all('[data-sess]').forEach(function(el){ el.textContent = sd + (sd > 1 ? ' séances terminées' : ' séance terminée') + ' sur 2'; });
+    all('.segs').forEach(function(g){ Array.prototype.forEach.call(g.children, function(c, i){ c.classList.toggle('f', i < n); }); });
+    ['s1', 's2'].forEach(function(s){
+      var d = done(s);
+      all('[data-card="' + s + '"]').forEach(function(c){ c.classList.toggle('done', d); });
+      all('[data-tag="' + s + '"] span').forEach(function(t){ t.textContent = d ? 'Terminée' : tags[s]; });
+    });
+    all('[data-done="s1"]').forEach(function(b){ b.disabled = done('s1'); b.textContent = done('s1') ? 'Fait ✓' : 'C’est fait'; });
+    var lit = n === 4;
+    all('[data-streak]').forEach(function(st){
+      st.classList.toggle('lit', lit);
+      st.querySelector('[data-st-n]').textContent = lit ? '1' : '0';
+      st.querySelector('[data-st-b]').textContent = 'Série : ' + (lit ? '1' : '0') + ' jour';
+      st.querySelector('[data-st-s]').textContent = lit ? 'Bravo, ta série est lancée.' : 'Coche ta journée pour la lancer.';
+      st.querySelector('.st-boxes i').classList.toggle('f', lit);
+    });
+  }
+  function celebrate(){
+    timers.forEach(clearTimeout); timers = [];
+    all('[data-card="s1"] .cel').forEach(function(c){
+      c.classList.remove('show'); void c.offsetWidth; c.classList.add('show');
+    });
+    timers.push(setTimeout(function(){ all('.cel.show').forEach(function(c){ c.classList.remove('show'); }); }, 2500));
+  }
+  function pop(k){
+    if (reduced()) return;
+    all('.item[data-k="' + k + '"]').forEach(function(el){
+      el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+    });
+  }
+  function set(keys, val){
+    var before = done('s1');
+    keys.forEach(function(k){ if (state[k] !== val){ state[k] = val; if (val) pop(k); } });
+    render();
+    if (!before && done('s1')) celebrate();
+  }
+  root.addEventListener('click', function(e){
+    var it = e.target.closest('.item[data-k]');
+    if (it && root.contains(it)){ var k = it.getAttribute('data-k'); set([k], !state[k]); return; }
+    var b = e.target.closest('[data-done]');
+    if (b && root.contains(b) && !b.disabled){ set(sessions[b.getAttribute('data-done')], true); }
+  });
+  root.addEventListener('keydown', function(e){
+    var it = e.target.closest && e.target.closest('.item[data-k]');
+    if (!it || !root.contains(it)) return;
+    if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar'){
+      e.preventDefault(); var k = it.getAttribute('data-k'); set([k], !state[k]);
+    }
+  });
+  root.addEventListener('animationend', function(e){
+    var it = e.target.closest && e.target.closest('.item.pop');
+    if (it && e.animationName === 'carnet-burst') it.classList.remove('pop');
+  });
+  render();
+})();
+</script>
+
+  </div>
+</section>
+<section class="pg-dir" id="pg-elan" aria-labelledby="pg-elan-h">
+  <div class="pg-head"><span class="pg-letter">C</span>
+    <div class="pg-name"><h2 id="pg-elan-h">Élan</h2><p>Chaque séance compte comme un entraînement : ferme tes anneaux.</p><div class="pg-sw" aria-hidden="true"><i style="background:#6c3cff"></i><i style="background:#c8f031"></i><i style="background:#ff5c7a"></i><i style="background:#f3f1ff"></i><i style="background:#0e0b1d"></i></div></div>
+    <div class="seg pg-dev" role="group" aria-label="Appareil"><button type="button" data-dev="phone" aria-pressed="true">Téléphone</button><button type="button" data-dev="desk" aria-pressed="false">Ordinateur</button></div>
+  </div>
+  <div class="pg-stage">
+<style>
+/* Direction « Élan » : énergie d'entraînement, anneaux, série, gros chiffres. */
+#dir-elan{
+  --bg:#f3f1ff; --card:#ffffff; --soft:#f1eeff; --ink:#17122e; --ink2:#5b5480; --line:#e2ddf7;
+  --brand:#6c3cff; --brand-t:#5a2ae6; --brand-soft:#ebe5ff; --on-brand:#ffffff;
+  --lime:#c8f031; --lime-edge:#5d9100; --on-lime:#17220a; --coral:#ff5c7a; --coral-t:#c41f43; --cyan:#43e0ff;
+  --box:#827aab; --focus:#6c3cff; --shadow:0 10px 30px rgba(76,40,190,.10),0 2px 6px rgba(76,40,190,.06);
+  --head:radial-gradient(110% 70% at 100% 0%,rgba(122,75,255,.6) 0%,transparent 60%),linear-gradient(160deg,#5a2cf2 0%,#3a15b5 100%);
+  --on-head:#ffffff; --on-head2:rgba(255,255,255,.9); --head-chip:rgba(255,255,255,.15); --trk:rgba(255,255,255,.16); --flame-h:#ffd1d9; --coral-ring:#ff8ea3;
+  --side:#ffffff; --tab:rgba(255,255,255,.94); --mtn1:#ddd5ff; --mtn2:#bfaeff; --trail:#6c3cff; --glow:none;
+  --ue1:#3b6cff; --ue1-i:#2346c9; --ue5:#ff8a00; --ue5-i:#a65200; --ue7:#ff3d9a; --ue7-i:#bd1468;
+  --ue8:#00b8d9; --ue8-i:#00728a; --ue9:#10b981; --ue9-i:#04785a; --ue12:#f5c400; --ue12-i:#7a5d00; --ue13:#b14dff; --ue13-i:#8424d6;
+  font-family:"Nunito",ui-rounded,-apple-system,system-ui,"Segoe UI",sans-serif;
+}
+#dir-elan[data-mode="dark"]{
+  --bg:#0e0b1d; --card:#1c1733; --soft:#251f42; --ink:#f4f1ff; --ink2:#b3abd6; --line:#2d2650;
+  --brand:#7a4dff; --brand-t:#a68bff; --brand-soft:#2b2252; --lime:#d4ff3a; --lime-edge:#d4ff3a; --coral:#ff6b86; --coral-t:#ff7d95; --coral-ring:#ff6b86; --flame-h:#ffa3b4;
+  --box:#77709f; --focus:#d4ff3a; --shadow:0 0 0 1px rgba(155,123,255,.14),0 14px 34px rgba(0,0,0,.45);
+  --head:radial-gradient(90% 70% at 90% 0%,rgba(108,60,255,.55) 0%,transparent 62%),radial-gradient(70% 60% at 0% 100%,rgba(212,255,58,.10) 0%,transparent 60%),#0e0b1d;
+  --trk:rgba(255,255,255,.10); --side:#120e26; --tab:rgba(18,14,38,.94); --mtn1:#2a2150; --mtn2:#3d2f78; --trail:#d4ff3a; --glow:drop-shadow(0 0 6px currentColor);
+  --ue1:#7c9cff; --ue1-i:#9db5ff; --ue5:#ffaa3d; --ue5-i:#ffb85c; --ue7:#ff6fb5; --ue7-i:#ff8cc4; --ue8:#3dd8f0; --ue8-i:#5fe0f4;
+  --ue9:#34e0a1; --ue9-i:#5ae8b3; --ue12:#ffd84d; --ue12-i:#ffdf6b; --ue13:#c98bff; --ue13-i:#d6a6ff;
+}
+@media (prefers-color-scheme:dark){
+  #dir-elan[data-mode="auto"]{
+    --bg:#0e0b1d; --card:#1c1733; --soft:#251f42; --ink:#f4f1ff; --ink2:#b3abd6; --line:#2d2650;
+    --brand:#7a4dff; --brand-t:#a68bff; --brand-soft:#2b2252; --lime:#d4ff3a; --lime-edge:#d4ff3a; --coral:#ff6b86; --coral-t:#ff7d95; --coral-ring:#ff6b86; --flame-h:#ffa3b4;
+    --box:#77709f; --focus:#d4ff3a; --shadow:0 0 0 1px rgba(155,123,255,.14),0 14px 34px rgba(0,0,0,.45);
+    --head:radial-gradient(90% 70% at 90% 0%,rgba(108,60,255,.55) 0%,transparent 62%),radial-gradient(70% 60% at 0% 100%,rgba(212,255,58,.10) 0%,transparent 60%),#0e0b1d;
+    --trk:rgba(255,255,255,.10); --side:#120e26; --tab:rgba(18,14,38,.94); --mtn1:#2a2150; --mtn2:#3d2f78; --trail:#d4ff3a; --glow:drop-shadow(0 0 6px currentColor);
+    --ue1:#7c9cff; --ue1-i:#9db5ff; --ue5:#ffaa3d; --ue5-i:#ffb85c; --ue7:#ff6fb5; --ue7-i:#ff8cc4; --ue8:#3dd8f0; --ue8-i:#5fe0f4;
+    --ue9:#34e0a1; --ue9-i:#5ae8b3; --ue12:#ffd84d; --ue12-i:#ffdf6b; --ue13:#c98bff; --ue13-i:#d6a6ff;
+  }
+}
+#dir-elan .mock-phone,#dir-elan .mock-desk{background:var(--bg);color:var(--ink);font-family:"Nunito",ui-rounded,-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.35;font-weight:600}
+#dir-elan .mock-phone{width:100%;max-width:430px;margin:0 auto;position:relative;overflow:hidden}
+#dir-elan .mock-desk{width:1280px;height:800px;overflow:hidden;position:relative}
+#dir-elan button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent}
+#dir-elan p,#dir-elan h1,#dir-elan h2,#dir-elan h3{margin:0}
+#dir-elan svg{display:block}
+#dir-elan :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:16px}
+#dir-elan .e-num{font-variant-numeric:tabular-nums lining-nums}
+#dir-elan .e-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* En-tête */
+#dir-elan .e-head{background:var(--head);color:var(--on-head);padding:47px 20px 22px;border-radius:0 0 34px 34px;position:relative}
+#dir-elan .e-top{display:flex;align-items:center;gap:10px;min-height:44px}
+#dir-elan .e-logo{width:40px;height:40px;flex:none;border-radius:12px;box-shadow:0 0 0 1.5px rgba(255,255,255,.22)}
+#dir-elan .e-brandname{font-weight:900;font-size:19px;letter-spacing:-.01em}
+#dir-elan .e-streak{margin-left:auto;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px 0 10px;border-radius:99px;background:var(--head-chip);font-weight:900;font-size:19px}
+#dir-elan .e-streak svg{width:22px;height:22px;color:var(--flame-h)}
+#dir-elan .e-date{margin-top:14px;font-size:15px;font-weight:800;color:var(--on-head2)}
+#dir-elan .e-titlerow{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+#dir-elan .e-h1{font-size:36px;font-weight:900;letter-spacing:-.02em;line-height:1.05}
+#dir-elan .e-jbadge{text-align:right;line-height:1}
+#dir-elan .e-jbadge b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em}
+#dir-elan .e-jbadge span{font-size:13px;font-weight:800;color:var(--on-head2)}
+#dir-elan .e-ringbox{display:flex;align-items:center;gap:16px;margin-top:18px}
+#dir-elan .e-rings{width:138px;height:138px;flex:none}
+#dir-elan .e-rings circle{fill:none;stroke-width:13;stroke-linecap:round}
+#dir-elan .e-rings .e-trk{stroke:var(--trk)}
+#dir-elan .e-arc{transition:stroke-dasharray .7s cubic-bezier(.3,1.4,.5,1)}
+#dir-elan .e-a-day{stroke:var(--lime);color:var(--lime);filter:var(--glow)}
+#dir-elan .e-a-ses{stroke:var(--coral-ring);color:var(--coral-ring);filter:var(--glow)}
+#dir-elan .e-a-prog{stroke:var(--cyan);color:var(--cyan);filter:var(--glow)}
+#dir-elan .e-legend{display:grid;gap:8px;flex:1;min-width:0}
+#dir-elan .e-leg{display:flex;align-items:center;gap:10px}
+#dir-elan .e-leg i{width:12px;height:12px;border-radius:50%;flex:none;border:6px solid}
+#dir-elan .e-leg b{font-size:24px;font-weight:900;line-height:1;min-width:52px}
+#dir-elan .e-leg span{font-size:14px;font-weight:700;color:var(--on-head2)}
+#dir-elan .e-leg .e-i-day{border-color:var(--lime)} #dir-elan .e-leg .e-i-ses{border-color:var(--coral-ring)} #dir-elan .e-leg .e-i-prog{border-color:var(--cyan)}
+#dir-elan .e-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#dir-elan .e-chip{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 13px;border-radius:99px;font-size:14px;font-weight:800;background:var(--head-chip)}
+#dir-elan .e-chip.e-ok{background:var(--lime);color:var(--on-lime)}
+#dir-elan .e-chip.e-ok svg{width:16px;height:16px}
+#dir-elan .e-cheer{margin-top:14px;font-size:15px;font-weight:700;color:var(--on-head2);display:flex;gap:8px;align-items:flex-start}
+#dir-elan .e-cheer svg{width:18px;height:18px;flex:none;color:var(--lime);margin-top:1px}
+
+/* Contenu */
+#dir-elan .e-body{padding:18px 16px 20px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+#dir-elan .e-coach{display:flex;gap:12px;align-items:flex-start;background:var(--card);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow)}
+#dir-elan .e-av{width:38px;height:38px;border-radius:14px;flex:none;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand-t)}
+#dir-elan .e-av svg{width:22px;height:22px}
+#dir-elan .e-coach small{display:block;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-t)}
+#dir-elan .e-coach p{font-size:15px;font-weight:700;margin-top:2px}
+#dir-elan .e-sec{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:900;color:var(--ink2);padding:2px 6px 0}
+#dir-elan .e-live{display:inline-flex;align-items:center;gap:7px;color:var(--coral-t)}
+#dir-elan .e-live i{width:9px;height:9px;border-radius:50%;background:var(--coral);position:relative}
+#dir-elan .e-live i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--coral);animation:elan-ping 1.6s ease-out infinite}
+@keyframes elan-ping{from{transform:scale(.5);opacity:1}to{transform:scale(1.6);opacity:0}}
+
+#dir-elan .e-ses{background:radial-gradient(120% 55% at 100% 0%,color-mix(in srgb,var(--c) 16%,transparent),transparent 65%),var(--card);border-radius:28px;padding:18px;box-shadow:var(--shadow);position:relative}
+#dir-elan .e-hero{box-shadow:var(--shadow),inset 0 0 0 2px color-mix(in srgb,var(--c) 45%,transparent)}
+#dir-elan .e-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#dir-elan .e-ue{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:0 12px;border-radius:99px;background:color-mix(in srgb,var(--c) 15%,var(--card));color:var(--ci);font-weight:900;font-size:14px}
+#dir-elan .e-ue i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+#dir-elan .e-time{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:99px;background:var(--soft);font-weight:800;font-size:14px;font-variant-numeric:tabular-nums}
+#dir-elan .e-stat{margin-left:auto;font-weight:900;font-size:14px;color:var(--ink2)}
+#dir-elan .e-stat b{font-size:18px;color:var(--ink)}
+#dir-elan .e-ses h3{font-size:22px;font-weight:900;letter-spacing:-.01em;line-height:1.2;margin-top:12px}
+#dir-elan .e-meta{font-size:14px;font-weight:700;color:var(--ink2);margin-top:4px}
+#dir-elan .e-tbar{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;color:var(--ink2)}
+#dir-elan .e-track{flex:1;height:10px;border-radius:99px;background:var(--soft);overflow:hidden}
+#dir-elan .e-track i{display:block;height:100%;border-radius:99px;background:var(--c)}
+#dir-elan .e-items{display:grid;gap:8px;margin-top:14px}
+#dir-elan .e-item{display:flex;align-items:center;gap:12px;width:100%;min-height:64px;padding:10px 14px 10px 10px;border-radius:20px;background:var(--soft);transition:background .2s}
+#dir-elan .e-item.e-sm{min-height:54px}
+#dir-elan .e-box{position:relative;width:34px;height:34px;flex:none;border-radius:50%;border:2.5px solid var(--box);display:grid;place-items:center;transition:background .2s,border-color .2s,box-shadow .2s}
+#dir-elan .e-box svg{width:20px;height:20px}
+#dir-elan .e-box path{fill:none;stroke:var(--on-lime);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .3s .05s ease-out}
+#dir-elan .e-item[aria-checked="true"] .e-box{background:var(--lime);border-color:var(--lime-edge)}
+#dir-elan[data-mode="dark"] .e-item[aria-checked="true"] .e-box{box-shadow:0 0 16px rgba(212,255,58,.45)}
+@media (prefers-color-scheme:dark){#dir-elan[data-mode="auto"] .e-item[aria-checked="true"] .e-box{box-shadow:0 0 16px rgba(212,255,58,.45)}}
+#dir-elan .e-item[aria-checked="true"] .e-box path{stroke-dashoffset:0}
+#dir-elan .e-itxt{flex:1;min-width:0}
+#dir-elan .e-kind{display:block;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+#dir-elan .e-it{display:block;font-size:16px;font-weight:800;line-height:1.25}
+#dir-elan .e-item[aria-checked="true"] .e-it{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--lime-edge);color:var(--ink2)}
+#dir-elan .e-dur{flex:none;font-size:14px;font-weight:900;color:var(--ink2);font-variant-numeric:tabular-nums}
+#dir-elan .e-item.e-pop .e-box{animation:elan-pop .42s cubic-bezier(.3,1.6,.5,1)}
+@keyframes elan-pop{0%{transform:scale(.7)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+#dir-elan .e-p{position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:var(--pc);pointer-events:none;animation:elan-burst .6s ease-out forwards}
+@keyframes elan-burst{from{transform:rotate(var(--a)) translateX(8px) scale(1);opacity:1}to{transform:rotate(var(--a)) translateX(32px) scale(0);opacity:0}}
+#dir-elan .e-acts{display:flex;gap:10px;margin-top:14px}
+#dir-elan .e-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:0 18px;white-space:nowrap;border-radius:99px;font-weight:900;font-size:16px;text-align:center;transition:transform .15s}
+#dir-elan .e-btn:active{transform:scale(.97)}
+#dir-elan .e-btn svg{width:20px;height:20px;flex:none}
+#dir-elan .e-b1{flex:1.3;background:var(--brand);color:var(--on-brand);box-shadow:0 8px 20px rgba(108,60,255,.35)}
+#dir-elan .mock-phone .e-b1 svg{display:none}
+#dir-elan .e-b2{flex:1;background:var(--lime);color:var(--on-lime)}
+#dir-elan .e-ses.e-done .e-stat{color:var(--ink)}
+#dir-elan .e-skip{display:flex;align-items:center;justify-content:center;min-height:48px;font-size:15px;font-weight:800;color:var(--ink2);text-decoration:underline;text-underline-offset:4px;width:100%;text-align:center}
+#dir-elan .mock-phone .e-skip{justify-content:flex-start;text-align:left;padding:0 80px 0 6px}
+
+#dir-elan .e-card{background:var(--card);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
+#dir-elan .e-ct{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+#dir-elan .e-ct h3{font-size:19px;font-weight:900}
+#dir-elan .e-ct span{font-size:14px;font-weight:800;color:var(--ink2)}
+#dir-elan .e-tmr{display:flex;gap:8px;margin:12px -18px 0;padding:0 18px 2px;overflow-x:auto;scrollbar-width:none}
+#dir-elan .e-tmr::-webkit-scrollbar{display:none}
+#dir-elan .e-tmr .e-tm{flex:none;white-space:nowrap}
+#dir-elan .e-tm{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:0 12px 0 10px;border-radius:14px;background:color-mix(in srgb,var(--c) 14%,var(--card));font-size:14px;font-weight:800}
+#dir-elan .e-tm b{font-variant-numeric:tabular-nums;color:var(--ci);font-weight:900}
+#dir-elan .e-tm i{width:8px;height:20px;border-radius:4px;background:var(--c)}
+#dir-elan .e-tm.e-bilan{--c:var(--brand);--ci:var(--brand-t)}
+#dir-elan .e-mtn{width:100%;height:auto;margin-top:6px}
+#dir-elan .e-mtn .m1{fill:var(--mtn1)} #dir-elan .e-mtn .m2{fill:var(--mtn2)}
+#dir-elan .e-mtn .tr{fill:none;stroke:var(--trail);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 8}
+#dir-elan .e-mtn .lbl{font:800 12px "Nunito",sans-serif;fill:var(--ink2)}
+#dir-elan .e-mtn .pole{stroke:var(--ink);stroke-width:2.5;stroke-linecap:round}
+#dir-elan .e-mtn .fl{fill:var(--coral)}
+#dir-elan .e-mtn .goal{fill:none;stroke:var(--brand-t);stroke-width:2.5;stroke-linejoin:round}
+#dir-elan .e-asc{display:flex;align-items:center;gap:12px}
+#dir-elan .e-asc>div{flex:none}
+#dir-elan .e-asc h3{font-size:19px;font-weight:900}
+#dir-elan .e-asc>div>span{font-size:14px;font-weight:700;color:var(--ink2);display:block;margin-top:4px}
+#dir-elan .e-asc .e-mtn{flex:1;min-width:0;margin:0}
+#dir-elan .e-pnum{display:flex;align-items:baseline;gap:8px;margin-top:2px}
+#dir-elan .e-pnum b{font-size:40px;font-weight:900;line-height:1;letter-spacing:-.02em}
+#dir-elan .e-pnum span{font-size:15px;font-weight:800;color:var(--ink2)}
+#dir-elan .e-week{display:flex;gap:8px;margin-top:14px;align-items:stretch}
+#dir-elan .e-day{flex:1;border-radius:20px;background:var(--soft);padding:10px 12px;display:grid;gap:2px}
+#dir-elan .e-day small{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2)}
+#dir-elan .e-day b{font-size:24px;font-weight:900;line-height:1.05}
+#dir-elan .e-day span{font-size:13px;font-weight:800;color:var(--ink2)}
+#dir-elan .e-day.e-today{background:var(--brand);color:var(--on-brand)}
+#dir-elan .e-day.e-today small,#dir-elan .e-day.e-today span{color:#fff}
+#dir-elan .e-day.e-next{flex:.9;background:none;border:2px dashed var(--line)}
+#dir-elan .e-fire{display:flex;align-items:center;gap:12px;margin-top:14px;padding:12px 14px;border-radius:20px;background:color-mix(in srgb,var(--coral) 12%,var(--card))}
+#dir-elan .e-fire svg{width:30px;height:30px;flex:none;color:var(--coral-t)}
+#dir-elan .e-fire b{display:block;font-size:17px;font-weight:900;color:var(--coral-t)}
+#dir-elan .e-fire span{font-size:14px;font-weight:700;color:var(--ink2)}
+#dir-elan .e-fire.e-lit svg{animation:elan-flick 1s ease-in-out infinite alternate}
+@keyframes elan-flick{from{transform:scale(1) rotate(-3deg)}to{transform:scale(1.12) rotate(3deg)}}
+
+/* Barre d'onglets + bouton flottant */
+#dir-elan .e-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:8px 10px 26px;background:var(--tab);border-top:1px solid var(--line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+#dir-elan .e-tab{display:grid;justify-items:center;gap:3px;min-height:54px;padding-top:4px;font-size:11.5px;font-weight:800;color:var(--ink2);text-align:center}
+#dir-elan .e-tab svg{width:26px;height:26px;padding:3px 14px;box-sizing:content-box;border-radius:99px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#dir-elan .e-tab[aria-current="page"]{color:var(--brand-t)}
+#dir-elan .e-tab[aria-current="page"] svg{background:var(--brand-soft)}
+#dir-elan .e-fab{position:absolute;right:18px;bottom:104px;width:62px;height:62px;border-radius:22px;display:grid;place-items:center;background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(108,60,255,.45),inset 0 0 0 2px rgba(255,255,255,.14);z-index:3}
+#dir-elan .e-fab svg{width:28px;height:28px}
+#dir-elan .e-fab::after{content:"";position:absolute;right:-3px;top:-3px;width:14px;height:14px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px var(--bg)}
+
+/* Célébration */
+#dir-elan .e-cele{position:absolute;inset:0;z-index:10;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s;background:color-mix(in srgb,var(--bg) 55%,transparent);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#dir-elan .e-cele.e-on{opacity:1;visibility:visible;transition:opacity .2s}
+#dir-elan .e-cc{z-index:1;position:absolute;left:50%;top:var(--top,420px);transform:translate(-50%,-50%);width:300px;padding:26px 22px 24px;border-radius:32px;background:linear-gradient(160deg,#5a2cf2,#2a0f8f);color:#fff;text-align:center;box-shadow:0 24px 60px rgba(40,10,140,.45)}
+#dir-elan .e-cele.e-on .e-cc{animation:elan-in .5s cubic-bezier(.3,1.5,.5,1)}
+@keyframes elan-in{from{transform:translate(-50%,-50%) scale(.6);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+#dir-elan .e-cc svg{width:110px;height:110px;margin:0 auto}
+#dir-elan .e-cc circle{fill:none;stroke-width:12;stroke-linecap:round}
+#dir-elan .e-cc .t{stroke:rgba(255,255,255,.16)}
+#dir-elan .e-cc .a{stroke:#d4ff3a;stroke-dasharray:100 100;filter:drop-shadow(0 0 8px rgba(212,255,58,.7))}
+#dir-elan .e-cele.e-on .e-cc .a{animation:elan-ring .8s .1s ease-out both}
+@keyframes elan-ring{from{stroke-dasharray:0 100}to{stroke-dasharray:100 100}}
+#dir-elan .e-cc path{fill:none;stroke:#d4ff3a;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+#dir-elan .e-cc b{display:block;font-size:28px;font-weight:900;margin-top:10px;letter-spacing:-.01em}
+#dir-elan .e-cc span{display:block;font-size:16px;font-weight:700;color:rgba(255,255,255,.88);margin-top:4px}
+#dir-elan .e-cf{position:absolute;left:50%;top:var(--top,420px);width:10px;height:14px;border-radius:3px;background:var(--pc);animation:elan-conf 1.4s cubic-bezier(.2,.7,.4,1) forwards}
+@keyframes elan-conf{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+
+/* Logo : drapeau qui flotte */
+#dir-elan .e-flag{transform-origin:86px 21px;animation:elan-wave 2.4s ease-in-out infinite}
+@keyframes elan-wave{0%,100%{transform:scaleX(1) skewY(0)}50%{transform:scaleX(.86) skewY(-6deg)}}
+
+/* Ordinateur */
+#dir-elan .e-dl{display:grid;grid-template-columns:216px 1fr 364px;grid-template-rows:800px;height:800px}
+#dir-elan .e-side{background:var(--side);border-right:1px solid var(--line);padding:28px 18px;display:flex;flex-direction:column;gap:6px}
+#dir-elan .e-side .e-top{margin:0 6px 22px}
+#dir-elan .e-side .e-logo{width:44px;height:44px;box-shadow:none}
+#dir-elan .e-side .e-brandname{font-size:20px}
+#dir-elan .e-side .e-motto{font-size:12.5px;font-weight:700;color:var(--ink2);display:block;line-height:1.2}
+#dir-elan .e-nav{display:flex;align-items:center;gap:12px;min-height:50px;padding:0 14px;border-radius:18px;font-size:16px;font-weight:800;color:var(--ink2);width:100%}
+#dir-elan .e-nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#dir-elan .e-nav[aria-current="page"]{background:var(--brand-soft);color:var(--brand-t)}
+#dir-elan .e-side .e-add{margin-top:16px;padding:0 14px;font-size:15px;width:100%;background:var(--brand);color:#fff;box-shadow:0 10px 24px rgba(108,60,255,.35)}
+#dir-elan .e-side .e-fire{margin-top:auto}
+#dir-elan .e-main{padding:22px 28px;display:flex;flex-direction:column;gap:9px;min-width:0;overflow:hidden}
+#dir-elan .e-dh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+#dir-elan .e-dh small{font-size:15px;font-weight:800;color:var(--ink2)}
+#dir-elan .e-dh h1{font-size:40px;font-weight:900;letter-spacing:-.02em;line-height:1.05}
+#dir-elan .e-dh .e-chips{margin:0;justify-content:flex-end;flex-wrap:nowrap}
+#dir-elan .e-dh .e-chip{background:var(--card);box-shadow:var(--shadow)}
+#dir-elan .e-dh .e-chip.e-ok{background:var(--lime)}
+#dir-elan .e-dh .e-chip.e-j{background:var(--brand);color:#fff}
+#dir-elan .e-dcoach{display:flex;gap:14px;align-items:center;padding:12px 16px}
+#dir-elan .e-dcoach p{margin:0;font-size:14.5px}
+#dir-elan .e-main .e-ses{padding:16px 20px}
+#dir-elan .e-main .e-ses h3{font-size:24px;margin-top:10px}
+#dir-elan .e-hb{display:flex;align-items:center;gap:12px;margin-top:12px}
+#dir-elan .e-hb .e-tbar{flex:1;margin:0}
+#dir-elan .e-hb .e-acts{margin:0}
+#dir-elan .e-hb .e-btn{min-height:52px}
+#dir-elan .e-main .e-items{margin-top:12px}
+#dir-elan .e-main .e-item{min-height:62px}
+#dir-elan .e-g2{grid-template-columns:1fr 1fr}
+#dir-elan .e-dfoot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto}
+#dir-elan .e-dfoot .e-skip{width:auto;min-height:44px;white-space:nowrap}
+#dir-elan .e-dfoot .e-cheer{margin:0;color:var(--ink2)}
+#dir-elan .e-dfoot .e-cheer svg{color:var(--brand-t)}
+#dir-elan .e-right{padding:26px 26px 26px 0;display:flex;flex-direction:column;gap:14px}
+#dir-elan .e-rcard{background:var(--head);color:var(--on-head);border-radius:28px;padding:20px 22px}
+#dir-elan .e-rcard h3{font-size:17px;font-weight:900;display:flex;justify-content:space-between}
+#dir-elan .e-rcard h3 span{color:var(--on-head2);font-weight:800;font-size:14px}
+#dir-elan .e-rcard .e-ringbox{margin-top:12px;gap:14px}
+#dir-elan .e-rcard .e-rings{width:124px;height:124px}
+#dir-elan .e-rcard .e-leg b{min-width:46px;font-size:22px}
+#dir-elan .e-right .e-card{padding:16px 20px}
+#dir-elan .e-right .e-pnum b{font-size:32px}
+#dir-elan .e-right .e-week{margin-top:10px}
+#dir-elan .e-right .e-day{padding:8px 12px}
+#dir-elan .e-right .e-day b{font-size:20px;white-space:nowrap}
+#dir-elan .e-right .e-day.e-next{flex:1.25}
+#dir-elan .e-dtm{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+#dir-elan .e-dtm .e-tm{min-height:30px;font-size:13px;gap:5px;padding:0 8px;white-space:nowrap}
+#dir-elan .mock-desk .e-cele{--top:400px}
+
+@media (prefers-reduced-motion:reduce){
+  #dir-elan *,#dir-elan *::before,#dir-elan *::after{animation:none !important;transition:none !important}
+  #dir-elan .e-p,#dir-elan .e-cf{display:none}
+}
+</style>
+<section class="dir" id="dir-elan" data-mode="auto">
+<p class="e-sr" aria-live="polite" id="elan-live"></p>
+
+<div class="mock-phone">
+  <header class="e-head">
+    <div class="e-top">
+      <svg class="e-logo" viewBox="0 0 120 120" role="img" aria-label="Plan DCG"><defs><linearGradient id="elan-lg-bg-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a1d9a"/><stop offset="1" stop-color="#140b3a"/></linearGradient><linearGradient id="elan-lg-st-p" x1="26" y1="86" x2="86" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a98bff"/><stop offset="1" stop-color="#d4ff3a"/></linearGradient></defs><rect width="120" height="120" rx="32" fill="url(#elan-lg-bg-p)"/><path d="M28 64 L48 84 L84 40" fill="none" stroke="url(#elan-lg-st-p)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M84 40 V15" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path class="e-flag" d="M86 14 C92 11 97 18 105 15 L105 29 C97 32 92 25 86 28 Z" fill="#ff5c7a"/></svg>
+      <span class="e-brandname">Plan DCG</span>
+      <span class="e-streak"><span class="e-sr">Série&nbsp;: </span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 2.2c.7 3.3 5.2 5.3 5.2 10.6a5.5 5.5 0 0 1-11 .2c0-2.6 1.4-4 2.4-5.8.4 1.7 1.3 2.8 2.3 3.2.2-3-.3-5.6 1.1-8.2z"/></svg><span class="e-num" data-t="streak">0</span></span>
+    </div>
+    <p class="e-date">Lundi 16 novembre</p>
+    <div class="e-titlerow">
+      <h1 class="e-h1">Aujourd’hui</h1>
+      <p class="e-jbadge"><b class="e-num">J-190</b><span>avant les écrits</span></p>
+    </div>
+    <div class="e-ringbox">
+      <svg class="e-rings" viewBox="0 0 140 140" aria-hidden="true"><g transform="rotate(-90 70 70)"><circle class="e-trk" cx="70" cy="70" r="61"/><circle class="e-arc e-a-day" data-ring="day" cx="70" cy="70" r="61" pathLength="100" stroke-dasharray="25 100"/><circle class="e-trk" cx="70" cy="70" r="45"/><circle class="e-arc e-a-ses" data-ring="ses" cx="70" cy="70" r="45" pathLength="100" stroke-dasharray="0.4 100"/><circle class="e-trk" cx="70" cy="70" r="29"/><circle class="e-arc e-a-prog" cx="70" cy="70" r="29" pathLength="100" stroke-dasharray="0.4 100"/></g></svg>
+      <div class="e-legend">
+        <p class="e-leg"><i class="e-i-day"></i><b class="e-num" data-t="items">1/4</b><span>éléments</span></p>
+        <p class="e-leg"><i class="e-i-ses"></i><b class="e-num" data-t="ses">0/2</b><span>séances</span></p>
+        <p class="e-leg"><i class="e-i-prog"></i><b class="e-num">0&nbsp;%</b><span>programme</span></p>
+      </div>
+    </div>
+    <div class="e-chips">
+      <span class="e-chip">Phase 1 · Apprendre</span>
+      <span class="e-chip e-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Dans les temps</span>
+    </div>
+    <p class="e-cheer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>Premier jour. Le plus dur, c’est de commencer, et tu y es.</p>
+  </header>
+
+  <div class="e-body">
+    <div class="e-coach">
+      <span class="e-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4h3l6 4V6L7 10H4zM17 9a4 4 0 0 1 0 6"/></svg></span>
+      <div><small>Le mot de la semaine</small><p>Bienvenue&nbsp;! Économie à 14&nbsp;h, puis droit à 15&nbsp;h&nbsp;45. Survole le sommaire, coche au fur et à mesure.</p></div>
+    </div>
+
+    <p class="e-sec"><span class="e-live"><i></i>En cours</span>· <span class="e-num">14&nbsp;h&nbsp;25</span></p>
+    <article class="e-ses e-hero" data-ses="s1" style="--c:var(--ue5);--ci:var(--ue5-i)">
+      <div class="e-row"><span class="e-ue"><i></i>UE5 Économie</span><span class="e-time">14:00 – 15:30</span><span class="e-stat"><b class="e-num" data-t="s1">1</b>/2</span></div>
+      <h3>Les fondements de la science économique</h3>
+      <p class="e-meta">Cours · 2 éléments · 1&nbsp;h&nbsp;20</p>
+      <div class="e-tbar"><span class="e-track"><i style="width:28%"></i></span><span>Encore 1&nbsp;h&nbsp;05</span></div>
+      <div class="e-items">
+        <button type="button" class="e-item" role="checkbox" aria-checked="true" data-item="s1a"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">À faire</span><span class="e-it">Survole l’e-book UE5 et la méthode de l’épreuve</span></span><span class="e-dur">30&nbsp;min</span></button>
+        <button type="button" class="e-item" role="checkbox" aria-checked="false" data-item="s1b"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">Leçon</span><span class="e-it">Ressources rares et besoins illimités</span></span><span class="e-dur">50&nbsp;min</span></button>
+      </div>
+      <div class="e-acts">
+        <button type="button" class="e-btn e-b1"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l10.5-6.5z"/></svg>Ouvrir ma séance</button>
+        <button type="button" class="e-btn e-b2" data-act="s1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>C’est fait</button>
+      </div>
+    </article>
+
+    <p class="e-sec">Ensuite · dans 1&nbsp;h&nbsp;20</p>
+    <article class="e-ses" data-ses="s2" style="--c:var(--ue1);--ci:var(--ue1-i)">
+      <div class="e-row"><span class="e-ue"><i></i>UE1 Droit</span><span class="e-time">15:45 – 17:00</span><span class="e-stat"><b class="e-num" data-t="s2">0</b>/2</span></div>
+      <h3>Les règles applicables à la situation du client</h3>
+      <p class="e-meta">Cours · 2 éléments · 1&nbsp;h&nbsp;05</p>
+      <div class="e-items">
+        <button type="button" class="e-item e-sm" role="checkbox" aria-checked="false" data-item="s2a"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">À faire</span><span class="e-it">Survole l’e-book UE1 et le guide de l’épreuve</span></span><span class="e-dur">20&nbsp;min</span></button>
+        <button type="button" class="e-item e-sm" role="checkbox" aria-checked="false" data-item="s2b"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">Leçon</span><span class="e-it">La règle de droit</span></span><span class="e-dur">45&nbsp;min</span></button>
+      </div>
+    </article>
+
+    <section class="e-card" aria-label="Ton ascension">
+      <div class="e-asc"><div><h3>Ton ascension</h3><div class="e-pnum"><b class="e-num">0&nbsp;%</b></div><span>Camp de base.<br>Sommet&nbsp;: les écrits, fin mai.</span></div>
+      <svg class="e-mtn" viewBox="0 0 340 132" aria-hidden="true"><path class="m1" d="M0 132 L70 70 L110 92 L205 16 L262 64 L300 44 L340 76 V132Z"/><path class="m2" d="M150 132 L205 16 L232 40 L218 58 L240 72 L262 64 L340 132Z" opacity=".55"/><path class="tr" d="M30 118 C80 112 110 100 140 82 S190 44 203 22"/><path class="pole" d="M205 16 V2"/><path class="goal" d="M206 3 L222 7 L206 12"/><path class="pole" d="M28 122 V92"/><path class="fl" d="M29 92 C35 89 40 95 49 92 L49 105 C40 108 35 102 29 105Z"/></svg></div>
+      <div class="e-week">
+        <div class="e-day e-today"><small>Lun</small><b class="e-num">16</b><span>2 séances</span></div>
+        <div class="e-day"><small>Mar</small><b class="e-num">17</b><span>6 + bilan</span></div>
+        <div class="e-day e-next"><small>Ensuite</small><b class="e-num">Dim 22</b><span>semaine 2</span></div>
+      </div>
+      <div class="e-fire" data-fire><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 2.2c.7 3.3 5.2 5.3 5.2 10.6a5.5 5.5 0 0 1-11 .2c0-2.6 1.4-4 2.4-5.8.4 1.7 1.3 2.8 2.3 3.2.2-3-.3-5.6 1.1-8.2z"/></svg><div><b>Série&nbsp;: <span class="e-num" data-t="streak">0</span> <span data-t="jour">jour</span></b><span data-t="firetxt">Coche ta journée pour lancer ta série.</span></div></div>
+    </section>
+
+    <section class="e-card" aria-label="Demain">
+      <div class="e-ct"><h3>Demain · mardi 17</h3><span>6 séances + bilan</span></div>
+      <div class="e-tmr" tabindex="0" role="group" aria-label="Séances de demain">
+        <span class="e-tm" style="--c:var(--ue9);--ci:var(--ue9-i)"><i></i><b>9:00</b>Compta</span>
+        <span class="e-tm" style="--c:var(--ue8);--ci:var(--ue8-i)"><i></i><b>11:00</b>SI</span>
+        <span class="e-tm" style="--c:var(--ue12);--ci:var(--ue12-i)"><i></i><b>12:15</b>Anglais</span>
+        <span class="e-tm" style="--c:var(--ue7);--ci:var(--ue7-i)"><i></i><b>14:00</b>Management</span>
+        <span class="e-tm" style="--c:var(--ue5);--ci:var(--ue5-i)"><i></i><b>16:00</b>Économie</span>
+        <span class="e-tm" style="--c:var(--ue12);--ci:var(--ue12-i)"><i></i><b>17:15</b>Anglais</span>
+        <span class="e-tm e-bilan"><i></i><b>18:00</b>Bilan</span>
+      </div>
+    </section>
+
+    <button type="button" class="e-skip">Je n’ai pas pu travailler aujourd’hui</button>
+  </div>
+
+  <button type="button" class="e-fab" aria-label="Ajouter une séance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+
+  <nav class="e-tabs" aria-label="Sections">
+    <button type="button" class="e-tab" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/></svg>Aujourd’hui</button>
+    <button type="button" class="e-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="4"/><path d="M3.5 10h17M8.5 3v4M15.5 3v4"/></svg>Semaine</button>
+    <button type="button" class="e-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20.5L9.5 9l4 6 2.5-3.5 5.5 9z"/><path d="M9.5 9V3l5 2-5 2"/></svg>Progrès</button>
+    <button type="button" class="e-tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v14c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v14"/></svg>Méthode</button>
+  </nav>
+
+  <div class="e-cele" aria-hidden="true" style="--top:760px"><div class="e-cc"><svg viewBox="0 0 120 120"><circle class="t" cx="60" cy="60" r="50"/><circle class="a" cx="60" cy="60" r="50" pathLength="100" transform="rotate(-90 60 60)"/><path d="M40 61 L54 75 L81 46"/></svg><b data-t="ct">Séance terminée&nbsp;!</b><span data-t="cs">UE5 Économie · bien joué</span></div></div>
+</div>
+
+<div class="desk-scaler"><div class="mock-desk">
+  <div class="e-dl">
+    <aside class="e-side">
+      <div class="e-top">
+        <svg class="e-logo" viewBox="0 0 120 120" role="img" aria-label="Plan DCG"><defs><linearGradient id="elan-lg-bg-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a1d9a"/><stop offset="1" stop-color="#140b3a"/></linearGradient><linearGradient id="elan-lg-st-d" x1="26" y1="86" x2="86" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a98bff"/><stop offset="1" stop-color="#d4ff3a"/></linearGradient></defs><rect width="120" height="120" rx="32" fill="url(#elan-lg-bg-d)"/><path d="M28 64 L48 84 L84 40" fill="none" stroke="url(#elan-lg-st-d)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M84 40 V15" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path class="e-flag" d="M86 14 C92 11 97 18 105 15 L105 29 C97 32 92 25 86 28 Z" fill="#ff5c7a"/></svg>
+        <div><span class="e-brandname">Plan DCG</span><span class="e-motto">Pas à pas, jusqu’au sommet.</span></div>
+      </div>
+      <button type="button" class="e-nav" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/></svg>Aujourd’hui</button>
+      <button type="button" class="e-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="4"/><path d="M3.5 10h17M8.5 3v4M15.5 3v4"/></svg>Semaine</button>
+      <button type="button" class="e-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 20.5L9.5 9l4 6 2.5-3.5 5.5 9z"/><path d="M9.5 9V3l5 2-5 2"/></svg>Progrès</button>
+      <button type="button" class="e-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v14c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v14"/></svg>Méthode</button>
+      <button type="button" class="e-btn e-add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Ajouter une séance</button>
+      <div class="e-fire" data-fire><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 2.2c.7 3.3 5.2 5.3 5.2 10.6a5.5 5.5 0 0 1-11 .2c0-2.6 1.4-4 2.4-5.8.4 1.7 1.3 2.8 2.3 3.2.2-3-.3-5.6 1.1-8.2z"/></svg><div><b>Série&nbsp;: <span class="e-num" data-t="streak">0</span> <span data-t="jour">jour</span></b><span data-t="firetxt">Coche ta journée pour lancer ta série.</span></div></div>
+    </aside>
+
+    <div class="e-main">
+      <div class="e-dh">
+        <div><small>Lundi 16 novembre · Phase 1 · Apprendre</small><h1>Aujourd’hui</h1></div>
+        <div class="e-chips"><span class="e-chip e-j e-num">J-190 avant les écrits</span><span class="e-chip e-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Dans les temps</span></div>
+      </div>
+      <div class="e-coach e-dcoach">
+        <span class="e-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4h3l6 4V6L7 10H4zM17 9a4 4 0 0 1 0 6"/></svg></span>
+        <div><small>Le mot de la semaine</small><p>Bienvenue&nbsp;! Économie à 14&nbsp;h, puis droit à 15&nbsp;h&nbsp;45. Survole le sommaire, coche au fur et à mesure.</p></div>
+      </div>
+
+      <article class="e-ses e-hero" data-ses="s1" style="--c:var(--ue5);--ci:var(--ue5-i)">
+        <div class="e-row"><span class="e-sec" style="padding:0"><span class="e-live"><i></i>En cours · <span class="e-num">14&nbsp;h&nbsp;25</span></span></span><span class="e-ue"><i></i>UE5 Économie</span><span class="e-time">14:00 – 15:30</span><span class="e-stat"><b class="e-num" data-t="s1">1</b>/2</span></div>
+        <h3>Les fondements de la science économique</h3>
+        <p class="e-meta">Cours · 2 éléments · 1&nbsp;h&nbsp;20</p>
+        <div class="e-hb">
+          <div class="e-tbar"><span class="e-track"><i style="width:28%"></i></span><span>Encore 1&nbsp;h&nbsp;05</span></div>
+          <div class="e-acts">
+            <button type="button" class="e-btn e-b1"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l10.5-6.5z"/></svg>Ouvrir ma séance</button>
+            <button type="button" class="e-btn e-b2" data-act="s1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>C’est fait</button>
+          </div>
+        </div>
+        <div class="e-items e-g2">
+          <button type="button" class="e-item" role="checkbox" aria-checked="true" data-item="s1a"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">À faire</span><span class="e-it">Survole l’e-book UE5 et la méthode de l’épreuve</span></span><span class="e-dur">30&nbsp;min</span></button>
+          <button type="button" class="e-item" role="checkbox" aria-checked="false" data-item="s1b"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">Leçon</span><span class="e-it">Ressources rares et besoins illimités</span></span><span class="e-dur">50&nbsp;min</span></button>
+        </div>
+      </article>
+
+      <article class="e-ses" data-ses="s2" style="--c:var(--ue1);--ci:var(--ue1-i)">
+        <div class="e-row"><span class="e-sec" style="padding:0">Ensuite</span><span class="e-ue"><i></i>UE1 Droit</span><span class="e-time">15:45 – 17:00</span><span class="e-stat"><b class="e-num" data-t="s2">0</b>/2</span></div>
+        <h3>Les règles applicables à la situation du client</h3>
+        <p class="e-meta">Cours · 2 éléments · 1&nbsp;h&nbsp;05</p>
+        <div class="e-items e-g2">
+          <button type="button" class="e-item e-sm" role="checkbox" aria-checked="false" data-item="s2a"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">À faire</span><span class="e-it">Survole l’e-book UE1 et le guide de l’épreuve</span></span><span class="e-dur">20&nbsp;min</span></button>
+          <button type="button" class="e-item e-sm" role="checkbox" aria-checked="false" data-item="s2b"><span class="e-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9.5"/></svg></span><span class="e-itxt"><span class="e-kind">Leçon</span><span class="e-it">La règle de droit</span></span><span class="e-dur">45&nbsp;min</span></button>
+        </div>
+      </article>
+
+      <div class="e-dfoot">
+        <p class="e-cheer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>Premier jour. Le plus dur, c’est de commencer, et tu y es.</p>
+        <button type="button" class="e-skip">Je n’ai pas pu travailler aujourd’hui</button>
+      </div>
+    </div>
+
+    <aside class="e-right">
+      <section class="e-rcard" aria-label="Ta journée">
+        <h3>Ta journée <span data-t="daytxt">1 élément sur 4</span></h3>
+        <div class="e-ringbox">
+          <svg class="e-rings" viewBox="0 0 140 140" aria-hidden="true"><g transform="rotate(-90 70 70)"><circle class="e-trk" cx="70" cy="70" r="61"/><circle class="e-arc e-a-day" data-ring="day" cx="70" cy="70" r="61" pathLength="100" stroke-dasharray="25 100"/><circle class="e-trk" cx="70" cy="70" r="45"/><circle class="e-arc e-a-ses" data-ring="ses" cx="70" cy="70" r="45" pathLength="100" stroke-dasharray="0.4 100"/><circle class="e-trk" cx="70" cy="70" r="29"/><circle class="e-arc e-a-prog" cx="70" cy="70" r="29" pathLength="100" stroke-dasharray="0.4 100"/></g></svg>
+          <div class="e-legend">
+            <p class="e-leg"><i class="e-i-day"></i><b class="e-num" data-t="items">1/4</b><span>éléments</span></p>
+            <p class="e-leg"><i class="e-i-ses"></i><b class="e-num" data-t="ses">0/2</b><span>séances</span></p>
+            <p class="e-leg"><i class="e-i-prog"></i><b class="e-num">0&nbsp;%</b><span>programme</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="e-card" aria-label="Ton ascension">
+        <div class="e-ct"><h3>Ton ascension</h3><span>Sommet&nbsp;: fin mai</span></div>
+        <div class="e-pnum"><b class="e-num">0&nbsp;%</b><span>Camp de base</span></div>
+        <svg class="e-mtn" viewBox="0 0 340 132" aria-hidden="true" style="height:104px"><path class="m1" d="M0 132 L70 70 L110 92 L205 16 L262 64 L300 44 L340 76 V132Z"/><path class="m2" d="M150 132 L205 16 L232 40 L218 58 L240 72 L262 64 L340 132Z" opacity=".55"/><path class="tr" d="M30 118 C80 112 110 100 140 82 S190 44 203 22"/><path class="pole" d="M205 16 V2"/><path class="goal" d="M206 3 L222 7 L206 12"/><path class="pole" d="M28 120 V96"/><path class="fl" d="M29 96 C34 94 38 99 45 97 L45 108 C38 110 34 105 29 107Z"/><text class="lbl" x="56" y="129">Départ</text><text class="lbl" x="228" y="24">Écrits</text></svg>
+      </section>
+
+      <section class="e-card" aria-label="Ta semaine">
+        <div class="e-ct"><h3>Ta semaine</h3><span>Demain&nbsp;: 6 + bilan</span></div>
+        <div class="e-week">
+          <div class="e-day e-today"><small>Lun</small><b class="e-num">16</b><span>2 séances</span></div>
+          <div class="e-day"><small>Mar</small><b class="e-num">17</b><span>6 + bilan</span></div>
+          <div class="e-day e-next"><small>Ensuite</small><b class="e-num">Dim 22</b><span>semaine 2</span></div>
+        </div>
+        <div class="e-dtm">
+          <span class="e-tm" style="--c:var(--ue9);--ci:var(--ue9-i)"><i></i><b>9:00</b>Compta</span>
+          <span class="e-tm" style="--c:var(--ue7);--ci:var(--ue7-i)"><i></i><b>14:00</b>Management</span>
+          <span class="e-tm" style="--c:var(--ue8);--ci:var(--ue8-i)"><i></i><b>11:00</b>SI</span>
+          <span class="e-tm" style="--c:var(--ue5);--ci:var(--ue5-i)"><i></i><b>16:00</b>Économie</span>
+          <span class="e-tm" style="--c:var(--ue12);--ci:var(--ue12-i)"><i></i><b>12:15</b>Anglais</span>
+          <span class="e-tm" style="--c:var(--ue12);--ci:var(--ue12-i)"><i></i><b>17:15</b>Anglais</span>
+          <span class="e-tm e-bilan" style="grid-column:2"><i></i><b>18:00</b>Bilan</span>
+        </div>
+      </section>
+    </aside>
+  </div>
+  <div class="e-cele" aria-hidden="true"><div class="e-cc"><svg viewBox="0 0 120 120"><circle class="t" cx="60" cy="60" r="50"/><circle class="a" cx="60" cy="60" r="50" pathLength="100" transform="rotate(-90 60 60)"/><path d="M40 61 L54 75 L81 46"/></svg><b data-t="ct">Séance terminée&nbsp;!</b><span data-t="cs">UE5 Économie · bien joué</span></div></div>
+</div></div>
+</section>
+<script>
+(function(){
+  "use strict";
+  var root = document.getElementById("dir-elan"); if (!root) return;
+  var st = {s1a:true, s1b:false, s2a:false, s2b:false};
+  var names = {s1:"UE5 Économie", s2:"UE1 Droit"};
+  var cols = ["#d4ff3a","#7a4dff","#ff5c7a","#43e0ff","#ffaa3d"];
+  var timer = null;
+  function reduced(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+  function all(sel, fn){ Array.prototype.forEach.call(root.querySelectorAll(sel), fn); }
+  function sesDone(k){ return st[k+"a"] && st[k+"b"]; }
+  function plural(n, w){ return n + " " + w + (n > 1 ? "s" : ""); }
+  function render(){
+    var n = 0; for (var k in st) if (st[k]) n++;
+    var s = (sesDone("s1") ? 1 : 0) + (sesDone("s2") ? 1 : 0);
+    var full = n === 4;
+    all("[data-item]", function(el){ el.setAttribute("aria-checked", st[el.dataset.item] ? "true" : "false"); });
+    all('[data-t="items"]', function(e){ e.textContent = n + "/4"; });
+    all('[data-t="ses"]', function(e){ e.textContent = s + "/2"; });
+    all('[data-t="s1"]', function(e){ e.textContent = (st.s1a?1:0) + (st.s1b?1:0); });
+    all('[data-t="s2"]', function(e){ e.textContent = (st.s2a?1:0) + (st.s2b?1:0); });
+    all('[data-t="daytxt"]', function(e){ e.textContent = plural(n, "élément") + " sur 4"; });
+    all('[data-ring="day"]', function(e){ e.setAttribute("stroke-dasharray", Math.max(n * 25, 0.4) + " 100"); });
+    all('[data-ring="ses"]', function(e){ e.setAttribute("stroke-dasharray", Math.max(s * 50, 0.4) + " 100"); });
+    all('[data-ses]', function(e){ e.classList.toggle("e-done", sesDone(e.dataset.ses)); });
+    all('[data-t="streak"]', function(e){ e.textContent = full ? "1" : "0"; });
+    all('[data-t="firetxt"]', function(e){ e.textContent = full ? "Journée bouclée. Ta série démarre\u00a0!" : "Coche ta journée pour lancer ta série."; });
+    all("[data-fire]", function(e){ e.classList.toggle("e-lit", full); });
+    return {n:n, s:s};
+  }
+  function burst(el){
+    el.classList.remove("e-pop"); void el.offsetWidth; el.classList.add("e-pop");
+    if (reduced()) return;
+    var box = el.querySelector(".e-box");
+    for (var i = 0; i < 10; i++){
+      var p = document.createElement("span");
+      p.className = "e-p";
+      p.style.setProperty("--a", (i * 36 + Math.random() * 14) + "deg");
+      p.style.setProperty("--pc", cols[i % cols.length]);
+      box.appendChild(p);
+      setTimeout(function(x){ return function(){ x.remove(); }; }(p), 650);
+    }
+  }
+  function celebrate(t, sub){
+    var live = document.getElementById("elan-live");
+    if (live) live.textContent = t + " " + sub;
+    all(".e-cele", function(c){
+      c.querySelector('[data-t="ct"]').textContent = t;
+      c.querySelector('[data-t="cs"]').textContent = sub;
+      Array.prototype.forEach.call(c.querySelectorAll(".e-cf"), function(x){ x.remove(); });
+      c.classList.remove("e-on"); void c.offsetWidth; c.classList.add("e-on");
+      if (!reduced()){
+        for (var i = 0; i < 26; i++){
+          var f = document.createElement("span"), ang = Math.random() * Math.PI * 2, d = 120 + Math.random() * 120;
+          f.className = "e-cf";
+          f.style.setProperty("--pc", cols[i % cols.length]);
+          f.style.setProperty("--dx", Math.round(Math.cos(ang) * d) + "px");
+          f.style.setProperty("--dy", Math.round(Math.sin(ang) * d * 0.8 + 60) + "px");
+          f.style.setProperty("--r", Math.round(Math.random() * 720 - 360) + "deg");
+          f.style.animationDelay = Math.round(Math.random() * 120) + "ms";
+          c.appendChild(f);
+        }
+      }
+    });
+    clearTimeout(timer);
+    timer = setTimeout(function(){ all(".e-cele", function(c){ c.classList.remove("e-on"); }); }, 2500);
+  }
+  function change(keys, val, src){
+    var before = {s1:sesDone("s1"), s2:sesDone("s2")};
+    keys = keys.filter(function(k){ return st[k] !== val; });
+    if (!keys.length) return;
+    keys.forEach(function(k){ st[k] = val; });
+    var r = render();
+    if (val) keys.forEach(function(k){ all('[data-item="' + k + '"]', function(el){ if (!src || el.closest(".mock-phone") === src.closest(".mock-phone")) burst(el); }); });
+    if (r.n === 4 && (!before.s1 || !before.s2)) celebrate("Journée bouclée\u00a0!", "4 sur 4 · série lancée");
+    else if (sesDone("s1") && !before.s1) celebrate("Séance terminée\u00a0!", names.s1 + " · bien joué");
+    else if (sesDone("s2") && !before.s2) celebrate("Séance terminée\u00a0!", names.s2 + " · bien joué");
+  }
+  root.addEventListener("click", function(ev){
+    var it = ev.target.closest("[data-item]");
+    if (it && root.contains(it)){ var k = it.dataset.item; change([k], !st[k], it); return; }
+    var act = ev.target.closest("[data-act]");
+    if (act && root.contains(act)){ var s = act.dataset.act; change([s + "a", s + "b"], true, act); }
+  });
+  render();
+})();
+</script>
+
+  </div>
+</section>
+<p class="pg-foot">Ton choix : <b>A</b>, <b>B</b> ou <b>C</b>. Tu peux aussi mélanger, par exemple « les couleurs de A avec les cartes de C ».</p>
+<script>
+(function(){
+  "use strict";
+  var W = 1280, H = 800;
+  function fit(){
+    document.querySelectorAll(".pg-stage .desk-scaler").forEach(function(sc){
+      var d = sc.querySelector(".mock-desk"); if (!d) return;
+      var w = sc.clientWidth || sc.parentNode.clientWidth;
+      var s = Math.min(1, w / W);
+      d.style.transform = "scale(" + s + ")";
+      sc.style.height = Math.round(H * s) + "px";
+    });
+  }
+  function setMode(m){
+    document.querySelectorAll(".pg-mode button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.mode === m ? "true" : "false"); });
+    document.querySelectorAll(".pg-stage .dir").forEach(function(d){ d.setAttribute("data-mode", m); });
+    if (m === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", m);
+    try{ localStorage.setItem("apercu-mode", m); }catch(e){}
+  }
+  function setDev(sec, desk){
+    var dir = sec.querySelector(".dir"); if (!dir) return;
+    dir.classList.toggle("show-desk", desk);
+    sec.querySelectorAll(".pg-dev button").forEach(function(b){ b.setAttribute("aria-pressed", (b.dataset.dev === "desk") === desk ? "true" : "false"); });
+    fit();
+  }
+  document.querySelectorAll(".pg-mode button").forEach(function(b){ b.addEventListener("click", function(){ setMode(b.dataset.mode); }); });
+  var wide = window.matchMedia("(min-width: 1100px)").matches;
+  document.querySelectorAll(".pg-dir").forEach(function(sec){
+    sec.querySelectorAll(".pg-dev button").forEach(function(b){ b.addEventListener("click", function(){ setDev(sec, b.dataset.dev === "desk"); }); });
+    setDev(sec, wide);
+  });
+  var saved = null; try{ saved = localStorage.getItem("apercu-mode"); }catch(e){}
+  setMode(saved === "light" || saved === "dark" ? saved : "auto");
+  window.addEventListener("resize", fit);
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(document.body);
+  fit();
+})();
+</script>
+</body>
+</html>
