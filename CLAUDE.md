@@ -11,9 +11,10 @@ Appli de planning de révision du DCG de Yoel (UE1, UE5, UE7, UE8, UE9, UE12 et 
 - `src/app.html` : toute l'appli (écrans, design, moteur qui replace ce qui n'est pas fait). Le plan y est injecté à la place de `__PLAN__`.
 - `src/pwa_store.js` : la sauvegarde (téléphone + GitHub) et la fiche « Relier à GitHub ».
 - `src/build.py` : fabrique `index.html` et `weeks/*.json` à partir de `src/` et `plan.json`.
-- `src/curriculum.py` + `src/gen.py` : le programme Studi découpé en leçons, et la génération de `plan.json` (créneaux, examens blancs, jalons).
+- `src/studi/UE*.json` : le programme Studi (modules, leçons, cas, durées) et les événements (lives, devoirs, examens blancs). Format et état dans `src/studi/studi.md`.
+- `src/curriculum.py` lit `src/studi/` ; `src/gen.py` fabrique `plan.json` (créneaux, examens blancs, jalons, événements) et vérifie tes créneaux (rien le samedi, ni pendant Yom Tov, ni après 20 h).
 - `sw.js` (hors ligne), `manifest.webmanifest`, `icon-*.png`, `logo.svg` : l'appli installable.
-- `tests/compat.sh` : vérifie que l'appli écrit pour le coach exactement les mêmes données que la version d'avant la refonte (`computed/schedule`, `history`, `done`). Il doit afficher COMPATIBLE.
+- `tests/compat.sh` : vérifie que l'appli écrit pour le coach exactement les mêmes données que la version d'avant la refonte (`computed/schedule`, `history`, `done`). Il doit afficher COMPATIBLE. Il marche sur Mac (Chrome) et sous Linux (Playwright, `tests/compat_run.js`), et fait tourner les deux versions avec le plan actuel.
 
 ## Style « Cordée » (refonte de novembre 2026)
 - En haut, le ciel de l'aube et la montagne : le drapeau « Toi » monte avec le programme, en passant des camps (0, 25, 50, 75 %, puis « Les écrits »). En dessous, un agenda net façon carnet. Titres en Sora, texte en Inter ; l'or veut dire « fait ».
