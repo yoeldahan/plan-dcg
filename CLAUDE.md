@@ -13,6 +13,14 @@ Appli de planning de révision du DCG de Yoel (UE1, UE5, UE7, UE8, UE9, UE12 et 
 - `src/build.py` : fabrique `index.html` et `weeks/*.json` à partir de `src/` et `plan.json`.
 - `src/curriculum.py` + `src/gen.py` : le programme Studi découpé en leçons, et la génération de `plan.json` (créneaux, examens blancs, jalons).
 - `sw.js` (hors ligne), `manifest.webmanifest`, `icon-*.png`, `logo.svg` : l'appli installable.
+- `tests/compat.sh` : vérifie que l'appli écrit pour le coach exactement les mêmes données que la version d'avant la refonte (`computed/schedule`, `history`, `done`). Il doit afficher COMPATIBLE.
+
+## Style « Cordée » (refonte de novembre 2026)
+- En haut, le ciel de l'aube et la montagne : le drapeau « Toi » monte avec le programme, en passant des camps (0, 25, 50, 75 %, puis « Les écrits »). En dessous, un agenda net façon carnet. Titres en Sora, texte en Inter ; l'or veut dire « fait ».
+- À partir de 1 024 px : version ordinateur (menu de côté, fiches en panneau à droite).
+- Récompenses, série de jours réussis, mode concentration 25 / 5 et phrases d'encouragement (constante `CHEER` dans `src/app.html`, facile à modifier).
+- Série : un jour réussi = toutes les séances prévues cochées le jour même. Samedi, Yom Tov, jours sans séance et journées reportées ne cassent jamais la série.
+- L'état d'interface reste sur l'appareil, sous des clés `dcg-ui-*` (jamais `dcg2-`, qui part sur GitHub).
 
 **Ne modifie jamais `index.html` ni `weeks/` à la main.** Modifie `src/`, puis lance `python3 src/build.py`. Si tu changes le programme ou les créneaux : `python3 src/gen.py` puis `python3 src/build.py`.
 
@@ -24,7 +32,7 @@ Appli de planning de révision du DCG de Yoel (UE1, UE5, UE7, UE8, UE9, UE12 et 
 
 ## Avant de pousser
 1. `python3 src/build.py`
-2. Teste en local : `python3 -m http.server 8765`, puis ouvre la page à 390 px de large, en mode clair et en mode sombre, et vérifie qu'il n'y a aucune erreur dans la console.
+2. Teste en local : `python3 -m http.server 8765`, puis ouvre la page à 390 px de large, en mode clair et en mode sombre, et à 1 280 px, et vérifie qu'il n'y a aucune erreur dans la console. Lance `tests/compat.sh` : il doit afficher COMPATIBLE.
 3. Si tu modifies `sw.js`, change le nom du cache (`V`).
 4. Pousse sur `main` : GitHub Pages met l'appli à jour en une minute environ.
 
