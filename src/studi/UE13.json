@@ -2,20 +2,21 @@
  "ue": "UE13",
  "nom": "Communication professionnelle",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": null, "format": "Rapport écrit (déposé sur Studi) puis oral en juin"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 1, "format": "Oral (1 h au plus) : soutenance du rapport de stage ou d'activité"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Lis l'introduction UE13 et les consignes des dépôts (onglet Évaluations)", "minutes": 30}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE13 et les consignes des dépôts (Évaluations > Passer l'examen)", "minutes": 30}
   ]},
-  {"titre": "M2 · Rechercher et analyser l'information", "elements": [
+  {"titre": "M2 · Maitriser les opérations de recherche et d'analyse d'information", "elements": [
    {"type": "lecon", "titre": "Rechercher des informations : la recherche documentaire", "minutes": 40},
    {"type": "lecon", "titre": "Rechercher des informations : la démarche d'enquête", "minutes": 40}
   ]},
-  {"titre": "M4 · Le rapport et la soutenance", "elements": [
+  {"titre": "M4 · Le rapport de stage et la soutenance", "elements": [
    {"type": "lecon", "titre": "Le rapport de stage", "minutes": 45},
-   {"type": "lecon", "titre": "La soutenance", "minutes": 45}
+   {"type": "lecon", "titre": "La soutenance", "minutes": 45},
+   {"type": "lecon", "titre": "La 3e leçon du module « Le rapport de stage et la soutenance »", "minutes": 40}
   ]},
   {"titre": "Rapport · Préparer", "elements": [
    {"type": "tache", "titre": "Choisis ta situation de communication chez Fidexia et note les faits (qui, quoi, quand, quel support)", "minutes": 60},
@@ -24,18 +25,20 @@
   {"titre": "Rapport · Parties 1 et 2", "elements": [
    {"type": "tache", "titre": "Rédige la partie 1 : présentation de Fidexia (activité, organisation, ton poste)", "minutes": 120},
    {"type": "tache", "titre": "Rédige la partie 2 : la situation de communication (contexte, acteurs, outils, analyse)", "minutes": 120},
-   {"type": "tache", "titre": "Termine les parties 1 et 2, relis et dépose-les sur Studi (Évaluations > UE13)", "minutes": 120}
+   {"type": "tache", "titre": "Termine les parties 1 et 2, relis et dépose-les sur Studi (Évaluations > Passer l'examen)", "minutes": 120},
+   {"type": "tache", "titre": "Dépose la fiche de suivi n° 1 (Évaluations > Évaluations transverses)", "minutes": 15}
   ]},
-  {"titre": "M2 · Rechercher et analyser l'information (suite)", "elements": [
+  {"titre": "M2 · Maitriser les opérations de recherche et d'analyse d'information (suite)", "elements": [
    {"type": "lecon", "titre": "L'analyse des informations : le travail collaboratif", "minutes": 40},
    {"type": "lecon", "titre": "Assurer une veille informationnelle", "minutes": 40}
   ]},
   {"titre": "Rapport · Partie 3", "elements": [
    {"type": "tache", "titre": "Partie 3 : choisis ton thème structuré et fais ton plan détaillé", "minutes": 120},
    {"type": "tache", "titre": "Rédige la partie 3 : première moitié", "minutes": 120},
-   {"type": "tache", "titre": "Rédige la partie 3 : seconde moitié, relis et dépose-la sur Studi", "minutes": 120}
+   {"type": "tache", "titre": "Rédige la partie 3 : seconde moitié, relis et dépose-la sur Studi", "minutes": 120},
+   {"type": "tache", "titre": "Dépose la fiche de suivi n° 2 (Évaluations > Évaluations transverses)", "minutes": 15}
   ]},
-  {"titre": "M3 · Les principes de la communication professionnelle", "elements": [
+  {"titre": "M3 · Maîtriser les principes et outils de la communication professionnelle", "elements": [
    {"type": "lecon", "titre": "Les enjeux de la communication", "minutes": 40},
    {"type": "lecon", "titre": "Les outils de la communication écrite", "minutes": 40},
    {"type": "lecon", "titre": "Les outils de la communication orale", "minutes": 40}
@@ -43,15 +46,28 @@
   {"titre": "Rapport · Version intégrale", "elements": [
    {"type": "tache", "titre": "Assemble le rapport intégral : introduction, conclusion, sommaire, annexes", "minutes": 120},
    {"type": "tache", "titre": "Relis tout, mets en page et dépose le rapport intégral sur Studi (limite : fin février)", "minutes": 120},
+   {"type": "tache", "titre": "Fais l'entraînement à l'oral UE13 (Évaluations) : présente ton rapport en 10 minutes", "minutes": 60},
    {"type": "tache", "titre": "Passe le certificat Studi UE13 (QCM, onglet Évaluations)", "minutes": 45}
   ]}
  ],
  "ressources": [],
- "evenements": [],
+ "evenements": [
+  {"type": "live", "titre": "Essentiels du cours « Maîtriser les outils de la communication orale professionnelle » + rappels fiche de suivi + réponses à vos questions", "date": "2026-12-02", "debut": "20:00", "fin": "21:00", "note": "TD – Alexandra BRAULT ; replay : pas encore", "lecons": ["Les outils de la communication orale"]},
+  {"type": "live", "titre": "Présentation de rapports au design impactant : page de garde, illustrations, mise en évidence des idées. Liens avec la soutenance orale. Échanges autour des difficultés rencontrées", "date": "2026-12-14", "debut": "20:00", "fin": "21:00", "note": "Méthodologie – Grégory LAKHLEF ; replay : pas encore", "lecons": ["Relis tout, mets en page et dépose le rapport intégral sur Studi (limite : fin février)"]},
+  {"type": "replay", "titre": "Communication professionnelle", "date": "2026-11-10", "debut": "17:00", "fin": "18:00", "note": "TD – Alexandra BRAULT ; replay disponible", "lecons": ["Les enjeux de la communication"]},
+  {"type": "replay", "titre": "Essentiels des cours « Assurer une veille informationnelle » et « Comprendre les enjeux de la communication professionnelle » + rappels fiche de suivi + réponses à vos questions", "date": "2026-11-05", "debut": "21:00", "fin": "22:00", "note": "Méthodologie – Camille CUBIZOLLE ; replay disponible", "lecons": ["Assurer une veille informationnelle", "Les enjeux de la communication"]},
+  {"type": "quiz", "titre": "Certificat Studi - Communication professionnelle", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Entraînement à l'oral - UE 13", "note": "Oral ; Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Parties 1 et 2 du rapport de stage ou d'activité (présentation de la structure et d'une situation de communication)", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+  {"type": "devoir", "titre": "Partie 3 du rapport de stage ou d'activité (thème structuré)", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+  {"type": "devoir", "titre": "Rapport de stage ou d'activité intégral", "note": "Rubrique « Passer l'examen » ; dépôt avant fin février de l'année de l'examen"},
+  {"type": "devoir", "titre": "Fiche de suivi - Dépôt 1", "note": "Évaluations transverses ; Accessible, À faire ; dépôt UE13 avant fin février de l'année de l'examen"},
+  {"type": "devoir", "titre": "Fiche de suivi - Dépôt 2", "note": "Évaluations transverses ; Accessible, À faire ; dépôt UE13 avant fin février de l'année de l'examen"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE13 - Communication professionnelle", "note": "Oral 1 h max, coeff. 1 : soutenance d'un rapport de stage (8 semaines minimum) ou d'expérience professionnelle équivalente ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

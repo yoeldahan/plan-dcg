@@ -2,12 +2,12 @@
  "ue": "UE5",
  "nom": "Économie contemporaine",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 4, "format": "Dossier documentaire et question problématisée"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 4, "format": "Écrit : analyse d'un dossier documentaire et question problématisée"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE5 et la méthode de l'épreuve : dossier documentaire + question problématisée (4 h)", "minutes": 30}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE5 (2 leçons) et le sommaire de l'e-book (Médiathèque > Parcours > DCG 2026 > UE 5 > Introduction)", "minutes": 30}
   ]},
   {"titre": "M2 · Appréhender les fondements de la science économique", "elements": [
    {"type": "lecon", "titre": "Ressources rares et besoins illimités", "minutes": 50},
@@ -58,7 +58,7 @@
    {"type": "lecon", "titre": "Les politiques structurelles nationales et européennes", "minutes": 50},
    {"type": "application", "titre": "Application : Analyser la régulation publique", "minutes": 45}
   ]},
-  {"titre": "M7 · Les politiques sociales face aux déséquilibres du marché du travail", "elements": [
+  {"titre": "M7 · Analyser les politiques sociales face aux déséquilibres sur le marché du travail", "elements": [
    {"type": "lecon", "titre": "Le marché du travail", "minutes": 50},
    {"type": "lecon", "titre": "Les indicateurs de l'emploi et du chômage", "minutes": 50},
    {"type": "lecon", "titre": "Chômage classique, keynésien, conjoncturel et structurel", "minutes": 50},
@@ -70,7 +70,7 @@
    {"type": "lecon", "titre": "Les modèles de protection sociale", "minutes": 50},
    {"type": "application", "titre": "Application : Les politiques sociales et le marché du travail", "minutes": 45}
   ]},
-  {"titre": "M8 · Les effets et les enjeux de la mondialisation", "elements": [
+  {"titre": "M8 · Identifier les effets et les enjeux de la mondialisation des économies", "elements": [
    {"type": "lecon", "titre": "Les transformations du commerce mondial", "minutes": 50},
    {"type": "lecon", "titre": "La balance des paiements", "minutes": 50},
    {"type": "lecon", "titre": "Les FTN et les IDE", "minutes": 50},
@@ -82,12 +82,25 @@
    {"type": "application", "titre": "Application : Les enjeux de la mondialisation", "minutes": 45}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 5 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 5 > Introduction à l'UE 5 - Economie contemporaine"},
+  {"type": "exercices", "titre": "Epreuve nationale du DCG - UE5 - Sujet 0", "ou": "Médiathèque > UE 5 > Annales de l'UE 5"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (21 ressources)", "ou": "Médiathèque > UE 5 > Corrigés Comptalia - Épreuve nationale du DCG UE05 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "Les monopoles", "date": "2026-11-19", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les monopoles"]},
+  {"type": "live", "titre": "Les oligopoles et la concurrence monopolistique", "date": "2026-11-26", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les oligopoles et la concurrence monopolistique"]},
+  {"type": "live", "titre": "Les modalités de la régulation des marchés et de la concurrence", "date": "2026-12-03", "debut": "17:00", "fin": "18:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["La régulation des marchés et de la concurrence"]},
+  {"type": "live", "titre": "L'épargne des ménages (définition, formes, motifs et déterminants)", "date": "2026-12-10", "debut": "18:00", "fin": "19:00", "note": "TD – Jean-Jacques THOLONIAT ; replay : pas encore", "lecons": ["L'épargne des ménages"]},
+  {"type": "live", "titre": "Les déterminants de l'investissement des entreprises", "date": "2026-12-17", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les déterminants de l'investissement des entreprises"]},
+  {"type": "replay", "titre": "Les défaillances du marché", "date": "2026-11-12", "debut": "17:00", "fin": "18:00", "note": "TD – Jean-Jacques THOLONIAT ; replay disponible", "lecons": ["Les défaillances du marché"]},
+  {"type": "replay", "titre": "Le marché : rôle et fonctionnement", "date": "2026-11-03", "debut": "18:00", "fin": "19:00", "note": "TD – Christophe RAISON ; replay disponible", "lecons": ["Le marché : rôle et fonctionnement"]},
+  {"type": "quiz", "titre": "Certificat Studi - Economie contemporaine", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE5 - Économie contemporaine", "note": "Écrit 4 h, coeff. 1 (analyse d'un dossier documentaire + question problématisée) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

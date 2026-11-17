@@ -2,12 +2,12 @@
  "ue": "UE1",
  "nom": "Fondamentaux du droit",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 3, "format": "Cas pratiques"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 3, "format": "Écrit : situations pratiques, commentaire de documents ou questions"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE1 (sommaire) et le guide de l'épreuve : 3 h, cas pratiques", "minutes": 20}
+   {"type": "tache", "titre": "Ouvre l'e-book UE1 (Médiathèque > Parcours > DCG 2026 > UE 1 > Introduction) : lis le sommaire et le guide de l'épreuve (3 h)", "minutes": 20}
   ]},
   {"titre": "M2 · Rechercher les règles applicables à la situation du client", "elements": [
    {"type": "lecon", "titre": "La règle de droit", "minutes": 45},
@@ -34,7 +34,7 @@
    {"type": "lecon", "titre": "Les formalités de création d'une entreprise individuelle", "minutes": 45},
    {"type": "application", "titre": "Application : Accompagner un entrepreneur individuel", "minutes": 45}
   ]},
-  {"titre": "M6 · Déterminer l'étendue du droit d'une personne sur ses biens", "elements": [
+  {"titre": "M6 · Déterminer l'étendue du droit d'une personne juridique sur ses biens", "elements": [
    {"type": "lecon", "titre": "Le droit de propriété : prérogatives et limites", "minutes": 45},
    {"type": "lecon", "titre": "La protection par le brevet et la marque", "minutes": 45},
    {"type": "lecon", "titre": "La protection par le droit d'auteur", "minutes": 45},
@@ -55,7 +55,7 @@
    {"type": "lecon", "titre": "Le choix d'une sûreté et ses principaux effets", "minutes": 45},
    {"type": "application", "titre": "Application : Accompagner le client dans ses contrats courants", "minutes": 45}
   ]},
-  {"titre": "M9 · Mesurer les conséquences des responsabilités civiles", "elements": [
+  {"titre": "M9 · Mesurer les conséquences des responsabilités civiles de l'entrepreneur individuel", "elements": [
    {"type": "lecon", "titre": "Responsabilité civile et responsabilité pénale", "minutes": 45},
    {"type": "lecon", "titre": "Mise en œuvre de la responsabilité civile et causes d'exonération", "minutes": 45},
    {"type": "lecon", "titre": "Produits défectueux et responsabilité environnementale", "minutes": 45},
@@ -66,12 +66,27 @@
    {"type": "application", "titre": "Application : Établir la preuve des droits", "minutes": 45}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 1 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 1 > Introduction à l'UE 1 Fondamentaux du droit"},
+  {"type": "exercices", "titre": "Epreuve nationale du DCG - UE1 - Sujet 0", "ou": "Médiathèque > UE 1 > Annales de l'UE 1"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio, 21 ressources)", "ou": "Médiathèque > UE 1 > Corrigés Comptalia - Épreuve nationale du DCG UE01 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "Identifier les autres entrepreneurs individuels (agriculteur, artisan, professionnel libéral). Vérifier qu'une personne remplit les conditions pour exercer une activité indépendante", "date": "2026-11-18", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore", "lecons": ["Les types d'entrepreneurs et les conditions d'exercice d'une activité indépendante"]},
+  {"type": "live", "titre": "Proposer un statut pour le conjoint de l'entrepreneur + Évaluer les conséquences du régime juridique applicable au couple sur le patrimoine", "date": "2026-11-25", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore", "lecons": ["Le statut du conjoint de l'entrepreneur et le régime juridique du couple"]},
+  {"type": "live", "titre": "Décrire le processus de réalisation des formalités de la création d'une entreprise individuelle", "date": "2026-12-03", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay : pas encore", "lecons": ["Les formalités de création d'une entreprise individuelle"]},
+  {"type": "live", "titre": "Analyser les prérogatives du propriétaire, du nu-propriétaire, de l'usufruitier et des indivisaires", "date": "2026-12-10", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay : pas encore", "lecons": ["Le droit de propriété : prérogatives et limites"]},
+  {"type": "live", "titre": "Analyser les limites du droit de propriété", "date": "2026-12-16", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay : pas encore", "lecons": ["Le droit de propriété : prérogatives et limites"]},
+  {"type": "replay", "titre": "Évaluer les risques patrimoniaux de l'exercice d'une activité professionnelle par un entrepreneur individuel + le commerçant", "date": "2026-11-12", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay disponible", "lecons": ["L'entrepreneur individuel et le statut du commerçant"]},
+  {"type": "replay", "titre": "Évaluer les risques patrimoniaux de l'exercice d'une activité professionnelle par un entrepreneur individuel", "date": "2026-11-05", "debut": "18:00", "fin": "19:00", "note": "TD – Valérie GODRON - de MAINTENANT ; replay disponible", "lecons": ["L'entrepreneur individuel et le statut du commerçant"]},
+  {"type": "replay", "titre": "Identifier les attributs de la personnalité juridique", "date": "2026-10-28", "debut": "18:00", "fin": "19:00", "note": "TD – Caroline DEBRUMEZ ; replay disponible", "lecons": ["La personne juridique : existence, attributs et capacité"]},
+  {"type": "quiz", "titre": "Certificat Studi - Fondamentaux du droit", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Evaluation d'entraînement - UE1 - Fondamentaux du droit", "note": "Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE1 - Fondamentaux du droit", "note": "Écrit 3 h, coeff. 1 (situations pratiques et/ou commentaire de documents et/ou questions) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

@@ -303,6 +303,8 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .wk .d{position:relative}
 .wk .msd{position:absolute;top:5px;right:5px;width:6px;height:6px;border-radius:50%;background:var(--gold2)}
 .modh{margin:16px 0 4px;padding:2px 0 2px 10px;border-left:3px solid var(--ue,var(--gold2));font:600 14.5px/1.35 var(--f-display);color:var(--ink)}
+.item .lv{display:flex;gap:6px;align-items:flex-start;margin-top:4px;font:500 13px/1.35 var(--f-text);color:var(--ink2)}
+.item .lv .ic{width:13px;height:13px;margin-top:1px;flex:none;color:var(--coral-ink)}
 .where{margin-top:12px;font:500 13.5px/1.4 var(--f-text);color:var(--ink3)}
 .muted.small{font-size:13.5px;margin-top:6px}
 .back{margin-top:14px}
@@ -781,7 +783,7 @@ const Q = {}; const SID_ITEMS = {};
 for (const s of PLAN.sessions){
   if (!CK.has(s.kind) || !s.ue) continue;
   const q = (Q[s.ue] = Q[s.ue] || []);
-  SID_ITEMS[s.id] = s.items.map(it => { const n = q.length; q.push({ue:s.ue, n, k:it.k, t:it.t, m:it.k==="B"?0:(it.m||0), mod:it.mod||""}); return n; });
+  SID_ITEMS[s.id] = s.items.map(it => { const n = q.length; q.push({ue:s.ue, n, k:it.k, t:it.t, m:it.k==="B"?0:(it.m||0), mod:it.mod||"", lv:it.live||""}); return n; });
 }
 
 /* ================= état ================= */
@@ -1437,7 +1439,8 @@ function itemRow(u, n, o){
   const kl = {L:"Leçon",A:"Application",C:"Cas",T:"À faire",V:"Vidéo",B:"Bonus"}[it.k]||"";
   return h("label",{class:"item"+(on?" on":"")+(justKeys.has(key)?" just":""), for:id}, cb, boxSVG(),
     h("span",null, h("span",{class:"kind"}, h("span",null, kl+(o.mod && it.mod ? " · "+it.mod.split(" · ")[0] : "")), it.m ? h("span",{class:"dur num"}, hmd(it.m)) : null),
-      h("span",{class:"txt"}, it.t)));
+      h("span",{class:"txt"}, it.t),
+      it.lv ? h("span",{class:"lv"}, ic("play"), h("span",null, it.lv)) : null));
 }
 function tagOf(v, st, hero){
   if (st === "skip") return ["Reportée","skip"];
@@ -1541,7 +1544,7 @@ const msTime = m => m.start ? fH(m.start)+(m.end ? " – "+fH(m.end) : "") : "";
 function msList(ms, o){
   o = o || {};
   return h("ul",{class:"ms-w"+(o.cls ? " "+o.cls : "")}, ms.map(m => h("li",{style:m.ue ? "--ue:"+col(m.ue) : null},
-    ic(m.start ? "clock" : "flag"),
+    ic(m.kind === "replay" ? "play" : m.start ? "clock" : "flag"),
     h("span",null,
       o.date ? h("b",null, fShort(m.date)+" · ") : null,
       m.start ? h("b",{class:"num"}, msTime(m)+" · ") : null,

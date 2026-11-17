@@ -60,17 +60,49 @@ budget = {}
 for day, a, b, ue in p1_slots:
     budget[ue] = budget.get(ue, 0) + mins(a, b)
 
+# --- lives et replays Studi rattachés aux leçons (champ "live" de l'élément, affiché sous la leçon)
+WD_FR = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
+def fdate(iso):
+    d = D.fromisoformat(iso)
+    return f"{WD_FR[d.weekday()]} {d.day:02d}/{d.month:02d}"
+def fh(t):
+    h, m = map(int, t.split(":"))
+    return f"{h} h" + (f" {m:02d}" if m else "")
+def is_late(e):
+    return e.get("fin", e.get("debut", "")) > "20:00"
+HINTS = {}
+for e in EVENTS:
+    if e.get("type") not in ("live", "replay"):
+        continue
+    if e["type"] == "replay":
+        txt = f"Replay du {fdate(e['date'])} (Studi > Lives > Replays)"
+    elif is_late(e):
+        txt = f"Replay du live du {fdate(e['date'])} (Studi > Lives)"
+    else:
+        txt = f"Live le {fdate(e['date'])} à {fh(e['debut'])}, puis en replay (Studi > Lives)"
+    for t in e.get("lecons", []):
+        HINTS.setdefault((e["ue"], t), []).append(txt)
+_used = set()
+def hint(ue, t):
+    h = HINTS.get((ue, t))
+    if h: _used.add((ue, t))
+    return " · ".join(h) if h else None
+
 # --- files de contenu
 def flatten(ue):
     out = []
     lim = 50 if ue == "UE12" else 95
     for mod, items in CURRICULUM[ue]:
         for (k, t, m) in items:
+            lv = hint(ue, t)
             if m > lim and not (ue == "UE13" and k == "T"):
-                out.append({"k": k, "t": t + " (1re partie)", "m": m - m // 2, "mod": mod})
-                out.append({"k": k, "t": t + " (2e partie)", "m": m // 2, "mod": mod})
+                parts = [{"k": k, "t": t + " (1re partie)", "m": m - m // 2, "mod": mod},
+                         {"k": k, "t": t + " (2e partie)", "m": m // 2, "mod": mod}]
             else:
-                out.append({"k": k, "t": t, "m": m, "mod": mod})
+                parts = [{"k": k, "t": t, "m": m, "mod": mod}]
+            for x in parts:
+                if lv: x["live"] = lv
+                out.append(x)
     return out
 
 queues = {ue: flatten(ue) for ue in CURRICULUM}
@@ -164,8 +196,9 @@ def add(day, a, b, ue, kind, title, items, note=None, extra=None):
 def fill_content(day, a, b, ue):
     S = mins(a, b)
     got, bonus = take(ue, S)
-    items = [{"k": i["k"], "t": i["t"], "m": i["m"], "mod": i["mod"]} for i in got]
-    items += [{"k": "B", "t": i["t"], "m": i["m"], "mod": i["mod"]} for i in bonus]
+    keep = lambda i, k: dict({"k": k, "t": i["t"], "m": i["m"], "mod": i["mod"]}, **({"live": i["live"]} if i.get("live") else {}))
+    items = [keep(i, i["k"]) for i in got]
+    items += [keep(i, "B") for i in bonus]
     kinds = {i["k"] for i in got}
     kind = "exercices" if kinds and kinds <= {"A", "C"} else ("rapport" if ue == "UE13" and "T" in kinds and "L" not in kinds else "cours")
     add(day, a, b, ue, kind, module_title(got), items)
@@ -188,32 +221,46 @@ for day, a, b, ue in p1_slots:
 # --- Phases 2 et 3 : examens blancs
 DUR = {"UE1": 3, "UE5": 4, "UE7": 4, "UE8": 4, "UE9": 3, "UE12": 3}
 MOCKS = {
-    D(2027, 3, 22): ("UE1", "Annale 2025"), D(2027, 3, 30): ("UE7", "Annale 2025"),
+    D(2027, 3, 22): ("UE1", "Évaluation d'entraînement Studi"), D(2027, 3, 30): ("UE7", "Annale 2025"),
     D(2027, 4, 5): ("UE5", "Annale 2025"), D(2027, 4, 6): ("UE8", "Annale 2025"),
-    D(2027, 4, 12): ("UE12", "Annale 2025"), D(2027, 4, 13): ("UE9", "Annale 2025"),
-    D(2027, 4, 19): ("UE5", "Annale 2026"), D(2027, 4, 20): ("UE9", "Annale 2026"),
+    D(2027, 4, 12): ("UE12", "Annale 2025"), D(2027, 4, 13): ("UE9", "Évaluation d'entraînement 1 Studi"),
+    D(2027, 4, 19): ("UE5", "Annale 2026"), D(2027, 4, 20): ("UE9", "Évaluation d'entraînement 2 Studi"),
     D(2027, 4, 26): ("UE8", "Annale 2026"), D(2027, 4, 27): ("UE1", "Annale 2026"),
     D(2027, 5, 2): ("UE12", "Annale 2026"), D(2027, 5, 3): ("UE7", "Annale 2026"),
     D(2027, 5, 4): ("UE9", "Sujet zéro 2027"), D(2027, 5, 9): ("UE1", "Sujet zéro 2027"),
     D(2027, 5, 10): ("UE5", "Sujet zéro 2027"), D(2027, 5, 11): ("UE8", "Sujet zéro 2027"),
-    D(2027, 5, 16): ("UE12", "Sujet zéro 2027"), D(2027, 5, 18): ("UE7", "Sujet zéro 2027"),
+    D(2027, 5, 16): ("UE12", "Annale 2024"), D(2027, 5, 18): ("UE7", "Sujet zéro 2027"),
 }
-CERTIFS = {D(2027, 3, 21): "UE1", D(2027, 3, 28): "UE7", D(2027, 4, 4): "UE5", D(2027, 4, 11): "UE8",
-           D(2027, 4, 18): "UE12", D(2027, 4, 25): "UE9"}
+# deux certificats par dimanche : 13 h 15 – 14 h 15 et 14 h 15 – 15 h 30
+CERTIFS = {D(2027, 3, 21): ["UE7", "UE1"], D(2027, 3, 28): ["UE8", "UE5"], D(2027, 4, 25): ["UE9", "UE12"]}
 
 def hhmm(h, m=0):
     return f"{h:02d}:{m:02d}"
 
+def is_eval(sujet):
+    return sujet.startswith("Évaluation")
+
 def mock_items(ue, sujet):
-    src = "dans la Médiathèque : UE > « Corrigés Comptalia – Épreuve nationale du DCG »" if sujet.startswith("Annale") \
-        else "officiel du nouveau programme (si Studi ou le site du DCG ne l'a pas, prends l'annale 2024 dans la Médiathèque)"
+    n = ue[2:]
+    if is_eval(sujet):
+        first = f"Ouvre « {sujet[:-6]} » sur Studi (onglet Évaluations) et fais-la sur papier"
+    elif sujet.startswith("Annale"):
+        first = f"Ouvre l'énoncé « {sujet} » : Médiathèque > UE {n} > Corrigés Comptalia – Épreuve nationale du DCG UE{int(n):02d}"
+    else:
+        first = f"Ouvre le sujet 0 du nouveau programme : Médiathèque > UE {n} > Annales de l'UE {n}"
     return [
-        {"k": "T", "t": f"Ouvre l'énoncé « {sujet} » {src}"},
+        {"k": "T", "t": first},
         {"k": "T", "t": f"Conditions réelles : {DUR[ue]} h chrono, sans cours, téléphone dans une autre pièce"},
         {"k": "T", "t": "Rédige comme le jour J, même si tu bloques sur une question"},
     ]
 
-def correction_items(ue):
+def correction_items(ue, sujet=""):
+    if is_eval(sujet):
+        return [
+            {"k": "T", "t": "Dépose ta copie sur Studi : un formateur la corrige sous 7 jours"},
+            {"k": "T", "t": "Relis ta copie à froid et note les questions où tu as hésité"},
+            {"k": "T", "t": "Quand la correction arrive, note-toi sur 20 ici"},
+        ]
     return [
         {"k": "T", "t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"},
         {"k": "T", "t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"},
@@ -240,10 +287,10 @@ for day in days:
         if wd == 6:
             end = hhmm(10 + DUR[ue], 30)
             add(day, "10:30", end, ue, "examen", f"Examen blanc · {sujet}", mock_items(ue, sujet))
-            add(day, hhmm(11 + DUR[ue], 0), "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue))
+            add(day, hhmm(11 + DUR[ue], 0), "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue, sujet))
             continue
         add(day, "09:00", hhmm(9 + DUR[ue]), ue, "examen", f"Examen blanc · {sujet}", mock_items(ue, sujet))
-        add(day, "14:00", "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue))
+        add(day, "14:00", "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue, sujet))
         add(day, "15:45", "17:00" if wd == 0 else "17:45", ue, "reprise", "Reprise des points faibles", reprise_items(ue))
         if wd == 1:
             add(day, "17:50", "18:00", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
@@ -267,11 +314,25 @@ for day in days:
             add(day, "10:30", "12:30", None, "revision", "Révision des fiches",
                 [{"k": "T", "t": "Relis les fiches des 2 UE que tu maîtrises le moins (ta note la plus basse aux examens blancs)"},
                  {"k": "T", "t": "Refais 2 applications de ces UE sans regarder la correction"}])
-        add(day, "13:15", "14:15", None, "revision", "Révision de la semaine", REV_ITEMS)
+        cert = lambda a, b, u: add(day, a, b, u, "certificat", "Certificat Studi (QCM)",
+            [{"k": "T", "t": f"Passe le certificat Studi de l'{u} (onglet Évaluations) : il est obligatoire pour ton diplôme Studi"},
+             {"k": "T", "t": "Relis d'abord tes fiches 10 minutes, puis réponds sans ton cours"}])
+        # s'il reste plus de programme que de dimanches libres pour le finir : le créneau de 13 h 15 sert aussi
+        later = [x for x in days if x > day and x.weekday() == 6 and x not in MOCKS and x != END]
+        left = [u for u in FLEX_ORDER + ["UE13"] if remaining(u) > 0]
         if day in CERTIFS:
-            u = CERTIFS[day]
-            add(day, "14:15", "15:30", u, "certificat", "Certificat Studi (QCM)",
-                [{"k": "T", "t": f"Passe le certificat Studi de l'{u} (Évaluations > DCG 2026) : il est obligatoire pour ton diplôme Studi"}])
+            cert("13:15", "14:15", CERTIFS[day][0])
+        elif left and (len(left) > len(later) or sum(remaining(u) for u in left) > 120 * len(later)):
+            small = min(left, key=remaining)
+            u = small if remaining(small) <= 60 else max(left, key=remaining)
+            carry[u] = 0
+            fill_content(day, "13:15", "14:15", u)
+            sessions[-1]["title"] = "Fin du programme · " + sessions[-1]["title"]
+            leftover_flag.append((day.isoformat() + " 13:15", u))
+        else:
+            add(day, "13:15", "14:15", None, "revision", "Révision de la semaine", REV_ITEMS)
+        if day in CERTIFS:
+            cert("14:15", "15:30", CERTIFS[day][1])
         else:
             add(day, "14:15", "15:30", None, "revision", "Cartes et fiches",
                 [{"k": "T", "t": "Cartes Anki de toutes les UE"}, {"k": "T", "t": "Fiches de l'UE du prochain examen blanc"}])
@@ -288,38 +349,59 @@ def phase_of(wk):
     return 1 if d <= D(2027, 3, 14) else (2 if d <= D(2027, 4, 18) else 3)
 
 MILESTONES = [
-    {"date": "2027-01-10", "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"},
+    {"date": "2027-01-10", "t": "Dépôt des parties 1 et 2 du rapport UE13 et de la fiche de suivi n° 1 sur Studi"},
     {"date": "2027-01-17", "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"},
     {"date": "2027-01-26", "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"},
-    {"date": "2027-02-07", "t": "Dépôt de la partie 3 du rapport UE13"},
+    {"date": "2027-02-07", "t": "Dépôt de la partie 3 du rapport UE13 et de la fiche de suivi n° 2"},
     {"date": "2027-02-21", "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"},
     {"date": "2027-03-16", "t": "Fin du premier passage : tout le programme est vu une fois"},
-    {"date": "2027-04-01", "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"},
-    {"date": "2027-05-24", "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"},
+    {"date": "2027-03-28", "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."},
+    {"date": "2027-04-01", "t": "En avril, Studi propose des examens blancs « Objectif examen ». Envoie-moi leurs dates dès qu'elles sortent."},
+    {"date": "2027-04-25", "t": "Si tu as de l'avance : l'évaluation d'entraînement 3 de l'UE9 (Studi > Évaluations)."},
+    {"date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître). 48 h avant : convocation et pièce d'identité."},
     {"date": "2027-06-11", "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"},
     {"date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
+    {"date": "2027-07-08", "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"},
 ]
 
-# --- lives, devoirs, examens blancs Studi (src/studi/UE*.json) : dans l'agenda, sans toucher aux séances
-EV_WORD = {"live": "Live", "replay": "Replay", "devoir": "Devoir à rendre", "quiz": "Quiz", "examen_blanc": "Examen blanc Studi",
-           "examen": "Épreuve", "info": "À noter"}
+# --- lives et dates Studi (src/studi) : dans l'agenda, sans toucher aux séances.
+# Les replays passés sont rattachés aux leçons (HINTS) ; un live après 20 h devient « replay à regarder ».
+def short(t, n=90):
+    if len(t) <= n: return t
+    cut = t[:n].rsplit(" ", 1)[0].rstrip(" ,;:.+")
+    return cut + "…"
 warnings = []
 for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
-    word = EV_WORD.get(e.get("type"), "À noter")
-    t = e["titre"] if e["titre"].lower().startswith(word.lower()) else word + " · " + e["titre"]
-    m = {"date": e["date"], "t": t, "ue": e["ue"], "kind": e.get("type", "info")}
-    if e.get("debut"): m["start"] = e["debut"]
-    if e.get("fin"): m["end"] = e["fin"]
-    if e.get("note"): m["note"] = e["note"]
-    MILESTONES.append(m)
+    if e.get("type") == "replay" or e["date"] < START.isoformat():
+        continue
     d = D.fromisoformat(e["date"])
+    m = {"date": e["date"], "ue": e["ue"], "kind": e.get("type", "info")}
+    if e.get("type") == "live" and is_late(e):
+        m["kind"] = "replay"
+        m["t"] = "Replay à regarder · " + short(e["titre"])
+        m["note"] = f"Live à {fh(e['debut'])} : trop tard pour toi. Regarde le replay un autre jour."
+    elif e.get("type") == "live":
+        m["t"] = "Live · " + short(e["titre"])
+        m["start"], m["end"] = e["debut"], e["fin"]
+        clash = [s for s in sessions if s["date"] == e["date"] and s["kind"] != "off" and s["start"] < e["fin"] and e["debut"] < s["end"]]
+        m["note"] = "Pendant ta séance : regarde plutôt le replay." if clash else \
+                    ("Facultatif. Si tu es au travail, regarde le replay." if d.weekday() in (2, 3, 4) and e["debut"] < "18:00" else
+                     "Facultatif. Sinon, regarde le replay.")
+    else:
+        word = {"devoir": "À rendre", "quiz": "Quiz", "examen_blanc": "Examen blanc Studi", "examen": "Épreuve"}.get(e.get("type"), "À noter")
+        m["t"] = e["titre"] if e.get("type") == "info" else word + " · " + short(e["titre"])
+        if e.get("debut"): m["start"] = e["debut"]
+        if e.get("fin"): m["end"] = e["fin"]
+        if e.get("note"): m["note"] = e["note"]
+    if m["ue"] is None: del m["ue"]
+    MILESTONES.append(m)
     if d.weekday() == 5 or d in YOM_TOV:
-        warnings.append(f"{e['date']} {t} : tombe un samedi ou un Yom Tov")
-    if e.get("fin", "") > "20:00":
-        warnings.append(f"{e['date']} {t} : finit après 20 h")
-    for s in sessions:
-        if s["date"] == e["date"] and e.get("debut") and s["start"] < e.get("fin", e["debut"]) and e["debut"] < s["end"]:
-            warnings.append(f"{e['date']} {t} : en même temps que la séance {s['start']} {s['ue'] or s['kind']}")
+        warnings.append(f"{e['date']} {m['t']} : tombe un samedi ou un Yom Tov")
+    if m.get("end", "") > "20:00":
+        warnings.append(f"{e['date']} {m['t']} : finit après 20 h")
+for (ue, t) in HINTS:
+    if (ue, t) not in _used:
+        warnings.append(f"{ue} : la leçon « {t} » citée par un live n'existe pas")
 MILESTONES.sort(key=lambda m: (m["date"], m.get("start", "")))
 
 # --- tes contraintes : on vérifie chaque séance
@@ -347,7 +429,7 @@ for ue in CURRICULUM:
     print(ue, "fin du programme:", ss[-1]["date"] if ss else None, "séances:", len(ss),
           "reste:", remaining(ue))
 print("leftovers:", leftover_flag)
-print("événements Studi:", len(EVENTS))
+print("événements Studi:", len(EVENTS), "dans l'agenda:", sum(1 for m in MILESTONES if m.get("kind")), "leçons avec live/replay:", len(_used))
 for w in warnings: print("ATTENTION", w)
 for key in ["Termine les parties 1 et 2", "seconde moitié", "rapport intégral sur Studi"]:
     for s in sessions:

@@ -9,18 +9,18 @@
    "start": "10:30",
    "end": "12:30",
    "ue": "UE13",
-   "kind": "cours",
-   "title": "M3 · Les principes de la communication professionnelle",
+   "kind": "rapport",
+   "title": "Rapport · Partie 3",
    "items": [
     {
-     "k": "L",
-     "t": "Les enjeux de la communication",
-     "m": 40
+     "k": "T",
+     "t": "Rédige la partie 3 : seconde moitié, relis et dépose-la sur Studi",
+     "m": 120
     },
     {
-     "k": "L",
-     "t": "Les outils de la communication écrite",
-     "m": 40
+     "k": "T",
+     "t": "Dépose la fiche de suivi n° 2 (Évaluations > Évaluations transverses)",
+     "m": 15
     }
    ],
    "week": "2027-01-24"
@@ -56,22 +56,18 @@
    "end": "15:30",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M7 · Les transactions courantes",
+   "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
      "k": "L",
-     "t": "La lettre de change relevée (LCR)",
+     "t": "Les modes de règlement des créances et des dettes",
      "m": 40
     },
     {
-     "k": "C",
-     "t": "Cas Dupuis",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Golf",
-     "m": 30
+     "k": "L",
+     "t": "La lettre de change relevée (LCR)",
+     "m": 40,
+     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-01-24"
@@ -83,8 +79,13 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M7 · Les transactions courantes",
+   "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
+    {
+     "k": "C",
+     "t": "Cas Dupuis",
+     "m": 30
+    },
     {
      "k": "L",
      "t": "L'affacturage",
@@ -93,12 +94,13 @@
     {
      "k": "L",
      "t": "Les états de rapprochement bancaire",
-     "m": 40
+     "m": 40,
+     "live": "Replay du live du lun. 23/11 (Studi > Lives)"
     },
     {
-     "k": "L",
-     "t": "Les rapprochements bancaires : cas complexes",
-     "m": 40
+     "k": "B",
+     "t": "Cas Golf",
+     "m": 30
     },
     {
      "k": "B",
@@ -109,16 +111,6 @@
      "k": "B",
      "t": "Cas Malicorne",
      "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Champest",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Platic",
-     "m": 60
     }
    ],
    "week": "2027-01-24"
@@ -130,12 +122,13 @@
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
-   "title": "M7 → M8 · Traiter des données avec le tableur",
+   "title": "M7 → M8 · Traiter des données via le tableur pour résoudre des problèmes de gestion et aider à la décision",
    "items": [
     {
      "k": "A",
      "t": "Méthodologie DCG UE8 : manipuler les données d'une base",
-     "m": 50
+     "m": 50,
+     "live": "Replay du live du jeu. 03/12 (Studi > Lives)"
     },
     {
      "k": "L",
@@ -179,7 +172,7 @@
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M5 → M6 · Déterminer l'étendue du droit d'une personne sur ses biens",
+   "title": "M5 → M6 · Déterminer l'étendue du droit d'une personne juridique sur ses biens",
    "items": [
     {
      "k": "A",
@@ -189,7 +182,8 @@
     {
      "k": "L",
      "t": "Le droit de propriété : prérogatives et limites",
-     "m": 45
+     "m": 45,
+     "live": "Live le jeu. 10/12 à 18 h, puis en replay (Studi > Lives) · Live le mer. 16/12 à 18 h, puis en replay (Studi > Lives)"
     }
    ],
    "week": "2027-01-24"
@@ -201,8 +195,14 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M7 · Les transactions courantes",
+   "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
+    {
+     "k": "L",
+     "t": "Les rapprochements bancaires : cas complexes",
+     "m": 40,
+     "live": "Replay du live du lun. 23/11 (Studi > Lives) · Replay du live du lun. 07/12 (Studi > Lives)"
+    },
     {
      "k": "L",
      "t": "Le suivi des comptes clients",
@@ -212,6 +212,16 @@
      "k": "L",
      "t": "Le suivi des comptes fournisseurs",
      "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Champest",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Platic",
+     "m": 60
     }
    ],
    "week": "2027-01-24"
@@ -223,7 +233,7 @@
    "end": "12:15",
    "ue": "UE8",
    "kind": "cours",
-   "title": "M8 · Traiter des données avec le tableur",
+   "title": "M8 · Traiter des données via le tableur pour résoudre des problèmes de gestion et aider à la décision",
    "items": [
     {
      "k": "L",
@@ -257,7 +267,7 @@
    "end": "15:45",
    "ue": "UE7",
    "kind": "cours",
-   "title": "M4 · Le management organisationnel",
+   "title": "M4 · Expliquer le management organisationnel",
    "items": [
     {
      "k": "L",
@@ -301,7 +311,8 @@
     {
      "k": "L",
      "t": "Communication with stakeholders",
-     "m": 30
+     "m": 30,
+     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-01-24"
@@ -329,8 +340,309 @@
  ],
  "milestones": [
   {
+   "date": "2026-11-17",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "17:00",
+   "end": "17:30",
+   "note": "Pendant ta séance : regarde plutôt le replay."
+  },
+  {
+   "date": "2026-11-17",
+   "ue": "UE7",
+   "kind": "live",
+   "t": "Live · La démarche stratégique",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-18",
+   "ue": "UE8",
+   "kind": "replay",
+   "t": "Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de règlementation et…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-11-18",
+   "ue": "UE1",
+   "kind": "live",
+   "t": "Live · Identifier les autres entrepreneurs individuels (agriculteur, artisan, professionnel…",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-19",
+   "ue": "UE5",
+   "kind": "live",
+   "t": "Live · Les monopoles",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-23",
+   "ue": "UE9",
+   "kind": "replay",
+   "t": "Replay à regarder · Les rapprochements bancaires : objectifs, méthode, soldes initiaux identiques ou…",
+   "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "12:00",
+   "end": "12:30",
+   "note": "Pendant ta séance : regarde plutôt le replay."
+  },
+  {
+   "date": "2026-11-23",
+   "ue": "UE12",
+   "kind": "live",
+   "t": "Live · Communication & strategies to be competitive : competitive advantage, innovation…",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-24",
+   "ue": "UE7",
+   "kind": "live",
+   "t": "Live · Les outils d'analyse de l'environnement de l'entreprise",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-25",
+   "ue": "UE1",
+   "kind": "live",
+   "t": "Live · Proposer un statut pour le conjoint de l'entrepreneur + Évaluer les conséquences du…",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-11-26",
+   "ue": "UE8",
+   "kind": "replay",
+   "t": "Replay à regarder · La représentation d'un processus : le diagramme BPMN ; Les progiciels au service des…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-11-26",
+   "ue": "UE5",
+   "kind": "live",
+   "t": "Live · Les oligopoles et la concurrence monopolistique",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-01",
+   "ue": "UE7",
+   "kind": "live",
+   "t": "Live · Les outils d'analyse interne de l'entreprise",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-02",
+   "ue": "UE13",
+   "kind": "replay",
+   "t": "Replay à regarder · Essentiels du cours « Maîtriser les outils de la communication orale professionnelle »…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-03",
+   "ue": "UE8",
+   "kind": "replay",
+   "t": "Replay à regarder · Essentiels de la modélisation des données (SRD) et de la manipulation des données (SQL)…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-03",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "12:00",
+   "end": "12:30",
+   "note": "Facultatif. Si tu es au travail, regarde le replay."
+  },
+  {
+   "date": "2026-12-03",
+   "ue": "UE5",
+   "kind": "live",
+   "t": "Live · Les modalités de la régulation des marchés et de la concurrence",
+   "start": "17:00",
+   "end": "18:00",
+   "note": "Facultatif. Si tu es au travail, regarde le replay."
+  },
+  {
+   "date": "2026-12-03",
+   "ue": "UE1",
+   "kind": "live",
+   "t": "Live · Décrire le processus de réalisation des formalités de la création d'une entreprise…",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-07",
+   "ue": "UE9",
+   "kind": "replay",
+   "t": "Replay à regarder · Suite sur les rapprochements bancaires. Les stocks : réglementation, coûts d'acquisition…",
+   "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-07",
+   "ue": "UE12",
+   "kind": "live",
+   "t": "Live · CSR: Corporate social responsibility: definition and concepts and concrete examples",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-08",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "12:00",
+   "end": "12:30",
+   "note": "Pendant ta séance : regarde plutôt le replay."
+  },
+  {
+   "date": "2026-12-08",
+   "ue": "UE7",
+   "kind": "live",
+   "t": "Live · Les stratégies de domaine",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-10",
+   "ue": "UE8",
+   "kind": "replay",
+   "t": "Replay à regarder · L'usage des fonctions de dénombrement et de gestion du temps dans les formules de calcul…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-10",
+   "ue": "UE1",
+   "kind": "live",
+   "t": "Live · Analyser les prérogatives du propriétaire, du nu-propriétaire, de l'usufruitier et des…",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-10",
+   "ue": "UE5",
+   "kind": "live",
+   "t": "Live · L'épargne des ménages (définition, formes, motifs et déterminants)",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-14",
+   "ue": "UE13",
+   "kind": "replay",
+   "t": "Replay à regarder · Présentation de rapports au design impactant : page de garde, illustrations, mise en…",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-14",
+   "ue": "UE9",
+   "kind": "replay",
+   "t": "Replay à regarder · Suite sur les stocks : valeur actuelle, dépréciations et écritures",
+   "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-14",
+   "ue": "UE12",
+   "kind": "live",
+   "t": "Live · CSR: Evolution of CSR, wokeism or a necessity, Evolution of CSR in the United States",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-15",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "17:00",
+   "end": "17:30",
+   "note": "Pendant ta séance : regarde plutôt le replay."
+  },
+  {
+   "date": "2026-12-15",
+   "ue": "UE7",
+   "kind": "live",
+   "t": "Live · La stratégie de spécialisation et de diversification",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-16",
+   "ue": "UE8",
+   "kind": "replay",
+   "t": "Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de sécurité » + cas pratique",
+   "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-16",
+   "ue": "UE1",
+   "kind": "live",
+   "t": "Live · Analyser les limites du droit de propriété",
+   "start": "18:00",
+   "end": "19:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-17",
+   "ue": "UE5",
+   "kind": "live",
+   "t": "Live · Les déterminants de l'investissement des entreprises",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-20",
+   "kind": "info",
+   "t": "Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste"
+  },
+  {
+   "date": "2026-12-21",
+   "ue": "UE9",
+   "kind": "replay",
+   "t": "Replay à regarder · Cas de synthèse : opérations courantes, TVA, Stocks",
+   "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour."
+  },
+  {
+   "date": "2026-12-21",
+   "ue": "UE12",
+   "kind": "live",
+   "t": "Live · Digital revolution : the age of the digital society & the transformation of work",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Facultatif. Sinon, regarde le replay."
+  },
+  {
+   "date": "2026-12-22",
+   "kind": "live",
+   "t": "Live · Accompagnement DCG (toutes UE)",
+   "start": "12:00",
+   "end": "12:30",
+   "note": "Pendant ta séance : regarde plutôt le replay."
+  },
+  {
    "date": "2027-01-10",
-   "t": "Dépôt des parties 1 et 2 du rapport UE13 sur Studi"
+   "t": "Dépôt des parties 1 et 2 du rapport UE13 et de la fiche de suivi n° 1 sur Studi"
   },
   {
    "date": "2027-01-17",
@@ -342,7 +654,7 @@
   },
   {
    "date": "2027-02-07",
-   "t": "Dépôt de la partie 3 du rapport UE13"
+   "t": "Dépôt de la partie 3 du rapport UE13 et de la fiche de suivi n° 2"
   },
   {
    "date": "2027-02-21",
@@ -353,12 +665,20 @@
    "t": "Fin du premier passage : tout le programme est vu une fois"
   },
   {
+   "date": "2027-03-28",
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+  },
+  {
    "date": "2027-04-01",
-   "t": "Examens blancs Studi « Objectif examen » en avril : je les intègre dès que tu as les dates"
+   "t": "En avril, Studi propose des examens blancs « Objectif examen ». Envoie-moi leurs dates dès qu'elles sortent."
+  },
+  {
+   "date": "2027-04-25",
+   "t": "Si tu as de l'avance : l'évaluation d'entraînement 3 de l'UE9 (Studi > Évaluations)."
   },
   {
    "date": "2027-05-24",
-   "t": "Écrits du DCG : fin mai à début juin (dates officielles à paraître)"
+   "t": "Écrits du DCG : en mai et juin (dates officielles à paraître). 48 h avant : convocation et pièce d'identité."
   },
   {
    "date": "2027-06-11",
@@ -367,6 +687,10 @@
   {
    "date": "2027-07-01",
    "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
+  },
+  {
+   "date": "2027-07-08",
+   "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"
   }
  ]
 }

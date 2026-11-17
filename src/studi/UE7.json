@@ -2,14 +2,14 @@
  "ue": "UE7",
  "nom": "Management des organisations",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 4, "format": "Analyse managériale et question problématisée"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 4, "format": "Écrit : analyse managériale de situations et question problématisée"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE7 et la méthode : analyse managériale + question problématisée (4 h)", "minutes": 30}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE7 (2 leçons) et le sommaire de l'e-book (Médiathèque > Parcours > DCG 2026 > UE 7 > Introduction)", "minutes": 30}
   ]},
-  {"titre": "M2 · Le contexte et les enjeux du management des organisations", "elements": [
+  {"titre": "M2 · Expliquer le contexte et les enjeux du management des organisations", "elements": [
    {"type": "lecon", "titre": "Les organisations : buts, objectifs et action collective", "minutes": 50},
    {"type": "lecon", "titre": "La place du management dans la performance", "minutes": 50},
    {"type": "lecon", "titre": "Les différents profils des décideurs", "minutes": 50},
@@ -21,7 +21,7 @@
    {"type": "lecon", "titre": "Parties prenantes et RSE", "minutes": 50},
    {"type": "application", "titre": "Application : Les enjeux du management des organisations", "minutes": 45}
   ]},
-  {"titre": "M3 · Le management stratégique", "elements": [
+  {"titre": "M3 · Expliquer le management stratégique", "elements": [
    {"type": "lecon", "titre": "La démarche stratégique", "minutes": 50},
    {"type": "lecon", "titre": "Les outils d'analyse de l'environnement", "minutes": 50},
    {"type": "lecon", "titre": "Les outils d'analyse interne", "minutes": 50},
@@ -30,7 +30,7 @@
    {"type": "lecon", "titre": "Le développement de l'entreprise", "minutes": 50},
    {"type": "application", "titre": "Application : Le management stratégique", "minutes": 45}
   ]},
-  {"titre": "M4 · Le management organisationnel", "elements": [
+  {"titre": "M4 · Expliquer le management organisationnel", "elements": [
    {"type": "lecon", "titre": "La place de l'humain dans les pratiques managériales", "minutes": 50},
    {"type": "lecon", "titre": "Le comportement organisationnel", "minutes": 50},
    {"type": "lecon", "titre": "Conflits, crise et résilience organisationnelle", "minutes": 50},
@@ -42,7 +42,7 @@
    {"type": "lecon", "titre": "Les organisations contemporaines", "minutes": 50},
    {"type": "application", "titre": "Application : Le management organisationnel", "minutes": 45}
   ]},
-  {"titre": "M5 · Le management opérationnel", "elements": [
+  {"titre": "M5 · Expliquer le management opérationnel", "elements": [
    {"type": "lecon", "titre": "La fonction marketing", "minutes": 50},
    {"type": "lecon", "titre": "Les fonctions production et logistique", "minutes": 50},
    {"type": "lecon", "titre": "La recherche et développement", "minutes": 50},
@@ -55,12 +55,27 @@
    {"type": "application", "titre": "Application : Le management opérationnel", "minutes": 45}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 7 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 7 > Introduction à l'UE 7 - Management des organisations"},
+  {"type": "exercices", "titre": "Epreuve nationale du DCG - UE7 - Sujet 0", "ou": "Médiathèque > UE 7 > Annales de l'UE 7"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 7 > Corrigés Comptalia - Épreuve nationale du DCG UE07 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "La démarche stratégique", "date": "2026-11-17", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; live d'aujourd'hui ; replay : pas encore", "lecons": ["La démarche stratégique"]},
+  {"type": "live", "titre": "Les outils d'analyse de l'environnement de l'entreprise", "date": "2026-11-24", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les outils d'analyse de l'environnement"]},
+  {"type": "live", "titre": "Les outils d'analyse interne de l'entreprise", "date": "2026-12-01", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les outils d'analyse interne"]},
+  {"type": "live", "titre": "Les stratégies de domaine", "date": "2026-12-08", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay : pas encore", "lecons": ["Les stratégies de domaine"]},
+  {"type": "live", "titre": "La stratégie de spécialisation et de diversification", "date": "2026-12-15", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay : pas encore", "lecons": ["Spécialisation et diversification"]},
+  {"type": "replay", "titre": "Prise en compte des parties prenantes par les organisations et RSE", "date": "2026-11-10", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible", "lecons": ["Parties prenantes et RSE"]},
+  {"type": "replay", "titre": "La diversité des gouvernances", "date": "2026-11-03", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible", "lecons": ["La diversité des gouvernances"]},
+  {"type": "replay", "titre": "Les problématiques managériales actuelles", "date": "2026-10-29", "debut": "19:00", "fin": "20:00", "note": "TD – Christophe RAISON ; replay disponible", "lecons": ["Les problématiques managériales actuelles"]},
+  {"type": "replay", "titre": "Continuité et changements organisationnels", "date": "2026-10-27", "debut": "19:00", "fin": "20:00", "note": "TD – Soisick CHARRIAUD ; replay disponible", "lecons": ["Continuité et changements organisationnels"]},
+  {"type": "quiz", "titre": "Certificat Studi - Management des organisations", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE7 - Management", "note": "Écrit 4 h, coeff. 1 (analyse managériale de situations + question problématisée) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

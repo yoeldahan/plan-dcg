@@ -2,14 +2,14 @@
  "ue": "UE12",
  "nom": "Anglais des affaires",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 3, "format": "Traduction, synthèse et rédaction en anglais"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 3, "format": "Écrit : traduction, résumé ou note, rédaction en anglais"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE12 et la méthode : traduction, synthèse, rédaction (3 h)", "minutes": 20}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE12 et le sommaire de l'e-book (Médiathèque > Parcours > DCG 2026 > UE 12 > Introduction)", "minutes": 20}
   ]},
-  {"titre": "M2 · Méthodologie et bases grammaticales", "elements": [
+  {"titre": "M2 · Maîtriser la méthodologie et les bases grammaticales de l'anglais des affaires", "elements": [
    {"type": "video", "titre": "Méthodologie : la note de synthèse (vidéo 21 min)", "minutes": 42},
    {"type": "video", "titre": "Méthodologie : la rédaction en anglais (vidéo 17 min)", "minutes": 34},
    {"type": "video", "titre": "Grammaire : syntaxe et expressions (14 min)", "minutes": 28},
@@ -85,12 +85,25 @@
    {"type": "application", "titre": "Application : social protection and demographic dynamics", "minutes": 45}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 12 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 12 > Introduction à l'UE 12 - Anglais des affaires"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG (7 thèmes, à partir de 2020)", "ou": "Médiathèque > UE 12 > Corrigés Comptalia - Épreuve nationale du DCG UE12 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "Communication & strategies to be competitive : competitive advantage, innovation, intellectual property", "date": "2026-11-23", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay : pas encore", "lecons": ["Innovation and intellectual property"]},
+  {"type": "live", "titre": "CSR: Corporate social responsibility: definition and concepts and concrete examples", "date": "2026-12-07", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay : pas encore", "lecons": ["Corporate Social Responsibility"]},
+  {"type": "live", "titre": "CSR: Evolution of CSR, wokeism or a necessity, Evolution of CSR in the United States", "date": "2026-12-14", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay : pas encore", "lecons": ["Challenges and benefits of implementing CSR"]},
+  {"type": "live", "titre": "Digital revolution : the age of the digital society & the transformation of work", "date": "2026-12-21", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay : pas encore", "lecons": ["The age of digital society"]},
+  {"type": "replay", "titre": "Communication & strategies to be competitive : what are the stakes of digital communication?", "date": "2026-11-16", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay disponible", "lecons": ["Effective communication"]},
+  {"type": "replay", "titre": "Globalization: towards deglobalization? Are free trade areas an instrument of deglobalization", "date": "2026-11-09", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay disponible", "lecons": ["Free Trade Areas (vidéo 25 min)", "Slowbalization and deglobalization"]},
+  {"type": "replay", "titre": "Globalization: impact of globalization on economies and on the planet", "date": "2026-11-02", "debut": "19:00", "fin": "20:00", "note": "TD – Pascale DROGUE ; replay disponible", "lecons": ["Globalization (+ 4 vidéos)"]},
+  {"type": "replay", "titre": "Communication & strategies to be competitive : internal, external and cross-cultural communication", "date": "2026-10-26", "debut": "19:00", "fin": "20:00", "note": "TD – Hilary VENEKAS ; replay disponible", "lecons": ["Communication with stakeholders"]},
+  {"type": "quiz", "titre": "Certificat Studi - Anglais des affaires", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE12 - Anglais des affaires", "note": "Écrit 3 h, coeff. 1 (traduction, résumé/note/commentaires, rédaction en anglais) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

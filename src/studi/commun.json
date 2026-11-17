@@ -1,0 +1,30 @@
+{
+ "titre": "Événements Studi pour toutes les UE",
+ "releve_le": "2026-11-17",
+ "evenements": [
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-11-17", "debut": "17:00", "fin": "17:30"},
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-11-23", "debut": "12:00", "fin": "12:30"},
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-12-03", "debut": "12:00", "fin": "12:30"},
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-12-08", "debut": "12:00", "fin": "12:30"},
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-12-15", "debut": "17:00", "fin": "17:30"},
+  {"type": "live", "titre": "Accompagnement DCG (toutes UE)", "date": "2026-12-22", "debut": "12:00", "fin": "12:30"},
+  {"type": "info", "titre": "Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste", "date": "2026-12-20"}
+ ],
+ "consignes": [
+  "Aucune date limite affichée sur les évaluations (toutes « Accessible – À faire ») : les devoirs ne sont pas obligatoires, ils se font à son rythme selon l'avancement des modules.",
+  "Le Certificat Studi (QCM) est obligatoire à la fin de chaque UE. Chaînage : certaines évaluations ne s'ouvrent qu'après avoir marqué un module comme terminé ou réussi un certificat de bloc (voir « Modalités d'accès »).",
+  "Examens blancs « Objectif Examen » en avril : sujets exclusifs + lives Objectif Examen.",
+  "To-do Studi : avant fin mars, vérifier les évaluations à terminer et passer les certificats ; en avril, examens blancs, lives Objectif Examen et replays ; 48 h avant, convocation + pièce d'identité, pas de téléphone pendant l'épreuve.",
+  "UE13 : dépôts (fiche de suivi et rapport) avant fin février de l'année de passage de l'examen présentiel.",
+  "Réforme DCG 2026 : s'applique aux épreuves à partir de la session de mai 2027 ; les nouveaux devoirs sont mis en ligne progressivement.",
+  "Aucune date d'examen 2027 affichée sur Studi. La page « Je passe mes examens » (promotion 2026) indique : examens présentiels en mai et juin 2026, convocation envoyée par courrier par l'Académie, résultats DCG 2026 le jeudi 9 juillet 2026 à 12 h sur Cyclades.",
+  "Inscription et réinscription aux examens via l'espace Cyclades ; problème de convocation : s'adresser au rectorat de son Académie.",
+  "Report de session uniquement via le bouton « Reporter ma session » (onglet Planning) ; réponse sous 7 jours ouvrés.",
+  "Corrections : délai de 7 jours après affectation du formateur (un e-mail prévient de la prise en charge).",
+  "Lives Accompagnement DCG Toutes UE : 17/11 17:00–17:30, 23/11 12:00–12:30, 03/12 12:00–12:30, 08/12 12:00–12:30, 15/12 17:00–17:30, 22/12 12:00–12:30.",
+  "Les e-books se trouvent dans chaque UE, module « Introduction à l'UE » (Médiathèque) ; aucun e-book trouvé pour l'UE13.",
+  "Parcours DCG 2026, promo MAI 2029 : le champ periode_studi correspond au rythme prévu par Studi sur 3 ans (jusqu'au 31/03/2029), pas aux dates d'examen.",
+  "Périmètre : lives à venir relevés jusqu'au 22/12/2026 (fin de la liste affichée) ; replays relevés à partir du 26/10/2026 (première page).",
+  "Méthode de comptage : cas = ressources dont le titre contient « Cas » ; exercices = autres « Application »/Exercice ; leçons = leçons + vidéos, e-books non compris ; durée = somme des durées affichées."
+ ]
+}

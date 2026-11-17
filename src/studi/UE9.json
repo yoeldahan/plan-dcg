@@ -2,14 +2,14 @@
  "ue": "UE9",
  "nom": "Comptabilité",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 3, "format": "Situations pratiques et exercices"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 3, "format": "Écrit : situations pratiques, exercices ou questions"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE9 et le guide de l'épreuve : situations pratiques et exercices (3 h)", "minutes": 20}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE9 et le sommaire de l'e-book (Médiathèque > Parcours > DCG 2026 > UE 9 > Introduction)", "minutes": 20}
   ]},
-  {"titre": "M2 · Les dimensions de la comptabilité", "elements": [
+  {"titre": "M2 · Distinguer les dimensions de la comptabilité dans une perspective historique", "elements": [
    {"type": "lecon", "titre": "La comptabilité et ses domaines dans une perspective historique", "minutes": 40},
    {"type": "lecon", "titre": "L'objet de la comptabilité et le système d'information comptable", "minutes": 40},
    {"type": "lecon", "titre": "La profession comptable : experts-comptables et commissaires aux comptes", "minutes": 40},
@@ -17,7 +17,7 @@
    {"type": "lecon", "titre": "La profession comptable dans le public", "minutes": 40},
    {"type": "lecon", "titre": "La normalisation et la réglementation comptable", "minutes": 40}
   ]},
-  {"titre": "M3 · Le compte de résultat et le bilan", "elements": [
+  {"titre": "M3 · Connaître le contenu d'un compte de résultat et d'un bilan", "elements": [
    {"type": "lecon", "titre": "La présentation d'un compte de résultat", "minutes": 40},
    {"type": "lecon", "titre": "Les charges du compte de résultat (partie 1)", "minutes": 40},
    {"type": "lecon", "titre": "Les charges du compte de résultat (partie 2)", "minutes": 40},
@@ -37,7 +37,7 @@
    {"type": "cas", "titre": "Cas Lachepaille", "minutes": 20},
    {"type": "cas", "titre": "Cas Léon", "minutes": 30}
   ]},
-  {"titre": "M4 · Les mécanismes de la partie double", "elements": [
+  {"titre": "M4 · Exposer et justifier les mécanismes de la partie double", "elements": [
    {"type": "lecon", "titre": "Les écritures comptables", "minutes": 40},
    {"type": "cas", "titre": "Cas Z", "minutes": 45},
    {"type": "lecon", "titre": "Les enregistrements comptables simples", "minutes": 40},
@@ -57,7 +57,7 @@
    {"type": "cas", "titre": "Cas DB", "minutes": 30},
    {"type": "cas", "titre": "Cas Tio Pepe", "minutes": 30}
   ]},
-  {"titre": "M5 · La TVA : mécanisme et enregistrements", "elements": [
+  {"titre": "M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA", "elements": [
    {"type": "lecon", "titre": "Le principe de la TVA", "minutes": 40},
    {"type": "lecon", "titre": "Déductibilité, fait générateur et exigibilité", "minutes": 40},
    {"type": "lecon", "titre": "Comptabiliser la TVA : biens, et prestations avec option sur les débits", "minutes": 40},
@@ -84,7 +84,7 @@
    {"type": "cas", "titre": "Cas Lador", "minutes": 20},
    {"type": "cas", "titre": "Cas Govin", "minutes": 30}
   ]},
-  {"titre": "M6 · Établir et enregistrer les factures", "elements": [
+  {"titre": "M6 · Etablir et enregistrer les factures", "elements": [
    {"type": "lecon", "titre": "Les factures « de doit »", "minutes": 40},
    {"type": "lecon", "titre": "L'enregistrement d'une facture de doit", "minutes": 40},
    {"type": "lecon", "titre": "Frais de port et sous-traitance", "minutes": 40},
@@ -101,7 +101,7 @@
    {"type": "cas", "titre": "Cas Perrouse", "minutes": 30},
    {"type": "cas", "titre": "Cas Vedant", "minutes": 30}
   ]},
-  {"titre": "M7 · Les transactions courantes", "elements": [
+  {"titre": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement", "elements": [
    {"type": "lecon", "titre": "La consignation et la reprise des emballages", "minutes": 40},
    {"type": "cas", "titre": "Cas Vallor", "minutes": 30},
    {"type": "lecon", "titre": "Si le client ne rend pas les emballages consignés", "minutes": 40},
@@ -128,7 +128,7 @@
    {"type": "lecon", "titre": "Le suivi des comptes clients", "minutes": 40},
    {"type": "lecon", "titre": "Le suivi des comptes fournisseurs", "minutes": 40}
   ]},
-  {"titre": "M8 · Les amortissements", "elements": [
+  {"titre": "M8 · Calculer et enregistrer les amortissements comptables", "elements": [
    {"type": "lecon", "titre": "Généralités sur les travaux d'inventaire", "minutes": 40},
    {"type": "lecon", "titre": "La notion d'amortissement", "minutes": 40},
    {"type": "lecon", "titre": "La terminologie des amortissements", "minutes": 40},
@@ -144,7 +144,7 @@
    {"type": "cas", "titre": "Cas Damien", "minutes": 30},
    {"type": "cas", "titre": "Cas Sirtex", "minutes": 30}
   ]},
-  {"titre": "M9 · Les dépréciations et les provisions", "elements": [
+  {"titre": "M9 · Calculer et enregistrer les dépréciations et les provisions", "elements": [
    {"type": "lecon", "titre": "Dépréciations et provisions : définition et enregistrement", "minutes": 40},
    {"type": "lecon", "titre": "La dépréciation des immobilisations corporelles", "minutes": 40},
    {"type": "cas", "titre": "Cas Cador", "minutes": 30},
@@ -163,7 +163,7 @@
    {"type": "cas", "titre": "Cas Bissont", "minutes": 20},
    {"type": "cas", "titre": "Cas Morteau", "minutes": 20}
   ]},
-  {"titre": "M10 · Les cessions d'immobilisations et de VMP", "elements": [
+  {"titre": "M10 · Enregistrer les cessions d'immobilisations et de VMP", "elements": [
    {"type": "lecon", "titre": "Les écritures de cession d'immobilisations", "minutes": 40},
    {"type": "lecon", "titre": "Les cessions d'immobilisations en pratique", "minutes": 40},
    {"type": "lecon", "titre": "Les cessions de titres immobilisés", "minutes": 40},
@@ -175,7 +175,7 @@
    {"type": "cas", "titre": "Cas Terron", "minutes": 75},
    {"type": "cas", "titre": "Cas Manuel", "minutes": 25}
   ]},
-  {"titre": "M11 · Les autres opérations d'inventaire", "elements": [
+  {"titre": "M11 · Enregistrer les autres opérations d'inventaire", "elements": [
    {"type": "lecon", "titre": "Les variations de stocks : généralités", "minutes": 40},
    {"type": "lecon", "titre": "Les écritures de variation de stocks", "minutes": 40},
    {"type": "cas", "titre": "Cas Lacroix", "minutes": 20},
@@ -213,24 +213,41 @@
    {"type": "cas", "titre": "Cas Prochiffra", "minutes": 90},
    {"type": "cas", "titre": "Cas Velopassion", "minutes": 60}
   ]},
-  {"titre": "M12 · Les documents de synthèse", "elements": [
-   {"type": "lecon", "titre": "Documents de synthèse : leçons 1 à 3 du module (voir plateforme)", "minutes": 120},
-   {"type": "lecon", "titre": "Documents de synthèse : leçons 4 à 6 du module", "minutes": 120},
-   {"type": "cas", "titre": "Documents de synthèse : applications du module", "minutes": 90}
+  {"titre": "M12 · Connaitre et comprendre les documents de synthèse", "elements": [
+   {"type": "lecon", "titre": "Documents de synthèse : leçons 1 et 2 du module", "minutes": 80},
+   {"type": "lecon", "titre": "Documents de synthèse : leçons 3 et 4 du module", "minutes": 80},
+   {"type": "cas", "titre": "Documents de synthèse : les 4 cas du module", "minutes": 120}
   ]},
-  {"titre": "M13 · L'environnement numérique de la comptabilité", "elements": [
+  {"titre": "M13 · Connaître l'environnement numérique de la comptabilité", "elements": [
    {"type": "lecon", "titre": "Dématérialisation et conservation des pièces comptables", "minutes": 40},
    {"type": "lecon", "titre": "Logiciel comptable et PGI", "minutes": 40},
    {"type": "lecon", "titre": "L'impact de la dématérialisation", "minutes": 40},
    {"type": "lecon", "titre": "Sauvegarde et confidentialité des données comptables", "minutes": 40}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 9 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 9 > Introduction à l'UE 9 - Comptabilité"},
+  {"type": "exercices", "titre": "Epreuve nationale du DCG - UE9 - Sujet 0", "ou": "Médiathèque > UE 9 > Annales de l'UE 9"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 9 > Corrigés Comptalia - Épreuve nationale du DCG UE09 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "Les rapprochements bancaires : objectifs, méthode, soldes initiaux identiques ou différents, bouclage du tableau de rapprochement, écritures de régularisation", "date": "2026-11-23", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore", "lecons": ["Les états de rapprochement bancaire", "Les rapprochements bancaires : cas complexes"]},
+  {"type": "live", "titre": "Suite sur les rapprochements bancaires. Les stocks : réglementation, coûts d'acquisition et de production, impacts sur le compte de résultat et le bilan, écritures à la clôture", "date": "2026-12-07", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore", "lecons": ["Les rapprochements bancaires : cas complexes", "Les variations de stocks : généralités"]},
+  {"type": "live", "titre": "Suite sur les stocks : valeur actuelle, dépréciations et écritures", "date": "2026-12-14", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore", "lecons": ["Les écritures de variation de stocks"]},
+  {"type": "live", "titre": "Cas de synthèse : opérations courantes, TVA, Stocks", "date": "2026-12-21", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay : pas encore", "lecons": []},
+  {"type": "replay", "titre": "La sauvegarde et la confidentialité des données comptables", "date": "2026-11-16", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay disponible", "lecons": ["Sauvegarde et confidentialité des données comptables"]},
+  {"type": "replay", "titre": "Cas de synthèse : opérations courantes sur le journal + calcul TVA fin de mois", "date": "2026-11-09", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible", "lecons": ["Le calcul et la comptabilisation de la TVA à décaisser"]},
+  {"type": "replay", "titre": "Les acquisitions d'immobilisations : règles spécifiques, coûts d'acquisition et de production (production immobilisée), tableau annexe des flux d'entrée des immobilisations", "date": "2026-11-02", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible", "lecons": ["L'enregistrement des acquisitions d'immobilisations"]},
+  {"type": "replay", "titre": "Comptabilisation des emballages (consignation & déconsignation), des effets de commerce (LCR classique et magnétique), de la paie", "date": "2026-10-26", "debut": "21:00", "fin": "22:00", "note": "TD – Didier COUDOR ; replay disponible", "lecons": ["La consignation et la reprise des emballages", "La lettre de change relevée (LCR)", "La comptabilisation des charges de personnel"]},
+  {"type": "quiz", "titre": "Certificat Studi - Comptabilité", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Evaluation d'entraînement 1 - UE9 Comptabilité", "note": "Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Evaluation d'entraînement 2 - UE9 Comptabilité", "note": "Accessible, À faire ; aucune date limite affichée"},
+  {"type": "devoir", "titre": "Evaluation d'entraînement 3 - UE9 Comptabilité", "note": "Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE9 - Comptabilité", "note": "Écrit 3 h, coeff. 1 (situations pratiques et/ou exercices et/ou questions) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }

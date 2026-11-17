@@ -34,5 +34,10 @@ def modules(ue):
 
 CURRICULUM = {ue: modules(ue) for ue in ORDER}
 
-# lives, devoirs, examens blancs… : [{"ue", "type", "titre", "date", "debut"?, "fin"?, "note"?}]
-EVENTS = [dict(e, ue=e.get("ue") or ue) for ue in ORDER for e in DATA[ue].get("evenements", [])]
+# lives, devoirs, examens blancs… : [{"ue", "type", "titre", "date", "debut"?, "fin"?, "note"?, "lecons"?}]
+# commun.json : ce qui vaut pour toutes les UE (ue = None)
+COMMUN = json.load(open(os.path.join(STUDI, "commun.json"), encoding="utf-8")) if os.path.exists(os.path.join(STUDI, "commun.json")) else {}
+ALL_EVENTS = [dict(e, ue=e.get("ue") or ue) for ue in ORDER for e in DATA[ue].get("evenements", [])] + \
+             [dict(e, ue=None) for e in COMMUN.get("evenements", [])]
+EVENTS = [e for e in ALL_EVENTS if e.get("date")]          # datés : dans l'agenda
+UNDATED = [e for e in ALL_EVENTS if not e.get("date")]     # sans date (certificats, devoirs…) : dans le plan à la main

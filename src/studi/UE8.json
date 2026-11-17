@@ -2,14 +2,14 @@
  "ue": "UE8",
  "nom": "Système d'information de gestion",
  "parcours": "Studi · DCG 2026",
- "releve_le": "2026-11-16",
- "source": "Programme relevé sur la plateforme le 16/11/2026 (ancien src/curriculum.py). Pas encore revérifié.",
- "epreuve": {"duree_h": 4, "format": "Situations pratiques"},
+ "releve_le": "2026-11-17",
+ "source": "Relevé sur Studi le 17/11/2026 avec Claude in Chrome (src/studi/releve-2026-11-17.json), comparé au programme du 16/11.",
+ "epreuve": {"duree_h": 4, "format": "Écrit : situations pratiques ou questions"},
  "modules": [
   {"titre": "Introduction", "elements": [
-   {"type": "tache", "titre": "Survole l'e-book UE8 et le guide de l'épreuve : situations pratiques (4 h)", "minutes": 20}
+   {"type": "tache", "titre": "Lis l'introduction de l'UE8 et le sommaire de l'e-book (Médiathèque > Parcours > DCG 2026 > UE 8 > Introduction)", "minutes": 20}
   ]},
-  {"titre": "M2 · Le SI dans son environnement : son rôle", "elements": [
+  {"titre": "M2 · Comprendre le SI dans son environnement : appréhender son rôle dans les organisations", "elements": [
    {"type": "lecon", "titre": "La qualité de l'information", "minutes": 45},
    {"type": "lecon", "titre": "Le système d'information (SI)", "minutes": 45},
    {"type": "lecon", "titre": "Les rôles du SI : opérationnel, tactique, stratégique", "minutes": 45},
@@ -17,7 +17,7 @@
    {"type": "lecon", "titre": "Les composantes et niveaux du SI", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : discerner le rôle du SI dans les organisations", "minutes": 50}
   ]},
-  {"titre": "M3 · Le SI dans son environnement : les acteurs", "elements": [
+  {"titre": "M3 · Comprendre le SI dans son environnement : identifier les acteurs", "elements": [
    {"type": "lecon", "titre": "Les acteurs internes : rôles et responsabilités", "minutes": 45},
    {"type": "lecon", "titre": "Les acteurs externes", "minutes": 45},
    {"type": "lecon", "titre": "Les interactions des gestionnaires du SI avec les utilisateurs", "minutes": 45},
@@ -26,7 +26,7 @@
    {"type": "lecon", "titre": "Les compétences numériques attendues des utilisateurs", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : identifier les acteurs du SI", "minutes": 50}
   ]},
-  {"titre": "M4 · L'infrastructure technique du SI", "elements": [
+  {"titre": "M4 · Comprendre l'infrastructure technique du système d'information au service de l'organisation", "elements": [
    {"type": "lecon", "titre": "Les moyens d'accès au SI", "minutes": 45},
    {"type": "lecon", "titre": "La localisation des données et applications", "minutes": 45},
    {"type": "lecon", "titre": "Les serveurs : principes fonctionnels", "minutes": 45},
@@ -35,7 +35,7 @@
    {"type": "lecon", "titre": "Le rôle des protocoles", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : comprendre l'infrastructure technique", "minutes": 50}
   ]},
-  {"titre": "M5 · Les solutions informatiques du SI", "elements": [
+  {"titre": "M5 · Appréhender les solutions informatiques du système d'information", "elements": [
    {"type": "lecon", "titre": "Solutions standardisées ou développées", "minutes": 45},
    {"type": "lecon", "titre": "La gestion de projets numériques", "minutes": 45},
    {"type": "lecon", "titre": "L'interopérabilité et les formats d'échange", "minutes": 45},
@@ -43,7 +43,7 @@
    {"type": "lecon", "titre": "Les documents électroniques légaux", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : étudier les échanges de données", "minutes": 50}
   ]},
-  {"titre": "M6 · Les choix organisationnels liés au SI", "elements": [
+  {"titre": "M6 · Comprendre les choix organisationnels liés au système d'information, nécessaires pour s'adapter à son environnement", "elements": [
    {"type": "lecon", "titre": "L'audit du système d'information", "minutes": 45},
    {"type": "lecon", "titre": "Externaliser ou internaliser le SI", "minutes": 45},
    {"type": "lecon", "titre": "Les impacts de la transition numérique", "minutes": 45},
@@ -51,7 +51,7 @@
    {"type": "lecon", "titre": "Les contrats de prestations de services", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : analyser la dimension organisationnelle du SI", "minutes": 50}
   ]},
-  {"titre": "M7 · Structurer et manipuler des données : les bases de données", "elements": [
+  {"titre": "M7 · Structurer et manipuler des données via les bases de données", "elements": [
    {"type": "lecon", "titre": "La collecte des données et les dépendances fonctionnelles", "minutes": 55},
    {"type": "lecon", "titre": "Le modèle relationnel et les formes normales", "minutes": 55},
    {"type": "lecon", "titre": "L'implémentation d'une base de données", "minutes": 55},
@@ -60,7 +60,7 @@
    {"type": "lecon", "titre": "La mise à jour des données", "minutes": 55},
    {"type": "application", "titre": "Méthodologie DCG UE8 : manipuler les données d'une base", "minutes": 50}
   ]},
-  {"titre": "M8 · Traiter des données avec le tableur", "elements": [
+  {"titre": "M8 · Traiter des données via le tableur pour résoudre des problèmes de gestion et aider à la décision", "elements": [
    {"type": "lecon", "titre": "Introduction à l'usage du tableur", "minutes": 55},
    {"type": "lecon", "titre": "Fonctions arithmétiques", "minutes": 55},
    {"type": "lecon", "titre": "Fonctions statistiques et logiques", "minutes": 55},
@@ -73,7 +73,7 @@
    {"type": "lecon", "titre": "La programmation au service du tableur", "minutes": 55},
    {"type": "application", "titre": "Méthodologie DCG UE8 : maîtriser le tableur", "minutes": 50}
   ]},
-  {"titre": "M9 · Le SI et la performance des processus", "elements": [
+  {"titre": "M9 · Analyser le système d'information au regard de la performance des processus", "elements": [
    {"type": "lecon", "titre": "Les processus et leur typologie", "minutes": 45},
    {"type": "lecon", "titre": "Le diagramme BPMN", "minutes": 45},
    {"type": "lecon", "titre": "Les catégories d'IA et leurs enjeux sur le SI", "minutes": 45},
@@ -82,26 +82,39 @@
    {"type": "lecon", "titre": "Les technologies émergentes et la performance du SI", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : étudier les processus", "minutes": 50}
   ]},
-  {"titre": "M10 · Les défis du SI : réglementation et durabilité", "elements": [
+  {"titre": "M10 · Appréhender les défis du système d'information en termes de règlementation et durabilité", "elements": [
    {"type": "lecon", "titre": "CNIL et obligations du responsable des traitements", "minutes": 45},
    {"type": "lecon", "titre": "Les droits des personnes", "minutes": 45},
    {"type": "lecon", "titre": "La mise en conformité de l'organisme (RGPD)", "minutes": 45},
    {"type": "lecon", "titre": "Les aspects réglementaires des logiciels", "minutes": 45},
    {"type": "application", "titre": "Méthodologie DCG UE8 : réglementation et durabilité du SI", "minutes": 50}
   ]},
-  {"titre": "M11 · Les défis du SI : la sécurité", "elements": [
+  {"titre": "M11 · Appréhender les défis du système d'information en termes de sécurité", "elements": [
    {"type": "lecon", "titre": "Sécurité du SI : leçons 1 et 2 du module (voir plateforme)", "minutes": 90},
    {"type": "lecon", "titre": "Sécurité du SI : leçons 3 et 4 du module", "minutes": 90},
    {"type": "lecon", "titre": "Sécurité du SI : leçons 5 et 6 du module", "minutes": 90},
    {"type": "application", "titre": "Méthodologie DCG UE8 : sécurité du SI", "minutes": 50}
   ]}
  ],
- "ressources": [],
- "evenements": [],
+ "ressources": [
+  {"type": "ebook", "titre": "E-book - UE 8 - 10/2026", "ou": "Médiathèque > Parcours > DCG 2026 > UE 8 > Introduction à l'UE 8 - Système d'information de gestion"},
+  {"type": "exercices", "titre": "Epreuve nationale du DCG - UE8 - Sujet 0", "ou": "Médiathèque > UE 8 > Annales de l'UE 8"},
+  {"type": "exercices", "titre": "Corrigés Comptalia épreuves nationales DCG 2020 à 2026 (énoncé + corrigé + commentaire audio)", "ou": "Médiathèque > UE 8 > Corrigés Comptalia - Épreuve nationale du DCG UE08 - Ancien référentiel"}
+ ],
+ "evenements": [
+  {"type": "live", "titre": "Essentiels du module « Appréhender les défis du SI en termes de règlementation et durabilité » + cas pratique", "date": "2026-11-18", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore", "lecons": ["Méthodologie DCG UE8 : réglementation et durabilité du SI"]},
+  {"type": "live", "titre": "La représentation d'un processus : le diagramme BPMN ; Les progiciels au service des processus", "date": "2026-11-26", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay : pas encore", "lecons": ["Le diagramme BPMN", "Les progiciels au service des processus"]},
+  {"type": "live", "titre": "Essentiels de la modélisation des données (SRD) et de la manipulation des données (SQL) + cas pratique", "date": "2026-12-03", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore", "lecons": ["Le modèle relationnel et les formes normales", "Méthodologie DCG UE8 : manipuler les données d'une base"]},
+  {"type": "live", "titre": "L'usage des fonctions de dénombrement et de gestion du temps dans les formules de calcul ; L'usage des fonctions de recherche dans les formules de calcul", "date": "2026-12-10", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay : pas encore", "lecons": ["Fonctions de dénombrement et de dates", "Fonctions de recherche"]},
+  {"type": "live", "titre": "Essentiels du module « Appréhender les défis du SI en termes de sécurité » + cas pratique", "date": "2026-12-16", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay : pas encore", "lecons": ["Méthodologie DCG UE8 : sécurité du SI"]},
+  {"type": "replay", "titre": "La représentation d'un processus : le diagramme BPMN ; Le lien entre processus et bases de données", "date": "2026-11-12", "debut": "20:00", "fin": "21:00", "note": "TD – Fabien RESZKA ; replay disponible", "lecons": ["Le diagramme BPMN", "Processus et bases de données"]},
+  {"type": "replay", "titre": "Essentiels de la manipulation des données (SQL) + cas pratique (cours « Structurer et manipuler des données via les bases de données »)", "date": "2026-11-04", "debut": "20:00", "fin": "21:00", "note": "TD – Grégory LAKHLEF ; replay disponible", "lecons": ["Requêtes simples (SQL)", "Requêtes complexes (SQL)"]},
+  {"type": "quiz", "titre": "Certificat Studi - Système d'information de gestion", "note": "QCM obligatoire en fin d'UE ; statut : Accessible, À faire ; aucune date limite affichée"},
+  {"type": "examen", "titre": "Épreuve nationale DCG UE8 - Système d'information de gestion", "note": "Écrit 4 h, coeff. 1 (situations pratiques et/ou questions) ; date non affichée sur Studi"}
+ ],
  "a_verifier": [
-  "Lives : dates, heures et replays",
-  "Devoirs à rendre et leurs dates limites",
-  "Examens blancs Studi (« Objectif examen ») : dates",
-  "E-books, quiz et exercices de chaque module"
+  "Lives après le 22/12/2026 (pas encore affichés sur Studi)",
+  "Dates des examens blancs « Objectif examen » (avril)",
+  "Dates officielles des écrits 2027"
  ]
 }
