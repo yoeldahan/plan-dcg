@@ -8,24 +8,35 @@
    "date": "2027-03-28",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE9",
+   "ue": "UE12",
    "kind": "cours",
-   "title": "Fin du programme · M12 · Connaitre et comprendre les documents de synthèse",
+   "title": "Fin du programme · M9 · Globalisation and development",
    "items": [
     {
      "k": "L",
-     "t": "Documents de synthèse : leçons 3 et 4 du module",
-     "m": 80
+     "t": "At an international level",
+     "m": 30
     },
     {
-     "k": "C",
-     "t": "Documents de synthèse : les 4 cas du module (1re partie)",
-     "m": 60
+     "k": "V",
+     "t": "Free Trade Areas (vidéo 25 min)",
+     "m": 50,
+     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
+    },
+    {
+     "k": "A",
+     "t": "Application : Challenging unfair competition",
+     "m": 45
     },
     {
      "k": "B",
-     "t": "Documents de synthèse : les 4 cas du module (2e partie)",
-     "m": 60
+     "t": "Cas CETA (1re partie)",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas CETA (2e partie)",
+     "m": 30
     }
    ],
    "week": "2027-03-28"
@@ -499,11 +510,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

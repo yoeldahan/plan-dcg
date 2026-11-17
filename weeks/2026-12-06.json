@@ -60,40 +60,18 @@
    "items": [
     {
      "k": "L",
-     "t": "Le passif : capitaux propres et autres fonds propres",
-     "m": 40
-    },
-    {
-     "k": "L",
      "t": "Le passif : provisions et dettes",
      "m": 40
-    }
-   ],
-   "week": "2026-12-06"
-  },
-  {
-   "id": "2026-12-07-0900",
-   "date": "2026-12-07",
-   "start": "09:00",
-   "end": "10:45",
-   "ue": "UE9",
-   "kind": "cours",
-   "title": "M3 → M4 · Exposer et justifier les mécanismes de la partie double",
-   "items": [
+    },
     {
      "k": "C",
      "t": "Cas Louis",
      "m": 20
     },
     {
-     "k": "L",
-     "t": "Les écritures comptables",
-     "m": 40
-    },
-    {
      "k": "C",
-     "t": "Cas Z",
-     "m": 45
+     "t": "Cas Lachepaille",
+     "m": 20
     },
     {
      "k": "B",
@@ -112,13 +90,35 @@
     },
     {
      "k": "B",
-     "t": "Cas Lachepaille",
-     "m": 20
-    },
-    {
-     "k": "B",
      "t": "Cas Léon",
      "m": 30
+    }
+   ],
+   "week": "2026-12-06"
+  },
+  {
+   "id": "2026-12-07-0900",
+   "date": "2026-12-07",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M4 · Exposer et justifier les mécanismes de la partie double",
+   "items": [
+    {
+     "k": "L",
+     "t": "Les écritures comptables",
+     "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas Z",
+     "m": 45
+    },
+    {
+     "k": "L",
+     "t": "Les enregistrements comptables simples",
+     "m": 40
     }
    ],
    "week": "2026-12-06"
@@ -197,13 +197,13 @@
    "items": [
     {
      "k": "L",
-     "t": "Les enregistrements comptables simples",
+     "t": "La présentation de la comptabilisation des opérations",
      "m": 40
     },
     {
-     "k": "L",
-     "t": "La présentation de la comptabilisation des opérations",
-     "m": 40
+     "k": "C",
+     "t": "Cas JP",
+     "m": 30
     }
    ],
    "week": "2026-12-06"
@@ -667,11 +667,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

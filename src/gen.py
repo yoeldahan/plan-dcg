@@ -96,8 +96,8 @@ def flatten(ue):
         for (k, t, m) in items:
             lv = hint(ue, t)
             if m > lim and not (ue == "UE13" and k == "T"):
-                parts = [{"k": k, "t": t + " (1re partie)", "m": m - m // 2, "mod": mod},
-                         {"k": k, "t": t + " (2e partie)", "m": m // 2, "mod": mod}]
+                parts = [{"k": k, "t": t + " (1re partie)", "m": m - m // 2, "mod": mod, "grp": t},
+                         {"k": k, "t": t + " (2e partie)", "m": m // 2, "mod": mod, "grp": t}]
             else:
                 parts = [{"k": k, "t": t, "m": m, "mod": mod}]
             for x in parts:
@@ -121,21 +121,25 @@ def trim(ue, avail):
         by_mod.setdefault(i["mod"], []).append(i)
     for mod, items in by_mod.items():
         mc = sum(i["m"] for i in items if i["k"] == "C")
-        kept, prev = 0, None
+        kept, prev, grp_keep = 0, None, {}
         for i in items:
             if i["k"] == "C":
                 first_after_lesson = prev in ("L", None)
-                if (first_after_lesson and kept < max(mc * keep_ratio, 1)) or kept + i["m"] <= mc * keep_ratio:
+                if i.get("grp") in grp_keep:      # 2e partie : même sort que la 1re
+                    if grp_keep[i["grp"]]: kept += i["m"]
+                    else: i["bonus"] = True
+                elif (first_after_lesson and kept < max(mc * keep_ratio, 1)) or kept + i["m"] <= mc * keep_ratio:
                     kept += i["m"]
                 else:
                     i["bonus"] = True
+                if i.get("grp"): grp_keep.setdefault(i["grp"], not i.get("bonus"))
             prev = i["k"]
     return need - sum(i["m"] for i in q if not i.get("bonus"))
 
 # budget réel par UE en phase 1 (le créneau UE13 du dimanche bascule ensuite sur le rattrapage)
 avail = dict(budget)
 avail["UE1"] = avail["UE1"] + 4 * 120  # dimanches après le rapport UE13
-trimmed = {ue: trim(ue, avail.get(ue, 0) * 1.05) for ue in ["UE9", "UE12"]}
+trimmed = {ue: trim(ue, avail.get(ue, 0)) for ue in ["UE9", "UE12"]}
 
 sessions = []
 
@@ -223,16 +227,16 @@ DUR = {"UE1": 3, "UE5": 4, "UE7": 4, "UE8": 4, "UE9": 3, "UE12": 3}
 MOCKS = {
     D(2027, 3, 22): ("UE1", "Évaluation d'entraînement Studi"), D(2027, 3, 30): ("UE7", "Annale 2025"),
     D(2027, 4, 5): ("UE5", "Annale 2025"), D(2027, 4, 6): ("UE8", "Annale 2025"),
-    D(2027, 4, 12): ("UE12", "Annale 2025"), D(2027, 4, 13): ("UE9", "Évaluation d'entraînement 1 Studi"),
-    D(2027, 4, 19): ("UE5", "Annale 2026"), D(2027, 4, 20): ("UE9", "Évaluation d'entraînement 2 Studi"),
-    D(2027, 4, 26): ("UE8", "Annale 2026"), D(2027, 4, 27): ("UE1", "Annale 2026"),
+    D(2027, 4, 12): ("UE12", "Annale 2025"), D(2027, 4, 13): ("UE8", "Annale 2026"),
+    D(2027, 4, 19): ("UE5", "Annale 2026"), D(2027, 4, 20): ("UE9", "Évaluation d'entraînement 1 Studi"),
+    D(2027, 4, 26): ("UE9", "Évaluation d'entraînement 2 Studi"), D(2027, 4, 27): ("UE1", "Annale 2026"),
     D(2027, 5, 2): ("UE12", "Annale 2026"), D(2027, 5, 3): ("UE7", "Annale 2026"),
     D(2027, 5, 4): ("UE9", "Sujet zéro 2027"), D(2027, 5, 9): ("UE1", "Sujet zéro 2027"),
     D(2027, 5, 10): ("UE5", "Sujet zéro 2027"), D(2027, 5, 11): ("UE8", "Sujet zéro 2027"),
     D(2027, 5, 16): ("UE12", "Annale 2024"), D(2027, 5, 18): ("UE7", "Sujet zéro 2027"),
 }
 # deux certificats par dimanche : 13 h 15 – 14 h 15 et 14 h 15 – 15 h 30
-CERTIFS = {D(2027, 3, 21): ["UE7", "UE1"], D(2027, 3, 28): ["UE8", "UE5"], D(2027, 4, 25): ["UE9", "UE12"]}
+CERTIFS = {D(2027, 3, 21): ["UE7", "UE1"], D(2027, 3, 28): ["UE8", "UE5"], D(2027, 4, 18): ["UE9", "UE12"]}
 
 def hhmm(h, m=0):
     return f"{h:02d}:{m:02d}"
@@ -261,13 +265,26 @@ def correction_items(ue, sujet=""):
             {"k": "T", "t": "Relis ta copie à froid et note les questions où tu as hésité"},
             {"k": "T", "t": "Quand la correction arrive, note-toi sur 20 ici"},
         ]
+    if sujet.startswith("Sujet"):
+        n = ue[2:]
+        return [
+            {"k": "T", "t": f"Cherche le corrigé du sujet 0 : Médiathèque > UE {n} > Annales de l'UE {n}"},
+            {"k": "T", "t": "Pas de corrigé ? Envoie-moi les photos de ta copie et je te corrige"},
+            {"k": "T", "t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"},
+        ]
     return [
         {"k": "T", "t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"},
         {"k": "T", "t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"},
         {"k": "T", "t": "Option : envoie-moi les photos de ta copie et je te corrige"},
     ]
 
-def reprise_items(ue):
+def reprise_items(ue, sujet=""):
+    if is_eval(sujet):
+        return [
+            {"k": "T", "t": "Refais avec ton cours les questions où tu as hésité"},
+            {"k": "T", "t": "Mets à jour tes fiches sur ces points"},
+            {"k": "T", "t": "Quand la correction Studi arrive, refais les questions ratées"},
+        ]
     return [
         {"k": "T", "t": "Relis les chapitres où tu as perdu des points et refais leurs applications"},
         {"k": "T", "t": "Refais au propre les questions ratées de l'examen blanc"},
@@ -291,7 +308,7 @@ for day in days:
             continue
         add(day, "09:00", hhmm(9 + DUR[ue]), ue, "examen", f"Examen blanc · {sujet}", mock_items(ue, sujet))
         add(day, "14:00", "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue, sujet))
-        add(day, "15:45", "17:00" if wd == 0 else "17:45", ue, "reprise", "Reprise des points faibles", reprise_items(ue))
+        add(day, "15:45", "17:00" if wd == 0 else "17:45", ue, "reprise", "Reprise des points faibles", reprise_items(ue, sujet))
         if wd == 1:
             add(day, "17:50", "18:00", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
         continue
@@ -299,7 +316,8 @@ for day in days:
         # dimanche sans examen blanc
         leftovers = [u for u in FLEX_ORDER + ["UE13"] if remaining(u) > 0]
         if leftovers and day != END:
-            u = max(leftovers, key=remaining)
+            first_mock = {x: min([d for d, (uu, _) in MOCKS.items() if uu == x] or [END]) for x in leftovers}
+            u = min(leftovers, key=lambda x: (first_mock[x], -remaining(x)))
             carry[u] = 0
             fill_content(day, "10:30", "12:30", u)
             sessions[-1]["title"] = "Fin du programme · " + sessions[-1]["title"]
@@ -322,9 +340,9 @@ for day in days:
         left = [u for u in FLEX_ORDER + ["UE13"] if remaining(u) > 0]
         if day in CERTIFS:
             cert("13:15", "14:15", CERTIFS[day][0])
-        elif left and (len(left) > len(later) or sum(remaining(u) for u in left) > 120 * len(later)):
-            small = min(left, key=remaining)
-            u = small if remaining(small) <= 60 else max(left, key=remaining)
+        elif left:
+            first_mock = {x: min([d for d, (uu, _) in MOCKS.items() if uu == x] or [END]) for x in left}
+            u = min(left, key=lambda x: (first_mock[x], -remaining(x)))
             carry[u] = 0
             fill_content(day, "13:15", "14:15", u)
             sessions[-1]["title"] = "Fin du programme · " + sessions[-1]["title"]
@@ -354,8 +372,8 @@ MILESTONES = [
     {"date": "2027-01-26", "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"},
     {"date": "2027-02-07", "t": "Dépôt de la partie 3 du rapport UE13 et de la fiche de suivi n° 2"},
     {"date": "2027-02-21", "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"},
-    {"date": "2027-03-16", "t": "Fin du premier passage : tout le programme est vu une fois"},
-    {"date": "2027-03-28", "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."},
+    {"date": "2027-03-16", "t": None},   # calculé plus bas
+    {"date": "2027-03-28", "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."},
     {"date": "2027-04-01", "t": "En avril, Studi propose des examens blancs « Objectif examen ». Envoie-moi leurs dates dès qu'elles sortent."},
     {"date": "2027-04-25", "t": "Si tu as de l'avance : l'évaluation d'entraînement 3 de l'UE9 (Studi > Évaluations)."},
     {"date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître). 48 h avant : convocation et pièce d'identité."},
@@ -363,6 +381,21 @@ MILESTONES = [
     {"date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
     {"date": "2027-07-08", "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"},
 ]
+
+# --- fin du premier passage : ce qui est vraiment fini le 16/03
+MOIS = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+last = {u: max(s["date"] for s in sessions if s["ue"] == u and s["kind"] in ("cours", "exercices", "rapport")) for u in CURRICULUM}
+late_ues = sorted([u for u in last if last[u] > P1_END.isoformat()], key=lambda u: last[u])
+def fday(iso):
+    d = D.fromisoformat(iso); return f"{d.day}{'er' if d.day == 1 else ''} {MOIS[d.month]}"
+ms16 = next(m for m in MILESTONES if m["date"] == "2027-03-16")
+ms16["t"] = "Fin du premier passage : tout le programme est vu une fois" if not late_ues else \
+    "Fin du premier passage, sauf " + " et ".join(f"{u} (fin le {fday(last[u])})" for u in late_ues)
+# chaque UE finit son programme avant son premier examen blanc
+for u in CURRICULUM:
+    fm = [d.isoformat() for d, (uu, _) in MOCKS.items() if uu == u]
+    if fm and last[u] >= min(fm):
+        print(f"ATTENTION {u} : programme fini le {last[u]}, après son premier examen blanc ({min(fm)})")
 
 # --- lives et dates Studi (src/studi) : dans l'agenda, sans toucher aux séances.
 # Les replays passés sont rattachés aux leçons (HINTS) ; un live après 20 h devient « replay à regarder ».

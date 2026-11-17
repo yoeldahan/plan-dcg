@@ -65,13 +65,33 @@
    "items": [
     {
      "k": "L",
-     "t": "Les logiciels",
+     "t": "L'établissement des comptes annuels",
      "m": 40
     },
     {
-     "k": "L",
-     "t": "Subventions et livraisons à soi-même",
-     "m": 40
+     "k": "B",
+     "t": "Cas Prisson",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Valentin (1re partie)",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Valentin (2e partie)",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Prochiffra",
+     "m": 90
+    },
+    {
+     "k": "B",
+     "t": "Cas Velopassion",
+     "m": 60
     }
    ],
    "week": "2027-03-14"
@@ -83,27 +103,17 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M11 · Enregistrer les autres opérations d'inventaire",
+   "title": "M12 · Connaitre et comprendre les documents de synthèse",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Reval",
-     "m": 30
-    },
-    {
-     "k": "C",
-     "t": "Cas Dumoulin",
-     "m": 30
+     "k": "L",
+     "t": "Documents de synthèse : leçons 1 et 2 du module",
+     "m": 80
     },
     {
      "k": "L",
-     "t": "Indemnités d'assurance et crédit-bail",
-     "m": 40
-    },
-    {
-     "k": "B",
-     "t": "Cas Maxard",
-     "m": 30
+     "t": "Documents de synthèse : leçons 3 et 4 du module",
+     "m": 80
     }
    ],
    "week": "2027-03-14"
@@ -181,27 +191,12 @@
    "start": "09:00",
    "end": "10:45",
    "ue": "UE9",
-   "kind": "cours",
-   "title": "M11 · Enregistrer les autres opérations d'inventaire",
+   "kind": "exercices",
+   "title": "M12 · Connaitre et comprendre les documents de synthèse",
    "items": [
     {
      "k": "C",
-     "t": "Cas Laborde",
-     "m": 60
-    },
-    {
-     "k": "L",
-     "t": "La comptabilisation de l'impôt sur les sociétés",
-     "m": 40
-    },
-    {
-     "k": "B",
-     "t": "Cas Lepic",
-     "m": 60
-    },
-    {
-     "k": "B",
-     "t": "Cas Bartin",
+     "t": "Documents de synthèse : les 4 cas du module (1re partie)",
      "m": 60
     }
    ],
@@ -235,7 +230,7 @@
    "items": [
     {
      "k": "L",
-     "t": "Energy, geopolitics and social justice",
+     "t": "Shifting to renewable energies",
      "m": 30
     }
    ],
@@ -270,24 +265,17 @@
    "end": "17:15",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M8 → M9 · Globalisation and development",
+   "title": "M8 · Understanding what is at stake with energy",
    "items": [
+    {
+     "k": "L",
+     "t": "Energy, geopolitics and social justice",
+     "m": 30
+    },
     {
      "k": "A",
      "t": "Application : what is at stake with energy",
      "m": 45
-    },
-    {
-     "k": "L",
-     "t": "Globalization (+ 4 vidéos) (1re partie)",
-     "m": 30,
-     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
-    },
-    {
-     "k": "L",
-     "t": "Globalization (+ 4 vidéos) (2e partie)",
-     "m": 30,
-     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-03-14"
@@ -298,18 +286,14 @@
    "start": "17:15",
    "end": "17:50",
    "ue": "UE12",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "C",
-     "t": "Cas « Is free trade being threatened? » (1re partie)",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas « Is free trade being threatened? » (2e partie)",
-     "m": 45
+     "k": "L",
+     "t": "Globalization (+ 4 vidéos) (1re partie)",
+     "m": 30,
+     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-03-14"
@@ -659,11 +643,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

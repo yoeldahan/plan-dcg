@@ -56,12 +56,38 @@
    "end": "15:30",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M10 · Enregistrer les cessions d'immobilisations et de VMP",
+   "title": "M10 → M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
+     "k": "C",
+     "t": "Cas Lazare",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Revel",
+     "m": 30
+    },
+    {
      "k": "L",
-     "t": "Les cessions de titres immobilisés",
-     "m": 40
+     "t": "Les variations de stocks : généralités",
+     "m": 40,
+     "live": "Replay du live du lun. 07/12 (Studi > Lives)"
+    },
+    {
+     "k": "B",
+     "t": "Cas Houffard",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Terron",
+     "m": 75
+    },
+    {
+     "k": "B",
+     "t": "Cas Manuel",
+     "m": 25
     }
    ],
    "week": "2027-02-21"
@@ -73,22 +99,28 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M10 · Enregistrer les cessions d'immobilisations et de VMP",
+   "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
      "k": "L",
-     "t": "Les cessions de VMP",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "Synthèse des cessions de titres",
-     "m": 40
+     "t": "Les écritures de variation de stocks",
+     "m": 40,
+     "live": "Replay du live du lun. 14/12 (Studi > Lives)"
     },
     {
      "k": "C",
-     "t": "Cas Lazare",
-     "m": 30
+     "t": "Cas Lacroix",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Marcel",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Romain",
+     "m": 20
     }
    ],
    "week": "2027-02-21"
@@ -173,39 +205,22 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M10 → M11 · Enregistrer les autres opérations d'inventaire",
+   "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
      "k": "C",
-     "t": "Cas Revel",
-     "m": 30
-    },
-    {
-     "k": "C",
-     "t": "Cas Manuel",
+     "t": "Cas Norbert",
      "m": 25
     },
     {
      "k": "L",
-     "t": "Les variations de stocks : généralités",
-     "m": 40,
-     "live": "Replay du live du lun. 07/12 (Studi > Lives)"
+     "t": "Charges à payer et produits à recevoir",
+     "m": 40
     },
     {
      "k": "L",
-     "t": "Les écritures de variation de stocks",
-     "m": 40,
-     "live": "Replay du live du lun. 14/12 (Studi > Lives)"
-    },
-    {
-     "k": "B",
-     "t": "Cas Houffard",
-     "m": 60
-    },
-    {
-     "k": "B",
-     "t": "Cas Terron",
-     "m": 75
+     "t": "Charges et produits constatés d'avance",
+     "m": 40
     }
    ],
    "week": "2027-02-21"
@@ -650,11 +665,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

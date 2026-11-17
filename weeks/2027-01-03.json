@@ -62,22 +62,17 @@
    "end": "15:30",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
+   "title": "M5 → M6 · Etablir et enregistrer les factures",
    "items": [
     {
-     "k": "L",
-     "t": "Avances et acomptes sur biens",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "Avances et acomptes sur prestations et travaux",
-     "m": 40
-    },
-    {
-     "k": "B",
+     "k": "C",
      "t": "Cas Novino",
      "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Les factures « de doit »",
+     "m": 40
     },
     {
      "k": "B",
@@ -103,12 +98,17 @@
    "items": [
     {
      "k": "L",
-     "t": "Les factures « de doit »",
+     "t": "L'enregistrement d'une facture de doit",
      "m": 40
     },
     {
      "k": "L",
-     "t": "L'enregistrement d'une facture de doit",
+     "t": "Frais de port et sous-traitance",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Les factures d'avoir chez les fournisseurs",
      "m": 40
     }
    ],
@@ -192,18 +192,33 @@
    "items": [
     {
      "k": "L",
-     "t": "Frais de port et sous-traitance",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "Les factures d'avoir chez les fournisseurs",
-     "m": 40
-    },
-    {
-     "k": "L",
      "t": "Les factures d'avoir chez les clients",
      "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas AB",
+     "m": 15
+    },
+    {
+     "k": "C",
+     "t": "Cas Camille",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas VM",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Gustave",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Web",
+     "m": 30
     }
    ],
    "week": "2027-01-03"
@@ -649,11 +664,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

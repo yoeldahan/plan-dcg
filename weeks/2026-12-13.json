@@ -55,13 +55,23 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas JP",
-     "m": 30
+     "t": "Cas Louis 2",
+     "m": 45
     },
     {
      "k": "C",
-     "t": "Cas Louis 2",
+     "t": "Cas Malo",
      "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Piman",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Roland",
+     "m": 60
     }
    ],
    "week": "2026-12-13"
@@ -76,11 +86,6 @@
    "title": "M4 · Exposer et justifier les mécanismes de la partie double",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Malo",
-     "m": 45
-    },
-    {
      "k": "L",
      "t": "L'établissement d'une balance comptable",
      "m": 40
@@ -91,19 +96,14 @@
      "m": 10
     },
     {
-     "k": "C",
+     "k": "L",
+     "t": "Une balance comptable à partir d'un exemple concret",
+     "m": 40
+    },
+    {
+     "k": "B",
      "t": "Cas Pierre",
      "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Piman",
-     "m": 60
-    },
-    {
-     "k": "B",
-     "t": "Cas Roland",
-     "m": 60
     }
    ],
    "week": "2026-12-13"
@@ -186,17 +186,37 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M4 · Exposer et justifier les mécanismes de la partie double",
+   "title": "M4 → M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
    "items": [
-    {
-     "k": "L",
-     "t": "Une balance comptable à partir d'un exemple concret",
-     "m": 40
-    },
     {
      "k": "L",
      "t": "Le compte de résultat et le bilan à partir d'une balance",
      "m": 40
+    },
+    {
+     "k": "C",
+     "t": "Cas Fargue",
+     "m": 60
+    },
+    {
+     "k": "L",
+     "t": "Le principe de la TVA",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Luchot",
+     "m": 90
+    },
+    {
+     "k": "B",
+     "t": "Cas DB",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Tio Pepe",
+     "m": 30
     }
    ],
    "week": "2026-12-13"
@@ -643,11 +663,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

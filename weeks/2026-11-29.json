@@ -82,7 +82,7 @@
    "start": "09:00",
    "end": "10:45",
    "ue": "UE9",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M3 · Connaître le contenu d'un compte de résultat et d'un bilan",
    "items": [
     {
@@ -91,7 +91,17 @@
      "m": 30
     },
     {
-     "k": "C",
+     "k": "L",
+     "t": "La présentation d'un bilan",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "L'actif (partie 1)",
+     "m": 40
+    },
+    {
+     "k": "B",
      "t": "Cas Tachet",
      "m": 60
     }
@@ -175,17 +185,12 @@
    "items": [
     {
      "k": "L",
-     "t": "La présentation d'un bilan",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "L'actif (partie 1)",
-     "m": 40
-    },
-    {
-     "k": "L",
      "t": "L'actif (partie 2)",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Le passif : capitaux propres et autres fonds propres",
      "m": 40
     }
    ],
@@ -638,11 +643,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

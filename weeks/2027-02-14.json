@@ -56,28 +56,18 @@
    "items": [
     {
      "k": "L",
-     "t": "Application concernant les créances douteuses",
+     "t": "Les dépréciations des titres",
      "m": 40
     },
     {
      "k": "C",
-     "t": "Cas Missou",
-     "m": 30
+     "t": "Cas Bissont",
+     "m": 20
     },
     {
      "k": "B",
-     "t": "Cas Tertio",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Sardi",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Carmot",
-     "m": 45
+     "t": "Cas Morteau",
+     "m": 20
     }
    ],
    "week": "2027-02-14"
@@ -89,26 +79,21 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M9 · Calculer et enregistrer les dépréciations et les provisions",
+   "title": "M10 · Enregistrer les cessions d'immobilisations et de VMP",
    "items": [
     {
      "k": "L",
-     "t": "Les provisions pour risques et charges et réglementées",
+     "t": "Les écritures de cession d'immobilisations",
      "m": 40
     },
     {
-     "k": "C",
-     "t": "Cas Rousseau",
-     "m": 5
-    },
-    {
-     "k": "C",
-     "t": "Cas Rendon",
-     "m": 5
+     "k": "L",
+     "t": "Les cessions d'immobilisations en pratique",
+     "m": 40
     },
     {
      "k": "L",
-     "t": "Les titres et leurs revenus",
+     "t": "Les cessions de titres immobilisés",
      "m": 40
     }
    ],
@@ -193,32 +178,17 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M9 → M10 · Enregistrer les cessions d'immobilisations et de VMP",
+   "title": "M10 · Enregistrer les cessions d'immobilisations et de VMP",
    "items": [
     {
      "k": "L",
-     "t": "Les dépréciations des titres",
-     "m": 40
-    },
-    {
-     "k": "C",
-     "t": "Cas Bissont",
-     "m": 20
-    },
-    {
-     "k": "L",
-     "t": "Les écritures de cession d'immobilisations",
+     "t": "Les cessions de VMP",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Les cessions d'immobilisations en pratique",
+     "t": "Synthèse des cessions de titres",
      "m": 40
-    },
-    {
-     "k": "B",
-     "t": "Cas Morteau",
-     "m": 20
     }
    ],
    "week": "2027-02-14"
@@ -663,11 +633,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

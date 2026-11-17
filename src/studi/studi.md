@@ -12,8 +12,8 @@ Un fichier par UE : `UE1.json`, `UE5.json`, `UE7.json`, `UE8.json`, `UE9.json`, 
   Chaque live et chaque replay est rattaché à sa leçon (`lecons`) : la leçon l'affiche dans l'appli.
 - **Lives d'accompagnement DCG (toutes UE)** et rappels communs : `commun.json`.
 - **Évaluations** : aucune date limite sur Studi. Elles sont placées dans le plan :
-  - évaluation d'entraînement UE1 : examen blanc du 22 mars ; UE9 n° 1 et n° 2 : examens blancs des 13 et 20 avril ; UE9 n° 3 : en plus, si tu as de l'avance ;
-  - certificats (QCM, obligatoires) : UE7 et UE1 le 21 mars, UE8 et UE5 le 28 mars (Studi conseille avant fin mars), UE9 et UE12 le 25 avril (après la fin du programme), UE13 après le rapport ;
+  - évaluation d'entraînement UE1 : examen blanc du 22 mars ; UE9 n° 1 et n° 2 : examens blancs des 20 et 26 avril (après la fin du programme UE9) ; UE9 n° 3 : en plus, si tu as de l'avance ;
+  - certificats (QCM, obligatoires) : UE7 et UE1 le 21 mars, UE8 et UE5 le 28 mars (Studi conseille avant fin mars), UE9 et UE12 le 18 avril (après la fin de leur programme), UE13 après le rapport ;
   - UE13 : fiches de suivi n° 1 et n° 2 avec les dépôts du rapport, entraînement à l'oral après le rapport intégral.
 - **E-books** : Médiathèque > Parcours > DCG 2026 > UE > Introduction (pas d'e-book pour l'UE13). Les séances d'introduction le disent.
 - **Annales** : Médiathèque > UE > Corrigés Comptalia (2020 à 2026, ancien référentiel) ; sujet 0 du nouveau programme dans Annales de l'UE (pas pour l'UE12).

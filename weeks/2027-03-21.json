@@ -8,44 +8,25 @@
    "date": "2027-03-21",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE9",
+   "ue": "UE12",
    "kind": "cours",
-   "title": "Fin du programme · M11 → M12 · Connaitre et comprendre les documents de synthèse",
+   "title": "Fin du programme · M9 · Globalisation and development",
    "items": [
     {
      "k": "L",
-     "t": "L'établissement des comptes annuels",
-     "m": 40
+     "t": "Globalization (+ 4 vidéos) (2e partie)",
+     "m": 30,
+     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
     },
     {
-     "k": "L",
-     "t": "Documents de synthèse : leçons 1 et 2 du module",
-     "m": 80
-    },
-    {
-     "k": "B",
-     "t": "Cas Prisson",
+     "k": "C",
+     "t": "Cas « Is free trade being threatened? » (1re partie)",
      "m": 45
     },
     {
-     "k": "B",
-     "t": "Cas Valentin (1re partie)",
-     "m": 60
-    },
-    {
-     "k": "B",
-     "t": "Cas Valentin (2e partie)",
-     "m": 60
-    },
-    {
-     "k": "B",
-     "t": "Cas Prochiffra",
-     "m": 90
-    },
-    {
-     "k": "B",
-     "t": "Cas Velopassion",
-     "m": 60
+     "k": "C",
+     "t": "Cas « Is free trade being threatened? » (2e partie)",
+     "m": 45
     }
    ],
    "week": "2027-03-21"
@@ -149,15 +130,15 @@
    "items": [
     {
      "k": "T",
-     "t": "Relis les chapitres où tu as perdu des points et refais leurs applications"
+     "t": "Refais avec ton cours les questions où tu as hésité"
     },
     {
      "k": "T",
-     "t": "Refais au propre les questions ratées de l'examen blanc"
+     "t": "Mets à jour tes fiches sur ces points"
     },
     {
      "k": "T",
-     "t": "Mets à jour tes fiches et tes cartes Anki"
+     "t": "Quand la correction Studi arrive, refais les questions ratées"
     }
    ],
    "week": "2027-03-21"
@@ -499,11 +480,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

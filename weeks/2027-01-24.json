@@ -60,14 +60,25 @@
    "items": [
     {
      "k": "L",
-     "t": "Les modes de règlement des créances et des dettes",
-     "m": 40
+     "t": "Les états de rapprochement bancaire",
+     "m": 40,
+     "live": "Replay du live du lun. 23/11 (Studi > Lives)"
     },
     {
      "k": "L",
-     "t": "La lettre de change relevée (LCR)",
+     "t": "Les rapprochements bancaires : cas complexes",
      "m": 40,
-     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
+     "live": "Replay du live du lun. 23/11 (Studi > Lives) · Replay du live du lun. 07/12 (Studi > Lives)"
+    },
+    {
+     "k": "B",
+     "t": "Cas Champest",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Platic",
+     "m": 60
     }
    ],
    "week": "2027-01-24"
@@ -82,35 +93,14 @@
    "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Dupuis",
-     "m": 30
-    },
-    {
      "k": "L",
-     "t": "L'affacturage",
+     "t": "Le suivi des comptes clients",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Les états de rapprochement bancaire",
-     "m": 40,
-     "live": "Replay du live du lun. 23/11 (Studi > Lives)"
-    },
-    {
-     "k": "B",
-     "t": "Cas Golf",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Despar",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Malicorne",
-     "m": 30
+     "t": "Le suivi des comptes fournisseurs",
+     "m": 40
     }
    ],
    "week": "2027-01-24"
@@ -195,33 +185,22 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
+   "title": "M8 · Calculer et enregistrer les amortissements comptables",
    "items": [
     {
      "k": "L",
-     "t": "Les rapprochements bancaires : cas complexes",
-     "m": 40,
-     "live": "Replay du live du lun. 23/11 (Studi > Lives) · Replay du live du lun. 07/12 (Studi > Lives)"
-    },
-    {
-     "k": "L",
-     "t": "Le suivi des comptes clients",
+     "t": "Généralités sur les travaux d'inventaire",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Le suivi des comptes fournisseurs",
+     "t": "La notion d'amortissement",
      "m": 40
     },
     {
-     "k": "B",
-     "t": "Cas Champest",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Platic",
-     "m": 60
+     "k": "L",
+     "t": "La terminologie des amortissements",
+     "m": 40
     }
    ],
    "week": "2027-01-24"
@@ -662,11 +641,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

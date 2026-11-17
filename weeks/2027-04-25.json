@@ -8,14 +8,17 @@
    "date": "2027-04-25",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE12",
-   "kind": "exercices",
-   "title": "Fin du programme · M10 · Social policies",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision des fiches",
    "items": [
     {
-     "k": "A",
-     "t": "Application : social protection and demographic dynamics",
-     "m": 45
+     "k": "T",
+     "t": "Relis les fiches des 2 UE que tu maîtrises le moins (ta note la plus basse aux examens blancs)"
+    },
+    {
+     "k": "T",
+     "t": "Refais 2 applications de ces UE sans regarder la correction"
     }
    ],
    "week": "2027-04-25"
@@ -25,17 +28,21 @@
    "date": "2027-04-25",
    "start": "13:15",
    "end": "14:15",
-   "ue": "UE9",
-   "kind": "certificat",
-   "title": "Certificat Studi (QCM)",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision de la semaine",
    "items": [
     {
      "k": "T",
-     "t": "Passe le certificat Studi de l'UE9 (onglet Évaluations) : il est obligatoire pour ton diplôme Studi"
+     "t": "Révise tes cartes Anki de la semaine (15 min)"
     },
     {
      "k": "T",
-     "t": "Relis d'abord tes fiches 10 minutes, puis réponds sans ton cours"
+     "t": "Refais de tête un exercice que tu as raté cette semaine"
+    },
+    {
+     "k": "T",
+     "t": "Complète tes fiches : une page par chapitre terminé"
     }
    ],
    "week": "2027-04-25"
@@ -45,17 +52,17 @@
    "date": "2027-04-25",
    "start": "14:15",
    "end": "15:30",
-   "ue": "UE12",
-   "kind": "certificat",
-   "title": "Certificat Studi (QCM)",
+   "ue": null,
+   "kind": "revision",
+   "title": "Cartes et fiches",
    "items": [
     {
      "k": "T",
-     "t": "Passe le certificat Studi de l'UE12 (onglet Évaluations) : il est obligatoire pour ton diplôme Studi"
+     "t": "Cartes Anki de toutes les UE"
     },
     {
      "k": "T",
-     "t": "Relis d'abord tes fiches 10 minutes, puis réponds sans ton cours"
+     "t": "Fiches de l'UE du prochain examen blanc"
     }
    ],
    "week": "2027-04-25"
@@ -64,18 +71,18 @@
    "id": "2027-04-26-0900",
    "date": "2027-04-26",
    "start": "09:00",
-   "end": "13:00",
-   "ue": "UE8",
+   "end": "12:00",
+   "ue": "UE9",
    "kind": "examen",
-   "title": "Examen blanc · Annale 2026",
+   "title": "Examen blanc · Évaluation d'entraînement 2 Studi",
    "items": [
     {
      "k": "T",
-     "t": "Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 8 > Corrigés Comptalia – Épreuve nationale du DCG UE08"
+     "t": "Ouvre « Évaluation d'entraînement 2 » sur Studi (onglet Évaluations) et fais-la sur papier"
     },
     {
      "k": "T",
-     "t": "Conditions réelles : 4 h chrono, sans cours, téléphone dans une autre pièce"
+     "t": "Conditions réelles : 3 h chrono, sans cours, téléphone dans une autre pièce"
     },
     {
      "k": "T",
@@ -89,21 +96,21 @@
    "date": "2027-04-26",
    "start": "14:00",
    "end": "15:30",
-   "ue": "UE8",
+   "ue": "UE9",
    "kind": "correction",
    "title": "Correction de l'examen blanc",
    "items": [
     {
      "k": "T",
-     "t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"
+     "t": "Dépose ta copie sur Studi : un formateur la corrige sous 7 jours"
     },
     {
      "k": "T",
-     "t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"
+     "t": "Relis ta copie à froid et note les questions où tu as hésité"
     },
     {
      "k": "T",
-     "t": "Option : envoie-moi les photos de ta copie et je te corrige"
+     "t": "Quand la correction arrive, note-toi sur 20 ici"
     }
    ],
    "week": "2027-04-25"
@@ -113,21 +120,21 @@
    "date": "2027-04-26",
    "start": "15:45",
    "end": "17:00",
-   "ue": "UE8",
+   "ue": "UE9",
    "kind": "reprise",
    "title": "Reprise des points faibles",
    "items": [
     {
      "k": "T",
-     "t": "Relis les chapitres où tu as perdu des points et refais leurs applications"
+     "t": "Refais avec ton cours les questions où tu as hésité"
     },
     {
      "k": "T",
-     "t": "Refais au propre les questions ratées de l'examen blanc"
+     "t": "Mets à jour tes fiches sur ces points"
     },
     {
      "k": "T",
-     "t": "Mets à jour tes fiches et tes cartes Anki"
+     "t": "Quand la correction Studi arrive, refais les questions ratées"
     }
    ],
    "week": "2027-04-25"
@@ -549,11 +556,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

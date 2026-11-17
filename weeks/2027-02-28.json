@@ -60,18 +60,18 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas Lacroix",
+     "t": "Cas Memoranda",
      "m": 20
     },
     {
      "k": "C",
-     "t": "Cas Marcel",
+     "t": "Cas Trésorus",
      "m": 20
     },
     {
      "k": "C",
-     "t": "Cas Romain",
-     "m": 20
+     "t": "Cas Limont",
+     "m": 30
     }
    ],
    "week": "2027-02-28"
@@ -87,17 +87,22 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas Norbert",
-     "m": 25
+     "t": "Cas Grivas",
+     "m": 20
+    },
+    {
+     "k": "C",
+     "t": "Cas Belin",
+     "m": 20
     },
     {
      "k": "L",
-     "t": "Charges à payer et produits à recevoir",
+     "t": "Emprunts in fine et par amortissements constants",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Charges et produits constatés d'avance",
+     "t": "Emprunts par annuités constantes",
      "m": 40
     }
    ],
@@ -170,33 +175,18 @@
    "start": "09:00",
    "end": "10:45",
    "ue": "UE9",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Memoranda",
-     "m": 20
+     "k": "L",
+     "t": "Comptabiliser un emprunt : cas simple",
+     "m": 40
     },
     {
-     "k": "C",
-     "t": "Cas Trésorus",
-     "m": 20
-    },
-    {
-     "k": "C",
-     "t": "Cas Limont",
-     "m": 30
-    },
-    {
-     "k": "C",
-     "t": "Cas Grivas",
-     "m": 20
-    },
-    {
-     "k": "C",
-     "t": "Cas Belin",
-     "m": 20
+     "k": "L",
+     "t": "Comptabiliser un emprunt : cas complexe",
+     "m": 40
     }
    ],
    "week": "2027-02-28"
@@ -241,11 +231,6 @@
     {
      "k": "C",
      "t": "Cas Robots are taking our jobs (1re partie)",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Robots are taking our jobs (2e partie)",
      "m": 45
     }
    ],
@@ -301,13 +286,13 @@
    "start": "17:15",
    "end": "17:50",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
+   "kind": "exercices",
+   "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "L",
-     "t": "A double constraint",
-     "m": 30
+     "k": "C",
+     "t": "Cas Robots are taking our jobs (2e partie)",
+     "m": 45
     }
    ],
    "week": "2027-02-28"
@@ -657,11 +642,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

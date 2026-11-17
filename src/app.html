@@ -1515,11 +1515,11 @@ function agenda(list, o){
 }
 function sessionsOn(d){ return SCHED.slots.filter(s=>s.date===d).map(view_); }
 function dayKind(d){
-  const wd = parse(d).getDay();
+  const wd = parse(d).getDay(), td = d === today();
   if (OFF_DATES[d]) return "Yom Tov ("+OFF_DATES[d]+") : pas de révision.";
-  if (wd === 6) return "C'est Shabbat : pas de révision aujourd'hui.";
-  if (wd >= 3 && wd <= 5) return "Aujourd'hui, tu es en alternance chez Fidexia.";
-  return "Pas de séance prévue aujourd'hui.";
+  if (wd === 6) return td ? "C'est Shabbat : pas de révision aujourd'hui." : "Shabbat : pas de révision.";
+  if (wd >= 3 && wd <= 5) return td ? "Aujourd'hui, tu es en alternance chez Fidexia." : "Ce jour-là, tu es en alternance chez Fidexia.";
+  return td ? "Pas de séance prévue aujourd'hui." : "Pas de séance prévue ce jour-là.";
 }
 function weekDays(wid){ const s = parse(wid); s.setDate(s.getDate()-s.getDay()); return [0,1,2,3,4,5,6].map(i => { const x = new Date(s); x.setDate(s.getDate()+i); return iso(x); }); }
 function dayTile(d, o){
@@ -1893,7 +1893,9 @@ function renderSession(sh){
         if (g.m) body.append(h("p",{class:"modh"}, h("span",null, g.m === "Introduction" ? "Pour commencer" : /^M\d+ · /.test(g.m) ? "Module "+g.m.replace(/^M(\d+) · /,"$1 · ") : g.m)));
         body.append(h("div",{class:"items"}, g.ns.map(n=>itemRow(v.ue,n,{sid:v.id, pre:"it"}))));
       }
-      body.append(h("p",{class:"where"}, "Où : Studi > "+ueName(v.ue)+" > le module ci-dessus. Les cas sont dans les exercices du module."));
+      const studiMod = groups.some(g => /^(M\d+ · |Introduction$)/.test(g.m)), rapport = groups.some(g => /^Rapport · /.test(g.m));
+      if (studiMod) body.append(h("p",{class:"where"}, "Où : Studi > Médiathèque > Parcours > "+v.ue.replace("UE","UE ")+" > le module ci-dessus."));
+      else if (rapport) body.append(h("p",{class:"where"}, "Tu écris dans ton fichier de rapport. Les dépôts se font sur Studi > Évaluations."));
     }
     else if (!v.skipped) body.append(h("p",{class:"empty"}, "Tu es en avance sur "+UEN[v.ue]+". Révise tes fiches, ou ajoute une séance."));
     if (v.bonus.length){ body.append(h("p",{class:"subhead"},"Pour aller plus loin")); body.append(h("div",{class:"items"}, v.bonus.map(n=>itemRow(v.ue,n,{sid:v.id, pre:"it"})))); }

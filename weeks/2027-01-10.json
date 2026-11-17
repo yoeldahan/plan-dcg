@@ -50,36 +50,9 @@
    "start": "14:15",
    "end": "15:30",
    "ue": "UE9",
-   "kind": "exercices",
-   "title": "M6 · Etablir et enregistrer les factures",
-   "items": [
-    {
-     "k": "C",
-     "t": "Cas AB",
-     "m": 15
-    },
-    {
-     "k": "C",
-     "t": "Cas Camille",
-     "m": 30
-    }
-   ],
-   "week": "2027-01-10"
-  },
-  {
-   "id": "2027-01-11-0900",
-   "date": "2027-01-11",
-   "start": "09:00",
-   "end": "10:45",
-   "ue": "UE9",
    "kind": "cours",
    "title": "M6 · Etablir et enregistrer les factures",
    "items": [
-    {
-     "k": "C",
-     "t": "Cas Gustave",
-     "m": 60
-    },
     {
      "k": "L",
      "t": "L'enregistrement des acquisitions d'immobilisations",
@@ -89,16 +62,6 @@
     {
      "k": "C",
      "t": "Cas Clatin",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas VM",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Web",
      "m": 30
     },
     {
@@ -115,6 +78,34 @@
      "k": "B",
      "t": "Cas Vedant",
      "m": 30
+    }
+   ],
+   "week": "2027-01-10"
+  },
+  {
+   "id": "2027-01-11-0900",
+   "date": "2027-01-11",
+   "start": "09:00",
+   "end": "10:45",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
+   "items": [
+    {
+     "k": "L",
+     "t": "La consignation et la reprise des emballages",
+     "m": 40,
+     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
+    },
+    {
+     "k": "C",
+     "t": "Cas Vallor",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Si le client ne rend pas les emballages consignés",
+     "m": 40
     }
    ],
    "week": "2027-01-10"
@@ -197,19 +188,18 @@
    "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
-     "k": "L",
-     "t": "La consignation et la reprise des emballages",
-     "m": 40,
-     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
+     "k": "C",
+     "t": "Cas Laplace",
+     "m": 30
     },
     {
      "k": "C",
-     "t": "Cas Vallor",
+     "t": "Cas Dargent",
      "m": 30
     },
     {
      "k": "L",
-     "t": "Si le client ne rend pas les emballages consignés",
+     "t": "Généralités sur les fiches de paie",
      "m": 40
     }
    ],
@@ -666,11 +656,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

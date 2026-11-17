@@ -51,32 +51,12 @@
    "end": "15:30",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M4 → M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
+   "title": "M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Fargue",
-     "m": 60
-    },
-    {
      "k": "L",
-     "t": "Le principe de la TVA",
+     "t": "Déductibilité, fait générateur et exigibilité",
      "m": 40
-    },
-    {
-     "k": "B",
-     "t": "Cas Luchot",
-     "m": 90
-    },
-    {
-     "k": "B",
-     "t": "Cas DB",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Tio Pepe",
-     "m": 30
     }
    ],
    "week": "2026-12-20"
@@ -92,13 +72,19 @@
    "items": [
     {
      "k": "L",
-     "t": "Déductibilité, fait générateur et exigibilité",
+     "t": "Comptabiliser la TVA : biens, et prestations avec option sur les débits",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Comptabiliser la TVA : biens, et prestations avec option sur les débits",
+     "t": "Comptabiliser la TVA : prestations selon le droit commun",
      "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Le calcul et la comptabilisation de la TVA à décaisser",
+     "m": 40,
+     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2026-12-20"
@@ -186,20 +172,19 @@
    "title": "M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
    "items": [
     {
-     "k": "L",
-     "t": "Comptabiliser la TVA : prestations selon le droit commun",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "Le calcul et la comptabilisation de la TVA à décaisser",
-     "m": 40,
-     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
-    },
-    {
      "k": "C",
      "t": "Cas Spot",
      "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Fox",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Les arrondis de TVA à décaisser",
+     "m": 40
     }
    ],
    "week": "2026-12-20"
@@ -647,11 +632,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

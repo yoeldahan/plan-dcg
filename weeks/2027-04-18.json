@@ -8,24 +8,17 @@
    "date": "2027-04-18",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE9",
-   "kind": "cours",
-   "title": "Fin du programme · M13 · Connaître l'environnement numérique de la comptabilité",
+   "ue": null,
+   "kind": "revision",
+   "title": "Révision des fiches",
    "items": [
     {
-     "k": "L",
-     "t": "Dématérialisation et conservation des pièces comptables",
-     "m": 40
+     "k": "T",
+     "t": "Relis les fiches des 2 UE que tu maîtrises le moins (ta note la plus basse aux examens blancs)"
     },
     {
-     "k": "L",
-     "t": "Logiciel comptable et PGI",
-     "m": 40
-    },
-    {
-     "k": "L",
-     "t": "L'impact de la dématérialisation",
-     "m": 40
+     "k": "T",
+     "t": "Refais 2 applications de ces UE sans regarder la correction"
     }
    ],
    "week": "2027-04-18"
@@ -36,14 +29,16 @@
    "start": "13:15",
    "end": "14:15",
    "ue": "UE9",
-   "kind": "cours",
-   "title": "Fin du programme · M13 · Connaître l'environnement numérique de la comptabilité",
+   "kind": "certificat",
+   "title": "Certificat Studi (QCM)",
    "items": [
     {
-     "k": "L",
-     "t": "Sauvegarde et confidentialité des données comptables",
-     "m": 40,
-     "live": "Replay du lun. 16/11 (Studi > Lives > Replays)"
+     "k": "T",
+     "t": "Passe le certificat Studi de l'UE9 (onglet Évaluations) : il est obligatoire pour ton diplôme Studi"
+    },
+    {
+     "k": "T",
+     "t": "Relis d'abord tes fiches 10 minutes, puis réponds sans ton cours"
     }
    ],
    "week": "2027-04-18"
@@ -53,17 +48,17 @@
    "date": "2027-04-18",
    "start": "14:15",
    "end": "15:30",
-   "ue": null,
-   "kind": "revision",
-   "title": "Cartes et fiches",
+   "ue": "UE12",
+   "kind": "certificat",
+   "title": "Certificat Studi (QCM)",
    "items": [
     {
      "k": "T",
-     "t": "Cartes Anki de toutes les UE"
+     "t": "Passe le certificat Studi de l'UE12 (onglet Évaluations) : il est obligatoire pour ton diplôme Studi"
     },
     {
      "k": "T",
-     "t": "Fiches de l'UE du prochain examen blanc"
+     "t": "Relis d'abord tes fiches 10 minutes, puis réponds sans ton cours"
     }
    ],
    "week": "2027-04-18"
@@ -147,11 +142,11 @@
    "end": "12:00",
    "ue": "UE9",
    "kind": "examen",
-   "title": "Examen blanc · Évaluation d'entraînement 2 Studi",
+   "title": "Examen blanc · Évaluation d'entraînement 1 Studi",
    "items": [
     {
      "k": "T",
-     "t": "Ouvre « Évaluation d'entraînement 2 » sur Studi (onglet Évaluations) et fais-la sur papier"
+     "t": "Ouvre « Évaluation d'entraînement 1 » sur Studi (onglet Évaluations) et fais-la sur papier"
     },
     {
      "k": "T",
@@ -199,15 +194,15 @@
    "items": [
     {
      "k": "T",
-     "t": "Relis les chapitres où tu as perdu des points et refais leurs applications"
+     "t": "Refais avec ton cours les questions où tu as hésité"
     },
     {
      "k": "T",
-     "t": "Refais au propre les questions ratées de l'examen blanc"
+     "t": "Mets à jour tes fiches sur ces points"
     },
     {
      "k": "T",
-     "t": "Mets à jour tes fiches et tes cartes Anki"
+     "t": "Quand la correction Studi arrive, refais les questions ratées"
     }
    ],
    "week": "2027-04-18"
@@ -557,11 +552,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

@@ -98,15 +98,15 @@
    "items": [
     {
      "k": "T",
-     "t": "Corrige-toi avec le corrigé Comptalia et écoute le commentaire audio"
+     "t": "Cherche le corrigé du sujet 0 : Médiathèque > UE 7 > Annales de l'UE 7"
+    },
+    {
+     "k": "T",
+     "t": "Pas de corrigé ? Envoie-moi les photos de ta copie et je te corrige"
     },
     {
      "k": "T",
      "t": "Mets-toi une note sur 20 et liste les chapitres où tu as perdu des points"
-    },
-    {
-     "k": "T",
-     "t": "Option : envoie-moi les photos de ta copie et je te corrige"
     }
    ],
    "week": "2027-05-16"
@@ -480,11 +480,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

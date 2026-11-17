@@ -50,13 +50,18 @@
    "start": "14:15",
    "end": "15:30",
    "ue": "UE9",
-   "kind": "exercices",
-   "title": "M8 · Calculer et enregistrer les amortissements comptables",
+   "kind": "cours",
+   "title": "M9 · Calculer et enregistrer les dépréciations et les provisions",
    "items": [
     {
+     "k": "L",
+     "t": "La dépréciation des immobilisations corporelles",
+     "m": 40
+    },
+    {
      "k": "C",
-     "t": "Cas Palin",
-     "m": 45
+     "t": "Cas Cador",
+     "m": 30
     }
    ],
    "week": "2027-02-07"
@@ -68,37 +73,22 @@
    "end": "10:45",
    "ue": "UE9",
    "kind": "cours",
-   "title": "M8 → M9 · Calculer et enregistrer les dépréciations et les provisions",
+   "title": "M9 · Calculer et enregistrer les dépréciations et les provisions",
    "items": [
     {
      "k": "L",
-     "t": "La comptabilisation des amortissements",
+     "t": "Les créances douteuses et irrécouvrables",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Dépréciations et provisions : définition et enregistrement",
+     "t": "La procédure des créances douteuses",
      "m": 40
     },
     {
      "k": "L",
-     "t": "La dépréciation des immobilisations corporelles",
+     "t": "Application concernant les créances douteuses",
      "m": 40
-    },
-    {
-     "k": "B",
-     "t": "Cas Balgue",
-     "m": 45
-    },
-    {
-     "k": "B",
-     "t": "Cas Damien",
-     "m": 30
-    },
-    {
-     "k": "B",
-     "t": "Cas Sirtex",
-     "m": 30
     }
    ],
    "week": "2027-02-07"
@@ -175,18 +165,43 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas Cador",
+     "t": "Cas Missou",
      "m": 30
     },
     {
      "k": "L",
-     "t": "Les créances douteuses et irrécouvrables",
+     "t": "Les provisions pour risques et charges et réglementées",
      "m": 40
     },
     {
+     "k": "C",
+     "t": "Cas Rousseau",
+     "m": 5
+    },
+    {
+     "k": "C",
+     "t": "Cas Rendon",
+     "m": 5
+    },
+    {
      "k": "L",
-     "t": "La procédure des créances douteuses",
+     "t": "Les titres et leurs revenus",
      "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Tertio",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Sardi",
+     "m": 45
+    },
+    {
+     "k": "B",
+     "t": "Cas Carmot",
+     "m": 45
     }
    ],
    "week": "2027-02-07"
@@ -632,11 +647,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

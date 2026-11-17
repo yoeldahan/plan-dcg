@@ -60,18 +60,23 @@
    "start": "14:15",
    "end": "15:30",
    "ue": "UE9",
-   "kind": "cours",
+   "kind": "exercices",
    "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
-     "k": "L",
-     "t": "Emprunts in fine et par amortissements constants",
-     "m": 40
+     "k": "C",
+     "t": "Cas Carnon",
+     "m": 30
     },
     {
-     "k": "L",
-     "t": "Emprunts par annuités constantes",
-     "m": 40
+     "k": "C",
+     "t": "Cas Pastor",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Tarina",
+     "m": 30
     }
    ],
    "week": "2027-03-07"
@@ -86,13 +91,18 @@
    "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
+     "k": "C",
+     "t": "Cas Volpone",
+     "m": 30
+    },
+    {
      "k": "L",
-     "t": "Comptabiliser un emprunt : cas simple",
+     "t": "Les logiciels",
      "m": 40
     },
     {
      "k": "L",
-     "t": "Comptabiliser un emprunt : cas complexe",
+     "t": "Subventions et livraisons à soi-même",
      "m": 40
     }
    ],
@@ -160,28 +170,48 @@
    "start": "09:00",
    "end": "10:45",
    "ue": "UE9",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M11 · Enregistrer les autres opérations d'inventaire",
    "items": [
     {
      "k": "C",
-     "t": "Cas Carnon",
+     "t": "Cas Reval",
      "m": 30
     },
     {
-     "k": "C",
-     "t": "Cas Pastor",
+     "k": "L",
+     "t": "Indemnités d'assurance et crédit-bail",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "La comptabilisation de l'impôt sur les sociétés",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Dumoulin",
      "m": 30
     },
     {
-     "k": "C",
-     "t": "Cas Tarina",
+     "k": "B",
+     "t": "Cas Maxard",
      "m": 30
     },
     {
-     "k": "C",
-     "t": "Cas Volpone",
-     "m": 30
+     "k": "B",
+     "t": "Cas Laborde",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Lepic",
+     "m": 60
+    },
+    {
+     "k": "B",
+     "t": "Cas Bartin",
+     "m": 60
     }
    ],
    "week": "2027-03-07"
@@ -214,7 +244,7 @@
    "items": [
     {
      "k": "L",
-     "t": "Towards the end of fossil fuels",
+     "t": "A double constraint",
      "m": 30
     }
    ],
@@ -270,7 +300,7 @@
    "items": [
     {
      "k": "L",
-     "t": "Shifting to renewable energies",
+     "t": "Towards the end of fossil fuels",
      "m": 30
     }
    ],
@@ -621,11 +651,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

@@ -55,12 +55,12 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas Fox",
+     "t": "Cas Prat",
      "m": 30
     },
     {
      "k": "L",
-     "t": "Les arrondis de TVA à décaisser",
+     "t": "Les différents régimes de TVA",
      "m": 40
     }
    ],
@@ -76,19 +76,24 @@
    "title": "M5 · Comprendre le mécanisme et les enregistrements comptables liés à la TVA",
    "items": [
     {
+     "k": "L",
+     "t": "La TVA intracommunautaire",
+     "m": 40
+    },
+    {
      "k": "C",
-     "t": "Cas Prat",
+     "t": "Cas Septfonds",
      "m": 30
     },
     {
      "k": "L",
-     "t": "Les différents régimes de TVA",
+     "t": "Les importations et exportations",
      "m": 40
     },
     {
-     "k": "L",
-     "t": "La TVA intracommunautaire",
-     "m": 40
+     "k": "B",
+     "t": "Cas Déco",
+     "m": 30
     }
    ],
    "week": "2026-12-27"
@@ -165,23 +170,18 @@
    "items": [
     {
      "k": "C",
-     "t": "Cas Septfonds",
-     "m": 30
-    },
-    {
-     "k": "C",
-     "t": "Cas Déco",
-     "m": 30
+     "t": "Cas Intraco",
+     "m": 20
     },
     {
      "k": "L",
-     "t": "Les importations et exportations",
+     "t": "Avances et acomptes sur biens",
      "m": 40
     },
     {
-     "k": "C",
-     "t": "Cas Intraco",
-     "m": 20
+     "k": "L",
+     "t": "Avances et acomptes sur prestations et travaux",
+     "m": 40
     },
     {
      "k": "B",
@@ -664,11 +664,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",

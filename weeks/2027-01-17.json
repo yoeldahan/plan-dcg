@@ -50,18 +50,19 @@
    "start": "14:15",
    "end": "15:30",
    "ue": "UE9",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Laplace",
-     "m": 30
+     "k": "L",
+     "t": "Les éléments d'une fiche de paie",
+     "m": 40
     },
     {
-     "k": "C",
-     "t": "Cas Dargent",
-     "m": 30
+     "k": "L",
+     "t": "La comptabilisation des charges de personnel",
+     "m": 40,
+     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-01-17"
@@ -76,20 +77,29 @@
    "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
-     "k": "L",
-     "t": "Généralités sur les fiches de paie",
-     "m": 40
+     "k": "C",
+     "t": "Cas Calman",
+     "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas ESCA",
+     "m": 30
     },
     {
      "k": "L",
-     "t": "Les éléments d'une fiche de paie",
+     "t": "Les modes de règlement des créances et des dettes",
      "m": 40
     },
     {
-     "k": "L",
-     "t": "La comptabilisation des charges de personnel",
-     "m": 40,
-     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
+     "k": "B",
+     "t": "Cas Plassard",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Trepalet",
+     "m": 30
     }
    ],
    "week": "2027-01-17"
@@ -159,27 +169,38 @@
    "start": "09:00",
    "end": "10:45",
    "ue": "UE9",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M7 · Évaluer et comptabiliser les transactions courantes et contrôler leur enregistrement",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Calman",
-     "m": 30
+     "k": "L",
+     "t": "La lettre de change relevée (LCR)",
+     "m": 40,
+     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
     },
     {
      "k": "C",
-     "t": "Cas ESCA",
+     "t": "Cas Dupuis",
      "m": 30
     },
     {
-     "k": "C",
-     "t": "Cas Plassard",
+     "k": "L",
+     "t": "L'affacturage",
+     "m": 40
+    },
+    {
+     "k": "B",
+     "t": "Cas Golf",
      "m": 30
     },
     {
      "k": "B",
-     "t": "Cas Trepalet",
+     "t": "Cas Despar",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas Malicorne",
      "m": 30
     }
    ],
@@ -650,11 +671,11 @@
   },
   {
    "date": "2027-03-16",
-   "t": "Fin du premier passage : tout le programme est vu une fois"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
    "date": "2027-03-28",
-   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 25 avril, quand le programme est fini."
+   "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."
   },
   {
    "date": "2027-04-01",
