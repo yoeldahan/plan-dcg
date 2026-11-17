@@ -367,6 +367,48 @@ button.s-head .ic{width:18px;height:18px;color:var(--ink3);flex:none}
 .late-n .ic{color:var(--acc-ic);margin-top:1px;flex:none}
 .late-n p{flex:1}
 .late-n .more{margin:-10px 0 -12px}
+.lvp{grid-column:1 / -1;display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.lvb{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 11px;border-radius:99px;border:1.5px solid var(--rule2);font:600 13px/1 var(--f-text);color:var(--ink2);background:var(--paper)}
+.lvb i{width:9px;height:9px;border-radius:50%}
+.lvb.lv1 i,.lvdot.lv1,.chs i.lv1,.mbar i.lv1,.mleg2 i.lv1{background:var(--coral)}
+.lvb.lv2 i,.lvdot.lv2,.chs i.lv2,.mbar i.lv2,.mleg2 i.lv2{background:var(--gold2)}
+.lvb.lv3 i,.lvdot.lv3,.chs i.lv3,.mbar i.lv3,.mleg2 i.lv3{background:var(--ok)}
+.lvdot.fini,.chs i.fini,.mbar i.fini,.mleg2 i.fini{background:var(--ink3)}
+.lvdot.encours,.chs i.encours,.mbar i.encours,.mleg2 i.encours{background:var(--rule2)}
+.lvdot.avenir,.chs i.avenir,.mbar i.avenir,.mleg2 i.avenir{background:transparent;box-shadow:inset 0 0 0 1.5px var(--rule2)}
+.lvb[aria-pressed="true"]{color:var(--ink);border-color:var(--ink);background:var(--bg)}
+.lvb.lv1[aria-pressed="true"]{border-color:var(--coral);background:var(--coral-soft)}
+.lvb.lv2[aria-pressed="true"]{border-color:var(--gold2);background:var(--gold-soft)}
+.lvb.lv3[aria-pressed="true"]{border-color:var(--ok);background:var(--ok-soft)}
+.lvdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;flex:none;vertical-align:1px}
+.mods .mn{display:flex;align-items:baseline}
+.chs{display:flex;gap:3px;margin-top:7px}
+.chs i{width:12px;height:6px;border-radius:2px}
+.mbar{display:flex;height:12px;border-radius:99px;overflow:hidden;margin-top:12px;gap:2px;background:var(--rule)}
+.mbar i{min-width:4px}
+.mleg2{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font:500 12.5px/1.2 var(--f-text);color:var(--ink2)}
+.mleg2 span{display:inline-flex;align-items:center;gap:6px}
+.mleg2 i{width:9px;height:9px;border-radius:50%}
+.lvhelp{margin-top:8px;font:500 14px/1.45 var(--f-text);color:var(--ink2)}
+.weak li{border-bottom:1px solid var(--rule)}
+.weak button{display:flex;align-items:center;gap:8px;width:100%;min-height:48px;padding:8px 2px;text-align:left;color:var(--ink)}
+.weak button > span:nth-child(2){flex:1;min-width:0}
+.weak b{display:block;font:600 14.5px/1.3 var(--f-text)}
+.weak small{display:block;font:500 12.5px/1.3 var(--f-text);color:var(--ink2);margin-top:2px}
+.weak .ic{width:16px;height:16px;color:var(--ink3)}
+.lvask{margin-top:14px;border-left:4px solid var(--ue)}
+.lvask h2{font:700 17px/1.25 var(--f-display);margin-top:4px}
+.lvask .lvp{margin-top:10px}
+.agenda li.pause{list-style:none}
+.pz{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:2px 0 8px;padding:8px 12px;border-radius:10px;border:1px dashed var(--rule2);font:500 13.5px/1.3 var(--f-text);color:var(--ink2)}
+.pz .ic{width:16px;height:16px;color:var(--ok)}
+.pz b{color:var(--ink);font-weight:600}
+.pz .more{margin:-12px 0 -12px auto}
+.choices.col{flex-direction:column;align-items:stretch}
+.tip{display:flex;gap:10px;align-items:flex-start;margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--paper);border:1px solid var(--rule);font:500 14px/1.45 var(--f-text);color:var(--ink2)}
+.tip .ic{color:var(--acc-ic);flex:none;margin-top:1px}
+.tip b{color:var(--ink)}
+.meth .src{font-size:12.5px;color:var(--ink3)}
 .where{margin-top:12px;font:500 13.5px/1.4 var(--f-text);color:var(--ink3)}
 .muted.small{font-size:13.5px;margin-top:6px}
 .back{margin-top:14px}
@@ -779,6 +821,30 @@ html.focusing .toast{background:#eef0ff;color:#141a3f;box-shadow:0 12px 30px -12
 @keyframes breathe{50%{opacity:.3}}
 @keyframes conf{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.3)}4%{opacity:1;transform:translate(0,0) rotate(0) scale(.4)}22%{opacity:1;transform:translate(var(--bx),var(--by)) rotate(calc(var(--r)*.3)) scale(1)}100%{opacity:0;transform:translate(calc(var(--bx)*1.3),calc(var(--by) + 80vh)) rotate(var(--r))}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.halo{opacity:.3}}
+/* téléphone : des textes un peu plus petits */
+@media (max-width:1023px){
+  body{font-size:15px}
+  .hd h1{font-size:26px}
+  .day-n{font-size:36px}
+  .sec h2{font-size:18px}
+  .rest h2{font-size:19px}
+  .c-open .ttl{font-size:17px}
+  .card:not(.hero) .ttl{font-size:15.5px}
+  .c-open .ue{font-size:12px}
+  .c-open .meta{font-size:12.5px}
+  .txt{font-size:14px}
+  .sh-head h2{font-size:20px}
+  .sheet .body>h2{font-size:19px}
+  .weekhead h2{font-size:18px}
+  .sum-h b{font-size:30px}
+  .st-n{font-size:28px}
+  .save h2{font-size:17px}
+  .save p,.lead,.behind,.todo-n,.late-n,.tip,.ms-w li,.lvhelp{font-size:13.5px}
+  .meth summary{font-size:15.5px;min-height:50px}
+  .tl li{font-size:13.5px}
+  .s-head b{font-size:14.5px}
+  .item{min-height:50px;padding:9px 2px}
+}
 </style>
 </head>
 <body>
@@ -857,7 +923,7 @@ for (const s of PLAN.sessions){
 /* ================= état ================= */
 let done = {};       // ue -> {n: "AAAA-MM-JJ"}
 let progress = {};   // sessionId -> {done}
-let overrides = {}, extras = {}, skips = {}, history = {}, scores = {}, bilans = {}, meta = null;
+let overrides = {}, extras = {}, skips = {}, history = {}, scores = {}, bilans = {}, maitrise = {}, meta = null;
 let db = null, local = false;
 let view = null, selWeek = null, selDay = null;
 let sheetState = null;
@@ -906,29 +972,47 @@ function lateStartOf(ds, d){
   const m = t.getHours()*60 + t.getMinutes(), r = Math.ceil(m/5)*5, hm = pad(Math.floor(r/60))+":"+pad(r%60);
   return hm > first.start && hm < LATE_END ? hm : null;
 }
+/* pause déjeuner choisie pour un jour (sur cet appareil : dcg-ui-lunch-<date>) : {after:<id de séance>, dur} ou {none:true} */
+const lunchMem = {};
+function lunchPref(d){
+  if (d in lunchMem) return lunchMem[d];
+  let v = null; try{ v = JSON.parse(localStorage.getItem("dcg-ui-lunch-"+d) || "null"); }catch(e){ v = null; }
+  return (lunchMem[d] = v && typeof v === "object" ? v : null);
+}
+function setLunch(d, v){
+  lunchMem[d] = v || null;
+  try{ if (v) localStorage.setItem("dcg-ui-lunch-"+d, JSON.stringify(v)); else localStorage.removeItem("dcg-ui-lunch-"+d); }catch(e){}
+  refresh();
+}
+(function(){ try{ const T = today(); for (let i = localStorage.length-1; i >= 0; i--){ const k = localStorage.key(i); if (k && k.startsWith("dcg-ui-lunch-") && k.slice(13) < T) localStorage.removeItem(k); } }catch(e){} })();
 function shiftLateDays(out){
   const byDate = new Map();
   for (const s of out) if (!s.extra && s.kind !== "off"){ if (!byDate.has(s.date)) byDate.set(s.date, []); byDate.get(s.date).push(s); }
   const repl = new Map(), drop = new Set();
   for (const [d, ds] of byDate){
-    const S = lateStartOf(ds, d); if (!S) continue;
+    const late = lateStartOf(ds, d), pref = lunchPref(d);
+    if (!late && !pref) continue;
+    const S = late || ds[0].start;
+    const plannedLunch = ds.reduce((a, s, i) => i && mins(ds[i-1].end, s.start) >= 45 ? mins(ds[i-1].end, s.start) : a, 60);
     let cur = S, work = 0, lunch = false, cut = false;
     const bil = ds.some(s => s.kind === "bilan"), stop = bil ? addMin(LATE_END, -10) : LATE_END;   // le bilan du mardi tient toujours avant 20 h
     ds.forEach((s, i) => {
       const dur = mins(s.start, s.end);
       if (i > 0){
         const gap = mins(ds[i-1].end, s.start);
-        if (!lunch && work >= 225){ cur = addMin(cur, 60); lunch = true; }   // 1 h de pause après environ 4 h de travail
+        if (pref && !pref.none && pref.after === ds[i-1].id){ cur = addMin(cur, pref.dur || plannedLunch); lunch = true; }   // ta pause, là où tu l'as mise
+        else if (!pref && !lunch && work >= 225){ cur = addMin(cur, 60); lunch = true; }   // 1 h de pause après environ 4 h de travail
         else if (gap > 0 && gap < 45) cur = addMin(cur, gap);
       }
-      const ns = Object.assign({}, s, {start:cur, end:addMin(cur, dur), late:S, plannedStart:s.start});
-      if (i === 0) ns.lateMark = true;
+      const ns = Object.assign({}, s, {start:cur, end:addMin(cur, dur), plannedStart:s.start});
+      if (late){ ns.late = S; if (i === 0) ns.lateMark = true; }
       if (s.kind === "bilan"){ if (ns.start > stop){ ns.start = stop; ns.end = LATE_END; } repl.set(s.id, ns); }
       else if (ns.start >= stop){ drop.add(s.id); cut = true; }
       else { if (ns.end > stop){ ns.end = stop; cut = true; } repl.set(s.id, ns); }
       cur = addMin(cur, dur); work += dur;
     });
     if (cut && repl.get(ds[0].id)) repl.get(ds[0].id).cut = true;
+    if (cut && pref) lunchMem["cut-"+d] = true; else delete lunchMem["cut-"+d];
   }
   if (!repl.size && !drop.size) return out;
   return out.filter(s => !drop.has(s.id)).map(s => repl.get(s.id) || s).sort((a,b)=> (a.date+a.start).localeCompare(b.date+b.start));
@@ -1618,15 +1702,31 @@ function agenda(list, o){
         marker = true;
       }
     }
+    const pv = list[list.indexOf(v)-1];
+    if (pv && pv.kind !== "off" && v.kind !== "off" && !pv.extra && !v.extra && mins(pv.end, v.start) >= 30){
+      const canEdit = v.date >= today();
+      ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}, h("span",null, fT(pv.end))),
+        h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null,"Pause déjeuner"), " · "+fH(pv.end)+" – "+fH(v.start)),
+          canEdit ? h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-"+v.date, onclick:()=>openLunch(v.date)}, "Modifier") : null)));
+    }
     ol.append(h("li",{class:"slot"},
       h("div",{class:"gut"}, h("span",null, v.kind==="off" ? "" : fT(v.start)), h("span",{class:"e"}, v.kind==="off" ? "" : fT(v.end)), nm),
       card(v, {hero: v.id === o.heroId, pre:o.pre, compactPast: o.today && !!o.heroId})));
   }
+  const lp = list.length && lunchPref(list[0].date);
+  if (lp && lp.none && list[0].date >= today()) ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}),
+    h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null,"Sans pause déjeuner"), " aujourd'hui"), h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-none", onclick:()=>openLunch(list[0].date)}, "Modifier"))));
   return ol;
 }
 function sessionsOn(d){ return SCHED.slots.filter(s=>s.date===d).map(view_); }
 /* les séances du jour à leur heure prévue (avant un éventuel décalage) */
-const sessionsRaw = d => SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").map(s => s.late ? Object.assign({}, s, {start:s.plannedStart}) : s).sort((a,b)=>a.start.localeCompare(b.start));
+const sessionsRaw = d => SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").map(s => s.plannedStart ? Object.assign({}, s, {start:s.plannedStart}) : s).sort((a,b)=>a.start.localeCompare(b.start));
+/* la pause du jour (le premier trou d'au moins 30 min entre deux séances) */
+function lunchOf(d){
+  const ss = SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").sort((a,b)=>a.start.localeCompare(b.start));
+  for (let i = 1; i < ss.length; i++) if (mins(ss[i-1].end, ss[i].start) >= 30) return {start:ss[i-1].end, end:ss[i].start, after:ss[i-1].id};
+  return null;
+}
 function dayKind(d){
   const wd = parse(d).getDay(), td = d === today();
   if (OFF_DATES[d]) return "Yom Tov ("+OFF_DATES[d]+") : pas de révision.";
@@ -1664,6 +1764,52 @@ function msList(ms, o){
       m.ue ? h("span",{class:"ms-ue"}, h("i"), ueName(m.ue)+" · ") : null,
       m.t,
       m.note ? h("small",null, m.note) : null))));
+}
+
+/* ---- maîtrise des chapitres : maitrise/<UE> = {lv:{M3:1|2|3}, at} (synchronisé comme tes coches) ---- */
+const LV = {1:{t:"À revoir", c:"lv1"}, 2:{t:"Fragile", c:"lv2"}, 3:{t:"Je maîtrise", c:"lv3"}};
+const STATE_T = {lv3:"Je maîtrise", lv2:"Fragile", lv1:"À revoir", fini:"Fini, à noter", encours:"En cours", avenir:"À avancer"};
+const STATE_ORDER = ["lv3","lv2","lv1","fini","encours","avenir"];
+const chapKey = mod => { const m = /^M\d+/.exec(mod || ""); return m ? m[0] : null; };
+function chapters(u){
+  const out = [];
+  for (const it of Q[u] || []){
+    if (it.k === "B") continue; const k = chapKey(it.mod); if (!k) continue;
+    let c = out.find(z => z.k === k);
+    if (!c){ c = {u, k, t: it.mod.replace(/ \(suite\)$/,"").replace(/^M\d+ · /,""), tot:0, dn:0, last:""}; out.push(c); }
+    c.tot++; const dd = doneDate(u, it.n); if (dd){ c.dn++; if (dd > c.last) c.last = dd; }
+  }
+  const lv = (maitrise[u] && maitrise[u].lv) || {};
+  for (const c of out){ c.lv = [1,2,3].includes(lv[c.k]) ? lv[c.k] : 0; c.state = c.lv ? "lv"+c.lv : c.dn >= c.tot ? "fini" : c.dn ? "encours" : "avenir"; }
+  return out;
+}
+const chapName = c => "Module "+c.k.slice(1)+" · "+c.t;
+function setLevel(u, k, lv){
+  const cur = Object.assign({}, (maitrise[u] && maitrise[u].lv) || {});
+  if (lv) cur[k] = lv; else delete cur[k];
+  maitrise[u] = {lv:cur, at:new Date().toISOString()}; persist("maitrise/"+u, maitrise[u]);
+  toast(lv ? "Noté : "+LV[lv].t.toLowerCase()+"." : "Note retirée."); refresh();
+}
+function lvPicker(c, pre){
+  return h("div",{class:"lvp", role:"group", "aria-label":"Ton niveau : "+chapName(c)}, [1,2,3].map(l =>
+    h("button",{type:"button", class:"lvb "+LV[l].c, id:(pre||"lv")+"-"+c.u+"-"+c.k+"-"+l, "aria-pressed":String(c.lv === l), onclick:()=>setLevel(c.u, c.k, c.lv === l ? 0 : l)}, h("i",{"aria-hidden":"true"}), LV[l].t)));
+}
+const chapStrip = cs => h("span",{class:"chs","aria-hidden":"true"}, cs.map(c => h("i",{class:c.state})));
+const weakChapters = u => UE_LIST.filter(x => !u || x === u).flatMap(x => chapters(x)).filter(c => c.lv && c.lv < 3).sort((a,b) => a.lv - b.lv);
+function masteryBlock(){
+  const all = UE_LIST.flatMap(u => chapters(u)), n = s => all.filter(c => c.state === s).length, rated = all.filter(c => c.lv);
+  const out = [sec("Tes chapitres", plural(all.length,"chapitre")),
+    h("div",{class:"mbar", role:"img", "aria-label": STATE_ORDER.filter(n).map(s => STATE_T[s]+" : "+n(s)).join(", ")}, STATE_ORDER.map(s => n(s) ? h("i",{class:s, style:"flex:"+n(s)}) : null)),
+    h("p",{class:"mleg2","aria-hidden":"true"}, STATE_ORDER.map(s => n(s) ? h("span",null, h("i",{class:s}), STATE_T[s]+" "+n(s)) : null))];
+  const weak = weakChapters();
+  if (!rated.length) out.push(h("p",{class:"lvhelp"}, "Après un exercice ou un test, note chaque chapitre : à revoir, fragile ou je maîtrise. Touche une matière plus bas."));
+  else if (!weak.length) out.push(h("p",{class:"lvhelp"}, "Rien à revoir pour l'instant. Bravo !"));
+  else out.push(h("p",{class:"subhead"}, "À revoir en priorité"), h("ul",{class:"weak"}, weak.slice(0,5).map(c => h("li",{style:"--ue:"+col(c.u)},
+    h("button",{type:"button", id:"wk-"+c.u+"-"+c.k, onclick:()=>openUE(c.u)}, h("span",{class:"lvdot "+c.state}), h("span",null, h("b",null, chapName(c)), h("small",null, ueName(c.u)+" · "+STATE_T[c.state])), ic("right"))))));
+  // la matière la plus solide et la plus fragile (moyenne des chapitres notés)
+  const avg = UE_LIST.map(u => { const r = chapters(u).filter(c => c.lv); return r.length >= 2 ? {u, a: r.reduce((x,c) => x+c.lv, 0)/r.length} : null; }).filter(Boolean).sort((a,b) => b.a - a.a);
+  if (avg.length >= 2 && avg[0].a > avg[avg.length-1].a) out.push(h("p",{class:"lvhelp"}, h("b",null,"Ta matière la plus solide : "), UEN[avg[0].u]+". ", h("b",null,"La plus fragile : "), UEN[avg[avg.length-1].u]+"."));
+  return out;
 }
 
 /* ---- à faire : les jalons « todo » du plan, cochés comme les séances (progress/<id>, même format) ---- */
@@ -1843,6 +1989,9 @@ function screenToday(){
   main.append(row);
   const msT = msOn(T).filter(m => !m.todo);
   if (msT.length) main.append(sec("À noter aujourd'hui"), msList(msT));
+  const fin = UE_LIST.flatMap(u => chapters(u)).filter(c => c.state === "fini" && c.last >= plusDays(T, -7)).sort((a,b) => b.last.localeCompare(a.last))[0];
+  if (fin) main.append(h("section",{class:"card-p lvask", "aria-label":"Note ton chapitre", style:"--ue:"+col(fin.u)},
+    h("p",{class:"eb"}, "Chapitre fini · "+ueName(fin.u)), h("h2",null, chapName(fin)), h("p",{class:"lvhelp"}, "Tu le maîtrises ? Ta note t'aidera à réviser avant les écrits."), lvPicker(fin, "td")));
   const tg = todoGroups(T), tl = tg.late.concat(tg.week.filter(m => m.kind !== "replay"));
   if (tl.length) main.append(h("a",{class:"todo-n", href:"#afaire", id:"todo-n"}, h("span",{class:"ri"}, ic("check")),
     h("span",null, h("b",null, "À faire cette semaine : "+plural(tl.length,"chose")), tg.late.length ? " (dont "+tg.late.length+" en retard)" : "", h("small",null, tl[0].t)), ic("right")));
@@ -1870,6 +2019,7 @@ function screenToday(){
   side.append(sec("Ta semaine", wm ? wLabel(wm) : ""));
   side.append(h("div",{class:"wk"}, weekDays(wid).map(d => dayTile(d, {cur: d===T, pre:"wkt", onclick:()=>{ selWeek = weekIdFor(d); selDay = d; selMonth = d.slice(0,7); location.hash = "#semaine"; }}))));
   side.append(streakRow());
+  side.append(h("aside",{class:"tip", "aria-label":"Le conseil du jour"}, ic("bulb"), h("p",null, h("b",null,"Le conseil du jour · "), tipOfDay(T))));
   side.append(...nextDayBlock(T));
   const lim = iso(new Date(parse(T).getTime()+21*86400000));
   const soon = PLAN.milestones.filter(m => m.date > T && m.date <= lim && !(m.todo && isMsDone(m))).slice(0, 3);
@@ -2025,6 +2175,7 @@ function screenProgress(){
   const rh = rhythm(), T0 = today();
   const pk = isFirstWeek(T0) ? "debut" : examKey() || paceKey(rh.all.delta);   // une phrase pour l'état général
   const out = [dhead(fDay(T0), "Progrès"), summitCard("progress"), h("p",{class:"cheer pg", id:"cheer-pg"}, cheer(pk, T0)), ...nextStep(ascent(rh)), ...streakBlock()];
+  out.push(...masteryBlock());
   out.push(sec("Par matière", "touche une matière"));
   const ul = h("ul",{class:"subjects"});
   for (const u of UE_LIST){
@@ -2035,6 +2186,7 @@ function screenProgress(){
     ul.append(h("li",{style:"--ue:"+col(u)},
       h("button",{type:"button", class:"s-head", id:"ue-"+u, onclick:()=>openUE(u)}, h("span",{class:"sq"}), h("b",null, u+" · "+PLAN.ues[u].name), h("span",{class:"pct num"}, p+" %"), ic("right")),
       h("div",{class:"bar", role:"img", "aria-label":p+" % fait"}, h("i",{style:"width:"+p+"%"})),
+      chapStrip(chapters(u)),
       h("p",{class:"s-meta"}, pace, un > 0 ? h("span",{class:"warn"}, hmd(un)+" à caser : parle-m'en au bilan") : [" · ", pe ? "fin prévue le "+fShort(pe) : (p>=100 ? "programme terminé" : "—")]),
       mocks.length ? h("div",{class:"scores"}, h("span",{class:"eb"},"Examens blancs"), mocks.map(s => {
         const sc = scores[s.id]; const has = sc && sc.note !== undefined && sc.note !== "";
@@ -2052,6 +2204,30 @@ function screenProgress(){
 }
 
 /* ---- Méthode ---- */
+/* conseils pour apprendre (recherche : test actif et révision espacée = les plus efficaces) ; un « conseil du jour » sur Aujourd'hui */
+const TIPS = [
+  "Ferme le cours et récite. Ce que tu retrouves seul, tu le retiens.",
+  "Refais l'écriture sans regarder le corrigé, puis compare.",
+  "Vérifie chaque écriture avec des comptes en T : débit = crédit.",
+  "Une annale chronométrée vaut mieux que trois relectures.",
+  "Revois tes cartes Anki un peu chaque jour plutôt que tout la veille.",
+  "Mélange les exercices : TVA, amortissements, achats dans la même séance.",
+  "Explique le chapitre à voix haute comme à un ami. Là où tu bloques, tu révises.",
+  "Surligner ne suffit pas. Transforme ta fiche en questions.",
+  "Après un test, note ton chapitre : rouge, orange ou vert.",
+  "Commence par tes chapitres rouges. Les verts, juste un petit rappel.",
+  "25 minutes à fond, 5 minutes de pause : tu repars plus frais."
+];
+const tipOfDay = T => { let x = 2166136261; for (const ch of "tip|"+T){ x ^= ch.charCodeAt(0); x = Math.imul(x, 16777619); } return TIPS[(x >>> 0) % TIPS.length]; };
+const TIPS_UE = {
+  UE1:"faits, problème de droit, règle, « en l'espèce », conclusion. Toujours dans cet ordre. Les articles clés en cartes Anki.",
+  UE5:"appuie chaque idée sur un chiffre du dossier. Entraîne-toi à faire un plan en 15 minutes.",
+  UE7:"auteurs et modèles en cartes : nom, idée, exemple. Applique un modèle à une vraie entreprise.",
+  UE8:"écris tes requêtes SQL et tes formules à la main, puis vérifie sur l'ordinateur.",
+  UE9:"refais les écritures sans le corrigé, vérifie en comptes en T, puis des cas chronométrés.",
+  UE12:"10 mots par jour en cartes Anki. Petites traductions dans les deux sens.",
+  UE13:"entraîne ta soutenance à voix haute, chronomètre-toi et enregistre-toi."
+};
 const calURL = (proto, file) => (location.protocol === "http:" && proto === "https" ? "http" : proto)+"://"+location.host+location.pathname.replace(/[^/]*$/,"")+(file || "calendrier.ics");
 function screenMethod(){
   const linked = !!ghToken();
@@ -2064,26 +2240,17 @@ function screenMethod(){
       h("div",{class:"gh"}, h("span",{class:"dot"+(linked?" on":"")}), h("b",null, linked ? "Reliée" : "Pas encore reliée"),
         h("button",{type:"button", class:"btn "+(linked?"soft":"primary"), id:"gh-open", onclick:openGitHub}, linked ? "Gérer" : "Relier à GitHub"))),
     h("section",{class:"card-p save"},
-      h("h2",null,"Tes rappels de travail"),
-      h("p",null, "Ton iPhone te prévient à chaque étape : « Boker tov » 2 h avant, « Prépare-toi » 30 min avant, puis le début, chaque séance, la pause, la reprise et la fin."),
-      h("ol",{class:"steps-s"},
-        h("li",null, "Touche « Activer mes rappels », puis « S'abonner »."),
-        h("li",null, "Dans les réglages de l'abonnement, laisse « Supprimer les alarmes » désactivé."),
-        h("li",null, "Autorise les notifications de l'app Calendrier.")),
-      h("p",null, "Les rappels suivent tes horaires prévus. Si tu commences en retard, suis plutôt l'appli."),
-      h("div",{class:"gh"}, h("a",{class:"btn primary", id:"rp-add", href:calURL("webcal", "rappels.ics")}, ic("clock"), "Activer mes rappels"))),
-    h("section",{class:"card-p save"},
-      h("h2",null,"Ton calendrier iPhone"),
-      h("p",null, "Ajoute une fois le calendrier « Plan DCG ». Tu y verras les lives, les examens blancs, les certificats et les dates limites, avec un rappel."),
-      h("p",null, "Il se met à jour avec ton plan. Tes séances de cours restent dans l'appli : elles bougent avec tes coches. En cas de doute, l'appli a raison."),
-      h("div",{class:"gh"}, h("a",{class:"btn primary", id:"cal-add", href:calURL("webcal")}, ic("plus"), "Ajouter à mon calendrier"),
-        h("a",{class:"btn soft", id:"cal-dl", href:calURL("https"), download:"plan-dcg.ics"}, "Télécharger le fichier"))),
+      h("h2",null,"Tes rappels dans Google Agenda"),
+      h("p",null, "Ils sont dans ton Google Agenda, en jaune, avec « DCG · » devant : « Boker tov » 2 h avant, « Prépare-toi » 30 min avant, puis chaque séance, la pause et la fin. Les lives et les choses à faire y sont aussi."),
+      h("p",null, "Pour être prévenu : autorise les notifications de l'appli Google Agenda sur ton iPhone."),
+      h("p",null, "Les rappels suivent tes horaires prévus. Si tu décales ta journée, suis l'appli.")),
     h("div",{class:"meth"},
       d("Comment ton planning s'adapte", true,
         h("p",null,"Tu coches ce que tu fais. Ce que tu n'as pas fait glisse sur la séance suivante de la matière. Tu reprends là où tu t'es arrêté."),
         h("ul",null,
           h("li",null,"Une séance impossible : ouvre-la et touche « Reporter »."),
           h("li",null,"Tu commences en retard : reporte la 1re séance du matin. Toute ta journée glisse (1 h de pause après 4 h, jamais après 20 h)."),
+          h("li",null,"Ta pause déjeuner : touche « Modifier » sur la pause dans l'agenda. Tu peux la déplacer, la raccourcir ou la sauter."),
           h("li",null,"Une journée impossible : sur l'écran Aujourd'hui, « Je n'ai pas pu travailler aujourd'hui »."),
           h("li",null,"Du temps en plus : « Ajouter une séance » (le bouton +) te donne la suite du programme."),
           h("li",null,"Si tu prends du retard, les créneaux de révision du dimanche servent à rattraper."),
@@ -2100,7 +2267,16 @@ function screenMethod(){
         h("li",null,"L'après-midi : corrigé et commentaire audio, puis note-toi sur 20 dans la séance « Correction »."),
         h("li",null,"Tu peux m'envoyer les photos de ta copie : je te corrige."))),
       d("Ta semaine", false, h("p",null,"Lundi et mardi : 7 h de travail, 9 h – 13 h et 14 h – 17 h. Dimanche : 10 h 30 – 15 h 30. Mercredi à vendredi : alternance. Jamais après 20 h. Rien pendant Shabbat ni les jours de Yom Tov. Dimanche vers 9 h 35 : le mot de la semaine. Mardi 17 h : ton bilan, puis je t'écris vers 18 h 20.")),
-      d("Les cartes Anki", false, h("p",null,"Recto une question, verso la réponse. 15 minutes le dimanche et, si tu peux, 10 minutes le soir. C'est ce qui remplace le bachotage de dernière minute.")))
+      d("Les cartes Anki", false, h("p",null,"Recto une question, verso la réponse. 15 minutes le dimanche et, si tu peux, 10 minutes le soir. C'est ce qui remplace le bachotage de dernière minute.")),
+      d("Bien apprendre : ce qui marche", false,
+        h("p",null,"Deux techniques marchent le mieux : te tester, et revoir un peu à intervalles réguliers. Relire et surligner marchent peu."),
+        h("ul",null, TIPS.slice(0, 8).map(t => h("li",null, t))),
+        h("p",{class:"src"},"Sources : Dunlosky et al. (2013), Roediger et Karpicke (2006), Cepeda et al. (2006).")),
+      d("Bien apprendre : matière par matière", false,
+        h("ul",null, Object.entries(TIPS_UE).map(([u, t]) => h("li",null, h("b",null, ueName(u)+" : "), t)))),
+      d("Noter tes chapitres", false,
+        h("p",null,"Rouge : à revoir. Orange : fragile. Vert : je maîtrise."),
+        h("ul",null, h("li",null,"Note après t'être testé, pas après avoir lu."), h("li",null,"Renote après chaque examen blanc."), h("li",null,"Avant les écrits : d'abord les rouges, puis les oranges. Les verts, juste un petit rappel."))))
   ];
 }
 
@@ -2117,6 +2293,7 @@ function renderSheet(){
   if (sheetState.type === "add") renderAdd(sh);
   else if (sheetState.type === "confirm") renderConfirm(sh);
   else if (sheetState.type === "ue") renderUE(sh);
+  else if (sheetState.type === "lunch") renderLunch(sh);
   else if (sheetState.type === "github"){ renderGitHub(sh); const g = sh.querySelector(".grab"); if (g) g.replaceWith(sheetBar()); }
   else if (!renderSession(sh)) return;
   const t = sh.querySelector("h2"); sh.setAttribute("aria-label", t ? t.textContent : "Fiche");
@@ -2162,6 +2339,11 @@ function renderSession(sh){
   } else if (v.static && v.static.length){
     body.append(h("ol",{class:"steps"}, v.static.map(it => h("li",null, it.t))));
   }
+  if (["revision","reprise","correction"].includes(v.kind)){
+    const wk = weakChapters(v.kind === "revision" ? null : v.ue).slice(0, 4);
+    if (wk.length){ body.append(h("p",{class:"subhead"}, "Tes chapitres à revoir")); body.append(h("ul",{class:"weak"}, wk.map(c => h("li",{style:"--ue:"+col(c.u)},
+      h("button",{type:"button", id:"swk-"+c.u+"-"+c.k, onclick:()=>openUE(c.u)}, h("span",{class:"lvdot "+c.state}), h("span",null, h("b",null, chapName(c)), h("small",null, ueName(c.u)+" · "+STATE_T[c.state])), ic("right")))))); }
+  }
   if (v.kind === "correction"){
     const sc = scores[v.id] || {};
     const inp = h("input",{type:"number",inputmode:"decimal",min:"0",max:"20",step:"0.5",id:"note-"+v.id,placeholder:"Ex. 11,5",value:sc.note!==undefined?String(sc.note):null});
@@ -2191,6 +2373,28 @@ function renderSession(sh){
   if (foot.childNodes.length) sh.append(foot);
   return true;
 }
+function openLunch(d){ sheetState = {type:"lunch", date:d}; renderSheet(); openSheet(); }
+function renderLunch(sh){
+  const d = sheetState.date, pref = lunchPref(d), lu = lunchOf(d);
+  const ss = SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").sort((a,b)=>a.start.localeCompare(b.start)).map(view_);
+  const dur = (pref && pref.dur) || (lu ? mins(lu.start, lu.end) : 60);
+  sh.append(sheetBar());
+  const body = h("div",{class:"body"}, h("h2",null,"Ta pause déjeuner"),
+    h("p",{class:"muted"}, lu ? "Aujourd'hui : "+fH(lu.start)+" – "+fH(lu.end)+"." : pref && pref.none ? "Aujourd'hui : pas de pause." : "Pas de pause prévue."),
+    h("p",{class:"muted"}, "Choisis après quelle séance tu manges, ou saute la pause. Le reste de ta journée suit."));
+  body.append(h("p",{class:"subhead", id:"lu-when"}, "Quand"));
+  const opts = ss.slice(0, -1).map(v => h("button",{type:"button", class:"choice", id:"lu-"+v.id, "aria-pressed":String(!!(lu && lu.after === v.id) && !(pref && pref.none)),
+    onclick:()=>{ setLunch(d, {after:v.id, dur}); closeSheet(); toast("Pause déplacée."); }}, "Après "+(v.ue ? UEN[v.ue] : titleOf(v))+" ("+fH(v.end)+")"));
+  opts.push(h("button",{type:"button", class:"choice", id:"lu-none", "aria-pressed":String(!!(pref && pref.none)), onclick:()=>{ setLunch(d, {none:true}); closeSheet(); toast("Pas de pause aujourd'hui. Bon courage !"); }}, "Pas de pause"));
+  body.append(h("div",{class:"choices col", role:"group", "aria-labelledby":"lu-when"}, opts));
+  body.append(h("p",{class:"subhead", id:"lu-dur"}, "Durée"));
+  body.append(h("div",{class:"choices", role:"group", "aria-labelledby":"lu-dur"}, [30,45,60].map(m => h("button",{type:"button", class:"choice num", id:"lu-d"+m, "aria-pressed":String(dur === m),
+    onclick:()=>{ const after = (pref && pref.after) || (lu && lu.after); if (after){ setLunch(d, {after, dur:m}); renderSheet(); } }}, hmd(m)))));
+  body.append(h("p",{class:"muted small"}, "Jamais après 20 h : ce qui dépasse passe aux prochains jours."));
+  sh.append(body);
+  sh.append(h("div",{class:"foot"}, h("button",{type:"button", class:"btn soft", id:"lu-reset", disabled:!pref, onclick:()=>{ setLunch(d, null); closeSheet(); toast("Pause remise comme prévu."); }}, "Comme prévu"),
+    h("button",{type:"button", class:"btn primary", onclick:closeSheet}, "OK")));
+}
 function openUE(u){ sheetState = {type:"ue", ue:u}; renderSheet(); openSheet(); }
 function renderUE(sh){
   const u = sheetState.ue, meta = PLAN.ues[u] || {}, ep = meta.epreuve || {}, T = today();
@@ -2208,14 +2412,14 @@ function renderUE(sh){
   if (nx) body.append(h("button",{type:"button", class:"ue-next", id:"ue-next", onclick:()=>openSession(nx.id)},
     h("span",{class:"eb"}, "Prochaine séance"), h("b",null, cleanTitle(nx.title) || KIND[nx.kind]), h("span",null, fDay(nx.date)+" · "+fT(nx.start)+" – "+fT(nx.end)), ic("right")));
   // modules : avancement
-  const mods = [];
-  for (const it of Q[u]){ if (it.k === "B") continue; let m = mods.find(z => z.m === it.mod); if (!m){ m = {m:it.mod, tot:0, dn:0}; mods.push(m); } m.tot++; if (isDoneItem(u, it.n)) m.dn++; }
-  const cur = mods.find(m => m.dn < m.tot);
-  body.append(h("p",{class:"subhead"},"Les modules"));
-  body.append(h("ol",{class:"mods"}, mods.map(m => h("li",{class:(m.dn === m.tot ? "ok" : "")+(m === cur ? " cur" : "")},
-    h("span",{class:"mn"}, m.m === "Introduction" ? "Pour commencer" : m.m.replace(/^M(\d+) · /,"Module $1 · ")),
-    h("span",{class:"mc2 num"}, m.dn === m.tot ? "Fait" : m.dn+" / "+m.tot),
-    h("span",{class:"bar", "aria-hidden":"true"}, h("i",{style:"width:"+Math.round(m.dn/m.tot*100)+"%"}))))));
+  const chs = chapters(u), cur = chs.find(c => c.dn < c.tot);
+  body.append(h("p",{class:"subhead"},"Tes chapitres"));
+  body.append(h("p",{class:"lvhelp"}, "Note ton niveau après un exercice ou un test. Avant les écrits, commence par les rouges."));
+  body.append(h("ol",{class:"mods"}, chs.map(c => h("li",{class:c.state+(c === cur ? " cur" : "")},
+    h("span",{class:"mn"}, h("span",{class:"lvdot "+c.state, "aria-hidden":"true"}), chapName(c)),
+    h("span",{class:"mc2 num"}, c.dn >= c.tot ? "Fini" : c.dn+" / "+c.tot),
+    h("span",{class:"bar", "aria-hidden":"true"}, h("i",{style:"width:"+Math.round(c.dn/c.tot*100)+"%"})),
+    lvPicker(c, "ul")))));
   const lv = PLAN.milestones.filter(m => m.ue === u && m.date >= T && !(m.todo && isMsDone(m))).slice(0, 4);
   if (lv.length){ body.append(h("p",{class:"subhead"},"Lives et dates à venir")); body.append(msList(lv, {date:true})); }
   const res = meta.ressources || [];
@@ -2845,7 +3049,7 @@ const LS = {
   set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
   del(k){ try{ localStorage.removeItem(k); }catch(e){} }
 };
-const USER_COLS = new Set(["done","progress","skips","extras","scores","bilans"]);
+const USER_COLS = new Set(["done","progress","skips","extras","scores","bilans","maitrise"]);
 function ghToken(){ return (LS.get("dcg-gh-token")||"").trim(); }
 function localDocs(){
   const o = {};
@@ -2902,13 +3106,14 @@ function remove(path){
   ghQueue();
 }
 function loadLocal(){
-  done = {}; progress = {}; skips = {}; extras = {}; scores = {}; bilans = {}; history = {};
+  done = {}; progress = {}; skips = {}; extras = {}; scores = {}; bilans = {}; history = {}; maitrise = {};
   const o = localDocs();
   for (const path in o){
     const [col, id] = path.split("/"); const val = o[path];
     if (col==="done") done[id] = Object.assign({}, val.items||{});
     else if (col==="progress") progress[id] = val; else if (col==="skips") skips[id] = val; else if (col==="extras") extras[id] = val;
     else if (col==="scores") scores[id] = val; else if (col==="bilans") bilans[id] = val; else if (col==="history") history[id] = val;
+    else if (col==="maitrise") maitrise[id] = val;
   }
   migrateLegacy(progress);
 }
