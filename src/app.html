@@ -2149,7 +2149,6 @@ function screenTodo(){
   out.push(...block("Plus tard", "", g.later));
   if (g.done.length) out.push(h("div",{class:"meth todo-done"}, h("details",{open:doneOpen, ontoggle:e => { doneOpen = e.target.open; }}, h("summary",null, h("span",null, "Déjà fait ("+g.done.length+")"), ic("down")),
     h("div",{class:"items todo-l"}, g.done.map(m => todoRow(m, T))))));
-  out.push(h("p",{class:"rule-n"}, h("b",null,"Astuce · "), "Ajoute le calendrier « Plan DCG » à ton iPhone (onglet Méthode) : tu auras un rappel la veille."));
   return out;
 }
 
@@ -2250,11 +2249,6 @@ function screenMethod(){
       h("p",null, linked ? "Tes coches sont sauvegardées. Je les vois le dimanche et le mardi." : "Tes coches sont seulement sur cet appareil. Relie l'appli : je verrai ta progression. Ça prend 3 minutes."),
       h("div",{class:"gh"}, h("span",{class:"dot"+(linked?" on":"")}), h("b",null, linked ? "Reliée" : "Pas encore reliée"),
         h("button",{type:"button", class:"btn "+(linked?"soft":"primary"), id:"gh-open", onclick:openGitHub}, linked ? "Gérer" : "Relier à GitHub"))),
-    h("section",{class:"card-p save"},
-      h("h2",null,"Tes rappels dans Google Agenda"),
-      h("p",null, "Ils sont dans ton Google Agenda, en jaune, avec « DCG · » devant : « Boker tov » 2 h avant, « Prépare-toi » 30 min avant, puis chaque séance, la pause et la fin. Les lives et les choses à faire y sont aussi."),
-      h("p",null, "Pour être prévenu : autorise les notifications de l'appli Google Agenda sur ton iPhone."),
-      h("p",null, "Les rappels suivent tes horaires prévus. Si tu décales ta journée, suis l'appli.")),
     h("div",{class:"meth"},
       d("Comment ton planning s'adapte", true,
         h("p",null,"Tu coches ce que tu fais. Ce que tu n'as pas fait glisse sur la séance suivante de la matière. Tu reprends là où tu t'es arrêté."),
