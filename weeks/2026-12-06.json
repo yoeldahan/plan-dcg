@@ -345,445 +345,450 @@
  ],
  "milestones": [
   {
+   "id": "ev-2026-11-17-live-dcg-1700",
    "date": "2026-11-17",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "17:00",
    "end": "17:30",
-   "note": "Pendant ta séance : regarde plutôt le replay.",
-   "id": "ms-2026-11-17-5d481f"
+   "clash": true,
+   "note": "Pendant ta séance : regarde plutôt le replay."
   },
   {
+   "id": "ev-2026-11-17-live-ue7-1900",
    "date": "2026-11-17",
    "ue": "UE7",
    "kind": "live",
    "t": "Live · La démarche stratégique",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-17-448ab1"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-18-live-ue8-2000",
    "date": "2026-11-18",
    "ue": "UE8",
    "kind": "replay",
    "t": "Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de règlementation et…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-11-18-c7d28e"
+   "todo": true
   },
   {
+   "id": "ev-2026-11-18-live-ue1-1800",
    "date": "2026-11-18",
    "ue": "UE1",
    "kind": "live",
    "t": "Live · Identifier les autres entrepreneurs individuels (agriculteur, artisan, professionnel…",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-18-d312b3"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-19-live-ue5-1900",
    "date": "2026-11-19",
    "ue": "UE5",
    "kind": "live",
    "t": "Live · Les monopoles",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-19-d6168e"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-23-live-ue9-2100",
    "date": "2026-11-23",
    "ue": "UE9",
    "kind": "replay",
    "t": "Replay à regarder · Les rapprochements bancaires : objectifs, méthode, soldes initiaux identiques ou…",
    "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-11-23-45c2d0"
+   "todo": true
   },
   {
+   "id": "ev-2026-11-23-live-dcg-1200",
    "date": "2026-11-23",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "12:00",
    "end": "12:30",
-   "note": "Pendant ta séance : regarde plutôt le replay.",
-   "id": "ms-2026-11-23-5d481f"
+   "clash": true,
+   "note": "Pendant ta séance : regarde plutôt le replay."
   },
   {
+   "id": "ev-2026-11-23-live-ue12-1900",
    "date": "2026-11-23",
    "ue": "UE12",
    "kind": "live",
    "t": "Live · Communication & strategies to be competitive : competitive advantage, innovation…",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-23-ce5d43"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-24-live-ue7-1900",
    "date": "2026-11-24",
    "ue": "UE7",
    "kind": "live",
    "t": "Live · Les outils d'analyse de l'environnement de l'entreprise",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-24-0edf97"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-25-live-ue1-1800",
    "date": "2026-11-25",
    "ue": "UE1",
    "kind": "live",
    "t": "Live · Proposer un statut pour le conjoint de l'entrepreneur + Évaluer les conséquences du…",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-25-d9c7b1"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-11-26-live-ue8-2000",
    "date": "2026-11-26",
    "ue": "UE8",
    "kind": "replay",
    "t": "Replay à regarder · La représentation d'un processus : le diagramme BPMN ; Les progiciels au service des…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-11-26-3ed253"
+   "todo": true
   },
   {
+   "id": "ev-2026-11-26-live-ue5-1900",
    "date": "2026-11-26",
    "ue": "UE5",
    "kind": "live",
    "t": "Live · Les oligopoles et la concurrence monopolistique",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-11-26-fe3b9f"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-01-live-ue7-1900",
    "date": "2026-12-01",
    "ue": "UE7",
    "kind": "live",
    "t": "Live · Les outils d'analyse interne de l'entreprise",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-01-0e9353"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-02-live-ue13-2000",
    "date": "2026-12-02",
    "ue": "UE13",
    "kind": "replay",
    "t": "Replay à regarder · Essentiels du cours « Maîtriser les outils de la communication orale professionnelle »…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-02-ab4e18"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-03-live-ue8-2000",
    "date": "2026-12-03",
    "ue": "UE8",
    "kind": "replay",
    "t": "Replay à regarder · Essentiels de la modélisation des données (SRD) et de la manipulation des données (SQL)…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-03-11f2ff"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-03-live-dcg-1200",
    "date": "2026-12-03",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "12:00",
    "end": "12:30",
-   "note": "Facultatif. Si tu es au travail, regarde le replay.",
-   "id": "ms-2026-12-03-5d481f"
+   "note": "Facultatif. Si tu es au travail, regarde le replay."
   },
   {
+   "id": "ev-2026-12-03-live-ue5-1700",
    "date": "2026-12-03",
    "ue": "UE5",
    "kind": "live",
    "t": "Live · Les modalités de la régulation des marchés et de la concurrence",
    "start": "17:00",
    "end": "18:00",
-   "note": "Facultatif. Si tu es au travail, regarde le replay.",
-   "id": "ms-2026-12-03-75402e"
+   "note": "Facultatif. Si tu es au travail, regarde le replay."
   },
   {
+   "id": "ev-2026-12-03-live-ue1-1800",
    "date": "2026-12-03",
    "ue": "UE1",
    "kind": "live",
    "t": "Live · Décrire le processus de réalisation des formalités de la création d'une entreprise…",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-03-e4084d"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-07-live-ue9-2100",
    "date": "2026-12-07",
    "ue": "UE9",
    "kind": "replay",
    "t": "Replay à regarder · Suite sur les rapprochements bancaires. Les stocks : réglementation, coûts d'acquisition…",
    "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-07-d71f68"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-07-live-ue12-1900",
    "date": "2026-12-07",
    "ue": "UE12",
    "kind": "live",
    "t": "Live · CSR: Corporate social responsibility: definition and concepts and concrete examples",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-07-eedb28"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-08-live-dcg-1200",
    "date": "2026-12-08",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "12:00",
    "end": "12:30",
-   "note": "Pendant ta séance : regarde plutôt le replay.",
-   "id": "ms-2026-12-08-5d481f"
+   "clash": true,
+   "note": "Pendant ta séance : regarde plutôt le replay."
   },
   {
+   "id": "ev-2026-12-08-live-ue7-1900",
    "date": "2026-12-08",
    "ue": "UE7",
    "kind": "live",
    "t": "Live · Les stratégies de domaine",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-08-748666"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-10-live-ue8-2000",
    "date": "2026-12-10",
    "ue": "UE8",
    "kind": "replay",
    "t": "Replay à regarder · L'usage des fonctions de dénombrement et de gestion du temps dans les formules de calcul…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-10-b261c0"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-10-live-ue1-1800",
    "date": "2026-12-10",
    "ue": "UE1",
    "kind": "live",
    "t": "Live · Analyser les prérogatives du propriétaire, du nu-propriétaire, de l'usufruitier et des…",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-10-235a68"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-10-live-ue5-1800",
    "date": "2026-12-10",
    "ue": "UE5",
    "kind": "live",
    "t": "Live · L'épargne des ménages (définition, formes, motifs et déterminants)",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-10-218e0e"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-14-live-ue13-2000",
    "date": "2026-12-14",
    "ue": "UE13",
    "kind": "replay",
    "t": "Replay à regarder · Présentation de rapports au design impactant : page de garde, illustrations, mise en…",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-14-f9008f"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-14-live-ue9-2100",
    "date": "2026-12-14",
    "ue": "UE9",
    "kind": "replay",
    "t": "Replay à regarder · Suite sur les stocks : valeur actuelle, dépréciations et écritures",
    "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-14-93ce4a"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-14-live-ue12-1900",
    "date": "2026-12-14",
    "ue": "UE12",
    "kind": "live",
    "t": "Live · CSR: Evolution of CSR, wokeism or a necessity, Evolution of CSR in the United States",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-14-d2b6c8"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-15-live-dcg-1700",
    "date": "2026-12-15",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "17:00",
    "end": "17:30",
-   "note": "Pendant ta séance : regarde plutôt le replay.",
-   "id": "ms-2026-12-15-5d481f"
+   "clash": true,
+   "note": "Pendant ta séance : regarde plutôt le replay."
   },
   {
+   "id": "ev-2026-12-15-live-ue7-1900",
    "date": "2026-12-15",
    "ue": "UE7",
    "kind": "live",
    "t": "Live · La stratégie de spécialisation et de diversification",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-15-cfa69a"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-16-live-ue8-2000",
    "date": "2026-12-16",
    "ue": "UE8",
    "kind": "replay",
    "t": "Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de sécurité » + cas pratique",
    "note": "Live à 20 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-16-dd1c0e"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-16-live-ue1-1800",
    "date": "2026-12-16",
    "ue": "UE1",
    "kind": "live",
    "t": "Live · Analyser les limites du droit de propriété",
    "start": "18:00",
    "end": "19:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-16-ddada3"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-17-live-ue5-1900",
    "date": "2026-12-17",
    "ue": "UE5",
    "kind": "live",
    "t": "Live · Les déterminants de l'investissement des entreprises",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-17-4bcf86"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-20-info-dcg",
    "date": "2026-12-20",
    "kind": "info",
    "t": "Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste",
-   "todo": true,
-   "id": "ms-2026-12-20-1769fc"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-21-live-ue9-2100",
    "date": "2026-12-21",
    "ue": "UE9",
    "kind": "replay",
    "t": "Replay à regarder · Cas de synthèse : opérations courantes, TVA, Stocks",
    "note": "Live à 21 h : trop tard pour toi. Regarde le replay un autre jour.",
-   "todo": true,
-   "id": "ms-2026-12-21-4f7e1d"
+   "todo": true
   },
   {
+   "id": "ev-2026-12-21-live-ue12-1900",
    "date": "2026-12-21",
    "ue": "UE12",
    "kind": "live",
    "t": "Live · Digital revolution : the age of the digital society & the transformation of work",
    "start": "19:00",
    "end": "20:00",
-   "note": "Facultatif. Sinon, regarde le replay.",
-   "id": "ms-2026-12-21-7cde39"
+   "note": "Facultatif. Sinon, regarde le replay."
   },
   {
+   "id": "ev-2026-12-22-live-dcg-1200",
    "date": "2026-12-22",
    "kind": "live",
    "t": "Live · Accompagnement DCG (toutes UE)",
    "start": "12:00",
    "end": "12:30",
-   "note": "Pendant ta séance : regarde plutôt le replay.",
-   "id": "ms-2026-12-22-5d481f"
+   "clash": true,
+   "note": "Pendant ta séance : regarde plutôt le replay."
   },
   {
+   "id": "ms-ue13-p12",
    "date": "2027-01-10",
    "t": "Dépose les parties 1 et 2 du rapport UE13 et la fiche de suivi n° 1",
    "ue": "UE13",
    "todo": true,
-   "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses",
-   "id": "ms-2027-01-10-b7bbd2"
+   "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"
   },
   {
-   "date": "2027-01-17",
+   "id": "ms-cyclades",
+   "date": "2027-01-24",
    "t": "Inscris-toi aux écrits du DCG sur Cyclades",
    "todo": true,
-   "note": "En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cyclades.",
-   "id": "ms-2027-01-17-a99ac8"
+   "note": "En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cyclades."
   },
   {
+   "id": "ms-bilan-ue",
    "date": "2027-01-26",
    "t": "Bilan décisif avec moi : 7 UE à l'inscription, ou une en moins ?",
-   "todo": true,
-   "id": "ms-2027-01-26-7ee2cd"
+   "todo": true
   },
   {
+   "id": "ms-ue13-p3",
    "date": "2027-02-07",
    "t": "Dépose la partie 3 du rapport UE13 et la fiche de suivi n° 2",
    "ue": "UE13",
    "todo": true,
-   "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses",
-   "id": "ms-2027-02-07-911292"
+   "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"
   },
   {
+   "id": "ms-ue13-integral",
    "date": "2027-02-21",
    "t": "Dépose le rapport UE13 intégral",
    "ue": "UE13",
    "todo": true,
-   "note": "Limite Studi : fin février. Studi > Évaluations > Passer l'examen",
-   "id": "ms-2027-02-21-33c120"
+   "note": "Limite Studi : fin février. Studi > Évaluations > Passer l'examen"
   },
   {
+   "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)",
-   "id": "ms-2027-03-16-56cf11"
+   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
   },
   {
+   "id": "ms-evals-mars",
    "date": "2027-03-28",
    "t": "Vérifie sur Studi les évaluations qui restent à faire",
    "todo": true,
-   "note": "Studi conseille de finir avant fin mars. Certificats UE9 et UE12 : le 18 avril, après leur programme.",
-   "id": "ms-2027-03-28-f569f4"
+   "note": "Studi conseille de finir avant fin mars. Certificats UE9 et UE12 : le 18 avril, après leur programme."
   },
   {
+   "id": "ms-objectif-examen",
    "date": "2027-04-01",
    "t": "Envoie-moi les dates des examens blancs Studi « Objectif examen »",
    "todo": true,
-   "note": "Studi les propose en avril, avec des lives « Objectif examen ».",
-   "id": "ms-2027-04-01-0b3073"
+   "note": "Studi les propose en avril, avec des lives « Objectif examen »."
   },
   {
+   "id": "ms-ue9-eval3",
    "date": "2027-04-25",
    "t": "En plus, si tu as de l'avance : évaluation d'entraînement 3 de l'UE9",
    "ue": "UE9",
    "todo": true,
-   "note": "Studi > onglet Évaluations",
-   "id": "ms-2027-04-25-aff589"
+   "note": "Studi > onglet Évaluations"
   },
   {
+   "id": "ms-convocation",
    "date": "2027-05-21",
    "t": "Prépare ta convocation, ta pièce d'identité et ta calculatrice",
    "todo": true,
-   "note": "48 h avant la première épreuve. Pas de téléphone pendant l'épreuve.",
-   "id": "ms-2027-05-21-07b526"
+   "note": "48 h avant la première épreuve. Pas de téléphone pendant l'épreuve."
   },
   {
+   "id": "ms-ecrits",
    "date": "2027-05-24",
-   "t": "Écrits du DCG : en mai et juin (dates officielles à paraître)",
-   "id": "ms-2027-05-24-0f0475"
+   "t": "Écrits du DCG : en mai et juin (dates officielles à paraître)"
   },
   {
+   "id": "ms-chavouot",
    "date": "2027-06-11",
-   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là",
-   "id": "ms-2027-06-11-cb0608"
+   "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"
   },
   {
+   "id": "ms-mariage-soeur",
    "date": "2027-07-01",
-   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !",
-   "id": "ms-2027-07-01-7c5ac3"
+   "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"
   },
   {
+   "id": "ms-resultats",
    "date": "2027-07-08",
-   "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)",
-   "id": "ms-2027-07-08-a8d168"
+   "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"
   }
  ]
 }

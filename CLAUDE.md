@@ -13,6 +13,8 @@ Appli de planning de révision du DCG de Yoel (UE1, UE5, UE7, UE8, UE9, UE12 et 
 - `src/build.py` : fabrique `index.html` et `weeks/*.json` à partir de `src/` et `plan.json`.
 - `src/studi/UE*.json` : le programme Studi (modules, leçons, cas, durées) et les événements (lives, devoirs, examens blancs). Format et état dans `src/studi/studi.md`.
 - `src/curriculum.py` lit `src/studi/` ; `src/gen.py` fabrique `plan.json` (créneaux, examens blancs, jalons, événements) et vérifie tes créneaux (rien le samedi, ni pendant Yom Tov, ni après 20 h).
+- `calendrier.ics` (fabriqué par `build.py`) : le calendrier à ajouter dans l'iPhone (lives, examens blancs, certificats, dates limites ; jamais de rappel pendant Shabbat ou Yom Tov).
+- Onglets : Aujourd'hui, Agenda (semaine ou mois), À faire (jalons `todo` du plan, cochés en `progress/<id>` avec des id stables `ms-…` ou `ev-…`), Progrès (une fiche par matière), Méthode.
 - `sw.js` (hors ligne), `manifest.webmanifest`, `icon-*.png`, `logo.svg` : l'appli installable.
 - `tests/compat.sh` : vérifie que l'appli écrit pour le coach exactement les mêmes données que la version d'avant la refonte (`computed/schedule`, `history`, `done`). Il doit afficher COMPATIBLE. Il marche sur Mac (Chrome) et sous Linux (Playwright, `tests/compat_run.js`), et fait tourner les deux versions avec le plan actuel.
 

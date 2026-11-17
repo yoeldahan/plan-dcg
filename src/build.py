@@ -51,21 +51,26 @@ def next_day(date):
     import datetime
     return (datetime.date.fromisoformat(date) + datetime.timedelta(days=1)).isoformat()
 UEN = {"UE1": "Droit", "UE5": "Économie", "UE7": "Management", "UE8": "SI", "UE9": "Compta", "UE12": "Anglais", "UE13": "Communication"}
+import datetime as _dt
+REST = set(P.get("yomtov", []))
+def after_rest(date):   # la veille est Shabbat ou Yom Tov : le rappel se fait le jour même, le matin
+    d = _dt.date.fromisoformat(date) - _dt.timedelta(days=1)
+    return d.weekday() == 5 or d.isoformat() in REST
 ev = []
 for m in P["milestones"]:
     who = (m["ue"] + " " + UEN.get(m["ue"], "") + " · ") if m.get("ue") else ""
     e = {"uid": m["id"], "sum": who + m["t"], "desc": m.get("note", ""), "date": m["date"]}
     if m.get("start"):
-        e.update(start=m["start"], end=m.get("end") or m["start"], alarm="-PT30M")
+        e.update(start=m["start"], end=m.get("end") or m["start"], alarm=None if m.get("clash") else "-PT30M")
     else:
-        e["alarm"] = "-PT6H" if m.get("todo") else None   # la veille à 18 h
+        e["alarm"] = ("PT8H" if after_rest(m["date"]) else "-PT6H") if m.get("todo") else None   # la veille à 18 h, ou le jour même à 8 h
     ev.append(e)
 for x in P["sessions"]:
     if x["kind"] in ("examen", "certificat", "off"):
         lab = {"examen": x["title"], "certificat": "Certificat Studi (QCM)", "off": x.get("note") or "Journée off"}[x["kind"]]
         who = (x["ue"] + " " + UEN.get(x["ue"], "") + " · ") if x.get("ue") else ""
         e = {"uid": "s-" + x["id"], "sum": who + lab, "desc": " · ".join(i["t"] for i in x["items"]), "date": x["date"]}
-        if x["kind"] != "off": e.update(start=x["start"], end=x["end"], alarm="-PT12H")
+        if x["kind"] != "off": e.update(start=x["start"], end=x["end"], alarm="-PT2H" if after_rest(x["date"]) else "-PT12H")
         ev.append(e)
 lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Plan DCG//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
          "X-WR-CALNAME:Plan DCG", "X-WR-TIMEZONE:Europe/Paris", "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"]

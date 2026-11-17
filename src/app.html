@@ -1626,7 +1626,7 @@ function todoGroups(T){
   for (const m of PLAN.milestones){
     if (!m.todo || !m.id) continue;
     if (isMsDone(m)){ g.done.push(m); continue; }
-    if (m.kind === "replay" && m.date <= T){ g.replay.push(m); continue; }
+    if (m.kind === "replay"){ if (m.date < T) g.replay.push(m); continue; }   // dispo le lendemain du live
     g[m.date < T ? "late" : m.date <= we ? "week" : m.date <= m30 ? "month" : "later"].push(m);
   }
   return g;
@@ -1635,8 +1635,14 @@ const todoUrgent = T => { const g = todoGroups(T); return g.late.length + g.week
 function todoRow(m, T){
   const id = "td-"+m.id, on = isMsDone(m), late = !on && m.date < T && m.kind !== "replay";
   const cb = h("input",{type:"checkbox", id, class:"cb"}); cb.checked = on;
-  cb.addEventListener("change", e => { const v = e.target.checked; setMsDone(m, v); if (v) toast("Bravo, c'est fait."); });
-  const when = m.kind === "replay" && m.date <= T ? "Dispo depuis le "+fShort(m.date) : m.date === T ? "Aujourd'hui" : late ? "Prévu le "+fDayShort(m.date) : fDayShort(m.date);
+  cb.addEventListener("change", e => {
+    const v = e.target.checked, all = [...document.querySelectorAll("#screen .todo-l .cb")].filter(x => x.offsetParent !== null), i = all.indexOf(e.target);
+    const next = (all[i+1] || all[i-1] || {}).id;
+    setMsDone(m, v); if (v) toast("Bravo, c'est fait.");
+    const el = next && document.getElementById(next), sum = document.querySelector("#screen .todo-done summary");
+    if (el && el.offsetParent !== null) el.focus({preventScroll:true}); else if (sum) sum.focus({preventScroll:true});
+  });
+  const when = m.kind === "replay" && m.date < T ? "Dispo depuis le "+fShort(plusDays(m.date, 1)) : m.date === T ? "Aujourd'hui" : late ? "Prévu le "+fDayShort(m.date) : fDayShort(m.date);
   return h("label",{class:"item todo"+(on?" on":"")+(late?" late":""), for:id, style: m.ue ? "--ue:"+col(m.ue) : null}, cb, boxSVG(),
     h("span",null, h("span",{class:"kind"}, h("span",null, when), m.ue ? h("span",{class:"tue"}, h("i"), ueName(m.ue)) : null),
       h("span",{class:"txt"}, m.kind === "replay" ? m.t.replace(/^Replay à regarder · /,"") : m.t), m.note && m.kind !== "replay" ? h("span",{class:"lv"}, h("span",null, m.note)) : null));
@@ -1804,7 +1810,7 @@ function screenToday(){
   side.append(summitCard("today"));
   const wid = weekIdFor(T), wm = PLAN.weeks.find(w => w.id === wid);
   side.append(sec("Ta semaine", wm ? wLabel(wm) : ""));
-  side.append(h("div",{class:"wk"}, weekDays(wid).map(d => dayTile(d, {cur: d===T, pre:"wkt", onclick:()=>{ selWeek = weekIdFor(d); selDay = d; location.hash = "#semaine"; }}))));
+  side.append(h("div",{class:"wk"}, weekDays(wid).map(d => dayTile(d, {cur: d===T, pre:"wkt", onclick:()=>{ selWeek = weekIdFor(d); selDay = d; selMonth = d.slice(0,7); location.hash = "#semaine"; }}))));
   side.append(streakRow());
   side.append(...nextDayBlock(T));
   const lim = iso(new Date(parse(T).getTime()+21*86400000));
@@ -1832,12 +1838,12 @@ function dayPanel(d, list){
   return right;
 }
 function screenMonth(){
-  const T = today(), lastDay = PLAN.milestones.reduce((a,m) => m.date > a ? m.date : a, PLAN.end);
-  const lo = PLAN.start.slice(0,7), hi = lastDay.slice(0,7);
+  const T = today(), lo = PLAN.start.slice(0,7), hi = PLAN.end.slice(0,7);   // juin et juillet : dans « Dates clés » (Progrès)
   if (!selMonth) selMonth = (selDay || T).slice(0,7);
   if (selMonth < lo) selMonth = lo; if (selMonth > hi) selMonth = hi;
   const [y, mo] = selMonth.split("-").map(Number), d1 = new Date(y, mo-1, 1);
-  const shift = k => { const x = new Date(y, mo-1+k, 1); selMonth = iso(x).slice(0,7); selDay = null; render(); };
+  const keep = (...ids) => { for (const id of ids){ const b = document.getElementById(id); if (b && !b.disabled){ b.focus({preventScroll:true}); return; } } };
+  const shift = k => { const x = new Date(y, mo-1+k, 1); selMonth = iso(x).slice(0,7); selDay = null; render(); keep(k > 0 ? "mo-next" : "mo-prev", k > 0 ? "mo-prev" : "mo-next"); };
   const st = new Date(d1); st.setDate(1 - d1.getDay());
   const cells = []; for (let i = 0; i < 42; i++){ const x = new Date(st); x.setDate(st.getDate()+i); cells.push(iso(x)); }
   while (cells.length > 35 && cells.slice(-7).every(d => d.slice(0,7) !== selMonth)) cells.splice(-7);
@@ -1869,7 +1875,7 @@ function screenMonth(){
       h("div",{class:"bar sun", style:"margin-top:14px", role:"img", "aria-label":nd+" sur "+tracked.length+" séances faites"}, h("i",{style:"width:"+(tracked.length?Math.round(nd/tracked.length*100):0)+"%"})),
       h("div",{class:"mgrid"}, ["dim","lun","mar","mer","jeu","ven","sam"].map(w => h("span",{class:"wd","aria-hidden":"true"}, w)), cells.map(cell)),
       h("p",{class:"mleg","aria-hidden":"true"}, h("span",null, h("i",{class:"lg-s"}), "séance"), h("span",null, h("i",{class:"lg-f"}), "faite"), h("span",null, h("i",{class:"lg-d"}), "date à noter"))));
-  if (selMonth !== T.slice(0,7)) left.append(h("button",{type:"button", class:"skip back", id:"mo-back", onclick:()=>{ selMonth = T.slice(0,7); selDay = null; render(); }}, ic("left"), "Revenir à ce mois"));
+  if (selMonth !== T.slice(0,7)) left.append(h("button",{type:"button", class:"skip back", id:"mo-back", onclick:()=>{ selMonth = T.slice(0,7); selDay = null; render(); keep("mo-next", "mo-prev", "ag-mois"); }}, ic("left"), "Revenir à ce mois"));
   return [dhead(fDay(T), "Agenda"), h("div",{class:"wgrid"}, left, dayPanel(selDay, slotsM.filter(v => v.date === selDay)))];
 }
 function screenWeek(){
@@ -1902,7 +1908,7 @@ function screenWeek(){
 }
 
 /* ---- À faire ---- */
-let replayAll = false;
+let replayAll = false, doneOpen = false;
 function screenTodo(){
   const T = today(), g = todoGroups(T), n = g.late.length + g.week.filter(m => m.kind !== "replay").length;
   const out = [dhead(fDay(T), "À faire"),
@@ -1922,7 +1928,7 @@ function screenTodo(){
     h("button",{type:"button", id:"ev-"+v.id, onclick:()=>openSession(v.id)}, h("span",{class:"t num"}, fShort(v.date)), h("span",{class:"sq"}),
       h("span",null, ueName(v.ue)+" · "+(v.kind === "certificat" ? "Certificat Studi" : titleOf(v)), h("small",null, (v.kind === "certificat" ? "QCM" : "Examen blanc")+" à "+fH(v.start)+(status(v) === "done" ? " · fait" : ""))))))));
   out.push(...block("Plus tard", "", g.later));
-  if (g.done.length) out.push(h("div",{class:"meth"}, h("details",null, h("summary",null, h("span",null, "Déjà fait ("+g.done.length+")"), ic("down")),
+  if (g.done.length) out.push(h("div",{class:"meth todo-done"}, h("details",{open:doneOpen, ontoggle:e => { doneOpen = e.target.open; }}, h("summary",null, h("span",null, "Déjà fait ("+g.done.length+")"), ic("down")),
     h("div",{class:"items todo-l"}, g.done.map(m => todoRow(m, T))))));
   out.push(h("p",{class:"rule-n"}, h("b",null,"Astuce · "), "Ajoute le calendrier « Plan DCG » à ton iPhone (onglet Méthode) : tu auras un rappel la veille."));
   return out;
@@ -2002,7 +2008,7 @@ function screenMethod(){
     h("section",{class:"card-p save"},
       h("h2",null,"Ton calendrier iPhone"),
       h("p",null, "Ajoute une fois le calendrier « Plan DCG ». Tu y verras les lives, les examens blancs, les certificats et les dates limites, avec un rappel."),
-      h("p",null, "Il se met à jour tout seul. Tes séances de cours restent dans l'appli : elles bougent avec tes coches."),
+      h("p",null, "Il se met à jour avec ton plan. Tes séances de cours restent dans l'appli : elles bougent avec tes coches. En cas de doute, l'appli a raison."),
       h("div",{class:"gh"}, h("a",{class:"btn primary", id:"cal-add", href:calURL("webcal")}, ic("plus"), "Ajouter à mon calendrier"),
         h("a",{class:"btn soft", id:"cal-dl", href:calURL("https"), download:"plan-dcg.ics"}, "Télécharger le fichier"))),
     h("div",{class:"meth"},
@@ -2146,9 +2152,9 @@ function renderUE(sh){
   if (lv.length){ body.append(h("p",{class:"subhead"},"Lives et dates à venir")); body.append(msList(lv, {date:true})); }
   const res = meta.ressources || [];
   if (res.length){ body.append(h("p",{class:"subhead"},"Où trouver tes ressources")); body.append(h("ul",{class:"res"}, res.map(r => h("li",null, h("b",null, r.t), h("span",null, "Studi > "+r.ou))))); }
-  const mocks = SCHED.slots.filter(s => s.ue === u && s.kind === "examen");
+  const mocks = SCHED.slots.filter(s => s.ue === u && s.kind === "examen"), cors = SCHED.slots.filter(s => s.ue === u && s.kind === "correction");
   if (mocks.length){ body.append(h("p",{class:"subhead"},"Tes examens blancs"));
-    body.append(h("ul",{class:"tm ev"}, mocks.map(s => { const v = view_(s), sc = scores[SCHED.slots.find(z => z.ue === u && z.kind === "correction" && z.date === s.date)?.id] || {};
+    body.append(h("ul",{class:"tm ev"}, mocks.map((s, i) => { const v = view_(s), sc = (cors[i] && scores[cors[i].id]) || {};
       return h("li",{style:"--ue:"+col(u)}, h("button",{type:"button", id:"uem-"+s.id, onclick:()=>openSession(s.id)}, h("span",{class:"t num"}, fShort(s.date)), h("span",{class:"sq"}),
         h("span",null, cleanTitle(v.title).replace(/^Examen blanc · /,""), sc.note !== undefined && sc.note !== "" ? h("small",null, "Ta note : "+String(sc.note).replace(".",",")+"/20") : null))); }))); }
   sh.append(body);

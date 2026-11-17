@@ -8,20 +8,15 @@ X-WR-TIMEZONE:Europe/Paris
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:ms-2026-11-17-5d481f@plan-dcg
+UID:ev-2026-11-17-live-dcg-1700@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261117T170000
 DTEND:20261117T173000
 DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Live · Accompagnement DCG (toutes UE)
-TRIGGER:-PT30M
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-17-448ab1@plan-dcg
+UID:ev-2026-11-17-live-ue7-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE7 Management · Live · La démarche stratégique
 DTSTART:20261117T190000
@@ -34,7 +29,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-18-c7d28e@plan-dcg
+UID:ev-2026-11-18-live-ue8-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE8 SI · Replay à regarder · Essentiels du module « Appréhend
  er les défis du SI en termes de règlementation et…
@@ -51,7 +46,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-18-d312b3@plan-dcg
+UID:ev-2026-11-18-live-ue1-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE1 Droit · Live · Identifier les autres entrepreneurs individue
  ls (agriculteur\, artisan\, professionnel…
@@ -66,7 +61,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-19-d6168e@plan-dcg
+UID:ev-2026-11-19-live-ue5-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE5 Économie · Live · Les monopoles
 DTSTART:20261119T190000
@@ -79,7 +74,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-23-45c2d0@plan-dcg
+UID:ev-2026-11-23-live-ue9-2100@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE9 Compta · Replay à regarder · Les rapprochements bancaires :
   objectifs\, méthode\, soldes initiaux identiques ou…
@@ -96,20 +91,15 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-23-5d481f@plan-dcg
+UID:ev-2026-11-23-live-dcg-1200@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261123T120000
 DTEND:20261123T123000
 DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Live · Accompagnement DCG (toutes UE)
-TRIGGER:-PT30M
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-23-ce5d43@plan-dcg
+UID:ev-2026-11-23-live-ue12-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE12 Anglais · Live · Communication & strategies to be competiti
  ve : competitive advantage\, innovation…
@@ -124,7 +114,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-24-0edf97@plan-dcg
+UID:ev-2026-11-24-live-ue7-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE7 Management · Live · Les outils d'analyse de l'environnement 
  de l'entreprise
@@ -139,7 +129,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-25-d9c7b1@plan-dcg
+UID:ev-2026-11-25-live-ue1-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE1 Droit · Live · Proposer un statut pour le conjoint de l'entr
  epreneur + Évaluer les conséquences du…
@@ -154,7 +144,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-26-3ed253@plan-dcg
+UID:ev-2026-11-26-live-ue8-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE8 SI · Replay à regarder · La représentation d'un processus 
  : le diagramme BPMN \; Les progiciels au service des…
@@ -171,7 +161,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-11-26-fe3b9f@plan-dcg
+UID:ev-2026-11-26-live-ue5-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE5 Économie · Live · Les oligopoles et la concurrence monopoli
  stique
@@ -186,7 +176,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-01-0e9353@plan-dcg
+UID:ev-2026-12-01-live-ue7-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE7 Management · Live · Les outils d'analyse interne de l'entrep
  rise
@@ -201,7 +191,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-02-ab4e18@plan-dcg
+UID:ev-2026-12-02-live-ue13-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE13 Communication · Replay à regarder · Essentiels du cours «
   Maîtriser les outils de la communication orale professionnelle »…
@@ -218,7 +208,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-03-11f2ff@plan-dcg
+UID:ev-2026-12-03-live-ue8-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE8 SI · Replay à regarder · Essentiels de la modélisation des
   données (SRD) et de la manipulation des données (SQL)…
@@ -235,7 +225,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-03-5d481f@plan-dcg
+UID:ev-2026-12-03-live-dcg-1200@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261203T120000
@@ -248,7 +238,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-03-75402e@plan-dcg
+UID:ev-2026-12-03-live-ue5-1700@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE5 Économie · Live · Les modalités de la régulation des marc
  hés et de la concurrence
@@ -263,7 +253,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-03-e4084d@plan-dcg
+UID:ev-2026-12-03-live-ue1-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE1 Droit · Live · Décrire le processus de réalisation des for
  malités de la création d'une entreprise…
@@ -278,7 +268,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-07-d71f68@plan-dcg
+UID:ev-2026-12-07-live-ue9-2100@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE9 Compta · Replay à regarder · Suite sur les rapprochements b
  ancaires. Les stocks : réglementation\, coûts d'acquisition…
@@ -295,7 +285,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-07-eedb28@plan-dcg
+UID:ev-2026-12-07-live-ue12-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE12 Anglais · Live · CSR: Corporate social responsibility: defi
  nition and concepts and concrete examples
@@ -310,20 +300,15 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-08-5d481f@plan-dcg
+UID:ev-2026-12-08-live-dcg-1200@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261208T120000
 DTEND:20261208T123000
 DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Live · Accompagnement DCG (toutes UE)
-TRIGGER:-PT30M
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-08-748666@plan-dcg
+UID:ev-2026-12-08-live-ue7-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE7 Management · Live · Les stratégies de domaine
 DTSTART:20261208T190000
@@ -336,7 +321,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-10-b261c0@plan-dcg
+UID:ev-2026-12-10-live-ue8-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE8 SI · Replay à regarder · L'usage des fonctions de dénombre
  ment et de gestion du temps dans les formules de calcul…
@@ -353,7 +338,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-10-235a68@plan-dcg
+UID:ev-2026-12-10-live-ue1-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE1 Droit · Live · Analyser les prérogatives du propriétaire\,
   du nu-propriétaire\, de l'usufruitier et des…
@@ -368,7 +353,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-10-218e0e@plan-dcg
+UID:ev-2026-12-10-live-ue5-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE5 Économie · Live · L'épargne des ménages (définition\, fo
  rmes\, motifs et déterminants)
@@ -383,7 +368,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-14-f9008f@plan-dcg
+UID:ev-2026-12-14-live-ue13-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE13 Communication · Replay à regarder · Présentation de rappo
  rts au design impactant : page de garde\, illustrations\, mise en…
@@ -400,7 +385,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-14-93ce4a@plan-dcg
+UID:ev-2026-12-14-live-ue9-2100@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE9 Compta · Replay à regarder · Suite sur les stocks : valeur 
  actuelle\, dépréciations et écritures
@@ -417,7 +402,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-14-d2b6c8@plan-dcg
+UID:ev-2026-12-14-live-ue12-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE12 Anglais · Live · CSR: Evolution of CSR\, wokeism or a neces
  sity\, Evolution of CSR in the United States
@@ -432,20 +417,15 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-15-5d481f@plan-dcg
+UID:ev-2026-12-15-live-dcg-1700@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261215T170000
 DTEND:20261215T173000
 DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Live · Accompagnement DCG (toutes UE)
-TRIGGER:-PT30M
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-15-cfa69a@plan-dcg
+UID:ev-2026-12-15-live-ue7-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE7 Management · Live · La stratégie de spécialisation et de d
  iversification
@@ -460,7 +440,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-16-dd1c0e@plan-dcg
+UID:ev-2026-12-16-live-ue8-2000@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE8 SI · Replay à regarder · Essentiels du module « Appréhend
  er les défis du SI en termes de sécurité » + cas pratique
@@ -477,7 +457,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-16-ddada3@plan-dcg
+UID:ev-2026-12-16-live-ue1-1800@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE1 Droit · Live · Analyser les limites du droit de propriété
 DTSTART:20261216T180000
@@ -491,7 +471,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-17-4bcf86@plan-dcg
+UID:ev-2026-12-17-live-ue5-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE5 Économie · Live · Les déterminants de l'investissement des
   entreprises
@@ -506,7 +486,7 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-20-1769fc@plan-dcg
+UID:ev-2026-12-20-info-dcg@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste
 DTSTART;VALUE=DATE:20261220
@@ -516,11 +496,11 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Les lives de janvier : ouvre Studi > Lives et envoie-moi la li
  ste
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-21-4f7e1d@plan-dcg
+UID:ev-2026-12-21-live-ue9-2100@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE9 Compta · Replay à regarder · Cas de synthèse : opérations
   courantes\, TVA\, Stocks
@@ -537,7 +517,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-21-7cde39@plan-dcg
+UID:ev-2026-12-21-live-ue12-1900@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE12 Anglais · Live · Digital revolution : the age of the digita
  l society & the transformation of work
@@ -552,20 +532,15 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2026-12-22-5d481f@plan-dcg
+UID:ev-2026-12-22-live-dcg-1200@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Live · Accompagnement DCG (toutes UE)
 DTSTART:20261222T120000
 DTEND:20261222T123000
 DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Live · Accompagnement DCG (toutes UE)
-TRIGGER:-PT30M
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-01-10-b7bbd2@plan-dcg
+UID:ms-ue13-p12@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE13 Communication · Dépose les parties 1 et 2 du rapport UE13 e
  t la fiche de suivi n° 1
@@ -578,26 +553,26 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE13 Communication · Dépose les parties 1 et 2 du rapport UE
  13 et la fiche de suivi n° 1
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-01-17-a99ac8@plan-dcg
+UID:ms-cyclades@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Inscris-toi aux écrits du DCG sur Cyclades
-DTSTART;VALUE=DATE:20270117
-DTEND;VALUE=DATE:20270118
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
 TRANSP:TRANSPARENT
 DESCRIPTION:En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cycl
  ades.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Inscris-toi aux écrits du DCG sur Cyclades
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-01-26-7ee2cd@plan-dcg
+UID:ms-bilan-ue@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Bilan décisif avec moi : 7 UE à l'inscription\, ou une en moins 
  ?
@@ -612,7 +587,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-02-07-911292@plan-dcg
+UID:ms-ue13-p3@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE13 Communication · Dépose la partie 3 du rapport UE13 et la fi
  che de suivi n° 2
@@ -625,11 +600,11 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE13 Communication · Dépose la partie 3 du rapport UE13 et l
  a fiche de suivi n° 2
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-02-21-33c120@plan-dcg
+UID:ms-ue13-integral@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE13 Communication · Dépose le rapport UE13 intégral
 DTSTART;VALUE=DATE:20270221
@@ -640,11 +615,11 @@ DESCRIPTION:Limite Studi : fin février. Studi > Évaluations > Passer l'e
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE13 Communication · Dépose le rapport UE13 intégral
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-03-16-56cf11@plan-dcg
+UID:ms-fin-p1@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Fin du premier passage\, sauf UE12 (fin le 4 avril) et UE9 (fin le
   11 avril)
@@ -664,7 +639,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE7 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE7 Management · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -679,7 +654,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE1 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE1 Droit · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -707,7 +682,7 @@ DTEND;VALUE=DATE:20270324
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-03-28-f569f4@plan-dcg
+UID:ms-evals-mars@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Vérifie sur Studi les évaluations qui restent à faire
 DTSTART;VALUE=DATE:20270328
@@ -718,7 +693,7 @@ DESCRIPTION:Studi conseille de finir avant fin mars. Certificats UE9 et UE
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Vérifie sur Studi les évaluations qui restent à faire
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -733,7 +708,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE8 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE8 SI · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -748,7 +723,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE5 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE5 Économie · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -777,7 +752,7 @@ TRIGGER:-PT12H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-04-01-0b3073@plan-dcg
+UID:ms-objectif-examen@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Envoie-moi les dates des examens blancs Studi « Objectif examen 
  »
@@ -869,7 +844,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE9 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE9 Compta · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -884,7 +859,7 @@ DESCRIPTION:Passe le certificat Studi de l'UE12 (onglet Évaluations) : il
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE12 Anglais · Certificat Studi (QCM)
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -921,7 +896,7 @@ TRIGGER:-PT12H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-04-25-aff589@plan-dcg
+UID:ms-ue9-eval3@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:UE9 Compta · En plus\, si tu as de l'avance : évaluation d'entra
  înement 3 de l'UE9
@@ -933,7 +908,7 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE9 Compta · En plus\, si tu as de l'avance : évaluation d'e
  ntraînement 3 de l'UE9
-TRIGGER:-PT6H
+TRIGGER:PT8H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -982,7 +957,7 @@ DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 12 > C
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE12 Anglais · Examen blanc · Annale 2026
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -1030,7 +1005,7 @@ DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 1 >
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE1 Droit · Examen blanc · Sujet zéro 2027
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -1078,7 +1053,7 @@ DESCRIPTION:Ouvre l'énoncé « Annale 2024 » : Médiathèque > UE 12 > C
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:UE12 Anglais · Examen blanc · Annale 2024
-TRIGGER:-PT12H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -1107,7 +1082,7 @@ TRIGGER:-PT12H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-05-21-07b526@plan-dcg
+UID:ms-convocation@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Prépare ta convocation\, ta pièce d'identité et ta calculatrice
 DTSTART;VALUE=DATE:20270521
@@ -1123,7 +1098,7 @@ TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-05-24-0f0475@plan-dcg
+UID:ms-ecrits@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Écrits du DCG : en mai et juin (dates officielles à paraître)
 DTSTART;VALUE=DATE:20270524
@@ -1131,7 +1106,7 @@ DTEND;VALUE=DATE:20270525
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-06-11-cb0608@plan-dcg
+UID:ms-chavouot@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe
   ce jour-là
@@ -1140,7 +1115,7 @@ DTEND;VALUE=DATE:20270612
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-07-01-7c5ac3@plan-dcg
+UID:ms-mariage-soeur@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Juillet : mariage de ta sœur. Rien n'est prévu\, profite !
 DTSTART;VALUE=DATE:20270701
@@ -1148,7 +1123,7 @@ DTEND;VALUE=DATE:20270702
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ms-2027-07-08-a8d168@plan-dcg
+UID:ms-resultats@plan-dcg
 DTSTAMP:20261116T000000Z
 SUMMARY:Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)
 DTSTART;VALUE=DATE:20270708

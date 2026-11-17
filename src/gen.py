@@ -367,28 +367,28 @@ def phase_of(wk):
     return 1 if d <= D(2027, 3, 14) else (2 if d <= D(2027, 4, 18) else 3)
 
 MILESTONES = [
-    {"date": "2027-01-10", "t": "Dépose les parties 1 et 2 du rapport UE13 et la fiche de suivi n° 1", "ue": "UE13", "todo": True,
+    {"id": "ms-ue13-p12", "date": "2027-01-10", "t": "Dépose les parties 1 et 2 du rapport UE13 et la fiche de suivi n° 1", "ue": "UE13", "todo": True,
      "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"},
-    {"date": "2027-01-17", "t": "Inscris-toi aux écrits du DCG sur Cyclades", "todo": True,
+    {"id": "ms-cyclades", "date": "2027-01-24", "t": "Inscris-toi aux écrits du DCG sur Cyclades", "todo": True,
      "note": "En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cyclades."},
-    {"date": "2027-01-26", "t": "Bilan décisif avec moi : 7 UE à l'inscription, ou une en moins ?", "todo": True},
-    {"date": "2027-02-07", "t": "Dépose la partie 3 du rapport UE13 et la fiche de suivi n° 2", "ue": "UE13", "todo": True,
+    {"id": "ms-bilan-ue", "date": "2027-01-26", "t": "Bilan décisif avec moi : 7 UE à l'inscription, ou une en moins ?", "todo": True},
+    {"id": "ms-ue13-p3", "date": "2027-02-07", "t": "Dépose la partie 3 du rapport UE13 et la fiche de suivi n° 2", "ue": "UE13", "todo": True,
      "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"},
-    {"date": "2027-02-21", "t": "Dépose le rapport UE13 intégral", "ue": "UE13", "todo": True,
+    {"id": "ms-ue13-integral", "date": "2027-02-21", "t": "Dépose le rapport UE13 intégral", "ue": "UE13", "todo": True,
      "note": "Limite Studi : fin février. Studi > Évaluations > Passer l'examen"},
-    {"date": "2027-03-16", "t": None},   # calculé plus bas
-    {"date": "2027-03-28", "t": "Vérifie sur Studi les évaluations qui restent à faire", "todo": True,
+    {"id": "ms-fin-p1", "date": "2027-03-16", "t": None},   # calculé plus bas
+    {"id": "ms-evals-mars", "date": "2027-03-28", "t": "Vérifie sur Studi les évaluations qui restent à faire", "todo": True,
      "note": "Studi conseille de finir avant fin mars. Certificats UE9 et UE12 : le 18 avril, après leur programme."},
-    {"date": "2027-04-01", "t": "Envoie-moi les dates des examens blancs Studi « Objectif examen »", "todo": True,
+    {"id": "ms-objectif-examen", "date": "2027-04-01", "t": "Envoie-moi les dates des examens blancs Studi « Objectif examen »", "todo": True,
      "note": "Studi les propose en avril, avec des lives « Objectif examen »."},
-    {"date": "2027-04-25", "t": "En plus, si tu as de l'avance : évaluation d'entraînement 3 de l'UE9", "ue": "UE9", "todo": True,
+    {"id": "ms-ue9-eval3", "date": "2027-04-25", "t": "En plus, si tu as de l'avance : évaluation d'entraînement 3 de l'UE9", "ue": "UE9", "todo": True,
      "note": "Studi > onglet Évaluations"},
-    {"date": "2027-05-21", "t": "Prépare ta convocation, ta pièce d'identité et ta calculatrice", "todo": True,
+    {"id": "ms-convocation", "date": "2027-05-21", "t": "Prépare ta convocation, ta pièce d'identité et ta calculatrice", "todo": True,
      "note": "48 h avant la première épreuve. Pas de téléphone pendant l'épreuve."},
-    {"date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître)"},
-    {"date": "2027-06-11", "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"},
-    {"date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
-    {"date": "2027-07-08", "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"},
+    {"id": "ms-ecrits", "date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître)"},
+    {"id": "ms-chavouot", "date": "2027-06-11", "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"},
+    {"id": "ms-mariage-soeur", "date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
+    {"id": "ms-resultats", "date": "2027-07-08", "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"},
 ]
 
 # --- fin du premier passage : ce qui est vraiment fini le 16/03
@@ -417,7 +417,8 @@ for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
     if e.get("type") == "replay" or e["date"] < START.isoformat():
         continue
     d = D.fromisoformat(e["date"])
-    m = {"date": e["date"], "ue": e["ue"], "kind": e.get("type", "info")}
+    m = {"id": "ev-" + e["date"] + "-" + e.get("type", "info") + "-" + (e["ue"] or "dcg").lower() + ("-" + e["debut"].replace(":", "") if e.get("debut") else ""),
+         "date": e["date"], "ue": e["ue"], "kind": e.get("type", "info")}
     if e.get("type") == "live" and is_late(e):
         m["kind"] = "replay"
         m["t"] = "Replay à regarder · " + short(e["titre"])
@@ -427,6 +428,7 @@ for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
         m["t"] = "Live · " + short(e["titre"])
         m["start"], m["end"] = e["debut"], e["fin"]
         clash = [s for s in sessions if s["date"] == e["date"] and s["kind"] != "off" and s["start"] < e["fin"] and e["debut"] < s["end"]]
+        if clash: m["clash"] = True
         m["note"] = "Pendant ta séance : regarde plutôt le replay." if clash else \
                     ("Facultatif. Si tu es au travail, regarde le replay." if d.weekday() in (2, 3, 4) and e["debut"] < "18:00" else
                      "Facultatif. Sinon, regarde le replay.")
@@ -452,7 +454,7 @@ def msid(m):
     base = unicodedata.normalize("NFD", m["t"]).encode("ascii", "ignore").decode().lower()
     return "ms-" + m["date"] + "-" + hashlib.sha1((base + (m.get("ue") or "")).encode()).hexdigest()[:6]
 for m in MILESTONES:
-    m["id"] = msid(m)
+    if not m.get("id"): m["id"] = msid(m)   # repli : les jalons ont normalement un id écrit à la main
 assert len({m["id"] for m in MILESTONES}) == len(MILESTONES)
 
 # --- tes contraintes : on vérifie chaque séance
@@ -469,7 +471,7 @@ ue_meta = {u: {"name": UE_NAMES[u], "epreuve": DATA[u].get("epreuve", {}),
            for u in UE_NAMES}
 
 plan = {"generated": "2026-11-16", "start": START.isoformat(), "end": END.isoformat(), "exam": EXAM.isoformat(),
-        "ues": ue_meta, "milestones": MILESTONES,
+        "ues": ue_meta, "milestones": MILESTONES, "yomtov": sorted(d.isoformat() for d in YOM_TOV),
         "weeks": [{"id": wk, "phase": phase_of(wk), "n": i} for i, wk in enumerate(sorted(weeks))],
         "sessions": sessions}
 json.dump(plan, open(os.path.join(HERE, "..", "plan.json"), "w"), ensure_ascii=False)
