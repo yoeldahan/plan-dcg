@@ -3,7 +3,8 @@
 Appli de planning de révision du DCG de Yoel (UE1, UE5, UE7, UE8, UE9, UE12 et UE13, session 2027), installée sur son iPhone depuis https://yoeldahan.github.io/plan-dcg/ (GitHub Pages, branche `main`).
 
 ## Qui l'utilise
-- Yoel révise le lundi (9 h – 13 h, 14 h – 17 h), le mardi (9 h – 13 h, 14 h – 18 h) et le dimanche (10 h 30 – 15 h 30). Mercredi à vendredi : alternance.
+- Yoel révise le lundi et le mardi (7 h de travail : 9 h – 13 h, 14 h – 17 h ; bilan du mardi à 17 h) et le dimanche (10 h 30 – 15 h 30). Mercredi à vendredi : alternance. Jamais après 20 h.
+- Départ en retard : s'il reporte la 1re séance du jour après son heure, il commence à l'heure du report. Toute la journée glisse (1 h de pause après 4 h, rien après 20 h, le bilan reste avant 20 h). Ce qui dépasse passe aux jours suivants. Aucune donnée nouvelle : on lit `skips/<id>.at` (`shiftLateDays` dans `src/app.html`). Un report d'une autre séance la fait juste glisser aux jours suivants.
 - Jamais de séance le samedi (Shabbat) ni pendant Yom Tov (Pessah : 22, 23, 28 et 29 avril 2027 ; Chavouot : 11 et 12 juin 2027).
 - Toute l'interface est en français, au tutoiement, avec des phrases courtes et simples : il se perd vite dans les longs textes.
 

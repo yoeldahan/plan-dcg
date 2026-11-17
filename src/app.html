@@ -361,6 +361,10 @@ button.s-head .ic{width:18px;height:18px;color:var(--ink3);flex:none}
 .res li{padding:9px 0;border-bottom:1px solid var(--rule);font:500 14px/1.4 var(--f-text)}
 .res b{display:block;font-weight:600}
 .res span{color:var(--ink2);font-size:13.5px}
+.late-n{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--gold-soft);font:500 14.5px/1.42 var(--f-text);color:var(--ink)}
+.late-n .ic{color:var(--acc-ic);margin-top:1px;flex:none}
+.late-n p{flex:1}
+.late-n .more{margin:-10px 0 -12px}
 .where{margin-top:12px;font:500 13.5px/1.4 var(--f-text);color:var(--ink3)}
 .muted.small{font-size:13.5px;margin-top:6px}
 .back{margin-top:14px}
@@ -886,9 +890,48 @@ function allSlots(){
   for (const id in overrides){ const o = overrides[id]; if (!SID_ITEMS[id] && !PLAN.sessions.some(s=>s.id===id) && o && !o.cancelled && o.date && o.start) out.push(Object.assign({id, items:[], kind:"cours", extra:true}, o)); }
   for (const id in extras){ const e = extras[id]; if (e && e.date && e.start) out.push(Object.assign({id, kind:"cours", items:[], extra:true, title:""}, e)); }
   out.sort((a,b)=> (a.date+a.start).localeCompare(b.date+b.start));
-  return out;
+  return shiftLateDays(out);
 }
-const isSkipped = s => !!(skips[s.id] || skips[s.date]);
+/* départ en retard : tu reportes la 1re séance du jour après son heure de début = tu commences à l'heure du report.
+   Toute la journée glisse (même travail, 1 h de pause après 4 h, jamais après 20 h) ; ce qui dépasse 20 h passe aux jours suivants.
+   Rien de nouveau n'est enregistré : on lit l'heure du report (skips/<id>.at). */
+const LATE_END = "20:00";
+function lateStartOf(ds, d){
+  if (skips[d]) return null;
+  const first = ds[0], sk = first && skips[first.id];
+  if (!sk || !sk.at || sk.day) return null;
+  const t = new Date(sk.at); if (isNaN(t) || iso(t) !== d) return null;
+  const m = t.getHours()*60 + t.getMinutes(), r = Math.ceil(m/5)*5, hm = pad(Math.floor(r/60))+":"+pad(r%60);
+  return hm > first.start && hm < LATE_END ? hm : null;
+}
+function shiftLateDays(out){
+  const byDate = new Map();
+  for (const s of out) if (!s.extra && s.kind !== "off"){ if (!byDate.has(s.date)) byDate.set(s.date, []); byDate.get(s.date).push(s); }
+  const repl = new Map(), drop = new Set();
+  for (const [d, ds] of byDate){
+    const S = lateStartOf(ds, d); if (!S) continue;
+    let cur = S, work = 0, lunch = false, cut = false;
+    const bil = ds.some(s => s.kind === "bilan"), stop = bil ? addMin(LATE_END, -10) : LATE_END;   // le bilan du mardi tient toujours avant 20 h
+    ds.forEach((s, i) => {
+      const dur = mins(s.start, s.end);
+      if (i > 0){
+        const gap = mins(ds[i-1].end, s.start);
+        if (!lunch && work >= 225){ cur = addMin(cur, 60); lunch = true; }   // 1 h de pause après environ 4 h de travail
+        else if (gap > 0 && gap < 45) cur = addMin(cur, gap);
+      }
+      const ns = Object.assign({}, s, {start:cur, end:addMin(cur, dur), late:S, plannedStart:s.start});
+      if (i === 0) ns.lateMark = true;
+      if (s.kind === "bilan"){ if (ns.start > stop){ ns.start = stop; ns.end = LATE_END; } repl.set(s.id, ns); }
+      else if (ns.start >= stop){ drop.add(s.id); cut = true; }
+      else { if (ns.end > stop){ ns.end = stop; cut = true; } repl.set(s.id, ns); }
+      cur = addMin(cur, dur); work += dur;
+    });
+    if (cut && repl.get(ds[0].id)) repl.get(ds[0].id).cut = true;
+  }
+  if (!repl.size && !drop.size) return out;
+  return out.filter(s => !drop.has(s.id)).map(s => repl.get(s.id) || s).sort((a,b)=> (a.date+a.start).localeCompare(b.date+b.start));
+}
+const isSkipped = s => !!((skips[s.id] && !s.lateMark) || skips[s.date]);
 
 function pack(list, q, S, carryKey, carry){
   // remplit un créneau de S minutes à partir de la liste d'indices restants (ordre du programme)
@@ -1040,8 +1083,12 @@ function setSessionDone(v, on){
   refresh();
 }
 function skipSession(v, on){
-  if (on){ skips[v.id] = {at:new Date().toISOString()}; persist("skips/"+v.id, skips[v.id]); toast("Séance reportée : la suite se décale automatiquement."); }
-  else { delete skips[v.id]; remove("skips/"+v.id); toast("Séance remise au planning."); }
+  if (on){
+    skips[v.id] = {at:new Date().toISOString()}; persist("skips/"+v.id, skips[v.id]);
+    const late = lateStartOf(sessionsRaw(v.date), v.date);
+    toast(late ? "Tu commences à "+fH(late)+" : toute ta journée est décalée." : "Séance reportée : la suite se décale automatiquement.");
+  }
+  else { const was = v.raw && v.raw.lateMark; delete skips[v.id]; remove("skips/"+v.id); toast(was ? "Ta journée reprend ses horaires prévus." : "Séance remise au planning."); }
   refresh();
 }
 function skipDay(d, on){
@@ -1576,6 +1623,8 @@ function agenda(list, o){
   return ol;
 }
 function sessionsOn(d){ return SCHED.slots.filter(s=>s.date===d).map(view_); }
+/* les séances du jour à leur heure prévue (avant un éventuel décalage) */
+const sessionsRaw = d => SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").map(s => s.late ? Object.assign({}, s, {start:s.plannedStart}) : s).sort((a,b)=>a.start.localeCompare(b.start));
 function dayKind(d){
   const wd = parse(d).getDay(), td = d === today();
   if (OFF_DATES[d]) return "Yom Tov ("+OFF_DATES[d]+") : pas de révision.";
@@ -1802,6 +1851,13 @@ function screenToday(){
     const tot = work.reduce((a,v)=>a+(v.content && v.items.length ? minutesOf(v) : mins(v.start,v.end)),0);
     main.append(sec("Agenda", plural(work.length,"séance")+" · "+hmd(tot),
       h("button",{type:"button", class:"skip inline only-wide", id:"skip-day-d", onclick:()=>confirmSkipDay(T)}, ic("moon"), "Je n'ai pas pu travailler aujourd'hui")));
+    const lt = SCHED.slots.find(s => s.date === T && s.lateMark);
+    if (lt){
+      const last = work[work.length-1];
+      main.append(h("aside",{class:"late-n", id:"late-n"}, ic("clock"), h("p",null, h("b",null, "Tu as commencé à "+fH(lt.late)+". "),
+        "Ta journée est décalée et finit à "+fH(last.end)+"."+(lt.cut ? " Le reste passe aux prochains jours." : "")),
+        h("button",{type:"button", class:"more", id:"late-undo", onclick:()=>{ const v = slotView(lt.id); if (v) skipSession(v, false); }}, "Annuler")));
+    }
     main.append(agenda(list, {today:true, heroId: hero && hero.id}));
     main.append(h("button",{type:"button", class:"skip no-wide", id:"skip-day", onclick:()=>confirmSkipDay(T)}, ic("moon"), "Je n'ai pas pu travailler aujourd'hui"));
   }
@@ -2016,6 +2072,7 @@ function screenMethod(){
         h("p",null,"Tu coches ce que tu fais. Ce que tu n'as pas fait glisse sur la séance suivante de la matière. Tu reprends là où tu t'es arrêté."),
         h("ul",null,
           h("li",null,"Une séance impossible : ouvre-la et touche « Reporter »."),
+          h("li",null,"Tu commences en retard : reporte la 1re séance du matin. Toute ta journée glisse (1 h de pause après 4 h, jamais après 20 h)."),
           h("li",null,"Une journée impossible : sur l'écran Aujourd'hui, « Je n'ai pas pu travailler aujourd'hui »."),
           h("li",null,"Du temps en plus : « Ajouter une séance » (le bouton +) te donne la suite du programme."),
           h("li",null,"Si tu prends du retard, les créneaux de révision du dimanche servent à rattraper."),
@@ -2031,7 +2088,7 @@ function screenMethod(){
         h("li",null,"Conditions réelles : 3 h ou 4 h chrono, sans cours, téléphone dans une autre pièce."),
         h("li",null,"L'après-midi : corrigé et commentaire audio, puis note-toi sur 20 dans la séance « Correction »."),
         h("li",null,"Tu peux m'envoyer les photos de ta copie : je te corrige."))),
-      d("Ta semaine", false, h("p",null,"Lundi : 9 h – 13 h et 14 h – 17 h. Mardi : 9 h – 13 h et 14 h – 18 h. Dimanche : 10 h 30 – 15 h 30. Mercredi à vendredi : alternance. Jamais après 20 h. Rien pendant Shabbat ni les jours de Yom Tov. Dimanche vers 9 h 35 : le mot de la semaine. Mardi 17 h 50 : ton bilan, puis je t'écris vers 18 h 20.")),
+      d("Ta semaine", false, h("p",null,"Lundi et mardi : 7 h de travail, 9 h – 13 h et 14 h – 17 h. Dimanche : 10 h 30 – 15 h 30. Mercredi à vendredi : alternance. Jamais après 20 h. Rien pendant Shabbat ni les jours de Yom Tov. Dimanche vers 9 h 35 : le mot de la semaine. Mardi 17 h : ton bilan, puis je t'écris vers 18 h 20.")),
       d("Les cartes Anki", false, h("p",null,"Recto une question, verso la réponse. 15 minutes le dimanche et, si tu peux, 10 minutes le soir. C'est ce qui remplace le bachotage de dernière minute.")))
   ];
 }

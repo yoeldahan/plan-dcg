@@ -621,8 +621,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ms-fin-p1@plan-dcg
 DTSTAMP:20261116T000000Z
-SUMMARY:Fin du premier passage\, sauf UE12 (fin le 4 avril) et UE9 (fin le
-  11 avril)
+SUMMARY:Fin du premier passage\, sauf UE12 (fin le 28 mars) et UE9 (fin le
+  4 avril)
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
 TRANSP:TRANSPARENT

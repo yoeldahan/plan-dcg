@@ -8,24 +8,29 @@
    "date": "2027-03-14",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE1",
+   "ue": "UE12",
    "kind": "cours",
-   "title": "M9 · Mesurer les conséquences des responsabilités civiles de l'entrepreneur individuel",
+   "title": "M7 → M8 · Understanding what is at stake with energy",
    "items": [
     {
-     "k": "L",
-     "t": "Responsabilité civile et responsabilité pénale",
+     "k": "C",
+     "t": "Cas Robots are taking our jobs (2e partie)",
      "m": 45
     },
     {
      "k": "L",
-     "t": "Mise en œuvre de la responsabilité civile et causes d'exonération",
-     "m": 45
+     "t": "A double constraint",
+     "m": 30
     },
     {
      "k": "L",
-     "t": "Produits défectueux et responsabilité environnementale",
-     "m": 45
+     "t": "Towards the end of fossil fuels",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Shifting to renewable energies",
+     "m": 30
     }
    ],
    "week": "2027-03-14"
@@ -119,9 +124,9 @@
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-15-1100",
+   "id": "2027-03-15-1045",
    "date": "2027-03-15",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -164,22 +169,22 @@
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-15-1545",
+   "id": "2027-03-15-1530",
    "date": "2027-03-15",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
-   "ue": "UE1",
+   "ue": "UE12",
    "kind": "cours",
-   "title": "M9 → M10 · Établir la preuve des droits",
+   "title": "M8 · Understanding what is at stake with energy",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Apprécier les conséquences des responsabilités civiles",
-     "m": 45
+     "k": "L",
+     "t": "Energy, geopolitics and social justice",
+     "m": 30
     },
     {
-     "k": "L",
-     "t": "La preuve des droits",
+     "k": "A",
+     "t": "Application : what is at stake with energy",
      "m": 45
     }
    ],
@@ -203,35 +208,47 @@
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-16-1100",
+   "id": "2027-03-16-1045",
    "date": "2027-03-16",
-   "start": "11:00",
-   "end": "12:15",
-   "ue": "UE1",
-   "kind": "exercices",
-   "title": "M10 · Établir la preuve des droits",
+   "start": "10:45",
+   "end": "11:45",
+   "ue": "UE12",
+   "kind": "cours",
+   "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Établir la preuve des droits",
-     "m": 45
+     "k": "L",
+     "t": "Globalization (+ 4 vidéos) (1re partie)",
+     "m": 30,
+     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
+    },
+    {
+     "k": "L",
+     "t": "Globalization (+ 4 vidéos) (2e partie)",
+     "m": 30,
+     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-16-1215",
+   "id": "2027-03-16-1145",
    "date": "2027-03-16",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
+   "kind": "exercices",
+   "title": "M9 · Globalisation and development",
    "items": [
     {
-     "k": "L",
-     "t": "Shifting to renewable energies",
-     "m": 30
+     "k": "C",
+     "t": "Cas « Is free trade being threatened? » (1re partie)",
+     "m": 45
+    },
+    {
+     "k": "C",
+     "t": "Cas « Is free trade being threatened? » (2e partie)",
+     "m": 45
     }
    ],
    "week": "2027-03-14"
@@ -259,50 +276,33 @@
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-16-1600",
+   "id": "2027-03-16-1545",
    "date": "2027-03-16",
-   "start": "16:00",
-   "end": "17:15",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
-   "items": [
-    {
-     "k": "L",
-     "t": "Energy, geopolitics and social justice",
-     "m": 30
-    },
-    {
-     "k": "A",
-     "t": "Application : what is at stake with energy",
-     "m": 45
-    }
-   ],
-   "week": "2027-03-14"
-  },
-  {
-   "id": "2027-03-16-1715",
-   "date": "2027-03-16",
-   "start": "17:15",
-   "end": "17:50",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE12",
    "kind": "cours",
    "title": "M9 · Globalisation and development",
    "items": [
     {
      "k": "L",
-     "t": "Globalization (+ 4 vidéos) (1re partie)",
-     "m": 30,
-     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
+     "t": "At an international level",
+     "m": 30
+    },
+    {
+     "k": "V",
+     "t": "Free Trade Areas (vidéo 25 min)",
+     "m": 50,
+     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-03-14"
   },
   {
-   "id": "2027-03-16-1750",
+   "id": "2027-03-16-1700",
    "date": "2027-03-16",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -715,7 +715,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

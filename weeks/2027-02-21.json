@@ -126,9 +126,9 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-22-1100",
+   "id": "2027-02-22-1045",
    "date": "2027-02-22",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -177,23 +177,18 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-22-1545",
+   "id": "2027-02-22-1530",
    "date": "2027-02-22",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
-   "kind": "cours",
-   "title": "M7 · Accompagner le client dans ses relations contractuelles",
+   "kind": "exercices",
+   "title": "M8 · Accompagner le client dans ses contrats courants",
    "items": [
     {
-     "k": "L",
-     "t": "La portée d'un engagement contractuel",
-     "m": 45
-    },
-    {
-     "k": "L",
-     "t": "Les clauses contractuelles",
-     "m": 45
+     "k": "C",
+     "t": "Cas Mme D contre Mme K",
+     "m": 90
     }
    ],
    "week": "2027-02-21"
@@ -226,10 +221,10 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-23-1100",
+   "id": "2027-02-23-1045",
    "date": "2027-02-23",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "exercices",
    "title": "M9 · Analyser le système d'information au regard de la performance des processus",
@@ -243,9 +238,9 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-23-1215",
+   "id": "2027-02-23-1145",
    "date": "2027-02-23",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
@@ -253,8 +248,18 @@
    "items": [
     {
      "k": "V",
-     "t": "Customer-centric (vidéo 13 min)",
-     "m": 26
+     "t": "New technologies (vidéo 30 min) (1re partie)",
+     "m": 30
+    },
+    {
+     "k": "V",
+     "t": "New technologies (vidéo 30 min) (2e partie)",
+     "m": 30
+    },
+    {
+     "k": "V",
+     "t": "What the future holds in store (vidéo 18 min)",
+     "m": 36
     }
    ],
    "week": "2027-02-21"
@@ -282,10 +287,10 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-23-1600",
+   "id": "2027-02-23-1545",
    "date": "2027-02-23",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M7 → M8 · Identifier les effets et les enjeux de la mondialisation des économies",
@@ -304,27 +309,10 @@
    "week": "2027-02-21"
   },
   {
-   "id": "2027-02-23-1715",
+   "id": "2027-02-23-1700",
    "date": "2027-02-23",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M7 · The digital revolution",
-   "items": [
-    {
-     "k": "L",
-     "t": "Digital tools and assets in the business world",
-     "m": 30
-    }
-   ],
-   "week": "2027-02-21"
-  },
-  {
-   "id": "2027-02-23-1750",
-   "date": "2027-02-23",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -737,7 +725,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

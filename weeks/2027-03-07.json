@@ -10,21 +10,21 @@
    "end": "12:30",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M8 · Accompagner le client dans ses contrats courants",
+   "title": "M9 · Mesurer les conséquences des responsabilités civiles de l'entrepreneur individuel",
    "items": [
     {
-     "k": "C",
-     "t": "Cas Mme D contre Mme K",
-     "m": 90
-    },
-    {
      "k": "L",
-     "t": "La protection des parties pour chacun des contrats",
+     "t": "Mise en œuvre de la responsabilité civile et causes d'exonération",
      "m": 45
     },
     {
      "k": "L",
-     "t": "Le choix d'une sûreté et ses principaux effets",
+     "t": "Produits défectueux et responsabilité environnementale",
+     "m": 45
+    },
+    {
+     "k": "A",
+     "t": "Application : Apprécier les conséquences des responsabilités civiles",
      "m": 45
     }
    ],
@@ -109,14 +109,20 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-08-1100",
+   "id": "2027-03-08-1045",
    "date": "2027-03-08",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
-   "title": "M11 · Appréhender les défis du système d'information en termes de sécurité",
+   "title": "M10 → M11 · Appréhender les défis du système d'information en termes de sécurité",
    "items": [
+    {
+     "k": "A",
+     "t": "Méthodologie DCG UE8 : réglementation et durabilité du SI",
+     "m": 50,
+     "live": "Replay du live du mer. 18/11 (Studi > Lives)"
+    },
     {
      "k": "L",
      "t": "Sécurité du SI : leçons 1 et 2 du module (voir plateforme)",
@@ -148,17 +154,22 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-08-1545",
+   "id": "2027-03-08-1530",
    "date": "2027-03-08",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
-   "kind": "exercices",
-   "title": "M8 · Accompagner le client dans ses contrats courants",
+   "kind": "cours",
+   "title": "M10 · Établir la preuve des droits",
    "items": [
     {
+     "k": "L",
+     "t": "La preuve des droits",
+     "m": 45
+    },
+    {
      "k": "A",
-     "t": "Application : Accompagner le client dans ses contrats courants",
+     "t": "Application : Établir la preuve des droits",
      "m": 45
     }
    ],
@@ -217,10 +228,10 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-09-1100",
+   "id": "2027-03-09-1045",
    "date": "2027-03-09",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M11 · Appréhender les défis du système d'information en termes de sécurité",
@@ -234,18 +245,23 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-09-1215",
+   "id": "2027-03-09-1145",
    "date": "2027-03-09",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
+   "title": "M7 · The digital revolution",
    "items": [
     {
      "k": "L",
-     "t": "A double constraint",
+     "t": "Big tech controversies",
      "m": 30
+    },
+    {
+     "k": "C",
+     "t": "Cas Robots are taking our jobs (1re partie)",
+     "m": 45
     }
    ],
    "week": "2027-03-07"
@@ -273,10 +289,10 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-09-1600",
+   "id": "2027-03-09-1545",
    "date": "2027-03-09",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M8 · Identifier les effets et les enjeux de la mondialisation des économies",
@@ -290,27 +306,10 @@
    "week": "2027-03-07"
   },
   {
-   "id": "2027-03-09-1715",
+   "id": "2027-03-09-1700",
    "date": "2027-03-09",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M8 · Understanding what is at stake with energy",
-   "items": [
-    {
-     "k": "L",
-     "t": "Towards the end of fossil fuels",
-     "m": 30
-    }
-   ],
-   "week": "2027-03-07"
-  },
-  {
-   "id": "2027-03-09-1750",
-   "date": "2027-03-09",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -723,7 +722,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

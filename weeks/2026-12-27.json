@@ -99,14 +99,19 @@
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-28-1100",
+   "id": "2026-12-28-1045",
    "date": "2026-12-28",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
    "title": "M5 · Appréhender les solutions informatiques du système d'information",
    "items": [
+    {
+     "k": "L",
+     "t": "L'interopérabilité et les formats d'échange",
+     "m": 45
+    },
     {
      "k": "L",
      "t": "Les échanges dématérialisés",
@@ -143,18 +148,25 @@
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-28-1545",
+   "id": "2026-12-28-1530",
    "date": "2026-12-28",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M4 · Qualifier la personne juridique et ses biens",
+   "title": "M5 · Accompagner un entrepreneur individuel dans son activité",
    "items": [
     {
      "k": "L",
-     "t": "Le patrimoine et la classification des biens",
-     "m": 45
+     "t": "L'entrepreneur individuel et le statut du commerçant",
+     "m": 45,
+     "live": "Replay du jeu. 12/11 (Studi > Lives > Replays) · Replay du jeu. 05/11 (Studi > Lives > Replays)"
+    },
+    {
+     "k": "L",
+     "t": "Les types d'entrepreneurs et les conditions d'exercice d'une activité indépendante",
+     "m": 45,
+     "live": "Live le mer. 18/11 à 18 h, puis en replay (Studi > Lives)"
     }
    ],
    "week": "2026-12-27"
@@ -212,36 +224,37 @@
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-29-1100",
+   "id": "2026-12-29-1045",
    "date": "2026-12-29",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
-   "kind": "cours",
-   "title": "M5 → M6 · Comprendre les choix organisationnels liés au système d'information, nécessaires pour s'adapter à son environnement",
+   "kind": "exercices",
+   "title": "M5 · Appréhender les solutions informatiques du système d'information",
    "items": [
     {
      "k": "A",
      "t": "Méthodologie DCG UE8 : étudier les échanges de données",
      "m": 50
-    },
-    {
-     "k": "L",
-     "t": "L'audit du système d'information",
-     "m": 45
     }
    ],
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-29-1215",
+   "id": "2026-12-29-1145",
    "date": "2026-12-29",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
    "title": "M4 · Corporate Social Responsibility",
    "items": [
+    {
+     "k": "L",
+     "t": "Corporate Social Responsibility",
+     "m": 30,
+     "live": "Live le lun. 07/12 à 19 h, puis en replay (Studi > Lives)"
+    },
     {
      "k": "L",
      "t": "Environmental, social and governance factors",
@@ -275,10 +288,10 @@
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-29-1600",
+   "id": "2026-12-29-1545",
    "date": "2026-12-29",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M5 · Identifier les enjeux de la croissance économique",
@@ -297,33 +310,10 @@
    "week": "2026-12-27"
   },
   {
-   "id": "2026-12-29-1715",
+   "id": "2026-12-29-1700",
    "date": "2026-12-29",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M4 · Corporate Social Responsibility",
-   "items": [
-    {
-     "k": "L",
-     "t": "Corporate ESG strategies",
-     "m": 30
-    },
-    {
-     "k": "L",
-     "t": "Challenges and benefits of implementing CSR",
-     "m": 30,
-     "live": "Live le lun. 14/12 à 19 h, puis en replay (Studi > Lives)"
-    }
-   ],
-   "week": "2026-12-27"
-  },
-  {
-   "id": "2026-12-29-1750",
-   "date": "2026-12-29",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -736,7 +726,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

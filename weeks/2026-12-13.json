@@ -109,9 +109,9 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-14-1100",
+   "id": "2026-12-14-1045",
    "date": "2026-12-14",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -158,23 +158,24 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-14-1545",
+   "id": "2026-12-14-1530",
    "date": "2026-12-14",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M3 · Déterminer le mode de résolution adapté à un litige",
+   "title": "M3 → M4 · Qualifier la personne juridique et ses biens",
    "items": [
     {
-     "k": "L",
-     "t": "L'organisation judiciaire nationale",
+     "k": "A",
+     "t": "Application : Déterminer la juridiction et le mode de résolution d'un litige",
      "m": 45
     },
     {
      "k": "L",
-     "t": "Les modes de résolution judiciaires et alternatifs des litiges",
-     "m": 45
+     "t": "La personne juridique : existence, attributs et capacité",
+     "m": 45,
+     "live": "Replay du mer. 28/10 (Studi > Lives > Replays)"
     }
    ],
    "week": "2026-12-13"
@@ -222,10 +223,10 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-15-1100",
+   "id": "2026-12-15-1045",
    "date": "2026-12-15",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M4 · Comprendre l'infrastructure technique du système d'information au service de l'organisation",
@@ -239,14 +240,19 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-15-1215",
+   "id": "2026-12-15-1145",
    "date": "2026-12-15",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
    "title": "M3 · Companies and their stakeholders",
    "items": [
+    {
+     "k": "L",
+     "t": "The main actors of a company",
+     "m": 30
+    },
     {
      "k": "L",
      "t": "Company organization",
@@ -284,10 +290,10 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-15-1600",
+   "id": "2026-12-15-1545",
    "date": "2026-12-15",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M4 · Financer l'activité économique",
@@ -302,27 +308,10 @@
    "week": "2026-12-13"
   },
   {
-   "id": "2026-12-15-1715",
+   "id": "2026-12-15-1700",
    "date": "2026-12-15",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M3 · Companies and their stakeholders",
-   "items": [
-    {
-     "k": "L",
-     "t": "How to fund a business",
-     "m": 30
-    }
-   ],
-   "week": "2026-12-13"
-  },
-  {
-   "id": "2026-12-15-1750",
-   "date": "2026-12-15",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -735,7 +724,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

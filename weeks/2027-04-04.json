@@ -8,30 +8,24 @@
    "date": "2027-04-04",
    "start": "10:30",
    "end": "12:30",
-   "ue": "UE12",
+   "ue": "UE9",
    "kind": "cours",
-   "title": "Fin du programme · M9 → M10 · Social policies",
+   "title": "Fin du programme · M12 → M13 · Connaître l'environnement numérique de la comptabilité",
    "items": [
     {
-     "k": "L",
-     "t": "Slowbalization and deglobalization",
-     "m": 30,
-     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
+     "k": "C",
+     "t": "Documents de synthèse : les 4 cas du module (2e partie)",
+     "m": 60
     },
     {
      "k": "L",
-     "t": "The basic forms of social protection",
-     "m": 30
+     "t": "Dématérialisation et conservation des pièces comptables",
+     "m": 40
     },
     {
      "k": "L",
-     "t": "Current societal issues",
-     "m": 30
-    },
-    {
-     "k": "L",
-     "t": "Political reforms and social models",
-     "m": 30
+     "t": "Logiciel comptable et PGI",
+     "m": 40
     }
    ],
    "week": "2027-04-04"
@@ -41,14 +35,20 @@
    "date": "2027-04-04",
    "start": "13:15",
    "end": "14:15",
-   "ue": "UE12",
-   "kind": "exercices",
-   "title": "Fin du programme · M10 · Social policies",
+   "ue": "UE9",
+   "kind": "cours",
+   "title": "Fin du programme · M13 · Connaître l'environnement numérique de la comptabilité",
    "items": [
     {
-     "k": "A",
-     "t": "Application : social protection and demographic dynamics",
-     "m": 45
+     "k": "L",
+     "t": "L'impact de la dématérialisation",
+     "m": 40
+    },
+    {
+     "k": "L",
+     "t": "Sauvegarde et confidentialité des données comptables",
+     "m": 40,
+     "live": "Replay du lun. 16/11 (Studi > Lives > Replays)"
     }
    ],
    "week": "2027-04-04"
@@ -122,9 +122,9 @@
    "week": "2027-04-04"
   },
   {
-   "id": "2027-04-05-1545",
+   "id": "2027-04-05-1530",
    "date": "2027-04-05",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE5",
    "kind": "reprise",
@@ -194,10 +194,10 @@
    "week": "2027-04-04"
   },
   {
-   "id": "2027-04-06-1545",
+   "id": "2027-04-06-1530",
    "date": "2027-04-06",
-   "start": "15:45",
-   "end": "17:45",
+   "start": "15:30",
+   "end": "17:00",
    "ue": "UE8",
    "kind": "reprise",
    "title": "Reprise des points faibles",
@@ -218,10 +218,10 @@
    "week": "2027-04-04"
   },
   {
-   "id": "2027-04-06-1750",
+   "id": "2027-04-06-1700",
    "date": "2027-04-06",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -634,7 +634,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

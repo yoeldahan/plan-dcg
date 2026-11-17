@@ -100,9 +100,9 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-15-1100",
+   "id": "2027-02-15-1045",
    "date": "2027-02-15",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -150,22 +150,22 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-15-1545",
+   "id": "2027-02-15-1530",
    "date": "2027-02-15",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M7 · Accompagner le client dans ses relations contractuelles",
+   "title": "M7 → M8 · Accompagner le client dans ses contrats courants",
    "items": [
     {
-     "k": "L",
-     "t": "La phase précontractuelle du contrat",
+     "k": "A",
+     "t": "Application : Accompagner le client dans ses relations contractuelles",
      "m": 45
     },
     {
      "k": "L",
-     "t": "La validité du contrat",
+     "t": "Les contrats de vente, d'entreprise et de consommation",
      "m": 45
     }
    ],
@@ -194,10 +194,10 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-16-1100",
+   "id": "2027-02-16-1045",
    "date": "2027-02-16",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M9 · Analyser le système d'information au regard de la performance des processus",
@@ -211,23 +211,24 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-16-1215",
+   "id": "2027-02-16-1145",
    "date": "2027-02-16",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
-   "title": "M7 · The digital revolution",
+   "title": "M6 → M7 · The digital revolution",
    "items": [
     {
-     "k": "V",
-     "t": "New technologies (vidéo 30 min) (1re partie)",
-     "m": 30
+     "k": "A",
+     "t": "Application : corporate strategy and competitiveness",
+     "m": 45
     },
     {
-     "k": "V",
-     "t": "New technologies (vidéo 30 min) (2e partie)",
-     "m": 30
+     "k": "L",
+     "t": "The age of digital society",
+     "m": 30,
+     "live": "Live le lun. 21/12 à 19 h, puis en replay (Studi > Lives)"
     }
    ],
    "week": "2027-02-14"
@@ -255,10 +256,10 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-16-1600",
+   "id": "2027-02-16-1545",
    "date": "2027-02-16",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M7 · Analyser les politiques sociales face aux déséquilibres sur le marché du travail",
@@ -272,27 +273,10 @@
    "week": "2027-02-14"
   },
   {
-   "id": "2027-02-16-1715",
+   "id": "2027-02-16-1700",
    "date": "2027-02-16",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M7 · The digital revolution",
-   "items": [
-    {
-     "k": "V",
-     "t": "What the future holds in store (vidéo 18 min)",
-     "m": 36
-    }
-   ],
-   "week": "2027-02-14"
-  },
-  {
-   "id": "2027-02-16-1750",
-   "date": "2027-02-16",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -705,7 +689,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

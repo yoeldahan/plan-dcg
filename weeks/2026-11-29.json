@@ -109,14 +109,19 @@
    "week": "2026-11-29"
   },
   {
-   "id": "2026-11-30-1100",
+   "id": "2026-11-30-1045",
    "date": "2026-11-30",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
-   "title": "M3 · Comprendre le SI dans son environnement : identifier les acteurs",
+   "title": "M2 → M3 · Comprendre le SI dans son environnement : identifier les acteurs",
    "items": [
+    {
+     "k": "A",
+     "t": "Méthodologie DCG UE8 : discerner le rôle du SI dans les organisations",
+     "m": 50
+    },
     {
      "k": "L",
      "t": "Les acteurs internes : rôles et responsabilités",
@@ -153,22 +158,22 @@
    "week": "2026-11-29"
   },
   {
-   "id": "2026-11-30-1545",
+   "id": "2026-11-30-1530",
    "date": "2026-11-30",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M2 → M3 · Déterminer le mode de résolution adapté à un litige",
+   "title": "M3 · Déterminer le mode de résolution adapté à un litige",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Rechercher les règles applicables à la situation du client",
+     "k": "L",
+     "t": "La juridiction compétente dans un litige de droit privé",
      "m": 45
     },
     {
      "k": "L",
-     "t": "La juridiction compétente dans un litige de droit privé",
+     "t": "Les conditions de recevabilité de l'action en justice",
      "m": 45
     }
    ],
@@ -197,10 +202,10 @@
    "week": "2026-11-29"
   },
   {
-   "id": "2026-12-01-1100",
+   "id": "2026-12-01-1045",
    "date": "2026-12-01",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M3 · Comprendre le SI dans son environnement : identifier les acteurs",
@@ -209,19 +214,14 @@
      "k": "L",
      "t": "Les interactions des gestionnaires du SI avec les utilisateurs",
      "m": 45
-    },
-    {
-     "k": "L",
-     "t": "La Direction des systèmes d'information (DSI)",
-     "m": 45
     }
    ],
    "week": "2026-11-29"
   },
   {
-   "id": "2026-12-01-1215",
+   "id": "2026-12-01-1145",
    "date": "2026-12-01",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
@@ -231,6 +231,11 @@
      "k": "V",
      "t": "Grammaire : présent simple et BE + V-ING (16 min)",
      "m": 32
+    },
+    {
+     "k": "V",
+     "t": "Grammaire : l'expression du futur (11 min)",
+     "m": 22
     }
    ],
    "week": "2026-11-29"
@@ -259,10 +264,10 @@
    "week": "2026-11-29"
   },
   {
-   "id": "2026-12-01-1600",
+   "id": "2026-12-01-1545",
    "date": "2026-12-01",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M3 · Comprendre le fonctionnement des marchés",
@@ -277,32 +282,10 @@
    "week": "2026-11-29"
   },
   {
-   "id": "2026-12-01-1715",
+   "id": "2026-12-01-1700",
    "date": "2026-12-01",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M2 · Maîtriser la méthodologie et les bases grammaticales de l'anglais des affaires",
-   "items": [
-    {
-     "k": "V",
-     "t": "Grammaire : l'expression du futur (11 min)",
-     "m": 22
-    },
-    {
-     "k": "V",
-     "t": "Grammaire : les modaux (13 min)",
-     "m": 26
-    }
-   ],
-   "week": "2026-11-29"
-  },
-  {
-   "id": "2026-12-01-1750",
-   "date": "2026-12-01",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -715,7 +698,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

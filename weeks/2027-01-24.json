@@ -106,9 +106,9 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-25-1100",
+   "id": "2027-01-25-1045",
    "date": "2027-01-25",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -156,24 +156,23 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-25-1545",
+   "id": "2027-01-25-1530",
    "date": "2027-01-25",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M5 → M6 · Déterminer l'étendue du droit d'une personne juridique sur ses biens",
+   "title": "M6 → M7 · Accompagner le client dans ses relations contractuelles",
    "items": [
     {
      "k": "A",
-     "t": "Application : Accompagner un entrepreneur individuel",
+     "t": "Application : Déterminer l'étendue du droit d'une personne sur ses biens",
      "m": 45
     },
     {
      "k": "L",
-     "t": "Le droit de propriété : prérogatives et limites",
-     "m": 45,
-     "live": "Live le jeu. 10/12 à 18 h, puis en replay (Studi > Lives) · Live le mer. 16/12 à 18 h, puis en replay (Studi > Lives)"
+     "t": "La phase précontractuelle du contrat",
+     "m": 45
     }
    ],
    "week": "2027-01-24"
@@ -206,10 +205,10 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-26-1100",
+   "id": "2027-01-26-1045",
    "date": "2027-01-26",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M8 · Traiter des données via le tableur pour résoudre des problèmes de gestion et aider à la décision",
@@ -223,9 +222,9 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-26-1215",
+   "id": "2027-01-26-1145",
    "date": "2027-01-26",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
@@ -233,7 +232,12 @@
    "items": [
     {
      "k": "L",
-     "t": "Assessment tools",
+     "t": "Strategies for growth",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Current challenges",
      "m": 30
     }
    ],
@@ -262,10 +266,10 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-26-1600",
+   "id": "2027-01-26-1545",
    "date": "2027-01-26",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M6 · Analyser la régulation publique",
@@ -279,28 +283,10 @@
    "week": "2027-01-24"
   },
   {
-   "id": "2027-01-26-1715",
+   "id": "2027-01-26-1700",
    "date": "2027-01-26",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M6 · Communication and strategies to be competitive",
-   "items": [
-    {
-     "k": "L",
-     "t": "Communication with stakeholders",
-     "m": 30,
-     "live": "Replay du lun. 26/10 (Studi > Lives > Replays)"
-    }
-   ],
-   "week": "2027-01-24"
-  },
-  {
-   "id": "2027-01-26-1750",
-   "date": "2027-01-26",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -713,7 +699,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

@@ -10,23 +10,38 @@
    "end": "12:30",
    "ue": "UE12",
    "kind": "cours",
-   "title": "Fin du programme · M9 · Globalisation and development",
+   "title": "Fin du programme · M9 → M10 · Social policies",
    "items": [
     {
+     "k": "A",
+     "t": "Application : Challenging unfair competition",
+     "m": 45
+    },
+    {
      "k": "L",
-     "t": "Globalization (+ 4 vidéos) (2e partie)",
+     "t": "Slowbalization and deglobalization",
      "m": 30,
-     "live": "Replay du lun. 02/11 (Studi > Lives > Replays)"
+     "live": "Replay du lun. 09/11 (Studi > Lives > Replays)"
     },
     {
-     "k": "C",
-     "t": "Cas « Is free trade being threatened? » (1re partie)",
-     "m": 45
+     "k": "L",
+     "t": "The basic forms of social protection",
+     "m": 30
     },
     {
-     "k": "C",
-     "t": "Cas « Is free trade being threatened? » (2e partie)",
-     "m": 45
+     "k": "L",
+     "t": "Current societal issues",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas CETA (1re partie)",
+     "m": 30
+    },
+    {
+     "k": "B",
+     "t": "Cas CETA (2e partie)",
+     "m": 30
     }
    ],
    "week": "2027-03-21"
@@ -120,9 +135,9 @@
    "week": "2027-03-21"
   },
   {
-   "id": "2027-03-22-1545",
+   "id": "2027-03-22-1530",
    "date": "2027-03-22",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "reprise",
@@ -552,7 +567,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

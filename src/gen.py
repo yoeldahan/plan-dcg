@@ -18,17 +18,18 @@ OFF = {
 # Yom Tov : jamais de séance (les mêmes dates que OFF_DATES dans src/app.html)
 YOM_TOV = {D(2027, 4, 22): "Pessah", D(2027, 4, 23): "Pessah", D(2027, 4, 28): "Pessah", D(2027, 4, 29): "Pessah",
            D(2027, 6, 11): "Chavouot", D(2027, 6, 12): "Chavouot"}
-# tes créneaux : lundi 9 h – 13 h et 14 h – 17 h, mardi 9 h – 13 h et 14 h – 18 h, dimanche 10 h 30 – 15 h 30
-WINDOWS = {0: [("09:00", "13:00"), ("14:00", "17:00")], 1: [("09:00", "13:00"), ("14:00", "18:00")], 6: [("10:30", "15:30")]}
+# tes créneaux : lundi et mardi 9 h – 13 h et 14 h – 17 h (7 h de travail, + bilan du mardi à 17 h), dimanche 10 h 30 – 15 h 30
+WINDOWS = {0: [("09:00", "13:00"), ("14:00", "17:00")], 1: [("09:00", "13:00"), ("14:00", "17:10")], 6: [("10:30", "15:30")]}
 
 def mins(a, b):
     h1, m1 = map(int, a.split(":")); h2, m2 = map(int, b.split(":"))
     return (h2 * 60 + m2) - (h1 * 60 + m1)
 
 P1_TEMPLATE = {
-    0: [("09:00", "10:45", "UE9"), ("11:00", "13:00", "UE8"), ("14:00", "15:30", "UE5"), ("15:45", "17:00", "UE1")],
-    1: [("09:00", "10:45", "UE9"), ("11:00", "12:15", "UE8"), ("12:15", "13:00", "UE12"), ("14:00", "15:45", "UE7"),
-        ("16:00", "17:15", "UE5"), ("17:15", "17:50", "UE12"), ("17:50", "18:00", "BILAN")],
+    # lundi et mardi : 7 h de travail (9 h – 13 h, 14 h – 17 h) ; les pauses courtes se prennent dans le mode concentration
+    0: [("09:00", "10:45", "UE9"), ("10:45", "13:00", "UE8"), ("14:00", "15:30", "UE5"), ("15:30", "17:00", "UE1")],
+    1: [("09:00", "10:45", "UE9"), ("10:45", "11:45", "UE8"), ("11:45", "13:00", "UE12"), ("14:00", "15:45", "UE7"),
+        ("15:45", "17:00", "UE5"), ("17:00", "17:10", "BILAN")],
     6: [("10:30", "12:30", "UE13"), ("13:15", "14:15", "REV"), ("14:15", "15:30", "UE9")],
 }
 
@@ -308,9 +309,9 @@ for day in days:
             continue
         add(day, "09:00", hhmm(9 + DUR[ue]), ue, "examen", f"Examen blanc · {sujet}", mock_items(ue, sujet))
         add(day, "14:00", "15:30", ue, "correction", "Correction de l'examen blanc", correction_items(ue, sujet))
-        add(day, "15:45", "17:00" if wd == 0 else "17:45", ue, "reprise", "Reprise des points faibles", reprise_items(ue, sujet))
+        add(day, "15:30", "17:00", ue, "reprise", "Reprise des points faibles", reprise_items(ue, sujet))
         if wd == 1:
-            add(day, "17:50", "18:00", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
+            add(day, "17:00", "17:10", None, "bilan", "Bilan de la semaine", BILAN_ITEMS)
         continue
     if wd == 6:
         # dimanche sans examen blanc

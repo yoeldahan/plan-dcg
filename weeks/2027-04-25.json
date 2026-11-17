@@ -116,9 +116,9 @@
    "week": "2027-04-25"
   },
   {
-   "id": "2027-04-26-1545",
+   "id": "2027-04-26-1530",
    "date": "2027-04-26",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE9",
    "kind": "reprise",
@@ -188,10 +188,10 @@
    "week": "2027-04-25"
   },
   {
-   "id": "2027-04-27-1545",
+   "id": "2027-04-27-1530",
    "date": "2027-04-27",
-   "start": "15:45",
-   "end": "17:45",
+   "start": "15:30",
+   "end": "17:00",
    "ue": "UE1",
    "kind": "reprise",
    "title": "Reprise des points faibles",
@@ -212,10 +212,10 @@
    "week": "2027-04-25"
   },
   {
-   "id": "2027-04-27-1750",
+   "id": "2027-04-27-1700",
    "date": "2027-04-27",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -628,7 +628,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

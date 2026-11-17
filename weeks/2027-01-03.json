@@ -115,14 +115,19 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-04-1100",
+   "id": "2027-01-04-1045",
    "date": "2027-01-04",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
    "title": "M6 · Comprendre les choix organisationnels liés au système d'information, nécessaires pour s'adapter à son environnement",
    "items": [
+    {
+     "k": "L",
+     "t": "L'audit du système d'information",
+     "m": 45
+    },
     {
      "k": "L",
      "t": "Externaliser ou internaliser le SI",
@@ -159,24 +164,25 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-04-1545",
+   "id": "2027-01-04-1530",
    "date": "2027-01-04",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M4 → M5 · Accompagner un entrepreneur individuel dans son activité",
+   "title": "M5 · Accompagner un entrepreneur individuel dans son activité",
    "items": [
     {
-     "k": "A",
-     "t": "Application : Qualifier la personne juridique et ses biens",
-     "m": 45
+     "k": "L",
+     "t": "Le statut du conjoint de l'entrepreneur et le régime juridique du couple",
+     "m": 45,
+     "live": "Live le mer. 25/11 à 18 h, puis en replay (Studi > Lives)"
     },
     {
      "k": "L",
-     "t": "L'entrepreneur individuel et le statut du commerçant",
+     "t": "Les formalités de création d'une entreprise individuelle",
      "m": 45,
-     "live": "Replay du jeu. 12/11 (Studi > Lives > Replays) · Replay du jeu. 05/11 (Studi > Lives > Replays)"
+     "live": "Live le jeu. 03/12 à 18 h, puis en replay (Studi > Lives)"
     }
    ],
    "week": "2027-01-03"
@@ -224,10 +230,10 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-05-1100",
+   "id": "2027-01-05-1045",
    "date": "2027-01-05",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M6 · Comprendre les choix organisationnels liés au système d'information, nécessaires pour s'adapter à son environnement",
@@ -246,14 +252,25 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-05-1215",
+   "id": "2027-01-05-1145",
    "date": "2027-01-05",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
-   "kind": "exercices",
+   "kind": "cours",
    "title": "M4 · Corporate Social Responsibility",
    "items": [
+    {
+     "k": "L",
+     "t": "Corporate ESG strategies",
+     "m": 30
+    },
+    {
+     "k": "L",
+     "t": "Challenges and benefits of implementing CSR",
+     "m": 30,
+     "live": "Live le lun. 14/12 à 19 h, puis en replay (Studi > Lives)"
+    },
     {
      "k": "A",
      "t": "Application : the corporate citizen and the social and solidarity economy",
@@ -286,10 +303,10 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-05-1600",
+   "id": "2027-01-05-1545",
    "date": "2027-01-05",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M5 · Identifier les enjeux de la croissance économique",
@@ -303,27 +320,10 @@
    "week": "2027-01-03"
   },
   {
-   "id": "2027-01-05-1715",
+   "id": "2027-01-05-1700",
    "date": "2027-01-05",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "cours",
-   "title": "M5 · Corporate culture and working conditions",
-   "items": [
-    {
-     "k": "L",
-     "t": "Corporate culture",
-     "m": 30
-    }
-   ],
-   "week": "2027-01-03"
-  },
-  {
-   "id": "2027-01-05-1750",
-   "date": "2027-01-05",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -736,7 +736,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",

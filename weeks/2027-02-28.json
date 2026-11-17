@@ -10,16 +10,16 @@
    "end": "12:30",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M7 · Accompagner le client dans ses relations contractuelles",
+   "title": "M8 · Accompagner le client dans ses contrats courants",
    "items": [
     {
      "k": "L",
-     "t": "Les sanctions de l'inexécution du contrat",
+     "t": "La protection des parties pour chacun des contrats",
      "m": 45
     },
     {
-     "k": "A",
-     "t": "Application : Accompagner le client dans ses relations contractuelles",
+     "k": "L",
+     "t": "Le choix d'une sûreté et ses principaux effets",
      "m": 45
     }
    ],
@@ -109,9 +109,9 @@
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-01-1100",
+   "id": "2027-03-01-1045",
    "date": "2027-03-01",
-   "start": "11:00",
+   "start": "10:45",
    "end": "13:00",
    "ue": "UE8",
    "kind": "cours",
@@ -153,17 +153,22 @@
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-01-1545",
+   "id": "2027-03-01-1530",
    "date": "2027-03-01",
-   "start": "15:45",
+   "start": "15:30",
    "end": "17:00",
    "ue": "UE1",
    "kind": "cours",
-   "title": "M8 · Accompagner le client dans ses contrats courants",
+   "title": "M8 → M9 · Mesurer les conséquences des responsabilités civiles de l'entrepreneur individuel",
    "items": [
     {
+     "k": "A",
+     "t": "Application : Accompagner le client dans ses contrats courants",
+     "m": 45
+    },
+    {
      "k": "L",
-     "t": "Les contrats de vente, d'entreprise et de consommation",
+     "t": "Responsabilité civile et responsabilité pénale",
      "m": 45
     }
    ],
@@ -192,10 +197,10 @@
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-02-1100",
+   "id": "2027-03-02-1045",
    "date": "2027-03-02",
-   "start": "11:00",
-   "end": "12:15",
+   "start": "10:45",
+   "end": "11:45",
    "ue": "UE8",
    "kind": "cours",
    "title": "M10 · Appréhender les défis du système d'information en termes de règlementation et durabilité",
@@ -204,34 +209,28 @@
      "k": "L",
      "t": "Les aspects réglementaires des logiciels",
      "m": 45
-    },
-    {
-     "k": "A",
-     "t": "Méthodologie DCG UE8 : réglementation et durabilité du SI",
-     "m": 50,
-     "live": "Replay du live du mer. 18/11 (Studi > Lives)"
     }
    ],
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-02-1215",
+   "id": "2027-03-02-1145",
    "date": "2027-03-02",
-   "start": "12:15",
+   "start": "11:45",
    "end": "13:00",
    "ue": "UE12",
    "kind": "cours",
    "title": "M7 · The digital revolution",
    "items": [
     {
-     "k": "L",
-     "t": "Big tech controversies",
-     "m": 30
+     "k": "V",
+     "t": "Customer-centric (vidéo 13 min)",
+     "m": 26
     },
     {
-     "k": "C",
-     "t": "Cas Robots are taking our jobs (1re partie)",
-     "m": 45
+     "k": "L",
+     "t": "Digital tools and assets in the business world",
+     "m": 30
     }
    ],
    "week": "2027-02-28"
@@ -259,10 +258,10 @@
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-02-1600",
+   "id": "2027-03-02-1545",
    "date": "2027-03-02",
-   "start": "16:00",
-   "end": "17:15",
+   "start": "15:45",
+   "end": "17:00",
    "ue": "UE5",
    "kind": "cours",
    "title": "M8 · Identifier les effets et les enjeux de la mondialisation des économies",
@@ -281,27 +280,10 @@
    "week": "2027-02-28"
   },
   {
-   "id": "2027-03-02-1715",
+   "id": "2027-03-02-1700",
    "date": "2027-03-02",
-   "start": "17:15",
-   "end": "17:50",
-   "ue": "UE12",
-   "kind": "exercices",
-   "title": "M7 · The digital revolution",
-   "items": [
-    {
-     "k": "C",
-     "t": "Cas Robots are taking our jobs (2e partie)",
-     "m": 45
-    }
-   ],
-   "week": "2027-02-28"
-  },
-  {
-   "id": "2027-03-02-1750",
-   "date": "2027-03-02",
-   "start": "17:50",
-   "end": "18:00",
+   "start": "17:00",
+   "end": "17:10",
    "ue": null,
    "kind": "bilan",
    "title": "Bilan de la semaine",
@@ -714,7 +696,7 @@
   {
    "id": "ms-fin-p1",
    "date": "2027-03-16",
-   "t": "Fin du premier passage, sauf UE12 (fin le 4 avril) et UE9 (fin le 11 avril)"
+   "t": "Fin du premier passage, sauf UE12 (fin le 28 mars) et UE9 (fin le 4 avril)"
   },
   {
    "id": "ms-evals-mars",
