@@ -24,7 +24,7 @@ def when(v):
 out = []
 # 1) rappels de travail : regroupés par (jour de la semaine, heure, texte)
 groups = {}
-for e in parse_ics(os.path.join(ROOT, "rappels.ics")):
+for e in parse_ics(os.path.join(ROOT, "rappels-source.ics")):
     d, h = when(e["DTSTART"]); _, h2 = when(e["DTEND"])
     if D.fromisoformat(d) < start: continue
     key = (D.fromisoformat(d).weekday(), h, h2, e["SUMMARY"])
@@ -42,7 +42,7 @@ for (wd, h, h2, txt), dates in sorted(groups.items(), key=lambda kv: (kv[1][0], 
         ev["dates"] = len(dates)
     out.append(ev)
 # 2) lives, examens blancs, certificats et dates à faire (calendrier.ics)
-for e in parse_ics(os.path.join(ROOT, "calendrier.ics")):
+for e in parse_ics(os.path.join(ROOT, "calendrier-source.ics")):
     d, h = when(e["DTSTART"]); _, h2 = when(e["DTEND"])
     if D.fromisoformat(d) < start: continue
     if e["UID"].startswith("s-"): continue          # examens blancs et certificats : déjà dans les rappels de travail

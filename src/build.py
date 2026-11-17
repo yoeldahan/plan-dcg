@@ -89,7 +89,10 @@ def write_ics(fname, calname, events):
         lines.append("END:VEVENT")
     lines.append("END:VCALENDAR")
     open(os.path.join(OUT, fname), "w", newline="").write("\r\n".join(ics_fold(l) for l in lines) + "\r\n")
-write_ics("calendrier.ics", "Plan DCG", ev)
+# Yoel ne veut plus de calendrier Apple : les abonnements restent en ligne mais vides, pour se vider tout seuls sur l'iPhone.
+# Les événements servent encore à préparer Google Agenda (src/gagenda.py lit calendrier-source.ics et rappels-source.ics).
+write_ics("calendrier-source.ics", "Plan DCG", ev)
+write_ics("calendrier.ics", "Plan DCG", [])
 
 # --- rappels de travail (un autre calendrier, « Plan DCG · Rappels ») : une alerte à chaque étape de la journée prévue.
 # 2 h avant : Boker tov ; 30 min avant : prépare-toi ; puis chaque début de séance, la pause, la reprise et la fin.
@@ -151,7 +154,8 @@ for d, ss in sorted(days.items()):
 for e in rp:   # jamais pendant Shabbat ou Yom Tov, jamais après 20 h
     wd = _dt.date.fromisoformat(e["date"]).weekday()
     assert wd != 5 and e["date"] not in REST and e["start"] >= "06:00" and e["start"] <= "20:00", e
-write_ics("rappels.ics", "Plan DCG · Rappels", rp)
+write_ics("rappels-source.ics", "Plan DCG · Rappels", rp)
+write_ics("rappels.ics", "Plan DCG · Rappels", [])
 
 # --- manifeste (couleur : la nuit du ciel)
 manifest = {

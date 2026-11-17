@@ -1,0 +1,1133 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Plan DCG//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Plan DCG
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:ev-2026-11-17-live-dcg-1700@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261117T170000
+DTEND:20261117T173000
+DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-17-live-ue7-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Live · La démarche stratégique
+DTSTART:20261117T190000
+DTEND:20261117T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Live · La démarche stratégique
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-18-live-ue8-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Replay à regarder · Essentiels du module « Appréhend
+ er les défis du SI en termes de règlementation et…
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Replay à regarder · Essentiels du module « Appré
+ hender les défis du SI en termes de règlementation et…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-18-live-ue1-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Live · Identifier les autres entrepreneurs individue
+ ls (agriculteur\, artisan\, professionnel…
+DTSTART:20261118T180000
+DTEND:20261118T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Live · Identifier les autres entrepreneurs indiv
+ iduels (agriculteur\, artisan\, professionnel…
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-19-live-ue5-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Live · Les monopoles
+DTSTART:20261119T190000
+DTEND:20261119T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Live · Les monopoles
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-23-live-ue9-2100@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Replay à regarder · Les rapprochements bancaires :
+  objectifs\, méthode\, soldes initiaux identiques ou…
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 21 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Replay à regarder · Les rapprochements bancair
+ es : objectifs\, méthode\, soldes initiaux identiques ou…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-23-live-dcg-1200@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261123T120000
+DTEND:20261123T123000
+DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-23-live-ue12-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Live · Communication & strategies to be competiti
+ ve : competitive advantage\, innovation…
+DTSTART:20261123T190000
+DTEND:20261123T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Live · Communication & strategies to be compe
+ titive : competitive advantage\, innovation…
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-24-live-ue7-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Live · Les outils d'analyse de l'environnement 
+ de l'entreprise
+DTSTART:20261124T190000
+DTEND:20261124T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Live · Les outils d'analyse de l'environnem
+ ent de l'entreprise
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-25-live-ue1-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Live · Proposer un statut pour le conjoint de l'entr
+ epreneur + Évaluer les conséquences du…
+DTSTART:20261125T180000
+DTEND:20261125T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Live · Proposer un statut pour le conjoint de l'
+ entrepreneur + Évaluer les conséquences du…
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-26-live-ue8-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Replay à regarder · La représentation d'un processus 
+ : le diagramme BPMN \; Les progiciels au service des…
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Replay à regarder · La représentation d'un proces
+ sus : le diagramme BPMN \; Les progiciels au service des…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-11-26-live-ue5-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Live · Les oligopoles et la concurrence monopoli
+ stique
+DTSTART:20261126T190000
+DTEND:20261126T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Live · Les oligopoles et la concurrence mono
+ polistique
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-01-live-ue7-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Live · Les outils d'analyse interne de l'entrep
+ rise
+DTSTART:20261201T190000
+DTEND:20261201T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Live · Les outils d'analyse interne de l'en
+ treprise
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-02-live-ue13-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE13 Communication · Replay à regarder · Essentiels du cours «
+  Maîtriser les outils de la communication orale professionnelle »…
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE13 Communication · Replay à regarder · Essentiels du cour
+ s « Maîtriser les outils de la communication orale professionnelle »…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-03-live-ue8-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Replay à regarder · Essentiels de la modélisation des
+  données (SRD) et de la manipulation des données (SQL)…
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Replay à regarder · Essentiels de la modélisation
+  des données (SRD) et de la manipulation des données (SQL)…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-03-live-dcg-1200@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261203T120000
+DTEND:20261203T123000
+DESCRIPTION:Facultatif. Si tu es au travail\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Live · Accompagnement DCG (toutes UE)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-03-live-ue5-1700@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Live · Les modalités de la régulation des marc
+ hés et de la concurrence
+DTSTART:20261203T170000
+DTEND:20261203T180000
+DESCRIPTION:Facultatif. Si tu es au travail\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Live · Les modalités de la régulation des 
+ marchés et de la concurrence
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-03-live-ue1-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Live · Décrire le processus de réalisation des for
+ malités de la création d'une entreprise…
+DTSTART:20261203T180000
+DTEND:20261203T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Live · Décrire le processus de réalisation des
+  formalités de la création d'une entreprise…
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-07-live-ue9-2100@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Replay à regarder · Suite sur les rapprochements b
+ ancaires. Les stocks : réglementation\, coûts d'acquisition…
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 21 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Replay à regarder · Suite sur les rapprochemen
+ ts bancaires. Les stocks : réglementation\, coûts d'acquisition…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-07-live-ue12-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Live · CSR: Corporate social responsibility: defi
+ nition and concepts and concrete examples
+DTSTART:20261207T190000
+DTEND:20261207T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Live · CSR: Corporate social responsibility: 
+ definition and concepts and concrete examples
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-08-live-dcg-1200@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261208T120000
+DTEND:20261208T123000
+DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-08-live-ue7-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Live · Les stratégies de domaine
+DTSTART:20261208T190000
+DTEND:20261208T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Live · Les stratégies de domaine
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-10-live-ue8-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Replay à regarder · L'usage des fonctions de dénombre
+ ment et de gestion du temps dans les formules de calcul…
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Replay à regarder · L'usage des fonctions de déno
+ mbrement et de gestion du temps dans les formules de calcul…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-10-live-ue1-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Live · Analyser les prérogatives du propriétaire\,
+  du nu-propriétaire\, de l'usufruitier et des…
+DTSTART:20261210T180000
+DTEND:20261210T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Live · Analyser les prérogatives du propriétai
+ re\, du nu-propriétaire\, de l'usufruitier et des…
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-10-live-ue5-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Live · L'épargne des ménages (définition\, fo
+ rmes\, motifs et déterminants)
+DTSTART:20261210T180000
+DTEND:20261210T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Live · L'épargne des ménages (définition\
+ , formes\, motifs et déterminants)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-14-live-ue13-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE13 Communication · Replay à regarder · Présentation de rappo
+ rts au design impactant : page de garde\, illustrations\, mise en…
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE13 Communication · Replay à regarder · Présentation de r
+ apports au design impactant : page de garde\, illustrations\, mise en…
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-14-live-ue9-2100@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Replay à regarder · Suite sur les stocks : valeur 
+ actuelle\, dépréciations et écritures
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 21 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Replay à regarder · Suite sur les stocks : val
+ eur actuelle\, dépréciations et écritures
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-14-live-ue12-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Live · CSR: Evolution of CSR\, wokeism or a neces
+ sity\, Evolution of CSR in the United States
+DTSTART:20261214T190000
+DTEND:20261214T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Live · CSR: Evolution of CSR\, wokeism or a n
+ ecessity\, Evolution of CSR in the United States
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-15-live-dcg-1700@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261215T170000
+DTEND:20261215T173000
+DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-15-live-ue7-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Live · La stratégie de spécialisation et de d
+ iversification
+DTSTART:20261215T190000
+DTEND:20261215T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Live · La stratégie de spécialisation et 
+ de diversification
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-16-live-ue8-2000@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Replay à regarder · Essentiels du module « Appréhend
+ er les défis du SI en termes de sécurité » + cas pratique
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 20 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Replay à regarder · Essentiels du module « Appré
+ hender les défis du SI en termes de sécurité » + cas pratique
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-16-live-ue1-1800@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Live · Analyser les limites du droit de propriété
+DTSTART:20261216T180000
+DTEND:20261216T190000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Live · Analyser les limites du droit de proprié
+ té
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-17-live-ue5-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Live · Les déterminants de l'investissement des
+  entreprises
+DTSTART:20261217T190000
+DTEND:20261217T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Live · Les déterminants de l'investissement
+  des entreprises
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-20-info-dcg@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les lives de janvier : ouvre Studi > Lives et envoie-moi la li
+ ste
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-21-live-ue9-2100@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Replay à regarder · Cas de synthèse : opérations
+  courantes\, TVA\, Stocks
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+TRANSP:TRANSPARENT
+DESCRIPTION:Live à 21 h : trop tard pour toi. Regarde le replay un autre 
+ jour.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Replay à regarder · Cas de synthèse : opérat
+ ions courantes\, TVA\, Stocks
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-21-live-ue12-1900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Live · Digital revolution : the age of the digita
+ l society & the transformation of work
+DTSTART:20261221T190000
+DTEND:20261221T200000
+DESCRIPTION:Facultatif. Sinon\, regarde le replay.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Live · Digital revolution : the age of the di
+ gital society & the transformation of work
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ev-2026-12-22-live-dcg-1200@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Live · Accompagnement DCG (toutes UE)
+DTSTART:20261222T120000
+DTEND:20261222T123000
+DESCRIPTION:Pendant ta séance : regarde plutôt le replay.
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-ue13-p12@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE13 Communication · Dépose les parties 1 et 2 du rapport UE13 e
+ t la fiche de suivi n° 1
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+TRANSP:TRANSPARENT
+DESCRIPTION:Studi > Évaluations > Passer l'examen\, et Évaluations trans
+ verses
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE13 Communication · Dépose les parties 1 et 2 du rapport UE
+ 13 et la fiche de suivi n° 1
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-cyclades@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Inscris-toi aux écrits du DCG sur Cyclades
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+TRANSP:TRANSPARENT
+DESCRIPTION:En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cycl
+ ades.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Inscris-toi aux écrits du DCG sur Cyclades
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-bilan-ue@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Bilan décisif avec moi : 7 UE à l'inscription\, ou une en moins 
+ ?
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270127
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bilan décisif avec moi : 7 UE à l'inscription\, ou une en mo
+ ins ?
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-ue13-p3@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE13 Communication · Dépose la partie 3 du rapport UE13 et la fi
+ che de suivi n° 2
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+TRANSP:TRANSPARENT
+DESCRIPTION:Studi > Évaluations > Passer l'examen\, et Évaluations trans
+ verses
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE13 Communication · Dépose la partie 3 du rapport UE13 et l
+ a fiche de suivi n° 2
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-ue13-integral@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE13 Communication · Dépose le rapport UE13 intégral
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+TRANSP:TRANSPARENT
+DESCRIPTION:Limite Studi : fin février. Studi > Évaluations > Passer l'e
+ xamen
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE13 Communication · Dépose le rapport UE13 intégral
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-fin-p1@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Fin du premier passage\, sauf UE12 (fin le 28 mars) et UE9 (fin le
+  4 avril)
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270317
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-21-1315@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Certificat Studi (QCM)
+DTSTART:20270321T131500
+DTEND:20270321T141500
+DESCRIPTION:Passe le certificat Studi de l'UE7 (onglet Évaluations) : il 
+ est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 min
+ utes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-21-1415@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Certificat Studi (QCM)
+DTSTART:20270321T141500
+DTEND:20270321T153000
+DESCRIPTION:Passe le certificat Studi de l'UE1 (onglet Évaluations) : il 
+ est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 min
+ utes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-22-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Examen blanc · Évaluation d'entraînement Studi
+DTSTART:20270322T090000
+DTEND:20270322T120000
+DESCRIPTION:Ouvre « Évaluation d'entraînement » sur Studi (onglet Éva
+ luations) et fais-la sur papier · Conditions réelles : 3 h chrono\, sans
+  cours\, téléphone dans une autre pièce · Rédige comme le jour J\, m
+ ême si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Examen blanc · Évaluation d'entraînement Studi
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-23-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Mariage de ton frère : pas de révision.
+DTSTART;VALUE=DATE:20270323
+DTEND;VALUE=DATE:20270324
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-evals-mars@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Vérifie sur Studi les évaluations qui restent à faire
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+TRANSP:TRANSPARENT
+DESCRIPTION:Studi conseille de finir avant fin mars. Certificats UE9 et UE
+ 12 : le 18 avril\, après leur programme.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Vérifie sur Studi les évaluations qui restent à faire
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-28-1315@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Certificat Studi (QCM)
+DTSTART:20270328T131500
+DTEND:20270328T141500
+DESCRIPTION:Passe le certificat Studi de l'UE8 (onglet Évaluations) : il 
+ est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 min
+ utes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-28-1415@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Certificat Studi (QCM)
+DTSTART:20270328T141500
+DTEND:20270328T153000
+DESCRIPTION:Passe le certificat Studi de l'UE5 (onglet Évaluations) : il 
+ est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 min
+ utes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-29-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Lundi de Pâques (férié) : repos\, ou rattrapage si tu es en ret
+ ard.
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-03-30-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Examen blanc · Annale 2025
+DTSTART:20270330T090000
+DTEND:20270330T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2025 » : Médiathèque > UE 7 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE07 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Examen blanc · Annale 2025
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-objectif-examen@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Envoie-moi les dates des examens blancs Studi « Objectif examen 
+ »
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+TRANSP:TRANSPARENT
+DESCRIPTION:Studi les propose en avril\, avec des lives « Objectif examen
+  ».
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Envoie-moi les dates des examens blancs Studi « Objectif exam
+ en »
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-05-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Examen blanc · Annale 2025
+DTSTART:20270405T090000
+DTEND:20270405T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2025 » : Médiathèque > UE 5 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE05 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Examen blanc · Annale 2025
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-06-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Examen blanc · Annale 2025
+DTSTART:20270406T090000
+DTEND:20270406T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2025 » : Médiathèque > UE 8 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE08 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Examen blanc · Annale 2025
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-12-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Examen blanc · Annale 2025
+DTSTART:20270412T090000
+DTEND:20270412T120000
+DESCRIPTION:Ouvre l'énoncé « Annale 2025 » : Médiathèque > UE 12 > C
+ orrigés Comptalia – Épreuve nationale du DCG UE12 · Conditions réell
+ es : 3 h chrono\, sans cours\, téléphone dans une autre pièce · Rédig
+ e comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Examen blanc · Annale 2025
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-13-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Examen blanc · Annale 2026
+DTSTART:20270413T090000
+DTEND:20270413T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 8 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE08 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Examen blanc · Annale 2026
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-18-1315@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Certificat Studi (QCM)
+DTSTART:20270418T131500
+DTEND:20270418T141500
+DESCRIPTION:Passe le certificat Studi de l'UE9 (onglet Évaluations) : il 
+ est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 min
+ utes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-18-1415@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Certificat Studi (QCM)
+DTSTART:20270418T141500
+DTEND:20270418T153000
+DESCRIPTION:Passe le certificat Studi de l'UE12 (onglet Évaluations) : il
+  est obligatoire pour ton diplôme Studi · Relis d'abord tes fiches 10 mi
+ nutes\, puis réponds sans ton cours
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Certificat Studi (QCM)
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-19-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Examen blanc · Annale 2026
+DTSTART:20270419T090000
+DTEND:20270419T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 5 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE05 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Examen blanc · Annale 2026
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-20-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Examen blanc · Évaluation d'entraînement 1 Studi
+DTSTART:20270420T090000
+DTEND:20270420T120000
+DESCRIPTION:Ouvre « Évaluation d'entraînement 1 » sur Studi (onglet É
+ valuations) et fais-la sur papier · Conditions réelles : 3 h chrono\, sa
+ ns cours\, téléphone dans une autre pièce · Rédige comme le jour J\, 
+ même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Examen blanc · Évaluation d'entraînement 1 St
+ udi
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-ue9-eval3@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · En plus\, si tu as de l'avance : évaluation d'entra
+ înement 3 de l'UE9
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+TRANSP:TRANSPARENT
+DESCRIPTION:Studi > onglet Évaluations
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · En plus\, si tu as de l'avance : évaluation d'e
+ ntraînement 3 de l'UE9
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-26-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Examen blanc · Évaluation d'entraînement 2 Studi
+DTSTART:20270426T090000
+DTEND:20270426T120000
+DESCRIPTION:Ouvre « Évaluation d'entraînement 2 » sur Studi (onglet É
+ valuations) et fais-la sur papier · Conditions réelles : 3 h chrono\, sa
+ ns cours\, téléphone dans une autre pièce · Rédige comme le jour J\, 
+ même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Examen blanc · Évaluation d'entraînement 2 St
+ udi
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-04-27-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Examen blanc · Annale 2026
+DTSTART:20270427T090000
+DTEND:20270427T120000
+DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 1 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE01 · Conditions réelle
+ s : 3 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Examen blanc · Annale 2026
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-02-1030@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Examen blanc · Annale 2026
+DTSTART:20270502T103000
+DTEND:20270502T133000
+DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 12 > C
+ orrigés Comptalia – Épreuve nationale du DCG UE12 · Conditions réell
+ es : 3 h chrono\, sans cours\, téléphone dans une autre pièce · Rédig
+ e comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Examen blanc · Annale 2026
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-03-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Examen blanc · Annale 2026
+DTSTART:20270503T090000
+DTEND:20270503T130000
+DESCRIPTION:Ouvre l'énoncé « Annale 2026 » : Médiathèque > UE 7 > Co
+ rrigés Comptalia – Épreuve nationale du DCG UE07 · Conditions réelle
+ s : 4 h chrono\, sans cours\, téléphone dans une autre pièce · Rédige
+  comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Examen blanc · Annale 2026
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-04-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE9 Compta · Examen blanc · Sujet zéro 2027
+DTSTART:20270504T090000
+DTEND:20270504T120000
+DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 9 >
+  Annales de l'UE 9 · Conditions réelles : 3 h chrono\, sans cours\, tél
+ éphone dans une autre pièce · Rédige comme le jour J\, même si tu blo
+ ques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE9 Compta · Examen blanc · Sujet zéro 2027
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-09-1030@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE1 Droit · Examen blanc · Sujet zéro 2027
+DTSTART:20270509T103000
+DTEND:20270509T133000
+DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 1 >
+  Annales de l'UE 1 · Conditions réelles : 3 h chrono\, sans cours\, tél
+ éphone dans une autre pièce · Rédige comme le jour J\, même si tu blo
+ ques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE1 Droit · Examen blanc · Sujet zéro 2027
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-10-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE5 Économie · Examen blanc · Sujet zéro 2027
+DTSTART:20270510T090000
+DTEND:20270510T130000
+DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 5 >
+  Annales de l'UE 5 · Conditions réelles : 4 h chrono\, sans cours\, tél
+ éphone dans une autre pièce · Rédige comme le jour J\, même si tu blo
+ ques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE5 Économie · Examen blanc · Sujet zéro 2027
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-11-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE8 SI · Examen blanc · Sujet zéro 2027
+DTSTART:20270511T090000
+DTEND:20270511T130000
+DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 8 >
+  Annales de l'UE 8 · Conditions réelles : 4 h chrono\, sans cours\, tél
+ éphone dans une autre pièce · Rédige comme le jour J\, même si tu blo
+ ques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE8 SI · Examen blanc · Sujet zéro 2027
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-16-1030@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE12 Anglais · Examen blanc · Annale 2024
+DTSTART:20270516T103000
+DTEND:20270516T133000
+DESCRIPTION:Ouvre l'énoncé « Annale 2024 » : Médiathèque > UE 12 > C
+ orrigés Comptalia – Épreuve nationale du DCG UE12 · Conditions réell
+ es : 3 h chrono\, sans cours\, téléphone dans une autre pièce · Rédig
+ e comme le jour J\, même si tu bloques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE12 Anglais · Examen blanc · Annale 2024
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-17-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Lundi de Pentecôte (férié) : repos\, ou rattrapage si tu es en 
+ retard.
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:s-2027-05-18-0900@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:UE7 Management · Examen blanc · Sujet zéro 2027
+DTSTART:20270518T090000
+DTEND:20270518T130000
+DESCRIPTION:Ouvre le sujet 0 du nouveau programme : Médiathèque > UE 7 >
+  Annales de l'UE 7 · Conditions réelles : 4 h chrono\, sans cours\, tél
+ éphone dans une autre pièce · Rédige comme le jour J\, même si tu blo
+ ques sur une question
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:UE7 Management · Examen blanc · Sujet zéro 2027
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-convocation@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Prépare ta convocation\, ta pièce d'identité et ta calculatrice
+DTSTART;VALUE=DATE:20270521
+DTEND;VALUE=DATE:20270522
+TRANSP:TRANSPARENT
+DESCRIPTION:48 h avant la première épreuve. Pas de téléphone pendant l
+ 'épreuve.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Prépare ta convocation\, ta pièce d'identité et ta calculat
+ rice
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-ecrits@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Écrits du DCG : en mai et juin (dates officielles à paraître)
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270525
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-chavouot@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe
+  ce jour-là
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-mariage-soeur@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Juillet : mariage de ta sœur. Rien n'est prévu\, profite !
+DTSTART;VALUE=DATE:20270701
+DTEND;VALUE=DATE:20270702
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ms-resultats@plan-dcg
+DTSTAMP:20261116T000000Z
+SUMMARY:Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)
+DTSTART;VALUE=DATE:20270708
+DTEND;VALUE=DATE:20270709
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
