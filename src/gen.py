@@ -367,16 +367,25 @@ def phase_of(wk):
     return 1 if d <= D(2027, 3, 14) else (2 if d <= D(2027, 4, 18) else 3)
 
 MILESTONES = [
-    {"date": "2027-01-10", "t": "Dépôt des parties 1 et 2 du rapport UE13 et de la fiche de suivi n° 1 sur Studi"},
-    {"date": "2027-01-17", "t": "Vérifie l'ouverture des inscriptions DCG sur Cyclades (en 2026 : du 19 janvier au 2 mars)"},
-    {"date": "2027-01-26", "t": "Bilan décisif : on garde les 7 UE pour l'inscription, ou on en reporte une ?"},
-    {"date": "2027-02-07", "t": "Dépôt de la partie 3 du rapport UE13 et de la fiche de suivi n° 2"},
-    {"date": "2027-02-21", "t": "Dépôt du rapport UE13 intégral (limite Studi : fin février)"},
+    {"date": "2027-01-10", "t": "Dépose les parties 1 et 2 du rapport UE13 et la fiche de suivi n° 1", "ue": "UE13", "todo": True,
+     "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"},
+    {"date": "2027-01-17", "t": "Inscris-toi aux écrits du DCG sur Cyclades", "todo": True,
+     "note": "En 2026 : du 19 janvier au 2 mars. Vérifie les dates sur Cyclades."},
+    {"date": "2027-01-26", "t": "Bilan décisif avec moi : 7 UE à l'inscription, ou une en moins ?", "todo": True},
+    {"date": "2027-02-07", "t": "Dépose la partie 3 du rapport UE13 et la fiche de suivi n° 2", "ue": "UE13", "todo": True,
+     "note": "Studi > Évaluations > Passer l'examen, et Évaluations transverses"},
+    {"date": "2027-02-21", "t": "Dépose le rapport UE13 intégral", "ue": "UE13", "todo": True,
+     "note": "Limite Studi : fin février. Studi > Évaluations > Passer l'examen"},
     {"date": "2027-03-16", "t": None},   # calculé plus bas
-    {"date": "2027-03-28", "t": "Studi conseille de passer tes certificats avant fin mars. UE9 et UE12 : le 18 avril, quand leur programme est fini."},
-    {"date": "2027-04-01", "t": "En avril, Studi propose des examens blancs « Objectif examen ». Envoie-moi leurs dates dès qu'elles sortent."},
-    {"date": "2027-04-25", "t": "Si tu as de l'avance : l'évaluation d'entraînement 3 de l'UE9 (Studi > Évaluations)."},
-    {"date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître). 48 h avant : convocation et pièce d'identité."},
+    {"date": "2027-03-28", "t": "Vérifie sur Studi les évaluations qui restent à faire", "todo": True,
+     "note": "Studi conseille de finir avant fin mars. Certificats UE9 et UE12 : le 18 avril, après leur programme."},
+    {"date": "2027-04-01", "t": "Envoie-moi les dates des examens blancs Studi « Objectif examen »", "todo": True,
+     "note": "Studi les propose en avril, avec des lives « Objectif examen »."},
+    {"date": "2027-04-25", "t": "En plus, si tu as de l'avance : évaluation d'entraînement 3 de l'UE9", "ue": "UE9", "todo": True,
+     "note": "Studi > onglet Évaluations"},
+    {"date": "2027-05-21", "t": "Prépare ta convocation, ta pièce d'identité et ta calculatrice", "todo": True,
+     "note": "48 h avant la première épreuve. Pas de téléphone pendant l'épreuve."},
+    {"date": "2027-05-24", "t": "Écrits du DCG : en mai et juin (dates officielles à paraître)"},
     {"date": "2027-06-11", "t": "Chavouot (11 et 12 juin) : je vérifie qu'aucune épreuve ne tombe ce jour-là"},
     {"date": "2027-07-01", "t": "Juillet : mariage de ta sœur. Rien n'est prévu, profite !"},
     {"date": "2027-07-08", "t": "Résultats du DCG sur Cyclades (en 2026 : le 9 juillet à 12 h)"},
@@ -413,6 +422,7 @@ for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
         m["kind"] = "replay"
         m["t"] = "Replay à regarder · " + short(e["titre"])
         m["note"] = f"Live à {fh(e['debut'])} : trop tard pour toi. Regarde le replay un autre jour."
+        m["todo"] = True
     elif e.get("type") == "live":
         m["t"] = "Live · " + short(e["titre"])
         m["start"], m["end"] = e["debut"], e["fin"]
@@ -423,6 +433,7 @@ for e in sorted(EVENTS, key=lambda e: (e["date"], e.get("debut", ""))):
     else:
         word = {"devoir": "À rendre", "quiz": "Quiz", "examen_blanc": "Examen blanc Studi", "examen": "Épreuve"}.get(e.get("type"), "À noter")
         m["t"] = e["titre"] if e.get("type") == "info" else word + " · " + short(e["titre"])
+        if e.get("type") in ("info", "devoir", "quiz"): m["todo"] = True
         if e.get("debut"): m["start"] = e["debut"]
         if e.get("fin"): m["end"] = e["fin"]
         if e.get("note"): m["note"] = e["note"]
@@ -436,6 +447,13 @@ for (ue, t) in HINTS:
     if (ue, t) not in _used:
         warnings.append(f"{ue} : la leçon « {t} » citée par un live n'existe pas")
 MILESTONES.sort(key=lambda m: (m["date"], m.get("start", "")))
+import hashlib, unicodedata
+def msid(m):
+    base = unicodedata.normalize("NFD", m["t"]).encode("ascii", "ignore").decode().lower()
+    return "ms-" + m["date"] + "-" + hashlib.sha1((base + (m.get("ue") or "")).encode()).hexdigest()[:6]
+for m in MILESTONES:
+    m["id"] = msid(m)
+assert len({m["id"] for m in MILESTONES}) == len(MILESTONES)
 
 # --- tes contraintes : on vérifie chaque séance
 for s in sessions:
@@ -445,7 +463,10 @@ for s in sessions:
     if s["kind"] != "off":
         assert any(a <= s["start"] and s["end"] <= b for a, b in WINDOWS[d.weekday()]), ("hors de tes créneaux", s["id"], s["start"], s["end"])
 
-ue_meta = {u: {"name": UE_NAMES[u]} for u in UE_NAMES}
+from curriculum import DATA
+ue_meta = {u: {"name": UE_NAMES[u], "epreuve": DATA[u].get("epreuve", {}),
+               "ressources": [{"t": r["titre"], "ou": r.get("ou", ""), "type": r.get("type", "")} for r in DATA[u].get("ressources", [])]}
+           for u in UE_NAMES}
 
 plan = {"generated": "2026-11-16", "start": START.isoformat(), "end": END.isoformat(), "exam": EXAM.isoformat(),
         "ues": ue_meta, "milestones": MILESTONES,

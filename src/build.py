@@ -33,6 +33,56 @@ for w in P["weeks"]:
     index["weeks"].append({"week": w["id"], "n": w["n"], "phase": w["phase"], "days": sorted({x["date"] for x in ss})})
 json.dump(index, open(os.path.join(OUT, 'weeks', 'index.json'), 'w'), ensure_ascii=False, indent=1)
 
+# --- calendrier à ajouter dans l'iPhone : ce qui a une date fixe (lives, examens blancs, certificats, dates limites).
+# Les séances de cours n'y sont pas : elles bougent avec ce que tu coches (elles restent dans l'appli).
+def ics_text(t):
+    return str(t).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+def ics_fold(line):
+    out, b = [], line.encode("utf-8")
+    while len(b) > 74:
+        cut = 74
+        while (b[cut] & 0xC0) == 0x80: cut -= 1   # ne coupe pas un caractère en deux
+        out.append(b[:cut].decode("utf-8")); b = b[cut:]
+    out.append(b.decode("utf-8"))
+    return "\r\n ".join(out)
+def ics_dt(date, hm=None):
+    return date.replace("-", "") + ("T" + hm.replace(":", "") + "00" if hm else "")
+def next_day(date):
+    import datetime
+    return (datetime.date.fromisoformat(date) + datetime.timedelta(days=1)).isoformat()
+UEN = {"UE1": "Droit", "UE5": "Économie", "UE7": "Management", "UE8": "SI", "UE9": "Compta", "UE12": "Anglais", "UE13": "Communication"}
+ev = []
+for m in P["milestones"]:
+    who = (m["ue"] + " " + UEN.get(m["ue"], "") + " · ") if m.get("ue") else ""
+    e = {"uid": m["id"], "sum": who + m["t"], "desc": m.get("note", ""), "date": m["date"]}
+    if m.get("start"):
+        e.update(start=m["start"], end=m.get("end") or m["start"], alarm="-PT30M")
+    else:
+        e["alarm"] = "-PT6H" if m.get("todo") else None   # la veille à 18 h
+    ev.append(e)
+for x in P["sessions"]:
+    if x["kind"] in ("examen", "certificat", "off"):
+        lab = {"examen": x["title"], "certificat": "Certificat Studi (QCM)", "off": x.get("note") or "Journée off"}[x["kind"]]
+        who = (x["ue"] + " " + UEN.get(x["ue"], "") + " · ") if x.get("ue") else ""
+        e = {"uid": "s-" + x["id"], "sum": who + lab, "desc": " · ".join(i["t"] for i in x["items"]), "date": x["date"]}
+        if x["kind"] != "off": e.update(start=x["start"], end=x["end"], alarm="-PT12H")
+        ev.append(e)
+lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Plan DCG//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+         "X-WR-CALNAME:Plan DCG", "X-WR-TIMEZONE:Europe/Paris", "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"]
+stamp = P.get("generated", "2026-11-16").replace("-", "") + "T000000Z"
+for e in sorted(ev, key=lambda e: (e["date"], e.get("start", ""))):
+    lines += ["BEGIN:VEVENT", "UID:" + e["uid"] + "@plan-dcg", "DTSTAMP:" + stamp, "SUMMARY:" + ics_text(e["sum"])]
+    if e.get("start"):
+        lines += ["DTSTART:" + ics_dt(e["date"], e["start"]), "DTEND:" + ics_dt(e["date"], e["end"])]
+    else:
+        lines += ["DTSTART;VALUE=DATE:" + ics_dt(e["date"]), "DTEND;VALUE=DATE:" + ics_dt(next_day(e["date"])), "TRANSP:TRANSPARENT"]
+    if e["desc"]: lines.append("DESCRIPTION:" + ics_text(e["desc"]))
+    if e.get("alarm"):
+        lines += ["BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + ics_text(e["sum"]), "TRIGGER:" + e["alarm"], "END:VALARM"]
+    lines.append("END:VEVENT")
+lines.append("END:VCALENDAR")
+open(os.path.join(OUT, "calendrier.ics"), "w", newline="").write("\r\n".join(ics_fold(l) for l in lines) + "\r\n")
+
 # --- manifeste (couleur : la nuit du ciel)
 manifest = {
   "name": "Plan DCG 2027", "short_name": "Plan DCG", "id": "./", "start_url": "./", "scope": "./",
