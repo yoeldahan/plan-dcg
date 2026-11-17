@@ -1894,7 +1894,7 @@ function renderSession(sh){
         body.append(h("div",{class:"items"}, g.ns.map(n=>itemRow(v.ue,n,{sid:v.id, pre:"it"}))));
       }
       const studiMod = groups.some(g => /^(M\d+ · |Introduction$)/.test(g.m)), rapport = groups.some(g => /^Rapport · /.test(g.m));
-      if (studiMod) body.append(h("p",{class:"where"}, "Où : Studi > Médiathèque > Parcours > "+v.ue.replace("UE","UE ")+" > le module ci-dessus."));
+      if (studiMod) body.append(h("p",{class:"where"}, "Où : Studi > Médiathèque > Parcours > DCG 2026 > "+v.ue.replace("UE","UE ")+" > le module ci-dessus."));
       else if (rapport) body.append(h("p",{class:"where"}, "Tu écris dans ton fichier de rapport. Les dépôts se font sur Studi > Évaluations."));
     }
     else if (!v.skipped) body.append(h("p",{class:"empty"}, "Tu es en avance sur "+UEN[v.ue]+". Révise tes fiches, ou ajoute une séance."));
