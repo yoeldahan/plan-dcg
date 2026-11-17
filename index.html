@@ -319,6 +319,8 @@ button.d{border-color:var(--ctl);cursor:pointer}
 .tm.ev button{grid-template-columns:64px 10px minmax(0,1fr)}
 .tm.ev .t{white-space:nowrap}
 .save + .save{margin-top:12px}
+.steps-s{margin:8px 0 0;padding-left:20px;font:500 14.5px/1.45 var(--f-text);color:var(--ink2);list-style:decimal}
+.steps-s li{margin-top:3px}
 .tm.ev small{display:block;color:var(--ink2);font-size:13px;margin-top:2px}
 .seg{display:inline-flex;padding:3px;border-radius:12px;background:var(--rule);gap:2px;margin-bottom:12px}
 .seg button{min-height:40px;padding:0 18px;border-radius:9px;font:600 14.5px/1 var(--f-text);color:var(--ink2)}
@@ -2050,7 +2052,7 @@ function screenProgress(){
 }
 
 /* ---- Méthode ---- */
-const calURL = proto => (location.protocol === "http:" && proto === "https" ? "http" : proto)+"://"+location.host+location.pathname.replace(/[^/]*$/,"")+"calendrier.ics";
+const calURL = (proto, file) => (location.protocol === "http:" && proto === "https" ? "http" : proto)+"://"+location.host+location.pathname.replace(/[^/]*$/,"")+(file || "calendrier.ics");
 function screenMethod(){
   const linked = !!ghToken();
   const d = (title, open, ...kids) => h("details",open ? {open:true} : null, h("summary",null, h("span",null,title), ic("down")), h("div",{class:"dc"}, ...kids));
@@ -2061,6 +2063,15 @@ function screenMethod(){
       h("p",null, linked ? "Tes coches sont sauvegardées. Je les vois le dimanche et le mardi." : "Tes coches sont seulement sur cet appareil. Relie l'appli : je verrai ta progression. Ça prend 3 minutes."),
       h("div",{class:"gh"}, h("span",{class:"dot"+(linked?" on":"")}), h("b",null, linked ? "Reliée" : "Pas encore reliée"),
         h("button",{type:"button", class:"btn "+(linked?"soft":"primary"), id:"gh-open", onclick:openGitHub}, linked ? "Gérer" : "Relier à GitHub"))),
+    h("section",{class:"card-p save"},
+      h("h2",null,"Tes rappels de travail"),
+      h("p",null, "Ton iPhone te prévient à chaque étape : « Boker tov » 2 h avant, « Prépare-toi » 30 min avant, puis le début, chaque séance, la pause, la reprise et la fin."),
+      h("ol",{class:"steps-s"},
+        h("li",null, "Touche « Activer mes rappels », puis « S'abonner »."),
+        h("li",null, "Dans les réglages de l'abonnement, laisse « Supprimer les alarmes » désactivé."),
+        h("li",null, "Autorise les notifications de l'app Calendrier.")),
+      h("p",null, "Les rappels suivent tes horaires prévus. Si tu commences en retard, suis plutôt l'appli."),
+      h("div",{class:"gh"}, h("a",{class:"btn primary", id:"rp-add", href:calURL("webcal", "rappels.ics")}, ic("clock"), "Activer mes rappels"))),
     h("section",{class:"card-p save"},
       h("h2",null,"Ton calendrier iPhone"),
       h("p",null, "Ajoute une fois le calendrier « Plan DCG ». Tu y verras les lives, les examens blancs, les certificats et les dates limites, avec un rappel."),

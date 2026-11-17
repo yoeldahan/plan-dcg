@@ -72,21 +72,86 @@ for x in P["sessions"]:
         e = {"uid": "s-" + x["id"], "sum": who + lab, "desc": " · ".join(i["t"] for i in x["items"]), "date": x["date"]}
         if x["kind"] != "off": e.update(start=x["start"], end=x["end"], alarm="-PT2H" if after_rest(x["date"]) else "-PT12H")
         ev.append(e)
-lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Plan DCG//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-         "X-WR-CALNAME:Plan DCG", "X-WR-TIMEZONE:Europe/Paris", "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"]
 stamp = P.get("generated", "2026-11-16").replace("-", "") + "T000000Z"
-for e in sorted(ev, key=lambda e: (e["date"], e.get("start", ""))):
-    lines += ["BEGIN:VEVENT", "UID:" + e["uid"] + "@plan-dcg", "DTSTAMP:" + stamp, "SUMMARY:" + ics_text(e["sum"])]
-    if e.get("start"):
-        lines += ["DTSTART:" + ics_dt(e["date"], e["start"]), "DTEND:" + ics_dt(e["date"], e["end"])]
-    else:
-        lines += ["DTSTART;VALUE=DATE:" + ics_dt(e["date"]), "DTEND;VALUE=DATE:" + ics_dt(next_day(e["date"])), "TRANSP:TRANSPARENT"]
-    if e["desc"]: lines.append("DESCRIPTION:" + ics_text(e["desc"]))
-    if e.get("alarm"):
-        lines += ["BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + ics_text(e["sum"]), "TRIGGER:" + e["alarm"], "END:VALARM"]
-    lines.append("END:VEVENT")
-lines.append("END:VCALENDAR")
-open(os.path.join(OUT, "calendrier.ics"), "w", newline="").write("\r\n".join(ics_fold(l) for l in lines) + "\r\n")
+def write_ics(fname, calname, events):
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Plan DCG//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+             "X-WR-CALNAME:" + calname, "X-WR-TIMEZONE:Europe/Paris", "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"]
+    for e in sorted(events, key=lambda e: (e["date"], e.get("start", ""))):
+        lines += ["BEGIN:VEVENT", "UID:" + e["uid"] + "@plan-dcg", "DTSTAMP:" + stamp, "SUMMARY:" + ics_text(e["sum"])]
+        if e.get("start"):
+            lines += ["DTSTART:" + ics_dt(e["date"], e["start"]), "DTEND:" + ics_dt(e["date"], e["end"])]
+        else:
+            lines += ["DTSTART;VALUE=DATE:" + ics_dt(e["date"]), "DTEND;VALUE=DATE:" + ics_dt(next_day(e["date"]))]
+        if e.get("transp") or not e.get("start"): lines.append("TRANSP:TRANSPARENT")
+        if e.get("desc"): lines.append("DESCRIPTION:" + ics_text(e["desc"]))
+        if e.get("alarm"):
+            lines += ["BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + ics_text(e["sum"]), "TRIGGER:" + e["alarm"], "END:VALARM"]
+        lines.append("END:VEVENT")
+    lines.append("END:VCALENDAR")
+    open(os.path.join(OUT, fname), "w", newline="").write("\r\n".join(ics_fold(l) for l in lines) + "\r\n")
+write_ics("calendrier.ics", "Plan DCG", ev)
+
+# --- rappels de travail (un autre calendrier, « Plan DCG · Rappels ») : une alerte à chaque étape de la journée prévue.
+# 2 h avant : Boker tov ; 30 min avant : prépare-toi ; puis chaque début de séance, la pause, la reprise et la fin.
+def fh(t):
+    hh, mm = map(int, t.split(":"))
+    return f"{hh} h" + (f" {mm:02d}" if mm else "")
+def add_min(t, m):
+    hh, mm = map(int, t.split(":")); x = hh * 60 + mm + m
+    return f"{x // 60:02d}:{x % 60:02d}"
+def gap(a, b):
+    h1, m1 = map(int, a.split(":")); h2, m2 = map(int, b.split(":"))
+    return (h2 * 60 + m2) - (h1 * 60 + m1)
+NOUN = {"UE1": "le droit", "UE5": "l'économie", "UE7": "le management", "UE8": "le SI", "UE9": "la compta", "UE12": "l'anglais", "UE13": "la communication"}
+DE = {"UE1": "de droit", "UE5": "d'économie", "UE7": "de management", "UE8": "de SI", "UE9": "de compta", "UE12": "d'anglais", "UE13": "de communication"}
+def what(x):   # ce que tu fais, avec son article : « la compta », « l'examen blanc de droit »…
+    u = x.get("ue") or ""
+    k = x["kind"]
+    if k in ("cours", "exercices", "rapport"): return NOUN.get(u, "ta séance")
+    if k == "examen": return "l'examen blanc " + DE.get(u, "")
+    if k == "correction": return "la correction de ton examen blanc"
+    if k == "reprise": return "la reprise des points faibles"
+    if k == "certificat": return "le certificat Studi " + DE.get(u, "")
+    if k == "bilan": return "ton bilan de la semaine"
+    t = (x.get("title") or "").lower()
+    return {"révision de la semaine": "la révision de la semaine", "cartes et fiches": "tes cartes et tes fiches",
+            "révision des fiches": "la révision des fiches"}.get(t, "ta révision")
+def the(x): return what(x)
+def a_(w):     # « à » + article : au SI, à la compta, à l'anglais, à tes fiches
+    return "au " + w[3:] if w.startswith("le ") else "aux " + w[4:] if w.startswith("les ") else "à " + w
+cap1 = lambda w: w[:1].upper() + w[1:]
+rp = []
+days = {}
+for x in P["sessions"]:
+    if x["kind"] != "off": days.setdefault(x["date"], []).append(x)
+for d, ss in sorted(days.items()):
+    ss.sort(key=lambda x: x["start"])
+    first, last = ss[0], ss[-1]
+    R = lambda key, t, txt, end=None, desc="": rp.append({"uid": f"r-{d}-{key}", "date": d, "start": t, "end": end or add_min(t, 5),
+                                                          "sum": txt, "desc": desc, "alarm": "PT0S", "transp": True})
+    R("lever", add_min(first["start"], -120), f"Boker tov ! Debout : on commence à {fh(first['start'])} avec {the(first)}.")
+    R("prep", add_min(first["start"], -30), f"Dans 30 min, on commence. Prépare ton bureau, ton café, et éloigne ton téléphone.")
+    for i, x in enumerate(ss):
+        prev = ss[i - 1] if i else None
+        if prev and gap(prev["end"], x["start"]) >= 45:
+            R("pause", prev["end"], f"Pause déjeuner, bien mérité. On reprend à {fh(x['start'])} avec {the(x)}.")
+        if x["kind"] == "examen":
+            txt = f"C'est l'heure : {what(x)}, en conditions réelles. Téléphone dans une autre pièce."
+        elif x["kind"] == "bilan":
+            txt = "Bilan de la semaine : 10 min pour cocher et écrire ce qui a coincé."
+        elif i == 0:
+            txt = f"On commence ! {cap1(what(x))} jusqu'à {fh(x['end'])}. Ouvre l'appli."
+        elif prev and gap(prev["end"], x["start"]) >= 45:
+            txt = f"On reprend ! {cap1(what(x))} jusqu'à {fh(x['end'])}."
+        else:
+            txt = f"Place {a_(what(x))}, jusqu'à {fh(x['end'])}."
+        rp.append({"uid": f"r-{x['id']}", "date": d, "start": x["start"], "end": x["end"], "sum": txt,
+                   "desc": " · ".join(i["t"] for i in x["items"] if i.get("k") != "B")[:400], "alarm": "PT0S"})
+    R("fin", last["end"], "Journée finie, bravo ! Coche ce que tu as fait dans l'appli.")
+for e in rp:   # jamais pendant Shabbat ou Yom Tov, jamais après 20 h
+    wd = _dt.date.fromisoformat(e["date"]).weekday()
+    assert wd != 5 and e["date"] not in REST and e["start"] >= "06:00" and e["start"] <= "20:00", e
+write_ics("rappels.ics", "Plan DCG · Rappels", rp)
 
 # --- manifeste (couleur : la nuit du ciel)
 manifest = {
