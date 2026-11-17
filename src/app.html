@@ -358,7 +358,7 @@ button.s-head .ic{width:18px;height:18px;color:var(--ink3);flex:none}
 .mods li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:10px 0;border-bottom:1px solid var(--rule);font:500 14.5px/1.35 var(--f-text)}
 .mods .mc2{font:600 13px/1.35 var(--f-text);color:var(--ink2)}
 .mods .bar{grid-column:1 / -1;height:5px}
-.mods li.ok .mn{color:var(--ink3)} .mods li.ok .mc2{color:var(--ok)}
+.mods li.done .mc2{color:var(--ok)}
 .mods li.cur .mn{font-weight:700}
 .res li{padding:9px 0;border-bottom:1px solid var(--rule);font:500 14px/1.4 var(--f-text)}
 .res b{display:block;font-weight:600}
@@ -374,8 +374,9 @@ button.s-head .ic{width:18px;height:18px;color:var(--ink3);flex:none}
 .lvb.lv2 i,.lvdot.lv2,.chs i.lv2,.mbar i.lv2,.mleg2 i.lv2{background:var(--gold2)}
 .lvb.lv3 i,.lvdot.lv3,.chs i.lv3,.mbar i.lv3,.mleg2 i.lv3{background:var(--ok)}
 .lvdot.fini,.chs i.fini,.mbar i.fini,.mleg2 i.fini{background:var(--ink3)}
-.lvdot.encours,.chs i.encours,.mbar i.encours,.mleg2 i.encours{background:var(--rule2)}
-.lvdot.avenir,.chs i.avenir,.mbar i.avenir,.mleg2 i.avenir{background:transparent;box-shadow:inset 0 0 0 1.5px var(--rule2)}
+.lvdot.encours,.chs i.encours,.mbar i.encours,.mleg2 i.encours{background:var(--ctl)}
+.lvdot.avenir,.chs i.avenir,.mleg2 i.avenir{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ctl)}
+.mbar i.avenir{background:transparent}
 .lvb[aria-pressed="true"]{color:var(--ink);border-color:var(--ink);background:var(--bg)}
 .lvb.lv1[aria-pressed="true"]{border-color:var(--coral);background:var(--coral-soft)}
 .lvb.lv2[aria-pressed="true"]{border-color:var(--gold2);background:var(--gold-soft)}
@@ -399,8 +400,10 @@ button.s-head .ic{width:18px;height:18px;color:var(--ink3);flex:none}
 .lvask{margin-top:14px;border-left:4px solid var(--ue)}
 .lvask h2{font:700 17px/1.25 var(--f-display);margin-top:4px}
 .lvask .lvp{margin-top:10px}
-.agenda li.pause{list-style:none}
-.pz{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:2px 0 8px;padding:8px 12px;border-radius:10px;border:1px dashed var(--rule2);font:500 13.5px/1.3 var(--f-text);color:var(--ink2)}
+.agenda li.pause{list-style:none;display:grid;grid-template-columns:47px minmax(0,1fr);position:relative}
+.agenda li.pause .gut{min-height:0;padding:0 7px 0 0;justify-content:center}
+.agenda li.pause .gut .nowm{position:relative;right:3px}
+.pz{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 8px 9px;padding:8px 12px;border-radius:10px;border:1px dashed var(--rule2);font:500 13.5px/1.3 var(--f-text);color:var(--ink2)}
 .pz .ic{width:16px;height:16px;color:var(--ok)}
 .pz b{color:var(--ink);font-weight:600}
 .pz .more{margin:-12px 0 -12px auto}
@@ -923,7 +926,7 @@ for (const s of PLAN.sessions){
 /* ================= état ================= */
 let done = {};       // ue -> {n: "AAAA-MM-JJ"}
 let progress = {};   // sessionId -> {done}
-let overrides = {}, extras = {}, skips = {}, history = {}, scores = {}, bilans = {}, maitrise = {}, meta = null;
+let overrides = {}, extras = {}, skips = {}, history = {}, scores = {}, bilans = {}, maitrise = {}, pauses = {}, meta = null;
 let db = null, local = false;
 let view = null, selWeek = null, selDay = null;
 let sheetState = null;
@@ -972,28 +975,30 @@ function lateStartOf(ds, d){
   const m = t.getHours()*60 + t.getMinutes(), r = Math.ceil(m/5)*5, hm = pad(Math.floor(r/60))+":"+pad(r%60);
   return hm > first.start && hm < LATE_END ? hm : null;
 }
-/* pause déjeuner choisie pour un jour (sur cet appareil : dcg-ui-lunch-<date>) : {after:<id de séance>, dur} ou {none:true} */
-const lunchMem = {};
-function lunchPref(d){
-  if (d in lunchMem) return lunchMem[d];
-  let v = null; try{ v = JSON.parse(localStorage.getItem("dcg-ui-lunch-"+d) || "null"); }catch(e){ v = null; }
-  return (lunchMem[d] = v && typeof v === "object" ? v : null);
-}
+/* pause déjeuner choisie pour un jour : pause/<date> = {after:<id de séance>, dur, at} ou {none:true, at} (synchronisée comme les coches) */
+function lunchPref(d){ const v = pauses[d]; return v && typeof v === "object" && (v.none || v.after) ? v : null; }
 function setLunch(d, v){
-  lunchMem[d] = v || null;
-  try{ if (v) localStorage.setItem("dcg-ui-lunch-"+d, JSON.stringify(v)); else localStorage.removeItem("dcg-ui-lunch-"+d); }catch(e){}
+  if (v){ pauses[d] = Object.assign({}, v, {at:new Date().toISOString()}); persist("pause/"+d, pauses[d]); }
+  else { delete pauses[d]; remove("pause/"+d); }
   refresh();
 }
-(function(){ try{ const T = today(); for (let i = localStorage.length-1; i >= 0; i--){ const k = localStorage.key(i); if (k && k.startsWith("dcg-ui-lunch-") && k.slice(13) < T) localStorage.removeItem(k); } }catch(e){} })();
+/* la pause prévue par le plan : après quelle séance, et combien de temps (45 min le dimanche, 1 h sinon) */
+function plannedLunchOf(ds){
+  for (let i = 1; i < ds.length; i++){ const g = mins(ds[i-1].end, ds[i].start); if (g >= 45) return {after:ds[i-1].id, dur:g}; }
+  return {after:null, dur:60};
+}
+(function(){ try{ for (let i = localStorage.length-1; i >= 0; i--){ const k = localStorage.key(i); if (k && k.startsWith("dcg-ui-lunch-")) localStorage.removeItem(k); } }catch(e){} })();   // ancienne version
 function shiftLateDays(out){
   const byDate = new Map();
   for (const s of out) if (!s.extra && s.kind !== "off"){ if (!byDate.has(s.date)) byDate.set(s.date, []); byDate.get(s.date).push(s); }
   const repl = new Map(), drop = new Set();
   for (const [d, ds] of byDate){
-    const late = lateStartOf(ds, d), pref = lunchPref(d);
+    const late = lateStartOf(ds, d);
+    let pref = lunchPref(d);
+    if (pref && !pref.none && !ds.some(s => s.id === pref.after)) pref = null;   // la séance choisie n'existe plus : la pause prévue revient
     if (!late && !pref) continue;
-    const S = late || ds[0].start;
-    const plannedLunch = ds.reduce((a, s, i) => i && mins(ds[i-1].end, s.start) >= 45 ? mins(ds[i-1].end, s.start) : a, 60);
+    const S = late || ds[0].start, pl = plannedLunchOf(ds), plannedLunch = pl.dur;
+    const autoLunch = !pref && S < "13:00";   // départ en retard : la pause prévue garde sa place, sauf si tu commences l'après-midi
     let cur = S, work = 0, lunch = false, cut = false;
     const bil = ds.some(s => s.kind === "bilan"), stop = bil ? addMin(LATE_END, -10) : LATE_END;   // le bilan du mardi tient toujours avant 20 h
     ds.forEach((s, i) => {
@@ -1001,7 +1006,7 @@ function shiftLateDays(out){
       if (i > 0){
         const gap = mins(ds[i-1].end, s.start);
         if (pref && !pref.none && pref.after === ds[i-1].id){ cur = addMin(cur, pref.dur || plannedLunch); lunch = true; }   // ta pause, là où tu l'as mise
-        else if (!pref && !lunch && work >= 225){ cur = addMin(cur, 60); lunch = true; }   // 1 h de pause après environ 4 h de travail
+        else if (autoLunch && !lunch && (ds[i-1].id === pl.after || work >= 225) && addMin(cur, plannedLunch) < stop){ cur = addMin(cur, plannedLunch); lunch = true; }   // pause prévue (ou après environ 4 h), jamais si plus rien ne tient après
         else if (gap > 0 && gap < 45) cur = addMin(cur, gap);
       }
       const ns = Object.assign({}, s, {start:cur, end:addMin(cur, dur), plannedStart:s.start});
@@ -1012,7 +1017,6 @@ function shiftLateDays(out){
       cur = addMin(cur, dur); work += dur;
     });
     if (cut && repl.get(ds[0].id)) repl.get(ds[0].id).cut = true;
-    if (cut && pref) lunchMem["cut-"+d] = true; else delete lunchMem["cut-"+d];
   }
   if (!repl.size && !drop.size) return out;
   return out.filter(s => !drop.has(s.id)).map(s => repl.get(s.id) || s).sort((a,b)=> (a.date+a.start).localeCompare(b.date+b.start));
@@ -1690,8 +1694,18 @@ function agenda(list, o){
   const ol = h("ol",{class:"agenda"});
   const now = nowHM(), work = list.filter(v => v.kind !== "off");
   let marker = !(o.today && work.length && now < work[work.length-1].end);
+  let shownPause = false;
   for (const v of list){
     let nm = null;
+    const pv = list[list.indexOf(v)-1];
+    if (pv && pv.kind !== "off" && v.kind !== "off" && !pv.extra && !v.extra && mins(pv.end, v.start) >= 30){
+      const canEdit = v.date >= today(), inPause = !marker && o.today && pv.end <= now && now < v.start;
+      shownPause = true;
+      ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}, inPause ? h("span",{class:"nowm num", role:"img", "aria-label":"Il est "+fH(now)}, fT(now)) : null),
+        h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null,"Pause déjeuner"), " · "+fH(pv.end)+" – "+fH(v.start)),
+          canEdit ? h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-"+v.date, onclick:()=>openLunch(v.date)}, "Modifier") : null)));
+      if (inPause) marker = true;
+    }
     if (!marker && v.kind !== "off"){
       if (isNow(v)){
         const p = Math.max(.22, Math.min(.78, mins(v.start, now)/Math.max(1, mins(v.start, v.end))));
@@ -1702,20 +1716,14 @@ function agenda(list, o){
         marker = true;
       }
     }
-    const pv = list[list.indexOf(v)-1];
-    if (pv && pv.kind !== "off" && v.kind !== "off" && !pv.extra && !v.extra && mins(pv.end, v.start) >= 30){
-      const canEdit = v.date >= today();
-      ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}, h("span",null, fT(pv.end))),
-        h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null,"Pause déjeuner"), " · "+fH(pv.end)+" – "+fH(v.start)),
-          canEdit ? h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-"+v.date, onclick:()=>openLunch(v.date)}, "Modifier") : null)));
-    }
     ol.append(h("li",{class:"slot"},
       h("div",{class:"gut"}, h("span",null, v.kind==="off" ? "" : fT(v.start)), h("span",{class:"e"}, v.kind==="off" ? "" : fT(v.end)), nm),
       card(v, {hero: v.id === o.heroId, pre:o.pre, compactPast: o.today && !!o.heroId})));
   }
-  const lp = list.length && lunchPref(list[0].date);
-  if (lp && lp.none && list[0].date >= today()) ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}),
-    h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null,"Sans pause déjeuner"), " aujourd'hui"), h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-none", onclick:()=>openLunch(list[0].date)}, "Modifier"))));
+  const d0 = list.length && list[0].date, lp = d0 && lunchPref(d0);
+  if (!shownPause && d0 && d0 >= today() && list.filter(v => v.kind !== "off" && !v.extra).length >= 2) ol.append(h("li",{class:"pause"}, h("div",{class:"gut"}),
+    h("div",{class:"pz"}, ic("leaf"), h("span",null, h("b",null, lp && lp.none ? "Sans pause déjeuner" : "Pas de pause pour l'instant"), d0 === today() ? " aujourd'hui" : " ce jour-là"),
+      h("button",{type:"button", class:"more", id:(o.pre||"p")+"-lunch-none", onclick:()=>openLunch(d0)}, "Modifier"))));
   return ol;
 }
 function sessionsOn(d){ return SCHED.slots.filter(s=>s.date===d).map(view_); }
@@ -1792,7 +1800,10 @@ function setLevel(u, k, lv){
 }
 function lvPicker(c, pre){
   return h("div",{class:"lvp", role:"group", "aria-label":"Ton niveau : "+chapName(c)}, [1,2,3].map(l =>
-    h("button",{type:"button", class:"lvb "+LV[l].c, id:(pre||"lv")+"-"+c.u+"-"+c.k+"-"+l, "aria-pressed":String(c.lv === l), onclick:()=>setLevel(c.u, c.k, c.lv === l ? 0 : l)}, h("i",{"aria-hidden":"true"}), LV[l].t)));
+    h("button",{type:"button", class:"lvb "+LV[l].c, id:(pre||"lv")+"-"+c.u+"-"+c.k+"-"+l, "aria-pressed":String(c.lv === l), onclick:()=>{
+      setLevel(c.u, c.k, c.lv === l ? 0 : l);
+      if (pre === "td"){ const n = document.querySelector("#screen .lvask .lvb") || document.getElementById("hero-open") || document.querySelector("#screen h1"); if (n){ if (n.tagName === "H1") n.setAttribute("tabindex","-1"); n.focus({preventScroll:true}); } }
+    }}, h("i",{"aria-hidden":"true"}), LV[l].t)));
 }
 const chapStrip = cs => h("span",{class:"chs","aria-hidden":"true"}, cs.map(c => h("i",{class:c.state})));
 const weakChapters = u => UE_LIST.filter(x => !u || x === u).flatMap(x => chapters(x)).filter(c => c.lv && c.lv < 3).sort((a,b) => a.lv - b.lv);
@@ -2377,19 +2388,21 @@ function openLunch(d){ sheetState = {type:"lunch", date:d}; renderSheet(); openS
 function renderLunch(sh){
   const d = sheetState.date, pref = lunchPref(d), lu = lunchOf(d);
   const ss = SCHED.slots.filter(s => s.date === d && !s.extra && s.kind !== "off").sort((a,b)=>a.start.localeCompare(b.start)).map(view_);
-  const dur = (pref && pref.dur) || (lu ? mins(lu.start, lu.end) : 60);
+  const dur = (pref && pref.dur) || (lu ? mins(lu.start, lu.end) : plannedLunchOf(sessionsRaw(d)).dur), none = !!(pref && pref.none);
+  const jour = d === today() ? "Aujourd'hui" : fDay(d);
   sh.append(sheetBar());
   const body = h("div",{class:"body"}, h("h2",null,"Ta pause déjeuner"),
-    h("p",{class:"muted"}, lu ? "Aujourd'hui : "+fH(lu.start)+" – "+fH(lu.end)+"." : pref && pref.none ? "Aujourd'hui : pas de pause." : "Pas de pause prévue."),
+    h("p",{class:"muted"}, lu ? jour+" : "+fH(lu.start)+" – "+fH(lu.end)+"." : none ? jour+" : pas de pause." : jour+" : pas de pause pour l'instant."),
     h("p",{class:"muted"}, "Choisis après quelle séance tu manges, ou saute la pause. Le reste de ta journée suit."));
   body.append(h("p",{class:"subhead", id:"lu-when"}, "Quand"));
   const opts = ss.slice(0, -1).map(v => h("button",{type:"button", class:"choice", id:"lu-"+v.id, "aria-pressed":String(!!(lu && lu.after === v.id) && !(pref && pref.none)),
     onclick:()=>{ setLunch(d, {after:v.id, dur}); closeSheet(); toast("Pause déplacée."); }}, "Après "+(v.ue ? UEN[v.ue] : titleOf(v))+" ("+fH(v.end)+")"));
-  opts.push(h("button",{type:"button", class:"choice", id:"lu-none", "aria-pressed":String(!!(pref && pref.none)), onclick:()=>{ setLunch(d, {none:true}); closeSheet(); toast("Pas de pause aujourd'hui. Bon courage !"); }}, "Pas de pause"));
+  opts.push(h("button",{type:"button", class:"choice", id:"lu-none", "aria-pressed":String(none), onclick:()=>{ setLunch(d, {none:true}); closeSheet(); toast(d === today() ? "Pas de pause aujourd'hui. Bon courage !" : "Pas de pause ce jour-là."); }}, "Pas de pause"));
   body.append(h("div",{class:"choices col", role:"group", "aria-labelledby":"lu-when"}, opts));
   body.append(h("p",{class:"subhead", id:"lu-dur"}, "Durée"));
-  body.append(h("div",{class:"choices", role:"group", "aria-labelledby":"lu-dur"}, [30,45,60].map(m => h("button",{type:"button", class:"choice num", id:"lu-d"+m, "aria-pressed":String(dur === m),
+  body.append(h("div",{class:"choices", role:"group", "aria-labelledby":"lu-dur"}, [30,45,60].map(m => h("button",{type:"button", class:"choice num", id:"lu-d"+m, "aria-pressed":String(!none && dur === m), disabled:none || !(pref && pref.after) && !(lu && lu.after),
     onclick:()=>{ const after = (pref && pref.after) || (lu && lu.after); if (after){ setLunch(d, {after, dur:m}); renderSheet(); } }}, hmd(m)))));
+  if (none) body.append(h("p",{class:"muted small"}, "Choisis d'abord quand tu manges pour régler la durée."));
   body.append(h("p",{class:"muted small"}, "Jamais après 20 h : ce qui dépasse passe aux prochains jours."));
   sh.append(body);
   sh.append(h("div",{class:"foot"}, h("button",{type:"button", class:"btn soft", id:"lu-reset", disabled:!pref, onclick:()=>{ setLunch(d, null); closeSheet(); toast("Pause remise comme prévu."); }}, "Comme prévu"),
@@ -2415,7 +2428,12 @@ function renderUE(sh){
   const chs = chapters(u), cur = chs.find(c => c.dn < c.tot);
   body.append(h("p",{class:"subhead"},"Tes chapitres"));
   body.append(h("p",{class:"lvhelp"}, "Note ton niveau après un exercice ou un test. Avant les écrits, commence par les rouges."));
-  body.append(h("ol",{class:"mods"}, chs.map(c => h("li",{class:c.state+(c === cur ? " cur" : "")},
+  const other = [];
+  for (const it of Q[u]){ if (it.k === "B" || chapKey(it.mod) || it.mod === "Introduction") continue; const g = it.mod.split(" · ")[0]; let o = other.find(z => z.g === g); if (!o){ o = {g, tot:0, dn:0}; other.push(o); } o.tot++; if (isDoneItem(u, it.n)) o.dn++; }
+  body.append(h("ol",{class:"mods"}, other.map(o => h("li",{class:o.dn >= o.tot ? "done" : ""},
+    h("span",{class:"mn"}, o.g === "Rapport" ? "Ton rapport de stage" : o.g), h("span",{class:"mc2 num"}, o.dn >= o.tot ? "Fini" : o.dn+" / "+o.tot),
+    h("span",{class:"bar", "aria-hidden":"true"}, h("i",{style:"width:"+Math.round(o.dn/o.tot*100)+"%"})))),
+    chs.map(c => h("li",{class:c.state+(c === cur ? " cur" : "")+(c.dn >= c.tot ? " done" : "")},
     h("span",{class:"mn"}, h("span",{class:"lvdot "+c.state, "aria-hidden":"true"}), chapName(c)),
     h("span",{class:"mc2 num"}, c.dn >= c.tot ? "Fini" : c.dn+" / "+c.tot),
     h("span",{class:"bar", "aria-hidden":"true"}, h("i",{style:"width:"+Math.round(c.dn/c.tot*100)+"%"})),

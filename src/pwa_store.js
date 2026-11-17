@@ -7,7 +7,7 @@ const LS = {
   set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
   del(k){ try{ localStorage.removeItem(k); }catch(e){} }
 };
-const USER_COLS = new Set(["done","progress","skips","extras","scores","bilans","maitrise"]);
+const USER_COLS = new Set(["done","progress","skips","extras","scores","bilans","maitrise","pause"]);
 function ghToken(){ return (LS.get("dcg-gh-token")||"").trim(); }
 function localDocs(){
   const o = {};
@@ -64,14 +64,14 @@ function remove(path){
   ghQueue();
 }
 function loadLocal(){
-  done = {}; progress = {}; skips = {}; extras = {}; scores = {}; bilans = {}; history = {}; maitrise = {};
+  done = {}; progress = {}; skips = {}; extras = {}; scores = {}; bilans = {}; history = {}; maitrise = {}; pauses = {};
   const o = localDocs();
   for (const path in o){
     const [col, id] = path.split("/"); const val = o[path];
     if (col==="done") done[id] = Object.assign({}, val.items||{});
     else if (col==="progress") progress[id] = val; else if (col==="skips") skips[id] = val; else if (col==="extras") extras[id] = val;
     else if (col==="scores") scores[id] = val; else if (col==="bilans") bilans[id] = val; else if (col==="history") history[id] = val;
-    else if (col==="maitrise") maitrise[id] = val;
+    else if (col==="maitrise") maitrise[id] = val; else if (col==="pause") pauses[id] = val;
   }
   migrateLegacy(progress);
 }
