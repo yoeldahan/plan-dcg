@@ -1,0 +1,887 @@
+{
+"calendar": "principal",
+"created": "2026-11-17",
+"events": [
+{
+"id": "r0bcpldgt5bah104n51m9h092k",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec la communication.",
+"start": "2026-11-22T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270221T235959Z"
+]
+},
+{
+"id": "bi04b1c7sp506mmjdt9ok5tdbo",
+"summary": "DCG · Dans 30 min, on commence. Prépare ton bureau, ton café, et éloigne ton téléphone.",
+"start": "2026-11-22T10:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270523T235959Z"
+]
+},
+{
+"id": "8tt0ceilfqs9fdjgd5hebu840g",
+"summary": "DCG · On commence ! La communication jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2026-11-22T10:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270221T235959Z"
+]
+},
+{
+"id": "nm5183du06invpebgk17mubng0",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 13 h 15 avec la révision de la semaine.",
+"start": "2026-11-22T12:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270425T235959Z",
+"EXDATE;TZID=Europe/Paris:20270321T123000,20270328T123000,20270404T123000,20270418T123000"
+]
+},
+{
+"id": "un8fpf0s6d9619tec61kaooqqs",
+"summary": "DCG · On reprend ! La révision de la semaine jusqu'à 14 h 15.",
+"start": "2026-11-22T13:15:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270425T235959Z",
+"EXDATE;TZID=Europe/Paris:20270321T131500,20270328T131500,20270404T131500,20270418T131500"
+]
+},
+{
+"id": "vgcrsv7ubiaofn27mnhtftq588",
+"summary": "DCG · Place à la compta, jusqu'à 15 h 30.",
+"start": "2026-11-22T14:15:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270314T235959Z"
+]
+},
+{
+"id": "u4bujdqqq03417o5m0e16fjge8",
+"summary": "DCG · Journée finie, bravo ! Coche ce que tu as fait dans l'appli.",
+"start": "2026-11-22T15:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270516T235959Z"
+]
+},
+{
+"id": "ucqq720af1m0p93lgjjt4688sg",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec la compta.",
+"start": "2026-11-23T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270315T235959Z"
+]
+},
+{
+"id": "q080l3cld0kmi656cact0l536c",
+"summary": "DCG · Dans 30 min, on commence. Prépare ton bureau, ton café, et éloigne ton téléphone.",
+"start": "2026-11-23T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270329T083000"
+]
+},
+{
+"id": "l0tb9of752hbk26d5d93upvt7c",
+"summary": "DCG · On commence ! La compta jusqu'à 10 h 45. Ouvre l'appli.",
+"start": "2026-11-23T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270315T235959Z"
+]
+},
+{
+"id": "6cbr0i41ha0idpt8o6votkeejc",
+"summary": "DCG · Place au SI, jusqu'à 13 h.",
+"start": "2026-11-23T10:45:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270315T235959Z"
+]
+},
+{
+"id": "tagrl5ttapf8r52kjhsv6kkpp8",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec l'économie.",
+"start": "2026-11-23T13:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270315T235959Z"
+]
+},
+{
+"id": "daerlbhl8jolgohfm7t63lcha0",
+"summary": "DCG · On reprend ! L'économie jusqu'à 15 h 30.",
+"start": "2026-11-23T14:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270315T235959Z"
+]
+},
+{
+"id": "gss8jp24rvt3ecotithk7oaing",
+"summary": "DCG · Place au droit, jusqu'à 17 h.",
+"start": "2026-11-23T15:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270308T235959Z"
+]
+},
+{
+"id": "lt701cjf0e4d4h9atmv9oq0tc0",
+"summary": "DCG · Journée finie, bravo ! Coche ce que tu as fait dans l'appli.",
+"start": "2026-11-23T17:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270329T170000"
+]
+},
+{
+"id": "lc97eh0blsc8lfjo5htr9jlkfc",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec la compta.",
+"start": "2026-11-24T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270316T235959Z"
+]
+},
+{
+"id": "84cgsqfcpt82s25969ffvp87go",
+"summary": "DCG · Dans 30 min, on commence. Prépare ton bureau, ton café, et éloigne ton téléphone.",
+"start": "2026-11-24T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270323T083000"
+]
+},
+{
+"id": "kc9r1bgqs3ch9kd200pugbi014",
+"summary": "DCG · On commence ! La compta jusqu'à 10 h 45. Ouvre l'appli.",
+"start": "2026-11-24T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270316T235959Z"
+]
+},
+{
+"id": "m5lfasd5fje2ejbjkkkhgq94vc",
+"summary": "DCG · Place au SI, jusqu'à 11 h 45.",
+"start": "2026-11-24T10:45:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270309T235959Z"
+]
+},
+{
+"id": "djtguls29lpa7c1ke2nah0brfs",
+"summary": "DCG · Place à l'anglais, jusqu'à 13 h.",
+"start": "2026-11-24T11:45:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270316T235959Z"
+]
+},
+{
+"id": "392deoap9r3hv1pc5i7367i7ak",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec le management.",
+"start": "2026-11-24T13:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270316T235959Z"
+]
+},
+{
+"id": "cvd8nvbamq6mdog06oegr4j3bk",
+"summary": "DCG · On reprend ! Le management jusqu'à 15 h 45.",
+"start": "2026-11-24T14:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270316T235959Z"
+]
+},
+{
+"id": "2gu93jkbsg3nvloue25cdvmsp0",
+"summary": "DCG · Place à l'économie, jusqu'à 17 h.",
+"start": "2026-11-24T15:45:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270309T235959Z"
+]
+},
+{
+"id": "4kdqjidat5rm6ja6lfkljvn694",
+"summary": "DCG · Bilan de la semaine : 10 min pour cocher et écrire ce qui a coincé.",
+"start": "2026-11-24T17:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270323T170000"
+]
+},
+{
+"id": "mmacnrcck8hfnvrrmj6h26qnns",
+"summary": "DCG · Journée finie, bravo ! Coche ce que tu as fait dans l'appli.",
+"start": "2026-11-24T17:10:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270323T171000"
+]
+},
+{
+"id": "q08v67m3efpdfv1jcggjlj6h8g",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec le droit.",
+"start": "2027-02-28T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270307T235959Z"
+]
+},
+{
+"id": "bbaqmehcucva7da4mps4h9ic8g",
+"summary": "DCG · On commence ! Le droit jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2027-02-28T10:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270307T235959Z"
+]
+},
+{
+"id": "1d9ponsgl7enp1bqdhnq7horkc",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec l'anglais.",
+"start": "2027-03-14T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270328T235959Z"
+]
+},
+{
+"id": "doaun4j2q1h3l0b1d3a9vnpkp0",
+"summary": "DCG · On commence ! L'anglais jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2027-03-14T10:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270328T235959Z"
+]
+},
+{
+"id": "u7g9jor237i2f6prl410bcdgsc",
+"summary": "DCG · Place à l'anglais, jusqu'à 17 h.",
+"start": "2027-03-15T15:30:00",
+"recurrence": []
+},
+{
+"id": "cgcvu5l580v03b7qlshc8rsj4s",
+"summary": "DCG · Place à l'anglais, jusqu'à 11 h 45.",
+"start": "2027-03-16T10:45:00",
+"recurrence": []
+},
+{
+"id": "c4evu2ffof7tbt6sbn9i328g5s",
+"summary": "DCG · Place à l'anglais, jusqu'à 17 h.",
+"start": "2027-03-16T15:45:00",
+"recurrence": []
+},
+{
+"id": "eo1msdmp1jlcd1p4v8ggdvc2qg",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 13 h 15 avec le certificat Studi de management.",
+"start": "2027-03-21T12:30:00",
+"recurrence": []
+},
+{
+"id": "v57cco3cl55lhjkfq79korf8bk",
+"summary": "DCG · On reprend ! Le certificat Studi de management jusqu'à 14 h 15.",
+"start": "2027-03-21T13:15:00",
+"recurrence": []
+},
+{
+"id": "v7eba7ca3vnr7l936ioch11u14",
+"summary": "DCG · Place au certificat Studi de droit, jusqu'à 15 h 30.",
+"start": "2027-03-21T14:15:00",
+"recurrence": []
+},
+{
+"id": "tbc4d3jlc0rmlqvss99lbr3o1k",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de droit.",
+"start": "2027-03-22T07:00:00",
+"recurrence": []
+},
+{
+"id": "2rvfgfljtcevsu7d0qtkgau4ik",
+"summary": "DCG · C'est l'heure : l'examen blanc de droit, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-03-22T09:00:00",
+"recurrence": []
+},
+{
+"id": "9psptu4sc1ro86cbqcepu9r0ao",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec la correction de ton examen blanc.",
+"start": "2027-03-22T12:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270426T235959Z",
+"EXDATE;TZID=Europe/Paris:20270329T120000,20270405T120000,20270419T120000"
+]
+},
+{
+"id": "sa109n0gfnhtk7gsq5h8i4qloc",
+"summary": "DCG · On reprend ! La correction de ton examen blanc jusqu'à 15 h 30.",
+"start": "2027-03-22T14:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270329T140000"
+]
+},
+{
+"id": "rdohl52shaj72tg1f52s6ojh2c",
+"summary": "DCG · Place à la reprise des points faibles, jusqu'à 17 h.",
+"start": "2027-03-22T15:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270329T153000"
+]
+},
+{
+"id": "kkkq52j7ktfsn8ljtjsmtlfnf8",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 13 h 15 avec le certificat Studi de SI.",
+"start": "2027-03-28T12:30:00",
+"recurrence": []
+},
+{
+"id": "87i9vf180e9d01hf2jeblhna74",
+"summary": "DCG · On reprend ! Le certificat Studi de SI jusqu'à 14 h 15.",
+"start": "2027-03-28T13:15:00",
+"recurrence": []
+},
+{
+"id": "lidsp57o3qv0etndtppoc78se8",
+"summary": "DCG · Place au certificat Studi d'économie, jusqu'à 15 h 30.",
+"start": "2027-03-28T14:15:00",
+"recurrence": []
+},
+{
+"id": "vk14kt4rt6712c20ipmnv1c14c",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de management.",
+"start": "2027-03-30T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270406T070000,20270413T070000,20270420T070000,20270427T070000,20270504T070000,20270511T070000"
+]
+},
+{
+"id": "rki2nuq7v3ert7gg7od45brclk",
+"summary": "DCG · C'est l'heure : l'examen blanc de management, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-03-30T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270406T090000,20270413T090000,20270420T090000,20270427T090000,20270504T090000,20270511T090000"
+]
+},
+{
+"id": "jft034vsef671hhvbb0ft2oeac",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec la correction de ton examen blanc.",
+"start": "2027-03-30T13:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z",
+"EXDATE;TZID=Europe/Paris:20270420T130000,20270427T130000,20270504T130000"
+]
+},
+{
+"id": "imv4kcah1echl8l007d9mosvcs",
+"summary": "DCG · On reprend ! La correction de ton examen blanc jusqu'à 15 h 30.",
+"start": "2027-03-30T14:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z"
+]
+},
+{
+"id": "rmd6d9q62pjhp99c2k3dvbka2c",
+"summary": "DCG · Place à la reprise des points faibles, jusqu'à 17 h.",
+"start": "2027-03-30T15:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270518T235959Z"
+]
+},
+{
+"id": "inh5hm98tp8o4bo3q3q2tsee4s",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec la compta.",
+"start": "2027-04-04T08:30:00",
+"recurrence": []
+},
+{
+"id": "n35t6grivetehbg5rjf55ablc0",
+"summary": "DCG · On commence ! La compta jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2027-04-04T10:30:00",
+"recurrence": []
+},
+{
+"id": "in38qfe6ekhdr34ummjep1ia68",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 13 h 15 avec la compta.",
+"start": "2027-04-04T12:30:00",
+"recurrence": []
+},
+{
+"id": "pclrpa120vkig101v15r94hdes",
+"summary": "DCG · On reprend ! La compta jusqu'à 14 h 15.",
+"start": "2027-04-04T13:15:00",
+"recurrence": []
+},
+{
+"id": "3c6duknc9lcr6gu5hg42vfic3c",
+"summary": "DCG · Place à tes cartes et tes fiches, jusqu'à 15 h 30.",
+"start": "2027-04-04T14:15:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270425T235959Z",
+"EXDATE;TZID=Europe/Paris:20270418T141500"
+]
+},
+{
+"id": "0dpprmu0n3ir47sriep8od4c9g",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc d'économie.",
+"start": "2027-04-05T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270412T070000,20270426T070000,20270503T070000"
+]
+},
+{
+"id": "3kn9kcq4bgh9s611po8jrg46h0",
+"summary": "DCG · C'est l'heure : l'examen blanc d'économie, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-05T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270412T090000,20270426T090000,20270503T090000"
+]
+},
+{
+"id": "m2t8l9ar44bilq9mnkjf3f3cmk",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec la correction de ton examen blanc.",
+"start": "2027-04-05T13:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270510T235959Z",
+"EXDATE;TZID=Europe/Paris:20270412T130000,20270426T130000"
+]
+},
+{
+"id": "ai5ph2p71n534ksu9maakc9qn8",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de SI.",
+"start": "2027-04-06T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270511T235959Z",
+"EXDATE;TZID=Europe/Paris:20270420T070000,20270427T070000,20270504T070000"
+]
+},
+{
+"id": "p68bl58ic6hvmrm496gigashpg",
+"summary": "DCG · C'est l'heure : l'examen blanc de SI, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-06T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270511T235959Z",
+"EXDATE;TZID=Europe/Paris:20270420T090000,20270427T090000,20270504T090000"
+]
+},
+{
+"id": "bp8jun5vorccs20kmgiq6kq9cs",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec la révision des fiches.",
+"start": "2027-04-11T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270425T235959Z"
+]
+},
+{
+"id": "qsa4vuob5v9loq1n3sdss5td7c",
+"summary": "DCG · On commence ! La révision des fiches jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2027-04-11T10:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270425T235959Z"
+]
+},
+{
+"id": "4igne890lu9td9tf4pp8ri9gtk",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc d'anglais.",
+"start": "2027-04-12T07:00:00",
+"recurrence": []
+},
+{
+"id": "2j2sjlf1oqcm1vsndjkk454grc",
+"summary": "DCG · C'est l'heure : l'examen blanc d'anglais, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-12T09:00:00",
+"recurrence": []
+},
+{
+"id": "roh27cr4lj7e4kqvfub9ur7ons",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 13 h 15 avec le certificat Studi de compta.",
+"start": "2027-04-18T12:30:00",
+"recurrence": []
+},
+{
+"id": "be40rrdjfl0pk7ovhlpjn767m0",
+"summary": "DCG · On reprend ! Le certificat Studi de compta jusqu'à 14 h 15.",
+"start": "2027-04-18T13:15:00",
+"recurrence": []
+},
+{
+"id": "pjmm2cv72o9ksv16cnoa6ugos0",
+"summary": "DCG · Place au certificat Studi d'anglais, jusqu'à 15 h 30.",
+"start": "2027-04-18T14:15:00",
+"recurrence": []
+},
+{
+"id": "7lgufailnbjn7alv38phfe3okc",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de compta.",
+"start": "2027-04-20T07:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270504T235959Z",
+"EXDATE;TZID=Europe/Paris:20270427T070000"
+]
+},
+{
+"id": "r3gs1up799fmjlstd11hncotsg",
+"summary": "DCG · C'est l'heure : l'examen blanc de compta, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-20T09:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270504T235959Z",
+"EXDATE;TZID=Europe/Paris:20270427T090000"
+]
+},
+{
+"id": "7e0q9pobm59oa94ujn9v4na73k",
+"summary": "DCG · Pause déjeuner, bien mérité. On reprend à 14 h avec la correction de ton examen blanc.",
+"start": "2027-04-20T12:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270504T235959Z"
+]
+},
+{
+"id": "shjb9protfe5io96aaucr4orb8",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de compta.",
+"start": "2027-04-26T07:00:00",
+"recurrence": []
+},
+{
+"id": "si99n7fs3e4vldjavk6m0tprt8",
+"summary": "DCG · C'est l'heure : l'examen blanc de compta, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-26T09:00:00",
+"recurrence": []
+},
+{
+"id": "bfnk9cnv5lu6mkjagovc5lcorg",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de droit.",
+"start": "2027-04-27T07:00:00",
+"recurrence": []
+},
+{
+"id": "838v2p9d1emsr8ialntvvfv6o4",
+"summary": "DCG · C'est l'heure : l'examen blanc de droit, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-04-27T09:00:00",
+"recurrence": []
+},
+{
+"id": "vptetvkaobs87bb138kqlieftk",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec l'examen blanc d'anglais.",
+"start": "2027-05-02T08:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270516T235959Z",
+"EXDATE;TZID=Europe/Paris:20270509T083000"
+]
+},
+{
+"id": "3u4plbef4oe5pq282esmr1l6is",
+"summary": "DCG · C'est l'heure : l'examen blanc d'anglais, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-05-02T10:30:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270516T235959Z",
+"EXDATE;TZID=Europe/Paris:20270509T103000"
+]
+},
+{
+"id": "46hnsc5e0c7t7f01ufadkcvvf4",
+"summary": "DCG · Place à la correction de ton examen blanc, jusqu'à 15 h 30.",
+"start": "2027-05-02T14:00:00",
+"recurrence": [
+"RRULE:FREQ=WEEKLY;UNTIL=20270516T235959Z"
+]
+},
+{
+"id": "cgp6g1pfttpaq0sm8g5d63np1s",
+"summary": "DCG · Boker tov ! Debout : on commence à 9 h avec l'examen blanc de management.",
+"start": "2027-05-03T07:00:00",
+"recurrence": []
+},
+{
+"id": "fp952u0hgg0a8roafqrbhvhhmo",
+"summary": "DCG · C'est l'heure : l'examen blanc de management, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-05-03T09:00:00",
+"recurrence": []
+},
+{
+"id": "icn687i9vc3pe34hfqo8510cdo",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec l'examen blanc de droit.",
+"start": "2027-05-09T08:30:00",
+"recurrence": []
+},
+{
+"id": "grv9un6ie5mslv7j3k5bcegqpo",
+"summary": "DCG · C'est l'heure : l'examen blanc de droit, en conditions réelles. Téléphone dans une autre pièce.",
+"start": "2027-05-09T10:30:00",
+"recurrence": []
+},
+{
+"id": "5hr2pjbtob48f0ofd8e4hkjsqk",
+"summary": "DCG · Boker tov ! Debout : on commence à 10 h 30 avec ta révision.",
+"start": "2027-05-23T08:30:00",
+"recurrence": []
+},
+{
+"id": "vmfl3m3b6o9t27vhsv5f92k6sc",
+"summary": "DCG · On commence ! Ta révision jusqu'à 12 h 30. Ouvre l'appli.",
+"start": "2027-05-23T10:30:00",
+"recurrence": []
+},
+{
+"id": "221ecitt0sj540n99qesbojmpk",
+"summary": "DCG · Journée finie, bravo ! Coche ce que tu as fait dans l'appli.",
+"start": "2027-05-23T12:30:00",
+"recurrence": []
+},
+{
+"id": "s9rce823q69ev3arri058s213s",
+"summary": "DCG · À faire : UE8 SI · Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de règlementation et…",
+"start": "2026-11-19T08:00:00",
+"recurrence": []
+},
+{
+"id": "bfoj7rik93l3jg2uu1o9ekmiqc",
+"summary": "DCG · UE1 Droit · Live · Identifier les autres entrepreneurs individuels (agriculteur, artisan, professionnel…",
+"start": "2026-11-18T18:00:00",
+"recurrence": []
+},
+{
+"id": "s9s6pckhlhnh1lm6q9g0qt00sg",
+"summary": "DCG · UE5 Économie · Live · Les monopoles",
+"start": "2026-11-19T19:00:00",
+"recurrence": []
+},
+{
+"id": "fi813unsre0iha1jpn98o2mb1c",
+"summary": "DCG · À faire : UE9 Compta · Replay à regarder · Les rapprochements bancaires : objectifs, méthode, soldes initiaux identiques ou…",
+"start": "2026-11-24T08:00:00",
+"recurrence": []
+},
+{
+"id": "636eklq45q3ufcu2os54fei7dk",
+"summary": "DCG · Live · Accompagnement DCG (toutes UE)",
+"start": "2026-11-23T12:00:00",
+"recurrence": []
+},
+{
+"id": "8tfski9gj21nu3vtnve983q1ng",
+"summary": "DCG · UE12 Anglais · Live · Communication & strategies to be competitive : competitive advantage, innovation…",
+"start": "2026-11-23T19:00:00",
+"recurrence": []
+},
+{
+"id": "9pdl8r421i7hlm3j5tb3jibr44",
+"summary": "DCG · UE7 Management · Live · Les outils d'analyse de l'environnement de l'entreprise",
+"start": "2026-11-24T19:00:00",
+"recurrence": []
+},
+{
+"id": "j9rcum1f79g6444hv2if9vjcf0",
+"summary": "DCG · UE1 Droit · Live · Proposer un statut pour le conjoint de l'entrepreneur + Évaluer les conséquences du…",
+"start": "2026-11-25T18:00:00",
+"recurrence": []
+},
+{
+"id": "9sav0hcpatae6rvdjnnh3rr504",
+"summary": "DCG · À faire : UE8 SI · Replay à regarder · La représentation d'un processus : le diagramme BPMN ; Les progiciels au service des…",
+"start": "2026-11-27T08:00:00",
+"recurrence": []
+},
+{
+"id": "ftv5e6d4a2tco125qdtgm65sg0",
+"summary": "DCG · UE5 Économie · Live · Les oligopoles et la concurrence monopolistique",
+"start": "2026-11-26T19:00:00",
+"recurrence": []
+},
+{
+"id": "3o24tief1n32hsjegjarope2pc",
+"summary": "DCG · UE7 Management · Live · Les outils d'analyse interne de l'entreprise",
+"start": "2026-12-01T19:00:00",
+"recurrence": []
+},
+{
+"id": "hbrqoon1pve7dgmdtq0gbttlfc",
+"summary": "DCG · À faire : UE13 Communication · Replay à regarder · Essentiels du cours « Maîtriser les outils de la communication orale professionnelle »…",
+"start": "2026-12-03T08:00:00",
+"recurrence": []
+},
+{
+"id": "n7dro7nvn6tel8hcud30qci008",
+"summary": "DCG · À faire : UE8 SI · Replay à regarder · Essentiels de la modélisation des données (SRD) et de la manipulation des données (SQL)…",
+"start": "2026-12-04T08:00:00",
+"recurrence": []
+},
+{
+"id": "cc80td6a5ro082ac3if429g4ns",
+"summary": "DCG · Live · Accompagnement DCG (toutes UE)",
+"start": "2026-12-03T12:00:00",
+"recurrence": []
+},
+{
+"id": "8v9bat5sdca9f8h0urf5ruiqes",
+"summary": "DCG · UE5 Économie · Live · Les modalités de la régulation des marchés et de la concurrence",
+"start": "2026-12-03T17:00:00",
+"recurrence": []
+},
+{
+"id": "djgpk18vqbb25qgofhm2o60jn8",
+"summary": "DCG · UE1 Droit · Live · Décrire le processus de réalisation des formalités de la création d'une entreprise…",
+"start": "2026-12-03T18:00:00",
+"recurrence": []
+},
+{
+"id": "69sbc77rufr70lhga48jjf1egk",
+"summary": "DCG · À faire : UE9 Compta · Replay à regarder · Suite sur les rapprochements bancaires. Les stocks : réglementation, coûts d'acquisition…",
+"start": "2026-12-08T08:00:00",
+"recurrence": []
+},
+{
+"id": "am15tvqs0k06s6cbcnfc2ls9eo",
+"summary": "DCG · UE12 Anglais · Live · CSR: Corporate social responsibility: definition and concepts and concrete examples",
+"start": "2026-12-07T19:00:00",
+"recurrence": []
+},
+{
+"id": "k6j76cgqta5m5lc0s454k6ep30",
+"summary": "DCG · Live · Accompagnement DCG (toutes UE)",
+"start": "2026-12-08T12:00:00",
+"recurrence": []
+},
+{
+"id": "lcv8qjnh910j682345jcaoic6k",
+"summary": "DCG · UE7 Management · Live · Les stratégies de domaine",
+"start": "2026-12-08T19:00:00",
+"recurrence": []
+},
+{
+"id": "8sctekhkspudqj1g0i36enl554",
+"summary": "DCG · À faire : UE8 SI · Replay à regarder · L'usage des fonctions de dénombrement et de gestion du temps dans les formules de calcul…",
+"start": "2026-12-11T08:00:00",
+"recurrence": []
+},
+{
+"id": "8rikcp1q23hhgmvrdl74v6i3rs",
+"summary": "DCG · UE1 Droit · Live · Analyser les prérogatives du propriétaire, du nu-propriétaire, de l'usufruitier et des…",
+"start": "2026-12-10T18:00:00",
+"recurrence": []
+},
+{
+"id": "6nn809u2ga7b407dls5f5hn288",
+"summary": "DCG · UE5 Économie · Live · L'épargne des ménages (définition, formes, motifs et déterminants)",
+"start": "2026-12-10T18:00:00",
+"recurrence": []
+},
+{
+"id": "jtfkf047p758tterdq4la7bjns",
+"summary": "DCG · À faire : UE13 Communication · Replay à regarder · Présentation de rapports au design impactant : page de garde, illustrations, mise en…",
+"start": "2026-12-15T08:00:00",
+"recurrence": []
+},
+{
+"id": "okb0plvs6o62f2nqgdqdb45i50",
+"summary": "DCG · À faire : UE9 Compta · Replay à regarder · Suite sur les stocks : valeur actuelle, dépréciations et écritures",
+"start": "2026-12-15T08:00:00",
+"recurrence": []
+},
+{
+"id": "j0pbljgee492au7r1gde357d3c",
+"summary": "DCG · UE12 Anglais · Live · CSR: Evolution of CSR, wokeism or a necessity, Evolution of CSR in the United States",
+"start": "2026-12-14T19:00:00",
+"recurrence": []
+},
+{
+"id": "5jd93r6kc5jeesu1gnr8eq1v3g",
+"summary": "DCG · Live · Accompagnement DCG (toutes UE)",
+"start": "2026-12-15T17:00:00",
+"recurrence": []
+},
+{
+"id": "6q3rq9sa02hm10pmpd78ngs820",
+"summary": "DCG · UE7 Management · Live · La stratégie de spécialisation et de diversification",
+"start": "2026-12-15T19:00:00",
+"recurrence": []
+},
+{
+"id": "nolodhub4esadv59uleu6cmboc",
+"summary": "DCG · À faire : UE8 SI · Replay à regarder · Essentiels du module « Appréhender les défis du SI en termes de sécurité » + cas pratique",
+"start": "2026-12-17T08:00:00",
+"recurrence": []
+},
+{
+"id": "uf0tetbimbapbcv7el8am0ed6s",
+"summary": "DCG · UE1 Droit · Live · Analyser les limites du droit de propriété",
+"start": "2026-12-16T18:00:00",
+"recurrence": []
+},
+{
+"id": "njso8cem0oau8db6mdl1ndopmk",
+"summary": "DCG · UE5 Économie · Live · Les déterminants de l'investissement des entreprises",
+"start": "2026-12-17T19:00:00",
+"recurrence": []
+},
+{
+"id": "13h5e4b8i4t3t4kk7839eh29pc",
+"summary": "DCG · À faire : Les lives de janvier : ouvre Studi > Lives et envoie-moi la liste",
+"start": "2026-12-20T08:00:00",
+"recurrence": []
+},
+{
+"id": "j5q5dlhkp53cujds8i34el1ed4",
+"summary": "DCG · À faire : UE9 Compta · Replay à regarder · Cas de synthèse : opérations courantes, TVA, Stocks",
+"start": "2026-12-22T08:00:00",
+"recurrence": []
+},
+{
+"id": "jjf6usil113178cn5j86lsh0hg",
+"summary": "DCG · UE12 Anglais · Live · Digital revolution : the age of the digital society & the transformation of work",
+"start": "2026-12-21T19:00:00",
+"recurrence": []
+},
+{
+"id": "j4fc633aa1i5fc9tr4ikai196k",
+"summary": "DCG · Live · Accompagnement DCG (toutes UE)",
+"start": "2026-12-22T12:00:00",
+"recurrence": []
+},
+{
+"id": "j23raur54pe4d6jdae5rerlc88",
+"summary": "DCG · À faire : UE13 Communication · Dépose les parties 1 et 2 du rapport UE13 et la fiche de suivi n° 1",
+"start": "2027-01-10T08:00:00",
+"recurrence": []
+},
+{
+"id": "d0nt0d73dvocgrpa9bg2091pds",
+"summary": "DCG · À faire : Inscris-toi aux écrits du DCG sur Cyclades",
+"start": "2027-01-24T08:00:00",
+"recurrence": []
+},
+{
+"id": "usbnofvv5ik6gksuva9qpcag0c",
+"summary": "DCG · À faire : Bilan décisif avec moi : 7 UE à l'inscription, ou une en moins ?",
+"start": "2027-01-26T08:00:00",
+"recurrence": []
+},
+{
+"id": "va1hhut87a4tf8hub8gti70cko",
+"summary": "DCG · À faire : UE13 Communication · Dépose la partie 3 du rapport UE13 et la fiche de suivi n° 2",
+"start": "2027-02-07T08:00:00",
+"recurrence": []
+},
+{
+"id": "9d7sls6hhrmbu56rn9fug1cil8",
+"summary": "DCG · À faire : UE13 Communication · Dépose le rapport UE13 intégral",
+"start": "2027-02-21T08:00:00",
+"recurrence": []
+},
+{
+"id": "jfqie7h7g7efe5g344lv3bschg",
+"summary": "DCG · À faire : Vérifie sur Studi les évaluations qui restent à faire",
+"start": "2027-03-28T08:00:00",
+"recurrence": []
+},
+{
+"id": "0anlsb58cafnu6pp379nv50i9g",
+"summary": "DCG · À faire : Envoie-moi les dates des examens blancs Studi « Objectif examen »",
+"start": "2027-04-01T08:00:00",
+"recurrence": []
+},
+{
+"id": "5dj1p9cj2uclmogon1kqr1te3o",
+"summary": "DCG · À faire : UE9 Compta · En plus, si tu as de l'avance : évaluation d'entraînement 3 de l'UE9",
+"start": "2027-04-25T08:00:00",
+"recurrence": []
+},
+{
+"id": "2mdqk2sgvtnpc9vqat9096rla8",
+"summary": "DCG · À faire : Prépare ta convocation, ta pièce d'identité et ta calculatrice",
+"start": "2027-05-21T08:00:00",
+"recurrence": []
+}
+]
+}
